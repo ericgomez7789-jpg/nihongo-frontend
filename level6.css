@@ -1,0 +1,159 @@
+/* ==========================================================
+   LEVEL 6 — GLOBAL DARK THEME
+========================================================== */
+
+.level6 {
+  background: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+/* Screens */
+.level6.screen {
+  display: none;
+  background: #000;
+  color: #fff;
+  min-height: 100vh;
+  padding: 40px;
+}
+
+/* Visible screen */
+.level6.screen:not(.hidden) {
+  display: block;
+}
+
+/* Titles */
+.level6 .title {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+/* ==========================================================
+   LEVEL 6 — MUSIC CONTROLS (scoped)
+========================================================== */
+
+.level6 .music-controls {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+.level6 .iconBtn {
+  background: #222;
+  color: #fff;
+  border: 1px solid #555;
+  padding: 8px 12px;
+  margin-left: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.level6 .iconBtn:hover {
+  background: #333;
+}
+
+/* ==========================================================
+   LEVEL 6 — SCREEN 2 (MCQ MODE)
+========================================================== */
+
+.level6 .replay-top {
+  margin-bottom: 20px;
+  font-size: 22px;
+  padding: 10px 20px;
+  background: #222;
+  border: 1px solid #555;
+  border-radius: 8px;
+}
+
+.level6 .sentence-line {
+  font-size: 26px;
+  text-align: center;
+  margin-top: 20px;
+  color: #fff;
+}
+
+.level6 .mcq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.level6 .mcqBtn {
+  padding: 14px 18px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  border: 2px solid #444;
+  background: #222;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.level6 .mcqBtn:hover {
+  background: #333;
+}
+
+.level6 .mcqBtn.correct {
+  background-color: #4CAF50 !important;
+  color: white;
+}
+
+.level6 .mcqBtn.wrong {
+  background-color: #E53935 !important;
+  color: white;
+}
+
+/* ==========================================================
+   LEVEL 6 — SUMMARY SCREEN
+========================================================== */
+
+.level6 .summary-container {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 20px auto;
+  max-width: 480px;
+}
+
+.level6 .summary-row {
+  background: #111;
+  border: 1px solid #444;
+  border-radius: 10px;
+  padding: 14px 16px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+.level6 .summary-label {
+  font-weight: bold;
+  color: #eee;
+}
+
+.level6 .summary-value {
+  color: #fff;
+}
+
+.level6 .summary-controls {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.level6 .summary-controls .iconBtn {
+  background: #222;
+  border: 1px solid #555;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.level6 .summary-controls .iconBtn:hover {
+  background: #333;
+  border-color: #777;
+}

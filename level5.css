@@ -1,0 +1,159 @@
+/* ==========================================================
+   LEVEL 5 — GLOBAL DARK THEME
+========================================================== */
+
+.level5 {
+  background: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+/* Screens */
+.level5.screen {
+  display: none;
+  background: #000;
+  color: #fff;
+  min-height: 100vh;
+  padding: 40px;
+}
+
+/* Visible screen */
+.level5.screen:not(.hidden) {
+  display: block;
+}
+
+/* Titles */
+.level5 .title {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+/* ==========================================================
+   LEVEL 5 — MUSIC CONTROLS (scoped)
+========================================================== */
+
+.level5 .music-controls {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+.level5 .iconBtn {
+  background: #222;
+  color: #fff;
+  border: 1px solid #555;
+  padding: 8px 12px;
+  margin-left: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.level5 .iconBtn:hover {
+  background: #333;
+}
+
+/* ==========================================================
+   LEVEL 5 — SCREEN 2 (MCQ MODE)
+========================================================== */
+
+.level5 .replay-top {
+  margin-bottom: 20px;
+  font-size: 22px;
+  padding: 10px 20px;
+  background: #222;
+  border: 1px solid #555;
+  border-radius: 8px;
+}
+
+.level5 .sentence-line {
+  font-size: 26px;
+  text-align: center;
+  margin-top: 20px;
+  color: #fff;
+}
+
+.level5 .mcq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.level5 .mcqBtn {
+  padding: 14px 18px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  border: 2px solid #444;
+  background: #222;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.level5 .mcqBtn:hover {
+  background: #333;
+}
+
+.level5 .mcqBtn.correct {
+  background-color: #4CAF50 !important;
+  color: white;
+}
+
+.level5 .mcqBtn.wrong {
+  background-color: #E53935 !important;
+  color: white;
+}
+
+/* ==========================================================
+   LEVEL 5 — SUMMARY SCREEN
+========================================================== */
+
+.level5 .summary-container {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 20px auto;
+  max-width: 480px;
+}
+
+.level5 .summary-row {
+  background: #111;
+  border: 1px solid #444;
+  border-radius: 10px;
+  padding: 14px 16px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+.level5 .summary-label {
+  font-weight: bold;
+  color: #eee;
+}
+
+.level5 .summary-value {
+  color: #fff;
+}
+
+.level5 .summary-controls {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.level5 .summary-controls .iconBtn {
+  background: #222;
+  border: 1px solid #555;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.level5 .summary-controls .iconBtn:hover {
+  background: #333;
+  border-color: #777;
+}

@@ -1,0 +1,320 @@
+/* ==========================================================
+   GLOBAL DARK THEME
+========================================================== */
+body {
+  background: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Screens */
+.screen {
+  display: none;
+  background: #000;
+  color: #fff;
+  min-height: 100vh;
+  padding: 40px;
+}
+
+/* Visible screen */
+.screen:not(.hidden) {
+  display: block;
+}
+
+/* Required for JS screen switching */
+.hidden {
+  display: none !important;
+}
+
+/* Titles */
+.title {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+/* ==========================================================
+   LEVEL SELECT BUTTONS
+========================================================== */
+.levelBtn {
+  background: #222;
+  color: #fff;
+  border: 1px solid #444;
+  padding: 4px 8px;
+  margin: 4px;
+  font-size: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 70px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.levelBtn:hover {
+  background: #333;
+}
+
+/* ==========================================================
+   MUSIC CONTROLS
+========================================================== */
+.music-controls {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+.iconBtn {
+  background: #222;
+  color: #fff;
+  border: 1px solid #555;
+  padding: 8px 12px;
+  margin-left: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.iconBtn:hover {
+  background: #333;
+}
+
+/* ==========================================================
+   SCREEN 2 — CHUNK PUZZLE / ARRANGE MODE
+========================================================== */
+
+/* Replay button at the top */
+.replay-top {
+  margin-bottom: 20px;
+  font-size: 22px;
+  padding: 10px 20px;
+  background: #222;
+  border: 1px solid #555;
+  border-radius: 8px;
+}
+
+/* ⭐⭐⭐ FIXED TIMER — ALWAYS VISIBLE ABOVE PROGRESS BAR ⭐⭐⭐ */
+#screen2Timer {
+  position: absolute;
+  top: 70px;          /* BELOW progress bar (usually ~50px tall) */
+  right: 20px;
+  font-size: 32px;
+  font-weight: bold;
+  color: #ff4444;
+  z-index: 999999;    /* ABOVE everything */
+  pointer-events: none;
+}
+
+/* Scrambled chunks container */
+.chunk-container {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Chunk buttons */
+.chunkBtn {
+  font-size: 28px;
+  padding: 18px 26px;
+  margin: 10px;
+  border-radius: 12px;
+  background: #222;
+  color: #fff;
+  border: 2px solid #555;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 140px;
+  min-height: 70px;
+  text-align: center;
+
+  cursor: grab;
+  -webkit-user-drag: element;
+  user-select: none;
+  touch-action: none;
+}
+
+.chunkBtn:active {
+  cursor: grabbing;
+}
+
+.chunkBtn:hover {
+  background: #333;
+}
+
+/* Drop lines container */
+.drop-lines {
+  display: block;
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* Drop line boxes */
+.dropLine {
+  width: 160px;
+  height: 70px;
+  border: 3px dashed #888;
+  border-radius: 10px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+  color: #ccc;
+  margin: 10px;
+}
+
+/* Correct placement */
+.dropLine.correct {
+  border-color: #4caf50;
+  background: #1b3d1b;
+  color: #4caf50;
+}
+
+/* ==========================================================
+   SCREEN 3 — MEANING SCREEN
+========================================================== */
+
+.meaning-box {
+  font-size: 26px;
+  margin: 20px auto 30px auto;
+  padding: 16px 20px;
+  max-width: 480px;
+  text-align: center;
+  background: #111;
+  border-radius: 12px;
+  border: 1px solid #444;
+}
+
+.summary-container {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 20px auto;
+  max-width: 480px;
+}
+
+.summary-row {
+  background: #111;
+  border: 1px solid #444;
+  border-radius: 10px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.summary-hiragana {
+  font-size: 26px;
+  color: #fff;
+}
+
+.summary-romaji {
+  font-size: 18px;
+  color: #bbb;
+}
+
+.summary-english {
+  font-size: 18px;
+  color: #4caf50;
+}
+
+.summary-controls {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* ==========================================================
+   EXPLANATION BLOCK
+========================================================== */
+
+.explanation-box {
+  margin: 20px auto 40px auto;
+  max-width: 480px;
+  padding: 16px 20px;
+  background: #111;
+  border: 1px solid #444;
+  border-radius: 10px;
+  font-size: 18px;
+  color: #ccc;
+  line-height: 1.6;
+  white-space: pre-line;
+}
+
+/* ==========================================================
+   SESSION SUMMARY
+========================================================== */
+
+.session-summary-box {
+  margin-top: 20px;
+  padding: 20px;
+  background: #ffffffdd;
+  border-radius: 12px;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  font-size: 1.2rem;
+}
+
+.session-line {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.session-controls {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* ==========================================================
+   LEVEL BLOCKS (L1 vs L2)
+========================================================== */
+
+.level-block {
+  margin-top: 20px;
+  padding: 10px 0;
+}
+
+.level-block.hidden {
+  display: none !important;
+}
+
+.instruction-line {
+  font-size: 1.1rem;
+  color: #fff;
+  text-align: center;
+  margin: 6px 0 10px 0;
+}
+
+/* ==========================================================
+   LEVEL 2 — MCQ MODE
+========================================================== */
+
+.mcq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.mcqBtn {
+  padding: 14px 18px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  border: 2px solid #444;
+  background: #222;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.mcqBtn:hover {
+  background: #333;
+}

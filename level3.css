@@ -1,0 +1,241 @@
+/* ==========================================================
+   LEVEL 3 — GLOBAL DARK THEME
+========================================================== */
+
+.level3 {
+  background: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+/* Screens */
+.level3.screen {
+  display: none;
+  background: #000;
+  color: #fff;
+  min-height: 100vh;
+  padding: 40px;
+}
+
+/* Visible screen */
+.level3.screen:not(.hidden) {
+  display: block;
+}
+
+/* Titles */
+.level3 .title {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+/* ==========================================================
+   LEVEL SELECT BUTTONS (scoped)
+========================================================== */
+
+.level3 .levelBtn {
+  background: #222;
+  color: #fff;
+  border: 1px solid #444;
+  padding: 4px 8px;
+  margin: 4px;
+  font-size: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 70px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.level3 .levelBtn:hover {
+  background: #333;
+}
+
+/* ==========================================================
+   MUSIC CONTROLS (scoped)
+========================================================== */
+
+.level3 .music-controls {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+.level3 .iconBtn {
+  background: #222;
+  color: #fff;
+  border: 1px solid #555;
+  padding: 8px 12px;
+  margin-left: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.level3 .iconBtn:hover {
+  background: #333;
+}
+
+/* ==========================================================
+   SCREEN 2 — MCQ MODE (LEVEL 3)
+========================================================== */
+
+.level3 .replay-top {
+  margin-bottom: 20px;
+  font-size: 22px;
+  padding: 10px 20px;
+  background: #222;
+  border: 1px solid #555;
+  border-radius: 8px;
+}
+
+.level3 .sentence-line {
+  font-size: 26px;
+  text-align: center;
+  margin-top: 20px;
+  color: #fff;
+}
+
+.level3 .mcq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.level3 .mcqBtn {
+  padding: 14px 18px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  border: 2px solid #444;
+  background: #222;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.level3 .mcqBtn:hover {
+  background: #333;
+}
+
+.level3 .mcqBtn.correct {
+  background-color: #4CAF50 !important;
+  color: white;
+}
+
+.level3 .mcqBtn.wrong {
+  background-color: #E53935 !important;
+  color: white;
+}
+
+/* ==========================================================
+   LEVEL 3 — SUMMARY SCREEN
+========================================================== */
+
+.level3 .meaning-box {
+  font-size: 26px;
+  margin: 20px auto 30px auto;
+  padding: 16px 20px;
+  max-width: 480px;
+  text-align: center;
+  background: #111;
+  border-radius: 12px;
+  border: 1px solid #444;
+}
+
+.level3 .summary-container {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 20px auto;
+  max-width: 480px;
+}
+
+.level3 .summary-row {
+  background: #111;
+  border: 1px solid #444;
+  border-radius: 10px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.level3 .summary-hiragana {
+  font-size: 26px;
+  color: #fff;
+}
+
+.level3 .summary-romaji {
+  font-size: 18px;
+  color: #bbb;
+}
+
+.level3 .summary-english {
+  font-size: 18px;
+  color: #4caf50;
+}
+
+.level3 .summary-controls {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* ==========================================================
+   LEVEL 3 — FINAL SCORE SCREEN
+========================================================== */
+
+#level3Screen4 .summary-container {
+  margin-top: 20px;
+  padding: 20px;
+  background: #111;
+  border: 1px solid #444;
+  border-radius: 12px;
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+#level3Screen4 .summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+#level3Screen4 .summary-label {
+  font-weight: bold;
+  color: #eee;
+}
+
+#level3Screen4 .summary-value {
+  color: #fff;
+}
+
+#level3Screen4 .summary-controls {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+#level3Screen4 .iconBtn {
+  background: #222;
+  border: 1px solid #555;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#level3Screen4 .iconBtn:hover {
+  background: #333;
+  border-color: #777;
+}

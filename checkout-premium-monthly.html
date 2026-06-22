@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkout – Premium Plan</title>
+
+  <style>
+    body {
+      background: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 480px;
+      margin: 0 auto;
+      background: #111;
+      padding: 30px;
+      border-radius: 10px;
+      border: 1px solid #333;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      font-size: 28px;
+    }
+
+    p {
+      color: #bbb;
+      margin-bottom: 20px;
+    }
+
+    .checkoutBtn {
+      background: #4caf50;
+      color: #fff;
+      border: none;
+      padding: 14px 20px;
+      font-size: 18px;
+      border-radius: 6px;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .checkoutBtn:hover {
+      background: #5ecf63;
+    }
+
+    .back {
+      margin-top: 20px;
+    }
+
+    .back a {
+      color: #7fd1ff;
+      text-decoration: none;
+    }
+  </style>
+
+  <!-- Stripe.js -->
+  <script src="https://js.stripe.com/v3"></script>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Premium Plan Checkout</h1>
+    <p>Unlock Levels 4–12, including advanced logic, grammar, and comprehension.</p>
+    <p>Price: <strong>$14.99 / month</strong></p>
+
+    <button class="checkoutBtn" onclick="startCheckout()">Proceed to Payment</button>
+
+    <div class="back">
+      <a href="membership.html">← Back to Membership</a>
+    </div>
+  </div>
+
+  <script>
+    const stripe = Stripe("pk_live_51TiJc5F0QR7lUrADCcjTU7P0u3PCEqZknbU9HK9VfQCsY3uRRRi7ZQzwKoU90aRLNvuv31bd37vFRxwywzyiR1cY0069mgLBWo");
+
+    async function startCheckout() {
+      try {
+        const response = await fetch("https://nihongo-backend-jlm3.onrender.com/create-checkout-session-premium", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" }
+        });
+
+        const session = await response.json();
+
+        if (!session.url) {
+          alert("Error: No checkout URL returned.");
+          return;
+        }
+
+        window.location = session.url;
+
+      } catch (err) {
+        console.error("Checkout error:", err);
+        alert("Something went wrong starting checkout.");
+      }
+    }
+  </script>
+
+  <!-- Supabase client -->
+<script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+
+
+  <!-- Global app logic (auth + membership row creation) -->
+  
+
+</body>
+</html>

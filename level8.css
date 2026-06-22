@@ -1,0 +1,182 @@
+/* ==========================================================
+   LEVEL 8 — GLOBAL DARK THEME
+========================================================== */
+
+.level8 {
+  background: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.level8.screen {
+  display: none;
+  background: #000;
+  color: #fff;
+  min-height: 100vh;
+  padding: 40px;
+}
+
+.level8.screen:not(.hidden) {
+  display: block;
+}
+
+.level8 .title {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+/* ==========================================================
+   LEVEL 8 — MUSIC CONTROLS
+========================================================== */
+
+.level8 .music-controls {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+.level8 .iconBtn {
+  background: #222;
+  color: #fff;
+  border: 1px solid #555;
+  padding: 8px 12px;
+  margin-left: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.level8 .iconBtn:hover {
+  background: #333;
+}
+
+/* ==========================================================
+   LEVEL 8 — SCREEN 2 (SPLIT COLUMN PARAPHRASING)
+========================================================== */
+
+.level8 .replay-top {
+  margin-bottom: 20px;
+  font-size: 22px;
+  padding: 10px 20px;
+  background: #222;
+  border: 1px solid #555;
+  border-radius: 8px;
+}
+
+/* Split container */
+.l8-split-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 30px auto;
+  width: fit-content;
+}
+
+/* Columns */
+.l8-column {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 40%;
+}
+
+/* Items */
+.l8-item {
+  padding: 14px 18px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  border: 2px solid #444;
+  background: #222;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.l8-item:hover {
+  background: #333;
+}
+
+.l8-item.selected {
+  border-color: #4CAF50;
+  background: #2a4;
+}
+
+.l8-item.correct {
+  background-color: #4CAF50 !important;
+  border-color: #4CAF50 !important;
+  color: white;
+}
+
+.l8-item.wrong {
+  background-color: #E53935 !important;
+  border-color: #E53935 !important;
+  color: white;
+}
+
+/* ==========================================================
+   LEVEL 8 — TEXT SIZES
+========================================================== */
+
+#l8LeftColumn {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: 600;
+}
+
+.l8OptionBtn {
+  font-size: 1.3rem;
+  padding: 12px 18px;
+  margin: 8px 0;
+  width: 100%;
+  text-align: left;
+  border-radius: 10px;
+}
+
+.l8-correct {
+  background-color: #4CAF50 !important;
+  color: white !important;
+}
+
+.l8-wrong {
+  background-color: #E53935 !important;
+  color: white !important;
+}
+
+.l8-replay-btn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 6px 12px;
+  font-size: 14px;
+  z-index: 10;
+}
+
+/* ==========================================================
+   LEVEL 8 — SCREEN 3 (SUMMARY TABLE CENTERED)
+========================================================== */
+
+#l8SummaryContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;     /* center rows */
+  justify-content: center;
+  margin: 30px auto;       /* center container */
+  width: fit-content;      /* shrink-wrap */
+}
+
+.summary-row {
+  display: flex;
+  gap: 20px;
+  justify-content: center; /* center columns */
+  width: 100%;
+  padding: 10px 0;
+}
+
+.summary-hiragana,
+.summary-romaji,
+.summary-english {
+  min-width: 140px;
+  text-align: center;      /* center text */
+  font-size: 1.2rem;
+}

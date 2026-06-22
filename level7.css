@@ -1,0 +1,211 @@
+/* ==========================================================
+   LEVEL 7 — GLOBAL DARK THEME
+========================================================== */
+
+.level7 {
+  background: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+/* Screens (MATCHES HTML: class="level7-screen") */
+.level7-screen {
+  display: none;
+  background: #000;
+  color: #fff;
+  min-height: 100vh;
+  padding: 40px;
+}
+
+/* Visible screen */
+.level7-screen:not(.hidden) {
+  display: block;
+}
+
+/* Titles */
+.level7 .title {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+/* ==========================================================
+   LEVEL 7 — MUSIC CONTROLS (scoped)
+========================================================== */
+
+.level7 .music-controls {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+.level7 .iconBtn {
+  background: #222;
+  color: #fff;
+  border: 1px solid #555;
+  padding: 8px 12px;
+  margin-left: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.level7 .iconBtn:hover {
+  background: #333;
+}
+
+/* ==========================================================
+   LEVEL 7 — SCREEN 2 (PAIR MATCHING)
+========================================================== */
+
+.level7 .replay-top {
+  margin-bottom: 20px;
+  font-size: 22px;
+  padding: 10px 20px;
+  background: #222;
+  border: 1px solid #555;
+  border-radius: 8px;
+}
+
+.l7-split-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.l7-column {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 40%;
+}
+
+/* Pair items */
+.l7-item {
+  padding: 14px 18px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  border: 2px solid #444;
+  background: #222;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.l7-item:hover {
+  background: #333;
+}
+
+/* Selected state */
+.l7-item.selected {
+  border-color: #4CAF50;
+  background: #2a4;
+}
+
+/* Correct / Wrong feedback */
+.l7-item.correct {
+  background-color: #4CAF50 !important;
+  border-color: #4CAF50 !important;
+  color: white;
+}
+
+.l7-item.wrong {
+  background-color: #E53935 !important;
+  border-color: #E53935 !important;
+  color: white;
+}
+
+/* ==========================================================
+   LEVEL 7 — SUMMARY SCREEN
+========================================================== */
+
+.level7 .summary-container {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 20px auto;
+  max-width: 480px;
+}
+
+.level7 .summary-row {
+  background: #111;
+  border: 1px solid #444;
+  border-radius: 10px;
+  padding: 14px 16px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+.level7 .summary-label {
+  font-weight: bold;
+  color: #eee;
+}
+
+.level7 .summary-value {
+  color: #fff;
+}
+
+.level7 .summary-controls {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.level7 .summary-controls .iconBtn {
+  background: #222;
+  border: 1px solid #555;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.level7 .summary-controls .iconBtn:hover {
+  background: #333;
+  border-color: #777;
+}
+
+/* ==========================================================
+   ⭐ LEVEL 7 — EXPLANATION TEXT
+========================================================== */
+
+.summary-explanation {
+  font-size: 14px;
+  color: #b8b8b8;
+  margin-top: 18px;
+  line-height: 1.45;
+  max-width: 480px;
+}
+
+/* ==========================================================
+   ⭐ LEVEL 7 — BIGGER TEXT FOR SCREEN 2
+========================================================== */
+
+#l7LeftColumn {
+  font-size: 2rem;
+  line-height: 2.4rem;
+  font-weight: 600;
+}
+
+.l7OptionBtn {
+  font-size: 1.8rem;
+  padding: 18px 24px;
+  margin: 10px 0;
+  width: 100%;
+  text-align: left;
+  border-radius: 10px;
+}
+
+.l7-correct {
+  background-color: #4CAF50 !important;
+  color: white !important;
+}
+
+.l7-wrong {
+  background-color: #E53935 !important;
+  color: white !important;
+}

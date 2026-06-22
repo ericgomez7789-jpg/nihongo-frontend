@@ -1,0 +1,172 @@
+/* ==========================================================
+   LEVEL 9 — GLOBAL DARK THEME
+========================================================== */
+
+.level9 {
+  background: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+/* Screens */
+.level9.screen {
+  display: none;
+  background: #000;
+  color: #fff;
+  min-height: 100vh;
+  padding: 40px;
+}
+
+/* Visible screen */
+.level9.screen:not(.hidden) {
+  display: block;
+}
+
+/* Titles */
+.level9 .title {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+/* ==========================================================
+   LEVEL 9 — MUSIC CONTROLS
+========================================================== */
+
+.level9 .music-controls {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+.level9 .iconBtn {
+  background: #222;
+  color: #fff;
+  border: 1px solid #555;
+  padding: 8px 12px;
+  margin-left: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.level9 .iconBtn:hover {
+  background: #333;
+}
+
+/* ==========================================================
+   LEVEL 9 — SCREEN 2 (PARAPHRASING)
+========================================================== */
+
+.level9 .replay-top {
+  margin-bottom: 20px;
+  font-size: 22px;
+  padding: 10px 20px;
+  background: #222;
+  border: 1px solid #555;
+  border-radius: 8px;
+}
+
+/* Split container */
+.l9-split-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+/* Columns */
+.l9-column {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 40%;
+}
+
+/* ==========================================================
+   LEVEL 9 — OPTION BUTTONS
+========================================================== */
+
+.l9OptionBtn {
+  font-size: 1.3rem;
+  padding: 12px 18px;
+  margin: 8px 0;
+  width: 100%;
+  text-align: left;
+  border-radius: 10px;
+  background: #222;
+  border: 2px solid #444;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.l9OptionBtn:hover {
+  background: #333;
+}
+
+/* Correct (green) */
+.l9OptionBtn.l9-correct {
+  background-color: #4CAF50 !important;
+  border-color: #4CAF50 !important;
+  color: white !important;
+}
+
+/* Wrong (red) */
+.l9OptionBtn.l9-wrong {
+  background-color: #fdd !important;
+  border-color: #f55 !important;
+  color: #900 !important;
+}
+
+.l9OptionBtn.l9-wrong:hover {
+  cursor: default;
+}
+
+/* ==========================================================
+   LEVEL 9 — LEFT COLUMN TEXT
+========================================================== */
+
+#l9LeftColumn {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: 600;
+}
+
+/* ==========================================================
+   LEVEL 9 — REPLAY BUTTON
+========================================================== */
+
+.l9-replay-btn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 6px 12px;
+  font-size: 14px;
+  z-index: 10;
+}
+
+/* ==========================================================
+   LEVEL 9 — SUMMARY EXPLANATION
+========================================================== */
+
+#l9SummaryExplanation {
+  font-size: 14px;
+  color: #b8b8b8;
+  margin-top: 18px;
+  line-height: 1.45;
+  max-width: 480px;
+  order: 99;
+  display: block;
+}
+
+#l9Explanation {
+  display: none !important;
+}
+
+/* Nuance sentence (summary) */
+.l9-nuance-sentence {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #222;
+}

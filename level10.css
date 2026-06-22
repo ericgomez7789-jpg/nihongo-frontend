@@ -1,0 +1,183 @@
+/* ==========================================================
+   LEVEL 10 — GLOBAL DARK THEME
+========================================================== */
+
+.level10 {
+  background: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+/* ==========================================================
+   LEVEL 10 — SCREEN VISIBILITY
+   (Fixes the .level10.screen vs .level10-screen bug)
+========================================================== */
+
+.level10-screen {
+  display: none;
+  background: #000;
+  color: #fff;
+  min-height: 100vh;
+  padding: 40px;
+}
+
+.level10-screen:not(.hidden) {
+  display: block;
+}
+
+/* ==========================================================
+   LEVEL 10 — TITLES
+========================================================== */
+
+.level10 .title {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+/* ==========================================================
+   LEVEL 10 — MUSIC CONTROLS
+========================================================== */
+
+.level10 .music-controls {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+.level10 .iconBtn {
+  background: #222;
+  color: #fff;
+  border: 1px solid #555;
+  padding: 8px 12px;
+  margin-left: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.level10 .iconBtn:hover {
+  background: #333;
+}
+
+/* ==========================================================
+   LEVEL 10 — SCREEN 2 (PARAPHRASING)
+========================================================== */
+
+.level10 .replay-top {
+  margin-bottom: 20px;
+  font-size: 22px;
+  padding: 10px 20px;
+  background: #222;
+  border: 1px solid #555;
+  border-radius: 8px;
+}
+
+/* Split container */
+.l10-split-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+/* Columns */
+.l10-column {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 40%;
+}
+
+/* ==========================================================
+   LEVEL 10 — OPTION BUTTONS
+========================================================== */
+
+.l10OptionBtn {
+  font-size: 1.3rem;
+  padding: 12px 18px;
+  margin: 8px 0;
+  width: 100%;
+  text-align: left;
+  border-radius: 10px;
+  background: #222;
+  border: 2px solid #444;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+/* Hover only BEFORE selection */
+.l10OptionBtn:not(.l10-correct):not(.l10-wrong):hover {
+  background: #333;
+}
+
+/* Correct (green) */
+.l10OptionBtn.l10-correct {
+  background-color: #2ecc71 !important;
+  border-color: #2ecc71 !important;
+  color: #000 !important;
+}
+
+/* Wrong (red) */
+.l10OptionBtn.l10-wrong {
+  background-color: #ffdddd !important;
+  border-color: #ff5555 !important;
+  color: #900 !important;
+}
+
+/* Disable hover after selection */
+.l10OptionBtn.l10-wrong:hover,
+.l10OptionBtn.l10-correct:hover {
+  background-color: inherit;
+  cursor: default;
+}
+
+/* ==========================================================
+   LEVEL 10 — LEFT COLUMN TEXT
+========================================================== */
+
+#l10LeftColumn {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: 600;
+}
+
+/* ==========================================================
+   LEVEL 10 — REPLAY BUTTON
+========================================================== */
+
+.l10-replay-btn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 6px 12px;
+  font-size: 14px;
+  z-index: 10;
+}
+
+/* ==========================================================
+   LEVEL 10 — SUMMARY EXPLANATION
+========================================================== */
+
+#l10Explanation {
+  display: block !important;
+  font-size: 15px;
+  color: #ddd;
+  margin-top: 20px;
+  line-height: 1.5;
+  max-width: 600px;
+}
+
+/* Correct answer sentence */
+#l10NuanceSentence,
+.l10-nuance-sentence {
+  margin-top: 14px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff !important;
+}
+
+/* Remove Level‑9 leftover */
+#l10SummaryExplanation {
+  display: none !important;
+}
