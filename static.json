@@ -1,0 +1,8 @@
+{
+  "routes": [
+    { "src": "/success.html", "dest": "/success.html" },
+    { "src": "/cancel.html", "dest": "/cancel.html" },
+    { "src": "/membership.html", "dest": "/membership.html" },
+    { "src": "/.*", "dest": "/index.html" }
+  ]
+}
