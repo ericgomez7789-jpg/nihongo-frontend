@@ -87,14 +87,16 @@
   <button onclick="logout()">Logout</button>
 
   <!-- NEW: Membership link -->
-  <p style="margin-top:10px;">
-    <a href="membership.html" style="color:#7fd1ff;">Membership →</a>
-  </p>
+ <div style="margin-bottom:20px;">
+  <a href="membership.html" style="color:#7fd1ff; font-size:18px;">Membership →</a>
+</div>
+
 </div>
 
 
   <!-- MAIN APP (hidden until logged in) -->
-  <div id="app">
+<div id="app" style="display:none;">
+
 
     <h2>Write a Post, Question, or Feedback</h2>
     <input id="newTitle" placeholder="Post title (optional)" />
@@ -173,14 +175,27 @@
        LOGIN STATE HANDLING
     ----------------------------*/
     blogSupabase.auth.onAuthStateChange(async (event, session) => {
-      const loggedIn = !!session;
+  const loggedIn = !!session;
 
-      document.getElementById("authBox").style.display = loggedIn ? "none" : "block";
-      document.getElementById("logoutBox").style.display = loggedIn ? "block" : "none";
-      document.getElementById("app").style.display = loggedIn ? "block" : "none";
+  // Show login UI only when logged out
+  document.getElementById("authBox").style.display = loggedIn ? "none" : "block";
 
-      if (loggedIn) renderPosts();
-    });
+  // Show logout button only when logged in
+  document.getElementById("logoutBox").style.display = loggedIn ? "block" : "none";
+
+  // Show the entire blog/podcast app only when logged in
+  document.getElementById("app").style.display = loggedIn ? "block" : "none";
+
+  // If user is NOT logged in, hide everything and stop
+  if (!loggedIn) {
+    document.getElementById("posts").innerHTML = "";
+    return;
+  }
+
+  // If logged in, load posts
+  await renderPosts();
+});
+
 
     /* ---------------------------
        BLOG / PODCAST LOGIC
