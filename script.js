@@ -9486,7 +9486,7 @@ const level3Sentences = [
 
   choiceAudio: {
     options: [
-      "audio/sentences/soiufuuni.wav",
+      "audio/sentences/souiufuuni.wav",
       "audio/sentences/doushite.wav",
       "audio/sentences/donna.wav",
       "audio/sentences/kouiu.wav"
@@ -9494,7 +9494,7 @@ const level3Sentences = [
   },
 
   meaningAudio: [
-    "audio/sentences/soiufuuni.wav",
+    "audio/sentences/souiufuuni.wav",
     "audio/sentences/doushite.wav",
     "audio/sentences/donna.wav",
     "audio/sentences/kouiu.wav"
@@ -9505,7 +9505,7 @@ const level3Sentences = [
       hiragana: "そういうふうに",
       romaji: "soiufuuni",
       meaning: "like that",
-      audio: { daughter: "audio/sentences/soiufuuni.wav", me: "audio/sentences/soiufuuni.wav" }
+      audio: { daughter: "audio/sentences/souiufuuni.wav", me: "audio/sentences/souiufuuni.wav" }
     },
     {
       hiragana: "する",
@@ -10374,30 +10374,30 @@ play chuncks in sequence
 ---------------------------------------------------------------------------------------------*/
 L3.playChunkSequence3 = function (i = 0, callback, chunksArray) {
   const chunks = chunksArray;
+  const currentGen = L3.audio.generation;   // ⭐ snapshot
 
-  // Cancel guard
   if (L3.audio.cancelToken.cancel) return;
+  if (currentGen !== L3.audio.generation) return;
 
-  // End of sequence
   if (i >= chunks.length) {
-    if (!L3.audio.cancelToken.cancel && typeof callback === "function") {
+    if (!L3.audio.cancelToken.cancel &&
+        currentGen === L3.audio.generation &&
+        typeof callback === "function") {
       callback();
     }
     return;
   }
 
-  // Random voice
   let voice = Math.random() < 0.5 ? "daughter" : "me";
   let file = chunks[i].audio?.[voice];
 
-  // ⭐ Fallback voice if missing
   if (!file) {
     voice = voice === "daughter" ? "me" : "daughter";
     file = chunks[i].audio?.[voice];
   }
 
-  // If still no file, skip this chunk
   if (!file) {
+    if (currentGen !== L3.audio.generation) return;
     L3.playChunkSequence3(i + 1, callback, chunks);
     return;
   }
@@ -10405,26 +10405,30 @@ L3.playChunkSequence3 = function (i = 0, callback, chunksArray) {
   const audio = new Audio(file);
   L3.audio.current = audio;
 
-  // Safety timeout
   let safety = setTimeout(() => {
+    if (currentGen !== L3.audio.generation) return;
     L3.playChunkSequence3(i + 1, callback, chunks);
   }, 10000);
 
   audio.onended = () => {
     clearTimeout(safety);
+    if (currentGen !== L3.audio.generation) return;
     L3.playChunkSequence3(i + 1, callback, chunks);
   };
 
   audio.onerror = () => {
     clearTimeout(safety);
+    if (currentGen !== L3.audio.generation) return;
     L3.playChunkSequence3(i + 1, callback, chunks);
   };
 
   audio.play().catch(() => {
     clearTimeout(safety);
+    if (currentGen !== L3.audio.generation) return;
     L3.playChunkSequence3(i + 1, callback, chunks);
   });
 };
+
 
   window.L3 = window.L3 || {};
 
