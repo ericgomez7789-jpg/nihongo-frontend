@@ -12701,12 +12701,17 @@ L4.getCurrentSentence = function () {
 L4.playChunkSequence4 = function (i = 0, callback, chunksArray) {
   const chunks = chunksArray;
 
-  // ⭐ Cancel guard — if user pressed reset or next
+  // ⭐ Snapshot generation at the start of this call
+  const myGen = L4.audio.generation;
+
+  // ⭐ Cancel guard
   if (L4.audio.cancelToken.cancel) return;
 
   // ⭐ End of sequence
   if (i >= chunks.length) {
-    if (!L4.audio.cancelToken.cancel && typeof callback === "function") {
+    if (!L4.audio.cancelToken.cancel &&
+        myGen === L4.audio.generation &&
+        typeof callback === "function") {
       callback();
     }
     return;
@@ -12726,13 +12731,14 @@ L4.playChunkSequence4 = function (i = 0, callback, chunksArray) {
     }
   }
 
-  // ⭐ If STILL no file → silent placeholder (never skip chunks)
+  // ⭐ If STILL no file → silent placeholder
   if (!file) {
     console.warn("Missing audio for chunk:", chunks[i]);
 
     setTimeout(() => {
+      if (L4.audio.cancelToken.cancel || myGen !== L4.audio.generation) return;
       L4.playChunkSequence4(i + 1, callback, chunks);
-    }, 300); // silent delay placeholder
+    }, 300);
 
     return;
   }
@@ -12740,35 +12746,46 @@ L4.playChunkSequence4 = function (i = 0, callback, chunksArray) {
   const audio = new Audio(file);
   L4.audio.current = audio;
 
-  // ⭐ Safety timeout — prevents infinite hang
+  // ⭐ Safety timeout
   let safety = setTimeout(() => {
+    if (L4.audio.cancelToken.cancel || myGen !== L4.audio.generation) return;
+
     console.warn("Safety timeout triggered for:", file);
     L4.playChunkSequence4(i + 1, callback, chunks);
   }, 10000);
 
   audio.onended = () => {
+    if (L4.audio.cancelToken.cancel || myGen !== L4.audio.generation) return;
+
     clearTimeout(safety);
     L4.playChunkSequence4(i + 1, callback, chunks);
   };
 
   audio.onerror = () => {
+    if (L4.audio.cancelToken.cancel || myGen !== L4.audio.generation) return;
+
     clearTimeout(safety);
     console.warn("Audio error, using silent fallback for:", file);
 
     setTimeout(() => {
+      if (L4.audio.cancelToken.cancel || myGen !== L4.audio.generation) return;
       L4.playChunkSequence4(i + 1, callback, chunks);
     }, 300);
   };
 
   audio.play().catch(() => {
+    if (L4.audio.cancelToken.cancel || myGen !== L4.audio.generation) return;
+
     clearTimeout(safety);
     console.warn("Audio play() failed, using silent fallback for:", file);
 
     setTimeout(() => {
+      if (L4.audio.cancelToken.cancel || myGen !== L4.audio.generation) return;
       L4.playChunkSequence4(i + 1, callback, chunks);
     }, 300);
   });
 };
+
 
 
 
@@ -13284,9 +13301,38 @@ L4.showRoundSummary = function () {
 
   // Replay full sentence
   document.getElementById("screen3ReplayBtn").onclick = () => {
-    L4.stopAllAudio();
-    L4.playChunkSequence4(0, () => {}, s.chunks);
-  };
+  console.log("[Level4] Replay full sentence from summary");
+
+  L4.stopAllAudio();
+
+  // Reset audio engine exactly like Screen 2
+  L4.audio.cancelToken.cancel = false;
+  L4.audio.generation++;
+  L4.mcqLocked = false; // prevents early abort in some builds
+
+  const chunks = s?.chunks || [];
+  if (!chunks.length) {
+    console.error("No chunks available for replay");
+    return;
+  }
+
+  L4.playChunkSequence4(0, () => {}, chunks);
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   // Next → Continue Level 4 flow
   document.getElementById("screen3NextBtn").onclick = () => {
