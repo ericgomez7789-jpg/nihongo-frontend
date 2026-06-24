@@ -3484,7 +3484,7 @@ const DragModule = {
 
 
 
-function renderSummaryScreen(sentence, nextLevelFn, correctDrops = null) {
+function renderSummaryScreen(sentence, nextLevelFn, correctDrops = null, audioChunks = null) {
   if (typeof nextLevelFn !== "function") {
     console.warn("⚠️ nextLevelFn missing, using fallback");
     nextLevelFn = () => {};
@@ -3493,17 +3493,13 @@ function renderSummaryScreen(sentence, nextLevelFn, correctDrops = null) {
   stopAllAudio();
   showScreen("screen3");
 
-  // ⭐ Record lifetime progress for Level 1
-  // ⭐ Record lifetime progress for Level 1 (if Progress is loaded)
-if (window.Progress && typeof Progress.markSentenceComplete === "function") {
-  Progress.markSentenceComplete("level1", sentence.id);
-}
+  if (window.Progress && typeof Progress.markSentenceComplete === "function") {
+    Progress.markSentenceComplete("level1", sentence.id);
+  }
 
-// ⭐ Inject Level 1 progress bar (if L1 renderer exists)
-if (window.L1 && typeof L1.renderProgress === "function") {
-  L1.renderProgress("screen3");
-}
-
+  if (window.L1 && typeof L1.renderProgress === "function") {
+    L1.renderProgress("screen3");
+  }
 
   document.getElementById("meaningBox").textContent = sentence.meaning;
 
@@ -3531,19 +3527,24 @@ if (window.L1 && typeof L1.renderProgress === "function") {
   document.getElementById("screen3ReplayBtn").onclick = () => {
     stopAllAudio();
     window.audioCancelToken.cancel = false;
+
+    if (!audioChunks || audioChunks.length === 0) {
+      console.warn("No audio chunks found for Level 1 Screen 3 replay");
+      return;
+    }
+
+    window.currentAudioChunks = audioChunks;
     playChunkSequence(0, () => {});
   };
 
   document.getElementById("screen3NextBtn").onclick = () => {
-  // ⭐ If we've reached the round limit → final summary
-  if (level1Round >= TOTAL_ROUNDS) {
-    showLevel1FinalSummary();
-    return;
-  }
+    if (level1Round >= TOTAL_ROUNDS) {
+      showLevel1FinalSummary();
+      return;
+    }
 
-  // ⭐ Otherwise → next round
-  nextLevelFn();
-};
+    nextLevelFn();
+  };
 }
 
 
@@ -3620,6 +3621,10 @@ function level1_screen1() {
   stopAllAudio();
 
   showScreen("screen1");
+  // Ensure total is set even if level1() was bypassed
+const level1Sentences = sentences.filter(s => s.level === 1);
+Progress.setTotal("level1", level1Sentences.length);
+
 const screenEl = document.getElementById("screen1");
 L1.Reset.attach(screenEl, "screen1");
 
@@ -3727,7 +3732,8 @@ function level1_screen2(sentence) {
     Progress.markSentenceComplete("level1", sentence.id);
 
     // Go to summary
-    renderSummaryScreen(sentence, level1_screen1, correctDrops);
+   renderSummaryScreen(sentence, level1_screen1, correctDrops, currentAudioChunks);
+
   };
 
   // ⭐ Start 30s timer

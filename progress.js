@@ -107,6 +107,14 @@ document.addEventListener("DOMContentLoaded", () => {
    L1.Reset — Reset Button Wiring
 ------------------------------------------------------ */
 
+
+
+
+
+
+
+
+
 /* ----------------------------------------------------------
    PROGRESS2 — Level 2 Mastery Tracking
    (Only increments on correct answers)
