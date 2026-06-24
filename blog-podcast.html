@@ -1,4 +1,14 @@
+<!-- Supabase CDN MUST load before your script -->
+<script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+
 <script>
+/* -----------------------------------------
+   ENSURE SUPABASE LOADED
+------------------------------------------*/
+if (!window.supabase) {
+  console.error("Supabase failed to load.");
+}
+
 /* -----------------------------------------
    BLOG SUPABASE CLIENT
 ------------------------------------------*/
@@ -59,9 +69,6 @@ async function logout() {
   document.getElementById("logoutBox").style.display = "none";
   document.getElementById("app").style.display = "none";
   document.getElementById("posts").innerHTML = "";
-
-  // Optional redirect:
-  // window.location.href = "blog-podcast.html";
 }
 
 window.login = login;
