@@ -6288,11 +6288,16 @@ function showLevel2FinalSummary() {
 
 L2.playChunkSequence2 = function(i = 0, callback, chunksArray) {
   const chunks = chunksArray;
+  const currentGen = L2.audio.generation;   // ⭐ generation snapshot
 
+  // Kill if cancelled or outdated
   if (L2.audio.cancelToken.cancel) return;
+  if (currentGen !== L2.audio.generation) return;
 
   if (i >= chunks.length) {
-    if (!L2.audio.cancelToken.cancel && typeof callback === "function") {
+    if (!L2.audio.cancelToken.cancel &&
+        currentGen === L2.audio.generation &&
+        typeof callback === "function") {
       callback();
     }
     return;
@@ -6301,9 +6306,10 @@ L2.playChunkSequence2 = function(i = 0, callback, chunksArray) {
   const voice = Math.random() < 0.5 ? "daughter" : "me";
   const file = chunks[i].audio?.[voice];
 
-  console.log("FILE:", file);   // now file exists
+  console.log("FILE:", file);
 
   if (!file) {
+    if (currentGen !== L2.audio.generation) return;
     L2.playChunkSequence2(i + 1, callback, chunks);
     return;
   }
@@ -6312,21 +6318,25 @@ L2.playChunkSequence2 = function(i = 0, callback, chunksArray) {
   L2.audio.current = audio;
 
   let safety = setTimeout(() => {
+    if (currentGen !== L2.audio.generation) return;
     L2.playChunkSequence2(i + 1, callback, chunks);
   }, 10000);
 
   audio.onended = () => {
     clearTimeout(safety);
+    if (currentGen !== L2.audio.generation) return;
     L2.playChunkSequence2(i + 1, callback, chunks);
   };
 
   audio.onerror = () => {
     clearTimeout(safety);
+    if (currentGen !== L2.audio.generation) return;
     L2.playChunkSequence2(i + 1, callback, chunks);
   };
 
   audio.play().catch(() => {
     clearTimeout(safety);
+    if (currentGen !== L2.audio.generation) return;
     L2.playChunkSequence2(i + 1, callback, chunks);
   });
 };
@@ -6508,10 +6518,23 @@ L2.screen1 = function () {
   const replayBtn = document.getElementById("replaySentenceBtn");
   if (replayBtn) replayBtn.style.display = "none";
 
-  // Reset audio
-  L2.stopAllAudio();
+  // ⭐⭐⭐ HARD KILL — MUST BE FIRST ⭐⭐⭐
+L2.stopAllAudio();
+
+if (L2.audio && L2.audio.cancelToken) {
+  L2.audio.cancelToken.cancel = true;   // kill ALL pending replay chains
+}
+
+if (L2.audio) {
+  L2.audio.generation++;                // invalidate ALL callbacks
+  L2.audio.current = null;
+}
+
+// ⭐ Reset cancel token for the NEW Screen‑1 audio
+if (L2.audio && L2.audio.cancelToken) {
   L2.audio.cancelToken.cancel = false;
-  L2.audio.generation++;
+}
+
 
   // Pick sentence
   const sentence = L2.dataset[Math.floor(Math.random() * L2.dataset.length)];
@@ -6739,20 +6762,27 @@ L2.showRoundSummary = function () {
   });
 
   // ⭐ REPLAY BUTTON (Level‑2 safe version)
-  document.getElementById("level2ReplayBtn").onclick = () => {
-    L2.stopAllAudio();
+ document.getElementById("level2ReplayBtn").onclick = () => {
 
-    if (L2.audio && L2.audio.cancelToken) {
-      L2.audio.cancelToken.cancel = false;
-    }
+  // ⭐⭐⭐ HARD KILL — MUST BE FIRST ⭐⭐⭐
+  L2.stopAllAudio();
+  if (L2.audio && L2.audio.cancelToken) {
+    L2.audio.cancelToken.cancel = true;   // ← KILL previous chain
+  }
+  if (L2.audio) {
+    L2.audio.generation++;                // ← Invalidate all pending callbacks
+    L2.audio.current = null;
+  }
 
-    if (L2.audio) {
-      L2.audio.generation++;
-      L2.audio.current = null;
-    }
+  // ⭐ Reset cancel token for the NEW replay
+  if (L2.audio && L2.audio.cancelToken) {
+    L2.audio.cancelToken.cancel = false;
+  }
 
-    L2.playChunkSequence2(0, () => {}, s.chunks);
-  };
+  // ⭐ Start fresh replay
+  L2.playChunkSequence2(0, () => {}, s.chunks);
+};
+
 
   // ⭐ NEXT BUTTON (correct, safe, final version)
   document.getElementById("level2NextBtn").onclick = () => {
