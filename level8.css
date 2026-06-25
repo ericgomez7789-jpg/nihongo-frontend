@@ -51,19 +51,24 @@
 }
 
 /* ==========================================================
-   LEVEL 8 — SCREEN 2 (SPLIT COLUMN PARAPHRASING)
+   LEVEL 8 — REPLAY BUTTON (POSITIONED LOWER)
 ========================================================== */
 
 .level8 .replay-top {
+  margin-top: 50px;        /* ⭐ moved lower so it never blocks progress bar */
   margin-bottom: 20px;
   font-size: 22px;
   padding: 10px 20px;
   background: #222;
   border: 1px solid #555;
   border-radius: 8px;
+  display: inline-block;
 }
 
-/* Split container */
+/* ==========================================================
+   LEVEL 8 — SCREEN 2 (SPLIT COLUMN PARAPHRASING)
+========================================================== */
+
 .l8-split-container {
   display: flex;
   justify-content: center;
@@ -72,7 +77,6 @@
   width: fit-content;
 }
 
-/* Columns */
 .l8-column {
   display: flex;
   flex-direction: column;
@@ -80,7 +84,6 @@
   width: 40%;
 }
 
-/* Items */
 .l8-item {
   padding: 14px 18px;
   font-size: 1.2rem;
@@ -143,15 +146,6 @@
   color: white !important;
 }
 
-.l8-replay-btn {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  padding: 6px 12px;
-  font-size: 14px;
-  z-index: 10;
-}
-
 /* ==========================================================
    LEVEL 8 — SCREEN 3 (SUMMARY TABLE CENTERED)
 ========================================================== */
@@ -159,16 +153,16 @@
 #l8SummaryContainer {
   display: flex;
   flex-direction: column;
-  align-items: center;     /* center rows */
+  align-items: center;
   justify-content: center;
-  margin: 30px auto;       /* center container */
-  width: fit-content;      /* shrink-wrap */
+  margin: 30px auto;
+  width: fit-content;
 }
 
 .summary-row {
   display: flex;
   gap: 20px;
-  justify-content: center; /* center columns */
+  justify-content: center;
   width: 100%;
   padding: 10px 0;
 }
@@ -177,6 +171,6 @@
 .summary-romaji,
 .summary-english {
   min-width: 140px;
-  text-align: center;      /* center text */
+  text-align: center;
   font-size: 1.2rem;
 }

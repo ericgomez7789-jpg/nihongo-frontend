@@ -17865,6 +17865,39 @@ L7.generationGuards = function () {
 // ---------------------------------------------
 // LEVEL 7 — Store Current Sentence (ID + Object)
 // ---------------------------------------------
+
+function createAndWireLevel7ReplayButton(targetScreenId, currentAudioChunks) {
+  // Remove old replay button if it exists
+  const oldBtn = document.getElementById("l7ReplayBtn");
+  if (oldBtn) oldBtn.remove();
+
+  // Create new button
+  const btn = document.createElement("button");
+  btn.id = "l7ReplayBtn";
+  btn.className = "iconBtn replay-top";
+  btn.textContent = "🔁 Replay";
+
+  // Insert into the target screen (Screen 2 or Screen 3)
+  const screen = document.getElementById(targetScreenId);
+  if (!screen) return;
+  screen.appendChild(btn);
+
+  // Wire replay logic
+  btn.onclick = () => {
+    stopAllAudio();
+
+    // Reset cancel token
+    window.audioCancelToken.cancel = false;
+
+    // Replay the chunk sequence
+    playChunkSequence(0, () => {}, currentAudioChunks);
+  };
+}
+
+
+
+
+
 // ---------------------------------------------
 // LEVEL 7 — Store Current Sentence (ID + Object)
 // ---------------------------------------------
@@ -19201,6 +19234,41 @@ L8.generationGuards = function () {
   L8.audio.generation++;
   L8.audio.current = null;
 };
+
+
+
+/* ==========================================================
+   ⭐ LEVEL 8 — Replay button
+========================================================== */
+
+function createAndWireLevel8ReplayButton(targetScreenId, currentAudioChunks) {
+  // Remove old replay button if it exists
+  const oldBtn = document.getElementById("l8ReplayBtn");
+  if (oldBtn) oldBtn.remove();
+
+  // Create new button
+  const btn = document.createElement("button");
+  btn.id = "l8ReplayBtn";
+  btn.className = "iconBtn replay-top";
+  btn.textContent = "🔁 Replay";
+
+  // Insert into the target screen (Screen 2 or Screen 3)
+  const screen = document.getElementById(targetScreenId);
+  if (!screen) return;
+  screen.appendChild(btn);
+
+  // Wire replay logic
+  btn.onclick = () => {
+    stopAllAudio();
+
+    // Reset cancel token
+    window.audioCancelToken.cancel = false;
+
+    // Replay the chunk sequence
+    playChunkSequence(0, () => {}, currentAudioChunks);
+  };
+}
+
 
 /* ==========================================================
    ⭐ LEVEL 8 — Current Sentence ID
