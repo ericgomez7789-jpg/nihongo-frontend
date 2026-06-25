@@ -14878,18 +14878,23 @@ L5.Reset = {
 L5.playChunkSequence5 = function (i = 0, callback, chunksArray) {
   const chunks = chunksArray;
 
-  // Cancel guard
+  // ⭐ Snapshot generation
+  const myGen = L5.audio.generation;
+
+  // ⭐ Cancel guard
   if (L5.audio.cancelToken.cancel) return;
 
-  // End of sequence
+  // ⭐ End of sequence
   if (i >= chunks.length) {
-    if (!L5.audio.cancelToken.cancel && typeof callback === "function") {
+    if (!L5.audio.cancelToken.cancel &&
+        myGen === L5.audio.generation &&
+        typeof callback === "function") {
       callback();
     }
     return;
   }
 
-  // Random voice
+  // ⭐ Random voice
   let voice = Math.random() < 0.5 ? "daughter" : "me";
   let file = chunks[i].audio?.[voice];
 
@@ -14899,8 +14904,9 @@ L5.playChunkSequence5 = function (i = 0, callback, chunksArray) {
     file = chunks[i].audio?.[voice];
   }
 
-  // If still no file, skip this chunk
+  // ⭐ If still no file, skip this chunk
   if (!file) {
+    if (L5.audio.cancelToken.cancel || myGen !== L5.audio.generation) return;
     L5.playChunkSequence5(i + 1, callback, chunks);
     return;
   }
@@ -14908,26 +14914,31 @@ L5.playChunkSequence5 = function (i = 0, callback, chunksArray) {
   const audio = new Audio(file);
   L5.audio.current = audio;
 
-  // Safety timeout
+  // ⭐ Safety timeout
   let safety = setTimeout(() => {
+    if (L5.audio.cancelToken.cancel || myGen !== L5.audio.generation) return;
     L5.playChunkSequence5(i + 1, callback, chunks);
   }, 10000);
 
   audio.onended = () => {
+    if (L5.audio.cancelToken.cancel || myGen !== L5.audio.generation) return;
     clearTimeout(safety);
     L5.playChunkSequence5(i + 1, callback, chunks);
   };
 
   audio.onerror = () => {
+    if (L5.audio.cancelToken.cancel || myGen !== L5.audio.generation) return;
     clearTimeout(safety);
     L5.playChunkSequence5(i + 1, callback, chunks);
   };
 
   audio.play().catch(() => {
+    if (L5.audio.cancelToken.cancel || myGen !== L5.audio.generation) return;
     clearTimeout(safety);
     L5.playChunkSequence5(i + 1, callback, chunks);
   });
 };
+
 
 L5.updateScoreKeeper = function () {
   const el = document.getElementById("l5ScoreKeeper");
@@ -16659,39 +16670,45 @@ L6.mcqRailguards = function () {
 L6.playChunkSequence6 = function (i = 0, callback, chunksArray) {
   const chunks = chunksArray;
 
-  // Hard stop if this chain was cancelled
+  // ⭐ Snapshot generation
+  const myGen = L6.audio.generation;
+
+  // ⭐ Cancel guard
   if (L6.audio.cancelToken.cancel) return;
 
+  // ⭐ End of sequence
   if (!Array.isArray(chunks) || i >= chunks.length) {
-    if (!L6.audio.cancelToken.cancel && typeof callback === "function") {
+    if (!L6.audio.cancelToken.cancel &&
+        myGen === L6.audio.generation &&
+        typeof callback === "function") {
       callback();
     }
     return;
   }
 
+  // ⭐ Random voice
   let voice = Math.random() < 0.5 ? "daughter" : "me";
   let file = chunks[i].audio?.[voice];
 
+  // ⭐ Fallback voice
   if (!file) {
     voice = voice === "daughter" ? "me" : "daughter";
     file = chunks[i].audio?.[voice];
   }
 
+  // ⭐ If still no file → skip chunk
   if (!file) {
-    // skip this chunk, go to next
+    if (L6.audio.cancelToken.cancel || myGen !== L6.audio.generation) return;
     L6.playChunkSequence6(i + 1, callback, chunks);
     return;
   }
 
-  // OPTIONAL: if your dataset only stores bare filenames like "shawa.wav"
-  // ensure the correct path here:
+  // ⭐ Ensure correct path
   if (!file.startsWith("audio/")) {
     file = "audio/sentences/" + file;
   }
 
-  // ---- SINGLE SHARED AUDIO ELEMENT + GENERATION GUARD ----
-  const gen = ++L6.audio.generation;          // snapshot generation for this chain
-
+  // ⭐ Shared audio element
   if (!L6.audio.current) {
     L6.audio.current = new Audio();
   }
@@ -16700,29 +16717,36 @@ L6.playChunkSequence6 = function (i = 0, callback, chunksArray) {
   audio.src = file;
 
   const advance = () => {
-    // Abort if a newer chain started or cancelled
     if (L6.audio.cancelToken.cancel) return;
-    if (gen !== L6.audio.generation) return;
+    if (myGen !== L6.audio.generation) return;
     L6.playChunkSequence6(i + 1, callback, chunks);
   };
 
-  let safety = setTimeout(advance, 10000);
+  // ⭐ Safety timeout
+  let safety = setTimeout(() => {
+    if (L6.audio.cancelToken.cancel || myGen !== L6.audio.generation) return;
+    advance();
+  }, 10000);
 
   audio.onended = () => {
+    if (L6.audio.cancelToken.cancel || myGen !== L6.audio.generation) return;
     clearTimeout(safety);
     advance();
   };
 
   audio.onerror = () => {
+    if (L6.audio.cancelToken.cancel || myGen !== L6.audio.generation) return;
     clearTimeout(safety);
     advance();
   };
 
   audio.play().catch(() => {
+    if (L6.audio.cancelToken.cancel || myGen !== L6.audio.generation) return;
     clearTimeout(safety);
     advance();
   });
 };
+
 
 
 /* ==========================================================
