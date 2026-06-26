@@ -135,15 +135,15 @@
 /* ==========================================================
    LEVEL 9 — REPLAY BUTTON
 ========================================================== */
-
 .l9-replay-btn {
   position: absolute;
-  top: 10px;
+  top: 60px;     /* ⬅️ lowered so it clears the progress bar */
   left: 10px;
   padding: 6px 12px;
   font-size: 14px;
   z-index: 10;
 }
+
 
 /* ==========================================================
    LEVEL 9 — SUMMARY EXPLANATION

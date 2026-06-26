@@ -10,7 +10,6 @@
 
 /* ==========================================================
    LEVEL 10 — SCREEN VISIBILITY
-   (Fixes the .level10.screen vs .level10-screen bug)
 ========================================================== */
 
 .level10-screen {
@@ -72,7 +71,6 @@
   border-radius: 8px;
 }
 
-/* Split container */
 .l10-split-container {
   display: flex;
   justify-content: center;
@@ -80,7 +78,6 @@
   margin-top: 30px;
 }
 
-/* Columns */
 .l10-column {
   display: flex;
   flex-direction: column;
@@ -106,26 +103,22 @@
   transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
-/* Hover only BEFORE selection */
 .l10OptionBtn:not(.l10-correct):not(.l10-wrong):hover {
   background: #333;
 }
 
-/* Correct (green) */
 .l10OptionBtn.l10-correct {
   background-color: #2ecc71 !important;
   border-color: #2ecc71 !important;
   color: #000 !important;
 }
 
-/* Wrong (red) */
 .l10OptionBtn.l10-wrong {
   background-color: #ffdddd !important;
   border-color: #ff5555 !important;
   color: #900 !important;
 }
 
-/* Disable hover after selection */
 .l10OptionBtn.l10-wrong:hover,
 .l10OptionBtn.l10-correct:hover {
   background-color: inherit;
@@ -148,11 +141,33 @@
 
 .l10-replay-btn {
   position: absolute;
-  top: 10px;
+  top: 60px;
   left: 10px;
   padding: 6px 12px;
   font-size: 14px;
   z-index: 10;
+}
+
+/* ==========================================================
+   LEVEL 10 — SCREEN 3 SUMMARY TABLE (CENTERED)
+========================================================== */
+
+#l10SummaryContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;     /* ⬅ centers the table */
+  justify-content: flex-start;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 600px;        /* ⬅ prevents stretching */
+}
+
+#l10SummaryContainer .summary-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 500px;        /* ⬅ keeps rows centered and aligned */
+  margin: 6px 0;
 }
 
 /* ==========================================================
@@ -168,7 +183,6 @@
   max-width: 600px;
 }
 
-/* Correct answer sentence */
 #l10NuanceSentence,
 .l10-nuance-sentence {
   margin-top: 14px;
@@ -177,7 +191,6 @@
   color: #fff !important;
 }
 
-/* Remove Level‑9 leftover */
 #l10SummaryExplanation {
   display: none !important;
 }

@@ -19241,7 +19241,7 @@ L8.generationGuards = function () {
    ⭐ LEVEL 8 — Replay button
 ========================================================== */
 
-function createAndWireLevel8ReplayButton(targetScreenId, currentAudioChunks) {
+function createAndWireLevel8ReplayButton(targetScreenId, audioUrl) {
   // Remove old replay button if it exists
   const oldBtn = document.getElementById("l8ReplayBtn");
   if (oldBtn) oldBtn.remove();
@@ -19252,22 +19252,24 @@ function createAndWireLevel8ReplayButton(targetScreenId, currentAudioChunks) {
   btn.className = "iconBtn replay-top";
   btn.textContent = "🔁 Replay";
 
-  // Insert into the target screen (Screen 2 or Screen 3)
+  // Insert into the target screen
   const screen = document.getElementById(targetScreenId);
   if (!screen) return;
   screen.appendChild(btn);
 
   // Wire replay logic
   btn.onclick = () => {
-    stopAllAudio();
+    L8.stopAllAudio();
+    L8.audio.cancelToken.cancel = false;
+    L8.audio.generation++;
 
-    // Reset cancel token
-    window.audioCancelToken.cancel = false;
-
-    // Replay the chunk sequence
-    playChunkSequence(0, () => {}, currentAudioChunks);
+    const audio = new Audio(audioUrl);
+    L8.audio.current = audio;
+    audio.play().catch(() => {});
   };
 }
+
+
 
 
 /* ==========================================================
@@ -19776,7 +19778,6 @@ L8.handleColumnChoice = function (opt, btn) {
 /* ==========================================================
    ⭐ LEVEL 8 — ROUND SUMMARY
 ========================================================== */
-
 L8.showRoundSummary = function () {
   if (!L8.active) return;
   console.log("[Level8] showRoundSummary()");
@@ -19842,7 +19843,15 @@ L8.showRoundSummary = function () {
       L8.startRound();
     };
   }
+
+  /* ----------------------------------------------------------
+     ⭐ DYNAMIC REPLAY BUTTON — SCREEN 3 (BOTTOM)
+     Level 8 uses s.audio (single file), NOT audioChunks
+  ---------------------------------------------------------- */
+  createAndWireLevel8ReplayButton("level8Screen3", s.audio);
 };
+
+
 
 /* ==========================================================
    ⭐ LEVEL 8 — FINAL SUMMARY (SCREEN 4)
@@ -20712,6 +20721,35 @@ L9.updateScoreKeeper = function () {
 };
 
 
+function createAndWireLevel9ReplayButton(targetScreenId, audioUrl) {
+  // Remove old replay button if it exists
+  const oldBtn = document.getElementById("l9ReplayBtn");
+  if (oldBtn) oldBtn.remove();
+
+  // Create new button
+  const btn = document.createElement("button");
+  btn.id = "l9ReplayBtn";
+  btn.className = "iconBtn replay-top";
+  btn.textContent = "🔁 Replay";
+
+  // Insert into the target screen
+  const screen = document.getElementById(targetScreenId);
+  if (!screen) return;
+  screen.appendChild(btn);
+
+  // Wire replay logic
+  btn.onclick = () => {
+    L9.stopAllAudio();
+    L9.audio.cancelToken.cancel = false;
+    L9.audio.generation++;
+
+    const audio = new Audio(audioUrl);
+    L9.audio.current = audio;
+    audio.play().catch(() => {});
+  };
+}
+
+
 
 /*---------------------------------------------------------------------------
 Scramble Screen 1
@@ -21431,6 +21469,11 @@ L9.showRoundSummary = function () {
       cont.appendChild(row);
     });
   }
+
+  /* ----------------------------------------------------------
+     REPLAY BUTTON (mirror Level 8)
+  ---------------------------------------------------------- */
+  createAndWireLevel9ReplayButton("level9Screen3", s.japanese?.audio);
 
   /* ----------------------------------------------------------
      NEXT BUTTON
@@ -22173,6 +22216,33 @@ L10.renderProgress = function () {
 };
 
 
+function createAndWireLevel10ReplayButton(targetScreenId, audioUrl) {
+  // Remove old replay button if it exists
+  const oldBtn = document.getElementById("l10ReplayBtn");
+  if (oldBtn) oldBtn.remove();
+
+  // Create new button
+  const btn = document.createElement("button");
+  btn.id = "l10ReplayBtn";
+  btn.className = "iconBtn replay-top";
+  btn.textContent = "🔁 Replay";
+
+  // Insert into the target screen
+  const screen = document.getElementById(targetScreenId);
+  if (!screen) return;
+  screen.appendChild(btn);
+
+  // Wire replay logic
+  btn.onclick = () => {
+    L10.stopAllAudio();
+    L10.audio.cancelToken.cancel = false;
+    L10.audio.generation++;
+
+    const audio = new Audio(audioUrl);
+    L10.audio.current = audio;
+    audio.play().catch(() => {});
+  };
+}
 
 
 
@@ -22771,6 +22841,15 @@ L10.showRoundSummary = function () {
       cont.appendChild(row);
     });
   }
+
+   /* ----------------------------------------------------------
+     REPLAY BUTTON (mirror Level 8 & 9)
+  ---------------------------------------------------------- */
+  createAndWireLevel10ReplayButton(
+  "level10Screen3",
+  s.japanese?.polite?.audio
+);
+
 
   // Next button
   const nextBtn = document.getElementById("l10SummaryNextBtn");
