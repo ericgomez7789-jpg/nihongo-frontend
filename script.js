@@ -19315,7 +19315,7 @@ L8.Reset = {
       btn.textContent = "Reset Level 8";
 
       btn.style.position = "absolute";
-      btn.style.top = "10px";
+      btn.style.top = "60px";
       btn.style.right = "10px";
       btn.style.zIndex = "9999";
 
@@ -20615,7 +20615,7 @@ L9.Reset = {
       btn.textContent = "Reset Level 9";
 
       btn.style.position = "absolute";
-      btn.style.top = "10px";
+      btn.style.top = "60px";
       btn.style.right = "10px";
       btn.style.zIndex = "9999";
 
@@ -22122,7 +22122,7 @@ L10.Reset = {
       btn.textContent = "Reset Level 10";
 
       btn.style.position = "absolute";
-      btn.style.top = "10px";
+      btn.style.top = "60px";
       btn.style.right = "10px";
       btn.style.zIndex = "9999";
 
