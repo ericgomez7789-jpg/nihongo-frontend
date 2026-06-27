@@ -2751,6 +2751,70 @@ const sentences = [
 
 
 
+
+
+{
+  id: "l1-74",
+  meaning: "I am happy.",
+  level: 1,
+  chunks: [
+    {
+      romaji: "ureshii",
+      hiragana: "うれしい",
+      meaning: "happy",
+      audio: {
+        daughter: "audio/sentences/ureshii.wav",
+        me: "audio/sentences/ureshii.wav"
+      }
+    },
+    {
+      romaji: "desu",
+      hiragana: "です",
+      meaning: "polite ending (is / am)",
+      audio: {
+        daughter: "audio/sentences/desu.wav",
+        me: "audio/sentences/desu.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+{
+  id: "l1-75",
+  meaning: "I am sad.",
+  level: 1,
+  chunks: [
+    {
+      romaji: "kanashii",
+      hiragana: "かなしい",
+      meaning: "sad",
+      audio: {
+        daughter: "audio/sentences/kanashii.wav",
+        me: "audio/sentences/kanashii.wav"
+      }
+    },
+    {
+      romaji: "desu",
+      hiragana: "です",
+      meaning: "polite ending (is / am)",
+      audio: {
+        daughter: "audio/sentences/desu.wav",
+        me: "audio/sentences/desu.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
 ];
 
 // ⭐ ADD THIS PATCH RIGHT HERE
