@@ -6458,6 +6458,247 @@ const level2Sentences = [
 },
 
 
+
+
+
+
+
+{
+  id: "l2-32",
+  meaning: "While traveling, when I went to visit the island, the sun shone warmly and gently.",
+  level: 2,
+
+  options: [
+    "りょこうちゅう",
+    "に",
+    "しま",
+    "を",
+    "おとずれ",
+    "に",
+    "いく",
+    "とき",
+    "たいよう",
+    "が",
+    "うらうら",
+    "と",
+    "さして",
+    "ひかりました"
+  ],
+
+  optionsRomaji: [
+    "ryokouchuu",
+    "ni",
+    "shima",
+    "wo",
+    "otozure",
+    "ni",
+    "iku",
+    "toki",
+    "taiyou",
+    "ga",
+    "uraura",
+    "to",
+    "sashite",
+    "hikarimashita"
+  ],
+
+  optionsEN: [
+    "during the trip",
+    "in / during",
+    "island",
+    "object marker",
+    "visit",
+    "to",
+    "go",
+    "when",
+    "the sun",
+    "subject marker",
+    "warm glowing sunlight",
+    "in a ~ way",
+    "shining down",
+    "shone / glowed"
+  ],
+
+  correct: "うらうら",
+
+  choiceAudio: {
+    options: [
+      "audio/sentences/ryokouchuu.wav",
+      "audio/sentences/ni.wav",
+      "audio/sentences/shima.wav",
+      "audio/sentences/wo.wav",
+      "audio/sentences/otozure.wav",
+      "audio/sentences/ni.wav",
+      "audio/sentences/iku.wav",
+      "audio/sentences/toki.wav",
+      "audio/sentences/taiyou.wav",
+      "audio/sentences/ga.wav",
+      "audio/sentences/uraura.wav",
+      "audio/sentences/to.wav",
+      "audio/sentences/sashite.wav",
+      "audio/sentences/hikarimashita.wav"
+    ]
+  },
+
+  meaningAudio: [
+    "audio/sentences/ryokouchuu.wav",
+    "audio/sentences/ni.wav",
+    "audio/sentences/shima.wav",
+    "audio/sentences/wo.wav",
+    "audio/sentences/otozure.wav",
+    "audio/sentences/ni.wav",
+    "audio/sentences/iku.wav",
+    "audio/sentences/toki.wav",
+    "audio/sentences/taiyou.wav",
+    "audio/sentences/ga.wav",
+    "audio/sentences/uraura.wav",
+    "audio/sentences/to.wav",
+    "audio/sentences/sashite.wav",
+    "audio/sentences/hikarimashita.wav"
+  ],
+
+  chunks: [
+    {
+      romaji: "ryokouchuu",
+      hiragana: "りょこうちゅう",
+      meaning: "during the trip",
+      audio: {
+        daughter: "audio/sentences/ryokouchuu.wav",
+        me: "audio/sentences/ryokouchuu.wav"
+      }
+    },
+    {
+      romaji: "ni",
+      hiragana: "に",
+      meaning: "in / during",
+      audio: {
+        daughter: "audio/sentences/ni.wav",
+        me: "audio/sentences/ni.wav"
+      }
+    },
+    {
+      romaji: "shima",
+      hiragana: "しま",
+      meaning: "island",
+      audio: {
+        daughter: "audio/sentences/shima.wav",
+        me: "audio/sentences/shima.wav"
+      }
+    },
+    {
+      romaji: "wo",
+      hiragana: "を",
+      meaning: "object marker",
+      audio: {
+        daughter: "audio/sentences/wo.wav",
+        me: "audio/sentences/wo.wav"
+      }
+    },
+    {
+      romaji: "otozure",
+      hiragana: "おとずれ",
+      meaning: "visit",
+      audio: {
+        daughter: "audio/sentences/otozure.wav",
+        me: "audio/sentences/otozure.wav"
+      }
+    },
+    {
+      romaji: "ni",
+      hiragana: "に",
+      meaning: "to",
+      audio: {
+        daughter: "audio/sentences/ni.wav",
+        me: "audio/sentences/ni.wav"
+      }
+    },
+    {
+      romaji: "iku",
+      hiragana: "いく",
+      meaning: "go",
+      audio: {
+        daughter: "audio/sentences/iku.wav",
+        me: "audio/sentences/iku.wav"
+      }
+    },
+    {
+      romaji: "toki",
+      hiragana: "とき",
+      meaning: "when",
+      audio: {
+        daughter: "audio/sentences/toki.wav",
+        me: "audio/sentences/toki.wav"
+      }
+    },
+    {
+      romaji: "taiyou",
+      hiragana: "たいよう",
+      meaning: "the sun",
+      audio: {
+        daughter: "audio/sentences/taiyou.wav",
+        me: "audio/sentences/taiyou.wav"
+      }
+    },
+    {
+      romaji: "ga",
+      hiragana: "が",
+      meaning: "subject marker",
+      audio: {
+        daughter: "audio/sentences/ga.wav",
+        me: "audio/sentences/ga.wav"
+      }
+    },
+    {
+      romaji: "uraura",
+      hiragana: "うらうら",
+      meaning: "warm glowing sunlight",
+      audio: {
+        daughter: "audio/sentences/uraura.wav",
+        me: "audio/sentences/uraura.wav"
+      }
+    },
+    {
+      romaji: "to",
+      hiragana: "と",
+      meaning: "in a ~ way",
+      audio: {
+        daughter: "audio/sentences/to.wav",
+        me: "audio/sentences/to.wav"
+      }
+    },
+    {
+      romaji: "sashite",
+      hiragana: "さして",
+      meaning: "shining down",
+      audio: {
+        daughter: "audio/sentences/sashite.wav",
+        me: "audio/sentences/sashite.wav"
+      }
+    },
+    {
+      romaji: "hikarimashita",
+      hiragana: "ひかりました",
+      meaning: "shone / glowed",
+      audio: {
+        daughter: "audio/sentences/hikarimashita.wav",
+        me: "audio/sentences/hikarimashita.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 
