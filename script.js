@@ -2815,6 +2815,277 @@ const sentences = [
 
 
 
+{
+  id: "l1-76",
+  meaning: "Look through the window.",
+  level: 1,
+  chunks: [
+    {
+      romaji: "mado",
+      hiragana: "まど",
+      meaning: "window",
+      audio: {
+        daughter: "audio/sentences/mado.wav",
+        me: "audio/sentences/mado.wav"
+      }
+    },
+    {
+      romaji: "kara",
+      hiragana: "から",
+      meaning: "from / through",
+      audio: {
+        daughter: "audio/sentences/kara.wav",
+        me: "audio/sentences/kara.wav"
+      }
+    },
+    {
+      romaji: "miru",
+      hiragana: "みる",
+      meaning: "to look / to see",
+      audio: {
+        daughter: "audio/sentences/miru.wav",
+        me: "audio/sentences/miru.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+{
+  id: "l1-77",
+  meaning: "I am disappointed.",
+  level: 1,
+  chunks: [
+    {
+      romaji: "gakkari",
+      hiragana: "がっかり",
+      meaning: "disappointed",
+      audio: {
+        daughter: "audio/sentences/gakkari.wav",
+        me: "audio/sentences/gakkari.wav"
+      }
+    },
+    {
+      romaji: "desu",
+      hiragana: "です",
+      meaning: "polite ending (is / am)",
+      audio: {
+        daughter: "audio/sentences/desu.wav",
+        me: "audio/sentences/desu.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+{
+  id: "l1-78",
+  meaning: "I go to school at 7 o'clock.",
+  level: 1,
+  chunks: [
+    {
+      romaji: "shichi",
+      hiragana: "しち",
+      meaning: "seven",
+      audio: {
+        daughter: "audio/sentences/shichi.wav",
+        me: "audio/sentences/shichi.wav"
+      }
+    },
+    {
+      romaji: "ji",
+      hiragana: "じ",
+      meaning: "o'clock",
+      audio: {
+        daughter: "audio/sentences/ji.wav",
+        me: "audio/sentences/ji.wav"
+      }
+    },
+    {
+      romaji: "ni",
+      hiragana: "に",
+      meaning: "at (time)",
+      audio: {
+        daughter: "audio/sentences/ni.wav",
+        me: "audio/sentences/ni.wav"
+      }
+    },
+    {
+      romaji: "gakkou",
+      hiragana: "がっこう",
+      meaning: "school",
+      audio: {
+        daughter: "audio/sentences/gakkou.wav",
+        me: "audio/sentences/gakkou.wav"
+      }
+    },
+    {
+      romaji: "e",
+      hiragana: "へ",
+      meaning: "to (direction)",
+      audio: {
+        daughter: "audio/sentences/e.wav",
+        me: "audio/sentences/e.wav"
+      }
+    },
+    {
+      romaji: "iku",
+      hiragana: "いく",
+      meaning: "to go",
+      audio: {
+        daughter: "audio/sentences/iku.wav",
+        me: "audio/sentences/iku.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+{
+  id: "l1-79",
+  meaning: "I am embarrassed.",
+  level: 1,
+  chunks: [
+    {
+      romaji: "hazukashii",
+      hiragana: "はずかしい",
+      meaning: "embarrassed / shy",
+      audio: {
+        daughter: "audio/sentences/hazukashii.wav",
+        me: "audio/sentences/hazukashii.wav"
+      }
+    },
+    {
+      romaji: "desu",
+      hiragana: "です",
+      meaning: "polite ending (is / am)",
+      audio: {
+        daughter: "audio/sentences/desu.wav",
+        me: "audio/sentences/desu.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+{
+  id: "l1-80",
+  meaning: "It works for me. / It's convenient for me.",
+  level: 1,
+  chunks: [
+    {
+      romaji: "tsugou",
+      hiragana: "つごう",
+      meaning: "circumstances / convenience",
+      audio: {
+        daughter: "audio/sentences/tsugou.wav",
+        me: "audio/sentences/tsugou.wav"
+      }
+    },
+    {
+      romaji: "ga",
+      hiragana: "が",
+      meaning: "subject marker",
+      audio: {
+        daughter: "audio/sentences/ga.wav",
+        me: "audio/sentences/ga.wav"
+      }
+    },
+    {
+      romaji: "ii",
+      hiragana: "いい",
+      meaning: "good / works well",
+      audio: {
+        daughter: "audio/sentences/ii.wav",
+        me: "audio/sentences/ii.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+{
+  id: "l1-81",
+  meaning: "Is now a good time to talk?",
+  level: 1,
+  chunks: [
+    {
+      romaji: "ima",
+      hiragana: "いま",
+      meaning: "now",
+      audio: {
+        daughter: "audio/sentences/ima.wav",
+        me: "audio/sentences/ima.wav"
+      }
+    },
+    {
+      romaji: "hanashite",
+      hiragana: "はなして",
+      meaning: "talk / speak (te-form)",
+      audio: {
+        daughter: "audio/sentences/hanashite.wav",
+        me: "audio/sentences/hanashite.wav"
+      }
+    },
+    {
+      romaji: "mo",
+      hiragana: "も",
+      meaning: "even / also (here: 'even if')",
+      audio: {
+        daughter: "audio/sentences/mo.wav",
+        me: "audio/sentences/mo.wav"
+      }
+    },
+    {
+      romaji: "tsugou",
+      hiragana: "つごう",
+      meaning: "circumvenience / timing",
+      audio: {
+        daughter: "audio/sentences/tsugou.wav",
+        me: "audio/sentences/tsugou.wav"
+      }
+    },
+    {
+      romaji: "ii",
+      hiragana: "いい",
+      meaning: "good / works well",
+      audio: {
+        daughter: "audio/sentences/ii.wav",
+        me: "audio/sentences/ii.wav"
+      }
+    },
+    {
+      romaji: "desuka",
+      hiragana: "ですか",
+      meaning: "polite question ending",
+      audio: {
+        daughter: "audio/sentences/desuka.wav",
+        me: "audio/sentences/desuka.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
 ];
 
 // ⭐ ADD THIS PATCH RIGHT HERE
