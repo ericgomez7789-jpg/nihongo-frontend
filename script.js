@@ -5185,23 +5185,15 @@ const level2Sentences = [
 
   chunks: [
     {
-      romaji: "takibi",
-      hiragana: "たきび",
+      romaji: "takibi ga",
+      hiragana: "たきび が",
       meaning: "campfire",
       audio: {
-        daughter: "audio/sentences/takibi.wav",
-        me: "audio/sentences/takibi.wav"
+        daughter: "audio/sentences/takibi_ga.wav",
+        me: "audio/sentences/takibi_ga.wav"
       }
     },
-    {
-      romaji: "ga",
-      hiragana: "が",
-      meaning: "(subject marker)",
-      audio: {
-        daughter: "audio/sentences/ga.wav",
-        me: "audio/sentences/ga.wav"
-      }
-    },
+    
     {
       romaji: "yofuke",
       hiragana: "よふけ",
@@ -5240,6 +5232,16 @@ const level2Sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
 {
   id: "l2-17",
 
