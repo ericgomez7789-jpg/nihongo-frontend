@@ -6463,6 +6463,8 @@ const level2Sentences = [
 
 
 
+
+
 {
   id: "l2-32",
   meaning: "While traveling, when I went to visit the island, the sun shone warmly and gently.",
@@ -6687,6 +6689,724 @@ const level2Sentences = [
   ]
 },
 
+
+
+
+
+
+{
+  id: "l2-33",
+  meaning: "As I was walking through the forest, it began to lightly drizzle.",
+  level: 2,
+
+  options: [
+    "もり",
+    "を",
+    "あるいて",
+    "いる",
+    "と",
+    "あめ",
+    "が",
+    "ぱらぱら",
+    "と",
+    "ふりだした"
+  ],
+
+  optionsRomaji: [
+    "mori",
+    "wo",
+    "aruite",
+    "iru",
+    "to",
+    "ame",
+    "ga",
+    "parapara",
+    "to",
+    "furidashita"
+  ],
+
+  optionsEN: [
+    "forest",
+    "object marker",
+    "walking",
+    "being / while",
+    "when / as",
+    "rain",
+    "subject marker",
+    "light scattered raindrops",
+    "in a ~ way",
+    "began to fall"
+  ],
+
+  correct: "ぱらぱら",
+
+  choiceAudio: {
+    options: [
+      "audio/sentences/mori.wav",
+      "audio/sentences/wo.wav",
+      "audio/sentences/aruite.wav",
+      "audio/sentences/iru.wav",
+      "audio/sentences/to.wav",
+      "audio/sentences/ame.wav",
+      "audio/sentences/ga.wav",
+      "audio/sentences/parapara.wav",
+      "audio/sentences/to.wav",
+      "audio/sentences/furidashita.wav"
+    ]
+  },
+
+  meaningAudio: [
+    "audio/sentences/mori.wav",
+    "audio/sentences/wo.wav",
+    "audio/sentences/aruite.wav",
+    "audio/sentences/iru.wav",
+    "audio/sentences/to.wav",
+    "audio/sentences/ame.wav",
+    "audio/sentences/ga.wav",
+    "audio/sentences/parapara.wav",
+    "audio/sentences/to.wav",
+    "audio/sentences/furidashita.wav"
+  ],
+
+  chunks: [
+    {
+      romaji: "mori",
+      hiragana: "もり",
+      meaning: "forest",
+      audio: {
+        daughter: "audio/sentences/mori.wav",
+        me: "audio/sentences/mori.wav"
+      }
+    },
+    {
+      romaji: "wo",
+      hiragana: "を",
+      meaning: "object marker",
+      audio: {
+        daughter: "audio/sentences/wo.wav",
+        me: "audio/sentences/wo.wav"
+      }
+    },
+    {
+      romaji: "aruite",
+      hiragana: "あるいて",
+      meaning: "walking",
+      audio: {
+        daughter: "audio/sentences/aruite.wav",
+        me: "audio/sentences/aruite.wav"
+      }
+    },
+    {
+      romaji: "iru",
+      hiragana: "いる",
+      meaning: "being / while",
+      audio: {
+        daughter: "audio/sentences/iru.wav",
+        me: "audio/sentences/iru.wav"
+      }
+    },
+    {
+      romaji: "to",
+      hiragana: "と",
+      meaning: "when / as",
+      audio: {
+        daughter: "audio/sentences/to.wav",
+        me: "audio/sentences/to.wav"
+      }
+    },
+    {
+      romaji: "ame",
+      hiragana: "あめ",
+      meaning: "rain",
+      audio: {
+        daughter: "audio/sentences/ame.wav",
+        me: "audio/sentences/ame.wav"
+      }
+    },
+    {
+      romaji: "ga",
+      hiragana: "が",
+      meaning: "subject marker",
+      audio: {
+        daughter: "audio/sentences/ga.wav",
+        me: "audio/sentences/ga.wav"
+      }
+    },
+    {
+      romaji: "parapara",
+      hiragana: "ぱらぱら",
+      meaning: "light scattered raindrops",
+      audio: {
+        daughter: "audio/sentences/parapara.wav",
+        me: "audio/sentences/parapara.wav"
+      }
+    },
+    {
+      romaji: "to",
+      hiragana: "と",
+      meaning: "in a ~ way",
+      audio: {
+        daughter: "audio/sentences/to.wav",
+        me: "audio/sentences/to.wav"
+      }
+    },
+    {
+      romaji: "furidashita",
+      hiragana: "ふりだした",
+      meaning: "began to fall",
+      audio: {
+        daughter: "audio/sentences/furidashita.wav",
+        me: "audio/sentences/furidashita.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+{
+  id: "l2-34",
+  meaning: "Leaves began to flutter down from the tree.",
+  level: 2,
+
+  options: [
+    "き",
+    "から",
+    "このは",
+    "が",
+    "はらはら",
+    "と",
+    "おちだした"
+  ],
+
+  optionsRomaji: [
+    "ki",
+    "kara",
+    "konoha",
+    "ga",
+    "harahara",
+    "to",
+    "ochidashita"
+  ],
+
+  optionsEN: [
+    "tree",
+    "from",
+    "leaves",
+    "subject marker",
+    "fluttering lightly",
+    "in a ~ way",
+    "began to fall"
+  ],
+
+  correct: "はらはら",
+
+  choiceAudio: {
+    options: [
+      "audio/sentences/ki.wav",
+      "audio/sentences/kara.wav",
+      "audio/sentences/konoha.wav",
+      "audio/sentences/ga.wav",
+      "audio/sentences/harahara.wav",
+      "audio/sentences/to.wav",
+      "audio/sentences/ochidashita.wav"
+    ]
+  },
+
+  meaningAudio: [
+    "audio/sentences/ki.wav",
+    "audio/sentences/kara.wav",
+    "audio/sentences/konoha.wav",
+    "audio/sentences/ga.wav",
+    "audio/sentences/harahara.wav",
+    "audio/sentences/to.wav",
+    "audio/sentences/ochidashita.wav"
+  ],
+
+  chunks: [
+    {
+      romaji: "ki",
+      hiragana: "き",
+      meaning: "tree",
+      audio: {
+        daughter: "audio/sentences/ki.wav",
+        me: "audio/sentences/ki.wav"
+      }
+    },
+    {
+      romaji: "kara",
+      hiragana: "から",
+      meaning: "from",
+      audio: {
+        daughter: "audio/sentences/kara.wav",
+        me: "audio/sentences/kara.wav"
+      }
+    },
+    {
+      romaji: "konoha",
+      hiragana: "このは",
+      meaning: "leaves",
+      audio: {
+        daughter: "audio/sentences/konoha.wav",
+        me: "audio/sentences/konoha.wav"
+      }
+    },
+    {
+      romaji: "ga",
+      hiragana: "が",
+      meaning: "subject marker",
+      audio: {
+        daughter: "audio/sentences/ga.wav",
+        me: "audio/sentences/ga.wav"
+      }
+    },
+    {
+      romaji: "harahara",
+      hiragana: "はらはら",
+      meaning: "fluttering lightly",
+      audio: {
+        daughter: "audio/sentences/harahara.wav",
+        me: "audio/sentences/harahara.wav"
+      }
+    },
+    {
+      romaji: "to",
+      hiragana: "と",
+      meaning: "in a ~ way",
+      audio: {
+        daughter: "audio/sentences/to.wav",
+        me: "audio/sentences/to.wav"
+      }
+    },
+    {
+      romaji: "ochidashita",
+      hiragana: "おちだした",
+      meaning: "began to fall",
+      audio: {
+        daughter: "audio/sentences/ochidashita.wav",
+        me: "audio/sentences/ochidashita.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l2-35",
+  meaning: "A light breeze is gently blowing.",
+  level: 2,
+
+  options: [
+    "かるい",
+    "かぜ",
+    "が",
+    "そよそよ",
+    "と",
+    "ふいて",
+    "いる"
+  ],
+
+  optionsRomaji: [
+    "karui",
+    "kaze",
+    "ga",
+    "soyoso yo",
+    "to",
+    "fuite",
+    "iru"
+  ],
+
+  optionsEN: [
+    "light",
+    "wind / breeze",
+    "subject marker",
+    "gently blowing",
+    "in a ~ way",
+    "blowing",
+    "is (progressive)"
+  ],
+
+  correct: "そよそよ",
+
+  choiceAudio: {
+    options: [
+      "audio/sentences/karui.wav",
+      "audio/sentences/kaze.wav",
+      "audio/sentences/ga.wav",
+      "audio/sentences/soyoso yo.wav",
+      "audio/sentences/to.wav",
+      "audio/sentences/fuite.wav",
+      "audio/sentences/iru.wav"
+    ]
+  },
+
+  meaningAudio: [
+    "audio/sentences/karui.wav",
+    "audio/sentences/kaze.wav",
+    "audio/sentences/ga.wav",
+    "audio/sentences/soyoso yo.wav",
+    "audio/sentences/to.wav",
+    "audio/sentences/fuite.wav",
+    "audio/sentences/iru.wav"
+  ],
+
+  chunks: [
+    {
+      romaji: "karui",
+      hiragana: "かるい",
+      meaning: "light",
+      audio: {
+        daughter: "audio/sentences/karui.wav",
+        me: "audio/sentences/karui.wav"
+      }
+    },
+    {
+      romaji: "kaze",
+      hiragana: "かぜ",
+      meaning: "wind / breeze",
+      audio: {
+        daughter: "audio/sentences/kaze.wav",
+        me: "audio/sentences/kaze.wav"
+      }
+    },
+    {
+      romaji: "ga",
+      hiragana: "が",
+      meaning: "subject marker",
+      audio: {
+        daughter: "audio/sentences/ga.wav",
+        me: "audio/sentences/ga.wav"
+      }
+    },
+    {
+      romaji: "soyosoyo",
+      hiragana: "そよそよ",
+      meaning: "gently blowing",
+      audio: {
+        daughter: "audio/sentences/soyoso yo.wav",
+        me: "audio/sentences/soyoso yo.wav"
+      }
+    },
+    {
+      romaji: "to",
+      hiragana: "と",
+      meaning: "in a ~ way",
+      audio: {
+        daughter: "audio/sentences/to.wav",
+        me: "audio/sentences/to.wav"
+      }
+    },
+    {
+      romaji: "fuite",
+      hiragana: "ふいて",
+      meaning: "blowing",
+      audio: {
+        daughter: "audio/sentences/fuite.wav",
+        me: "audio/sentences/fuite.wav"
+      }
+    },
+    {
+      romaji: "iru",
+      hiragana: "いる",
+      meaning: "is (progressive)",
+      audio: {
+        daughter: "audio/sentences/iru.wav",
+        me: "audio/sentences/iru.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l2-36",
+  meaning: "A gentle breeze blows softly through the grass.",
+  level: 2,
+
+  options: [
+    "そよかぜ",
+    "が",
+    "くさ",
+    "を",
+    "さわさわ",
+    "と",
+    "ふきぬけて",
+    "いく"
+  ],
+
+  optionsRomaji: [
+    "soyokaze",
+    "ga",
+    "kusa",
+    "o",
+    "sawasawa",
+    "to",
+    "fukinukete",
+    "iku"
+  ],
+
+  optionsEN: [
+    "gentle breeze",
+    "subject marker",
+    "grass",
+    "object marker",
+    "rustling softly",
+    "in a ~ way",
+    "blow through",
+    "goes / continues"
+  ],
+
+  correct: "さわさわ",
+
+  choiceAudio: {
+    options: [
+      "audio/sentences/soyokaze.wav",
+      "audio/sentences/ga.wav",
+      "audio/sentences/kusa.wav",
+      "audio/sentences/o.wav",
+      "audio/sentences/sawasawa.wav",
+      "audio/sentences/to.wav",
+      "audio/sentences/fukinukete.wav",
+      "audio/sentences/iku.wav"
+    ]
+  },
+
+  meaningAudio: [
+    "audio/sentences/soyokaze.wav",
+    "audio/sentences/ga.wav",
+    "audio/sentences/kusa.wav",
+    "audio/sentences/o.wav",
+    "audio/sentences/sawasawa.wav",
+    "audio/sentences/to.wav",
+    "audio/sentences/fukinukete.wav",
+    "audio/sentences/iku.wav"
+  ],
+
+  chunks: [
+    {
+      romaji: "soyokaze",
+      hiragana: "そよかぜ",
+      meaning: "gentle breeze",
+      audio: {
+        daughter: "audio/sentences/soyokaze.wav",
+        me: "audio/sentences/soyokaze.wav"
+      }
+    },
+    {
+      romaji: "ga",
+      hiragana: "が",
+      meaning: "subject marker",
+      audio: {
+        daughter: "audio/sentences/ga.wav",
+        me: "audio/sentences/ga.wav"
+      }
+    },
+    {
+      romaji: "kusa",
+      hiragana: "くさ",
+      meaning: "grass",
+      audio: {
+        daughter: "audio/sentences/kusa.wav",
+        me: "audio/sentences/kusa.wav"
+      }
+    },
+    {
+      romaji: "o",
+      hiragana: "を",
+      meaning: "object marker",
+      audio: {
+        daughter: "audio/sentences/o.wav",
+        me: "audio/sentences/o.wav"
+      }
+    },
+    {
+      romaji: "sawasawa",
+      hiragana: "さわさわ",
+      meaning: "rustling softly",
+      audio: {
+        daughter: "audio/sentences/sawasawa.wav",
+        me: "audio/sentences/sawasawa.wav"
+      }
+    },
+    {
+      romaji: "to",
+      hiragana: "と",
+      meaning: "in a ~ way",
+      audio: {
+        daughter: "audio/sentences/to.wav",
+        me: "audio/sentences/to.wav"
+      }
+    },
+    {
+      romaji: "fukinukete",
+      hiragana: "ふきぬけて",
+      meaning: "blow through",
+      audio: {
+        daughter: "audio/sentences/fukinukete.wav",
+        me: "audio/sentences/fukinukete.wav"
+      }
+    },
+    {
+      romaji: "iku",
+      hiragana: "いく",
+      meaning: "goes / continues",
+      audio: {
+        daughter: "audio/sentences/iku.wav",
+        me: "audio/sentences/iku.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+{
+  id: "l2-37",
+  meaning: "In the dense forest, the trees grow thick and lush.",
+  level: 2,
+
+  options: [
+    "みつりんで",
+    "きぎ",
+    "が",
+    "こんもり",
+    "と",
+    "しげる"
+  ],
+
+  optionsRomaji: [
+    "mitsurin de",
+    "kigi",
+    "ga",
+    "konmori",
+    "to",
+    "shigeru"
+  ],
+
+  optionsEN: [
+    "in the dense forest",
+    "trees",
+    "subject marker",
+    "lushly / densely",
+    "in a ~ way",
+    "to grow thick / become dense"
+  ],
+
+  correct: "こんもり",
+
+  choiceAudio: {
+    options: [
+      "audio/sentences/mitsurin.wav",
+      "audio/sentences/de.wav",
+      "audio/sentences/kigi.wav",
+      "audio/sentences/ga.wav",
+      "audio/sentences/konmori.wav",
+      "audio/sentences/to.wav",
+      "audio/sentences/shigeru.wav"
+    ]
+  },
+
+  meaningAudio: [
+    "audio/sentences/mitsurin.wav",
+    "audio/sentences/de.wav",
+    "audio/sentences/kigi.wav",
+    "audio/sentences/ga.wav",
+    "audio/sentences/konmori.wav",
+    "audio/sentences/to.wav",
+    "audio/sentences/shigeru.wav"
+  ],
+
+  chunks: [
+    {
+      romaji: "mitsurin",
+      hiragana: "みつりん",
+      meaning: "dense forest",
+      audio: {
+        daughter: "audio/sentences/mitsurin.wav",
+        me: "audio/sentences/mitsurin.wav"
+      }
+    },
+    {
+      romaji: "de",
+      hiragana: "で",
+      meaning: "in / at",
+      audio: {
+        daughter: "audio/sentences/de.wav",
+        me: "audio/sentences/de.wav"
+      }
+    },
+    {
+      romaji: "kigi",
+      hiragana: "きぎ",
+      meaning: "trees",
+      audio: {
+        daughter: "audio/sentences/kigi.wav",
+        me: "audio/sentences/kigi.wav"
+      }
+    },
+    {
+      romaji: "ga",
+      hiragana: "が",
+      meaning: "subject marker",
+      audio: {
+        daughter: "audio/sentences/ga.wav",
+        me: "audio/sentences/ga.wav"
+      }
+    },
+    {
+      romaji: "konmori",
+      hiragana: "こんもり",
+      meaning: "lushly / densely",
+      audio: {
+        daughter: "audio/sentences/konmori.wav",
+        me: "audio/sentences/konmori.wav"
+      }
+    },
+    {
+      romaji: "to",
+      hiragana: "と",
+      meaning: "in a ~ way",
+      audio: {
+        daughter: "audio/sentences/to.wav",
+        me: "audio/sentences/to.wav"
+      }
+    },
+    {
+      romaji: "shigeru",
+      hiragana: "しげる",
+      meaning: "to grow thick / become dense",
+      audio: {
+        daughter: "audio/sentences/shigeru.wav",
+        me: "audio/sentences/shigeru.wav"
+      }
+    }
+  ]
+},
 
 
 
