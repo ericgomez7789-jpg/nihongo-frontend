@@ -7551,6 +7551,591 @@ const level2Sentences = [
 
 
 
+{
+  id: "l2-39",
+  meaning: "Aokigahara looks empty and vacant, with no animals.",
+  level: 2,
+
+  options: [
+    "あおきがはら",
+    "は",
+    "どうぶつ",
+    "が",
+    "いなくて",
+    "がらんと",
+    "して",
+    "みえる"
+  ],
+
+  optionsRomaji: [
+    "aokigahara",
+    "wa",
+    "doubutsu",
+    "ga",
+    "inakute",
+    "garan to",
+    "shite",
+    "mieru"
+  ],
+
+  optionsEN: [
+    "Aokigahara",
+    "topic marker",
+    "animals",
+    "subject marker",
+    "not present / lacking",
+    "empty / vacant",
+    "do / be in a state",
+    "looks / appears"
+  ],
+
+  correct: "がらんと",
+
+  choiceAudio: {
+    options: [
+      "audio/sentences/aokigahara.wav",
+      "audio/sentences/wa.wav",
+      "audio/sentences/doubutsu.wav",
+      "audio/sentences/ga.wav",
+      "audio/sentences/inakute.wav",
+      "audio/sentences/garan.wav",
+      "audio/sentences/shite.wav",
+      "audio/sentences/mieru.wav"
+    ]
+  },
+
+  meaningAudio: [
+    "audio/sentences/aokigahara.wav",
+    "audio/sentences/wa.wav",
+    "audio/sentences/doubutsu.wav",
+    "audio/sentences/ga.wav",
+    "audio/sentences/inakute.wav",
+    "audio/sentences/garan.wav",
+    "audio/sentences/shite.wav",
+    "audio/sentences/mieru.wav"
+  ],
+
+  chunks: [
+    {
+      romaji: "aokigahara",
+      hiragana: "あおきがはら",
+      meaning: "Aokigahara",
+      audio: {
+        daughter: "audio/sentences/aokigahara.wav",
+        me: "audio/sentences/aokigahara.wav"
+      }
+    },
+    {
+      romaji: "wa",
+      hiragana: "は",
+      meaning: "topic marker",
+      audio: {
+        daughter: "audio/sentences/wa.wav",
+        me: "audio/sentences/wa.wav"
+      }
+    },
+    {
+      romaji: "doubutsu",
+      hiragana: "どうぶつ",
+      meaning: "animals",
+      audio: {
+        daughter: "audio/sentences/doubutsu.wav",
+        me: "audio/sentences/doubutsu.wav"
+      }
+    },
+    {
+      romaji: "ga",
+      hiragana: "が",
+      meaning: "subject marker",
+      audio: {
+        daughter: "audio/sentences/ga.wav",
+        me: "audio/sentences/ga.wav"
+      }
+    },
+    {
+      romaji: "inakute",
+      hiragana: "いなくて",
+      meaning: "not present / lacking",
+      audio: {
+        daughter: "audio/sentences/inakute.wav",
+        me: "audio/sentences/inakute.wav"
+      }
+    },
+    {
+      romaji: "garan to",
+      hiragana: "がらんと",
+      meaning: "empty / vacant",
+      audio: {
+        daughter: "audio/sentences/garan.wav",
+        me: "audio/sentences/garan.wav"
+      }
+    },
+    {
+      romaji: "shite",
+      hiragana: "して",
+      meaning: "do / be in a state",
+      audio: {
+        daughter: "audio/sentences/shite.wav",
+        me: "audio/sentences/shite.wav"
+      }
+    },
+    {
+      romaji: "mieru",
+      hiragana: "みえる",
+      meaning: "looks / appears",
+      audio: {
+        daughter: "audio/sentences/mieru.wav",
+        me: "audio/sentences/mieru.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+{
+  id: "l2-40",
+  meaning: "In winter, the lake looks silent and still.",
+  level: 2,
+
+  options: [
+    "ふゆ",
+    "には",
+    "みずうみ",
+    "が",
+    "しんと",
+    "して",
+    "みえる"
+  ],
+
+  optionsRomaji: [
+    "fuyu",
+    "niwa",
+    "mizuumi",
+    "ga",
+    "shinto",
+    "shite",
+    "mieru"
+  ],
+
+  optionsEN: [
+    "winter",
+    "in",
+    "lake",
+    "subject marker",
+    "silent / still",
+    "do / be in a state",
+    "looks / appears"
+  ],
+
+  correct: "しんと",
+
+  choiceAudio: {
+    options: [
+      "audio/sentences/fuyu.wav",
+      "audio/sentences/niwa.wav",
+      "audio/sentences/mizuumi.wav",
+      "audio/sentences/ga.wav",
+      "audio/sentences/shinto.wav",
+      "audio/sentences/shite.wav",
+      "audio/sentences/mieru.wav"
+    ]
+  },
+
+  meaningAudio: [
+    "audio/sentences/fuyu.wav",
+    "audio/sentences/niwa.wav",
+    "audio/sentences/mizuumi.wav",
+    "audio/sentences/ga.wav",
+    "audio/sentences/shinto.wav",
+    "audio/sentences/shite.wav",
+    "audio/sentences/mieru.wav"
+  ],
+
+  chunks: [
+    {
+      romaji: "fuyu",
+      hiragana: "ふゆ",
+      meaning: "winter",
+      audio: {
+        daughter: "audio/sentences/fuyu.wav",
+        me: "audio/sentences/fuyu.wav"
+      }
+    },
+    {
+      romaji: "niwa",
+      hiragana: "には",
+      meaning: "in",
+      audio: {
+        daughter: "audio/sentences/niwa.wav",
+        me: "audio/sentences/niwa.wav"
+      }
+    },
+    {
+      romaji: "mizuumi",
+      hiragana: "みずうみ",
+      meaning: "lake",
+      audio: {
+        daughter: "audio/sentences/mizuumi.wav",
+        me: "audio/sentences/mizuumi.wav"
+      }
+    },
+    {
+      romaji: "ga",
+      hiragana: "が",
+      meaning: "subject marker",
+      audio: {
+        daughter: "audio/sentences/ga.wav",
+        me: "audio/sentences/ga.wav"
+      }
+    },
+    {
+      romaji: "shinto",
+      hiragana: "しんと",
+      meaning: "silent / still",
+      audio: {
+        daughter: "audio/sentences/shinto.wav",
+        me: "audio/sentences/shinto.wav"
+      }
+    },
+    {
+      romaji: "shite",
+      hiragana: "して",
+      meaning: "do / be in a state",
+      audio: {
+        daughter: "audio/sentences/shite.wav",
+        me: "audio/sentences/shite.wav"
+      }
+    },
+    {
+      romaji: "mieru",
+      hiragana: "みえる",
+      meaning: "looks / appears",
+      audio: {
+        daughter: "audio/sentences/mieru.wav",
+        me: "audio/sentences/mieru.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+{
+  id: "l2-41",
+  meaning: "In the forest, animals run around energetically.",
+  level: 2,
+
+  options: [
+    "もり",
+    "には",
+    "どうぶつ",
+    "が",
+    "ぴちぴち",
+    "と",
+    "はしる"
+  ],
+
+  optionsRomaji: [
+    "mori",
+    "niwa",
+    "doubutsu",
+    "ga",
+    "pichipichi",
+    "to",
+    "hashiru"
+  ],
+
+  optionsEN: [
+    "forest",
+    "in",
+    "animals",
+    "subject marker",
+    "energetically / lively",
+    "in a ~ way",
+    "to run"
+  ],
+
+  correct: "ぴちぴち",
+
+  choiceAudio: {
+    options: [
+      "audio/sentences/mori.wav",
+      "audio/sentences/niwa.wav",
+      "audio/sentences/doubutsu.wav",
+      "audio/sentences/ga.wav",
+      "audio/sentences/pichipichi.wav",
+      "audio/sentences/to.wav",
+      "audio/sentences/hashiru.wav"
+    ]
+  },
+
+  meaningAudio: [
+    "audio/sentences/mori.wav",
+    "audio/sentences/niwa.wav",
+    "audio/sentences/doubutsu.wav",
+    "audio/sentences/ga.wav",
+    "audio/sentences/pichipichi.wav",
+    "audio/sentences/to.wav",
+    "audio/sentences/hashiru.wav"
+  ],
+
+  chunks: [
+    {
+      romaji: "mori",
+      hiragana: "もり",
+      meaning: "forest",
+      audio: {
+        daughter: "audio/sentences/mori.wav",
+        me: "audio/sentences/mori.wav"
+      }
+    },
+    {
+      romaji: "niwa",
+      hiragana: "には",
+      meaning: "in",
+      audio: {
+        daughter: "audio/sentences/niwa.wav",
+        me: "audio/sentences/niwa.wav"
+      }
+    },
+    {
+      romaji: "doubutsu",
+      hiragana: "どうぶつ",
+      meaning: "animals",
+      audio: {
+        daughter: "audio/sentences/doubutsu.wav",
+        me: "audio/sentences/doubutsu.wav"
+      }
+    },
+    {
+      romaji: "ga",
+      hiragana: "が",
+      meaning: "subject marker",
+      audio: {
+        daughter: "audio/sentences/ga.wav",
+        me: "audio/sentences/ga.wav"
+      }
+    },
+    {
+      romaji: "pichipichi",
+      hiragana: "ぴちぴち",
+      meaning: "energetically / lively",
+      audio: {
+        daughter: "audio/sentences/pichipichi.wav",
+        me: "audio/sentences/pichipichi.wav"
+      }
+    },
+    {
+      romaji: "to",
+      hiragana: "と",
+      meaning: "in a ~ way",
+      audio: {
+        daughter: "audio/sentences/to.wav",
+        me: "audio/sentences/to.wav"
+      }
+    },
+    {
+      romaji: "hashiru",
+      hiragana: "はしる",
+      meaning: "to run",
+      audio: {
+        daughter: "audio/sentences/hashiru.wav",
+        me: "audio/sentences/hashiru.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+{
+  id: "l2-42",
+  meaning: "The boat leaves white waves behind, and the water splashes heavily.",
+  level: 2,
+
+  options: [
+    "ふね",
+    "は",
+    "しらなみ",
+    "を",
+    "のこして",
+    "なみ",
+    "が",
+    "じゃぶじゃぶ",
+    "と",
+    "ゆれる"
+  ],
+
+  optionsRomaji: [
+    "fune",
+    "wa",
+    "shiranami",
+    "wo",
+    "nokoshite",
+    "nami",
+    "ga",
+    "jabujabu",
+    "to",
+    "yureru"
+  ],
+
+  optionsEN: [
+    "boat",
+    "topic marker",
+    "white waves",
+    "object marker",
+    "leaving behind",
+    "waves",
+    "subject marker",
+    "heavy splashing",
+    "in a ~ way",
+    "to sway / splash"
+  ],
+
+  correct: "じゃぶじゃぶ",
+
+  choiceAudio: {
+    options: [
+      "audio/sentences/fune.wav",
+      "audio/sentences/wa.wav",
+      "audio/sentences/shiranami.wav",
+      "audio/sentences/wo.wav",
+      "audio/sentences/nokoshite.wav",
+      "audio/sentences/nami.wav",
+      "audio/sentences/ga.wav",
+      "audio/sentences/jabujabu.wav",
+      "audio/sentences/to.wav",
+      "audio/sentences/yureru.wav"
+    ]
+  },
+
+  meaningAudio: [
+    "audio/sentences/fune.wav",
+    "audio/sentences/wa.wav",
+    "audio/sentences/shiranami.wav",
+    "audio/sentences/wo.wav",
+    "audio/sentences/nokoshite.wav",
+    "audio/sentences/nami.wav",
+    "audio/sentences/ga.wav",
+    "audio/sentences/jabujabu.wav",
+    "audio/sentences/to.wav",
+    "audio/sentences/yureru.wav"
+  ],
+
+  chunks: [
+    {
+      romaji: "fune",
+      hiragana: "ふね",
+      meaning: "boat",
+      audio: {
+        daughter: "audio/sentences/fune.wav",
+        me: "audio/sentences/fune.wav"
+      }
+    },
+    {
+      romaji: "wa",
+      hiragana: "は",
+      meaning: "topic marker",
+      audio: {
+        daughter: "audio/sentences/wa.wav",
+        me: "audio/sentences/wa.wav"
+      }
+    },
+    {
+      romaji: "shiranami",
+      hiragana: "しらなみ",
+      meaning: "white waves",
+      audio: {
+        daughter: "audio/sentences/shiranami.wav",
+        me: "audio/sentences/shiranami.wav"
+      }
+    },
+    {
+      romaji: "wo",
+      hiragana: "を",
+      meaning: "object marker",
+      audio: {
+        daughter: "audio/sentences/wo.wav",
+        me: "audio/sentences/wo.wav"
+      }
+    },
+    {
+      romaji: "nokoshite",
+      hiragana: "のこして",
+      meaning: "leaving behind",
+      audio: {
+        daughter: "audio/sentences/nokoshite.wav",
+        me: "audio/sentences/nokoshite.wav"
+      }
+    },
+    {
+      romaji: "nami",
+      hiragana: "なみ",
+      meaning: "waves",
+      audio: {
+        daughter: "audio/sentences/nami.wav",
+        me: "audio/sentences/nami.wav"
+      }
+    },
+    {
+      romaji: "ga",
+      hiragana: "が",
+      meaning: "subject marker",
+      audio: {
+        daughter: "audio/sentences/ga.wav",
+        me: "audio/sentences/ga.wav"
+      }
+    },
+    {
+      romaji: "jabujabu",
+      hiragana: "じゃぶじゃぶ",
+      meaning: "heavy splashing",
+      audio: {
+        daughter: "audio/sentences/jabujabu.wav",
+        me: "audio/sentences/jabujabu.wav"
+      }
+    },
+    {
+      romaji: "to",
+      hiragana: "と",
+      meaning: "in a ~ way",
+      audio: {
+        daughter: "audio/sentences/to.wav",
+        me: "audio/sentences/to.wav"
+      }
+    },
+    {
+      romaji: "yureru",
+      hiragana: "ゆれる",
+      meaning: "to sway / splash",
+      audio: {
+        daughter: "audio/sentences/yureru.wav",
+        me: "audio/sentences/yureru.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
 
 
 
@@ -8077,6 +8662,7 @@ L2.onomaList = [
   "ぐつぐつと",
   "ぎざぎざと"
 ];
+
 
 
 
