@@ -6868,7 +6868,6 @@ const level2Sentences = [
 
 
 
-
 {
   id: "l2-34",
   meaning: "Leaves began to flutter down from the tree.",
@@ -6881,7 +6880,7 @@ const level2Sentences = [
     "が",
     "はらはら",
     "と",
-    "おちだした"
+    "ふりだした"
   ],
 
   optionsRomaji: [
@@ -6891,7 +6890,7 @@ const level2Sentences = [
     "ga",
     "harahara",
     "to",
-    "ochidashita"
+    "furidashita"
   ],
 
   optionsEN: [
@@ -6914,7 +6913,7 @@ const level2Sentences = [
       "audio/sentences/ga.wav",
       "audio/sentences/harahara.wav",
       "audio/sentences/to.wav",
-      "audio/sentences/ochidashita.wav"
+      "audio/sentences/furidashita.wav"
     ]
   },
 
@@ -6925,7 +6924,7 @@ const level2Sentences = [
     "audio/sentences/ga.wav",
     "audio/sentences/harahara.wav",
     "audio/sentences/to.wav",
-    "audio/sentences/ochidashita.wav"
+    "audio/sentences/furidashita.wav"
   ],
 
   chunks: [
@@ -6984,17 +6983,16 @@ const level2Sentences = [
       }
     },
     {
-      romaji: "ochidashita",
-      hiragana: "おちだした",
+      romaji: "furidashita",
+      hiragana: "ふりだした",
       meaning: "began to fall",
       audio: {
-        daughter: "audio/sentences/ochidashita.wav",
-        me: "audio/sentences/ochidashita.wav"
+        daughter: "audio/sentences/furidashita.wav",
+        me: "audio/sentences/furidashita.wav"
       }
     }
   ]
 },
-
 
 
 
