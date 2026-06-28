@@ -8170,7 +8170,7 @@ const level2Sentences = [
 
 
 {
-  id: "l2-47",
+  id: "l2-44",
   meaning: "In the muddy swamp, a puddle-like muddy patch forms sludgily and sinks.",
   level: 2,
 
@@ -8344,6 +8344,144 @@ const level2Sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+{
+  id: "l2-45",
+  meaning: "As for the wind, it blew through and the fallen leaves rustled lightly.",
+  level: 2,
+
+  options: [
+    "かぜ",
+    "には",
+    "おちば",
+    "が",
+    "さらさらと",
+    "ふきぬけて",
+    "いました"
+  ],
+
+  optionsRomaji: [
+    "kaze",
+    "niwa",
+    "ochiba",
+    "ga",
+    "sarasara_to",
+    "fukinukete",
+    "imashita"
+  ],
+
+  optionsEN: [
+    "wind",
+    "as for / regarding",
+    "fallen leaves",
+    "subject marker",
+    "rustling lightly",
+    "blew through",
+    "was happening"
+  ],
+
+  correct: "さらさらと",
+
+  choiceAudio: {
+    options: [
+      "audio/sentences/kaze.wav",
+      "audio/sentences/niwa.wav",
+      "audio/sentences/ochiba.wav",
+      "audio/sentences/ga.wav",
+      "audio/sentences/sarasara_to.wav",
+      "audio/sentences/fukinukete.wav",
+      "audio/sentences/imashita.wav"
+    ]
+  },
+
+  meaningAudio: [
+    "audio/sentences/kaze.wav",
+    "audio/sentences/niwa.wav",
+    "audio/sentences/ochiba.wav",
+    "audio/sentences/ga.wav",
+    "audio/sentences/sarasara_to.wav",
+    "audio/sentences/fukinukete.wav",
+    "audio/sentences/imashita.wav"
+  ],
+
+  chunks: [
+    {
+      romaji: "kaze",
+      hiragana: "かぜ",
+      meaning: "wind",
+      audio: {
+        daughter: "audio/sentences/kaze.wav",
+        me: "audio/sentences/kaze.wav"
+      }
+    },
+    {
+      romaji: "niwa",
+      hiragana: "には",
+      meaning: "as for / regarding",
+      audio: {
+        daughter: "audio/sentences/niwa.wav",
+        me: "audio/sentences/niwa.wav"
+      }
+    },
+    {
+      romaji: "ochiba",
+      hiragana: "おちば",
+      meaning: "fallen leaves",
+      audio: {
+        daughter: "audio/sentences/ochiba.wav",
+        me: "audio/sentences/ochiba.wav"
+      }
+    },
+    {
+      romaji: "ga",
+      hiragana: "が",
+      meaning: "subject marker",
+      audio: {
+        daughter: "audio/sentences/ga.wav",
+        me: "audio/sentences/ga.wav"
+      }
+    },
+    {
+      romaji: "sarasara_to",
+      hiragana: "さらさらと",
+      meaning: "rustling lightly",
+      audio: {
+        daughter: "audio/sentences/sarasara_to.wav",
+        me: "audio/sentences/sarasara_to.wav"
+      }
+    },
+    {
+      romaji: "fukinukete",
+      hiragana: "ふきぬけて",
+      meaning: "blew through",
+      audio: {
+        daughter: "audio/sentences/fukinukete.wav",
+        me: "audio/sentences/fukinukete.wav"
+      }
+    },
+    {
+      romaji: "imashita",
+      hiragana: "いました",
+      meaning: "was happening",
+      audio: {
+        daughter: "audio/sentences/imashita.wav",
+        me: "audio/sentences/imashita.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
 
 
 
