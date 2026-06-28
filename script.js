@@ -8488,6 +8488,142 @@ const level2Sentences = [
 
 
 
+{
+  id: "l2-46",
+  meaning: "As for the tree, when you touch its bark, it has a rough texture.",
+  level: 2,
+
+  options: [
+    "きは",
+    "きのじゅひ",
+    "が",
+    "ふれると",
+    "ざらざらと",
+    "てざわりが",
+    "する"
+  ],
+
+  optionsRomaji: [
+    "ki wa",
+    "ki no juhi",
+    "ga",
+    "fureru to",
+    "zarazara_to",
+    "tezawari ga",
+    "suru"
+  ],
+
+  optionsEN: [
+    "as for the tree",
+    "tree bark",
+    "subject marker",
+    "when (you) touch",
+    "roughly / scratchily",
+    "texture / feel",
+    "to do / to have"
+  ],
+
+  correct: "ざらざらと",
+
+  choiceAudio: {
+    options: [
+      "audio/sentences/ki.wav",
+      "audio/sentences/ki_no_juhi.wav",
+      "audio/sentences/ga.wav",
+      "audio/sentences/fureru_to.wav",
+      "audio/sentences/zarazara_to.wav",
+      "audio/sentences/tezawari_ga.wav",
+      "audio/sentences/suru.wav"
+    ]
+  },
+
+  meaningAudio: [
+    "audio/sentences/ki.wav",
+    "audio/sentences/ki_no_juhi.wav",
+    "audio/sentences/ga.wav",
+    "audio/sentences/fureru_to.wav",
+    "audio/sentences/zarazara_to.wav",
+    "audio/sentences/tezawari_ga.wav",
+    "audio/sentences/suru.wav"
+  ],
+
+  chunks: [
+    {
+      romaji: "ki wa",
+      hiragana: "きは",
+      meaning: "as for the tree",
+      audio: {
+        daughter: "audio/sentences/ki.wav",
+        me: "audio/sentences/ki.wav"
+      }
+    },
+    {
+      romaji: "ki no juhi",
+      hiragana: "きのじゅひ",
+      meaning: "tree bark",
+      audio: {
+        daughter: "audio/sentences/ki_no_juhi.wav",
+        me: "audio/sentences/ki_no_juhi.wav"
+      }
+    },
+    {
+      romaji: "ga",
+      hiragana: "が",
+      meaning: "subject marker",
+      audio: {
+        daughter: "audio/sentences/ga.wav",
+        me: "audio/sentences/ga.wav"
+      }
+    },
+    {
+      romaji: "fureru to",
+      hiragana: "ふれると",
+      meaning: "when (you) touch",
+      audio: {
+        daughter: "audio/sentences/fureru_to.wav",
+        me: "audio/sentences/fureru_to.wav"
+      }
+    },
+    {
+      romaji: "zarazara_to",
+      hiragana: "ざらざらと",
+      meaning: "roughly / scratchily",
+      audio: {
+        daughter: "audio/sentences/zarazara_to.wav",
+        me: "audio/sentences/zarazara_to.wav"
+      }
+    },
+    {
+      romaji: "tezawari ga",
+      hiragana: "てざわりが",
+      meaning: "texture / feel",
+      audio: {
+        daughter: "audio/sentences/tezawari_ga.wav",
+        me: "audio/sentences/tezawari_ga.wav"
+      }
+    },
+    {
+      romaji: "suru",
+      hiragana: "する",
+      meaning: "to do / to have",
+      audio: {
+        daughter: "audio/sentences/suru.wav",
+        me: "audio/sentences/suru.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 
