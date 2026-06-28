@@ -8079,7 +8079,271 @@ const level2Sentences = [
 
 
 
+{
+  id: "l2-43",
+  meaning: "The sun blazes intensely.",
+  level: 2,
 
+  options: [
+    "ひ",
+    "が",
+    "かんかんと",
+    "てる"
+  ],
+
+  optionsRomaji: [
+    "hi",
+    "ga",
+    "kankanto",
+    "teru"
+  ],
+
+  optionsEN: [
+    "sun",
+    "subject marker",
+    "blazing intensely",
+    "to shine"
+  ],
+
+  correct: "かんかんと",
+
+  choiceAudio: {
+    options: [
+      "audio/sentences/hi.wav",
+      "audio/sentences/ga.wav",
+      "audio/sentences/kankan_to.wav",
+      "audio/sentences/teru.wav"
+    ]
+  },
+
+  meaningAudio: [
+    "audio/sentences/hi.wav",
+    "audio/sentences/ga.wav",
+    "audio/sentences/kankan_to.wav",
+    "audio/sentences/teru.wav"
+  ],
+
+  chunks: [
+    {
+      romaji: "hi",
+      hiragana: "ひ",
+      meaning: "sun",
+      audio: {
+        daughter: "audio/sentences/hi.wav",
+        me: "audio/sentences/hi.wav"
+      }
+    },
+    {
+      romaji: "ga",
+      hiragana: "が",
+      meaning: "subject marker",
+      audio: {
+        daughter: "audio/sentences/ga.wav",
+        me: "audio/sentences/ga.wav"
+      }
+    },
+    {
+      romaji: "kankanto",
+      hiragana: "かんかんと",
+      meaning: "blazing intensely",
+      audio: {
+        daughter: "audio/sentences/kankan_to.wav",
+        me: "audio/sentences/kankan_to.wav"
+      }
+    },
+    {
+      romaji: "teru",
+      hiragana: "てる",
+      meaning: "to shine",
+      audio: {
+        daughter: "audio/sentences/teru.wav",
+        me: "audio/sentences/teru.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+{
+  id: "l2-47",
+  meaning: "In the muddy swamp, a puddle-like muddy patch forms sludgily and sinks.",
+  level: 2,
+
+  options: [
+    "どろぬま",
+    "には",
+    "みずたまりみたいな",
+    "ぬかるみ",
+    "が",
+    "どろどろと",
+    "かたちづくられて",
+    "いて",
+    "しずませる"
+  ],
+
+  optionsRomaji: [
+    "doronuma",
+    "niwa",
+    "mizutamari mitai na",
+    "nukarumi",
+    "ga",
+    "dorodoro_to",
+    "katachizukurarete",
+    "ite",
+    "shizumaseru"
+  ],
+
+  optionsEN: [
+    "muddy swamp",
+    "in / at",
+    "like a puddle",
+    "muddy ground",
+    "subject marker",
+    "sludgy / oozy",
+    "is formed",
+    "is (progressive)",
+    "to sink / to make sink"
+  ],
+
+  correct: "どろどろと",
+
+  choiceAudio: {
+    options: [
+      "audio/sentences/doronuma.wav",
+      "audio/sentences/niwa.wav",
+      "audio/sentences/mizutamari.wav",
+      "audio/sentences/mitaia.wav",
+      "audio/sentences/na.wav",
+      "audio/sentences/nukarumi.wav",
+      "audio/sentences/ga.wav",
+      "audio/sentences/dorodoro_to.wav",
+      "audio/sentences/katachizukurarete.wav",
+      "audio/sentences/ite.wav",
+      "audio/sentences/shizumaseru.wav"
+    ]
+  },
+
+  meaningAudio: [
+    "audio/sentences/doronuma.wav",
+    "audio/sentences/niwa.wav",
+    "audio/sentences/mizutamari.wav",
+    "audio/sentences/mitai.wav",
+    "audio/sentences/na.wav",
+    "audio/sentences/nukarumi.wav",
+    "audio/sentences/ga.wav",
+    "audio/sentences/dorodoro_to.wav",
+    "audio/sentences/katachizukurarete.wav",
+    "audio/sentences/ite.wav",
+    "audio/sentences/shizumaseru.wav"
+  ],
+
+  chunks: [
+    {
+      romaji: "doronuma",
+      hiragana: "どろぬま",
+      meaning: "muddy swamp",
+      audio: {
+        daughter: "audio/sentences/doronuma.wav",
+        me: "audio/sentences/doronuma.wav"
+      }
+    },
+    {
+      romaji: "niwa",
+      hiragana: "には",
+      meaning: "in / at",
+      audio: {
+        daughter: "audio/sentences/niwa.wav",
+        me: "audio/sentences/niwa.wav"
+      }
+    },
+    {
+      romaji: "mizutamari",
+      hiragana: "みずたまり",
+      meaning: "puddle",
+      audio: {
+        daughter: "audio/sentences/mizutamari.wav",
+        me: "audio/sentences/mizutamari.wav"
+      }
+    },
+    {
+      romaji: "mitai",
+      hiragana: "みたい",
+      meaning: "like",
+      audio: {
+        daughter: "audio/sentences/mitai.wav",
+        me: "audio/sentences/mitai.wav"
+      }
+    },
+    {
+      romaji: "na",
+      hiragana: "な",
+      meaning: "like a puddle",
+      audio: {
+        daughter: "audio/sentences/na.wav",
+        me: "audio/sentences/na.wav"
+      }
+    },
+    {
+      romaji: "nukarumi",
+      hiragana: "ぬかるみ",
+      meaning: "muddy ground",
+      audio: {
+        daughter: "audio/sentences/nukarumi.wav",
+        me: "audio/sentences/nukarumi.wav"
+      }
+    },
+    {
+      romaji: "ga",
+      hiragana: "が",
+      meaning: "subject marker",
+      audio: {
+        daughter: "audio/sentences/ga.wav",
+        me: "audio/sentences/ga.wav"
+      }
+    },
+    {
+      romaji: "dorodoro_to",
+      hiragana: "どろどろと",
+      meaning: "sludgy / oozy",
+      audio: {
+        daughter: "audio/sentences/dorodoro_to.wav",
+        me: "audio/sentences/dorodoro_to.wav"
+      }
+    },
+    {
+      romaji: "katachizukurarete",
+      hiragana: "かたちづくられて",
+      meaning: "is formed",
+      audio: {
+        daughter: "audio/sentences/katachizukurarete.wav",
+        me: "audio/sentences/katachizukurarete.wav"
+      }
+    },
+    {
+      romaji: "ite",
+      hiragana: "いて",
+      meaning: "is (progressive)",
+      audio: {
+        daughter: "audio/sentences/ite.wav",
+        me: "audio/sentences/ite.wav"
+      }
+    },
+    {
+      romaji: "shizumaseru",
+      hiragana: "しずませる",
+      meaning: "to sink / to make sink",
+      audio: {
+        daughter: "audio/sentences/shizumaseru.wav",
+        me: "audio/sentences/shizumaseru.wav"
+      }
+    }
+  ]
+},
 
 
 
