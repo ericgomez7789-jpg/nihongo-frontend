@@ -7413,6 +7413,146 @@ const level2Sentences = [
 
 
 
+{
+  id: "l2-38",
+  meaning: "Trees and plants grow vigorously.",
+  level: 2,
+
+  options: [
+    "き",
+    "と",
+    "しょくぶつ",
+    "が",
+    "すくすく",
+    "と",
+    "はえる"
+  ],
+
+  optionsRomaji: [
+    "ki",
+    "to",
+    "shokubutsu",
+    "ga",
+    "sukusuku",
+    "to",
+    "haeru"
+  ],
+
+  optionsEN: [
+    "tree",
+    "and",
+    "plants",
+    "subject marker",
+    "vigorously / healthily",
+    "in a ~ way",
+    "to grow"
+  ],
+
+  correct: "すくすく",
+
+  choiceAudio: {
+    options: [
+      "audio/sentences/ki.wav",
+      "audio/sentences/to.wav",
+      "audio/sentences/shokubutsu.wav",
+      "audio/sentences/ga.wav",
+      "audio/sentences/sukusuku.wav",
+      "audio/sentences/to.wav",
+      "audio/sentences/haeru.wav"
+    ]
+  },
+
+  meaningAudio: [
+    "audio/sentences/ki.wav",
+    "audio/sentences/to.wav",
+    "audio/sentences/shokubutsu.wav",
+    "audio/sentences/ga.wav",
+    "audio/sentences/sukusuku.wav",
+    "audio/sentences/to.wav",
+    "audio/sentences/haeru.wav"
+  ],
+
+  chunks: [
+    {
+      romaji: "ki",
+      hiragana: "き",
+      meaning: "tree",
+      audio: {
+        daughter: "audio/sentences/ki.wav",
+        me: "audio/sentences/ki.wav"
+      }
+    },
+    {
+      romaji: "to",
+      hiragana: "と",
+      meaning: "and",
+      audio: {
+        daughter: "audio/sentences/to.wav",
+        me: "audio/sentences/to.wav"
+      }
+    },
+    {
+      romaji: "shokubutsu",
+      hiragana: "しょくぶつ",
+      meaning: "plants",
+      audio: {
+        daughter: "audio/sentences/shokubutsu.wav",
+        me: "audio/sentences/shokubutsu.wav"
+      }
+    },
+    {
+      romaji: "ga",
+      hiragana: "が",
+      meaning: "subject marker",
+      audio: {
+        daughter: "audio/sentences/ga.wav",
+        me: "audio/sentences/ga.wav"
+      }
+    },
+    {
+      romaji: "sukusuku",
+      hiragana: "すくすく",
+      meaning: "vigorously / healthily",
+      audio: {
+        daughter: "audio/sentences/sukusuku.wav",
+        me: "audio/sentences/sukusuku.wav"
+      }
+    },
+    {
+      romaji: "to",
+      hiragana: "と",
+      meaning: "in a ~ way",
+      audio: {
+        daughter: "audio/sentences/to.wav",
+        me: "audio/sentences/to.wav"
+      }
+    },
+    {
+      romaji: "haeru",
+      hiragana: "はえる",
+      meaning: "to grow",
+      audio: {
+        daughter: "audio/sentences/haeru.wav",
+        me: "audio/sentences/haeru.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
