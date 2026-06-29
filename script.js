@@ -8624,6 +8624,280 @@ const level2Sentences = [
 
 
 
+{
+  id: "l2-47",
+  meaning: "In the desert, a cloud of dust suddenly rose and swept through.",
+  level: 2,
+
+  options: [
+    "さばく",
+    "には",
+    "すなぼこり",
+    "が",
+    "いきなり",
+    "もうもうと",
+    "あがって",
+    "ふきぬけた"
+  ],
+
+  optionsRomaji: [
+    "sabaku",
+    "niwa",
+    "sunabokori",
+    "ga",
+    "ikinari",
+    "moumou_to",
+    "agatte",
+    "fukinuketa"
+  ],
+
+  optionsEN: [
+    "desert",
+    "in / as for",
+    "dust cloud",
+    "subject marker",
+    "suddenly",
+    "billowingly / thickly",
+    "rose up",
+    "swept through"
+  ],
+
+  // The correct choice for Screen 2
+  correct: "もうもうと",
+
+  choiceAudio: {
+    options: [
+      "audio/sentences/sabaku.wav",
+      "audio/sentences/niwa.wav",
+      "audio/sentences/sunabokori.wav",
+      "audio/sentences/ga.wav",
+      "audio/sentences/ikinari.wav",
+      "audio/sentences/moumou_to.wav",
+      "audio/sentences/agatte.wav",
+      "audio/sentences/fukinuketa.wav"
+    ]
+  },
+
+  meaningAudio: [
+    "audio/sentences/sabaku.wav",
+    "audio/sentences/niwa.wav",
+    "audio/sentences/sunabokori.wav",
+    "audio/sentences/ga.wav",
+    "audio/sentences/ikinari.wav",
+    "audio/sentences/moumou_to.wav",
+    "audio/sentences/agatte.wav",
+    "audio/sentences/fukinuketa.wav"
+  ],
+
+  chunks: [
+    {
+      romaji: "sabaku",
+      hiragana: "さばく",
+      meaning: "desert",
+      audio: {
+        daughter: "audio/sentences/sabaku.wav",
+        me: "audio/sentences/sabaku.wav"
+      }
+    },
+    {
+      romaji: "niwa",
+      hiragana: "には",
+      meaning: "in / as for",
+      audio: {
+        daughter: "audio/sentences/niwa.wav",
+        me: "audio/sentences/niwa.wav"
+      }
+    },
+    {
+      romaji: "sunabokori",
+      hiragana: "すなぼこり",
+      meaning: "dust cloud",
+      audio: {
+        daughter: "audio/sentences/sunabokori.wav",
+        me: "audio/sentences/sunabokori.wav"
+      }
+    },
+    {
+      romaji: "ga",
+      hiragana: "が",
+      meaning: "subject marker",
+      audio: {
+        daughter: "audio/sentences/ga.wav",
+        me: "audio/sentences/ga.wav"
+      }
+    },
+    {
+      romaji: "ikinari",
+      hiragana: "いきなり",
+      meaning: "suddenly",
+      audio: {
+        daughter: "audio/sentences/ikinari.wav",
+        me: "audio/sentences/ikinari.wav"
+      }
+    },
+    {
+      romaji: "moumou_to",
+      hiragana: "もうもうと",
+      meaning: "billowingly / thickly",
+      audio: {
+        daughter: "audio/sentences/moumou_to.wav",
+        me: "audio/sentences/moumou_to.wav"
+      }
+    },
+    {
+      romaji: "agatte",
+      hiragana: "あがって",
+      meaning: "rose up",
+      audio: {
+        daughter: "audio/sentences/agatte.wav",
+        me: "audio/sentences/agatte.wav"
+      }
+    },
+    {
+      romaji: "fukinuketa",
+      hiragana: "ふきぬけた",
+      meaning: "swept through",
+      audio: {
+        daughter: "audio/sentences/fukinuketa.wav",
+        me: "audio/sentences/fukinuketa.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+{
+  id: "l2-49",
+  meaning: "While the house was burning, smoke billowed upward.",
+  level: 2,
+
+  options: [
+    "いえは",
+    "もえている",
+    "あいだ",
+    "けむりが",
+    "もうもうと",
+    "わきあがった"
+  ],
+
+  optionsRomaji: [
+    "ie wa",
+    "moete iru",
+    "aida",
+    "kemuri ga",
+    "moumou_to",
+    "wakiagatta"
+  ],
+
+  optionsEN: [
+    "as for the house",
+    "is burning",
+    "while / during",
+    "smoke (subject)",
+    "thickly / billowingly",
+    "billowed upward"
+  ],
+
+  correct: "もうもうと",
+
+  choiceAudio: {
+    options: [
+      "audio/sentences/ie.wav",
+      "audio/sentences/wa.wav",
+      "audio/sentences/moete_iru.wav",
+      "audio/sentences/aida.wav",
+      "audio/sentences/kemuri.wav",
+      "audio/sentences/ga.wav",
+      "audio/sentences/moumou_to.wav",
+      "audio/sentences/wakiagatta.wav"
+    ]
+  },
+
+  meaningAudio: [
+    "audio/sentences/ie.wav",
+    "audio/sentences/wa.wav",
+    "audio/sentences/moete_iru.wav",
+    "audio/sentences/aida.wav",
+    "audio/sentences/kemuri.wav",
+    "audio/sentences/ga.wav",
+    "audio/sentences/moumou_to.wav",
+    "audio/sentences/wakiagatta.wav"
+  ],
+
+  chunks: [
+    {
+      romaji: "ie wa",
+      hiragana: "いえは",
+      meaning: "as for the house",
+      audio: {
+        daughter: "audio/sentences/ie.wav",
+        me: "audio/sentences/ie.wav"
+      }
+    },
+    {
+      romaji: "moete iru",
+      hiragana: "もえている",
+      meaning: "is burning",
+      audio: {
+        daughter: "audio/sentences/moete_iru.wav",
+        me: "audio/sentences/moete_iru.wav"
+      }
+    },
+    {
+      romaji: "aida",
+      hiragana: "あいだ",
+      meaning: "while / during",
+      audio: {
+        daughter: "audio/sentences/aida.wav",
+        me: "audio/sentences/aida.wav"
+      }
+    },
+    {
+      romaji: "kemuri ga",
+      hiragana: "けむりが",
+      meaning: "smoke (subject)",
+      audio: {
+        daughter: "audio/sentences/kemuri.wav",
+        me: "audio/sentences/kemuri.wav"
+      }
+    },
+    {
+      romaji: "moumou_to",
+      hiragana: "もうもうと",
+      meaning: "billowingly / thickly",
+      audio: {
+        daughter: "audio/sentences/moumou_to.wav",
+        me: "audio/sentences/moumou_to.wav"
+      }
+    },
+    {
+      romaji: "wakiagatta",
+      hiragana: "わきあがった",
+      meaning: "billowed upward",
+      audio: {
+        daughter: "audio/sentences/wakiagatta.wav",
+        me: "audio/sentences/wakiagatta.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
 ];
 
 
