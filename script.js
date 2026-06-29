@@ -9454,6 +9454,185 @@ const level2Sentences = [
 
 
 
+{
+  id: "l2-53",
+  meaning: "In the dense forest, a monkey hung upside down from a tree branch, swaying loosely.",
+  level: 2,
+
+  options: [
+    "みつりん",
+    "には",
+    "さる",
+    "が",
+    "き",
+    "の",
+    "えだ",
+    "から",
+    "さかさま",
+    "で",
+    "ぶらぶらと",
+    "たれさがって",
+    "いた"
+  ],
+
+  optionsRomaji: [
+    "mitsurin",
+    "niwa",
+    "saru",
+    "ga",
+    "ki",
+    "no",
+    "eda",
+    "kara",
+    "sakasama",
+    "de",
+    "burabura_to",
+    "taresagatte",
+    "ita"
+  ],
+
+  optionsEN: [
+    "dense forest",
+    "as for / in",
+    "monkey",
+    "subject marker",
+    "tree",
+    "of",
+    "branch",
+    "from",
+    "upside down",
+    "in (state)",
+    "dangling / swaying",
+    "hanging down",
+    "was"
+  ],
+
+  correct: "ぶらぶらと",
+
+  choiceAudio: {
+    options: [
+      "audio/sentences/mitsurin.wav",
+      "audio/sentences/niwa.wav",
+      "audio/sentences/saru.wav",
+      "audio/sentences/ga.wav",
+      "audio/sentences/ki.wav",
+      "audio/sentences/no.wav",
+      "audio/sentences/eda.wav",
+      "audio/sentences/kara.wav",
+      "audio/sentences/sakasama.wav",
+      "audio/sentences/de.wav",
+      "audio/sentences/burabura_to.wav",
+      "audio/sentences/taresagatte.wav",
+      "audio/sentences/ita.wav"
+    ]
+  },
+
+  meaningAudio: [
+    "audio/sentences/mitsurin.wav",
+    "audio/sentences/niwa.wav",
+    "audio/sentences/saru.wav",
+    "audio/sentences/ga.wav",
+    "audio/sentences/ki.wav",
+    "audio/sentences/no.wav",
+    "audio/sentences/eda.wav",
+    "audio/sentences/kara.wav",
+    "audio/sentences/sakasama.wav",
+    "audio/sentences/de.wav",
+    "audio/sentences/burabura_to.wav",
+    "audio/sentences/taresagatte.wav",
+    "audio/sentences/ita.wav"
+  ],
+
+  chunks: [
+    {
+      romaji: "mitsurin",
+      hiragana: "みつりん",
+      meaning: "dense forest",
+      audio: { daughter: "audio/sentences/mitsurin.wav", me: "audio/sentences/mitsurin.wav" }
+    },
+    {
+      romaji: "niwa",
+      hiragana: "には",
+      meaning: "as for / in",
+      audio: { daughter: "audio/sentences/niwa.wav", me: "audio/sentences/niwa.wav" }
+    },
+    {
+      romaji: "saru",
+      hiragana: "さる",
+      meaning: "monkey",
+      audio: { daughter: "audio/sentences/saru.wav", me: "audio/sentences/saru.wav" }
+    },
+    {
+      romaji: "ga",
+      hiragana: "が",
+      meaning: "subject marker",
+      audio: { daughter: "audio/sentences/ga.wav", me: "audio/sentences/ga.wav" }
+    },
+    {
+      romaji: "ki",
+      hiragana: "き",
+      meaning: "tree",
+      audio: { daughter: "audio/sentences/ki.wav", me: "audio/sentences/ki.wav" }
+    },
+    {
+      romaji: "no",
+      hiragana: "の",
+      meaning: "of",
+      audio: { daughter: "audio/sentences/no.wav", me: "audio/sentences/no.wav" }
+    },
+    {
+      romaji: "eda",
+      hiragana: "えだ",
+      meaning: "branch",
+      audio: { daughter: "audio/sentences/eda.wav", me: "audio/sentences/eda.wav" }
+    },
+    {
+      romaji: "kara",
+      hiragana: "から",
+      meaning: "from",
+      audio: { daughter: "audio/sentences/kara.wav", me: "audio/sentences/kara.wav" }
+    },
+    {
+      romaji: "sakasama",
+      hiragana: "さかさま",
+      meaning: "upside down",
+      audio: { daughter: "audio/sentences/sakasama.wav", me: "audio/sentences/sakasama.wav" }
+    },
+    {
+      romaji: "de",
+      hiragana: "で",
+      meaning: "in (state)",
+      audio: { daughter: "audio/sentences/de.wav", me: "audio/sentences/de.wav" }
+    },
+    {
+      romaji: "burabura_to",
+      hiragana: "ぶらぶらと",
+      meaning: "dangling / swaying",
+      audio: { daughter: "audio/sentences/burabura_to.wav", me: "audio/sentences/burabura_to.wav" }
+    },
+    {
+      romaji: "taresagatte",
+      hiragana: "たれさがって",
+      meaning: "hanging down",
+      audio: { daughter: "audio/sentences/taresagatte.wav", me: "audio/sentences/taresagatte.wav" }
+    },
+    {
+      romaji: "ita",
+      hiragana: "いた",
+      meaning: "was",
+      audio: { daughter: "audio/sentences/ita.wav", me: "audio/sentences/ita.wav" }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
 
 
 ];
