@@ -9174,6 +9174,152 @@ const level2Sentences = [
 
 
 
+{
+  id: "l2-51",
+  meaning: "In the room, the light flickers as if a ghost were present.",
+  level: 2,
+
+  options: [
+    "へや",
+    "には",
+    "ひかり",
+    "が",
+    "ゆうれい",
+    "が",
+    "いる",
+    "ように",
+    "ちかちかと",
+    "ちらつく"
+  ],
+
+  optionsRomaji: [
+    "heya",
+    "niwa",
+    "hikari",
+    "ga",
+    "yuurei",
+    "ga",
+    "iru",
+    "you_ni",
+    "chikachika_to",
+    "chiratsuku"
+  ],
+
+  optionsEN: [
+    "room",
+    "as for / in",
+    "light",
+    "subject marker",
+    "ghost",
+    "subject marker",
+    "exists",
+    "as if",
+    "flickering / blinking",
+    "to flicker / to waver"
+  ],
+
+  correct: "ちかちかと",
+
+  choiceAudio: {
+    options: [
+      "audio/sentences/heya.wav",
+      "audio/sentences/niwa.wav",
+      "audio/sentences/hikari.wav",
+      "audio/sentences/ga.wav",
+      "audio/sentences/yuurei.wav",
+      "audio/sentences/ga.wav",
+      "audio/sentences/iru.wav",
+      "audio/sentences/you_ni.wav",
+      "audio/sentences/chikachika_to.wav",
+      "audio/sentences/chiratsuku.wav"
+    ]
+  },
+
+  meaningAudio: [
+    "audio/sentences/heya.wav",
+    "audio/sentences/niwa.wav",
+    "audio/sentences/hikari.wav",
+    "audio/sentences/ga.wav",
+    "audio/sentences/yuurei.wav",
+    "audio/sentences/ga.wav",
+    "audio/sentences/iru.wav",
+    "audio/sentences/you_ni.wav",
+    "audio/sentences/chikachika_to.wav",
+    "audio/sentences/chiratsuku.wav"
+  ],
+
+  chunks: [
+    {
+      romaji: "heya",
+      hiragana: "へや",
+      meaning: "room",
+      audio: { daughter: "audio/sentences/heya.wav", me: "audio/sentences/heya.wav" }
+    },
+    {
+      romaji: "niwa",
+      hiragana: "には",
+      meaning: "as for / in",
+      audio: { daughter: "audio/sentences/niwa.wav", me: "audio/sentences/niwa.wav" }
+    },
+    {
+      romaji: "hikari",
+      hiragana: "ひかり",
+      meaning: "light",
+      audio: { daughter: "audio/sentences/hikari.wav", me: "audio/sentences/hikari.wav" }
+    },
+    {
+      romaji: "ga",
+      hiragana: "が",
+      meaning: "subject marker",
+      audio: { daughter: "audio/sentences/ga.wav", me: "audio/sentences/ga.wav" }
+    },
+    {
+      romaji: "yuurei",
+      hiragana: "ゆうれい",
+      meaning: "ghost",
+      audio: { daughter: "audio/sentences/yuurei.wav", me: "audio/sentences/yuurei.wav" }
+    },
+    {
+      romaji: "ga",
+      hiragana: "が",
+      meaning: "subject marker",
+      audio: { daughter: "audio/sentences/ga.wav", me: "audio/sentences/ga.wav" }
+    },
+    {
+      romaji: "iru",
+      hiragana: "いる",
+      meaning: "exists",
+      audio: { daughter: "audio/sentences/iru.wav", me: "audio/sentences/iru.wav" }
+    },
+    {
+      romaji: "you_ni",
+      hiragana: "ように",
+      meaning: "as if",
+      audio: { daughter: "audio/sentences/you_ni.wav", me: "audio/sentences/you_ni.wav" }
+    },
+    {
+      romaji: "chikachika_to",
+      hiragana: "ちかちかと",
+      meaning: "flickering / blinking",
+      audio: { daughter: "audio/sentences/chikachika_to.wav", me: "audio/sentences/chikachika_to.wav" }
+    },
+    {
+      romaji: "chiratsuku",
+      hiragana: "ちらつく",
+      meaning: "to flicker / to waver",
+      audio: { daughter: "audio/sentences/chiratsuku.wav", me: "audio/sentences/chiratsuku.wav" }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
 
 
 ];
