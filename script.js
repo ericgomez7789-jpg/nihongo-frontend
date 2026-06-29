@@ -8771,37 +8771,44 @@ const level2Sentences = [
 
 
 
-
-
 {
-  id: "l2-48",
+  id: "l2-49",
   meaning: "While the house was burning, smoke billowed upward.",
   level: 2,
 
   options: [
-    "いえは",
-    "もえている",
+    "いえ",
+    "には",
+    "もえて",
+    "いる",
     "あいだ",
-    "けむりが",
+    "けむり",
+    "が",
     "もうもうと",
     "わきあがった"
   ],
 
   optionsRomaji: [
-    "ie wa",
-    "moete iru",
+    "ie",
+    "niwa",
+    "moete",
+    "iru",
     "aida",
-    "kemuri ga",
+    "kemuri",
+    "ga",
     "moumou_to",
     "wakiagatta"
   ],
 
   optionsEN: [
-    "as for the house",
-    "is burning",
+    "house",
+    "as for / in",
+    "burning",
+    "is",
     "while / during",
-    "smoke (subject)",
-    "thickly / billowingly",
+    "smoke",
+    "subject marker",
+    "billowingly / thickly",
     "billowed upward"
   ],
 
@@ -8810,8 +8817,9 @@ const level2Sentences = [
   choiceAudio: {
     options: [
       "audio/sentences/ie.wav",
-      "audio/sentences/wa.wav",
-      "audio/sentences/moete_iru.wav",
+      "audio/sentences/niwa.wav",
+      "audio/sentences/moete.wav",
+      "audio/sentences/iru.wav",
       "audio/sentences/aida.wav",
       "audio/sentences/kemuri.wav",
       "audio/sentences/ga.wav",
@@ -8822,8 +8830,9 @@ const level2Sentences = [
 
   meaningAudio: [
     "audio/sentences/ie.wav",
-    "audio/sentences/wa.wav",
-    "audio/sentences/moete_iru.wav",
+    "audio/sentences/niwa.wav",
+    "audio/sentences/moete.wav",
+    "audio/sentences/iru.wav",
     "audio/sentences/aida.wav",
     "audio/sentences/kemuri.wav",
     "audio/sentences/ga.wav",
@@ -8833,21 +8842,39 @@ const level2Sentences = [
 
   chunks: [
     {
-      romaji: "ie wa",
-      hiragana: "いえは",
-      meaning: "as for the house",
+      romaji: "ie",
+      hiragana: "いえ",
+      meaning: "house",
       audio: {
         daughter: "audio/sentences/ie.wav",
         me: "audio/sentences/ie.wav"
       }
     },
     {
-      romaji: "moete iru",
-      hiragana: "もえている",
-      meaning: "is burning",
+      romaji: "niwa",
+      hiragana: "には",
+      meaning: "as for / in",
       audio: {
-        daughter: "audio/sentences/moete_iru.wav",
-        me: "audio/sentences/moete_iru.wav"
+        daughter: "audio/sentences/niwa.wav",
+        me: "audio/sentences/niwa.wav"
+      }
+    },
+    {
+      romaji: "moete",
+      hiragana: "もえて",
+      meaning: "burning",
+      audio: {
+        daughter: "audio/sentences/moete.wav",
+        me: "audio/sentences/moete.wav"
+      }
+    },
+    {
+      romaji: "iru",
+      hiragana: "いる",
+      meaning: "is",
+      audio: {
+        daughter: "audio/sentences/iru.wav",
+        me: "audio/sentences/iru.wav"
       }
     },
     {
@@ -8860,12 +8887,21 @@ const level2Sentences = [
       }
     },
     {
-      romaji: "kemuri ga",
-      hiragana: "けむりが",
-      meaning: "smoke (subject)",
+      romaji: "kemuri",
+      hiragana: "けむり",
+      meaning: "smoke",
       audio: {
         daughter: "audio/sentences/kemuri.wav",
         me: "audio/sentences/kemuri.wav"
+      }
+    },
+    {
+      romaji: "ga",
+      hiragana: "が",
+      meaning: "subject marker",
+      audio: {
+        daughter: "audio/sentences/ga.wav",
+        me: "audio/sentences/ga.wav"
       }
     },
     {
