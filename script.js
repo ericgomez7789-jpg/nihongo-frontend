@@ -5803,75 +5803,81 @@ const level2Sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
 {
-   id: "l2-24",
-  meaning: "When the rain stops, droplets fall drip‑drop.",
+  meaning: "When the rain stops, raindrops fall drip‑drop.",
   level: 2,
-
-  options: ["あめが", "やむと", "あましずくが", "ぽたぽたと", "したたる"],
-  optionsRomaji: ["ame ga", "yamu to", "amashizuku ga", "potapota to", "shitataru"],
-  optionsEN: [
-    "rain (subject)",
-    "when it stops",
-    "raindrops (subject)",
-    "drip‑drop",
-    "to drip / to trickle"
-  ],
-  correct: "ぽたぽたと",
-
-  choiceAudio: {
-    options: [
-      "audio/sentences/ame_ga.wav",
-      "audio/sentences/yamu_to.wav",
-      "audio/sentences/amashizuku_ga.wav",
-      "audio/sentences/potapota_to.wav",
-      "audio/sentences/shitataru.wav"
-    ]
-  },
-
-  meaningAudio: [
-    "audio/sentences/ame_ga.wav",
-    "audio/sentences/yamu_to.wav",
-    "audio/sentences/amashizuku_ga.wav",
-    "audio/sentences/potapota_to.wav",
-    "audio/sentences/shitataru.wav"
-  ],
 
   chunks: [
     {
-      romaji: "ame ga",
-      hiragana: "あめが",
-      meaning: "rain (subject)",
+      romaji: "ame",
+      hiragana: "あめ",
+      meaning: "rain",
       audio: {
-        daughter: "audio/sentences/ame_ga.wav",
-        me: "audio/sentences/ame_ga.wav"
+        daughter: "audio/sentences/ame.wav",
+        me: "audio/sentences/ame.wav"
       }
     },
     {
-      romaji: "yamu to",
-      hiragana: "やむと",
-      meaning: "when it stops",
+      romaji: "ga",
+      hiragana: "が",
+      meaning: "subject marker",
       audio: {
-        daughter: "audio/sentences/yamu_to.wav",
-        me: "audio/sentences/yamu_to.wav"
+        daughter: "audio/sentences/ga.wav",
+        me: "audio/sentences/ga.wav"
       }
     },
     {
-      romaji: "amashizuku ga",
-      hiragana: "あましずくが",
-      meaning: "raindrops (subject)",
+      romaji: "yamu",
+      hiragana: "やむ",
+      meaning: "to stop",
       audio: {
-        daughter: "audio/sentences/amashizuku_ga.wav",
-        me: "audio/sentences/amashizuku_ga.wav"
+        daughter: "audio/sentences/yamu.wav",
+        me: "audio/sentences/yamu.wav"
       }
     },
     {
-      romaji: "potapota to",
-      hiragana: "ぽたぽたと",
-      meaning: "drip‑drop",
+      romaji: "to",
+      hiragana: "と",
+      meaning: "when",
       audio: {
-        daughter: "audio/sentences/potapota_to.wav",
-        me: "audio/sentences/potapota_to.wav"
+        daughter: "audio/sentences/to.wav",
+        me: "audio/sentences/to.wav"
+      }
+    },
+    {
+      romaji: "amashizuku",
+      hiragana: "あましずく",
+      meaning: "raindrops",
+      audio: {
+        daughter: "audio/sentences/amashizuku.wav",
+        me: "audio/sentences/amashizuku.wav"
+      }
+    },
+    {
+      romaji: "ga",
+      hiragana: "が",
+      meaning: "subject marker",
+      audio: {
+        daughter: "audio/sentences/ga.wav",
+        me: "audio/sentences/ga.wav"
+      }
+    },
+    {
+      romaji: "poroporo_to",
+      hiragana: "ぽろぽろと",
+      meaning: "drip‑drop (small droplets)",
+      audio: {
+        daughter: "audio/sentences/poroporo_to.wav",
+        me: "audio/sentences/poroporo_to.wav"
       }
     },
     {
@@ -5885,6 +5891,16 @@ const level2Sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
 {
    id: "l2-25",
   meaning: "The hot spring warms you up cozily.",
@@ -9617,6 +9633,211 @@ const level2Sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+{
+  id: "l2-54",
+  meaning: "After swimming in the lake, the soaking wet swimsuit was dripping heavy drops of water.",
+  level: 2,
+
+  options: [
+    "みずうみ",
+    "には",
+    "およいだ",
+    "あと",
+    "で",
+    "びっしょぬれ",
+    "の",
+    "みずぎ",
+    "が",
+    "ぽたぽたと",
+    "たれて",
+    "いた"
+  ],
+
+  optionsRomaji: [
+    "mizuumi",
+    "niwa",
+    "oyoida",
+    "ato",
+    "de",
+    "bisshonure",
+    "no",
+    "mizugi",
+    "ga",
+    "potapota_to",
+    "tarete",
+    "ita"
+  ],
+
+  optionsEN: [
+    "lake",
+    "as for / in",
+    "swam",
+    "after",
+    "at / in / by",
+    "soaking wet",
+    "linking particle",
+    "swimsuit",
+    "subject marker",
+    "dripping heavy drops",
+    "was dripping",
+    "was"
+  ],
+
+  correct: "ぽたぽたと",
+
+  choiceAudio: {
+    options: [
+      "audio/sentences/mizuumi.wav",
+      "audio/sentences/niwa.wav",
+      "audio/sentences/oyoida.wav",
+      "audio/sentences/ato.wav",
+      "audio/sentences/de.wav",
+      "audio/sentences/bisshonure.wav",
+      "audio/sentences/no.wav",
+      "audio/sentences/mizugi.wav",
+      "audio/sentences/ga.wav",
+      "audio/sentences/potapota_to.wav",
+      "audio/sentences/tarete.wav",
+      "audio/sentences/ita.wav"
+    ]
+  },
+
+  meaningAudio: [
+    "audio/sentences/mizuumi.wav",
+    "audio/sentences/niwa.wav",
+    "audio/sentences/oyoida.wav",
+    "audio/sentences/ato.wav",
+    "audio/sentences/de.wav",
+    "audio/sentences/bisshonure.wav",
+    "audio/sentences/no.wav",
+    "audio/sentences/mizugi.wav",
+    "audio/sentences/ga.wav",
+    "audio/sentences/potapota_to.wav",
+    "audio/sentences/tarete.wav",
+    "audio/sentences/ita.wav"
+  ],
+
+  chunks: [
+    {
+      romaji: "mizuumi",
+      hiragana: "みずうみ",
+      meaning: "lake",
+      audio: {
+        daughter: "audio/sentences/mizuumi.wav",
+        me: "audio/sentences/mizuumi.wav"
+      }
+    },
+    {
+      romaji: "niwa",
+      hiragana: "には",
+      meaning: "as for / in",
+      audio: {
+        daughter: "audio/sentences/niwa.wav",
+        me: "audio/sentences/niwa.wav"
+      }
+    },
+    {
+      romaji: "oyoida",
+      hiragana: "およいだ",
+      meaning: "swam",
+      audio: {
+        daughter: "audio/sentences/oyoida.wav",
+        me: "audio/sentences/oyoida.wav"
+      }
+    },
+    {
+      romaji: "ato",
+      hiragana: "あと",
+      meaning: "after",
+      audio: {
+        daughter: "audio/sentences/ato.wav",
+        me: "audio/sentences/ato.wav"
+      }
+    },
+    {
+      romaji: "de",
+      hiragana: "で",
+      meaning: "at / in / by",
+      audio: {
+        daughter: "audio/sentences/de.wav",
+        me: "audio/sentences/de.wav"
+      }
+    },
+    {
+      romaji: "bisshonure",
+      hiragana: "びっしょぬれ",
+      meaning: "soaking wet",
+      audio: {
+        daughter: "audio/sentences/bisshonure.wav",
+        me: "audio/sentences/bisshonure.wav"
+      }
+    },
+    {
+      romaji: "no",
+      hiragana: "の",
+      meaning: "linking particle",
+      audio: {
+        daughter: "audio/sentences/no.wav",
+        me: "audio/sentences/no.wav"
+      }
+    },
+    {
+      romaji: "mizugi",
+      hiragana: "みずぎ",
+      meaning: "swimsuit",
+      audio: {
+        daughter: "audio/sentences/mizugi.wav",
+        me: "audio/sentences/mizugi.wav"
+      }
+    },
+    {
+      romaji: "ga",
+      hiragana: "が",
+      meaning: "subject marker",
+      audio: {
+        daughter: "audio/sentences/ga.wav",
+        me: "audio/sentences/ga.wav"
+      }
+    },
+    {
+      romaji: "potapota_to",
+      hiragana: "ぽたぽたと",
+      meaning: "dripping heavy drops",
+      audio: {
+        daughter: "audio/sentences/potapota_to.wav",
+        me: "audio/sentences/potapota_to.wav"
+      }
+    },
+    {
+      romaji: "tarete",
+      hiragana: "たれて",
+      meaning: "was dripping",
+      audio: {
+        daughter: "audio/sentences/tarete.wav",
+        me: "audio/sentences/tarete.wav"
+      }
+    },
+    {
+      romaji: "ita",
+      hiragana: "いた",
+      meaning: "was",
+      audio: {
+        daughter: "audio/sentences/ita.wav",
+        me: "audio/sentences/ita.wav"
+      }
+    }
+  ]
+},
+
+
 
 
 
