@@ -8772,7 +8772,7 @@ const level2Sentences = [
 
 
 {
-  id: "l2-49",
+  id: "l2-48",
   meaning: "While the house was burning, smoke billowed upward.",
   level: 2,
 
@@ -8924,6 +8924,136 @@ const level2Sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l2-49",
+  meaning: "As for the tree bark, sticky sap clings to it.",
+  level: 2,
+
+  options: [
+    "きのじゅひ",
+    "には",
+    "じゅえき",
+    "が",
+    "ねばねばと",
+    "つく"
+  ],
+
+  optionsRomaji: [
+    "kinojuhi",
+    "niwa",
+    "jueki",
+    "ga",
+    "nebaneba_to",
+    "tsuku"
+  ],
+
+  optionsEN: [
+    "tree bark",
+    "as for / on",
+    "sap",
+    "subject marker",
+    "stickily / viscously",
+    "to stick / to cling"
+  ],
+
+  correct: "ねばねばと",
+
+  choiceAudio: {
+    options: [
+      "audio/sentences/kinojuhi.wav",
+      "audio/sentences/niwa.wav",
+      "audio/sentences/jueki.wav",
+      "audio/sentences/ga.wav",
+      "audio/sentences/nebaneba_to.wav",
+      "audio/sentences/tsuku.wav"
+    ]
+  },
+
+  meaningAudio: [
+    "audio/sentences/kinojuhi.wav",
+    "audio/sentences/niwa.wav",
+    "audio/sentences/jueki.wav",
+    "audio/sentences/ga.wav",
+    "audio/sentences/nebaneba_to.wav",
+    "audio/sentences/tsuku.wav"
+  ],
+
+  chunks: [
+    {
+      romaji: "kinojuhi",
+      hiragana: "きのじゅひ",
+      meaning: "tree bark",
+      audio: {
+        daughter: "audio/sentences/kinojuhi.wav",
+        me: "audio/sentences/kinojuhi.wav"
+      }
+    },
+    {
+      romaji: "niwa",
+      hiragana: "には",
+      meaning: "as for / on",
+      audio: {
+        daughter: "audio/sentences/niwa.wav",
+        me: "audio/sentences/niwa.wav"
+      }
+    },
+    {
+      romaji: "jueki",
+      hiragana: "じゅえき",
+      meaning: "sap",
+      audio: {
+        daughter: "audio/sentences/jueki.wav",
+        me: "audio/sentences/jueki.wav"
+      }
+    },
+    {
+      romaji: "ga",
+      hiragana: "が",
+      meaning: "subject marker",
+      audio: {
+        daughter: "audio/sentences/ga.wav",
+        me: "audio/sentences/ga.wav"
+      }
+    },
+    {
+      romaji: "nebaneba_to",
+      hiragana: "ねばねばと",
+      meaning: "stickily / viscously",
+      audio: {
+        daughter: "audio/sentences/nebaneba_to.wav",
+        me: "audio/sentences/nebaneba_to.wav"
+      }
+    },
+    {
+      romaji: "tsuku",
+      hiragana: "つく",
+      meaning: "to stick / to cling",
+      audio: {
+        daughter: "audio/sentences/tsuku.wav",
+        me: "audio/sentences/tsuku.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
 
 
 
