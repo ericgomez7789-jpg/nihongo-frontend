@@ -8774,7 +8774,7 @@ const level2Sentences = [
 
 
 {
-  id: "l2-49",
+  id: "l2-48",
   meaning: "While the house was burning, smoke billowed upward.",
   level: 2,
 
