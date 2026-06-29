@@ -9320,6 +9320,140 @@ const level2Sentences = [
 
 
 
+{
+  id: "l2-52",
+  meaning: "As for the bear, its claws rip anything to shreds.",
+  level: 2,
+
+  options: [
+    "くま",
+    "は",
+    "かぎつめ",
+    "が",
+    "なんでも",
+    "ずたずたと",
+    "ひきさく"
+  ],
+
+  optionsRomaji: [
+    "kuma",
+    "wa",
+    "kagitsume",
+    "ga",
+    "nandemo",
+    "zutazuta_to",
+    "hikisaku"
+  ],
+
+  optionsEN: [
+    "bear",
+    "topic marker",
+    "claws",
+    "subject marker",
+    "anything",
+    "into shreds / raggedly",
+    "to rip apart / to tear to shreds"
+  ],
+
+  correct: "ずたずたと",
+
+  choiceAudio: {
+    options: [
+      "audio/sentences/kuma.wav",
+      "audio/sentences/wa.wav",
+      "audio/sentences/kagitsume.wav",
+      "audio/sentences/ga.wav",
+      "audio/sentences/nandemo.wav",
+      "audio/sentences/zutazuta_to.wav",
+      "audio/sentences/hikisaku.wav"
+    ]
+  },
+
+  meaningAudio: [
+    "audio/sentences/kuma.wav",
+    "audio/sentences/wa.wav",
+    "audio/sentences/kagitsume.wav",
+    "audio/sentences/ga.wav",
+    "audio/sentences/nandemo.wav",
+    "audio/sentences/zutazuta_to.wav",
+    "audio/sentences/hikisaku.wav"
+  ],
+
+  chunks: [
+    {
+      romaji: "kuma",
+      hiragana: "くま",
+      meaning: "bear",
+      audio: {
+        daughter: "audio/sentences/kuma.wav",
+        me: "audio/sentences/kuma.wav"
+      }
+    },
+    {
+      romaji: "wa",
+      hiragana: "は",
+      meaning: "topic marker",
+      audio: {
+        daughter: "audio/sentences/wa.wav",
+        me: "audio/sentences/wa.wav"
+      }
+    },
+    {
+      romaji: "kagitsume",
+      hiragana: "かぎつめ",
+      meaning: "claws",
+      audio: {
+        daughter: "audio/sentences/kagitsume.wav",
+        me: "audio/sentences/kagitsume.wav"
+      }
+    },
+    {
+      romaji: "ga",
+      hiragana: "が",
+      meaning: "subject marker",
+      audio: {
+        daughter: "audio/sentences/ga.wav",
+        me: "audio/sentences/ga.wav"
+      }
+    },
+    {
+      romaji: "nandemo",
+      hiragana: "なんでも",
+      meaning: "anything",
+      audio: {
+        daughter: "audio/sentences/nandemo.wav",
+        me: "audio/sentences/nandemo.wav"
+      }
+    },
+    {
+      romaji: "zutazuta_to",
+      hiragana: "ずたずたと",
+      meaning: "into shreds / raggedly",
+      audio: {
+        daughter: "audio/sentences/zutazuta_to.wav",
+        me: "audio/sentences/zutazuta_to.wav"
+      }
+    },
+    {
+      romaji: "hikisaku",
+      hiragana: "ひきさく",
+      meaning: "to rip apart / to tear to shreds",
+      audio: {
+        daughter: "audio/sentences/hikisaku.wav",
+        me: "audio/sentences/hikisaku.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
 
 
 ];
@@ -9842,6 +9976,7 @@ L2.onomaList = [
   "ぐつぐつと",
   "ぎざぎざと"
 ];
+
 
 
 
