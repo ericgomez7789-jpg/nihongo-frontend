@@ -9847,7 +9847,85 @@ const level2Sentences = [
 
 
 
+{
+  meaning: "The rock’s surface feels smooth to the touch.",
+  level: 2,
 
+  chunks: [
+    {
+      romaji: "iwa",
+      hiragana: "いわ",
+      meaning: "rock",
+      audio: {
+        daughter: "audio/sentences/iwa.wav",
+        me: "audio/sentences/iwa.wav"
+      }
+    },
+    {
+      romaji: "wa",
+      hiragana: "は",
+      meaning: "topic marker",
+      audio: {
+        daughter: "audio/sentences/wa.wav",
+        me: "audio/sentences/wa.wav"
+      }
+    },
+    {
+      romaji: "hyoumen",
+      hiragana: "ひょうめん",
+      meaning: "surface",
+      audio: {
+        daughter: "audio/sentences/hyoumen.wav",
+        me: "audio/sentences/hyoumen.wav"
+      }
+    },
+    {
+      romaji: "ga",
+      hiragana: "が",
+      meaning: "subject marker",
+      audio: {
+        daughter: "audio/sentences/ga.wav",
+        me: "audio/sentences/ga.wav"
+      }
+    },
+    {
+      romaji: "subesube_to",
+      hiragana: "すべすべと",
+      meaning: "smooth",
+      audio: {
+        daughter: "audio/sentences/subesube_to.wav",
+        me: "audio/sentences/subesube_to.wav"
+      }
+    },
+    {
+      romaji: "tezawari",
+      hiragana: "てざわり",
+      meaning: "touch / feel",
+      audio: {
+        daughter: "audio/sentences/tezawari.wav",
+        me: "audio/sentences/tezawari.wav"
+      }
+    },
+    {
+      romaji: "ga",
+      hiragana: "が",
+      meaning: "subject marker",
+      audio: {
+        daughter: "audio/sentences/ga.wav",
+        me: "audio/sentences/ga.wav"
+      }
+    },
+    {
+      romaji: "suru",
+      hiragana: "する",
+      meaning: "to feel / to do",
+      audio: {
+        daughter: "audio/sentences/suru.wav",
+        me: "audio/sentences/suru.wav"
+      }
+    }
+  ]
+},
 
 
 
