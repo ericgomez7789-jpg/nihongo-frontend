@@ -6851,7 +6851,6 @@ const level2Sentences = [
 
 
 
-
 {
   id: "l2-34",
   meaning: "Leaves began to flutter down from the tree.",
@@ -6863,7 +6862,6 @@ const level2Sentences = [
     "このは",
     "が",
     "はらはらと",
-  
     "ふりだした"
   ],
 
@@ -6872,8 +6870,7 @@ const level2Sentences = [
     "kara",
     "konoha",
     "ga",
-    "harahara",
-    "to",
+    "harahara_to",
     "furidashita"
   ],
 
@@ -6883,7 +6880,6 @@ const level2Sentences = [
     "leaves",
     "subject marker",
     "fluttering lightly",
-    
     "began to fall"
   ],
 
@@ -6896,7 +6892,6 @@ const level2Sentences = [
       "audio/sentences/konoha.wav",
       "audio/sentences/ga.wav",
       "audio/sentences/harahara_to.wav",
-      
       "audio/sentences/furidashita.wav"
     ]
   },
@@ -6907,7 +6902,6 @@ const level2Sentences = [
     "audio/sentences/konoha.wav",
     "audio/sentences/ga.wav",
     "audio/sentences/harahara_to.wav",
-    
     "audio/sentences/furidashita.wav"
   ],
 
@@ -6949,15 +6943,14 @@ const level2Sentences = [
       }
     },
     {
-      romaji: "harahara",
-      hiragana: "はらはら",
+      romaji: "harahara_to",
+      hiragana: "はらはらと",
       meaning: "fluttering lightly",
       audio: {
         daughter: "audio/sentences/harahara_to.wav",
         me: "audio/sentences/harahara_to.wav"
       }
     },
-    
     {
       romaji: "furidashita",
       hiragana: "ふりだした",
