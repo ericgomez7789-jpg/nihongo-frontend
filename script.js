@@ -9054,6 +9054,118 @@ const level2Sentences = [
 
 
 
+{
+  id: "l2-50",
+  meaning: "As for the snake, its skin is slippery and slick.",
+  level: 2,
+
+  options: [
+    "へび",
+    "は",
+    "はだ",
+    "が",
+    "ぬるぬると",
+    "すべる"
+  ],
+
+  optionsRomaji: [
+    "hebi",
+    "wa",
+    "hada",
+    "ga",
+    "nurunuru_to",
+    "suberu"
+  ],
+
+  optionsEN: [
+    "snake",
+    "topic marker",
+    "skin",
+    "subject marker",
+    "slipperily / slickly",
+    "to slide / to be slippery"
+  ],
+
+  correct: "ぬるぬると",
+
+  choiceAudio: {
+    options: [
+      "audio/sentences/hebi.wav",
+      "audio/sentences/wa.wav",
+      "audio/sentences/hada.wav",
+      "audio/sentences/ga.wav",
+      "audio/sentences/nurunuru_to.wav",
+      "audio/sentences/suberu.wav"
+    ]
+  },
+
+  meaningAudio: [
+    "audio/sentences/hebi.wav",
+    "audio/sentences/wa.wav",
+    "audio/sentences/hada.wav",
+    "audio/sentences/ga.wav",
+    "audio/sentences/nurunuru_to.wav",
+    "audio/sentences/suberu.wav"
+  ],
+
+  chunks: [
+    {
+      romaji: "hebi",
+      hiragana: "へび",
+      meaning: "snake",
+      audio: {
+        daughter: "audio/sentences/hebi.wav",
+        me: "audio/sentences/hebi.wav"
+      }
+    },
+    {
+      romaji: "wa",
+      hiragana: "は",
+      meaning: "topic marker",
+      audio: {
+        daughter: "audio/sentences/wa.wav",
+        me: "audio/sentences/wa.wav"
+      }
+    },
+    {
+      romaji: "hada",
+      hiragana: "はだ",
+      meaning: "skin",
+      audio: {
+        daughter: "audio/sentences/hada.wav",
+        me: "audio/sentences/hada.wav"
+      }
+    },
+    {
+      romaji: "ga",
+      hiragana: "が",
+      meaning: "subject marker",
+      audio: {
+        daughter: "audio/sentences/ga.wav",
+        me: "audio/sentences/ga.wav"
+      }
+    },
+    {
+      romaji: "nurunuru_to",
+      hiragana: "ぬるぬると",
+      meaning: "slipperily / slickly",
+      audio: {
+        daughter: "audio/sentences/nurunuru_to.wav",
+        me: "audio/sentences/nurunuru_to.wav"
+      }
+    },
+    {
+      romaji: "suberu",
+      hiragana: "すべる",
+      meaning: "to slide / to be slippery",
+      audio: {
+        daughter: "audio/sentences/suberu.wav",
+        me: "audio/sentences/suberu.wav"
+      }
+    }
+  ]
+},
+
 
 
 
