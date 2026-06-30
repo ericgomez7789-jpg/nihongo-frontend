@@ -12430,6 +12430,11 @@ const level3Sentences = [
     }
   ]
 },
+
+
+
+
+
 {
   id: "l3-10",
   meaning: "I wanted to calm down slowly, however my phone kept ringing.",
@@ -12505,6 +12510,11 @@ const level3Sentences = [
     }
   ]
 },
+
+
+
+
+
 {
   id: "l3-11",
   meaning: "It was scorching hot, so I opened the window.",
@@ -14469,6 +14479,21 @@ id: "l3-35",
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
 id: "l3-36",
   meaning: "How should I fix it?",
@@ -14583,6 +14608,21 @@ id: "l3-37",
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
 id: "l3-38",
   meaning: "How did you solve that problem?",
@@ -14655,6 +14695,21 @@ id: "l3-38",
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
 id: "l3-39",
   meaning: "How should I write it?",
@@ -14763,6 +14818,21 @@ id: "l3-40",
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
 id: "l3-41",
   meaning: "What should I do?",
@@ -14817,6 +14887,25 @@ id: "l3-41",
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
 id: "l3-42",
   meaning: "How should I answer?",
@@ -14871,23 +14960,200 @@ id: "l3-42",
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
-id: "l3-43",
-  meaning: "What should I do?",
+  id: "l3-43",
+  meaning: "I like quiet mornings, whereas my daughter prefers energetic ones.",
+  level: 3,
+
+  options: ["だから", "しかし", "のに", "それで"],
+  optionsRomaji: ["dakara", "shikashi", "noni", "sorede"],
+  optionsEN: ["so / therefore", "however / whereas", "even though", "because of that"],
+
+  correct: "しかし",
+
+  choiceAudio: {
+    options: [
+      "audio/sentences/dakara.wav",
+      "audio/sentences/shikashi.wav",
+      "audio/sentences/noni.wav",
+      "audio/sentences/sorede.wav"
+    ]
+  },
+
+  meaningAudio: [
+    "audio/sentences/dakara.wav",
+    "audio/sentences/shikashi.wav",
+    "audio/sentences/noni.wav",
+    "audio/sentences/sorede.wav"
+  ],
+
+  chunks: [
+    {
+      hiragana: "わたし",
+      romaji: "watashi",
+      meaning: "I",
+      audio: { daughter: "audio/sentences/watashi.wav", me: "audio/sentences/watashi.wav" }
+    },
+    {
+      hiragana: "は",
+      romaji: "wa",
+      meaning: "topic marker",
+      audio: { daughter: "audio/sentences/wa.wav", me: "audio/sentences/wa.wav" }
+    },
+
+    // ⭐ split しずかな → しずか + な
+    {
+      hiragana: "しずか",
+      romaji: "shizuka",
+      meaning: "quiet",
+      audio: { daughter: "audio/sentences/shizuka.wav", me: "audio/sentences/shizuka.wav" }
+    },
+    {
+      hiragana: "な",
+      romaji: "na",
+      meaning: "adjectival な",
+      audio: { daughter: "audio/sentences/na.wav", me: "audio/sentences/na.wav" }
+    },
+
+    {
+      hiragana: "あさ",
+      romaji: "asa",
+      meaning: "morning",
+      audio: { daughter: "audio/sentences/asa.wav", me: "audio/sentences/asa.wav" }
+    },
+    {
+      hiragana: "が",
+      romaji: "ga",
+      meaning: "subject marker",
+      audio: { daughter: "audio/sentences/ga.wav", me: "audio/sentences/ga.wav" }
+    },
+
+    // ⭐ split すきです → すき + です
+    {
+      hiragana: "すき",
+      romaji: "suki",
+      meaning: "like",
+      audio: { daughter: "audio/sentences/suki.wav", me: "audio/sentences/suki.wav" }
+    },
+    {
+      hiragana: "です",
+      romaji: "desu",
+      meaning: "polite ending",
+      audio: { daughter: "audio/sentences/desu.wav", me: "audio/sentences/desu.wav" }
+    },
+
+    // ⭐ conjunction (whereas)
+    {
+      hiragana: "しかし",
+      romaji: "shikashi",
+      meaning: "however / whereas",
+      audio: { daughter: "audio/sentences/shikashi.wav", me: "audio/sentences/shikashi.wav" }
+    },
+
+    {
+      hiragana: "むすめ",
+      romaji: "musume",
+      meaning: "daughter",
+      audio: { daughter: "audio/sentences/musume.wav", me: "audio/sentences/musume.wav" }
+    },
+    {
+      hiragana: "は",
+      romaji: "wa",
+      meaning: "topic marker",
+      audio: { daughter: "audio/sentences/wa.wav", me: "audio/sentences/wa.wav" }
+    },
+
+    // ⭐ split にぎやかな → にぎやか + な
+    {
+      hiragana: "にぎやか",
+      romaji: "nigiyaka",
+      meaning: "energetic / lively",
+      audio: { daughter: "audio/sentences/nigiyaka.wav", me: "audio/sentences/nigiyaka.wav" }
+    },
+    {
+      hiragana: "な",
+      romaji: "na",
+      meaning: "adjectival な",
+      audio: { daughter: "audio/sentences/na.wav", me: "audio/sentences/na.wav" }
+    },
+
+    {
+      hiragana: "あさ",
+      romaji: "asa",
+      meaning: "morning",
+      audio: { daughter: "audio/sentences/asa.wav", me: "audio/sentences/asa.wav" }
+    },
+    {
+      hiragana: "が",
+      romaji: "ga",
+      meaning: "subject marker",
+      audio: { daughter: "audio/sentences/ga.wav", me: "audio/sentences/ga.wav" }
+    },
+
+    // ⭐ split すきです → すき + です (second clause)
+    {
+      hiragana: "すき",
+      romaji: "suki",
+      meaning: "likes",
+      audio: { daughter: "audio/sentences/suki.wav", me: "audio/sentences/suki.wav" }
+    },
+    {
+      hiragana: "です",
+      romaji: "desu",
+      meaning: "polite ending",
+      audio: { daughter: "audio/sentences/desu.wav", me: "audio/sentences/desu.wav" }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l3-44",
+  meaning: "How do I do this homework?",
   level: 3,
 
   options: ["どう", "どうやって", "どのように", "どういうふうに"],
-  optionsRomaji: ["dou", "douyatte", "donoyouni", "douiufuuni"],
-  optionsEN: ["how / what should I do", "by what method", "in what manner", "in what way"],
+  optionsRomaji: ["dou", "douyatte", "donoyouni", "douiu fuuni"],
+  optionsEN: [
+    "how (general)",
+    "how / by what method",
+    "in what way / how",
+    "how / in what manner"
+  ],
 
-  correct: "どう",
+  // ⭐ correct: どうやって is the natural choice for “How do I do this?”
+  correct: "どうやって",
 
   choiceAudio: {
     options: [
       "audio/sentences/dou.wav",
       "audio/sentences/douyatte.wav",
       "audio/sentences/donoyouni.wav",
-      "audio/sentences/douiufuuni.wav"
+      "audio/sentences/douiu_fuuni.wav"
     ]
   },
 
@@ -14895,21 +15161,314 @@ id: "l3-43",
     "audio/sentences/dou.wav",
     "audio/sentences/douyatte.wav",
     "audio/sentences/donoyouni.wav",
-    "audio/sentences/douiufuuni.wav"
+    "audio/sentences/douiu_fuuni.wav"
   ],
 
   chunks: [
     {
+      hiragana: "この",
+      romaji: "kono",
+      meaning: "this",
+      audio: { daughter: "audio/sentences/kono.wav", me: "audio/sentences/kono.wav" }
+    },
+    {
+      hiragana: "しゅくだい",
+      romaji: "shukudai",
+      meaning: "homework",
+      audio: { daughter: "audio/sentences/shukudai.wav", me: "audio/sentences/shukudai.wav" }
+    },
+    {
+      hiragana: "を",
+      romaji: "wo",
+      meaning: "object marker",
+      audio: { daughter: "audio/sentences/wo.wav", me: "audio/sentences/wo.wav" }
+    },
+
+    // ⭐ conjunction (method question)
+    {
+      hiragana: "どうやって",
+      romaji: "douyatte",
+      meaning: "how / by what method",
+      audio: { daughter: "audio/sentences/douyatte.wav", me: "audio/sentences/douyatte.wav" }
+    },
+
+    {
+      hiragana: "やる",
+      romaji: "yaru",
+      meaning: "to do",
+      audio: { daughter: "audio/sentences/yaru.wav", me: "audio/sentences/yaru.wav" }
+    },
+    {
+      hiragana: "の",
+      romaji: "no",
+      meaning: "explanatory の",
+      audio: { daughter: "audio/sentences/no.wav", me: "audio/sentences/no.wav" }
+    },
+    {
+      hiragana: "？",
+      romaji: "",
+      meaning: "question mark",
+      audio: { daughter: "audio/sentences/question.wav", me: "audio/sentences/question.wav" }
+    }
+  ]
+},
+
+
+
+
+
+
+{
+  id: "l3-45",
+  meaning: "How should I organize my desk?",
+  level: 3,
+
+  options: ["どう", "どうやって", "どのように", "どういうふうに"],
+  optionsRomaji: ["dou", "douyatte", "donoyouni", "douiu fuuni"],
+  optionsEN: [
+    "how (general)",
+    "how / by what method",
+    "in what way / how",
+    "how / in what manner"
+  ],
+
+  correct: "どのように",
+
+  choiceAudio: {
+    options: [
+      "audio/sentences/dou.wav",
+      "audio/sentences/douyatte.wav",
+      "audio/sentences/donoyouni.wav",
+      "audio/sentences/douiu_fuuni.wav"
+    ]
+  },
+
+  meaningAudio: [
+    "audio/sentences/dou.wav",
+    "audio/sentences/douyatte.wav",
+    "audio/sentences/donoyouni.wav",
+    "audio/sentences/douiu_fuuni.wav"
+  ],
+
+  chunks: [
+    {
+      hiragana: "つくえ",
+      romaji: "tsukue",
+      meaning: "desk",
+      audio: { daughter: "audio/sentences/tsukue.wav", me: "audio/sentences/tsukue.wav" }
+    },
+    {
+      hiragana: "を",
+      romaji: "wo",
+      meaning: "object marker",
+      audio: { daughter: "audio/sentences/wo.wav", me: "audio/sentences/wo.wav" }
+    },
+
+    // ⭐ conjunction (method / manner)
+    {
+      hiragana: "どのように",
+      romaji: "donoyouni",
+      meaning: "in what way / how",
+      audio: { daughter: "audio/sentences/donoyouni.wav", me: "audio/sentences/donoyouni.wav" }
+    },
+
+    // ⭐ replaced: ととのえる (clean up / organize neatly)
+    {
+      hiragana: "ととのえる",
+      romaji: "totonoeru",
+      meaning: "to organize / to put in order",
+      audio: { daughter: "audio/sentences/totonoeru.wav", me: "audio/sentences/totonoeru.wav" }
+    },
+
+    {
+      hiragana: "の",
+      romaji: "no",
+      meaning: "explanatory の",
+      audio: { daughter: "audio/sentences/no.wav", me: "audio/sentences/no.wav" }
+    },
+    {
+      hiragana: "？",
+      romaji: "",
+      meaning: "question mark",
+      audio: { daughter: "audio/sentences/question.wav", me: "audio/sentences/question.wav" }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+{
+  id: "l3-46",
+  meaning: "How should I fold these clothes?",
+  level: 3,
+
+  options: ["どう", "どうやって", "どのように", "どういうふうに"],
+  optionsRomaji: ["dou", "douyatte", "donoyouni", "douiu fuuni"],
+  optionsEN: [
+    "how (general)",
+    "how / by what method",
+    "in what way / how",
+    "how / in what manner"
+  ],
+
+  // ⭐ correct: どういうふうに fits “in what manner should I fold…?”
+  correct: "どういうふうに",
+
+  choiceAudio: {
+    options: [
+      "audio/sentences/dou.wav",
+      "audio/sentences/douyatte.wav",
+      "audio/sentences/donoyouni.wav",
+      "audio/sentences/douiu_fuuni.wav"
+    ]
+  },
+
+  meaningAudio: [
+    "audio/sentences/dou.wav",
+    "audio/sentences/douyatte.wav",
+    "audio/sentences/donoyouni.wav",
+    "audio/sentences/douiu_fuuni.wav"
+  ],
+
+  chunks: [
+    {
+      hiragana: "この",
+      romaji: "kono",
+      meaning: "these",
+      audio: { daughter: "audio/sentences/kono.wav", me: "audio/sentences/kono.wav" }
+    },
+    {
+      hiragana: "ふく",
+      romaji: "fuku",
+      meaning: "clothes",
+      audio: { daughter: "audio/sentences/fuku.wav", me: "audio/sentences/fuku.wav" }
+    },
+    {
+      hiragana: "を",
+      romaji: "wo",
+      meaning: "object marker",
+      audio: { daughter: "audio/sentences/wo.wav", me: "audio/sentences/wo.wav" }
+    },
+
+    // ⭐ conjunction (manner / style)
+    {
+      hiragana: "どういうふうに",
+      romaji: "douiu fuuni",
+      meaning: "in what manner / how",
+      audio: { daughter: "audio/sentences/douiu_fuuni.wav", me: "audio/sentences/douiu_fuuni.wav" }
+    },
+
+    {
+      hiragana: "たたむ",
+      romaji: "tatamu",
+      meaning: "to fold",
+      audio: { daughter: "audio/sentences/tatamu.wav", me: "audio/sentences/tatamu.wav" }
+    },
+    {
+      hiragana: "の",
+      romaji: "no",
+      meaning: "explanatory の",
+      audio: { daughter: "audio/sentences/no.wav", me: "audio/sentences/no.wav" }
+    },
+    {
+      hiragana: "？",
+      romaji: "",
+      meaning: "question mark",
+      audio: { daughter: "audio/sentences/question.wav", me: "audio/sentences/question.wav" }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l3-47",
+  meaning: "How should I speak to my boss?",
+  level: 3,
+
+  options: ["どう", "どうやって", "どのように", "どう話せばいいんですか"],
+  optionsRomaji: ["dou", "douyatte", "donoyouni", "dou hanaseba ii n desuka"],
+  optionsEN: [
+    "how (general)",
+    "how / by what method",
+    "in what way / how",
+    "how should I speak?"
+  ],
+
+  // ⭐ correct (as you requested)
+  correct: "どう話せばいいんですか",
+
+  choiceAudio: {
+    options: [
+      "audio/sentences/dou.wav",
+      "audio/sentences/douyatte.wav",
+      "audio/sentences/donoyouni.wav",
+      "audio/sentences/dou_hanaseba_ii_n_desuka.wav"
+    ]
+  },
+
+  meaningAudio: [
+    "audio/sentences/dou.wav",
+    "audio/sentences/douyatte.wav",
+    "audio/sentences/donoyouni.wav",
+    "audio/sentences/dou_hanaseba_ii_n_desuka.wav"
+  ],
+
+  chunks: [
+    {
+      hiragana: "わたし",
+      romaji: "watashi",
+      meaning: "I",
+      audio: { daughter: "audio/sentences/watashi.wav", me: "audio/sentences/watashi.wav" }
+    },
+    {
+      hiragana: "は",
+      romaji: "wa",
+      meaning: "topic marker",
+      audio: { daughter: "audio/sentences/wa.wav", me: "audio/sentences/wa.wav" }
+    },
+    {
+      hiragana: "じょうし",
+      romaji: "joushi",
+      meaning: "boss",
+      audio: { daughter: "audio/sentences/joushi.wav", me: "audio/sentences/joushi.wav" }
+    },
+    {
+      hiragana: "に",
+      romaji: "ni",
+      meaning: "to",
+      audio: { daughter: "audio/sentences/ni.wav", me: "audio/sentences/ni.wav" }
+    },
+
+    // ⭐ requested conditional form
+    {
       hiragana: "どう",
       romaji: "dou",
-      meaning: "how / what should I do",
+      meaning: "how",
       audio: { daughter: "audio/sentences/dou.wav", me: "audio/sentences/dou.wav" }
     },
     {
-      hiragana: "すれば",
-      romaji: "sureba",
-      meaning: "if I do",
-      audio: { daughter: "audio/sentences/sureba.wav", me: "audio/sentences/sureba.wav" }
+      hiragana: "はなせば",
+      romaji: "hanaseba",
+      meaning: "if I speak",
+      audio: { daughter: "audio/sentences/hanaseba.wav", me: "audio/sentences/hanaseba.wav" }
     },
     {
       hiragana: "いい",
@@ -14918,19 +15477,207 @@ id: "l3-43",
       audio: { daughter: "audio/sentences/ii.wav", me: "audio/sentences/ii.wav" }
     },
     {
-      hiragana: "ん",
-      romaji: "n",
-      meaning: "explanatory",
-      audio: { daughter: "audio/sentences/n.wav", me: "audio/sentences/n.wav" }
+      hiragana: "んですか",
+      romaji: "n desuka",
+      meaning: "is it?",
+      audio: { daughter: "audio/sentences/ndesuka.wav", me: "audio/sentences/ndesuka.wav" }
     },
     {
-      hiragana: "ですか",
-      romaji: "desuka",
-      meaning: "polite question",
-      audio: { daughter: "audio/sentences/desuka.wav", me: "audio/sentences/desuka.wav" }
+      hiragana: "？",
+      romaji: "",
+      meaning: "question mark",
+      audio: { daughter: "audio/sentences/question.wav", me: "audio/sentences/question.wav" }
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l3-48",
+  meaning: "Anyway, I need to finish this report.",
+  level: 3,
+
+  options: ["どう", "どうやって", "どのように", "どういうふうに"],
+  optionsRomaji: ["dou", "douyatte", "donoyouni", "douiu fuuni"],
+  optionsEN: [
+    "how (general)",
+    "how / by what method",
+    "in what way / how",
+    "in what manner"
+  ],
+
+  correct: "とにかく",
+
+  choiceAudio: {
+    options: [
+      "audio/sentences/shikashi.wav",
+      "audio/sentences/sorede.wav",
+      "audio/sentences/tonikaku.wav",
+      "audio/sentences/dakara.wav"
+    ]
+  },
+
+  meaningAudio: [
+    "audio/sentences/shikashi.wav",
+    "audio/sentences/sorede.wav",
+    "audio/sentences/tonikaku.wav",
+    "audio/sentences/dakara.wav"
+  ],
+
+  chunks: [
+    {
+      hiragana: "とにかく",
+      romaji: "tonikaku",
+      meaning: "anyway / in any case",
+      audio: { daughter: "audio/sentences/tonikaku.wav", me: "audio/sentences/tonikaku.wav" }
+    },
+    {
+      hiragana: "この",
+      romaji: "kono",
+      meaning: "this",
+      audio: { daughter: "audio/sentences/kono.wav", me: "audio/sentences/kono.wav" }
+    },
+    {
+      hiragana: "ほうこく",
+      romaji: "houkoku",
+      meaning: "report",
+      audio: { daughter: "audio/sentences/houkoku.wav", me: "audio/sentences/houkoku.wav" }
+    },
+    {
+      hiragana: "を",
+      romaji: "wo",
+      meaning: "object marker",
+      audio: { daughter: "audio/sentences/wo.wav", me: "audio/sentences/wo.wav" }
+    },
+    {
+      hiragana: "おわらせる",
+      romaji: "owaraseru",
+      meaning: "to finish",
+      audio: { daughter: "audio/sentences/owaraseru.wav", me: "audio/sentences/owaraseru.wav" }
+    },
+    {
+      hiragana: "ひつよう",
+      romaji: "hitsuyou",
+      meaning: "necessary / need to",
+      audio: { daughter: "audio/sentences/hitsuyou.wav", me: "audio/sentences/hitsuyou.wav" }
+    },
+    {
+      hiragana: "が",
+      romaji: "ga",
+      meaning: "subject marker",
+      audio: { daughter: "audio/sentences/ga.wav", me: "audio/sentences/ga.wav" }
+    },
+    {
+      hiragana: "ある",
+      romaji: "aru",
+      meaning: "to exist / to have",
+      audio: { daughter: "audio/sentences/aru.wav", me: "audio/sentences/aru.wav" }
+    },
+    {
+      hiragana: "。",
+      romaji: "",
+      meaning: "period",
+      audio: { daughter: "audio/sentences/period.wav", me: "audio/sentences/period.wav" }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l3-49",
+  meaning: "I prefer playing rather than studying.",
+  level: 3,
+
+  options: ["しかし", "それで", "よりも", "むしろ"],
+  optionsRomaji: ["shikashi", "sorede", "yorimo", "mushiro"],
+  optionsEN: [
+    "however",
+    "so / because of that",
+    "rather than / more than",
+    "instead / rather"
+  ],
+
+  // ⭐ correct: よりも + むしろ
+  correct: "よりも",
+
+  choiceAudio: {
+    options: [
+      "audio/sentences/shikashi.wav",
+      "audio/sentences/sorede.wav",
+      "audio/sentences/yorimo.wav",
+      "audio/sentences/mushiro.wav"
+    ]
+  },
+
+  meaningAudio: [
+      "audio/sentences/shikashi.wav",
+      "audio/sentences/sorede.wav",
+      "audio/sentences/yorimo.wav",
+      "audio/sentences/mushiro.wav"
+  ],
+
+  chunks: [
+    {
+      hiragana: "まなぶ",
+      romaji: "manabu",
+      meaning: "to study / to learn",
+      audio: { daughter: "audio/sentences/manabu.wav", me: "audio/sentences/manabu.wav" }
+    },
+    {
+      hiragana: "よりも",
+      romaji: "yorimo",
+      meaning: "rather than / more than",
+      audio: { daughter: "audio/sentences/yorimo.wav", me: "audio/sentences/yorimo.wav" }
+    },
+    {
+      hiragana: "むしろ",
+      romaji: "mushiro",
+      meaning: "instead / rather",
+      audio: { daughter: "audio/sentences/mushiro.wav", me: "audio/sentences/mushiro.wav" }
+    },
+    {
+      hiragana: "あそびたい",
+      romaji: "asobitai",
+      meaning: "want to play",
+      audio: { daughter: "audio/sentences/asobitai.wav", me: "audio/sentences/asobitai.wav" }
+    },
+    {
+      hiragana: "。",
+      romaji: "",
+      meaning: "period",
+      audio: { daughter: "audio/sentences/period.wav", me: "audio/sentences/period.wav" }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
