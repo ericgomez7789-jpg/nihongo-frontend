@@ -4170,6 +4170,16 @@ const level2Sentences = [
       }
     ]
   },
+
+
+
+
+
+
+
+
+
+
   {
     id: "l2-2",
   meaning: "The rain falls gently.",
@@ -4224,6 +4234,16 @@ const level2Sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
 {
   id: "l2-3",
   meaning: "Snow flutters down.",
@@ -4287,6 +4307,16 @@ const level2Sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
 {
   id: "l2-4",
  meaning: "People bustle noisily.",
@@ -4341,6 +4371,16 @@ const level2Sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
 {
   id: "l2-5",
   meaning: "Birds chirp cheerfully.",
@@ -4395,6 +4435,16 @@ const level2Sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
 {
   id: "l2-6",
   meaning: "Thunder rumbles.",
@@ -4449,6 +4499,16 @@ const level2Sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
 {
   id: "l2-7",
   meaning: "Morning mist billows upward.",
@@ -4503,19 +4563,29 @@ const level2Sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
 {
   id: "l2-8",
   meaning: "Waves splash up at the shoreline.",
   level: 2,
 
-  options: ["なみうちぎわに", "なみが", "ばしゃばしゃと", "はねあげる"],
-  optionsRomaji: ["namiuchikiwa ni", "nami ga", "bashabasha to", "haneageru"],
+  options: ["なみうちぎわでは", "なみが", "ばしゃばしゃと", "はねあげる"],
+  optionsRomaji: ["namiuchikiwa dewa", "nami ga", "bashabasha to", "haneageru"],
   optionsEN: ["at the shoreline", "waves", "splashing", "to splash up"],
   correct: "ばしゃばしゃと",
 
   choiceAudio: {
     options: [
-      "audio/sentences/namiuchikiwa_ni.wav",
+      "audio/sentences/namiuchikiwa.wav",
+      "audio/sentences/dewa.wav",
       "audio/sentences/nami_ga.wav",
       "audio/sentences/bashabasha_to.wav",
       "audio/sentences/haneagemasu.wav"
@@ -4523,7 +4593,8 @@ const level2Sentences = [
   },
 
   meaningAudio: [
-    "audio/sentences/namiuchikiwa_ni.wav",
+    "audio/sentences/namiuchikiwa.wav",
+    "audio/sentences/dewa.wav",
     "audio/sentences/nami_ga.wav",
     "audio/sentences/bashabasha_to.wav",
     "audio/sentences/haneagemasu.wav"
@@ -4531,12 +4602,21 @@ const level2Sentences = [
 
   chunks: [
     {
-      romaji: "namiuchikiwa ni",
-      hiragana: "なみうちぎわに",
-      meaning: "at the shoreline",
+      romaji: "namiuchikiwa",
+      hiragana: "なみうちぎわ",
+      meaning: "shoreline",
       audio: {
-        daughter: "audio/sentences/namiuchikiwa_ni.wav",
-        me: "audio/sentences/namiuchikiwa_ni.wav"
+        daughter: "audio/sentences/namiuchikiwa.wav",
+        me: "audio/sentences/namiuchikiwa.wav"
+      }
+    },
+    {
+      romaji: "dewa",
+      hiragana: "では",
+      meaning: "at / on",
+      audio: {
+        daughter: "audio/sentences/dewa.wav",
+        me: "audio/sentences/dewa.wav"
       }
     },
     {
@@ -4568,20 +4648,30 @@ const level2Sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
 {
   id: "l2-9",
-  meaning: "The clouds of the setting sun sparkle.",
+  meaning: "At sunset, the clouds sparkle.",
   level: 2,
 
-  options: ["しずむひ", "のくもは", "きらきらと", "かがやきます"],
-  optionsRomaji: ["shizumu hi", "no kumo wa", "kirakira to", "kagayakimasu"],
-  optionsEN: ["setting sun", "the clouds", "sparkling", "shine / sparkle"],
+  options: ["しずむひでは", "くもが", "きらきらと", "かがやきます"],
+  optionsRomaji: ["shizumu hi dewa", "kumo ga", "kirakira to", "kagayakimasu"],
+  optionsEN: ["at sunset", "clouds", "sparkling", "shine / sparkle"],
   correct: "きらきらと",
 
   choiceAudio: {
     options: [
       "audio/sentences/shizumu_hi.wav",
-      "audio/sentences/no_kumo_ga.wav",
+      "audio/sentences/dewa.wav",
+      "audio/sentences/kumo_ga.wav",
       "audio/sentences/kirakira_to.wav",
       "audio/sentences/kagayakimasu.wav"
     ]
@@ -4589,7 +4679,8 @@ const level2Sentences = [
 
   meaningAudio: [
     "audio/sentences/shizumu_hi.wav",
-    "audio/sentences/no_kumo_ga.wav",
+    "audio/sentences/dewa.wav",
+    "audio/sentences/kumo_ga.wav",
     "audio/sentences/kirakira_to.wav",
     "audio/sentences/kagayakimasu.wav"
   ],
@@ -4598,19 +4689,28 @@ const level2Sentences = [
     {
       romaji: "shizumu hi",
       hiragana: "しずむひ",
-      meaning: "setting sun",
+      meaning: "setting sun / sunset",
       audio: {
         daughter: "audio/sentences/shizumu_hi.wav",
         me: "audio/sentences/shizumu_hi.wav"
       }
     },
     {
-      romaji: "no kumo wa",
-      hiragana: "のくもは",
-      meaning: "the clouds (topic)",
+      romaji: "dewa",
+      hiragana: "では",
+      meaning: "at / during",
       audio: {
-        daughter: "audio/sentences/no_kumo_ga.wav",
-        me: "audio/sentences/no_kumo_ga.wav"
+        daughter: "audio/sentences/dewa.wav",
+        me: "audio/sentences/dewa.wav"
+      }
+    },
+    {
+      romaji: "kumo ga",
+      hiragana: "くもが",
+      meaning: "clouds (subject)",
+      audio: {
+        daughter: "audio/sentences/kumo_ga.wav",
+        me: "audio/sentences/kumo_ga.wav"
       }
     },
     {
@@ -4633,6 +4733,16 @@ const level2Sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
 {
   id: "l2-10",
   meaning: "Lightning flickers.",
@@ -4687,6 +4797,16 @@ const level2Sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
 {
   id: "l2-11",
 
@@ -9640,7 +9760,6 @@ const level2Sentences = [
 
 
 
-
 {
   id: "l2-54",
   meaning: "After swimming in the lake, the soaking wet swimsuit was dripping heavy drops of water.",
@@ -9648,7 +9767,7 @@ const level2Sentences = [
 
   options: [
     "みずうみ",
-    "には",
+    "では",
     "およいだ",
     "あと",
     "で",
@@ -9663,7 +9782,7 @@ const level2Sentences = [
 
   optionsRomaji: [
     "mizuumi",
-    "niwa",
+    "dewa",
     "oyoida",
     "ato",
     "de",
@@ -9678,7 +9797,7 @@ const level2Sentences = [
 
   optionsEN: [
     "lake",
-    "as for / in",
+    "in / at",
     "swam",
     "after",
     "at / in / by",
@@ -9696,7 +9815,7 @@ const level2Sentences = [
   choiceAudio: {
     options: [
       "audio/sentences/mizuumi.wav",
-      "audio/sentences/niwa.wav",
+      "audio/sentences/dewa.wav",
       "audio/sentences/oyoida.wav",
       "audio/sentences/ato.wav",
       "audio/sentences/de.wav",
@@ -9712,7 +9831,7 @@ const level2Sentences = [
 
   meaningAudio: [
     "audio/sentences/mizuumi.wav",
-    "audio/sentences/niwa.wav",
+    "audio/sentences/dewa.wav",
     "audio/sentences/oyoida.wav",
     "audio/sentences/ato.wav",
     "audio/sentences/de.wav",
@@ -9736,12 +9855,12 @@ const level2Sentences = [
       }
     },
     {
-      romaji: "niwa",
-      hiragana: "には",
-      meaning: "as for / in",
+      romaji: "dewa",
+      hiragana: "では",
+      meaning: "in / at",
       audio: {
-        daughter: "audio/sentences/niwa.wav",
-        me: "audio/sentences/niwa.wav"
+        daughter: "audio/sentences/dewa.wav",
+        me: "audio/sentences/dewa.wav"
       }
     },
     {
@@ -9848,6 +9967,7 @@ const level2Sentences = [
 
 
 {
+  id: "l2-55",
   meaning: "The rock’s surface feels smooth to the touch.",
   level: 2,
 
@@ -9898,6 +10018,15 @@ const level2Sentences = [
       }
     },
     {
+      romaji: "shita",
+      hiragana: "した",
+      meaning: "formed / made (grammatical linker)",
+      audio: {
+        daughter: "audio/sentences/shita.wav",
+        me: "audio/sentences/shita.wav"
+      }
+    },
+    {
       romaji: "tezawari",
       hiragana: "てざわり",
       meaning: "touch / feel",
@@ -9931,6 +10060,99 @@ const level2Sentences = [
 
 
 
+
+
+
+
+{
+  id: "l2-56",
+  meaning: "On the farm, the earthworm couldn’t stop wriggling.",
+  level: 2,
+
+  chunks: [
+    {
+      romaji: "noujou",
+      hiragana: "のうじょう",
+      meaning: "farm",
+      audio: {
+        daughter: "audio/sentences/noujou.wav",
+        me: "audio/sentences/noujou.wav"
+      }
+    },
+    {
+      romaji: "dewa",
+      hiragana: "では",
+      meaning: "at / on",
+      audio: {
+        daughter: "audio/sentences/dewa.wav",
+        me: "audio/sentences/dewa.wav"
+      }
+    },
+    {
+      romaji: "mimizu",
+      hiragana: "みみず",
+      meaning: "earthworm",
+      audio: {
+        daughter: "audio/sentences/mimizu.wav",
+        me: "audio/sentences/mimizu.wav"
+      }
+    },
+    {
+      romaji: "ga",
+      hiragana: "が",
+      meaning: "subject marker",
+      audio: {
+        daughter: "audio/sentences/ga.wav",
+        me: "audio/sentences/ga.wav"
+      }
+    },
+    {
+      romaji: "mozomozo_to",
+      hiragana: "もぞもぞと",
+      meaning: "squirming / wriggling",
+      audio: {
+        daughter: "audio/sentences/mozomozo_to.wav",
+        me: "audio/sentences/mozomozo_to.wav"
+      }
+    },
+    {
+      romaji: "ugoku",
+      hiragana: "うごく",
+      meaning: "to move",
+      audio: {
+        daughter: "audio/sentences/ugoku.wav",
+        me: "audio/sentences/ugoku.wav"
+      }
+    },
+    {
+      romaji: "no",
+      hiragana: "の",
+      meaning: "nominalizer",
+      audio: {
+        daughter: "audio/sentences/no.wav",
+        me: "audio/sentences/no.wav"
+      }
+    },
+    {
+      romaji: "wo",
+      hiragana: "を",
+      meaning: "object marker",
+      audio: {
+        daughter: "audio/sentences/wo.wav",
+        me: "audio/sentences/wo.wav"
+      }
+    },
+    {
+      romaji: "yamerarenakatta",
+      hiragana: "やめられなかった",
+      meaning: "could not stop",
+      audio: {
+        daughter: "audio/sentences/yamerarenakatta.wav",
+        me: "audio/sentences/yamerarenakatta.wav"
+      }
+    }
+  ]
+},
 
 
 
