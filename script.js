@@ -10641,7 +10641,6 @@ const level2Sentences = [
 
 
 
-
 {
   id: "l2-56",
   meaning: "On the farm, the earthworm wriggled.",
@@ -10649,21 +10648,39 @@ const level2Sentences = [
 
   chunks: [
     {
-      romaji: "noujou dewa",
-      hiragana: "のうじょうでは",
-      meaning: "on the farm",
+      romaji: "noujou",
+      hiragana: "のうじょう",
+      meaning: "farm",
       audio: {
-        daughter: "audio/sentences/noujou_dewa.wav",
-        me: "audio/sentences/noujou_dewa.wav"
+        daughter: "audio/sentences/noujou.wav",
+        me: "audio/sentences/noujou.wav"
       }
     },
     {
-      romaji: "mimizu ga",
-      hiragana: "みみずが",
-      meaning: "earthworm (subject)",
+      romaji: "dewa",
+      hiragana: "では",
+      meaning: "at / on",
       audio: {
-        daughter: "audio/sentences/mimizu_ga.wav",
-        me: "audio/sentences/mimizu_ga.wav"
+        daughter: "audio/sentences/dewa.wav",
+        me: "audio/sentences/dewa.wav"
+      }
+    },
+    {
+      romaji: "mimizu",
+      hiragana: "みみず",
+      meaning: "earthworm",
+      audio: {
+        daughter: "audio/sentences/mimizu.wav",
+        me: "audio/sentences/mimizu.wav"
+      }
+    },
+    {
+      romaji: "ga",
+      hiragana: "が",
+      meaning: "subject marker",
+      audio: {
+        daughter: "audio/sentences/ga.wav",
+        me: "audio/sentences/ga.wav"
       }
     },
     {
@@ -10676,17 +10693,25 @@ const level2Sentences = [
       }
     },
     {
-      romaji: "ugoku",
-      hiragana: "うごく",
-      meaning: "to move / to wriggle",
+      romaji: "ugoki",
+      hiragana: "うごき",
+      meaning: "movement / motion (noun form)",
       audio: {
-        daughter: "audio/sentences/ugoku.wav",
-        me: "audio/sentences/ugoku.wav"
+        daughter: "audio/sentences/ugoki.wav",
+        me: "audio/sentences/ugoki.wav"
+      }
+    },
+    {
+      romaji: "shimasu",
+      hiragana: "します",
+      meaning: "do",
+      audio: {
+        daughter: "audio/sentences/shimasu.wav",
+        me: "audio/sentences/shimasu.wav"
       }
     }
   ]
 },
-
 
 
 
