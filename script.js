@@ -10640,31 +10640,12 @@ const level2Sentences = [
 
 
 
-
 {
   id: "l2-56",
-  meaning: "On the farm, the earthworm wriggled.",
+  meaning: "The earthworm wriggled.",
   level: 2,
 
   chunks: [
-    {
-      romaji: "noujou",
-      hiragana: "のうじょう",
-      meaning: "farm",
-      audio: {
-        daughter: "audio/sentences/noujou.wav",
-        me: "audio/sentences/noujou.wav"
-      }
-    },
-    {
-      romaji: "dewa",
-      hiragana: "では",
-      meaning: "at / on",
-      audio: {
-        daughter: "audio/sentences/dewa.wav",
-        me: "audio/sentences/dewa.wav"
-      }
-    },
     {
       romaji: "mimizu",
       hiragana: "みみず",
@@ -10693,21 +10674,12 @@ const level2Sentences = [
       }
     },
     {
-      romaji: "ugoki",
-      hiragana: "うごき",
-      meaning: "movement / motion (noun form)",
+      romaji: "ugoku",
+      hiragana: "うごく",
+      meaning: "to move / to wriggle",
       audio: {
-        daughter: "audio/sentences/ugoki.wav",
-        me: "audio/sentences/ugoki.wav"
-      }
-    },
-    {
-      romaji: "shimasu",
-      hiragana: "します",
-      meaning: "do",
-      audio: {
-        daughter: "audio/sentences/shimasu.wav",
-        me: "audio/sentences/shimasu.wav"
+        daughter: "audio/sentences/ugoku.wav",
+        me: "audio/sentences/ugoku.wav"
       }
     }
   ]
