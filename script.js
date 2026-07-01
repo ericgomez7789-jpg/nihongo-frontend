@@ -5503,18 +5503,17 @@ const level2Sentences = [
 
 
 
-
 {
   id: "l2-17",
 
   meaning: "Flowers sprout and bloom in spring.",
   level: 2,
 
-  options: ["はる", "では", "はなが", "にょきにょきと", "さきます"],
-  optionsRomaji: ["haru", "dewa", "hana ga", "nyokinyoki to", "sakimasu"],
+  options: ["はる", "には", "はなが", "にょきにょきと", "さきます"],
+  optionsRomaji: ["haru", "niwa", "hana ga", "nyokinyoki to", "sakimasu"],
   optionsEN: [
     "spring",
-    "in / at",
+    "in / at (time)",
     "flowers (subject)",
     "sprouting up",
     "bloom"
@@ -5524,7 +5523,7 @@ const level2Sentences = [
   choiceAudio: {
     options: [
       "audio/sentences/haru.wav",
-      "audio/sentences/dewa.wav",
+      "audio/sentences/niwa.wav",
       "audio/sentences/hana_ga.wav",
       "audio/sentences/nyokinyoki_to.wav",
       "audio/sentences/sakimasu.wav"
@@ -5533,7 +5532,7 @@ const level2Sentences = [
 
   meaningAudio: [
     "audio/sentences/haru.wav",
-    "audio/sentences/dewa.wav",
+    "audio/sentences/niwa.wav",
     "audio/sentences/hana_ga.wav",
     "audio/sentences/nyokinyoki_to.wav",
     "audio/sentences/sakimasu.wav"
@@ -5550,12 +5549,12 @@ const level2Sentences = [
       }
     },
     {
-      romaji: "dewa",
-      hiragana: "では",
-      meaning: "in / at",
+      romaji: "niwa",
+      hiragana: "には",
+      meaning: "in spring",
       audio: {
-        daughter: "audio/sentences/dewa.wav",
-        me: "audio/sentences/dewa.wav"
+        daughter: "audio/sentences/niwa.wav",
+        me: "audio/sentences/niwa.wav"
       }
     },
     {
@@ -5587,7 +5586,6 @@ const level2Sentences = [
     }
   ]
 },
-
 
 
 
