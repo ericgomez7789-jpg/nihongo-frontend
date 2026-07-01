@@ -9092,7 +9092,6 @@ const level2Sentences = [
 
 
 
-
 {
   id: "l2-46",
   meaning: "As for the tree, when you touch its bark, it has a rough texture.",
@@ -9104,8 +9103,7 @@ const level2Sentences = [
     "が",
     "ふれると",
     "ざらざらと",
-    "てざわりが",
-    "する"
+    "てざわりがする"
   ],
 
   optionsRomaji: [
@@ -9114,8 +9112,7 @@ const level2Sentences = [
     "ga",
     "fureru to",
     "zarazara_to",
-    "tezawari ga",
-    "suru"
+    "tezawari ga suru"
   ],
 
   optionsEN: [
@@ -9124,8 +9121,7 @@ const level2Sentences = [
     "subject marker",
     "when (you) touch",
     "roughly / scratchily",
-    "texture / feel",
-    "to do / to have"
+    "has a texture / feels rough"
   ],
 
   correct: "ざらざらと",
@@ -9137,8 +9133,7 @@ const level2Sentences = [
       "audio/sentences/ga.wav",
       "audio/sentences/fureru_to.wav",
       "audio/sentences/zarazara_to.wav",
-      "audio/sentences/tezawari_ga.wav",
-      "audio/sentences/suru.wav"
+      "audio/sentences/tezawari_ga_suru.wav"
     ]
   },
 
@@ -9148,8 +9143,7 @@ const level2Sentences = [
     "audio/sentences/ga.wav",
     "audio/sentences/fureru_to.wav",
     "audio/sentences/zarazara_to.wav",
-    "audio/sentences/tezawari_ga.wav",
-    "audio/sentences/suru.wav"
+    "audio/sentences/tezawari_ga_suru.wav"
   ],
 
   chunks: [
@@ -9199,26 +9193,16 @@ const level2Sentences = [
       }
     },
     {
-      romaji: "tezawari ga",
-      hiragana: "てざわりが",
-      meaning: "texture / feel",
+      romaji: "tezawari ga suru",
+      hiragana: "てざわりがする",
+      meaning: "has a rough texture",
       audio: {
-        daughter: "audio/sentences/tezawari_ga.wav",
-        me: "audio/sentences/tezawari_ga.wav"
-      }
-    },
-    {
-      romaji: "suru",
-      hiragana: "する",
-      meaning: "to do / to have",
-      audio: {
-        daughter: "audio/sentences/suru.wav",
-        me: "audio/sentences/suru.wav"
+        daughter: "audio/sentences/tezawari_ga_suru.wav",
+        me: "audio/sentences/tezawari_ga_suru.wav"
       }
     }
   ]
 },
-
 
 
 
