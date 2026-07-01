@@ -9167,7 +9167,7 @@ const level2Sentences = [
 
   choiceAudio: {
     options: [
-      "audio/sentences/ki.wav",
+      "audio/sentences/ki_wa.wav",
       "audio/sentences/ki_no_juhi.wav",
       "audio/sentences/ga.wav",
       "audio/sentences/fureru_to.wav",
@@ -9177,7 +9177,7 @@ const level2Sentences = [
   },
 
   meaningAudio: [
-    "audio/sentences/ki.wav",
+    "audio/sentences/ki_wa.wav",
     "audio/sentences/ki_no_juhi.wav",
     "audio/sentences/ga.wav",
     "audio/sentences/fureru_to.wav",
@@ -9191,8 +9191,8 @@ const level2Sentences = [
       hiragana: "きは",
       meaning: "as for the tree",
       audio: {
-        daughter: "audio/sentences/ki.wav",
-        me: "audio/sentences/ki.wav"
+        daughter: "audio/sentences/ki_wa.wav",
+        me: "audio/sentences/ki_wa.wav"
       }
     },
     {
