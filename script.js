@@ -3086,6 +3086,49 @@ const sentences = [
 
 
 
+
+
+
+
+
+{
+  id: "l1-82",
+  meaning: "I am proud.",
+  level: 1,
+  chunks: [
+    {
+      romaji: "watashi wa",
+      hiragana: "わたしは",
+      meaning: "as for me / I",
+      audio: {
+        daughter: "audio/sentences/watashi_wa.wav",
+        me: "audio/sentences/watashi_wa.wav"
+      }
+    },
+    {
+      romaji: "hokorashii",
+      hiragana: "ほこらしい",
+      meaning: "proud",
+      audio: {
+        daughter: "audio/sentences/hokorashii.wav",
+        me: "audio/sentences/hokorashii.wav"
+      }
+    },
+    {
+      romaji: "desu",
+      hiragana: "です",
+      meaning: "polite ending",
+      audio: {
+        daughter: "audio/sentences/desu.wav",
+        me: "audio/sentences/desu.wav"
+      }
+    }
+  ]
+},
+
+
+
+
 ];
 
 // ⭐ ADD THIS PATCH RIGHT HERE
@@ -10606,10 +10649,9 @@ const level2Sentences = [
 
 
 
-
 {
   id: "l2-56",
-  meaning: "On the farm, the earthworm couldn’t stop wriggling.",
+  meaning: "On the farm, the earthworm wriggled.",
   level: 2,
 
   chunks: [
@@ -10659,17 +10701,16 @@ const level2Sentences = [
       }
     },
     {
-      romaji: "ugoku no wo yamerarenakatta",
-      hiragana: "うごくのをやめられなかった",
-      meaning: "could not stop moving",
+      romaji: "ugoku",
+      hiragana: "うごく",
+      meaning: "to move / to wriggle",
       audio: {
-        daughter: "audio/sentences/ugoku_no_wo_yamerarenakatta.wav",
-        me: "audio/sentences/ugoku_no_wo_yamerarenakatta.wav"
+        daughter: "audio/sentences/ugoku.wav",
+        me: "audio/sentences/ugoku.wav"
       }
     }
   ]
-}
-
+},
 
 
 
