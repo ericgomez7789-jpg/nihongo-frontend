@@ -5626,18 +5626,16 @@ const level2Sentences = [
 
 
 
-
 {
   id: "l2-19",
 
   meaning: "The water’s surface reflects smoothly.",
   level: 2,
 
-  options: ["みず", "には", "うわつらが", "つるつると", "うつります"],
-  optionsRomaji: ["mizu", "niwa", "uwatsura ga", "tsurutsuru to", "utsurimasu"],
+  options: ["みずには", "うわつらが", "つるつると", "うつります"],
+  optionsRomaji: ["mizu niwa", "uwatsura ga", "tsurutsuru to", "utsurimasu"],
   optionsEN: [
-    "water",
-    "on / in (topic)",
+    "on the water (topic)",
     "surface (subject)",
     "smoothly / glossy-smooth",
     "reflects"
@@ -5646,8 +5644,7 @@ const level2Sentences = [
 
   choiceAudio: {
     options: [
-      "audio/sentences/mizu.wav",
-      "audio/sentences/niwa.wav",
+      "audio/sentences/mizu_niwa.wav",
       "audio/sentences/uwatsura_ga.wav",
       "audio/sentences/tsurutsuru_to.wav",
       "audio/sentences/utsurimasu.wav"
@@ -5655,8 +5652,7 @@ const level2Sentences = [
   },
 
   meaningAudio: [
-    "audio/sentences/mizu.wav",
-    "audio/sentences/niwa.wav",
+    "audio/sentences/mizu_niwa.wav",
     "audio/sentences/uwatsura_ga.wav",
     "audio/sentences/tsurutsuru_to.wav",
     "audio/sentences/utsurimasu.wav"
@@ -5664,21 +5660,12 @@ const level2Sentences = [
 
   chunks: [
     {
-      romaji: "mizu",
-      hiragana: "みず",
-      meaning: "water",
+      romaji: "mizu niwa",
+      hiragana: "みずには",
+      meaning: "on the water (topic)",
       audio: {
-        daughter: "audio/sentences/mizu.wav",
-        me: "audio/sentences/mizu.wav"
-      }
-    },
-    {
-      romaji: "niwa",
-      hiragana: "には",
-      meaning: "on / in (topic)",
-      audio: {
-        daughter: "audio/sentences/niwa.wav",
-        me: "audio/sentences/niwa.wav"
+        daughter: "audio/sentences/mizu_niwa.wav",
+        me: "audio/sentences/mizu_niwa.wav"
       }
     },
     {
@@ -5710,7 +5697,6 @@ const level2Sentences = [
     }
   ]
 },
-
 
 
 
