@@ -10623,7 +10623,6 @@ const level2Sentences = [
 
 
 
-
 {
   id: "l2-56",
   meaning: "On the farm, the earthworm couldn’t stop wriggling.",
@@ -10667,7 +10666,7 @@ const level2Sentences = [
       }
     },
     {
-      romaji: "mozomozo_to",
+      romaji: "mozomozo to",
       hiragana: "もぞもぞと",
       meaning: "squirming / wriggling",
       audio: {
@@ -10676,44 +10675,16 @@ const level2Sentences = [
       }
     },
     {
-      romaji: "ugoku",
-      hiragana: "うごく",
-      meaning: "to move",
+      romaji: "ugoku no wo yamerarenakatta",
+      hiragana: "うごくのをやめられなかった",
+      meaning: "could not stop moving",
       audio: {
-        daughter: "audio/sentences/ugoku.wav",
-        me: "audio/sentences/ugoku.wav"
-      }
-    },
-    {
-      romaji: "no",
-      hiragana: "の",
-      meaning: "nominalizer",
-      audio: {
-        daughter: "audio/sentences/no.wav",
-        me: "audio/sentences/no.wav"
-      }
-    },
-    {
-      romaji: "wo",
-      hiragana: "を",
-      meaning: "object marker",
-      audio: {
-        daughter: "audio/sentences/wo.wav",
-        me: "audio/sentences/wo.wav"
-      }
-    },
-    {
-      romaji: "yamerarenakatta",
-      hiragana: "やめられなかった",
-      meaning: "could not stop",
-      audio: {
-        daughter: "audio/sentences/yamerarenakatta.wav",
-        me: "audio/sentences/yamerarenakatta.wav"
+        daughter: "audio/sentences/ugoku_no_wo_yamerarenakatta.wav",
+        me: "audio/sentences/ugoku_no_wo_yamerarenakatta.wav"
       }
     }
   ]
-},
-
+}
 
 
 
