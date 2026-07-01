@@ -10536,7 +10536,6 @@ const level2Sentences = [
 
 
 
-
 {
   id: "l2-55",
   meaning: "The rock’s surface feels smooth to the touch.",
@@ -10582,52 +10581,23 @@ const level2Sentences = [
     {
       romaji: "subesube_to",
       hiragana: "すべすべと",
-      meaning: "smooth",
+      meaning: "smoothly",
       audio: {
         daughter: "audio/sentences/subesube_to.wav",
         me: "audio/sentences/subesube_to.wav"
       }
     },
     {
-      romaji: "shita",
-      hiragana: "した",
-      meaning: "formed / made (grammatical linker)",
+      romaji: "tezawari ga suru",
+      hiragana: "てざわりがする",
+      meaning: "feels to the touch",
       audio: {
-        daughter: "audio/sentences/shita.wav",
-        me: "audio/sentences/shita.wav"
-      }
-    },
-    {
-      romaji: "tezawari",
-      hiragana: "てざわり",
-      meaning: "touch / feel",
-      audio: {
-        daughter: "audio/sentences/tezawari.wav",
-        me: "audio/sentences/tezawari.wav"
-      }
-    },
-    {
-      romaji: "ga",
-      hiragana: "が",
-      meaning: "subject marker",
-      audio: {
-        daughter: "audio/sentences/ga.wav",
-        me: "audio/sentences/ga.wav"
-      }
-    },
-    {
-      romaji: "suru",
-      hiragana: "する",
-      meaning: "to feel / to do",
-      audio: {
-        daughter: "audio/sentences/suru.wav",
-        me: "audio/sentences/suru.wav"
+        daughter: "audio/sentences/tezawari_ga_suru.wav",
+        me: "audio/sentences/tezawari_ga_suru.wav"
       }
     }
   ]
 },
-
-
 
 
 
