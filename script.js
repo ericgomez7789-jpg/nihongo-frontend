@@ -7540,7 +7540,6 @@ const level2Sentences = [
 
 
 
-
 {
   id: "l2-35",
   meaning: "A light breeze is gently blowing.",
@@ -7551,7 +7550,6 @@ const level2Sentences = [
     "かぜ",
     "が",
     "そよそよと",
-    
     "ふいて",
     "いる"
   ],
@@ -7561,7 +7559,6 @@ const level2Sentences = [
     "kaze",
     "ga",
     "soyosoyoto",
-    
     "fuite",
     "iru"
   ],
@@ -7571,7 +7568,6 @@ const level2Sentences = [
     "wind / breeze",
     "subject marker",
     "gently blowing",
-    
     "blowing",
     "is (progressive)"
   ],
@@ -7584,7 +7580,6 @@ const level2Sentences = [
       "audio/sentences/kaze.wav",
       "audio/sentences/ga.wav",
       "audio/sentences/soyosoyo_to.wav",
-      
       "audio/sentences/fuite.wav",
       "audio/sentences/iru.wav"
     ]
@@ -7595,7 +7590,6 @@ const level2Sentences = [
     "audio/sentences/kaze.wav",
     "audio/sentences/ga.wav",
     "audio/sentences/soyosoyo_to.wav",
-    
     "audio/sentences/fuite.wav",
     "audio/sentences/iru.wav"
   ],
@@ -7628,16 +7622,18 @@ const level2Sentences = [
         me: "audio/sentences/ga.wav"
       }
     },
+
+    /* ⭐ Onomatopoeia chunk — SILENT on Screen 1 */
     {
       romaji: "soyosoyo",
       hiragana: "そよそよ",
       meaning: "gently blowing",
       audio: {
-        daughter: "audio/sentences/soyosoyo_to.wav",
-        me: "audio/sentences/soyosoyo_to.wav"
+        daughter: "",
+        me: ""
       }
     },
-    
+
     {
       romaji: "fuite",
       hiragana: "ふいて",
