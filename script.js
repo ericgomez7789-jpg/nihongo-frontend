@@ -15746,6 +15746,405 @@ id: "l3-42",
 
 
 
+{
+  id: "l3-50",
+  meaning: "Yesterday was a tough experience, but I somehow got through it.",
+  level: 3,
+
+  options: ["しかし", "それで", "けれど", "ところが"],
+  optionsRomaji: ["shikashi", "sorede", "keredo", "tokoroga"],
+  optionsEN: [
+    "however",
+    "so / because of that",
+    "but / although",
+    "however / unexpectedly"
+  ],
+
+  // ⭐ correct: けれど (soft contrast)
+  correct: "けれど",
+
+  choiceAudio: {
+    options: [
+      "audio/sentences/shikashi.wav",
+      "audio/sentences/sorede.wav",
+      "audio/sentences/keredo.wav",
+      "audio/sentences/tokoroga.wav"
+    ]
+  },
+
+  meaningAudio: [
+    "audio/sentences/shikashi.wav",
+    "audio/sentences/sorede.wav",
+    "audio/sentences/keredo.wav",
+    "audio/sentences/tokoroga.wav"
+  ],
+
+  chunks: [
+    {
+      hiragana: "きのう",
+      romaji: "kinou",
+      meaning: "yesterday",
+      audio: { daughter: "audio/sentences/kinou.wav", me: "audio/sentences/kinou.wav" }
+    },
+    {
+      hiragana: "つらい",
+      romaji: "tsurai",
+      meaning: "tough / painful",
+      audio: { daughter: "audio/sentences/tsurai.wav", me: "audio/sentences/tsurai.wav" }
+    },
+    {
+      hiragana: "め",
+      romaji: "me",
+      meaning: "experience (eye → figurative)",
+      audio: { daughter: "audio/sentences/me.wav", me: "audio/sentences/me.wav" }
+    },
+    {
+      hiragana: "に",
+      romaji: "ni",
+      meaning: "particle (target)",
+      audio: { daughter: "audio/sentences/ni.wav", me: "audio/sentences/ni.wav" }
+    },
+    {
+      hiragana: "あった",
+      romaji: "atta",
+      meaning: "had / encountered",
+      audio: { daughter: "audio/sentences/atta.wav", me: "audio/sentences/atta.wav" }
+    },
+    {
+      hiragana: "けれど",
+      romaji: "keredo",
+      meaning: "but / although",
+      audio: { daughter: "audio/sentences/keredo.wav", me: "audio/sentences/keredo.wav" }
+    },
+    {
+      hiragana: "なんとか",
+      romaji: "nantoka",
+      meaning: "somehow",
+      audio: { daughter: "audio/sentences/nantoka.wav", me: "audio/sentences/nantoka.wav" }
+    },
+    {
+      hiragana: "へとへと",
+      romaji: "hetoheto",
+      meaning: "exhausted",
+      audio: { daughter: "audio/sentences/hetoheto.wav", me: "audio/sentences/hetoheto.wav" }
+    },
+    {
+      hiragana: "して",
+      romaji: "shite",
+      meaning: "doing",
+      audio: { daughter: "audio/sentences/shite.wav", me: "audio/sentences/shite.wav" }
+    },
+    {
+      hiragana: "のりきった",
+      romaji: "norikitta",
+      meaning: "pushed through / got through",
+      audio: { daughter: "audio/sentences/norikitta.wav", me: "audio/sentences/norikitta.wav" }
+    },
+    {
+      hiragana: "。",
+      romaji: "",
+      meaning: "period",
+      audio: { daughter: "audio/sentences/period.wav", me: "audio/sentences/period.wav" }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l3-51",
+  meaning: "When the dog looked at me, it got excited and started barking. So I said 'be quiet.'",
+  level: 3,
+
+  options: ["しかし", "そこで", "それで", "けれど"],
+  optionsRomaji: ["shikashi", "sokode", "sorede", "keredo"],
+  optionsEN: [
+    "however",
+    "so / therefore (I took action)",
+    "so / as a result",
+    "but / although"
+  ],
+
+  // ⭐ correct: それで (event → reaction)
+  correct: "それで",
+
+  choiceAudio: {
+    options: [
+      "audio/sentences/shikashi.wav",
+      "audio/sentences/sokode.wav",
+      "audio/sentences/sorede.wav",
+      "audio/sentences/keredo.wav"
+    ]
+  },
+
+  meaningAudio: [
+    "audio/sentences/shikashi.wav",
+    "audio/sentences/sokode.wav",
+    "audio/sentences/sorede.wav",
+    "audio/sentences/keredo.wav"
+  ],
+
+  chunks: [
+    {
+      hiragana: "いぬ",
+      romaji: "inu",
+      meaning: "dog",
+      audio: { daughter: "audio/sentences/inu.wav", me: "audio/sentences/inu.wav" }
+    },
+    {
+      hiragana: "が",
+      romaji: "ga",
+      meaning: "subject marker",
+      audio: { daughter: "audio/sentences/ga.wav", me: "audio/sentences/ga.wav" }
+    },
+    {
+      hiragana: "ぼく",
+      romaji: "boku",
+      meaning: "me / I",
+      audio: { daughter: "audio/sentences/boku.wav", me: "audio/sentences/boku.wav" }
+    },
+    {
+      hiragana: "を",
+      romaji: "wo",
+      meaning: "object marker",
+      audio: { daughter: "audio/sentences/wo.wav", me: "audio/sentences/wo.wav" }
+    },
+    {
+      hiragana: "みる",
+      romaji: "miru",
+      meaning: "to look",
+      audio: { daughter: "audio/sentences/miru.wav", me: "audio/sentences/miru.wav" }
+    },
+    {
+      hiragana: "と",
+      romaji: "to",
+      meaning: "when",
+      audio: { daughter: "audio/sentences/to.wav", me: "audio/sentences/to.wav" }
+    },
+    {
+      hiragana: "わくわく",
+      romaji: "wakuwaku",
+      meaning: "excited",
+      audio: { daughter: "audio/sentences/wakuwaku.wav", me: "audio/sentences/wakuwaku.wav" }
+    },
+    {
+      hiragana: "して",
+      romaji: "shite",
+      meaning: "doing",
+      audio: { daughter: "audio/sentences/shite.wav", me: "audio/sentences/shite.wav" }
+    },
+    {
+      hiragana: "ほえだした",
+      romaji: "hoedashita",
+      meaning: "started barking",
+      audio: { daughter: "audio/sentences/hoedashita.wav", me: "audio/sentences/hoedashita.wav" }
+    },
+    {
+      hiragana: "それで",
+      romaji: "sorede",
+      meaning: "so / as a result",
+      audio: { daughter: "audio/sentences/sorede.wav", me: "audio/sentences/sorede.wav" }
+    },
+    {
+      hiragana: "ぼく",
+      romaji: "boku",
+      meaning: "I",
+      audio: { daughter: "audio/sentences/boku.wav", me: "audio/sentences/boku.wav" }
+    },
+    {
+      hiragana: "は",
+      romaji: "wa",
+      meaning: "topic marker",
+      audio: { daughter: "audio/sentences/wa.wav", me: "audio/sentences/wa.wav" }
+    },
+    {
+      hiragana: "だまれ",
+      romaji: "damare",
+      meaning: "be quiet",
+      audio: { daughter: "audio/sentences/damare.wav", me: "audio/sentences/damare.wav" }
+    },
+    {
+      hiragana: "と",
+      romaji: "to",
+      meaning: "quotation marker",
+      audio: { daughter: "audio/sentences/to.wav", me: "audio/sentences/to.wav" }
+    },
+    {
+      hiragana: "いった",
+      romaji: "itta",
+      meaning: "said",
+      audio: { daughter: "audio/sentences/itta.wav", me: "audio/sentences/itta.wav" }
+    },
+    {
+      hiragana: "。",
+      romaji: "",
+      meaning: "period",
+      audio: { daughter: "audio/sentences/period.wav", me: "audio/sentences/period.wav" }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l3-52",
+  meaning: "My daughter was restlessly refusing to study. So I encouraged her.",
+  level: 3,
+
+  options: ["しかし", "だから", "それで", "けれど"],
+  optionsRomaji: ["shikashi", "dakara", "sorede", "keredo"],
+  optionsEN: [
+    "however",
+    "so / therefore",
+    "so / as a result",
+    "but / although"
+  ],
+
+  // ⭐ correct: だから (emotional cause → intentional supportive action)
+  correct: "だから",
+
+  choiceAudio: {
+    options: [
+      "audio/sentences/shikashi.wav",
+      "audio/sentences/dakara.wav",
+      "audio/sentences/sorede.wav",
+      "audio/sentences/keredo.wav"
+    ]
+  },
+
+  meaningAudio: [
+    "audio/sentences/shikashi.wav",
+    "audio/sentences/dakara.wav",
+    "audio/sentences/sorede.wav",
+    "audio/sentences/keredo.wav"
+  ],
+
+  chunks: [
+    {
+      hiragana: "むすめ",
+      romaji: "musume",
+      meaning: "daughter",
+      audio: { daughter: "audio/sentences/musume.wav", me: "audio/sentences/musume.wav" }
+    },
+    {
+      hiragana: "は",
+      romaji: "wa",
+      meaning: "topic marker",
+      audio: { daughter: "audio/sentences/wa.wav", me: "audio/sentences/wa.wav" }
+    },
+    {
+      hiragana: "まなぶ",
+      romaji: "manabu",
+      meaning: "to study / to learn",
+      audio: { daughter: "audio/sentences/manabu.wav", me: "audio/sentences/manabu.wav" }
+    },
+    {
+      hiragana: "の",
+      romaji: "no",
+      meaning: "nominalizer",
+      audio: { daughter: "audio/sentences/no.wav", me: "audio/sentences/no.wav" }
+    },
+    {
+      hiragana: "を",
+      romaji: "wo",
+      meaning: "object marker",
+      audio: { daughter: "audio/sentences/wo.wav", me: "audio/sentences/wo.wav" }
+    },
+    {
+      hiragana: "そわそわ",
+      romaji: "sowasowa",
+      meaning: "restlessly / fidgeting",
+      audio: { daughter: "audio/sentences/sowasowa.wav", me: "audio/sentences/sowasowa.wav" }
+    },
+    {
+      hiragana: "して",
+      romaji: "shite",
+      meaning: "doing",
+      audio: { daughter: "audio/sentences/shite.wav", me: "audio/sentences/shite.wav" }
+    },
+    {
+      hiragana: "ことわって",
+      romaji: "kotowatte",
+      meaning: "refusing",
+      audio: { daughter: "audio/sentences/kotowatte.wav", me: "audio/sentences/kotowatte.wav" }
+    },
+    {
+      hiragana: "いた",
+      romaji: "ita",
+      meaning: "was (progressive)",
+      audio: { daughter: "audio/sentences/ita.wav", me: "audio/sentences/ita.wav" }
+    },
+    {
+      hiragana: "だから",
+      romaji: "dakara",
+      meaning: "so / therefore",
+      audio: { daughter: "audio/sentences/dakara.wav", me: "audio/sentences/dakara.wav" }
+    },
+    {
+      hiragana: "むすめ",
+      romaji: "musume",
+      meaning: "daughter",
+      audio: { daughter: "audio/sentences/musume.wav", me: "audio/sentences/musume.wav" }
+    },
+    {
+      hiragana: "を",
+      romaji: "wo",
+      meaning: "object marker",
+      audio: { daughter: "audio/sentences/wo.wav", me: "audio/sentences/wo.wav" }
+    },
+    {
+      hiragana: "はげました",
+      romaji: "hagemashita",
+      meaning: "encouraged",
+      audio: { daughter: "audio/sentences/hagemashita.wav", me: "audio/sentences/hagemashita.wav" }
+    },
+    {
+      hiragana: "。",
+      romaji: "",
+      meaning: "period",
+      audio: { daughter: "audio/sentences/period.wav", me: "audio/sentences/period.wav" }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
