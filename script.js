@@ -4146,8 +4146,18 @@ function level1_screen2(sentence) {
    ⭐ LEVEL 2 — ISOLATED GLOBAL STATE
    (No sharing with Level 1 or any other level)
 ========================================================== */
+
+
+
+
+
+
 // ⭐ LEVEL 2 — MCQ sentences
 const level2Sentences = [
+
+
+
+
   {
     id: "l2-1",
     meaning: "The wind whistles and blows past.",
@@ -7538,6 +7548,13 @@ const level2Sentences = [
 
 
 
+
+
+
+
+
+
+
 {
   id: "l2-35",
   meaning: "A light breeze is gently blowing.",
@@ -7621,7 +7638,6 @@ const level2Sentences = [
       }
     },
 
-    /* ⭐ Onomatopoeia chunk — SILENT on Screen 1 */
     {
       romaji: "soyosoyo",
       hiragana: "そよそよ",
@@ -10535,66 +10551,118 @@ const level2Sentences = [
 
 
 
-
 {
   id: "l2-55",
   meaning: "The rock’s surface feels smooth to the touch.",
   level: 2,
+
+  options: [
+    "いわ",
+    "は",
+    "ひょうめん",
+    "が",
+    "すべすべと",
+    "てざわり",
+    "が",
+    "する"
+  ],
+
+  optionsRomaji: [
+    "iwa",
+    "wa",
+    "hyoumen",
+    "ga",
+    "subesube_to",
+    "tezawari",
+    "ga",
+    "suru"
+  ],
+
+  optionsEN: [
+    "rock",
+    "topic marker",
+    "surface",
+    "subject marker",
+    "smoothly",
+    "touch sensation",
+    "subject marker",
+    "to do / to feel"
+  ],
+
+  correct: "すべすべと",
+
+  choiceAudio: {
+    options: [
+      "audio/sentences/iwa.wav",
+      "audio/sentences/wa.wav",
+      "audio/sentences/hyoumen.wav",
+      "audio/sentences/ga.wav",
+      "audio/sentences/subesube_to.wav",
+      "audio/sentences/tezawari.wav",
+      "audio/sentences/ga.wav",
+      "audio/sentences/suru.wav"
+    ]
+  },
+
+  meaningAudio: [
+    "audio/sentences/iwa.wav",
+    "audio/sentences/wa.wav",
+    "audio/sentences/hyoumen.wav",
+    "audio/sentences/ga.wav",
+    "audio/sentences/subesube_to.wav",
+    "audio/sentences/tezawari.wav",
+    "audio/sentences/ga.wav",
+    "audio/sentences/suru.wav"
+  ],
 
   chunks: [
     {
       romaji: "iwa",
       hiragana: "いわ",
       meaning: "rock",
-      audio: {
-        daughter: "audio/sentences/iwa.wav",
-        me: "audio/sentences/iwa.wav"
-      }
+      audio: { daughter: "audio/sentences/iwa.wav", me: "audio/sentences/iwa.wav" }
     },
     {
       romaji: "wa",
       hiragana: "は",
       meaning: "topic marker",
-      audio: {
-        daughter: "audio/sentences/wa.wav",
-        me: "audio/sentences/wa.wav"
-      }
+      audio: { daughter: "audio/sentences/wa.wav", me: "audio/sentences/wa.wav" }
     },
     {
       romaji: "hyoumen",
       hiragana: "ひょうめん",
       meaning: "surface",
-      audio: {
-        daughter: "audio/sentences/hyoumen.wav",
-        me: "audio/sentences/hyoumen.wav"
-      }
+      audio: { daughter: "audio/sentences/hyoumen.wav", me: "audio/sentences/hyoumen.wav" }
     },
     {
       romaji: "ga",
       hiragana: "が",
       meaning: "subject marker",
-      audio: {
-        daughter: "audio/sentences/ga.wav",
-        me: "audio/sentences/ga.wav"
-      }
+      audio: { daughter: "audio/sentences/ga.wav", me: "audio/sentences/ga.wav" }
     },
     {
       romaji: "subesube_to",
       hiragana: "すべすべと",
       meaning: "smoothly",
-      audio: {
-        daughter: "audio/sentences/subesube_to.wav",
-        me: "audio/sentences/subesube_to.wav"
-      }
+      audio: { daughter: "audio/sentences/subesube_to.wav", me: "audio/sentences/subesube_to.wav" }
     },
     {
-      romaji: "tezawari ga suru",
-      hiragana: "てざわりがする",
-      meaning: "feels to the touch",
-      audio: {
-        daughter: "audio/sentences/tezawari_ga_suru.wav",
-        me: "audio/sentences/tezawari_ga_suru.wav"
-      }
+      romaji: "tezawari",
+      hiragana: "てざわり",
+      meaning: "touch sensation",
+      audio: { daughter: "audio/sentences/tezawari.wav", me: "audio/sentences/tezawari.wav" }
+    },
+    {
+      romaji: "ga",
+      hiragana: "が",
+      meaning: "subject marker",
+      audio: { daughter: "audio/sentences/ga.wav", me: "audio/sentences/ga.wav" }
+    },
+    {
+      romaji: "suru",
+      hiragana: "する",
+      meaning: "to do / to feel",
+      audio: { daughter: "audio/sentences/suru.wav", me: "audio/sentences/suru.wav" }
     }
   ]
 },
@@ -10610,12 +10678,83 @@ const level2Sentences = [
 
 
 
+
+
+
+
 {
   id: "l2-56",
-  meaning: "The earthworm wriggled.",
+  meaning: "The earthworm wriggled on the farm.",
   level: 2,
 
+  options: [
+    "のうじょう",
+    "では",
+    "みみず",
+    "が",
+    "もぞもぞと",
+    "うごく"
+  ],
+
+  optionsRomaji: [
+    "noujou",
+    "dewa",
+    "mimizu",
+    "ga",
+    "mozomozo_to",
+    "ugoku"
+  ],
+
+  optionsEN: [
+    "farm",
+    "at / on",
+    "earthworm",
+    "subject marker",
+    "wriggling / squirming",
+    "to move / to wriggle"
+  ],
+
+  correct: "もぞもぞと",
+
+  choiceAudio: {
+    options: [
+      "audio/sentences/noujou.wav",
+      "audio/sentences/dewa.wav",
+      "audio/sentences/mimizu.wav",
+      "audio/sentences/ga.wav",
+      "audio/sentences/mozomozo_to.wav",
+      "audio/sentences/ugoku.wav"
+    ]
+  },
+
+  meaningAudio: [
+    "audio/sentences/noujou.wav",
+    "audio/sentences/dewa.wav",
+    "audio/sentences/mimizu.wav",
+    "audio/sentences/ga.wav",
+    "audio/sentences/mozomozo_to.wav",
+    "audio/sentences/ugoku.wav"
+  ],
+
   chunks: [
+    {
+      romaji: "noujou",
+      hiragana: "のうじょう",
+      meaning: "farm",
+      audio: {
+        daughter: "audio/sentences/noujou.wav",
+        me: "audio/sentences/noujou.wav"
+      }
+    },
+    {
+      romaji: "dewa",
+      hiragana: "では",
+      meaning: "at / on",
+      audio: {
+        daughter: "audio/sentences/dewa.wav",
+        me: "audio/sentences/dewa.wav"
+      }
+    },
     {
       romaji: "mimizu",
       hiragana: "みみず",
@@ -10635,7 +10774,7 @@ const level2Sentences = [
       }
     },
     {
-      romaji: "mozomozo to",
+      romaji: "mozomozo_to",
       hiragana: "もぞもぞと",
       meaning: "squirming / wriggling",
       audio: {
@@ -10653,7 +10792,13 @@ const level2Sentences = [
       }
     }
   ]
-},
+}
+
+
+
+
+
+
 
 
 
