@@ -5286,7 +5286,7 @@ const level2Sentences = [
       "audio/sentences/katamuku.wav",
       "audio/sentences/fune_ga.wav",
       "audio/sentences/hito_ge.wav",
-      "audio/sentences/no_nakute.wav",
+      "audio/sentences/no_inakute.wav",
       "audio/sentences/norowaresou.wav",
       "audio/sentences/deshita.wav"
     ]
@@ -5301,7 +5301,7 @@ const level2Sentences = [
     "audio/sentences/katamuku.wav",
     "audio/sentences/fune_ga.wav",
     "audio/sentences/hito_ge.wav",
-    "audio/sentences/no_nakute.wav",
+    "audio/sentences/no_inakute.wav",
     "audio/sentences/norowaresou.wav",
     "audio/sentences/deshita.wav"
   ],
@@ -5384,8 +5384,8 @@ const level2Sentences = [
       hiragana: "のなくて",
       meaning: "without",
       audio: {
-        daughter: "audio/sentences/no_nakute.wav",
-        me: "audio/sentences/no_nakute.wav"
+        daughter: "audio/sentences/no_inakute.wav",
+        me: "audio/sentences/no_inakute.wav"
       }
     },
     {
