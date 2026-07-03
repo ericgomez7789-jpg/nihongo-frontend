@@ -2,6 +2,11 @@
    SENTENCES (LEVEL 1 + LEVEL 2)
 ------------------------------ */
 const sentences = [
+
+
+/*
+
+
   {
      id: "l1-1",
     meaning: "What do you do?",
@@ -71,6 +76,13 @@ const sentences = [
       }
     ]
   },
+
+
+
+*/
+
+
+
   {
      id: "l1-3",
   meaning: "I write with a pencil.",
@@ -105,6 +117,21 @@ const sentences = [
     }
   ]
 },
+
+
+
+/*
+
+
+
+
+
+
+
+
+
+
+
   {
      id: "l1-4",
   meaning: "What do you do in your free time?",
@@ -3126,7 +3153,7 @@ const sentences = [
   ]
 },
 
-
+*/
 
 
 ];
