@@ -3702,17 +3702,13 @@ function playChunkSequence(i = 0, callback, audioArray = currentAudioChunks) {
    ⭐ SCREEN SYSTEM
 ---------------------------------------------------------- */
 function showScreen(id) {
-  console.log("[showScreen] switching to:", id);
+console.log("[showScreen] switching to:", id);
+
   console.log(`[showScreen] switching to: ${id}`);
 
   // Hide all screens FIRST
   document.querySelectorAll('.screen').forEach(screen => {
     screen.classList.add('hidden');
-  });
-
-  // ⭐ UNIVERSAL LEVEL-BLOCK CLEANUP (added, does NOT touch logic)
-  document.querySelectorAll('.level-block').forEach(block => {
-    block.classList.add('hidden');
   });
 
   // SPECIAL CASE — Route ONLY Level 7 screens to L7.show()
@@ -3780,7 +3776,6 @@ function showScreen(id) {
     }
   }
 }
-
 
 
 
