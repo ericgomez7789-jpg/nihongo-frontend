@@ -15312,6 +15312,20 @@ id: "l3-42",
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
   id: "l3-45",
   meaning: "How should I organize my desk?",
@@ -15388,6 +15402,17 @@ id: "l3-42",
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -15478,6 +15503,12 @@ id: "l3-42",
     }
   ]
 },
+
+
+
+
+
+
 
 
 
@@ -16030,6 +16061,11 @@ id: "l3-42",
 
 
 
+
+
+
+
+
 {
   id: "l3-52",
   meaning: "My daughter was restlessly refusing to study. So I encouraged her.",
@@ -16162,6 +16198,477 @@ id: "l3-42",
 
 
 
+
+
+
+
+
+
+
+
+
+{
+  id: "l3-55",
+  meaning: "When I think about going to work, I feel gloomy and heavy-hearted. So I took the day off and felt cheerful.",
+  level: 3,
+
+  options: ["しかし", "そこで", "それで", "けれど"],
+  optionsRomaji: ["shikashi", "sokode", "sorede", "keredo"],
+  optionsEN: [
+    "however",
+    "so / therefore (intentional action)",
+    "so / as a result",
+    "but / although"
+  ],
+
+  // ⭐ correct: そこで (cause → intentional positive action)
+  correct: "そこで",
+
+  choiceAudio: {
+    options: [
+      "audio/sentences/shikashi.wav",
+      "audio/sentences/sokode.wav",
+      "audio/sentences/sorede.wav",
+      "audio/sentences/keredo.wav"
+    ]
+  },
+
+  meaningAudio: [
+    "audio/sentences/shikashi.wav",
+    "audio/sentences/sokode.wav",
+    "audio/sentences/sorede.wav",
+    "audio/sentences/keredo.wav"
+  ],
+
+  chunks: [
+    {
+      hiragana: "しごと",
+      romaji: "shigoto",
+      meaning: "work",
+      audio: { daughter: "audio/sentences/shigoto.wav", me: "audio/sentences/shigoto.wav" }
+    },
+    {
+      hiragana: "に",
+      romaji: "ni",
+      meaning: "to / toward",
+      audio: { daughter: "audio/sentences/ni.wav", me: "audio/sentences/ni.wav" }
+    },
+    {
+      hiragana: "いく",
+      romaji: "iku",
+      meaning: "go",
+      audio: { daughter: "audio/sentences/iku.wav", me: "audio/sentences/iku.wav" }
+    },
+    {
+      hiragana: "と",
+      romaji: "to",
+      meaning: "when / if",
+      audio: { daughter: "audio/sentences/to.wav", me: "audio/sentences/to.wav" }
+    },
+    {
+      hiragana: "おもう",
+      romaji: "omou",
+      meaning: "think",
+      audio: { daughter: "audio/sentences/omou.wav", me: "audio/sentences/omou.wav" }
+    },
+    {
+      hiragana: "と",
+      romaji: "to",
+      meaning: "when",
+      audio: { daughter: "audio/sentences/to.wav", me: "audio/sentences/to.wav" }
+    },
+
+    {
+      hiragana: "しょんぼり",
+      romaji: "shonbori",
+      meaning: "feeling down / discouraged",
+      audio: { daughter: "audio/sentences/shonbori.wav", me: "audio/sentences/shonbori.wav" }
+    },
+    {
+      hiragana: "して",
+      romaji: "shite",
+      meaning: "doing",
+      audio: { daughter: "audio/sentences/shite.wav", me: "audio/sentences/shite.wav" }
+    },
+
+    {
+      hiragana: "き",
+      romaji: "ki",
+      meaning: "feeling / mood",
+      audio: { daughter: "audio/sentences/ki.wav", me: "audio/sentences/ki.wav" }
+    },
+    {
+      hiragana: "が",
+      romaji: "ga",
+      meaning: "subject marker",
+      audio: { daughter: "audio/sentences/ga.wav", me: "audio/sentences/ga.wav" }
+    },
+    {
+      hiragana: "おもく",
+      romaji: "omoku",
+      meaning: "heavy",
+      audio: { daughter: "audio/sentences/omoku.wav", me: "audio/sentences/omoku.wav" }
+    },
+    {
+      hiragana: "なる",
+      romaji: "naru",
+      meaning: "become",
+      audio: { daughter: "audio/sentences/naru.wav", me: "audio/sentences/naru.wav" }
+    },
+
+    {
+      hiragana: "そこで",
+      romaji: "sokode",
+      meaning: "so / therefore (intentional action)",
+      audio: { daughter: "audio/sentences/sokode.wav", me: "audio/sentences/sokode.wav" }
+    },
+
+    {
+      hiragana: "しごと",
+      romaji: "shigoto",
+      meaning: "work",
+      audio: { daughter: "audio/sentences/shigoto.wav", me: "audio/sentences/shigoto.wav" }
+    },
+    {
+      hiragana: "を",
+      romaji: "wo",
+      meaning: "object marker",
+      audio: { daughter: "audio/sentences/wo.wav", me: "audio/sentences/wo.wav" }
+    },
+    {
+      hiragana: "やすんで",
+      romaji: "yasunde",
+      meaning: "took a break / skipped",
+      audio: { daughter: "audio/sentences/yasunde.wav", me: "audio/sentences/yasunde.wav" }
+    },
+
+    {
+      hiragana: "うきうき",
+      romaji: "ukiuki",
+      meaning: "cheerfully / excitedly",
+      audio: { daughter: "audio/sentences/ukiuki.wav", me: "audio/sentences/ukiuki.wav" }
+    },
+    {
+      hiragana: "しました",
+      romaji: "shimashita",
+      meaning: "did",
+      audio: { daughter: "audio/sentences/shimashita.wav", me: "audio/sentences/shimashita.wav" }
+    },
+
+    {
+      hiragana: "。",
+      romaji: "",
+      meaning: "period",
+      audio: { daughter: "audio/sentences/period.wav", me: "audio/sentences/period.wav" }
+    }
+  ]
+},
+
+
+
+
+
+
+{
+  id: "l3-57",
+  meaning: "I thought the weather would be nice this morning and tried to go out. But instead it rained, and I felt disappointed.",
+  level: 3,
+
+  options: ["しかし", "かえって", "それで", "けれど"],
+  optionsRomaji: ["shikashi", "kaette", "sorede", "keredo"],
+  optionsEN: [
+    "however",
+    "instead / on the contrary",
+    "so / as a result",
+    "but / although"
+  ],
+
+  // ⭐ correct: かえって (unexpected reversal → emotional disappointment)
+  correct: "かえって",
+
+  choiceAudio: {
+    options: [
+      "audio/sentences/shikashi.wav",
+      "audio/sentences/kaette.wav",
+      "audio/sentences/sorede.wav",
+      "audio/sentences/keredo.wav"
+    ]
+  },
+
+  meaningAudio: [
+    "audio/sentences/shikashi.wav",
+    "audio/sentences/kaette.wav",
+    "audio/sentences/sorede.wav",
+    "audio/sentences/keredo.wav"
+  ],
+
+  chunks: [
+    {
+      hiragana: "あさ",
+      romaji: "asa",
+      meaning: "morning",
+      audio: { daughter: "audio/sentences/asa.wav", me: "audio/sentences/asa.wav" }
+    },
+    {
+      hiragana: "は",
+      romaji: "wa",
+      meaning: "topic marker",
+      audio: { daughter: "audio/sentences/wa.wav", me: "audio/sentences/wa.wav" }
+    },
+    {
+      hiragana: "いい",
+      romaji: "ii",
+      meaning: "good",
+      audio: { daughter: "audio/sentences/ii.wav", me: "audio/sentences/ii.wav" }
+    },
+    {
+      hiragana: "てんき",
+      romaji: "tenki",
+      meaning: "weather",
+      audio: { daughter: "audio/sentences/tenki.wav", me: "audio/sentences/tenki.wav" }
+    },
+    {
+      hiragana: "だ",
+      romaji: "da",
+      meaning: "is",
+      audio: { daughter: "audio/sentences/da.wav", me: "audio/sentences/da.wav" }
+    },
+    {
+      hiragana: "と",
+      romaji: "to",
+      meaning: "when / if",
+      audio: { daughter: "audio/sentences/to.wav", me: "audio/sentences/to.wav" }
+    },
+    {
+      hiragana: "おもって",
+      romaji: "omotte",
+      meaning: "thought",
+      audio: { daughter: "audio/sentences/omotte.wav", me: "audio/sentences/omotte.wav" }
+    },
+
+    {
+      hiragana: "でかけよう",
+      romaji: "dekakeyou",
+      meaning: "try to go out",
+      audio: { daughter: "audio/sentences/dekakeyou.wav", me: "audio/sentences/dekakeyou.wav" }
+    },
+    {
+      hiragana: "と",
+      romaji: "to",
+      meaning: "to",
+      audio: { daughter: "audio/sentences/to.wav", me: "audio/sentences/to.wav" }
+    },
+    {
+      hiragana: "した",
+      romaji: "shita",
+      meaning: "did / tried",
+      audio: { daughter: "audio/sentences/shita.wav", me: "audio/sentences/shita.wav" }
+    },
+
+    {
+      hiragana: "かえって",
+      romaji: "kaette",
+      meaning: "instead / on the contrary",
+      audio: { daughter: "audio/sentences/kaette.wav", me: "audio/sentences/kaette.wav" }
+    },
+
+    {
+      hiragana: "あめ",
+      romaji: "ame",
+      meaning: "rain",
+      audio: { daughter: "audio/sentences/ame.wav", me: "audio/sentences/ame.wav" }
+    },
+    {
+      hiragana: "が",
+      romaji: "ga",
+      meaning: "subject marker",
+      audio: { daughter: "audio/sentences/ga.wav", me: "audio/sentences/ga.wav" }
+    },
+    {
+      hiragana: "ふって",
+      romaji: "futte",
+      meaning: "fell / rained",
+      audio: { daughter: "audio/sentences/futte.wav", me: "audio/sentences/futte.wav" }
+    },
+
+    {
+      hiragana: "がっかり",
+      romaji: "gakkari",
+      meaning: "disappointed",
+      audio: { daughter: "audio/sentences/gakkari.wav", me: "audio/sentences/gakkari.wav" }
+    },
+    {
+      hiragana: "しました",
+      romaji: "shimashita",
+      meaning: "did",
+      audio: { daughter: "audio/sentences/shimashita.wav", me: "audio/sentences/shimashita.wav" }
+    },
+
+    {
+      hiragana: "。",
+      romaji: "",
+      meaning: "period",
+      audio: { daughter: "audio/sentences/period.wav", me: "audio/sentences/period.wav" }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l3-58",
+  meaning: "My daughter loves olives and devours them. In contrast, I don’t really like them.",
+  level: 3,
+
+  // ⭐ MCQ options NOT contrastive except the correct one
+  options: ["だから", "そして", "それにたいして", "それで"],
+  optionsRomaji: ["dakara", "soshite", "sorenitaishite", "sorede"],
+  optionsEN: [
+    "so / therefore",
+    "and / then",
+    "in contrast",
+    "so / as a result"
+  ],
+
+  // ⭐ correct: それにたいして
+  correct: "それにたいして",
+
+  choiceAudio: {
+    options: [
+      "audio/sentences/dakara.wav",
+      "audio/sentences/soshite.wav",
+      "audio/sentences/sorenitaishite.wav",
+      "audio/sentences/sorede.wav"
+    ]
+  },
+
+  meaningAudio: [
+    "audio/sentences/dakara.wav",
+    "audio/sentences/soshite.wav",
+    "audio/sentences/sorenitaishite.wav",
+    "audio/sentences/sorede.wav"
+  ],
+
+  chunks: [
+    {
+      hiragana: "むすめ",
+      romaji: "musume",
+      meaning: "daughter",
+      audio: { daughter: "audio/sentences/musume.wav", me: "audio/sentences/musume.wav" }
+    },
+    {
+      hiragana: "は",
+      romaji: "wa",
+      meaning: "topic marker",
+      audio: { daughter: "audio/sentences/wa.wav", me: "audio/sentences/wa.wav" }
+    },
+    {
+      hiragana: "オリーブ",
+      romaji: "oriibu",
+      meaning: "olive",
+      audio: { daughter: "audio/sentences/oriibu.wav", me: "audio/sentences/oriibu.wav" }
+    },
+    {
+      hiragana: "が",
+      romaji: "ga",
+      meaning: "subject marker",
+      audio: { daughter: "audio/sentences/ga.wav", me: "audio/sentences/ga.wav" }
+    },
+    {
+      hiragana: "がつがつ",
+      romaji: "gatsugatsu",
+      meaning: "devour eagerly / gobble",
+      audio: { daughter: "audio/sentences/gatsugatsu.wav", me: "audio/sentences/gatsugatsu.wav" }
+    },
+    {
+      hiragana: "して",
+      romaji: "shite",
+      meaning: "doing",
+      audio: { daughter: "audio/sentences/shite.wav", me: "audio/sentences/shite.wav" }
+    },
+    {
+      hiragana: "すき",
+      romaji: "suki",
+      meaning: "like",
+      audio: { daughter: "audio/sentences/suki.wav", me: "audio/sentences/suki.wav" }
+    },
+    {
+      hiragana: "だ",
+      romaji: "da",
+      meaning: "is",
+      audio: { daughter: "audio/sentences/da.wav", me: "audio/sentences/da.wav" }
+    },
+
+    {
+      hiragana: "それにたいして",
+      romaji: "sorenitaishite",
+      meaning: "in contrast",
+      audio: { daughter: "audio/sentences/sorenitaishite.wav", me: "audio/sentences/sorenitaishite.wav" }
+    },
+
+    {
+      hiragana: "わたし",
+      romaji: "watashi",
+      meaning: "I / me",
+      audio: { daughter: "audio/sentences/watashi.wav", me: "audio/sentences/watashi.wav" }
+    },
+    {
+      hiragana: "は",
+      romaji: "wa",
+      meaning: "topic marker",
+      audio: { daughter: "audio/sentences/wa.wav", me: "audio/sentences/wa.wav" }
+    },
+    {
+      hiragana: "それ",
+      romaji: "sore",
+      meaning: "that",
+      audio: { daughter: "audio/sentences/sore.wav", me: "audio/sentences/sore.wav" }
+    },
+    {
+      hiragana: "が",
+      romaji: "ga",
+      meaning: "subject marker",
+      audio: { daughter: "audio/sentences/ga.wav", me: "audio/sentences/ga.wav" }
+    },
+    {
+      hiragana: "あまり",
+      romaji: "amari",
+      meaning: "not really / not very",
+      audio: { daughter: "audio/sentences/amari.wav", me: "audio/sentences/amari.wav" }
+    },
+    {
+      hiragana: "すき",
+      romaji: "suki",
+      meaning: "like",
+      audio: { daughter: "audio/sentences/suki.wav", me: "audio/sentences/suki.wav" }
+    },
+    {
+      hiragana: "じゃない",
+      romaji: "janai",
+      meaning: "not",
+      audio: { daughter: "audio/sentences/janai.wav", me: "audio/sentences/janai.wav" }
+    },
+
+    {
+      hiragana: "。",
+      romaji: "",
+      meaning: "period",
+      audio: { daughter: "audio/sentences/period.wav", me: "audio/sentences/period.wav" }
+    }
+  ]
+},
 
 
 
