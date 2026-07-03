@@ -82,9 +82,8 @@ const sentences = [
 
 
 
-
-  {
-     id: "l1-3",
+{
+  id: "l1-3",
   meaning: "I write with a pencil.",
   level: 1,
   chunks: [
@@ -100,7 +99,7 @@ const sentences = [
     {
       romaji: "de",
       hiragana: "で",
-      meaning: "with / using (tool marker)",
+      meaning: "with",
       audio: {
         daughter: "audio/sentences/de.wav",
         me: "audio/sentences/de.wav"
@@ -109,7 +108,7 @@ const sentences = [
     {
       romaji: "kaku",
       hiragana: "かく",
-      meaning: "to write",
+      meaning: "write",
       audio: {
         daughter: "audio/sentences/kaku.wav",
         me: "audio/sentences/kaku.wav"
