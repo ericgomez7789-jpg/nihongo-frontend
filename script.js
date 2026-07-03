@@ -21840,7 +21840,17 @@ Level 6
 
 const level6 = [
 
-  {
+
+
+
+
+
+
+
+
+
+
+ {
   id: "l6_001",
   meaning: "The girl was complaining so the mother told her to be quiet.",
   level: 6,
@@ -21850,6 +21860,13 @@ const level6 = [
   optionsEN: ["be quiet", "play", "make noise", "talk"],
   correct: "だまる",
 
+  // ⭐ NEW: full sentence audio
+  fullAudio: {
+    daughter: "audio/sentences/inference1.wav",
+    me:       "audio/sentences/inference1.wav"
+  },
+
+  // MCQ audio stays the same
   choiceAudio: {
     options: [
       "audio/sentences/damaru.wav",
@@ -21866,78 +21883,50 @@ const level6 = [
     "audio/sentences/hanasu.wav"
   ],
 
+  // ⭐ chunks now text-only (no audio)
   chunks: [
     {
       romaji: "onna_no_ko_wa",
       hiragana: "おんなのこは",
-      english: "the girl",
-      audio: {
-        daughter: "audio/sentences/onna_no_ko_wa.wav",
-        me: "audio/sentences/onna_no_ko_wa.wav"
-      }
+      english: "the girl"
     },
-
     {
       romaji: "monku wo itte ita",
       hiragana: "もんくをいっていた",
-      english: "was complaining",
-      audio: {
-        daughter: "audio/sentences/monku_wo_itte_ita.wav",
-        me: "audio/sentences/monku_wo_itte_ita.wav"
-      }
+      english: "was complaining"
     },
-
     {
       romaji: "node",
       hiragana: "ので",
-      english: "so",
-      audio: {
-        daughter: "audio/sentences/node.wav",
-        me: "audio/sentences/node.wav"
-      }
+      english: "so"
     },
-
     {
       romaji: "okaasan ga",
       hiragana: "おかあさんが",
-      english: "the mother",
-      audio: {
-        daughter: "audio/sentences/okaasan_ga.wav",
-        me: "audio/sentences/okaasan_ga.wav"
-      }
+      english: "the mother"
     },
-
     {
       romaji: "shizuka ni",
       hiragana: "しずかに",
-      english: "quietly / to be quiet",
-      audio: {
-        daughter: "audio/sentences/shizuka_ni.wav",
-        me: "audio/sentences/shizuka_ni.wav"
-      }
+      english: "quietly / to be quiet"
     },
-
     {
       romaji: "shinasai to",
       hiragana: "しなさいと",
-      english: "do it (command)",
-      audio: {
-        daughter: "audio/sentences/shinasai_to.wav",
-        me: "audio/sentences/shinasai_to.wav"
-      }
+      english: "do it (command)"
     },
-
     {
       romaji: "iimashita",
       hiragana: "いいました",
-      english: "said",
-      audio: {
-        daughter: "audio/sentences/iimashita.wav",
-        me: "audio/sentences/iimashita.wav"
-      }
+      english: "said"
     }
   ]
 },
+
+
+
+
+
 
 
 
@@ -21951,6 +21940,12 @@ const level6 = [
   optionsRomaji: ["souji suru", "undou suru", "sanpo suru", "kutsurogu"],
   optionsEN: ["clean up", "exercise", "take a walk", "relax"],
   correct: "そうじする",
+
+  // ⭐ NEW: full sentence audio
+  fullAudio: {
+    daughter: "audio/sentences/inference2.wav",
+    me:       "audio/sentences/inference2.wav"
+  },
 
   choiceAudio: {
     options: [
@@ -21968,68 +21963,50 @@ const level6 = [
     "audio/sentences/kutsurogu.wav"
   ],
 
+  // ⭐ chunks now text-only
   chunks: [
     {
       romaji: "otoutou wa",
       hiragana: "おとうとは",
-      english: "the younger brother",
-      audio: {
-        daughter: "audio/sentences/otoutou_wa.wav",
-        me: "audio/sentences/otoutou_wa.wav"
-      }
+      english: "the younger brother"
     },
-
     {
       romaji: "juusu wo",
       hiragana: "ジュースを",
-      english: "the juice",
-      audio: {
-        daughter: "audio/sentences/juusu_wo.wav",
-        me: "audio/sentences/juusu_wo.wav"
-      }
+      english: "the juice"
     },
-
     {
       romaji: "koboshita node",
       hiragana: "こぼしたので",
-      english: "spilled it, so",
-      audio: {
-        daughter: "audio/sentences/koboshita_node.wav",
-        me: "audio/sentences/koboshita_node.wav"
-      }
+      english: "spilled it, so"
     },
-
     {
       romaji: "okaasan ga",
       hiragana: "おかあさんが",
-      english: "the mother",
-      audio: {
-        daughter: "audio/sentences/okaasan_ga.wav",
-        me: "audio/sentences/okaasan_ga.wav"
-      }
+      english: "the mother"
     },
-
     {
       romaji: "tameiki wo",
       hiragana: "ためいきを",
-      english: "a sigh",
-      audio: {
-        daughter: "audio/sentences/tameiki_wo.wav",
-        me: "audio/sentences/tameiki_wo.wav"
-      }
+      english: "a sigh"
     },
-
     {
       romaji: "tsukimashita",
       hiragana: "つきました",
-      english: "let out",
-      audio: {
-        daughter: "audio/sentences/tsukimashita.wav",
-        me: "audio/sentences/tsukimashita.wav"
-      }
+      english: "let out"
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -22043,6 +22020,12 @@ const level6 = [
   optionsRomaji: ["ame ga furu", "yuki ga furu", "kumori", "hareru"],
   optionsEN: ["it will rain", "it will snow", "cloudy", "clear up"],
   correct: "あめがふる",
+
+  // ⭐ NEW: full sentence audio
+  fullAudio: {
+    daughter: "audio/sentences/inference3.wav",
+    me:       "audio/sentences/inference3.wav"
+  },
 
   choiceAudio: {
     options: [
@@ -22060,88 +22043,64 @@ const level6 = [
     "audio/sentences/hareru.wav"
   ],
 
+  // ⭐ chunks now text-only
   chunks: [
     {
       romaji: "kumo ga",
       hiragana: "くもが",
-      english: "the clouds",
-      audio: {
-        daughter: "audio/sentences/kumo_ga.wav",
-        me: "audio/sentences/kumo_ga.wav"
-      }
+      english: "the clouds"
     },
-
     {
       romaji: "haiiro to",
       hiragana: "はいいろと",
-      english: "gray and",
-      audio: {
-        daughter: "audio/sentences/haiiro_to.wav",
-        me: "audio/sentences/haiiro_to.wav"
-      }
+      english: "gray and"
     },
-
     {
       romaji: "kuroiro ni",
       hiragana: "くろいろに",
-      english: "black",
-      audio: {
-        daughter: "audio/sentences/kuroiro_ni.wav",
-        me: "audio/sentences/kuroiro_ni.wav"
-      }
+      english: "black"
     },
-
     {
       romaji: "natte kita",
       hiragana: "なってきた",
-      english: "started to become",
-      audio: {
-        daughter: "audio/sentences/natte_kita.wav",
-        me: "audio/sentences/natte_kita.wav"
-      }
+      english: "started to become"
     },
-
     {
       romaji: "o tenki ni",
       hiragana: "おてんきに",
-      english: "the weather",
-      audio: {
-        daughter: "audio/sentences/o_tenki_ni.wav",
-        me: "audio/sentences/o_tenki_ni.wav"
-      }
+      english: "the weather"
     },
-
     {
       romaji: "tsugi ni",
       hiragana: "つぎに",
-      english: "next",
-      audio: {
-        daughter: "audio/sentences/tsugi_ni.wav",
-        me: "audio/sentences/tsugi_ni.wav"
-      }
+      english: "next"
     },
-
     {
       romaji: "dou",
       hiragana: "どう",
-      english: "what",
-      audio: {
-        daughter: "audio/sentences/dou.wav",
-        me: "audio/sentences/dou.wav"
-      }
+      english: "what"
     },
-
     {
       romaji: "naru no",
       hiragana: "なるの",
-      english: "will happen",
-      audio: {
-        daughter: "audio/sentences/naru_no.wav",
-        me: "audio/sentences/naru_no.wav"
-      }
+      english: "will happen"
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -22155,6 +22114,12 @@ const level6 = [
   optionsRomaji: ["kusuguru", "nenza suru", "suji wo itameru", "oreru"],
   optionsEN: ["it will tickle", "it will sprain", "it will strain", "it will break"],
   correct: "おれる",
+
+  // ⭐ NEW: full sentence audio
+  fullAudio: {
+    daughter: "audio/sentences/inference4.wav",
+    me:       "audio/sentences/inference4.wav"
+  },
 
   choiceAudio: {
     options: [
@@ -22172,68 +22137,55 @@ const level6 = [
     "audio/sentences/oreru.wav"
   ],
 
+  // ⭐ chunks now text-only
   chunks: [
     {
       romaji: "hashigo",
       hiragana: "はしご",
-      english: "the ladder",
-      audio: {
-        daughter: "audio/sentences/hashigo.wav",
-        me: "audio/sentences/hashigo.wav"
-      }
+      english: "the ladder"
     },
-
     {
       romaji: "kara",
       hiragana: "から",
-      english: "from",
-      audio: {
-        daughter: "audio/sentences/kara.wav",
-        me: "audio/sentences/kara.wav"
-      }
+      english: "from"
     },
-
     {
       romaji: "ochiru to",
       hiragana: "おちると",
-      english: "if you fall",
-      audio: {
-        daughter: "audio/sentences/ochiru_to.wav",
-        me: "audio/sentences/ochiru_to.wav"
-      }
+      english: "if you fall"
     },
-
     {
       romaji: "ashi ni",
       hiragana: "あしに",
-      english: "to your leg",
-      audio: {
-        daughter: "audio/sentences/ashi_ni.wav",
-        me: "audio/sentences/ashi_ni.wav"
-      }
+      english: "to your leg"
     },
-
     {
       romaji: "dou",
       hiragana: "どう",
-      english: "what",
-      audio: {
-        daughter: "audio/sentences/dou.wav",
-        me: "audio/sentences/dou.wav"
-      }
+      english: "what"
     },
-
     {
       romaji: "naru no",
       hiragana: "なるの",
-      english: "will happen",
-      audio: {
-        daughter: "audio/sentences/naru_no.wav",
-        me: "audio/sentences/naru_no.wav"
-      }
+      english: "will happen"
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -22248,6 +22200,12 @@ const level6 = [
   optionsRomaji: ["fukitobasu", "jitto_suru", "ochiru", "oreru"],
   optionsEN: ["get blown away", "stay still", "fall", "break"],
   correct: "ふきとばす",
+
+  // ⭐ NEW: full sentence audio
+  fullAudio: {
+    daughter: "audio/sentences/inference5.wav",
+    me:       "audio/sentences/inference5.wav"
+  },
 
   choiceAudio: {
     options: [
@@ -22265,68 +22223,49 @@ const level6 = [
     "audio/sentences/oreru.wav"
   ],
 
+  // ⭐ chunks now text-only
   chunks: [
     {
       romaji: "kaze ga",
       hiragana: "かぜが",
-      english: "the wind",
-      audio: {
-        daughter: "audio/sentences/kaze_ga.wav",
-        me: "audio/sentences/kaze_ga.wav"
-      }
+      english: "the wind"
     },
-
     {
       romaji: "tsuyoi",
       hiragana: "つよい",
-      english: "is strong",
-      audio: {
-        daughter: "audio/sentences/tsuyoi.wav",
-        me: "audio/sentences/tsuyoi.wav"
-      }
+      english: "is strong"
     },
-
     {
       romaji: "dakara",
       hiragana: "だから",
-      english: "so",
-      audio: {
-        daughter: "audio/sentences/dakara.wav",
-        me: "audio/sentences/dakara.wav"
-      }
+      english: "so"
     },
-
     {
       romaji: "nanimo",
       hiragana: "なにも",
-      english: "everything",
-      audio: {
-        daughter: "audio/sentences/nanimo.wav",
-        me: "audio/sentences/nanimo.wav"
-      }
+      english: "everything"
     },
-
     {
       romaji: "dou",
       hiragana: "どう",
-      english: "what",
-      audio: {
-        daughter: "audio/sentences/dou.wav",
-        me: "audio/sentences/dou.wav"
-      }
+      english: "what"
     },
-
     {
       romaji: "naru no",
       hiragana: "なるの",
-      english: "will happen",
-      audio: {
-        daughter: "audio/sentences/naru_no.wav",
-        me: "audio/sentences/naru_no.wav"
-      }
+      english: "will happen"
     }
   ]
 },
+
+
+
+
+
+
+
+
+
 
 
 
@@ -22341,6 +22280,12 @@ const level6 = [
   optionsRomaji: ["tsukamaru", "hotto_suru", "ochitsuku", "nigeru"],
   optionsEN: ["get caught", "feel relieved", "relax", "get away"],
   correct: "つかまる",
+
+  // ⭐ NEW: full sentence audio
+  fullAudio: {
+    daughter: "audio/sentences/inference6.wav",
+    me:       "audio/sentences/inference6.wav"
+  },
 
   choiceAudio: {
     options: [
@@ -22358,58 +22303,47 @@ const level6 = [
     "audio/sentences/nigeru.wav"
   ],
 
+  // ⭐ chunks now text-only
   chunks: [
     {
       romaji: "hanzaisha",
       hiragana: "はんざいしゃ",
-      english: "the criminal",
-      audio: {
-        daughter: "audio/sentences/hanzaisha.wav",
-        me: "audio/sentences/hanzaisha.wav"
-      }
+      english: "the criminal"
     },
-
     {
       romaji: "ga",
       hiragana: "が",
-      english: "subject marker",
-      audio: {
-        daughter: "audio/sentences/ga.wav",
-        me: "audio/sentences/ga.wav"
-      }
+      english: "subject marker"
     },
-
     {
       romaji: "tsumi",
       hiragana: "つみ",
-      english: "a crime",
-      audio: {
-        daughter: "audio/sentences/tsumi.wav",
-        me: "audio/sentences/tsumi.wav"
-      }
+      english: "a crime"
     },
-
     {
       romaji: "wo",
       hiragana: "を",
-      english: "object marker",
-      audio: {
-        daughter: "audio/sentences/wo.wav",
-        me: "audio/sentences/wo.wav"
-      }
+      english: "object marker"
     },
-
     {
       romaji: "okashita",
       hiragana: "おかした",
-      english: "committed",
-      audio: {
-        daughter: "audio/sentences/okashita.wav",
-        me: "audio/sentences/okashita.wav"
-      }
+      english: "committed"
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -22424,6 +22358,12 @@ const level6 = [
   optionsRomaji: ["shikarareru", "ayamaru", "isogu", "hohoemu"],
   optionsEN: ["get chewed out", "apologize", "hurry", "smile"],
   correct: "しかられる",
+
+  // ⭐ NEW: full sentence audio
+  fullAudio: {
+    daughter: "audio/sentences/inference7.wav",
+    me:       "audio/sentences/inference7.wav"
+  },
 
   choiceAudio: {
     options: [
@@ -22441,58 +22381,41 @@ const level6 = [
     "audio/sentences/hohoemu.wav"
   ],
 
+  // ⭐ chunks now text-only
   chunks: [
     {
       romaji: "kare wa",
       hiragana: "かれは",
-      english: "he",
-      audio: {
-        daughter: "audio/sentences/kare_wa.wav",
-        me: "audio/sentences/kare_wa.wav"
-      }
+      english: "he"
     },
-
     {
       romaji: "shigoto",
       hiragana: "しごと",
-      english: "work",
-      audio: {
-        daughter: "audio/sentences/shigoto.wav",
-        me: "audio/sentences/shigoto.wav"
-      }
+      english: "work"
     },
-
     {
       romaji: "ni",
       hiragana: "に",
-      english: "to",
-      audio: {
-        daughter: "audio/sentences/ni.wav",
-        me: "audio/sentences/ni.wav"
-      }
+      english: "to"
     },
-
     {
       romaji: "okurete",
       hiragana: "おくれて",
-      english: "being late",
-      audio: {
-        daughter: "audio/sentences/okurete.wav",
-        me: "audio/sentences/okurete.wav"
-      }
+      english: "being late"
     },
-
     {
       romaji: "shimatta",
       hiragana: "しまった",
-      english: "ended up",
-      audio: {
-        daughter: "audio/sentences/shimatta.wav",
-        me: "audio/sentences/shimatta.wav"
-      }
+      english: "ended up"
     }
   ]
 },
+
+
+
+
+
+
 
 
 
@@ -22507,6 +22430,12 @@ const level6 = [
   optionsRomaji: ["norisugosu", "michi ni mayou", "komaru", "awateru"],
   optionsEN: ["miss the stop", "get lost", "be at a loss", "panic"],
   correct: "のりすごす",
+
+  // ⭐ NEW: full sentence audio
+  fullAudio: {
+    daughter: "audio/sentences/inference8.wav",
+    me:       "audio/sentences/inference8.wav"
+  },
 
   choiceAudio: {
     options: [
@@ -22524,58 +22453,42 @@ const level6 = [
     "audio/sentences/awateru.wav"
   ],
 
+  // ⭐ chunks now text-only
   chunks: [
     {
       romaji: "kanojo wa",
       hiragana: "かのじょは",
-      english: "she",
-      audio: {
-        daughter: "audio/sentences/kanojo_wa.wav",
-        me: "audio/sentences/kanojo_wa.wav"
-      }
+      english: "she"
     },
-
     {
       romaji: "densha",
       hiragana: "でんしゃ",
-      english: "the train",
-      audio: {
-        daughter: "audio/sentences/densha.wav",
-        me: "audio/sentences/densha.wav"
-      }
+      english: "the train"
     },
-
     {
       romaji: "no",
       hiragana: "の",
-      english: "of / on",
-      audio: {
-        daughter: "audio/sentences/no.wav",
-        me: "audio/sentences/no.wav"
-      }
+      english: "of / on"
     },
-
     {
       romaji: "naka de",
       hiragana: "なかで",
-      english: "inside",
-      audio: {
-        daughter: "audio/sentences/naka_de.wav",
-        me: "audio/sentences/naka_de.wav"
-      }
+      english: "inside"
     },
-
     {
       romaji: "nesugoshita",
       hiragana: "ねすごした",
-      english: "overslept",
-      audio: {
-        daughter: "audio/sentences/nesugoshita.wav",
-        me: "audio/sentences/nesugoshita.wav"
-      }
+      english: "overslept"
     }
   ]
 },
+
+
+
+
+
+
+
 
 
 
@@ -22591,6 +22504,11 @@ const level6 = [
   optionsRomaji: ["okkakeru", "sagasu", "tawamureru", "yobu"],
   optionsEN: ["chase", "search", "play around", "call"],
   correct: "さがす",
+
+  fullAudio: {
+    daughter: "audio/sentences/inference9.wav",
+    me:       "audio/sentences/inference9.wav"
+  },
 
   choiceAudio: {
     options: [
@@ -22612,94 +22530,50 @@ const level6 = [
     {
       romaji: "inu ga",
       hiragana: "いぬが",
-      english: "the dog",
-      audio: {
-        daughter: "audio/sentences/inu_ga.wav",
-        me: "audio/sentences/inu_ga.wav"
-      }
+      english: "the dog"
     },
-
     {
       romaji: "niwa",
       hiragana: "にわ",
-      english: "the yard",
-      audio: {
-        daughter: "audio/sentences/niwa.wav",
-        me: "audio/sentences/niwa.wav"
-      }
+      english: "the yard"
     },
-
     {
       romaji: "kara",
       hiragana: "から",
-      english: "from",
-      audio: {
-        daughter: "audio/sentences/kara.wav",
-        me: "audio/sentences/kara.wav"
-      }
+      english: "from"
     },
-
     {
       romaji: "nigedashita",
       hiragana: "にげだした",
-      english: "escaped",
-      audio: {
-        daughter: "audio/sentences/nigedashita.wav",
-        me: "audio/sentences/nigedashita.wav"
-      }
+      english: "escaped"
     },
-
     {
       romaji: "soko de",
       hiragana: "そこで",
-      english: "and then",
-      audio: {
-        daughter: "audio/sentences/soko_de.wav",
-        me: "audio/sentences/soko_de.wav"
-      }
+      english: "and then"
     },
-
     {
       romaji: "nushi wa",
       hiragana: "ぬしは",
-      english: "the owner",
-      audio: {
-        daughter: "audio/sentences/nushi_wa.wav",
-        me: "audio/sentences/nushi_wa.wav"
-      }
+      english: "the owner"
     },
-
     {
-      romaji: "nani",
-      hiragana: "なに",
-      english: "what",
-      audio: {
-        daughter: "audio/sentences/nani.wav",
-        me: "audio/sentences/nani.wav"
-      }
+      romaji: "dou",
+      hiragana: "どう",
+      english: "how / what"
     },
-
     {
-      romaji: "ga",
-      hiragana: "が",
-      english: "subject marker",
-      audio: {
-        daughter: "audio/sentences/ga.wav",
-        me: "audio/sentences/ga.wav"
-      }
-    },
-
-    {
-      romaji: "okiru",
-      hiragana: "おきる",
-      english: "will happen",
-      audio: {
-        daughter: "audio/sentences/okiru.wav",
-        me: "audio/sentences/okiru.wav"
-      }
+      romaji: "suru no",
+      hiragana: "するの",
+      english: "do (soft question ending)"
     }
   ]
 },
+
+
+
+
+
 
 
 
@@ -22714,6 +22588,11 @@ const level6 = [
   optionsRomaji: ["atatamaru", "tsumetaku naru", "suzushiku naru", "kooru"],
   optionsEN: ["get warm", "get cold", "get cool", "freeze"],
   correct: "あたたまる",
+
+  fullAudio: {
+    daughter: "audio/sentences/inference10.wav",
+    me:       "audio/sentences/inference10.wav"
+  },
 
   choiceAudio: {
     options: [
@@ -22735,56 +22614,30 @@ const level6 = [
     {
       romaji: "renji",
       hiragana: "レンジ",
-      english: "the microwave",
-      audio: {
-        daughter: "audio/sentences/renji.wav",
-        me: "audio/sentences/renji.wav"
-      }
+      english: "the microwave"
     },
-
     {
       romaji: "ni",
       hiragana: "に",
-      english: "into",
-      audio: {
-        daughter: "audio/sentences/ni.wav",
-        me: "audio/sentences/ni.wav"
-      }
+      english: "into"
     },
-
     {
       romaji: "tabemono",
       hiragana: "たべもの",
-      english: "the food",
-      audio: {
-        daughter: "audio/sentences/tabemono.wav",
-        me: "audio/sentences/tabemono.wav"
-      }
+      english: "the food"
     },
-
     {
       romaji: "wo",
       hiragana: "を",
-      english: "object marker",
-      audio: {
-        daughter: "audio/sentences/wo.wav",
-        me: "audio/sentences/wo.wav"
-      }
+      english: "object marker"
     },
-
     {
       romaji: "ireta",
       hiragana: "いれた",
-      english: "put in",
-      audio: {
-        daughter: "audio/sentences/ireta.wav",
-        me: "audio/sentences/ireta.wav"
-      }
+      english: "put in"
     }
   ]
 },
-
-
 
 
 
@@ -22802,175 +22655,45 @@ const level6 = [
   optionsEN: ["comb hair", "brush teeth", "enter", "change clothes"],
   correct: "はいる",
 
-  /* ⭐ Correct Level 6 MCQ audio: chunk arrays */
+  fullAudio: {
+    daughter: "audio/sentences/inference11.wav",
+    me:       "audio/sentences/inference11.wav"
+  },
+
   choiceAudio: {
     options: [
-      [
-        "audio/sentences/kaminoke.wav",
-        "audio/sentences/wo.wav",
-        "audio/sentences/tokasu.wav"
-      ],
-      [
-        "audio/sentences/ha.wav",
-        "audio/sentences/wo.wav",
-        "audio/sentences/migaku.wav"
-      ],
-      [
-        "audio/sentences/soto.wav",
-        "audio/sentences/ni.wav",
-        "audio/sentences/deru.wav"
-      ],
-      [
-        "audio/sentences/fuku.wav",
-        "audio/sentences/wo.wav",
-        "audio/sentences/kikaeru.wav"
-      ]
+      ["audio/sentences/kaminoke.wav", "audio/sentences/wo.wav", "audio/sentences/tokasu.wav"],
+      ["audio/sentences/ha.wav", "audio/sentences/wo.wav", "audio/sentences/migaku.wav"],
+      ["audio/sentences/hairu.wav"],
+      ["audio/sentences/fuku.wav", "audio/sentences/wo.wav", "audio/sentences/kikaeru.wav"]
     ]
   },
 
-  /* ⭐ meaningAudio must match the same structure */
   meaningAudio: [
-    [
-      "audio/sentences/kaminoke.wav",
-      "audio/sentences/wo.wav",
-      "audio/sentences/tokasu.wav"
-    ],
-    [
-      "audio/sentences/ha.wav",
-      "audio/sentences/wo.wav",
-      "audio/sentences/migaku.wav"
-    ],
-    [
-      "audio/sentences/soto.wav",
-      "audio/sentences/ni.wav",
-      "audio/sentences/deru.wav"
-    ],
-    [
-      "audio/sentences/fuku.wav",
-      "audio/sentences/wo.wav",
-      "audio/sentences/kikaeru.wav"
-    ]
+    ["audio/sentences/kaminoke.wav", "audio/sentences/wo.wav", "audio/sentences/tokasu.wav"],
+    ["audio/sentences/ha.wav", "audio/sentences/wo.wav", "audio/sentences/migaku.wav"],
+    ["audio/sentences/hairu.wav"],
+    ["audio/sentences/fuku.wav", "audio/sentences/wo.wav", "audio/sentences/kikaeru.wav"]
   ],
 
   chunks: [
-    {
-      romaji: "watashi",
-      hiragana: "わたし",
-      english: "I",
-      audio: { daughter: "audio/sentences/watashi.wav", me: "audio/sentences/watashi.wav" }
-    },
-    {
-      romaji: "wa",
-      hiragana: "は",
-      english: "topic marker",
-      audio: { daughter: "audio/sentences/wa.wav", me: "audio/sentences/wa.wav" }
-    },
-    {
-      romaji: "otearai",
-      hiragana: "おてあらい",
-      english: "bathroom",
-      audio: { daughter: "audio/sentences/otearai.wav", me: "audio/sentences/otearai.wav" }
-    },
-    {
-      romaji: "ni",
-      hiragana: "に",
-      english: "into",
-      audio: { daughter: "audio/sentences/ni.wav", me: "audio/sentences/ni.wav" }
-    },
-    {
-      romaji: "haitte",
-      hiragana: "はいって",
-      english: "entered",
-      audio: { daughter: "audio/sentences/haitte.wav", me: "audio/sentences/haitte.wav" }
-    },
-    {
-      romaji: "fuku",
-      hiragana: "ふく",
-      english: "clothes",
-      audio: { daughter: "audio/sentences/fuku.wav", me: "audio/sentences/fuku.wav" }
-    },
-    {
-      romaji: "wo",
-      hiragana: "を",
-      english: "object marker",
-      audio: { daughter: "audio/sentences/wo.wav", me: "audio/sentences/wo.wav" }
-    },
-    {
-      romaji: "nuide",
-      hiragana: "ぬいで",
-      english: "took off",
-      audio: { daughter: "audio/sentences/nuide.wav", me: "audio/sentences/nuide.wav" }
-    },
+    { romaji: "watashi wa", hiragana: "わたしは", english: "I" },
+    { romaji: "otearai ni", hiragana: "おてあらいに", english: "into the bathroom" },
+    { romaji: "haitte", hiragana: "はいって", english: "entered" },
 
-    /* シャワーの → シャワー + の */
-    {
-      romaji: "shawa",
-      hiragana: "シャワー",
-      english: "shower",
-      audio: { daughter: "audio/sentences/shawa.wav", me: "audio/sentences/shawa.wav" }
-    },
-    {
-      romaji: "no",
-      hiragana: "の",
-      english: "of",
-      audio: { daughter: "audio/sentences/no.wav", me: "audio/sentences/no.wav" }
-    },
+    { romaji: "fuku wo", hiragana: "ふくを", english: "my clothes" },
+    { romaji: "nuide", hiragana: "ぬいで", english: "took off" },
 
-    /* じゃぐちを → じゃぐち + を */
-    {
-      romaji: "jaguchi",
-      hiragana: "じゃぐち",
-      english: "faucet",
-      audio: { daughter: "audio/sentences/jaguchi.wav", me: "audio/sentences/jaguchi.wav" }
-    },
-    {
-      romaji: "wo",
-      hiragana: "を",
-      english: "object marker",
-      audio: { daughter: "audio/sentences/wo.wav", me: "audio/sentences/wo.wav" }
-    },
+    { romaji: "shawa no", hiragana: "シャワーの", english: "the shower's" },
+    { romaji: "jaguchi wo", hiragana: "じゃぐちを", english: "faucet" },
+    { romaji: "hinette", hiragana: "ひねって", english: "turned" },
 
-    /* ⭐ Corrected: hinette (ひねって) */
-    {
-      romaji: "hinette",
-      hiragana: "ひねって",
-      english: "turned",
-      audio: { daughter: "audio/sentences/hinete.wav", me: "audio/sentences/hinete.wav" }
-    },
-
-    {
-      romaji: "mizu",
-      hiragana: "みず",
-      english: "water",
-      audio: { daughter: "audio/sentences/mizu.wav", me: "audio/sentences/mizu.wav" }
-    },
-    {
-      romaji: "ga",
-      hiragana: "が",
-      english: "subject marker",
-      audio: { daughter: "audio/sentences/ga.wav", me: "audio/sentences/ga.wav" }
-    },
-    {
-      romaji: "atatamaru",
-      hiragana: "あたたまる",
-      english: "warm up",
-      audio: { daughter: "audio/sentences/atatamaru.wav", me: "audio/sentences/atatamaru.wav" }
-    },
-    {
-      romaji: "made",
-      hiragana: "まで",
-      english: "until",
-      audio: { daughter: "audio/sentences/made.wav", me: "audio/sentences/made.wav" }
-    },
-    {
-      romaji: "matta",
-      hiragana: "まった",
-      english: "waited",
-      audio: { daughter: "audio/sentences/matta.wav", me: "audio/sentences/matta.wav" }
-    }
+    { romaji: "mizu ga", hiragana: "みずが", english: "the water" },
+    { romaji: "atatamaru", hiragana: "あたたまる", english: "warm up" },
+    { romaji: "made", hiragana: "まで", english: "until" },
+    { romaji: "matta", hiragana: "まった", english: "waited" }
   ]
 },
-
 
 
 
@@ -22986,179 +22709,65 @@ const level6 = [
   optionsEN: ["the TV turns on", "fall asleep", "cook food", "go outside"],
   correct: "テレビがつく",
 
+  fullAudio: {
+    daughter: "audio/sentences/inference12.wav",
+    me:       "audio/sentences/inference12.wav"
+  },
+
   choiceAudio: {
     options: [
-      [
-        "audio/sentences/terebi.wav",
-        "audio/sentences/ga.wav",
-        "audio/sentences/tsuku.wav"
-      ],
-      [
-        "audio/sentences/nemuru.wav"
-      ],
-      [
-        "audio/sentences/ryouri.wav",
-        "audio/sentences/wo.wav",
-        "audio/sentences/suru.wav"
-      ],
-      [
-        "audio/sentences/soto.wav",
-        "audio/sentences/ni.wav",
-        "audio/sentences/deru.wav"
-      ]
+      ["audio/sentences/terebi.wav", "audio/sentences/ga.wav", "audio/sentences/tsuku.wav"],
+      ["audio/sentences/nemuru.wav"],
+      ["audio/sentences/ryouri.wav", "audio/sentences/wo.wav", "audio/sentences/suru.wav"],
+      ["audio/sentences/soto.wav", "audio/sentences/ni.wav", "audio/sentences/deru.wav"]
     ]
   },
 
   meaningAudio: [
-    [
-      "audio/sentences/terebi.wav",
-      "audio/sentences/ga.wav",
-      "audio/sentences/tsuku.wav"
-    ],
-    [
-      "audio/sentences/nemuru.wav"
-    ],
-    [
-      "audio/sentences/ryouri.wav",
-      "audio/sentences/wo.wav",
-      "audio/sentences/suru.wav"
-    ],
-    [
-      "audio/sentences/soto.wav",
-      "audio/sentences/ni.wav",
-      "audio/sentences/deru.wav"
-    ]
+    ["audio/sentences/terebi.wav", "audio/sentences/ga.wav", "audio/sentences/tsuku.wav"],
+    ["audio/sentences/nemuru.wav"],
+    ["audio/sentences/ryouri.wav", "audio/sentences/wo.wav", "audio/sentences/suru.wav"],
+    ["audio/sentences/soto.wav", "audio/sentences/ni.wav", "audio/sentences/deru.wav"]
   ],
 
   chunks: [
-    {
-      romaji: "watashi",
-      hiragana: "わたし",
-      english: "I",
-      audio: { daughter: "audio/sentences/watashi.wav", me: "audio/sentences/watashi.wav" }
-    },
-    {
-      romaji: "wa",
-      hiragana: "は",
-      english: "topic marker",
-      audio: { daughter: "audio/sentences/wa.wav", me: "audio/sentences/wa.wav" }
-    },
-    {
-      romaji: "igokochiyoku",
-      hiragana: "いごこちよく",
-      english: "comfortably",
-      audio: { daughter: "audio/sentences/igokochiyoku.wav", me: "audio/sentences/igokochiyoku.wav" }
-    },
-    {
-      romaji: "suwatte",
-      hiragana: "すわって",
-      english: "sat",
-      audio: { daughter: "audio/sentences/suwatte.wav", me: "audio/sentences/suwatte.wav" }
-    },
-    {
-      romaji: "te",
-      hiragana: "て",
-      english: "hand",
-      audio: { daughter: "audio/sentences/te.wav", me: "audio/sentences/te.wav" }
-    },
-    {
-      romaji: "no",
-      hiragana: "の",
-      english: "of",
-      audio: { daughter: "audio/sentences/no.wav", me: "audio/sentences/no.wav" }
-    },
-    {
-      romaji: "todoku",
-      hiragana: "とどく",
-      english: "within reach",
-      audio: { daughter: "audio/sentences/todoku.wav", me: "audio/sentences/todoku.wav" }
-    },
-    {
-      romaji: "tokoro",
-      hiragana: "ところ",
-      english: "place",
-      audio: { daughter: "audio/sentences/tokoro.wav", me: "audio/sentences/tokoro.wav" }
-    },
-    {
-      romaji: "no",
-      hiragana: "の",
-      english: "of",
-      audio: { daughter: "audio/sentences/no.wav", me: "audio/sentences/no.wav" }
-    },
-    {
-      romaji: "rimokon",
-      hiragana: "リモコン",
-      english: "remote",
-      audio: { daughter: "audio/sentences/rimokon.wav", me: "audio/sentences/rimokon.wav" }
-    },
-    {
-      romaji: "wo",
-      hiragana: "を",
-      english: "object marker",
-      audio: { daughter: "audio/sentences/wo.wav", me: "audio/sentences/wo.wav" }
-    },
-    {
-      romaji: "mochiagete",
-      hiragana: "もちあげて",
-      english: "picked up",
-      audio: { daughter: "audio/sentences/mochiagete.wav", me: "audio/sentences/mochiagete.wav" }
-    },
-    {
-      romaji: "neratte",
-      hiragana: "ねらって",
-      english: "aimed",
-      audio: { daughter: "audio/sentences/neratte.wav", me: "audio/sentences/neratte.wav" }
-    },
-    {
-      romaji: "botan",
-      hiragana: "ボタン",
-      english: "button",
-      audio: { daughter: "audio/sentences/botan.wav", me: "audio/sentences/botan.wav" }
-    },
-    {
-      romaji: "wo",
-      hiragana: "を",
-      english: "object marker",
-      audio: { daughter: "audio/sentences/wo.wav", me: "audio/sentences/wo.wav" }
-    },
-    {
-      romaji: "oshimashita",
-      hiragana: "おしました",
-      english: "pressed",
-      audio: { daughter: "audio/sentences/oshimashita.wav", me: "audio/sentences/oshimashita.wav" }
-    },
-    {
-      romaji: "tsugi",
-      hiragana: "つぎ",
-      english: "next",
-      audio: { daughter: "audio/sentences/tsugi.wav", me: "audio/sentences/tsugi.wav" }
-    },
-    {
-      romaji: "ni",
-      hiragana: "に",
-      english: "in",
-      audio: { daughter: "audio/sentences/ni.wav", me: "audio/sentences/ni.wav" }
-    },
-    {
-      romaji: "dou",
-      hiragana: "どう",
-      english: "what",
-      audio: { daughter: "audio/sentences/dou.wav", me: "audio/sentences/dou.wav" }
-    },
-    {
-      romaji: "naru",
-      hiragana: "なる",
-      english: "will happen",
-      audio: { daughter: "audio/sentences/naru.wav", me: "audio/sentences/naru.wav" }
-    },
-    {
-      romaji: "no",
-      hiragana: "の",
-      english: "?",
-      audio: { daughter: "audio/sentences/no.wav", me: "audio/sentences/no.wav" }
-    }
+    { romaji: "watashi wa", hiragana: "わたしは", english: "I" },
+    { romaji: "igokochiyoku", hiragana: "いごこちよく", english: "comfortably" },
+    { romaji: "suwatte", hiragana: "すわって", english: "sat" },
+
+    { romaji: "te no todoku tokoro no", hiragana: "てのとどくところの", english: "within reach" },
+    { romaji: "rimokon wo", hiragana: "リモコンを", english: "the remote" },
+    { romaji: "mochiagete", hiragana: "もちあげて", english: "picked up" },
+
+    { romaji: "neratte", hiragana: "ねらって", english: "aimed" },
+    { romaji: "botan wo", hiragana: "ボタンを", english: "the button" },
+    { romaji: "oshite", hiragana: "おして", english: "pressed" },
+
+    { romaji: "tsugi ni", hiragana: "つぎに", english: "next" },
+    { romaji: "dou naru no", hiragana: "どうなるの", english: "what happens" }
   ]
-},
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ];
@@ -23246,48 +22855,23 @@ L6.mcqRailguards = function () {
 ========================================================== */
 
 
-L6.playChunkSequence6 = function (i = 0, callback, chunksArray) {
-  const chunks = chunksArray;
+ 
 
-  // ⭐ Snapshot generation
-  const myGen = L6.audio.generation;
+L6.playSentence = function (callback, audioObj) {
+  const myGen = ++L6.audio.generation;
 
-  // ⭐ Cancel guard
   if (L6.audio.cancelToken.cancel) return;
 
-  // ⭐ End of sequence
-  if (!Array.isArray(chunks) || i >= chunks.length) {
-    if (!L6.audio.cancelToken.cancel &&
-        myGen === L6.audio.generation &&
-        typeof callback === "function") {
-      callback();
-    }
-    return;
-  }
-
-  // ⭐ Random voice
   let voice = Math.random() < 0.5 ? "daughter" : "me";
-  let file = chunks[i].audio?.[voice];
+  let file = audioObj?.[voice];
 
-  // ⭐ Fallback voice
   if (!file) {
     voice = voice === "daughter" ? "me" : "daughter";
-    file = chunks[i].audio?.[voice];
+    file = audioObj?.[voice];
   }
 
-  // ⭐ If still no file → skip chunk
-  if (!file) {
-    if (L6.audio.cancelToken.cancel || myGen !== L6.audio.generation) return;
-    L6.playChunkSequence6(i + 1, callback, chunks);
-    return;
-  }
+  if (!file) return;
 
-  // ⭐ Ensure correct path
-  if (!file.startsWith("audio/")) {
-    file = "audio/sentences/" + file;
-  }
-
-  // ⭐ Shared audio element
   if (!L6.audio.current) {
     L6.audio.current = new Audio();
   }
@@ -23295,36 +22879,31 @@ L6.playChunkSequence6 = function (i = 0, callback, chunksArray) {
   const audio = L6.audio.current;
   audio.src = file;
 
-  const advance = () => {
-    if (L6.audio.cancelToken.cancel) return;
+  const finish = () => {
     if (myGen !== L6.audio.generation) return;
-    L6.playChunkSequence6(i + 1, callback, chunks);
+    if (!L6.audio.cancelToken.cancel && typeof callback === "function") {
+      callback();
+    }
   };
 
-  // ⭐ Safety timeout
-  let safety = setTimeout(() => {
-    if (L6.audio.cancelToken.cancel || myGen !== L6.audio.generation) return;
-    advance();
-  }, 10000);
+  let safety = setTimeout(finish, 10000);
 
   audio.onended = () => {
-    if (L6.audio.cancelToken.cancel || myGen !== L6.audio.generation) return;
     clearTimeout(safety);
-    advance();
+    finish();
   };
 
   audio.onerror = () => {
-    if (L6.audio.cancelToken.cancel || myGen !== L6.audio.generation) return;
     clearTimeout(safety);
-    advance();
+    finish();
   };
 
   audio.play().catch(() => {
-    if (L6.audio.cancelToken.cancel || myGen !== L6.audio.generation) return;
     clearTimeout(safety);
-    advance();
+    finish();
   });
 };
+
 
 
 
@@ -23589,7 +23168,11 @@ L6.screen1 = function () {
   const sentence = L6.dataset[Math.floor(Math.random() * L6.dataset.length)];
   L6.setCurrentSentence(sentence);
 
-  const chunksToPlay = sentence.chunks;
+  // ❌ REMOVE chunk audio reference
+  // const chunksToPlay = sentence.chunks;
+
+  // ⭐ NEW: full‑sentence audio
+  const audioObj = sentence.fullAudio;
 
   // ⭐ Show Level 6 Screen 1 (now guaranteed visible)
   L6.show("level6Screen1");
@@ -23599,17 +23182,31 @@ L6.screen1 = function () {
 
   L6.renderProgress("level6Screen1");
 
-  if (!chunksToPlay || chunksToPlay.length === 0) {
+  // ❌ REMOVE chunk length check
+  // if (!chunksToPlay || chunksToPlay.length === 0) {
+  //   L6.screen2();
+  //   return;
+  // }
+
+  // ⭐ NEW: full‑audio fallback
+  if (!audioObj) {
     L6.screen2();
     return;
   }
 
   L6.audio.current = null;
 
-  L6.playChunkSequence6(0, () => {
+  // ❌ REMOVE chunk playback
+  // L6.playChunkSequence6(0, () => {
+  //   L6.screen2();
+  // }, chunksToPlay);
+
+  // ⭐ NEW: full‑sentence playback
+  L6.playSentence(() => {
     L6.screen2();
-  }, chunksToPlay);
+  }, audioObj);
 };
+
 
 
 
@@ -23655,7 +23252,7 @@ L6.screen2 = function () {
     mcqBox.appendChild(btn);
   });
 
-  // Replay button
+  // ⭐ Replay button — ONLY CHANGE NEEDED
   if (replayBtn) {
     replayBtn.onclick = () => {
       if (L6.mcqLocked) return;
@@ -23664,10 +23261,15 @@ L6.screen2 = function () {
       L6.audio.cancelToken.cancel = false;
       L6.audio.generation++;
 
-      L6.playChunkSequence6(0, () => {}, s.chunks);
+      // ❌ OLD:
+      // L6.playChunkSequence6(0, () => {}, s.chunks);
+
+      // ⭐ NEW (minimal change):
+      L6.playSentence(() => {}, s.fullAudio);
     };
   }
 };
+
 
 /* ==========================================================
    ⭐ LEVEL 6 — HANDLE MCQ
@@ -23740,7 +23342,7 @@ L6.showRoundSummary = function () {
   cont.innerHTML = "";
 
   s.chunks.forEach(chunk => {
-     console.log("L6 DEBUG — chunk object:", chunk);   // ⭐ ADD THIS LINE
+    console.log("L6 DEBUG — chunk object:", chunk);   // ⭐ ADD THIS LINE
     const row = document.createElement("div");
     row.className = "summary-row";
     row.innerHTML = `
@@ -23760,7 +23362,11 @@ L6.showRoundSummary = function () {
     L6.audio.generation++;
     L6.audio.current = null;
 
-    L6.playChunkSequence6(0, () => {}, s.chunks);
+    // ❌ OLD:
+    // L6.playChunkSequence6(0, () => {}, s.chunks);
+
+    // ⭐ NEW (minimal change only):
+    L6.playSentence(() => {}, s.fullAudio);
   };
 
   // ⭐ Next button
@@ -23799,6 +23405,7 @@ L6.showRoundSummary = function () {
 
 
 
+
 /* ==========================================================
    ⭐ LEVEL 6 — FINAL SUMMARY
 ========================================================== */
@@ -23832,7 +23439,11 @@ function showLevel6FinalSummary() {
       L6.audio.cancelToken.cancel = false;
       L6.audio.generation++;
 
-      L6.playChunkSequence6(0, () => {}, s.chunks);
+      // ❌ OLD:
+      // L6.playChunkSequence6(0, () => {}, s.chunks);
+
+      // ⭐ NEW (minimal change only):
+      L6.playSentence(() => {}, s.fullAudio);
     };
   }
 
@@ -23857,6 +23468,7 @@ function showLevel6FinalSummary() {
     };
   }
 }
+
 
 
 /* ==========================================================
