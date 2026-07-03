@@ -319,9 +319,3 @@ body {
   background: #333;
 }
 
-
-/* Hard-kill any leftover Level 1 objects on Screen 3 */
-#screen3 .level-block,
-#screen3 .level-block * {
-  display: none !important;
-}
