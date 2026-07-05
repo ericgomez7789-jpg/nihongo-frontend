@@ -17584,20 +17584,35 @@ const level4 = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
-  id: "l4_003",
-  level: 4,
+  "id": "l4_003",
+  "level": 4,
 
-  jp: "かばんをあけたらさいふがみつからなかった",
-  meaning: "When I opened my bag, I couldn’t find my wallet.",
-  englishAudio: "audio/sentences/english_wallet.wav",
+  "jp": "かばんをあけたらさいふがみつからなかった",
+  "meaning": "When I opened my bag, I couldn’t find my wallet.",
+  "englishAudio": "audio/sentences/english_wallet.wav",
 
-  interjectionQuestion: "How would a listener interject?",
-  correctInterjection: "あら！",
-  distractors: ["えー", "ふむふむ"],
+  "interjectionQuestion": "How would a listener interject?",
+  "correctInterjection": "あら！",
+  "distractors": ["えっ", "ふむふむ"],
 
-  audio: {
-    daughter: [
+  "audio": {
+    "daughter": [
       "audio/sentences/kaban.wav",
       "audio/sentences/wo.wav",
       "audio/sentences/aketara.wav",
@@ -17605,7 +17620,7 @@ const level4 = [
       "audio/sentences/ga.wav",
       "audio/sentences/mitsukaranakatta.wav"
     ],
-    me: [
+    "me": [
       "audio/sentences/kaban.wav",
       "audio/sentences/wo.wav",
       "audio/sentences/aketara.wav",
@@ -17615,42 +17630,42 @@ const level4 = [
     ]
   },
 
-  chunks: [
+  "chunks": [
     {
-      romaji: "kaban",
-      hiragana: "かばん",
-      meaning: "bag",
-      audio: { daughter: "audio/sentences/kaban.wav", me: "audio/sentences/kaban.wav" }
+      "romaji": "kaban",
+      "hiragana": "かばん",
+      "meaning": "bag",
+      "audio": { "daughter": "audio/sentences/kaban.wav", "me": "audio/sentences/kaban.wav" }
     },
     {
-      romaji: "wo",
-      hiragana: "を",
-      meaning: "(object marker)",
-      audio: { daughter: "audio/sentences/wo.wav", me: "audio/sentences/wo.wav" }
+      "romaji": "wo",
+      "hiragana": "を",
+      "meaning": "(object marker)",
+      "audio": { "daughter": "audio/sentences/wo.wav", "me": "audio/sentences/wo.wav" }
     },
     {
-      romaji: "aketara",
-      hiragana: "あけたら",
-      meaning: "opened",
-      audio: { daughter: "audio/sentences/aketara.wav", me: "audio/sentences/aketara.wav" }
+      "romaji": "aketara",
+      "hiragana": "あけたら",
+      "meaning": "opened",
+      "audio": { "daughter": "audio/sentences/aketara.wav", "me": "audio/sentences/aketara.wav" }
     },
     {
-      romaji: "saifu",
-      hiragana: "さいふ",
-      meaning: "wallet",
-      audio: { daughter: "audio/sentences/saifu.wav", me: "audio/sentences/saifu.wav" }
+      "romaji": "saifu",
+      "hiragana": "さいふ",
+      "meaning": "wallet",
+      "audio": { "daughter": "audio/sentences/saifu.wav", "me": "audio/sentences/saifu.wav" }
     },
     {
-      romaji: "ga",
-      hiragana: "が",
-      meaning: "(subject marker)",
-      audio: { daughter: "audio/sentences/ga.wav", me: "audio/sentences/ga.wav" }
+      "romaji": "ga",
+      "hiragana": "が",
+      "meaning": "(subject marker)",
+      "audio": { "daughter": "audio/sentences/ga.wav", "me": "audio/sentences/ga.wav" }
     },
     {
-      romaji: "mitsukaranakatta",
-      hiragana: "みつからなかった",
-      meaning: "couldn’t be found",
-      audio: { daughter: "audio/sentences/mitsukaranakatta.wav", me: "audio/sentences/mitsukaranakatta.wav" }
+      "romaji": "mitsukaranakatta",
+      "hiragana": "みつからなかった",
+      "meaning": "couldn’t be found",
+      "audio": { "daughter": "audio/sentences/mitsukaranakatta.wav", "me": "audio/sentences/mitsukaranakatta.wav" }
     }
   ]
 },
@@ -18929,6 +18944,473 @@ const level4 = [
 },
 
 
+
+
+
+
+
+{
+  "id": "l4_019",
+  "level": 4,
+
+  "jp": "たいへんなノルマをおえてほっとした",
+  "meaning": "After finishing a tough quota, I felt relieved.",
+  "englishAudio": "audio/sentences/english_relief2.wav",
+
+  "interjectionQuestion": "How would a listener interject?",
+  "correctInterjection": "よかったねぇ",
+  "distractors": ["へぇ〜", "そうなんだ"],
+
+  "audio": {
+    "daughter": [
+      "audio/sentences/taihen.wav",
+      "audio/sentences/noruma.wav",
+      "audio/sentences/wo.wav",
+      "audio/sentences/oete.wav",
+      "audio/sentences/hotto_shita.wav",
+     
+    ],
+    "me": [
+      "audio/sentences/taihen.wav",
+      "audio/sentences/noruma.wav",
+      "audio/sentences/wo.wav",
+      "audio/sentences/oete.wav",
+      "audio/sentences/hotto_shita.wav",
+      
+    ]
+  },
+
+  "chunks": [
+    {
+      "romaji": "taihen",
+      "hiragana": "たいへん",
+      "meaning": "tough / difficult",
+      "audio": { "daughter": "audio/sentences/taihen.wav", "me": "audio/sentences/taihen.wav" }
+    },
+    {
+      "romaji": "noruma",
+      "hiragana": "ノルマ",
+      "meaning": "quota / required amount",
+      "audio": { "daughter": "audio/sentences/noruma.wav", "me": "audio/sentences/noruma.wav" }
+    },
+    {
+      "romaji": "wo",
+      "hiragana": "を",
+      "meaning": "object marker",
+      "audio": { "daughter": "audio/sentences/wo.wav", "me": "audio/sentences/wo.wav" }
+    },
+    {
+      "romaji": "oete",
+      "hiragana": "おえて",
+      "meaning": "finished / completed",
+      "audio": { "daughter": "audio/sentences/oete.wav", "me": "audio/sentences/oete.wav" }
+    },
+    {
+      "romaji": "hotto shita",
+      "hiragana": "ほっとした",
+      "meaning": "relieved",
+      "audio": { "daughter": "audio/sentences/hotto_shita.wav", "me": "audio/sentences/hotto_shita.wav" }
+    }
+  ]
+},
+
+
+
+
+
+
+
+{
+  "id": "l4_020",
+  "level": 4,
+
+  "jp": "ずっとほうっておいたしごとをかたづけてすっきりした",
+  "meaning": "After finally taking care of something I’d been putting off, I felt refreshed.",
+  "englishAudio": "audio/sentences/english_refreshed.wav",
+
+  "interjectionQuestion": "How would a listener interject?",
+  "correctInterjection": "そっかぁ",
+  "distractors": ["へぇ〜", "そうなんだ"],
+
+  "audio": {
+    "daughter": [
+      "audio/sentences/zutto.wav",
+      "audio/sentences/houtte.wav",
+      "audio/sentences/oita.wav",
+      "audio/sentences/shigoto.wav",
+      "audio/sentences/katadzukete.wav",
+      "audio/sentences/sukkiri.wav",
+      "audio/sentences/shita.wav"
+    ],
+    "me": [
+      "audio/sentences/zutto.wav",
+      "audio/sentences/houtte.wav",
+      "audio/sentences/oita.wav",
+      "audio/sentences/shigoto.wav",
+      "audio/sentences/katadzukete.wav",
+      "audio/sentences/sukkiri.wav",
+      "audio/sentences/shita.wav"
+    ]
+  },
+
+  "chunks": [
+    {
+      "romaji": "zutto",
+      "hiragana": "ずっと",
+      "meaning": "for a long time",
+      "audio": { "daughter": "audio/sentences/zutto.wav", "me": "audio/sentences/zutto.wav" }
+    },
+    {
+      "romaji": "houtte",
+      "hiragana": "ほうって",
+      "meaning": "left alone / neglected",
+      "audio": { "daughter": "audio/sentences/houtte.wav", "me": "audio/sentences/houtte.wav" }
+    },
+    {
+      "romaji": "oita",
+      "hiragana": "おいた",
+      "meaning": "left / put",
+      "audio": { "daughter": "audio/sentences/oita.wav", "me": "audio/sentences/oita.wav" }
+    },
+    {
+      "romaji": "shigoto",
+      "hiragana": "しごと",
+      "meaning": "task / work",
+      "audio": { "daughter": "audio/sentences/shigoto.wav", "me": "audio/sentences/shigoto.wav" }
+    },
+    {
+      "romaji": "katadzukete",
+      "hiragana": "かたづけて",
+      "meaning": "cleaned up / took care of",
+      "audio": { "daughter": "audio/sentences/katadzukete.wav", "me": "audio/sentences/katadzukete.wav" }
+    },
+    {
+      "romaji": "sukkiri",
+      "hiragana": "すっきり",
+      "meaning": "refreshed / relieved",
+      "audio": { "daughter": "audio/sentences/sukkiri.wav", "me": "audio/sentences/sukkiri.wav" }
+    },
+    {
+      "romaji": "shita",
+      "hiragana": "した",
+      "meaning": "did / felt",
+      "audio": { "daughter": "audio/sentences/shita.wav", "me": "audio/sentences/shita.wav" }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  "id": "l4_020",
+  "level": 4,
+
+  "jp": "むすこがけわしくてたかいいわのかべをのぼっているのをみてはらはらしました",
+  "meaning": "Watching my son climb a steep, high rock wall made me feel nervous.",
+  "englishAudio": "audio/sentences/english_harahara.wav",
+
+  "interjectionQuestion": "How would a listener interject?",
+  "correctInterjection": "えぇ〜！",
+  "distractors": ["そっかぁ", "そうなんだ"],
+
+  "audio": {
+    "daughter": [
+      "audio/sentences/musuko.wav",
+      "audio/sentences/kewashikute.wav",
+      "audio/sentences/takai.wav",
+      "audio/sentences/iwa.wav",
+      "audio/sentences/kabe.wav",
+      "audio/sentences/wo.wav",
+      "audio/sentences/nobotte.wav",
+      "audio/sentences/iru.wav",
+      "audio/sentences/no.wav",
+      "audio/sentences/wo.wav",
+      "audio/sentences/mite.wav",
+      "audio/sentences/harahara_shimashita.wav",
+      
+    ],
+    "me": [
+      "audio/sentences/musuko.wav",
+      "audio/sentences/kewashikute.wav",
+      "audio/sentences/takai.wav",
+      "audio/sentences/iwa.wav",
+      "audio/sentences/kabe.wav",
+      "audio/sentences/wo.wav",
+      "audio/sentences/nobotte.wav",
+      "audio/sentences/iru.wav",
+      "audio/sentences/no.wav",
+      "audio/sentences/wo.wav",
+      "audio/sentences/mite.wav",
+      "audio/sentences/harahara_shimashita.wav",
+      
+    ]
+  },
+
+  "chunks": [
+    {
+      "romaji": "musuko",
+      "hiragana": "むすこ",
+      "meaning": "son",
+      "audio": { "daughter": "audio/sentences/musuko.wav", "me": "audio/sentences/musuko.wav" }
+    },
+    {
+      "romaji": "kewashikute",
+      "hiragana": "けわしくて",
+      "meaning": "steep / rugged",
+      "audio": { "daughter": "audio/sentences/kewashikute.wav", "me": "audio/sentences/kewashikute.wav" }
+    },
+    {
+      "romaji": "takai",
+      "hiragana": "たかい",
+      "meaning": "high",
+      "audio": { "daughter": "audio/sentences/takai.wav", "me": "audio/sentences/takai.wav" }
+    },
+    {
+      "romaji": "iwa",
+      "hiragana": "いわ",
+      "meaning": "rock",
+      "audio": { "daughter": "audio/sentences/iwa.wav", "me": "audio/sentences/iwa.wav" }
+    },
+    {
+      "romaji": "kabe",
+      "hiragana": "かべ",
+      "meaning": "wall",
+      "audio": { "daughter": "audio/sentences/kabe.wav", "me": "audio/sentences/kabe.wav" }
+    },
+    {
+      "romaji": "wo",
+      "hiragana": "を",
+      "meaning": "object marker",
+      "audio": { "daughter": "audio/sentences/wo.wav", "me": "audio/sentences/wo.wav" }
+    },
+    {
+      "romaji": "nobotte",
+      "hiragana": "のぼって",
+      "meaning": "climbing (te‑form)",
+      "audio": { "daughter": "audio/sentences/nobotte.wav", "me": "audio/sentences/nobotte.wav" }
+    },
+    {
+      "romaji": "iru",
+      "hiragana": "いる",
+      "meaning": "being / doing (progressive)",
+      "audio": { "daughter": "audio/sentences/iru.wav", "me": "audio/sentences/iru.wav" }
+    },
+    {
+      "romaji": "no",
+      "hiragana": "の",
+      "meaning": "nominalizer",
+      "audio": { "daughter": "audio/sentences/no.wav", "me": "audio/sentences/no.wav" }
+    },
+    {
+      "romaji": "wo",
+      "hiragana": "を",
+      "meaning": "object marker",
+      "audio": { "daughter": "audio/sentences/wo.wav", "me": "audio/sentences/wo.wav" }
+    },
+    {
+      "romaji": "mite",
+      "hiragana": "みて",
+      "meaning": "watching",
+      "audio": { "daughter": "audio/sentences/mite.wav", "me": "audio/sentences/mite.wav" }
+    },
+    {
+      "romaji": "harahara shimashita",
+      "hiragana": "はらはら しました",
+      "meaning": "nervous / on edge",
+      "audio": { "daughter": "audio/sentences/harahara_shimashita.wav", "me": "audio/sentences/harahara_shimashita.wav" }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  "id": "l4_021",
+  "level": 4,
+
+  "jp": "むすめががけからとびおりてみずにもぐるのをみてこころがどきどきしました",
+  "meaning": "Watching my daughter jump off the cliff and dive into the water made my heart race.",
+  "englishAudio": "audio/sentences/english_dokidoki.wav",
+
+  "interjectionQuestion": "How would a listener interject?",
+  "correctInterjection": "えぇ〜！",
+  "distractors": ["そっかぁ", "そうなんだ"],
+
+  "audio": {
+    "daughter": [
+      "audio/sentences/musume.wav",
+      "audio/sentences/gake.wav",
+      "audio/sentences/kara.wav",
+      "audio/sentences/tobiorite.wav",
+      "audio/sentences/mizu.wav",
+      "audio/sentences/ni.wav",
+      "audio/sentences/moguru.wav",
+      "audio/sentences/no.wav",
+      "audio/sentences/wo.wav",
+      "audio/sentences/mite.wav",
+      "audio/sentences/kokoro.wav",
+      "audio/sentences/dokidoki.wav",
+      "audio/sentences/shimashita.wav"
+    ],
+    "me": [
+      "audio/sentences/musume.wav",
+      "audio/sentences/gake.wav",
+      "audio/sentences/kara.wav",
+      "audio/sentences/tobiorite.wav",
+      "audio/sentences/mizu.wav",
+      "audio/sentences/ni.wav",
+      "audio/sentences/moguru.wav",
+      "audio/sentences/no.wav",
+      "audio/sentences/wo.wav",
+      "audio/sentences/mite.wav",
+      "audio/sentences/kokoro.wav",
+      "audio/sentences/dokidoki.wav",
+      "audio/sentences/shimashita.wav"
+    ]
+  },
+
+  "chunks": [
+    {
+      "romaji": "musume",
+      "hiragana": "むすめ",
+      "meaning": "daughter",
+      "audio": { "daughter": "audio/sentences/musume.wav", "me": "audio/sentences/musume.wav" }
+    },
+    {
+      "romaji": "gake",
+      "hiragana": "がけ",
+      "meaning": "cliff",
+      "audio": { "daughter": "audio/sentences/gake.wav", "me": "audio/sentences/gake.wav" }
+    },
+    {
+      "romaji": "kara",
+      "hiragana": "から",
+      "meaning": "from",
+      "audio": { "daughter": "audio/sentences/kara.wav", "me": "audio/sentences/kara.wav" }
+    },
+    {
+      "romaji": "tobiorite",
+      "hiragana": "とびおりて",
+      "meaning": "jumping down / leaping off",
+      "audio": { "daughter": "audio/sentences/tobiorite.wav", "me": "audio/sentences/tobiorite.wav" }
+    },
+    {
+      "romaji": "mizu",
+      "hiragana": "みず",
+      "meaning": "water",
+      "audio": { "daughter": "audio/sentences/mizu.wav", "me": "audio/sentences/mizu.wav" }
+    },
+    {
+      "romaji": "ni",
+      "hiragana": "に",
+      "meaning": "into",
+      "audio": { "daughter": "audio/sentences/ni.wav", "me": "audio/sentences/ni.wav" }
+    },
+    {
+      "romaji": "moguru",
+      "hiragana": "もぐる",
+      "meaning": "to dive",
+      "audio": { "daughter": "audio/sentences/moguru.wav", "me": "audio/sentences/moguru.wav" }
+    },
+    {
+      "romaji": "no",
+      "hiragana": "の",
+      "meaning": "nominalizer",
+      "audio": { "daughter": "audio/sentences/no.wav", "me": "audio/sentences/no.wav" }
+    },
+    {
+      "romaji": "wo",
+      "hiragana": "を",
+      "meaning": "object marker",
+      "audio": { "daughter": "audio/sentences/wo.wav", "me": "audio/sentences/wo.wav" }
+    },
+    {
+      "romaji": "mite",
+      "hiragana": "みて",
+      "meaning": "watching",
+      "audio": { "daughter": "audio/sentences/mite.wav", "me": "audio/sentences/mite.wav" }
+    },
+    {
+      "romaji": "kokoro",
+      "hiragana": "こころ",
+      "meaning": "heart",
+      "audio": { "daughter": "audio/sentences/kokoro.wav", "me": "audio/sentences/kokoro.wav" }
+    },
+    {
+      "romaji": "dokidoki",
+      "hiragana": "どきどき",
+      "meaning": "heart racing / nervous excitement",
+      "audio": { "daughter": "audio/sentences/dokidoki.wav", "me": "audio/sentences/dokidoki.wav" }
+    },
+    {
+      "romaji": "shimashita",
+      "hiragana": "しました",
+      "meaning": "felt / did",
+      "audio": { "daughter": "audio/sentences/shimashita.wav", "me": "audio/sentences/shimashita.wav" }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 /* ==========================================================
@@ -19482,13 +19964,17 @@ L4.startRound = function () {
 
   L4.mcqLocked = false;
 
-  // ⭐ Mirror Level 3: linear progression
-  const sentence = L4.dataset[L4.round];
+  // ⭐ Randomize sentence selection (no chunk randomization)
+  const randomIndex = Math.floor(Math.random() * L4.dataset.length);
+  const sentence = L4.dataset[randomIndex];
+
   L4.setCurrentSentence(sentence);
   L4.currentSentenceObj = sentence;
 
   L4.screen1();
 };
+
+
 
 
 L4.screen1 = function () {
