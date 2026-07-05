@@ -19113,7 +19113,7 @@ const level4 = [
 
 
 {
-  "id": "l4_020",
+  "id": "l4_021",
   "level": 4,
 
   "jp": "むすこがけわしくてたかいいわのかべをのぼっているのをみてはらはらしました",
@@ -19248,7 +19248,7 @@ const level4 = [
 
 
 {
-  "id": "l4_021",
+  "id": "l4_022",
   "level": 4,
 
   "jp": "むすめががけからとびおりてみずにもぐるのをみてこころがどきどきしました",
@@ -19272,8 +19272,8 @@ const level4 = [
       "audio/sentences/wo.wav",
       "audio/sentences/mite.wav",
       "audio/sentences/kokoro.wav",
-      "audio/sentences/dokidoki.wav",
-      "audio/sentences/shimashita.wav"
+      "audio/sentences/dokidoki_shimashita.wav",
+      
     ],
     "me": [
       "audio/sentences/musume.wav",
@@ -19287,8 +19287,8 @@ const level4 = [
       "audio/sentences/wo.wav",
       "audio/sentences/mite.wav",
       "audio/sentences/kokoro.wav",
-      "audio/sentences/dokidoki.wav",
-      "audio/sentences/shimashita.wav"
+      "audio/sentences/dokidoki_shimashita.wav",
+      
     ]
   },
 
@@ -19361,15 +19361,114 @@ const level4 = [
     },
     {
       "romaji": "dokidoki",
-      "hiragana": "どきどき",
+      "hiragana": "どきどきしました",
       "meaning": "heart racing / nervous excitement",
-      "audio": { "daughter": "audio/sentences/dokidoki.wav", "me": "audio/sentences/dokidoki.wav" }
+      "audio": { "daughter": "audio/sentences/dokidoki_shimashita.wav", "me": "audio/sentences/dokidoki_shimashita.wav" }
+    },
+    
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  "id": "l4_023",
+  "level": 4,
+
+  "jp": "「まなぶ」っていうとすぐむすめがぷんぷんしました",
+  "meaning": "When I mentioned 'studying', my daughter immediately got angry.",
+  "englishAudio": "audio/sentences/english_punpun.wav",
+
+  "interjectionQuestion": "How would a listener interject?",
+  "correctInterjection": "えぇ〜！",
+  "distractors": ["そっかぁ", "そうなんだ"],
+
+  "audio": {
+    "daughter": [
+      "audio/sentences/manabu.wav",
+      "audio/sentences/tte.wav",
+      "audio/sentences/iu.wav",
+      "audio/sentences/to.wav",
+      "audio/sentences/sugu.wav",
+      "audio/sentences/musume.wav",
+      "audio/sentences/ga.wav",
+      "audio/sentences/punpun_shimashita.wav"
+    ],
+    "me": [
+      "audio/sentences/manabu.wav",
+      "audio/sentences/tte.wav",
+      "audio/sentences/iu.wav",
+      "audio/sentences/to.wav",
+      "audio/sentences/sugu.wav",
+      "audio/sentences/musume.wav",
+      "audio/sentences/ga.wav",
+      "audio/sentences/punpun_shimashita.wav"
+    ]
+  },
+
+  "chunks": [
+    {
+      "romaji": "manabu",
+      "hiragana": "まなぶ",
+      "meaning": "to study / to learn",
+      "audio": { "daughter": "audio/sentences/manabu.wav", "me": "audio/sentences/manabu.wav" }
     },
     {
-      "romaji": "shimashita",
-      "hiragana": "しました",
-      "meaning": "felt / did",
-      "audio": { "daughter": "audio/sentences/shimashita.wav", "me": "audio/sentences/shimashita.wav" }
+      "romaji": "tte",
+      "hiragana": "って",
+      "meaning": "quoting marker",
+      "audio": { "daughter": "audio/sentences/tte.wav", "me": "audio/sentences/tte.wav" }
+    },
+    {
+      "romaji": "iu",
+      "hiragana": "いう",
+      "meaning": "to say",
+      "audio": { "daughter": "audio/sentences/iu.wav", "me": "audio/sentences/iu.wav" }
+    },
+    {
+      "romaji": "to",
+      "hiragana": "と",
+      "meaning": "when / if",
+      "audio": { "daughter": "audio/sentences/to.wav", "me": "audio/sentences/to.wav" }
+    },
+    {
+      "romaji": "sugu",
+      "hiragana": "すぐ",
+      "meaning": "immediately",
+      "audio": { "daughter": "audio/sentences/sugu.wav", "me": "audio/sentences/sugu.wav" }
+    },
+    {
+      "romaji": "musume",
+      "hiragana": "むすめ",
+      "meaning": "daughter",
+      "audio": { "daughter": "audio/sentences/musume.wav", "me": "audio/sentences/musume.wav" }
+    },
+    {
+      "romaji": "ga",
+      "hiragana": "が",
+      "meaning": "subject marker",
+      "audio": { "daughter": "audio/sentences/ga.wav", "me": "audio/sentences/ga.wav" }
+    },
+    {
+      "romaji": "punpun shimashita",
+      "hiragana": "ぷんぷんしました",
+      "meaning": "got angry / was irritated",
+      "audio": { "daughter": "audio/sentences/punpun_shimashita.wav", "me": "audio/sentences/punpun_shimashita.wav" }
     }
   ]
 },
@@ -19379,6 +19478,229 @@ const level4 = [
 
 
 
+
+
+
+
+
+
+
+
+
+
+{
+  "id": "l4_024",
+  "level": 4,
+
+  "jp": "そのこうどうはふさわしくないとむすめにうんざりしながらいいました",
+  "meaning": "I told my daughter that her behavior was inappropriate, feeling fed up.",
+  "englishAudio": "audio/sentences/english_unzari.wav",
+
+  "interjectionQuestion": "How would a listener interject?",
+  "correctInterjection": "えぇ〜！",
+  "distractors": ["そっかぁ", "そうなんだ"],
+
+  "audio": {
+    "daughter": [
+      "audio/sentences/sono.wav",
+      "audio/sentences/koudou.wav",
+      "audio/sentences/wa.wav",
+      "audio/sentences/fusawashikunai.wav",
+      "audio/sentences/to.wav",
+      "audio/sentences/musume.wav",
+      "audio/sentences/ni.wav",
+      "audio/sentences/unzari_shinagara.wav",
+      "audio/sentences/iimashita.wav"
+    ],
+    "me": [
+      "audio/sentences/sono.wav",
+      "audio/sentences/koudou.wav",
+      "audio/sentences/wa.wav",
+      "audio/sentences/fusawashikunai.wav",
+      "audio/sentences/to.wav",
+      "audio/sentences/musume.wav",
+      "audio/sentences/ni.wav",
+      "audio/sentences/unzari_shinagara.wav",
+      "audio/sentences/iimashita.wav"
+    ]
+  },
+
+  "chunks": [
+    {
+      "hiragana": "その",
+      "meaning": "that",
+      "audio": { "daughter": "audio/sentences/sono.wav", "me": "audio/sentences/sono.wav" }
+    },
+    {
+      "hiragana": "こうどう",
+      "meaning": "behavior",
+      "audio": { "daughter": "audio/sentences/koudou.wav", "me": "audio/sentences/koudou.wav" }
+    },
+    {
+      "hiragana": "は",
+      "meaning": "topic marker",
+      "audio": { "daughter": "audio/sentences/wa.wav", "me": "audio/sentences/wa.wav" }
+    },
+    {
+      "hiragana": "ふさわしくない",
+      "meaning": "inappropriate",
+      "audio": { "daughter": "audio/sentences/fusawashikunai.wav", "me": "audio/sentences/fusawashikunai.wav" }
+    },
+    {
+      "hiragana": "と",
+      "meaning": "that / quoting",
+      "audio": { "daughter": "audio/sentences/to.wav", "me": "audio/sentences/to.wav" }
+    },
+    {
+      "hiragana": "むすめ",
+      "meaning": "daughter",
+      "audio": { "daughter": "audio/sentences/musume.wav", "me": "audio/sentences/musume.wav" }
+    },
+    {
+      "hiragana": "に",
+      "meaning": "to",
+      "audio": { "daughter": "audio/sentences/ni.wav", "me": "audio/sentences/ni.wav" }
+    },
+    {
+      "hiragana": "うんざりしながら",
+      "meaning": "while feeling fed up",
+      "audio": { "daughter": "audio/sentences/unzari_shinagara.wav", "me": "audio/sentences/unzari_shinagara.wav" }
+    },
+    {
+      "hiragana": "いいました",
+      "meaning": "said",
+      "audio": { "daughter": "audio/sentences/iimashita.wav", "me": "audio/sentences/iimashita.wav" }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  "id": "l4_025",
+  "level": 4,
+
+  "jp": "ともだちがわたしをこんしんかいにさそったときわたしはけっこうだといいました",
+  "meaning": "When my friend invited me to the social gathering, I said no thanks.",
+  "englishAudio": "audio/sentences/english_kekkou.wav",
+
+  "interjectionQuestion": "How would a listener interject?",
+  "correctInterjection": "へぇ〜",
+  "distractors": ["そっかぁ", "そうなんだ"],
+
+  "audio": {
+    "daughter": [
+      "audio/sentences/tomodachi.wav",
+      "audio/sentences/watashi.wav",
+      "audio/sentences/wo.wav",
+      "audio/sentences/konshinkai.wav",
+      "audio/sentences/ni.wav",
+      "audio/sentences/sasotta.wav",
+      "audio/sentences/toki.wav",
+      "audio/sentences/watashi.wav",
+      "audio/sentences/wa.wav",
+      "audio/sentences/kekkou.wav",
+      "audio/sentences/da.wav",
+      "audio/sentences/to.wav",
+      "audio/sentences/iimashita.wav"
+    ],
+    "me": [
+      "audio/sentences/tomodachi.wav",
+      "audio/sentences/watashi.wav",
+      "audio/sentences/wo.wav",
+      "audio/sentences/konshinkai.wav",
+      "audio/sentences/ni.wav",
+      "audio/sentences/sasotta.wav",
+      "audio/sentences/toki.wav",
+      "audio/sentences/watashi.wav",
+      "audio/sentences/wa.wav",
+      "audio/sentences/kekkou.wav",
+      "audio/sentences/da.wav",
+      "audio/sentences/to.wav",
+      "audio/sentences/iimashita.wav"
+    ]
+  },
+
+  "chunks": [
+    {
+      "hiragana": "ともだち",
+      "meaning": "friend",
+      "audio": { "daughter": "audio/sentences/tomodachi.wav", "me": "audio/sentences/tomodachi.wav" }
+    },
+    {
+      "hiragana": "わたし",
+      "meaning": "me",
+      "audio": { "daughter": "audio/sentences/watashi.wav", "me": "audio/sentences/watashi.wav" }
+    },
+    {
+      "hiragana": "を",
+      "meaning": "object marker",
+      "audio": { "daughter": "audio/sentences/wo.wav", "me": "audio/sentences/wo.wav" }
+    },
+    {
+      "hiragana": "こんしんかい",
+      "meaning": "social gathering",
+      "audio": { "daughter": "audio/sentences/konshinkai.wav", "me": "audio/sentences/konshinkai.wav" }
+    },
+    {
+      "hiragana": "に",
+      "meaning": "to",
+      "audio": { "daughter": "audio/sentences/ni.wav", "me": "audio/sentences/ni.wav" }
+    },
+    {
+      "hiragana": "さそった",
+      "meaning": "invited",
+      "audio": { "daughter": "audio/sentences/sasotta.wav", "me": "audio/sentences/sasotta.wav" }
+    },
+    {
+      "hiragana": "とき",
+      "meaning": "when",
+      "audio": { "daughter": "audio/sentences/toki.wav", "me": "audio/sentences/toki.wav" }
+    },
+    {
+      "hiragana": "わたし",
+      "meaning": "I",
+      "audio": { "daughter": "audio/sentences/watashi.wav", "me": "audio/sentences/watashi.wav" }
+    },
+    {
+      "hiragana": "は",
+      "meaning": "topic marker",
+      "audio": { "daughter": "audio/sentences/wa.wav", "me": "audio/sentences/wa.wav" }
+    },
+    {
+      "hiragana": "けっこう",
+      "meaning": "no thanks",
+      "audio": { "daughter": "audio/sentences/kekkou.wav", "me": "audio/sentences/kekkou.wav" }
+    },
+    {
+      "hiragana": "だ",
+      "meaning": "is",
+      "audio": { "daughter": "audio/sentences/da.wav", "me": "audio/sentences/da.wav" }
+    },
+    {
+      "hiragana": "と",
+      "meaning": "quoting",
+      "audio": { "daughter": "audio/sentences/to.wav", "me": "audio/sentences/to.wav" }
+    },
+    {
+      "hiragana": "いいました",
+      "meaning": "said",
+      "audio": { "daughter": "audio/sentences/iimashita.wav", "me": "audio/sentences/iimashita.wav" }
+    }
+  ]
+},
 
 
 
@@ -19770,7 +20092,9 @@ L4.interjectionGroups = [
   ["うんうん"],
 
   // Strong reaction (独立)
-  ["やば！"]
+ // Strong reaction (独立)
+["やば！", "すごい！"]
+
 ];
 
 
@@ -19801,8 +20125,12 @@ L4.interjectionPool = [
   "まさか！",
 
   // --- Urgent Shock / Danger ---
-  "やば！",
-  "あぶなっ！",
+  // --- Strong reaction / praise ---
+"やば！",
+"あぶなっ！",
+"すごい！",
+"すごいね！",
+
 
   // --- Mild Surprise / Interest / Small Accident ---
   "へぇ〜",
