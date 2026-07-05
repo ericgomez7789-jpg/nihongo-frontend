@@ -11224,22 +11224,32 @@ L2.screen1 = function () {
   if (replayBtn) replayBtn.style.display = "none";
 
   // ⭐⭐⭐ HARD KILL — MUST BE FIRST ⭐⭐⭐
-L2.stopAllAudio();
+  L2.stopAllAudio();
 
-if (L2.audio && L2.audio.cancelToken) {
-  L2.audio.cancelToken.cancel = true;   // kill ALL pending replay chains
-}
+  if (L2.audio && L2.audio.cancelToken) {
+    L2.audio.cancelToken.cancel = true;   // kill ALL pending replay chains
+  }
 
-if (L2.audio) {
-  L2.audio.generation++;                // invalidate ALL callbacks
-  L2.audio.current = null;
-}
+  if (L2.audio) {
+    L2.audio.generation++;                // invalidate ALL callbacks
+    L2.audio.current = null;
+  }
 
-// ⭐ Reset cancel token for the NEW Screen‑1 audio
-if (L2.audio && L2.audio.cancelToken) {
-  L2.audio.cancelToken.cancel = false;
-}
+  // ⭐ Reset cancel token for the NEW Screen‑1 audio
+  if (L2.audio && L2.audio.cancelToken) {
+    L2.audio.cancelToken.cancel = false;
+  }
 
+  // ⭐⭐⭐ ADDED: GLOBAL AUDIO KILL ⭐⭐⭐
+  stopAllAudio();
+  window.audioCancelToken.cancel = true;
+  window.currentAudioChunks = null;
+
+  // ⭐⭐⭐ ADDED: HIDE LEVEL 1 SCREENS ⭐⭐⭐
+  document.getElementById("screen1").classList.add("hidden");
+  document.getElementById("screen2").classList.add("hidden");
+  document.getElementById("screen3").classList.add("hidden");
+  document.getElementById("level1Wrapper").classList.add("hidden");
 
   // Pick sentence
   const sentence = L2.dataset[Math.floor(Math.random() * L2.dataset.length)];
@@ -11274,6 +11284,7 @@ if (L2.audio && L2.audio.cancelToken) {
     L2.screen2();
   }, chunksToPlay);
 };
+
 
 
 
