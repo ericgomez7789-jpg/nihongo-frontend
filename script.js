@@ -19713,10 +19713,119 @@ const level4 = [
 
 
 
+{
+  "id": "l4_026",
+  "level": 4,
 
+  "jp": "めんどうくさいせいかくがあるひとをあつかうのはむしゃくしゃしてつらいんだ",
+  "meaning": "Dealing with someone who has an annoying personality makes me irritated and it's tough.",
+  "englishAudio": "audio/sentences/english_mendoukusai.wav",
 
+  "interjectionQuestion": "How would a listener interject?",
+  "correctInterjection": "あらら",
+  "distractors": ["へぇ〜", "そうなんだ"],
 
+  "audio": {
+    "daughter": [
+      "audio/sentences/mendoukusai.wav",
+      "audio/sentences/seikaku.wav",
+      "audio/sentences/ga.wav",
+      "audio/sentences/aru.wav",
+      "audio/sentences/hito.wav",
+      "audio/sentences/wo.wav",
+      "audio/sentences/atsukau.wav",
+      "audio/sentences/nowa.wav",
+      "audio/sentences/mushakusha.wav",
+      "audio/sentences/shite.wav",
+      "audio/sentences/tsurai.wav",
+      "audio/sentences/n.wav",
+      "audio/sentences/da.wav"
+    ],
+    "me": [
+      "audio/sentences/mendoukusai.wav",
+      "audio/sentences/seikaku.wav",
+      "audio/sentences/ga.wav",
+      "audio/sentences/aru.wav",
+      "audio/sentences/hito.wav",
+      "audio/sentences/wo.wav",
+      "audio/sentences/atsukau.wav",
+      "audio/sentences/nowa.wav",
+      "audio/sentences/mushakusha.wav",
+      "audio/sentences/shite.wav",
+      "audio/sentences/tsurai.wav",
+      "audio/sentences/n.wav",
+      "audio/sentences/da.wav"
+    ]
+  },
 
+  "chunks": [
+    {
+      "hiragana": "めんどうくさい",
+      "meaning": "annoying",
+      "audio": { "daughter": "audio/sentences/mendoukusai.wav", "me": "audio/sentences/mendoukusai.wav" }
+    },
+    {
+      "hiragana": "せいかく",
+      "meaning": "personality",
+      "audio": { "daughter": "audio/sentences/seikaku.wav", "me": "audio/sentences/seikaku.wav" }
+    },
+    {
+      "hiragana": "が",
+      "meaning": "subject marker",
+      "audio": { "daughter": "audio/sentences/ga.wav", "me": "audio/sentences/ga.wav" }
+    },
+    {
+      "hiragana": "ある",
+      "meaning": "to have",
+      "audio": { "daughter": "audio/sentences/aru.wav", "me": "audio/sentences/aru.wav" }
+    },
+    {
+      "hiragana": "ひと",
+      "meaning": "person",
+      "audio": { "daughter": "audio/sentences/hito.wav", "me": "audio/sentences/hito.wav" }
+    },
+    {
+      "hiragana": "を",
+      "meaning": "object marker",
+      "audio": { "daughter": "audio/sentences/wo.wav", "me": "audio/sentences/wo.wav" }
+    },
+    {
+      "hiragana": "あつかう",
+      "meaning": "to deal with",
+      "audio": { "daughter": "audio/sentences/atsukau.wav", "me": "audio/sentences/atsukau.wav" }
+    },
+    {
+      "hiragana": "のは",
+      "meaning": "the act of ~ is",
+      "audio": { "daughter": "audio/sentences/nowa.wav", "me": "audio/sentences/nowa.wav" }
+    },
+    {
+      "hiragana": "むしゃくしゃ",
+      "meaning": "irritated / frustrated",
+      "audio": { "daughter": "audio/sentences/mushakusha.wav", "me": "audio/sentences/mushakusha.wav" }
+    },
+    {
+      "hiragana": "して",
+      "meaning": "doing / feeling",
+      "audio": { "daughter": "audio/sentences/shite.wav", "me": "audio/sentences/shite.wav" }
+    },
+    {
+      "hiragana": "つらい",
+      "meaning": "tough / painful",
+      "audio": { "daughter": "audio/sentences/tsurai.wav", "me": "audio/sentences/tsurai.wav" }
+    },
+    {
+      "hiragana": "ん",
+      "meaning": "explanatory tone",
+      "audio": { "daughter": "audio/sentences/n.wav", "me": "audio/sentences/n.wav" }
+    },
+    {
+      "hiragana": "だ",
+      "meaning": "is",
+      "audio": { "daughter": "audio/sentences/da.wav", "me": "audio/sentences/da.wav" }
+    }
+  ]
+},
 
 
 
