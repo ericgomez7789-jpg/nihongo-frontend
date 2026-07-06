@@ -52,8 +52,8 @@ const sentences = [
         hiragana: "お",
         meaning: "honorific prefix",
         audio: {
-          daughter: "audio/sentences/wo.wav",
-          me: "audio/sentences/wo.wav"
+          daughter: "audio/sentences/o.wav",
+          me: "audio/sentences/o.wav"
         }
       },
       {
@@ -641,6 +641,22 @@ const sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
    id: "l1-20",
   meaning: "How do you read this",
@@ -1447,6 +1463,22 @@ const sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
    id: "l1-41",
   meaning: "Meet my friends",
@@ -1481,6 +1513,22 @@ const sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
    id: "l1-42",
   meaning: "It's eight twenty in the morning.",
@@ -1887,6 +1935,22 @@ const sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
    id: "l1-49",
   meaning: "Move forward",
@@ -19842,6 +19906,303 @@ const level4 = [
 
 
 
+{
+  "id": "l4_027",
+  "level": 4,
+
+  "jp": "おにごっこしながらひざがずきずきしていたみはじめた",
+  "meaning": "While playing tag, my knee started throbbing and the pain began.",
+  "englishAudio": "audio/sentences/english_onigokko2.wav",
+
+  "interjectionQuestion": "How would a listener interject?",
+  "correctInterjection": "だいじょうぶ？",
+  "distractors": ["へぇ〜", "そうなんだ"],
+
+  "audio": {
+    "daughter": [
+      "audio/sentences/onigokko.wav",
+      "audio/sentences/shinagara.wav",
+      "audio/sentences/hiza.wav",
+      "audio/sentences/ga.wav",
+
+      "audio/sentences/zukizuki_shite.wav",
+      "audio/sentences/itamihajimeta.wav"
+    ],
+    "me": [
+      "audio/sentences/onigokko.wav",
+      "audio/sentences/shinagara.wav",
+      "audio/sentences/hiza.wav",
+      "audio/sentences/ga.wav",
+
+      "audio/sentences/zukizuki_shite.wav",
+      "audio/sentences/itamihajimeta.wav"
+    ]
+  },
+
+  "chunks": [
+    {
+      "hiragana": "おにごっこ",
+      "meaning": "playing tag",
+      "audio": { "daughter": "audio/sentences/onigokko.wav", "me": "audio/sentences/onigokko.wav" }
+    },
+    {
+      "hiragana": "しながら",
+      "meaning": "while doing",
+      "audio": { "daughter": "audio/sentences/shinagara.wav", "me": "audio/sentences/shinagara.wav" }
+    },
+    {
+      "hiragana": "ひざ",
+      "meaning": "knee",
+      "audio": { "daughter": "audio/sentences/hiza.wav", "me": "audio/sentences/hiza.wav" }
+    },
+    {
+      "hiragana": "が",
+      "meaning": "subject marker",
+      "audio": { "daughter": "audio/sentences/ga.wav", "me": "audio/sentences/ga.wav" }
+    },
+
+    {
+      "hiragana": "ずきずきして",
+      "meaning": "throbbing pain",
+      "audio": { "daughter": "audio/sentences/zukizuki_shite.wav", "me": "audio/sentences/zukizuki_shite.wav" }
+    },
+
+    {
+      "hiragana": "いたみはじめた",
+      "meaning": "pain",
+      "audio": { "daughter": "audio/sentences/itamihajimeta.wav", "me": "audio/sentences/itamihajimeta.wav" }
+    },
+    
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  "id": "l4_028",
+  "level": 4,
+
+  "jp": "ぐちぐちしてもんくをすればするほどじょうきょうがこじれる",
+  "meaning": "The more you nag and complain, the more the situation gets complicated.",
+  "englishAudio": "audio/sentences/english_guchiguchi2.wav",
+
+  "interjectionQuestion": "How would a listener interject?",
+  "correctInterjection": "たしかに",
+  "distractors": ["へぇ〜", "そうなんだ"],
+
+  "audio": {
+    "daughter": [
+      "audio/sentences/guchiguchi.wav",
+      "audio/sentences/shite.wav",
+      "audio/sentences/monku.wav",
+      "audio/sentences/wo.wav",
+      "audio/sentences/sureba.wav",
+      "audio/sentences/suruhodo.wav",
+      "audio/sentences/joukyou.wav",
+      "audio/sentences/ga.wav",
+      "audio/sentences/kojireru.wav"
+    ],
+    "me": [
+      "audio/sentences/guchiguchi.wav",
+      "audio/sentences/shite.wav",
+      "audio/sentences/monku.wav",
+      "audio/sentences/wo.wav",
+      "audio/sentences/sureba.wav",
+      "audio/sentences/suruhodo.wav",
+      "audio/sentences/joukyou.wav",
+      "audio/sentences/ga.wav",
+      "audio/sentences/kojireru.wav"
+    ]
+  },
+
+  "chunks": [
+    {
+      "hiragana": "ぐちぐち",
+      "meaning": "nagging / complaining",
+      "audio": { "daughter": "audio/sentences/guchiguchi.wav", "me": "audio/sentences/guchiguchi.wav" }
+    },
+    {
+      "hiragana": "して",
+      "meaning": "doing",
+      "audio": { "daughter": "audio/sentences/shite.wav", "me": "audio/sentences/shite.wav" }
+    },
+    {
+      "hiragana": "もんく",
+      "meaning": "complaint",
+      "audio": { "daughter": "audio/sentences/monku.wav", "me": "audio/sentences/monku.wav" }
+    },
+    {
+      "hiragana": "を",
+      "meaning": "object marker",
+      "audio": { "daughter": "audio/sentences/wo.wav", "me": "audio/sentences/wo.wav" }
+    },
+    {
+      "hiragana": "すれば",
+      "meaning": "if you do",
+      "audio": { "daughter": "audio/sentences/sureba.wav", "me": "audio/sentences/sureba.wav" }
+    },
+    {
+      "hiragana": "するほど",
+      "meaning": "the more you do",
+      "audio": { "daughter": "audio/sentences/suruhodo.wav", "me": "audio/sentences/suruhodo.wav" }
+    },
+    {
+      "hiragana": "じょうきょう",
+      "meaning": "situation",
+      "audio": { "daughter": "audio/sentences/joukyou.wav", "me": "audio/sentences/joukyou.wav" }
+    },
+    {
+      "hiragana": "が",
+      "meaning": "subject marker",
+      "audio": { "daughter": "audio/sentences/ga.wav", "me": "audio/sentences/ga.wav" }
+    },
+    {
+      "hiragana": "こじれる",
+      "meaning": "to get complicated / worsen",
+      "audio": { "daughter": "audio/sentences/kojireru.wav", "me": "audio/sentences/kojireru.wav" }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  "id": "l4_029",
+  "level": 4,
+
+  "jp": "はまべにいきたいくらいしごとにむりやりいかなければなりません",
+  "meaning": "I have to forcibly go to work even though I want to go to the beach that much.",
+  "englishAudio": "audio/sentences/english_hamabe.wav",
+
+  "interjectionQuestion": "How would a listener interject?",
+  "correctInterjection": "たいへんだね",
+  "distractors": ["へぇ〜", "そうなんだ"],
+
+  "audio": {
+    "daughter": [
+      "audio/sentences/hamabe.wav",
+      "audio/sentences/ni.wav",
+      "audio/sentences/ikitai.wav",
+      "audio/sentences/kurai.wav",
+      "audio/sentences/shigoto.wav",
+      "audio/sentences/ni.wav",
+      "audio/sentences/muriyari.wav",
+      "audio/sentences/ikanakereba.wav",
+      "audio/sentences/narimasen.wav"
+    ],
+    "me": [
+      "audio/sentences/hamabe.wav",
+      "audio/sentences/ni.wav",
+      "audio/sentences/ikitai.wav",
+      "audio/sentences/kurai.wav",
+      "audio/sentences/shigoto.wav",
+      "audio/sentences/ni.wav",
+      "audio/sentences/muriyari.wav",
+      "audio/sentences/ikanakereba.wav",
+      "audio/sentences/narimasen.wav"
+    ]
+  },
+
+  "chunks": [
+    {
+      "hiragana": "はまべ",
+      "meaning": "beach",
+      "audio": { "daughter": "audio/sentences/hamabe.wav", "me": "audio/sentences/hamabe.wav" }
+    },
+    {
+      "hiragana": "に",
+      "meaning": "to",
+      "audio": { "daughter": "audio/sentences/ni.wav", "me": "audio/sentences/ni.wav" }
+    },
+    {
+      "hiragana": "いきたい",
+      "meaning": "want to go",
+      "audio": { "daughter": "audio/sentences/ikitai.wav", "me": "audio/sentences/ikitai.wav" }
+    },
+    {
+      "hiragana": "くらい",
+      "meaning": "to the extent",
+      "audio": { "daughter": "audio/sentences/kurai.wav", "me": "audio/sentences/kurai.wav" }
+    },
+    {
+      "hiragana": "しごと",
+      "meaning": "work",
+      "audio": { "daughter": "audio/sentences/shigoto.wav", "me": "audio/sentences/shigoto.wav" }
+    },
+    {
+      "hiragana": "に",
+      "meaning": "to",
+      "audio": { "daughter": "audio/sentences/ni.wav", "me": "audio/sentences/ni.wav" }
+    },
+    {
+      "hiragana": "むりやり",
+      "meaning": "forcibly",
+      "audio": { "daughter": "audio/sentences/muriyari.wav", "me": "audio/sentences/muriyari.wav" }
+    },
+    {
+      "hiragana": "いかなければ",
+      "meaning": "must go",
+      "audio": { "daughter": "audio/sentences/ikanakereba.wav", "me": "audio/sentences/ikanakereba.wav" }
+    },
+    {
+      "hiragana": "なりません",
+      "meaning": "must / have to",
+      "audio": { "daughter": "audio/sentences/narimasen.wav", "me": "audio/sentences/narimasen.wav" }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 /* ==========================================================
@@ -20200,11 +20561,13 @@ L4.interjectionGroups = [
   // Agreement
   ["うんうん"],
 
-  // Strong reaction (独立)
- // Strong reaction (独立)
-["やば！", "すごい！"]
+  // Strong reaction (danger / shock)
+  ["やば！", "あぶなっ！"],
 
+  // Praise / admiration (NEW GROUP)
+  ["すごい！", "すごいね！"]
 ];
+
 
 
 
@@ -20234,12 +20597,12 @@ L4.interjectionPool = [
   "まさか！",
 
   // --- Urgent Shock / Danger ---
-  // --- Strong reaction / praise ---
-"やば！",
-"あぶなっ！",
-"すごい！",
-"すごいね！",
+  "やば！",
+  "あぶなっ！",
 
+  // --- Praise / Admiration ---
+  "すごい！",
+  "すごいね！",
 
   // --- Mild Surprise / Interest / Small Accident ---
   "へぇ〜",
@@ -20267,6 +20630,7 @@ L4.interjectionPool = [
   // --- Agreement ---
   "うんうん"
 ];
+
 
 
 /* ----------------------------------------------------------
