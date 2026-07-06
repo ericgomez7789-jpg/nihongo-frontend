@@ -20191,6 +20191,193 @@ const level4 = [
 
 
 
+{
+  "id": "l4_030",
+  "level": 4,
+
+  "jp": "みちばたにそってあるきながらいきなりおならした",
+  "meaning": "While walking along the roadside, I suddenly farted.",
+  "englishAudio": "audio/sentences/english_michibata.wav",
+
+  "interjectionQuestion": "How would a listener interject?",
+  "correctInterjection": "おっと！",
+  "distractors": ["へぇ〜", "そうなんだ"],
+
+  "audio": {
+    "daughter": [
+      "audio/sentences/michibata.wav",
+      "audio/sentences/ni.wav",
+      "audio/sentences/sotte.wav",
+      "audio/sentences/aruki.wav",
+      "audio/sentences/nagara.wav",
+      "audio/sentences/ikinari.wav",
+      "audio/sentences/onara.wav",
+      "audio/sentences/shita.wav"
+    ],
+    "me": [
+      "audio/sentences/michibata.wav",
+      "audio/sentences/ni.wav",
+      "audio/sentences/sotte.wav",
+      "audio/sentences/aruki.wav",
+      "audio/sentences/nagara.wav",
+      "audio/sentences/ikinari.wav",
+      "audio/sentences/onara.wav",
+      "audio/sentences/shita.wav"
+    ]
+  },
+
+  "chunks": [
+    {
+      "hiragana": "みちばた",
+      "meaning": "roadside",
+      "audio": { "daughter": "audio/sentences/michibata.wav", "me": "audio/sentences/michibata.wav" }
+    },
+    {
+      "hiragana": "に",
+      "meaning": "at / by",
+      "audio": { "daughter": "audio/sentences/ni.wav", "me": "audio/sentences/ni.wav" }
+    },
+    {
+      "hiragana": "そって",
+      "meaning": "along",
+      "audio": { "daughter": "audio/sentences/sotte.wav", "me": "audio/sentences/sotte.wav" }
+    },
+    {
+      "hiragana": "あるき",
+      "meaning": "walking",
+      "audio": { "daughter": "audio/sentences/aruki.wav", "me": "audio/sentences/aruki.wav" }
+    },
+    {
+      "hiragana": "ながら",
+      "meaning": "while",
+      "audio": { "daughter": "audio/sentences/nagara.wav", "me": "audio/sentences/nagara.wav" }
+    },
+    {
+      "hiragana": "いきなり",
+      "meaning": "suddenly",
+      "audio": { "daughter": "audio/sentences/ikinari.wav", "me": "audio/sentences/ikinari.wav" }
+    },
+    {
+      "hiragana": "おなら",
+      "meaning": "fart",
+      "audio": { "daughter": "audio/sentences/onara.wav", "me": "audio/sentences/onara.wav" }
+    },
+    {
+      "hiragana": "した",
+      "meaning": "did",
+      "audio": { "daughter": "audio/sentences/shita.wav", "me": "audio/sentences/shita.wav" }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  "id": "l4_031",
+  "level": 4,
+
+  "jp": "がけばたではあるくとすべってもうすこしでおちそうになりました",
+  "meaning": "When I walked by the cliff, I slipped and almost fell off.",
+  "englishAudio": "audio/sentences/english_gakebata.wav",
+
+  "interjectionQuestion": "How would a listener interject?",
+  "correctInterjection": "あぶなっ！",
+  "distractors": ["へぇ〜", "そうなんだ"],
+
+  "audio": {
+    "daughter": [
+      "audio/sentences/gakebata.wav",
+      "audio/sentences/dewa.wav",
+      "audio/sentences/aruku_to.wav",
+      "audio/sentences/subette.wav",
+      "audio/sentences/mou_sukoshi_de.wav",
+      "audio/sentences/ochisou.wav",
+      "audio/sentences/ni.wav",
+      "audio/sentences/narimashita.wav"
+    ],
+    "me": [
+      "audio/sentences/gakebata.wav",
+      "audio/sentences/dewa.wav",
+      "audio/sentences/aruku_to.wav",
+      "audio/sentences/subette.wav",
+      "audio/sentences/mou_sukoshi_de.wav",
+      "audio/sentences/ochisou.wav",
+      "audio/sentences/ni.wav",
+      "audio/sentences/narimashita.wav"
+    ]
+  },
+
+  "chunks": [
+    {
+      "hiragana": "がけばた",
+      "meaning": "by the cliff",
+      "audio": { "daughter": "audio/sentences/gakebata.wav", "me": "audio/sentences/gakebata.wav" }
+    },
+    {
+      "hiragana": "では",
+      "meaning": "at that place",
+      "audio": { "daughter": "audio/sentences/dewa.wav", "me": "audio/sentences/dewa.wav" }
+    },
+    {
+      "hiragana": "あるくと",
+      "meaning": "when I walk",
+      "audio": { "daughter": "audio/sentences/aruku_to.wav", "me": "audio/sentences/aruku_to.wav" }
+    },
+    {
+      "hiragana": "すべって",
+      "meaning": "slipped",
+      "audio": { "daughter": "audio/sentences/subette.wav", "me": "audio/sentences/subette.wav" }
+    },
+    {
+      "hiragana": "もうすこしで",
+      "meaning": "almost / nearly",
+      "audio": { "daughter": "audio/sentences/mou_sukoshi_de.wav", "me": "audio/sentences/mou_sukoshi_de.wav" }
+    },
+    {
+      "hiragana": "おちそう",
+      "meaning": "about to fall",
+      "audio": { "daughter": "audio/sentences/ochisou.wav", "me": "audio/sentences/ochisou.wav" }
+    },
+    {
+      "hiragana": "に",
+      "meaning": "into / toward",
+      "audio": { "daughter": "audio/sentences/ni.wav", "me": "audio/sentences/ni.wav" }
+    },
+    {
+      "hiragana": "なりました",
+      "meaning": "became / almost happened",
+      "audio": { "daughter": "audio/sentences/narimashita.wav", "me": "audio/sentences/narimashita.wav" }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -21906,6 +22093,21 @@ id: "l5_s_009",
     }
   ]
 },   // ← END OF LEVEL 5 OBJECT
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
 id: "l5_s_010",
   meaning: "While counting days, which is the correct counter?",
@@ -21987,6 +22189,21 @@ id: "l5_s_010",
     }
   ]
 },   // ← END OF LEVEL 5 OBJECT
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
 id: "l5_s_011",
   meaning: "While counting rooms, which is the correct counter?",
@@ -22428,6 +22645,122 @@ id: "l5_s_015",
     }
   ]
 },   // ← END OF LEVEL 5 OBJECT
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------------------------------------
+    Level 5 — Kabe (wall)
+-----------------------------------------------------*/
+{
+  id: "l5_s_016",
+  meaning: "While counting walls, which is the correct counter?",
+  level: 5,
+
+  // ⭐ Level 5 uses correctCounter
+  correctCounter: "いちめん",
+
+  // MCQ options
+  options: ["いちめん", "いちまい", "いっこ", "いっぽん"],
+  optionsRomaji: ["ichimen", "ichimai", "ikko", "ippon"],
+  optionsEN: ["one surface / wall", "one flat object", "one small object", "one long object"],
+
+  choiceAudio: {
+    options: [
+      "audio/sentences/ichimen.wav",
+      "audio/sentences/ichimai.wav",
+      "audio/sentences/ikko.wav",
+      "audio/sentences/ippon.wav"
+    ]
+  },
+
+  meaningAudio: [
+    "audio/sentences/ichimen.wav",
+    "audio/sentences/ichimai.wav",
+    "audio/sentences/ikko.wav",
+    "audio/sentences/ippon.wav"
+  ],
+
+  // ⭐ Chunks with English meaning
+  chunks: [
+    {
+      romaji: "kabe",
+      hiragana: "かべ",
+      meaning: "wall",
+      audio: { daughter: "audio/sentences/kabe.wav", me: "audio/sentences/kabe.wav" }
+    },
+    {
+      romaji: "wo",
+      hiragana: "を",
+      meaning: "(object marker)",
+      audio: { daughter: "audio/sentences/wo.wav", me: "audio/sentences/wo.wav" }
+    },
+    {
+      romaji: "kazoenagara",
+      hiragana: "かぞえながら",
+      meaning: "while counting",
+      audio: { daughter: "audio/sentences/kazoenagara.wav", me: "audio/sentences/kazoenagara.wav" }
+    },
+    {
+      romaji: "tadashii",
+      hiragana: "ただしい",
+      meaning: "correct",
+      audio: { daughter: "audio/sentences/tadashii.wav", me: "audio/sentences/tadashii.wav" }
+    },
+    {
+      romaji: "kazoekata",
+      hiragana: "かぞえかた",
+      meaning: "way to count",
+      audio: { daughter: "audio/sentences/kazoekata.wav", me: "audio/sentences/kazoekata.wav" }
+    },
+    {
+      romaji: "wa",
+      hiragana: "は",
+      meaning: "(topic marker)",
+      audio: { daughter: "audio/sentences/wa.wav", me: "audio/sentences/wa.wav" }
+    },
+    {
+      romaji: "dore",
+      hiragana: "どれ",
+      meaning: "which",
+      audio: { daughter: "audio/sentences/dore.wav", me: "audio/sentences/dore.wav" }
+    },
+    {
+      romaji: "desuka",
+      hiragana: "ですか",
+      meaning: "is it?",
+      audio: { daughter: "audio/sentences/desuka.wav", me: "audio/sentences/desuka.wav" }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
