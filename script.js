@@ -3331,6 +3331,8 @@ window.level1TotalRounds = TOTAL_ROUNDS;
 let level1Index = 0;
 let level1Sentences = [];
 
+// ⭐ ADD THIS — required to stop the crash
+let totalCorrectDrops = 0;
 
 
 
@@ -3396,9 +3398,11 @@ L1.createAndWireLevel1ReplayButton = function(currentAudioChunks) {
 
     window.currentScreen = "level1Screen2";
 
-    // Reset Level 1 state
-    window.audioCancelToken.cancel = false;
+    // ⭐ FIX: invalidate old timers BEFORE clearing cancel
     window.audioGeneration++;
+
+    // Reset Level 1 state (unchanged)
+    window.audioCancelToken.cancel = false;
     L1._locked = false;
 
     // Restart timer
@@ -3423,6 +3427,7 @@ L1.createAndWireLevel1ReplayButton = function(currentAudioChunks) {
     playChunkSequence(0, () => {}, currentAudioChunks);
   };
 };
+
 
 
 
@@ -11679,6 +11684,10 @@ L2.finish = function () {
 L2.start = function () {
   console.log("[Level2] start()");
 
+  // ⭐ KILL ALL LEVEL‑1 AUDIO TIMERS + CALLBACKS
+  window.audioGeneration++;
+  window.audioCancelToken.cancel = true;
+
   // ⭐ Automatically set total sentences for Level 2
   Progress2.setTotal("level2", L2.dataset.length);
 
@@ -11709,6 +11718,7 @@ L2.start = function () {
   // Start first round
   L2.startRound();
 };
+
 
 
 /*---------------------------------------------------------------------------------------
@@ -17460,6 +17470,10 @@ function showLevel3FinalSummary() {
 L3.start = function () {
   console.log("[Level3] start()");
 
+  // ⭐ Kill ALL previous level audio timers + callbacks
+  window.audioGeneration++;
+  window.audioCancelToken.cancel = true;
+
   // Reset session state
   L3.round = 0;
   L3.score = 0;
@@ -17487,6 +17501,7 @@ L3.start = function () {
   // Start first round
   L3.startRound();
 };
+
 
 
 
