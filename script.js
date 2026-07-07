@@ -10890,7 +10890,7 @@ const level2Sentences = [
 const L2 = {
   round: 0,
   score: 0,
-  TOTAL_ROUNDS: 4,
+  TOTAL_ROUNDS: 1,
 
   dataset: level2Sentences,   // Level‑2 dataset
   currentSentence: null,      // holds the actual sentence object
@@ -10927,33 +10927,44 @@ window.L2 = window.L2 || {};
 Wiring the replay buttons
 -----------------------------------------------------------------------------------------*/
 function createAndWireLevel2ReplayButton(currentAudioChunks) {
-  // Remove old L2 replay button if it exists
   const oldBtn = document.getElementById("l2ReplayBtn");
   if (oldBtn) oldBtn.remove();
 
-  // Create new button
   const btn = document.createElement("button");
   btn.id = "l2ReplayBtn";
   btn.className = "iconBtn replay-top";
   btn.textContent = "🔁 Replay";
 
-  // Insert into Level 2 Screen 2
   const screen2 = document.getElementById("level2Screen2");
   if (!screen2) return;
   screen2.appendChild(btn);
 
-  // Wire logic
   btn.onclick = () => {
-    stopAllAudio();
 
-    window.currentScreen = "level2Screen2";
+    // ⭐ Kill ALL audio types (Level‑2 safe)
+    L2.stopAllAudio();
 
-    // Reset Level 2 state
-    window.audioCancelToken.cancel = false;
-    window.audioGeneration++;
+    if (window.voicePlayer && window.voicePlayer.stop) {
+      window.voicePlayer.stop();
+    }
+
+    // ⭐ Cancel pending callbacks
+    if (L2.audio && L2.audio.cancelToken) {
+      L2.audio.cancelToken.cancel = true;
+    }
+
+    // ⭐ Reset cancel token for new replay
+    if (L2.audio && L2.audio.cancelToken) {
+      L2.audio.cancelToken.cancel = false;
+    }
+
+    // ⭐ Correct generation increment (Level‑2 scoped)
+    L2.audio.generation++;
+
+    // ⭐ Unlock replay
     L2._locked = false;
 
-    // Restart timer
+    // ⭐ Restart timer
     if (L2.timerInterval) {
       clearInterval(L2.timerInterval);
     }
@@ -10971,10 +10982,25 @@ function createAndWireLevel2ReplayButton(currentAudioChunks) {
       }
     }, 1000);
 
-    // Restart audio
-    playChunkSequence(0, () => {}, currentAudioChunks);
+    // ⭐ Replay using Level‑2 safe engine
+    L2.playChunkSequence2(
+      0,
+      () => {
+        // ⭐ Prevent callback firing after navigation
+        if (window.currentScreen !== "level2Screen2") return;
+
+        // ⭐ Prevent Level‑2 from restarting the round
+        L2._locked = true;
+      },
+      currentAudioChunks
+    );
   };
 }
+
+
+
+
+
 
 L2.updateScoreKeeper = function () {
   const el = document.getElementById("scoreKeeper");
@@ -10985,15 +11011,21 @@ L2.updateScoreKeeper = function () {
 
 L2.onComplete = function () {
 
+  // ⭐ Prevent Level‑2 from restarting while on Screen2 or Screen4
+  if (window.currentScreen === "level2Screen2" ||
+      window.currentScreen === "level2Screen4") return;
+
   // Increment Level 2 round counter
-  level2Round++;
+  L2.round++;
 
-  // Update scorekeeper (now correctly isolated by currentLevel)
-  updateScoreKeeper();
+  // Update scorekeeper
+  L2.updateScoreKeeper();
 
-  // Move to the next Level 2 screen (same pattern as Level 1)
-  level2_screen1();
+  // Move to the next Level 2 screen
+  L2.startRound();
 };
+
+
 
 
 
@@ -11006,7 +11038,7 @@ function showLevel2FinalSummary() {
   // 🔒 Lock MCQ
   L2.mcqLocked = true;
 
-  // 🔇 Cancel any pending audio
+  // 🔇 Cancel any pending chunk callbacks
   if (L2.audio && L2.audio.cancelToken) {
     L2.audio.cancelToken.cancel = true;
   }
@@ -11017,9 +11049,20 @@ function showLevel2FinalSummary() {
     L2.audio.current = null;
   }
 
-  // 🔇 Stop Level‑2 audio
+  // 🔇 Stop Level‑2 audio (normal Audio())
   if (typeof L2.stopAllAudio === "function") {
     L2.stopAllAudio();
+  }
+
+  // ⭐ Kill voicePlayer chunk queue
+  if (window.voicePlayer && window.voicePlayer.stop) {
+    window.voicePlayer.stop();
+  }
+
+  // ⭐ NEW — GLOBAL KILL SWITCH (fix)
+  // Prevent leftover Level‑1 or Level‑2 replay callbacks from firing
+  if (window.audioCancelToken) {
+    window.audioCancelToken.cancel = true;
   }
 
   // ⭐ Show final summary screen
@@ -11045,14 +11088,23 @@ function showLevel2FinalSummary() {
 
 
 
+
+
 /* ----------------------------------------------------------
    ⭐ LEVEL 2 — AUDIO SAFETY (ISOLATED)
 ---------------------------------------------------------- */
 
 
+// ⭐⭐⭐ LEVEL‑2 SAFE VERSION — NO LOGIC CHANGES ⭐⭐⭐
 L2.playChunkSequence2 = function(i = 0, callback, chunksArray) {
   const chunks = chunksArray;
-  const currentGen = L2.audio.generation;   // ⭐ generation snapshot
+  const currentGen = L2.audio.generation;
+
+  // ⭐ HARD STOP — allow only Screen1 and Screen2
+  if (window.currentScreen !== "level2Screen1" &&
+      window.currentScreen !== "level2Screen2") {
+    return;
+  }
 
   // Kill if cancelled or outdated
   if (L2.audio.cancelToken.cancel) return;
@@ -11062,6 +11114,12 @@ L2.playChunkSequence2 = function(i = 0, callback, chunksArray) {
     if (!L2.audio.cancelToken.cancel &&
         currentGen === L2.audio.generation &&
         typeof callback === "function") {
+
+      if (window.currentScreen !== "level2Screen1" &&
+          window.currentScreen !== "level2Screen2") {
+        return;
+      }
+
       callback();
     }
     return;
@@ -11074,6 +11132,8 @@ L2.playChunkSequence2 = function(i = 0, callback, chunksArray) {
 
   if (!file) {
     if (currentGen !== L2.audio.generation) return;
+    if (window.currentScreen !== "level2Screen1" &&
+        window.currentScreen !== "level2Screen2") return;
     L2.playChunkSequence2(i + 1, callback, chunks);
     return;
   }
@@ -11083,27 +11143,44 @@ L2.playChunkSequence2 = function(i = 0, callback, chunksArray) {
 
   let safety = setTimeout(() => {
     if (currentGen !== L2.audio.generation) return;
+    if (window.currentScreen !== "level2Screen1" &&
+        window.currentScreen !== "level2Screen2") return;
     L2.playChunkSequence2(i + 1, callback, chunks);
   }, 10000);
 
   audio.onended = () => {
     clearTimeout(safety);
     if (currentGen !== L2.audio.generation) return;
+    if (window.currentScreen !== "level2Screen1" &&
+        window.currentScreen !== "level2Screen2") return;
     L2.playChunkSequence2(i + 1, callback, chunks);
   };
 
   audio.onerror = () => {
     clearTimeout(safety);
     if (currentGen !== L2.audio.generation) return;
+    if (window.currentScreen !== "level2Screen1" &&
+        window.currentScreen !== "level2Screen2") return;
     L2.playChunkSequence2(i + 1, callback, chunks);
   };
 
   audio.play().catch(() => {
     clearTimeout(safety);
     if (currentGen !== L2.audio.generation) return;
+    if (window.currentScreen !== "level2Screen1" &&
+        window.currentScreen !== "level2Screen2") return;
     L2.playChunkSequence2(i + 1, callback, chunks);
   });
 };
+
+
+
+
+
+
+
+
+
 
 
 
@@ -11226,6 +11303,13 @@ L2.renderProgress = function (screenId) {
 ---------------------------------------------------------- */
 
 L2.startRound = function () {
+
+  // ⭐ HARD GUARD — only run when Level‑2 is truly active
+  if (window.currentLevel !== 2) return;
+
+  // ⭐ HARD GUARD — only run when actually on Screen1
+  if (window.currentScreen !== "level2Screen1") return;
+
   console.log(`[Level2] startRound() — Round ${L2.round + 1}`);
 
   // ⭐ Place the current sentence
@@ -11234,10 +11318,13 @@ L2.startRound = function () {
   // ⭐ Update scorekeeper
   L2.updateScoreKeeper();
 
-  // Reset audio safety
-  L2.stopAllAudio();
-  L2.audio.cancelToken.cancel = false;
-  L2.audio.generation++;
+  // ⭐ Reset audio safety WITHOUT killing audio
+  if (L2.audio && L2.audio.cancelToken) {
+    L2.audio.cancelToken.cancel = false;
+  }
+  if (L2.audio) {
+    L2.audio.generation++;
+  }
 
   // Reset MCQ lock
   L2.mcqLocked = false;
@@ -11245,6 +11332,10 @@ L2.startRound = function () {
   // Move to Screen 1 (audio-only)
   L2.screen1();
 };
+
+
+
+
 
 
 
@@ -11283,28 +11374,43 @@ L2.screen1 = function () {
   if (replayBtn) replayBtn.style.display = "none";
 
   // ⭐⭐⭐ HARD KILL — MUST BE FIRST ⭐⭐⭐
-L2.stopAllAudio();
 
-if (L2.audio && L2.audio.cancelToken) {
-  L2.audio.cancelToken.cancel = true;   // kill ALL pending replay chains
-}
+  // Kill normal Audio()
+  L2.stopAllAudio();
 
-if (L2.audio) {
-  L2.audio.generation++;                // invalidate ALL callbacks
-  L2.audio.current = null;
-}
+  // Kill Level‑2 chunk engine (voicePlayer)
+  if (window.voicePlayer && window.voicePlayer.stop) {
+    window.voicePlayer.stop();
+  }
 
-// ⭐ Reset cancel token for the NEW Screen‑1 audio
-if (L2.audio && L2.audio.cancelToken) {
-  L2.audio.cancelToken.cancel = false;
-}
+  // Kill pending chunk callbacks
+  if (L2.audio && L2.audio.cancelToken) {
+    L2.audio.cancelToken.cancel = true;
+  }
 
+  // Invalidate ALL async callbacks
+  if (L2.audio) {
+    L2.audio.generation++;
+    L2.audio.current = null;
+  }
+
+  // Reset cancel token for NEW Screen‑1 audio
+  if (L2.audio && L2.audio.cancelToken) {
+    L2.audio.cancelToken.cancel = false;
+  }
+
+  // ⭐⭐⭐ END HARD KILL ⭐⭐⭐
+
+  // ⭐⭐⭐ ADDED LINE — DO NOT MOVE ⭐⭐⭐
+  window.currentScreen = "level2Screen1";
 
   // Pick sentence
   const sentence = L2.dataset[Math.floor(Math.random() * L2.dataset.length)];
   L2.currentSentence = sentence;
 
   const correct = sentence.correct;
+
+  // Remove the correct chunk from the audio sequence
   const chunksToPlay = sentence.chunks.filter(ch => ch.hiragana !== correct);
 
   // Show Screen1
@@ -11312,14 +11418,14 @@ if (L2.audio && L2.audio.cancelToken) {
   document.getElementById("level2Screen1").classList.remove("hidden");
   document.getElementById("level2Screen2").classList.add("hidden");
 
-  // ⭐ Attach reset button (only on Screen1)
+  // Attach reset button (only on Screen1)
   const screenEl = document.getElementById("level2Screen1");
   L2.Reset.attach(screenEl, "screen1");
 
-  // ⭐ Render progress bar (only on Screen1)
+  // Render progress bar (only on Screen1)
   L2.renderProgress("level2Screen1");
 
-  // If no chunks, skip to MCQ
+  // If no chunks, skip directly to MCQ
   if (chunksToPlay.length === 0) {
     L2.screen2();
     return;
@@ -11329,10 +11435,17 @@ if (L2.audio && L2.audio.cancelToken) {
   L2.audio.current = null;
 
   // Play audio then move to Screen2
-  L2.playChunkSequence2(0, () => {
-    L2.screen2();
-  }, chunksToPlay);
+  L2.playChunkSequence2(
+    0,
+    () => {
+      L2.screen2();
+    },
+    chunksToPlay
+  );
 };
+
+
+
 
 
 
@@ -11458,15 +11571,44 @@ L2.screen2 = function () {
   console.log("[Level2] screen2()");
   console.log("🔥 ENTER level2_screen2");
 
+  // ⭐⭐⭐ HARD KILL — MUST BE FIRST ⭐⭐⭐
+
+  // Kill normal Audio()
+  L2.stopAllAudio();
+
+  // Kill voicePlayer chunk queue
+  if (window.voicePlayer && window.voicePlayer.stop) {
+    window.voicePlayer.stop();
+  }
+
+  // Kill pending chunk callbacks
+  if (L2.audio && L2.audio.cancelToken) {
+    L2.audio.cancelToken.cancel = true;
+  }
+
+  // Invalidate pending async callbacks
+  if (L2.audio) {
+    L2.audio.generation++;
+    L2.audio.current = null;
+  }
+
+  // Reset cancel token for new Screen‑2 audio
+  if (L2.audio && L2.audio.cancelToken) {
+    L2.audio.cancelToken.cancel = false;
+  }
+
+  // ⭐⭐⭐ END HARD KILL ⭐⭐⭐
+
+  // ⭐⭐⭐ ADDED LINE — DO NOT MOVE ⭐⭐⭐
+  window.currentScreen = "level2Screen2";
 
   // Hide the old shared replay button (Level 1 uses dynamic now)
   const replayBtn = document.getElementById("replaySentenceBtn");
   if (replayBtn) replayBtn.style.display = "none";
 
-document.getElementById("level2Wrapper").classList.remove("hidden");
-document.getElementById("level2Screen1").classList.add("hidden");
-document.getElementById("level2Screen2").classList.remove("hidden");
-
+  document.getElementById("level2Wrapper").classList.remove("hidden");
+  document.getElementById("level2Screen1").classList.add("hidden");
+  document.getElementById("level2Screen2").classList.remove("hidden");
 
   L2.mcqLocked = false;
 
@@ -11505,11 +11647,35 @@ document.getElementById("level2Screen2").classList.remove("hidden");
   });
 };
 
+
+
+
 /* ----------------------------------------------------------
    ⭐ LEVEL 2 — HANDLE MCQ (ISOLATED)
 ---------------------------------------------------------- */
 
 L2.handleMCQ = function (choice) {
+
+  // ⭐⭐⭐ HARD KILL — MUST BE FIRST ⭐⭐⭐
+  if (L2.audio && L2.audio.cancelToken) {
+    L2.audio.cancelToken.cancel = true;     // kill pending chunk callbacks
+  }
+
+  if (window.voicePlayer && window.voicePlayer.stop) {
+    window.voicePlayer.stop();              // kill chunk queue
+  }
+
+  if (typeof L2.stopAllAudio === "function") {
+    L2.stopAllAudio();                      // kill normal Audio()
+  }
+
+  if (L2.audio) {
+    L2.audio.generation++;                  // invalidate async callbacks
+    L2.audio.current = null;
+  }
+  // ⭐⭐⭐ END HARD KILL ⭐⭐⭐
+
+
   if (L2.mcqLocked) return;
   L2.mcqLocked = true;
 
@@ -11550,6 +11716,7 @@ L2.handleMCQ = function (choice) {
 };
 
 
+
 /* ----------------------------------------------------------
    ⭐ LEVEL 2 — SUMMARY (ISOLATED)
 ---------------------------------------------------------- */
@@ -11560,10 +11727,29 @@ L2.showRoundSummary = function () {
   // 🔇 Level‑2 audio stop
   L2.stopAllAudio();
 
+  // ⭐ Kill voicePlayer chunk queue
+  if (window.voicePlayer && window.voicePlayer.stop) {
+    window.voicePlayer.stop();
+  }
+
+  // ⭐ Kill pending chunk callbacks
+  if (L2.audio && L2.audio.cancelToken) {
+    L2.audio.cancelToken.cancel = true;
+  }
+
+  // ⭐ Generation guard to invalidate pending callbacks
+  if (L2.audio) {
+    L2.audio.generation++;
+    L2.audio.current = null;
+  }
+
+  // ⭐⭐⭐ ADDED LINE — DO NOT MOVE ⭐⭐⭐
+  window.currentScreen = "level2Summary";
+
   // Show Level‑2 summary screen
   L2.show("level2Summary");
 
-  // ⭐ Update progress bar immediately on summary screen
+  // Update progress bar
   L2.renderProgress("level2Summary");
 
   // Populate meaning + correct answer
@@ -11587,61 +11773,70 @@ L2.showRoundSummary = function () {
   });
 
   // ⭐ REPLAY BUTTON (Level‑2 safe version)
- document.getElementById("level2ReplayBtn").onclick = () => {
+  document.getElementById("level2ReplayBtn").onclick = () => {
 
-  // ⭐⭐⭐ HARD KILL — MUST BE FIRST ⭐⭐⭐
-  L2.stopAllAudio();
-  if (L2.audio && L2.audio.cancelToken) {
-    L2.audio.cancelToken.cancel = true;   // ← KILL previous chain
-  }
-  if (L2.audio) {
-    L2.audio.generation++;                // ← Invalidate all pending callbacks
-    L2.audio.current = null;
-  }
+    // Only allow replay while actually on the summary screen
+    if (window.currentScreen !== "level2Summary") return;
 
-  // ⭐ Reset cancel token for the NEW replay
-  if (L2.audio && L2.audio.cancelToken) {
-    L2.audio.cancelToken.cancel = false;
-  }
+    // ⭐⭐⭐ HARD KILL — MUST BE FIRST ⭐⭐⭐
+    L2.stopAllAudio();
 
-  // ⭐ Start fresh replay
-  L2.playChunkSequence2(0, () => {}, s.chunks);
-};
+    if (window.voicePlayer && window.voicePlayer.stop) {
+      window.voicePlayer.stop();
+    }
 
-
-  // ⭐ NEXT BUTTON (correct, safe, final version)
-  document.getElementById("level2NextBtn").onclick = () => {
-    // Lock MCQ until next round begins
-    L2.mcqLocked = true;
-
-    // Cancel any pending audio
     if (L2.audio && L2.audio.cancelToken) {
       L2.audio.cancelToken.cancel = true;
     }
 
-    // Generation guard
     if (L2.audio) {
       L2.audio.generation++;
       L2.audio.current = null;
     }
 
-    // Level‑2 audio stop
+    // Reset cancel token for NEW replay
+    if (L2.audio && L2.audio.cancelToken) {
+      L2.audio.cancelToken.cancel = false;
+    }
+
+    // Start fresh replay
+    L2.playChunkSequence2(0, () => {}, s.chunks);
+  };
+
+  // ⭐ NEXT BUTTON (correct, safe, final version)
+  document.getElementById("level2NextBtn").onclick = () => {
+    L2.mcqLocked = true;
+
+    if (L2.audio && L2.audio.cancelToken) {
+      L2.audio.cancelToken.cancel = true;
+    }
+
+    if (L2.audio) {
+      L2.audio.generation++;
+      L2.audio.current = null;
+    }
+
     if (typeof L2.stopAllAudio === "function") {
       L2.stopAllAudio();
     }
 
-    // ⭐ END‑OF‑SESSION CHECK
+    if (window.voicePlayer && window.voicePlayer.stop) {
+      window.voicePlayer.stop();
+    }
+
     if (L2.round >= L2.TOTAL_ROUNDS) {
       showLevel2FinalSummary();
       return;
     }
 
-    // ▶️ Continue to next round
     L2.currentSentence = null;
     L2.show("level2Screen1");
     L2.startRound();
   };
 };
+
+
+
 
 
 
@@ -11673,6 +11868,35 @@ L2.finish = function () {
 
 L2.start = function () {
   console.log("[Level2] start()");
+
+  // ⭐⭐⭐ HARD KILL — MUST BE FIRST ⭐⭐⭐
+
+  // Kill normal Audio()
+  L2.stopAllAudio();
+
+  // Kill Level‑2 chunk engine (voicePlayer)
+  if (window.voicePlayer && window.voicePlayer.stop) {
+    window.voicePlayer.stop();
+  }
+
+  // Kill pending chunk callbacks
+  if (L2.audio && L2.audio.cancelToken) {
+    L2.audio.cancelToken.cancel = true;
+  }
+
+  // Invalidate ALL async callbacks
+  if (L2.audio) {
+    L2.audio.generation++;
+    L2.audio.current = null;
+  }
+
+  // Reset cancel token for NEW Level‑2 session
+  if (L2.audio && L2.audio.cancelToken) {
+    L2.audio.cancelToken.cancel = false;
+  }
+
+  // ⭐⭐⭐ END HARD KILL ⭐⭐⭐
+
 
   // ⭐ Kill leftover Level 1 audio immediately
   window.audioCancelToken.cancel = true;
@@ -11717,14 +11941,34 @@ L2.start = function () {
 Show screen2
 --------------------------------------------------------------------------------------------*/
 L2.showScreen2 = function(sentence) {
+
+    // 🔇 Kill ALL Level‑2 audio
     L2.stopAllAudio();
-    L2.audioGeneration++;
-    L2.cancelToken = false;
 
-   document.getElementById("level2Screen1").classList.add("hidden");
-document.getElementById("level2Screen2").classList.remove("hidden");
+    // ⭐ NEW — Kill voicePlayer chunk queue
+    if (window.voicePlayer && window.voicePlayer.stop) {
+        window.voicePlayer.stop();
+    }
 
+    // ⭐ NEW — Kill pending chunk callbacks
+    if (L2.audio && L2.audio.cancelToken) {
+        L2.audio.cancelToken.cancel = true;
+    }
 
+    // ⭐ NEW — Invalidate pending async callbacks
+    if (L2.audio) {
+        L2.audio.generation++;
+        L2.audio.current = null;
+    }
+
+    // Reset cancel token for new Screen‑2 audio
+    if (L2.audio && L2.audio.cancelToken) {
+        L2.audio.cancelToken.cancel = false;
+    }
+
+    // Show Screen‑2
+    document.getElementById("level2Screen1").classList.add("hidden");
+    document.getElementById("level2Screen2").classList.remove("hidden");
 
     // Fill sentence line
     L2.renderSentenceWithBlank(sentence);
@@ -11735,6 +11979,7 @@ document.getElementById("level2Screen2").classList.remove("hidden");
     // Wire replay button
     L2.wireReplayButton();
 };
+
 
 // ⭐ LEVEL 2 — FINAL SCORE SCREEN BUTTONS ⭐
 document.getElementById("l2PlayAgainBtn")?.addEventListener("click", () => {
@@ -25378,7 +25623,7 @@ function createAndWireLevel7ReplayButton(targetScreenId, currentAudioChunks) {
 
   // Wire replay logic
   btn.onclick = () => {
-    stopAllAudio();
+    L7.stopAllAudio();
 
     // Reset cancel token
     window.audioCancelToken.cancel = false;
@@ -32268,10 +32513,22 @@ document.addEventListener("DOMContentLoaded", () => {
   // LEVEL 2
   // ---------------------------------------------------------
   document.querySelector('.levelBtn[data-level="2"]')
-    ?.addEventListener("click", () => {
-      console.log("[Level 2] Isolated handler fired");
-      launchLevel(2, L2.start);
-    });
+  ?.addEventListener("click", () => {
+
+    if (window.currentScreen && window.currentScreen !== "screen0") return;
+    if (window.currentLevel !== 0) return;
+
+    window.currentLevel = 2;
+
+    // ⭐ FIX: mark screen BEFORE launching Level‑2
+    window.currentScreen = "level2Screen1";
+
+    console.log("[Level 2] Isolated handler fired");
+    launchLevel(2, L2.start);
+  });
+
+
+
 
   // ---------------------------------------------------------
   // LEVEL 3
