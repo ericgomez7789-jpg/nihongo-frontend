@@ -3262,7 +3262,7 @@ function cancelAllAudioPlayback() {
 
 let level1Score = 0;
 let level1Round = 0;
-const TOTAL_ROUNDS = 1;
+const TOTAL_ROUNDS = 5;
 window.level1TotalRounds = TOTAL_ROUNDS;
 let level1Index = 0;
 let level1Sentences = [];
@@ -3373,7 +3373,12 @@ L1.createAndWireLevel1ReplayButton = function(currentAudioChunks) {
       if (timerEl) timerEl.textContent = timeLeft;
       if (timeLeft <= 0) {
         clearInterval(L1.timerInterval);
-        L1.onComplete();
+       if (window.currentLevel === 1) {
+  L1.onComplete();
+} else if (window.currentLevel === 2) {
+  L2.onComplete();
+}
+
       }
     }, 1000);
 
@@ -4132,6 +4137,9 @@ function level1_screen1() {
 
 function level1_screen2(sentence) {
 
+  // ⭐ Store sentence for replay callback (non‑logic fix)
+  L1.currentSentenceObj = sentence;
+
   // ⭐ Kill leftover Level 1 audio immediately
   window.audioCancelToken.cancel = true;
 
@@ -4214,6 +4222,7 @@ function level1_screen2(sentence) {
     DragModule.onComplete();
   });
 }
+
 
 
 
@@ -11003,6 +11012,18 @@ L2.updateScoreKeeper = function () {
   if (el) {
     el.textContent = `${L2.score} / ${L2.TOTAL_ROUNDS}`;
   }
+};
+
+L2.onComplete = function () {
+
+  // Increment Level 2 round counter
+  level2Round++;
+
+  // Update scorekeeper (now correctly isolated by currentLevel)
+  updateScoreKeeper();
+
+  // Move to the next Level 2 screen (same pattern as Level 1)
+  level2_screen1();
 };
 
 
