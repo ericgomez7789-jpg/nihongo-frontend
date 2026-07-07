@@ -3262,7 +3262,7 @@ function cancelAllAudioPlayback() {
 
 let level1Score = 0;
 let level1Round = 0;
-const TOTAL_ROUNDS = 5;
+const TOTAL_ROUNDS = 1;
 window.level1TotalRounds = TOTAL_ROUNDS;
 let level1Index = 0;
 let level1Sentences = [];
@@ -3329,75 +3329,44 @@ function updateScoreKeeper() {
 // Timer
 // -----------------------------
 L1.createAndWireLevel1ReplayButton = function(currentAudioChunks) {
-  // Remove old L1 replay button if it exists
   const oldBtn = document.getElementById("l1ReplayBtn");
   if (oldBtn) oldBtn.remove();
 
-  // Create new button
   const btn = document.createElement("button");
   btn.id = "l1ReplayBtn";
   btn.className = "iconBtn replay-top";
   btn.textContent = "🔁 Replay";
 
-  // Insert into Level 1 Screen 2
   const screen2 = document.getElementById("level1Screen2");
   if (!screen2) return;
   screen2.appendChild(btn);
 
-  // Wire logic
   btn.onclick = () => {
 
-    // ⭐ Prevent Level 1 replay from STARTING during Level 2
     if (window.currentLevel !== 1) return;
 
     stopAllAudio();
 
-    window.currentScreen = "level1Screen2";
-
-    // Reset Level 1 state
     window.audioCancelToken.cancel = false;
     window.audioGeneration++;
     L1._locked = false;
 
-    // Restart timer
-    if (L1.timerInterval) {
-      clearInterval(L1.timerInterval);
-    }
+    // ⭐ DO NOT re-enter screen2
+    // ⭐ DO NOT restart the timer
+    // ⭐ Only restart audio
 
-    let timeLeft = 30;
-    const timerEl = document.getElementById("level1Timer");
-    if (timerEl) timerEl.textContent = timeLeft;
-
-    L1.timerInterval = setInterval(() => {
-      timeLeft--;
-      if (timerEl) timerEl.textContent = timeLeft;
-      if (timeLeft <= 0) {
-        clearInterval(L1.timerInterval);
-       if (window.currentLevel === 1) {
-  L1.onComplete();
-} else if (window.currentLevel === 2) {
-  L2.onComplete();
-}
-
-      }
-    }, 1000);
-
-    // ⭐ Restart audio with TRUE kill-switch inside callback
     playChunkSequence(
       0,
       () => {
-
-        // ⭐⭐⭐ TRUE KILL SWITCH — prevents Level 1 from firing inside Level 2
         if (window.currentLevel !== 1) return;
-
-        // Replay finished → re-enter Level 1 Screen 2 safely
-        level1_screen2(L1.currentSentenceObj);
-
+        // ⭐ Replay finished — do nothing else
       },
       currentAudioChunks
     );
   };
 };
+
+
 
 
 
