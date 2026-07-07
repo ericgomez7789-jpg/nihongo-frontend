@@ -3262,7 +3262,7 @@ function cancelAllAudioPlayback() {
 
 let level1Score = 0;
 let level1Round = 0;
-const TOTAL_ROUNDS = 1;
+const TOTAL_ROUNDS = 5;
 window.level1TotalRounds = TOTAL_ROUNDS;
 let level1Index = 0;
 let level1Sentences = [];
@@ -4067,7 +4067,6 @@ L1.currentSentence = sentence;
 
 
 function level1_screen2(sentence) {
-  if (window.currentLevel !== 1) return;
   console.log("🔥 ENTER level1_screen2");
   console.log("Sentence ID:", sentence.id);
 
