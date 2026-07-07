@@ -60,18 +60,20 @@ async function ensureMembershipRow() {
   }
 }
 
-ensureMembershipRow();
 
 
-// ============================================================
-//  Ensure Membership Row Exists on Login
-// ============================================================
+let hasInitialized = false;
+
 supabase.auth.onAuthStateChange(async (event, session) => {
-  if (session?.user?.email) {
-    console.log("User logged in:", session.user.email);
-    await ensureMembershipRow();
-  }
+  if (!session?.user?.email) return;
+
+  if (hasInitialized) return;   // ⭐ Prevent repeated triggers
+  hasInitialized = true;
+
+  console.log("User logged in:", session.user.email);
+  await ensureMembershipRow();
 });
+
 
 
 // ============================================================

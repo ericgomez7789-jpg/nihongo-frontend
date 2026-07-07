@@ -3262,10 +3262,11 @@ function cancelAllAudioPlayback() {
 
 let level1Score = 0;
 let level1Round = 0;
-const TOTAL_ROUNDS = 5;
+const TOTAL_ROUNDS = 1;
 window.level1TotalRounds = TOTAL_ROUNDS;
 let level1Index = 0;
 let level1Sentences = [];
+window.currentLevel = 0;
 
 
 
@@ -3277,31 +3278,48 @@ let level1Sentences = [];
 Replay Button Wiring
 -----------------------------------------------------------------------------------------*/
 
-
 function updateScoreKeeper() {
   const el = document.getElementById("scoreKeeper");
   if (!el) return;
 
-  const total = window.level1TotalRounds || TOTAL_ROUNDS; // fallback to 5 if not set
-  const text = `${level1Score} / ${total}`;
+  // ⭐ Level 1
+  if (window.currentLevel === 1) {
+    const total = window.level1TotalRounds || TOTAL_ROUNDS;
+    const text = `${level1Score} / ${total}`;
 
-  if (el.textContent !== text) {
-    el.textContent = text;
+    if (el.textContent !== text) {
+      el.textContent = text;
+    }
+
+    console.log("📊 updateScoreKeeper (L1)", {
+      level1Score,
+      level1Round,
+      total,
+      text
+    });
+
+    return;
   }
 
-  console.log("📊 updateScoreKeeper", {
-    level1Score,
-    level1Round,
-    total,
-    text
-  });
-}
+  // ⭐ Level 2
+  if (window.currentLevel === 2) {
+    const total = window.level2TotalRounds || window.level2Sentences?.length || 0;
+    const text = `${level2Score} / ${total}`;
 
-L1.onComplete = function() {
-    level1Round++;
-    updateScoreKeeper();
-    level1_screen1();
-};
+    if (el.textContent !== text) {
+      el.textContent = text;
+    }
+
+    console.log("📊 updateScoreKeeper (L2)", {
+      level2Score,
+      level2Round,
+      total,
+      text
+    });
+
+    return;
+  }
+}
 
 
 
@@ -3328,6 +3346,10 @@ L1.createAndWireLevel1ReplayButton = function(currentAudioChunks) {
 
   // Wire logic
   btn.onclick = () => {
+
+    // ⭐ Prevent Level 1 replay from STARTING during Level 2
+    if (window.currentLevel !== 1) return;
+
     stopAllAudio();
 
     window.currentScreen = "level1Screen2";
@@ -3355,10 +3377,25 @@ L1.createAndWireLevel1ReplayButton = function(currentAudioChunks) {
       }
     }, 1000);
 
-    // Restart audio
-    playChunkSequence(0, () => {}, currentAudioChunks);
+    // ⭐ Restart audio with TRUE kill-switch inside callback
+    playChunkSequence(
+      0,
+      () => {
+
+        // ⭐⭐⭐ TRUE KILL SWITCH — prevents Level 1 from firing inside Level 2
+        if (window.currentLevel !== 1) return;
+
+        // Replay finished → re-enter Level 1 Screen 2 safely
+        level1_screen2(L1.currentSentenceObj);
+
+      },
+      currentAudioChunks
+    );
   };
 };
+
+
+
 
 
 
@@ -3710,6 +3747,11 @@ console.log("[showScreen] switching to:", id);
     screen.classList.add('hidden');
   });
 
+  // ⭐ Reset level state ONLY when returning to level-select screen
+if (id === "screen0") {
+  window.currentLevel = 0;
+}
+
   // SPECIAL CASE — Route ONLY Level 7 screens to L7.show()
   if (
     id === "level7Screen1" ||
@@ -3889,6 +3931,10 @@ const DragModule = {
 
 
 function renderSummaryScreen(sentence, nextLevelFn, correctDrops = null, audioChunks = null) {
+
+  // ⭐ Kill leftover Level 1 audio immediately
+  window.audioCancelToken.cancel = true;
+
   if (typeof nextLevelFn !== "function") {
     console.warn("⚠️ nextLevelFn missing, using fallback");
     nextLevelFn = () => {};
@@ -3953,6 +3999,7 @@ function renderSummaryScreen(sentence, nextLevelFn, correctDrops = null, audioCh
 
 
 
+
 /*------------------------------------------------------------------------------
 Score summary screen
 --------------------------------------------------------------------------------*/
@@ -3961,14 +4008,16 @@ Score summary screen
 --------------------------------------------------------------------------------*/
 function showLevel1FinalSummary() {
   stopAllAudio();
+
+  // ⭐ Kill any leftover Level 1 audio callbacks
+  window.audioCancelToken.cancel = true;
+
   showScreen("screen4");
 
   // ⭐ Lifetime progress bar (Level 1)
-// ⭐ Lifetime progress bar (Level 1) — only if progress system is present
-if (window.L1 && typeof L1.renderProgress === "function") {
-  L1.renderProgress("screen4");
-}
-
+  if (window.L1 && typeof L1.renderProgress === "function") {
+    L1.renderProgress("screen4");
+  }
 
   // Session-only stats (these stay as-is)
   const roundsEl = document.getElementById("sessionRounds");
@@ -3977,8 +4026,9 @@ if (window.L1 && typeof L1.renderProgress === "function") {
 
   if (roundsEl) roundsEl.textContent = level1Round;
   if (scoreEl) scoreEl.textContent = level1Score;
-  if (dropsEl) dropsEl.textContent = Number(totalCorrectDrops) || 0;
+  if (dropsEl) dropsEl.textContent = Number(correctDrops) || 0;
 }
+
 
 
 
@@ -4025,14 +4075,13 @@ function level1_screen1() {
   stopAllAudio();
 
   showScreen("screen1");
+
   // Ensure total is set even if level1() was bypassed
-const level1Sentences = sentences.filter(s => s.level === 1);
-Progress.setTotal("level1", level1Sentences.length);
+  const level1Sentences = sentences.filter(s => s.level === 1);
+  Progress.setTotal("level1", level1Sentences.length);
 
-const screenEl = document.getElementById("screen1");
-L1.Reset.attach(screenEl, "screen1");
-
-
+  const screenEl = document.getElementById("screen1");
+  L1.Reset.attach(screenEl, "screen1");
 
   // ⭐ Update lifetime progress bar on Screen 1
   L1.renderProgress("screen1");
@@ -4048,25 +4097,44 @@ L1.Reset.attach(screenEl, "screen1");
   const level = 1;
   const levelSentences = sentences.filter(s => s.level === level);
   const sentence = levelSentences[Math.floor(Math.random() * levelSentences.length)];
-L1.currentSentence = sentence;
+  L1.currentSentence = sentence;
 
   const chunkFiles = sentence.chunks.map(chunk => {
     const voice = Math.random() < 0.5 ? "daughter" : "me";
     return chunk.audio[voice];
   });
 
-  // ⭐ NO GUARD HERE — audio only
+  // ⭐ FIXED: Level 1 audio callback no longer leaks into Level 2
   playChunksInOrder(chunkFiles, () => {
-    // ⭐ DO NOT GUARD THIS — must always fire
+
+    // ⭐ Kill callback if we are no longer on Screen 1
+    if (window.currentScreen !== "screen1") return;
+
+    // ⭐ Kill callback if Level 1 is no longer active
+    if (window.currentLevel !== 1) return;
+
     setTimeout(() => {
+
+      // ⭐ Double-guard inside timeout
+      if (window.currentScreen !== "screen1") return;
+      if (window.currentLevel !== 1) return;
+
       level1_screen2(sentence);
+
     }, 600);
-  });
+
+  }); // ← Correct closing brace
 }
 
 
 
+
+
 function level1_screen2(sentence) {
+
+  // ⭐ Kill leftover Level 1 audio immediately
+  window.audioCancelToken.cancel = true;
+
   console.log("🔥 ENTER level1_screen2");
   console.log("Sentence ID:", sentence.id);
 
@@ -4136,7 +4204,7 @@ function level1_screen2(sentence) {
     Progress.markSentenceComplete("level1", sentence.id);
 
     // Go to summary
-   renderSummaryScreen(sentence, level1_screen1, correctDrops, currentAudioChunks);
+    renderSummaryScreen(sentence, level1_screen1, correctDrops, currentAudioChunks);
 
   };
 
@@ -4146,6 +4214,7 @@ function level1_screen2(sentence) {
     DragModule.onComplete();
   });
 }
+
 
 
 
@@ -11615,6 +11684,11 @@ L2.finish = function () {
 L2.start = function () {
   console.log("[Level2] start()");
 
+  // ⭐ Kill leftover Level 1 audio immediately
+  window.audioCancelToken.cancel = true;
+
+  window.currentLevel = 2;   // ⭐ REQUIRED — prevents Level 1 from firing
+
   // ⭐ Automatically set total sentences for Level 2
   Progress2.setTotal("level2", L2.dataset.length);
 
@@ -11645,6 +11719,8 @@ L2.start = function () {
   // Start first round
   L2.startRound();
 };
+
+
 
 
 /*---------------------------------------------------------------------------------------
@@ -32182,10 +32258,21 @@ document.addEventListener("DOMContentLoaded", () => {
   // LEVEL 1
   // ---------------------------------------------------------
   document.querySelector('.levelBtn[data-level="1"]')
-    ?.addEventListener("click", () => {
-      console.log("[Level 1] Isolated handler fired");
-      launchLevel(1, level1);
-    });
+  ?.addEventListener("click", () => {
+ if (window.currentScreen && window.currentScreen !== "screen0") return;
+
+
+
+
+    if (window.currentLevel !== 0) return;   // ⭐ Only allow Level 1 when selecting from screen0
+
+    window.currentLevel = 1;
+    console.log("[Level 1] Isolated handler fired");
+    launchLevel(1, level1);
+  });
+
+
+
 
   // ---------------------------------------------------------
   // LEVEL 2
