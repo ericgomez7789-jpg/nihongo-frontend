@@ -52,8 +52,8 @@ const sentences = [
         hiragana: "お",
         meaning: "honorific prefix",
         audio: {
-          daughter: "audio/sentences/o.wav",
-          me: "audio/sentences/o.wav"
+          daughter: "audio/sentences/wo.wav",
+          me: "audio/sentences/wo.wav"
         }
       },
       {
@@ -641,22 +641,6 @@ const sentences = [
     }
   ]
 },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 {
    id: "l1-20",
   meaning: "How do you read this",
@@ -1463,22 +1447,6 @@ const sentences = [
     }
   ]
 },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 {
    id: "l1-41",
   meaning: "Meet my friends",
@@ -1513,22 +1481,6 @@ const sentences = [
     }
   ]
 },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 {
    id: "l1-42",
   meaning: "It's eight twenty in the morning.",
@@ -1935,22 +1887,6 @@ const sentences = [
     }
   ]
 },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 {
    id: "l1-49",
   meaning: "Move forward",
@@ -3326,13 +3262,11 @@ function cancelAllAudioPlayback() {
 
 let level1Score = 0;
 let level1Round = 0;
-const TOTAL_ROUNDS = 5;
+const TOTAL_ROUNDS = 1;
 window.level1TotalRounds = TOTAL_ROUNDS;
 let level1Index = 0;
 let level1Sentences = [];
 
-// ⭐ ADD THIS — required to stop the crash
-let totalCorrectDrops = 0;
 
 
 
@@ -3398,11 +3332,9 @@ L1.createAndWireLevel1ReplayButton = function(currentAudioChunks) {
 
     window.currentScreen = "level1Screen2";
 
-    // ⭐ FIX: invalidate old timers BEFORE clearing cancel
-    window.audioGeneration++;
-
-    // Reset Level 1 state (unchanged)
+    // Reset Level 1 state
     window.audioCancelToken.cancel = false;
+    window.audioGeneration++;
     L1._locked = false;
 
     // Restart timer
@@ -3427,7 +3359,6 @@ L1.createAndWireLevel1ReplayButton = function(currentAudioChunks) {
     playChunkSequence(0, () => {}, currentAudioChunks);
   };
 };
-
 
 
 
@@ -4136,6 +4067,7 @@ L1.currentSentence = sentence;
 
 
 function level1_screen2(sentence) {
+  if (window.currentLevel !== 1) return;
   console.log("🔥 ENTER level1_screen2");
   console.log("Sentence ID:", sentence.id);
 
@@ -11684,10 +11616,6 @@ L2.finish = function () {
 L2.start = function () {
   console.log("[Level2] start()");
 
-  // ⭐ KILL ALL LEVEL‑1 AUDIO TIMERS + CALLBACKS
-  window.audioGeneration++;
-  window.audioCancelToken.cancel = true;
-
   // ⭐ Automatically set total sentences for Level 2
   Progress2.setTotal("level2", L2.dataset.length);
 
@@ -11718,7 +11646,6 @@ L2.start = function () {
   // Start first round
   L2.startRound();
 };
-
 
 
 /*---------------------------------------------------------------------------------------
@@ -17470,10 +17397,6 @@ function showLevel3FinalSummary() {
 L3.start = function () {
   console.log("[Level3] start()");
 
-  // ⭐ Kill ALL previous level audio timers + callbacks
-  window.audioGeneration++;
-  window.audioCancelToken.cancel = true;
-
   // Reset session state
   L3.round = 0;
   L3.score = 0;
@@ -17501,7 +17424,6 @@ L3.start = function () {
   // Start first round
   L3.startRound();
 };
-
 
 
 
@@ -20763,13 +20685,9 @@ L4.interjectionGroups = [
   // Agreement
   ["うんうん"],
 
-  // Strong reaction (danger / shock)
-  ["やば！", "あぶなっ！"],
-
-  // Praise / admiration (NEW GROUP)
-  ["すごい！", "すごいね！"]
+  // Strong reaction (独立)
+  ["やば！"]
 ];
-
 
 
 
@@ -20802,10 +20720,6 @@ L4.interjectionPool = [
   "やば！",
   "あぶなっ！",
 
-  // --- Praise / Admiration ---
-  "すごい！",
-  "すごいね！",
-
   // --- Mild Surprise / Interest / Small Accident ---
   "へぇ〜",
   "へええ〜",
@@ -20832,7 +20746,6 @@ L4.interjectionPool = [
   // --- Agreement ---
   "うんうん"
 ];
-
 
 
 /* ----------------------------------------------------------
@@ -20967,17 +20880,13 @@ L4.startRound = function () {
 
   L4.mcqLocked = false;
 
-  // ⭐ Randomize sentence selection (no chunk randomization)
-  const randomIndex = Math.floor(Math.random() * L4.dataset.length);
-  const sentence = L4.dataset[randomIndex];
-
+  // ⭐ Mirror Level 3: linear progression
+  const sentence = L4.dataset[L4.round];
   L4.setCurrentSentence(sentence);
   L4.currentSentenceObj = sentence;
 
   L4.screen1();
 };
-
-
 
 
 L4.screen1 = function () {
@@ -22108,21 +22017,6 @@ id: "l5_s_009",
     }
   ]
 },   // ← END OF LEVEL 5 OBJECT
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 {
 id: "l5_s_010",
   meaning: "While counting days, which is the correct counter?",
@@ -22204,21 +22098,6 @@ id: "l5_s_010",
     }
   ]
 },   // ← END OF LEVEL 5 OBJECT
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 {
 id: "l5_s_011",
   meaning: "While counting rooms, which is the correct counter?",
@@ -22660,122 +22539,6 @@ id: "l5_s_015",
     }
   ]
 },   // ← END OF LEVEL 5 OBJECT
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*-----------------------------------------------------
-    Level 5 — Kabe (wall)
------------------------------------------------------*/
-{
-  id: "l5_s_016",
-  meaning: "While counting walls, which is the correct counter?",
-  level: 5,
-
-  // ⭐ Level 5 uses correctCounter
-  correctCounter: "いちめん",
-
-  // MCQ options
-  options: ["いちめん", "いちまい", "いっこ", "いっぽん"],
-  optionsRomaji: ["ichimen", "ichimai", "ikko", "ippon"],
-  optionsEN: ["one surface / wall", "one flat object", "one small object", "one long object"],
-
-  choiceAudio: {
-    options: [
-      "audio/sentences/ichimen.wav",
-      "audio/sentences/ichimai.wav",
-      "audio/sentences/ikko.wav",
-      "audio/sentences/ippon.wav"
-    ]
-  },
-
-  meaningAudio: [
-    "audio/sentences/ichimen.wav",
-    "audio/sentences/ichimai.wav",
-    "audio/sentences/ikko.wav",
-    "audio/sentences/ippon.wav"
-  ],
-
-  // ⭐ Chunks with English meaning
-  chunks: [
-    {
-      romaji: "kabe",
-      hiragana: "かべ",
-      meaning: "wall",
-      audio: { daughter: "audio/sentences/kabe.wav", me: "audio/sentences/kabe.wav" }
-    },
-    {
-      romaji: "wo",
-      hiragana: "を",
-      meaning: "(object marker)",
-      audio: { daughter: "audio/sentences/wo.wav", me: "audio/sentences/wo.wav" }
-    },
-    {
-      romaji: "kazoenagara",
-      hiragana: "かぞえながら",
-      meaning: "while counting",
-      audio: { daughter: "audio/sentences/kazoenagara.wav", me: "audio/sentences/kazoenagara.wav" }
-    },
-    {
-      romaji: "tadashii",
-      hiragana: "ただしい",
-      meaning: "correct",
-      audio: { daughter: "audio/sentences/tadashii.wav", me: "audio/sentences/tadashii.wav" }
-    },
-    {
-      romaji: "kazoekata",
-      hiragana: "かぞえかた",
-      meaning: "way to count",
-      audio: { daughter: "audio/sentences/kazoekata.wav", me: "audio/sentences/kazoekata.wav" }
-    },
-    {
-      romaji: "wa",
-      hiragana: "は",
-      meaning: "(topic marker)",
-      audio: { daughter: "audio/sentences/wa.wav", me: "audio/sentences/wa.wav" }
-    },
-    {
-      romaji: "dore",
-      hiragana: "どれ",
-      meaning: "which",
-      audio: { daughter: "audio/sentences/dore.wav", me: "audio/sentences/dore.wav" }
-    },
-    {
-      romaji: "desuka",
-      hiragana: "ですか",
-      meaning: "is it?",
-      audio: { daughter: "audio/sentences/desuka.wav", me: "audio/sentences/desuka.wav" }
-    }
-  ]
-},
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
