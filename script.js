@@ -24682,23 +24682,249 @@ const level6 = [
     { romaji: "tsugi ni", hiragana: "つぎに", english: "next" },
     { romaji: "dou naru no", hiragana: "どうなるの", english: "what happens" }
   ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l6_015",
+  meaning: "I heard a sudden noise behind me, froze for a moment, and whispered a shaky 'ひっ…'. What happens next?",
+  level: 6,
+
+  options: ["ふりむく", "わらう", "りょうりをする", "そとにでる"],
+  optionsRomaji: ["furimuku", "warau", "ryouri_wo_suru", "soto_ni_deru"],
+  optionsEN: ["turn around", "laugh", "cook food", "go outside"],
+  correct: "ふりむく",
+
+  fullAudio: {
+    daughter: "audio/sentences/inference15.wav",
+    me:       "audio/sentences/inference15.wav"
+  },
+
+  choiceAudio: {
+    options: [
+      ["audio/sentences/furi.wav", "audio/sentences/muku.wav"],
+      ["audio/sentences/warau.wav"],
+      ["audio/sentences/ryouri.wav", "audio/sentences/wo.wav", "audio/sentences/suru.wav"],
+      ["audio/sentences/soto.wav", "audio/sentences/ni.wav", "audio/sentences/deru.wav"]
+    ]
+  },
+
+  meaningAudio: [
+    ["audio/sentences/furi.wav", "audio/sentences/muku.wav"],
+    ["audio/sentences/warau.wav"],
+    ["audio/sentences/ryouri.wav", "audio/sentences/wo.wav", "audio/sentences/suru.wav"],
+    ["audio/sentences/soto.wav", "audio/sentences/ni.wav", "audio/sentences/deru.wav"]
+  ],
+
+  chunks: [
+    { romaji: "ushiro de", hiragana: "うしろで", english: "behind me" },
+    { romaji: "totsuzen", hiragana: "とつぜん", english: "suddenly" },
+    { romaji: "oto ga shite", hiragana: "おとがして", english: "a noise sounded" },
+
+    { romaji: "karada ga", hiragana: "からだが", english: "my body" },
+    { romaji: "pittari", hiragana: "ぴったり", english: "froze still" },
+    { romaji: "tomatte", hiragana: "とまって", english: "stopped" },
+
+    { romaji: "furueru koe de", hiragana: "ふるえるこえで", english: "with a trembling voice" },
+    { romaji: "hhi...", hiragana: "ひっ…", english: "a fearful gasp" },
+
+    { romaji: "tsugi ni", hiragana: "つぎに", english: "next" },
+    { romaji: "dou naru no", hiragana: "どうなるの", english: "what happens" }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l6_016",
+  meaning: "After checking the contact on my phone, I realized it wasn’t bad news at all. My shoulders relaxed, and I let out a long 'ふぅ…'. What happens next?",
+  level: 6,
+
+  options: ["ほほえむ", "おこる", "りょうりをする", "すぐにねる"],
+  optionsRomaji: ["hohoemu", "okoru", "ryouri_wo_suru", "sugu_ni_neru"],
+  optionsEN: ["smile softly", "get angry", "cook food", "go to sleep immediately"],
+  correct: "ほほえむ",
+
+  fullAudio: {
+    daughter: "audio/sentences/inference16b.wav",
+    me:       "audio/sentences/inference16b.wav"
+  },
+
+  choiceAudio: {
+    options: [
+      ["audio/sentences/hohoemu.wav"],
+      ["audio/sentences/okoru.wav"],
+      ["audio/sentences/ryouri.wav", "audio/sentences/wo.wav", "audio/sentences/suru.wav"],
+      ["audio/sentences/sugu.wav", "audio/sentences/ni.wav", "audio/sentences/neru.wav"]
+    ]
+  },
+
+  meaningAudio: [
+    ["audio/sentences/hohoemu.wav"],
+    ["audio/sentences/okoru.wav"],
+    ["audio/sentences/ryouri.wav", "audio/sentences/wo.wav", "audio/sentences/suru.wav"],
+    ["audio/sentences/sugu.wav", "audio/sentences/ni.wav", "audio/sentences/neru.wav"]
+  ],
+
+  chunks: [
+    { romaji: "keitai no", hiragana: "けいたいの", english: "on my phone" },
+    { romaji: "renraku wo", hiragana: "れんらくを", english: "the contact / message" },
+    { romaji: "mite", hiragana: "みて", english: "after seeing" },
+
+    { romaji: "warui shirase ja nai to", hiragana: "わるいしらせじゃないと", english: "that it wasn’t bad news" },
+    { romaji: "wakatte", hiragana: "わかって", english: "realized" },
+
+    { romaji: "kata no chikara ga", hiragana: "かたのちからが", english: "my shoulders" },
+    { romaji: "fuwatto", hiragana: "ふわっと", english: "softly" },
+    { romaji: "nukete", hiragana: "ぬけて", english: "relaxed" },
+
+    { romaji: "fuu...", hiragana: "ふぅ…", english: "a long relieved exhale" },
+
+    { romaji: "tsugi ni", hiragana: "つぎに", english: "next" },
+    { romaji: "dou naru no", hiragana: "どうなるの", english: "what happens" }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l6_017",
+  meaning: "When I opened the door, something suddenly fell from the shelf. I jumped a little and let out a sharp 'うわっ…'. What happens next?",
+  level: 6,
+
+  options: ["ひろう", "わらう", "すぐにねる", "りょうりをする"],
+  optionsRomaji: ["hirou", "warau", "sugu_ni_neru", "ryouri_wo_suru"],
+  optionsEN: ["pick it up", "laugh", "go to sleep immediately", "cook food"],
+  correct: "ひろう",
+
+  fullAudio: {
+    daughter: "audio/sentences/inference17.wav",
+    me:       "audio/sentences/inference17.wav"
+  },
+
+  choiceAudio: {
+    options: [
+      ["audio/sentences/hirou.wav"],
+      ["audio/sentences/warau.wav"],
+      ["audio/sentences/sugu.wav", "audio/sentences/ni.wav", "audio/sentences/neru.wav"],
+      ["audio/sentences/ryouri.wav", "audio/sentences/wo.wav", "audio/sentences/suru.wav"]
+    ]
+  },
+
+  meaningAudio: [
+    ["audio/sentences/hirou.wav"],
+    ["audio/sentences/warau.wav"],
+    ["audio/sentences/sugu.wav", "audio/sentences/ni.wav", "audio/sentences/neru.wav"],
+    ["audio/sentences/ryouri.wav", "audio/sentences/wo.wav", "audio/sentences/suru.wav"]
+  ],
+
+  chunks: [
+    { romaji: "doa wo", hiragana: "どあを", english: "the door" },
+    { romaji: "akete", hiragana: "あけて", english: "after opening" },
+
+    { romaji: "tana kara", hiragana: "たなから", english: "from the shelf" },
+    { romaji: "nanika ga", hiragana: "なにかが", english: "something" },
+    { romaji: "ochite", hiragana: "おちて", english: "fell" },
+
+    { romaji: "bikkuri shite", hiragana: "びっくりして", english: "I got startled" },
+    { romaji: "uwatt...", hiragana: "うわっ…", english: "a sharp surprised gasp" },
+
+    { romaji: "tsugi ni", hiragana: "つぎに", english: "next" },
+    { romaji: "dou naru no", hiragana: "どうなるの", english: "what happens" }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l6_018",
+  meaning: "I heard someone blame me for something I didn’t do. My eyebrows tightened, and I let out an irritated 'はぁ…？'. What happens next?",
+  level: 6,
+
+  options: ["いいなおす", "わらう", "すぐにねる", "りょうりをする"],
+  optionsRomaji: ["iinousu", "warau", "sugu_ni_neru", "ryouri_wo_suru"],
+  optionsEN: ["correct them", "laugh", "go to sleep immediately", "cook food"],
+  correct: "いいなおす",
+
+  fullAudio: {
+    daughter: "audio/sentences/inference18c.wav",
+    me:       "audio/sentences/inference18c.wav"
+  },
+
+  choiceAudio: {
+    options: [
+      ["audio/sentences/iinousu.wav"],
+      ["audio/sentences/warau.wav"],
+      ["audio/sentences/sugu.wav", "audio/sentences/ni.wav", "audio/sentences/neru.wav"],
+      ["audio/sentences/ryouri.wav", "audio/sentences/wo.wav", "audio/sentences/suru.wav"]
+    ]
+  },
+
+  meaningAudio: [
+    ["audio/sentences/iinousu.wav"],
+    ["audio/sentences/warau.wav"],
+    ["audio/sentences/sugu.wav", "audio/sentences/ni.wav", "audio/sentences/neru.wav"],
+    ["audio/sentences/ryouri.wav", "audio/sentences/wo.wav", "audio/sentences/suru.wav"]
+  ],
+
+  chunks: [
+    { romaji: "dareka ga", hiragana: "だれかが", english: "someone" },
+    { romaji: "boku no sei da to", hiragana: "ぼくのせいだと", english: "said it was my fault" },
+    { romaji: "itte", hiragana: "いって", english: "said" },
+
+    { romaji: "mayuge ga", hiragana: "まゆげが", english: "my eyebrows" },
+    { romaji: "gyutto", hiragana: "ぎゅっと", english: "tightened firmly" },
+    { romaji: "shite", hiragana: "して", english: "did" },
+
+    { romaji: "haa...?", hiragana: "はぁ…？", english: "an irritated exhale of disbelief" },
+
+    { romaji: "tsugi ni", hiragana: "つぎに", english: "next" },
+    { romaji: "dou naru no", hiragana: "どうなるの", english: "what happens" }
+  ]
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
