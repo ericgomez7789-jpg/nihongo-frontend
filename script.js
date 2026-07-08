@@ -22853,6 +22853,104 @@ id: "l5_s_015",
 
 
 
+
+
+
+
+{
+  id: "l5_s_016",
+  meaning: "While counting walls, which is the correct counter?",
+  level: 5,
+
+  // ⭐ Level 5 uses correctCounter
+  correctCounter: "いちめん",
+
+  // MCQ options
+  options: ["いちめん", "いっぽん", "いちまい", "いっこ"],
+  optionsRomaji: ["ichimen", "ippon", "ichimai", "ikko"],
+  optionsEN: ["one wall surface", "one long object", "one flat object", "one small object"],
+
+  choiceAudio: {
+    options: [
+      "audio/sentences/ichimen.wav",
+      "audio/sentences/ippon.wav",
+      "audio/sentences/ichimai.wav",
+      "audio/sentences/ikko.wav"
+    ]
+  },
+
+  meaningAudio: [
+    "audio/sentences/ichimen.wav",
+    "audio/sentences/ippon.wav",
+    "audio/sentences/ichimai.wav",
+    "audio/sentences/ikko.wav"
+  ],
+
+  // ⭐ Chunks with English meaning
+  chunks: [
+    {
+      romaji: "kabe",
+      hiragana: "かべ",
+      meaning: "wall",
+      audio: { daughter: "audio/sentences/kabe.wav", me: "audio/sentences/kabe.wav" }
+    },
+    {
+      romaji: "wo",
+      hiragana: "を",
+      meaning: "(object marker)",
+      audio: { daughter: "audio/sentences/wo.wav", me: "audio/sentences/wo.wav" }
+    },
+    {
+      romaji: "kazoenagara",
+      hiragana: "かぞえながら",
+      meaning: "while counting",
+      audio: { daughter: "audio/sentences/kazoenagara.wav", me: "audio/sentences/kazoenagara.wav" }
+    },
+    {
+      romaji: "tadashii",
+      hiragana: "ただしい",
+      meaning: "correct",
+      audio: { daughter: "audio/sentences/tadashii.wav", me: "audio/sentences/tadashii.wav" }
+    },
+    {
+      romaji: "kazoekata",
+      hiragana: "かぞえかた",
+      meaning: "way to count",
+      audio: { daughter: "audio/sentences/kazoekata.wav", me: "audio/sentences/kazoekata.wav" }
+    },
+    {
+      romaji: "wa",
+      hiragana: "は",
+      meaning: "(topic marker)",
+      audio: { daughter: "audio/sentences/wa.wav", me: "audio/sentences/wa.wav" }
+    },
+    {
+      romaji: "dore",
+      hiragana: "どれ",
+      meaning: "which",
+      audio: { daughter: "audio/sentences/dore.wav", me: "audio/sentences/dore.wav" }
+    },
+    {
+      romaji: "desuka",
+      hiragana: "ですか",
+      meaning: "is it?",
+      audio: { daughter: "audio/sentences/desuka.wav", me: "audio/sentences/desuka.wav" }
+    }
+  ]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 ]; // END OF L5 ARRAY
 
 /* ==========================================================
@@ -24454,7 +24552,150 @@ const level6 = [
     { romaji: "tsugi ni", hiragana: "つぎに", english: "next" },
     { romaji: "dou naru no", hiragana: "どうなるの", english: "what happens" }
   ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l6_013",
+  meaning: "I opened the window a little, felt the cool air come in, and took a deep breath. What happens next?",
+  level: 6,
+
+  options: ["すずしくなる", "ねむる", "りょうりをする", "そとにでる"],
+  optionsRomaji: ["suzushiku_naru", "nemuru", "ryouri_wo_suru", "soto_ni_deru"],
+  optionsEN: ["it becomes cooler", "fall asleep", "cook food", "go outside"],
+  correct: "すずしくなる",
+
+  fullAudio: {
+    daughter: "audio/sentences/inference13.wav",
+    me:       "audio/sentences/inference13.wav"
+  },
+
+  choiceAudio: {
+    options: [
+      ["audio/sentences/suzushiku.wav", "audio/sentences/naru.wav"],
+      ["audio/sentences/nemuru.wav"],
+      ["audio/sentences/ryouri.wav", "audio/sentences/wo.wav", "audio/sentences/suru.wav"],
+      ["audio/sentences/soto.wav", "audio/sentences/ni.wav", "audio/sentences/deru.wav"]
+    ]
+  },
+
+  meaningAudio: [
+    ["audio/sentences/suzushiku.wav", "audio/sentences/naru.wav"],
+    ["audio/sentences/nemuru.wav"],
+    ["audio/sentences/ryouri.wav", "audio/sentences/wo.wav", "audio/sentences/suru.wav"],
+    ["audio/sentences/soto.wav", "audio/sentences/ni.wav", "audio/sentences/deru.wav"]
+  ],
+
+  chunks: [
+    { romaji: "mado wo", hiragana: "まどを", english: "the window" },
+    { romaji: "sukoshi", hiragana: "すこし", english: "a little" },
+    { romaji: "akete", hiragana: "あけて", english: "opened" },
+
+    { romaji: "tsumetai", hiragana: "つめたい", english: "cool" },
+    { romaji: "kuuki ga", hiragana: "くうきが", english: "air" },
+    { romaji: "haitte", hiragana: "はいって", english: "comes in" },
+
+    { romaji: "fukaku", hiragana: "ふかく", english: "deeply" },
+    { romaji: "iki wo", hiragana: "いきを", english: "a breath" },
+    { romaji: "sutte", hiragana: "すって", english: "took" },
+
+    { romaji: "tsugi ni", hiragana: "つぎに", english: "next" },
+    { romaji: "dou naru no", hiragana: "どうなるの", english: "what happens" }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l6_014",
+  meaning: "I suddenly remembered something embarrassing, covered my face with my hands, and let out a small groan. What happens next?",
+  level: 6,
+
+  options: ["かおがあかくなる", "わらう", "りょうりをする", "そとにでる"],
+  optionsRomaji: ["kao_ga_akaku_naru", "warau", "ryouri_wo_suru", "soto_ni_deru"],
+  optionsEN: ["my face turns red", "laugh", "cook food", "go outside"],
+  correct: "かおがあかくなる",
+
+  fullAudio: {
+    daughter: "audio/sentences/inference14.wav",
+    me:       "audio/sentences/inference14.wav"
+  },
+
+  choiceAudio: {
+    options: [
+      ["audio/sentences/kao.wav", "audio/sentences/ga.wav", "audio/sentences/akaku.wav", "audio/sentences/naru.wav"],
+      ["audio/sentences/warau.wav"],
+      ["audio/sentences/ryouri.wav", "audio/sentences/wo.wav", "audio/sentences/suru.wav"],
+      ["audio/sentences/soto.wav", "audio/sentences/ni.wav", "audio/sentences/deru.wav"]
+    ]
+  },
+
+  meaningAudio: [
+    ["audio/sentences/kao.wav", "audio/sentences/ga.wav", "audio/sentences/akaku.wav", "audio/sentences/naru.wav"],
+    ["audio/sentences/warau.wav"],
+    ["audio/sentences/ryouri.wav", "audio/sentences/wo.wav", "audio/sentences/suru.wav"],
+    ["audio/sentences/soto.wav", "audio/sentences/ni.wav", "audio/sentences/deru.wav"]
+  ],
+
+  chunks: [
+    { romaji: "totsuzen", hiragana: "とつぜん", english: "suddenly" },
+    { romaji: "hazukashii koto wo", hiragana: "はずかしいことを", english: "something embarrassing" },
+    { romaji: "omoidasite", hiragana: "おもいだして", english: "remembered" },
+
+    { romaji: "kao wo", hiragana: "かおを", english: "my face" },
+    { romaji: "te de", hiragana: "てで", english: "with my hands" },
+    { romaji: "ooi", hiragana: "おおい", english: "covered" },
+
+    { romaji: "chiisaku", hiragana: "ちいさく", english: "softly" },
+    { romaji: "un to", hiragana: "うんと", english: "groaned" },
+
+    { romaji: "tsugi ni", hiragana: "つぎに", english: "next" },
+    { romaji: "dou naru no", hiragana: "どうなるの", english: "what happens" }
+  ]
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
