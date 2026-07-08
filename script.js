@@ -3155,6 +3155,79 @@ const sentences = [
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l1-83",
+  meaning: "I am going on an errand.",
+  level: 1,
+  chunks: [
+    {
+      romaji: "watashi wa",
+      hiragana: "わたしは",
+      meaning: "as for me / I",
+      audio: {
+        daughter: "audio/sentences/watashi_wa.wav",
+        me: "audio/sentences/watashi_wa.wav"
+      }
+    },
+    {
+      romaji: "otsukai",
+      hiragana: "おつかい",
+      meaning: "errand",
+      audio: {
+        daughter: "audio/sentences/otsukai.wav",
+        me: "audio/sentences/otsukai.wav"
+      }
+    },
+    {
+      romaji: "ni",
+      hiragana: "に",
+      meaning: "to / toward",
+      audio: {
+        daughter: "audio/sentences/ni.wav",
+        me: "audio/sentences/ni.wav"
+      }
+    },
+    {
+      romaji: "ikimasu",
+      hiragana: "いきます",
+      meaning: "go / am going",
+      audio: {
+        daughter: "audio/sentences/ikimasu.wav",
+        me: "audio/sentences/ikimasu.wav"
+      }
+    }
+  ]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 // ⭐ ADD THIS PATCH RIGHT HERE
@@ -24924,7 +24997,19 @@ const level6 = [
     { romaji: "tsugi ni", hiragana: "つぎに", english: "next" },
     { romaji: "dou naru no", hiragana: "どうなるの", english: "what happens" }
   ]
-}
+},
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
