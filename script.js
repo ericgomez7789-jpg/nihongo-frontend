@@ -19422,7 +19422,7 @@ const level4 = [
       "audio/sentences/houtte.wav",
       "audio/sentences/oita.wav",
       "audio/sentences/shigoto.wav",
-      "audio/sentences/katadzukete.wav",
+      "audio/sentences/katazukete.wav",
       "audio/sentences/sukkiri.wav",
       "audio/sentences/shita.wav"
     ],
@@ -19431,7 +19431,7 @@ const level4 = [
       "audio/sentences/houtte.wav",
       "audio/sentences/oita.wav",
       "audio/sentences/shigoto.wav",
-      "audio/sentences/katadzukete.wav",
+      "audio/sentences/katazukete.wav",
       "audio/sentences/sukkiri.wav",
       "audio/sentences/shita.wav"
     ]
@@ -19466,7 +19466,7 @@ const level4 = [
       "romaji": "katadzukete",
       "hiragana": "かたづけて",
       "meaning": "cleaned up / took care of",
-      "audio": { "daughter": "audio/sentences/katadzukete.wav", "me": "audio/sentences/katadzukete.wav" }
+      "audio": { "daughter": "audio/sentences/katazukete.wav", "me": "audio/sentences/katazukete.wav" }
     },
     {
       "romaji": "sukkiri",
@@ -20528,8 +20528,7 @@ const level4 = [
       "audio/sentences/michibata.wav",
       "audio/sentences/ni.wav",
       "audio/sentences/sotte.wav",
-      "audio/sentences/aruki.wav",
-      "audio/sentences/nagara.wav",
+      
       "audio/sentences/ikinari.wav",
       "audio/sentences/onara.wav",
       "audio/sentences/shita.wav"
@@ -20538,8 +20537,8 @@ const level4 = [
       "audio/sentences/michibata.wav",
       "audio/sentences/ni.wav",
       "audio/sentences/sotte.wav",
-      "audio/sentences/aruki.wav",
-      "audio/sentences/nagara.wav",
+      "audio/sentences/arukinagara.wav",
+      
       "audio/sentences/ikinari.wav",
       "audio/sentences/onara.wav",
       "audio/sentences/shita.wav"
@@ -20564,14 +20563,10 @@ const level4 = [
     },
     {
       "hiragana": "あるき",
-      "meaning": "walking",
-      "audio": { "daughter": "audio/sentences/aruki.wav", "me": "audio/sentences/aruki.wav" }
+      "meaning": "while walking",
+      "audio": { "daughter": "audio/sentences/arukinagara.wav", "me": "audio/sentences/arukinagara.wav" }
     },
-    {
-      "hiragana": "ながら",
-      "meaning": "while",
-      "audio": { "daughter": "audio/sentences/nagara.wav", "me": "audio/sentences/nagara.wav" }
-    },
+    
     {
       "hiragana": "いきなり",
       "meaning": "suddenly",
@@ -21166,6 +21161,7 @@ L4.interjectionInfo = {
   "うそ！":      { type: "strong disbelief", note: "Used when something feels unbelievable." },
   "ほんとう？":  { type: "checking truth", note: "Used when confirming if something is true." },
   "まさか！":    { type: "strong disbelief", note: "Used when something seems impossible." },
+"えぇ〜！": { type: "strong surprise", note: "A sharp, emotional reaction to something shocking or intense." },
 
   // --- Urgent Shock / Trouble ---
   "やば！":      { type: "urgent shock", note: "Used when something suddenly goes wrong or feels urgent or dangerous." },
@@ -21200,8 +21196,18 @@ L4.interjectionInfo = {
   "うんうん":     { type: "agreement", note: "Shows active listening and agreement." },
 
   // ⭐ ADDED — Missing dataset interjection
-  "あら！":       { type: "surprised concern", note: "Used when reacting to something unexpected or mildly troubling." }
+  "あら！":       { type: "surprised concern", note: "Used when reacting to something unexpected or mildly troubling." },
+
+  // ⭐ ADDED — Additional missing dataset interjections
+  "あら？":       { type: "mild surprise", note: "A gentle reaction to something unexpected or slightly concerning." },
+  "えっ！":       { type: "sudden surprise", note: "A sharp reaction to unexpected news or an accident." },
+  "そっかぁ":     { type: "soft realization", note: "Used when gently accepting or understanding something." },
+  "よかったねぇ": { type: "relief / empathy", note: "Used when expressing warm relief or happiness for someone." },
+  "だいじょうぶ？": { type: "concern", note: "Used when checking if someone is okay after hearing something worrying." },
+  "たしかに":     { type: "agreement / acknowledgment", note: "Used when agreeing that something makes sense or is true." },
+  "たいへんだね": { type: "sympathy", note: "Used when expressing empathy for someone going through something tough." }
 };
+
 
 
 
@@ -21361,7 +21367,8 @@ const s = L4.screen1RandomObj || L4.currentSentenceObj;
   mcqBox.innerHTML = "";
   allOptions.forEach(opt => {
     const btn = document.createElement("button");
-    btn.className = "mcqBtn";
+    btn.className = "mcqBtn l4-mcq-btn";   // ⭐ add missing class
+
     btn.textContent = opt;
     btn.onclick = () => L4.handleMCQ(opt, btn);
     mcqBox.appendChild(btn);
@@ -21391,7 +21398,7 @@ L4.handleMCQ = function (choice, btn) {
   L4.mcqLocked = true;
 
   const s = L4.currentSentenceObj;
-  const sentenceId = L4.currentSentence;
+  const sentenceId = s.id;   // ⭐ FIX — use the actual object ID
   const isCorrect = (choice === s.correctInterjection);
 
   const buttons = Array.from(document.querySelectorAll(".l4-mcq-btn"));
@@ -21433,6 +21440,7 @@ L4.handleMCQ = function (choice, btn) {
   // ⭐ FIX: Always advance the round
   L4.round++;
 };
+
 
 
 
