@@ -21197,8 +21197,12 @@ L4.interjectionInfo = {
   "あらら":      { type: "sympathetic disappointment", note: "Used when something unfortunate happens." },
 
   // --- Agreement ---
-  "うんうん":     { type: "agreement", note: "Shows active listening and agreement." }
+  "うんうん":     { type: "agreement", note: "Shows active listening and agreement." },
+
+  // ⭐ ADDED — Missing dataset interjection
+  "あら！":       { type: "surprised concern", note: "Used when reacting to something unexpected or mildly troubling." }
 };
+
 
 
 /* ----------------------------------------------------------
@@ -21263,13 +21267,17 @@ L4.startRound = function () {
 
   L4.mcqLocked = false;
 
-  // ⭐ Mirror Level 3: linear progression
+  // ⭐ Keep linear progression exactly as-is
   const sentence = L4.dataset[L4.round];
   L4.setCurrentSentence(sentence);
   L4.currentSentenceObj = sentence;
 
+  // ⭐ Minimal addition: randomize Screen1 objects (NOT chunks, NOT progression)
+  L4.screen1RandomObj = L4.dataset[Math.floor(Math.random() * L4.dataset.length)];
+
   L4.screen1();
 };
+
 
 
 L4.screen1 = function () {
@@ -21283,7 +21291,9 @@ L4.screen1 = function () {
   L4.audio.generation++;
 
   // ⭐ Use already chosen sentence
-  const sentence = L4.currentSentenceObj || L4.getCurrentSentence();
+  // ⭐ Use randomized object for Screen1 (mirrors Level 3)
+const sentence = L4.screen1RandomObj || L4.currentSentenceObj || L4.getCurrentSentence();
+
   if (!sentence) {
     console.error("L4.screen1() called with no current sentence");
     return;
@@ -21326,8 +21336,9 @@ L4.screen2 = function () {
 
   L4.show("level4Screen2");
   L4.mcqLocked = false;
+// ⭐ Use the SAME object Screen1 used (mirrors Level 3)
+const s = L4.screen1RandomObj || L4.currentSentenceObj;
 
-  const s = L4.currentSentenceObj;
 
   const mcqBox = document.getElementById("level4McqContainer");
   const sentenceLine = document.getElementById("level4SentenceLine");
@@ -21450,11 +21461,14 @@ L4.showRoundSummary = function () {
   if (explanationBox) explanationBox.classList.add("hidden");
 
   // Prefer full object, fall back to ID lookup
-  const s =
-    L4.currentSentenceObj ||
-    (typeof L4.getCurrentSentence === "function"
-      ? L4.getCurrentSentence()
-      : null);
+  // ⭐ Use the SAME randomized object Screen1 + Screen2 used
+const s =
+  L4.screen1RandomObj ||
+  L4.currentSentenceObj ||
+  (typeof L4.getCurrentSentence === "function"
+    ? L4.getCurrentSentence()
+    : null);
+
 
   if (!s) {
     console.error("L4.showRoundSummary() called with no current sentence");
@@ -25010,6 +25024,179 @@ const level6 = [
 
 
 
+
+
+
+
+
+{
+  id: "l6_019",
+  meaning: "I heard someone say my name in a way that sounded completely unexpected. My eyebrows lifted, and I let out a confused 'えっ…？'. What happens next?",
+  level: 6,
+
+  options: ["たしかめる", "わらう", "すぐにねる", "りょうりをする"],
+  optionsRomaji: ["tashikameru", "warau", "sugu_ni_neru", "ryouri_wo_suru"],
+  optionsEN: ["check what they meant", "laugh", "go to sleep immediately", "cook food"],
+  correct: "たしかめる",
+
+  fullAudio: {
+    daughter: "audio/sentences/inference19.wav",
+    me:       "audio/sentences/inference19.wav"
+  },
+
+  choiceAudio: {
+    options: [
+      ["audio/sentences/tashikameru.wav"],
+      ["audio/sentences/warau.wav"],
+      ["audio/sentences/sugu.wav", "audio/sentences/ni.wav", "audio/sentences/neru.wav"],
+      ["audio/sentences/ryouri.wav", "audio/sentences/wo.wav", "audio/sentences/suru.wav"]
+    ]
+  },
+
+  meaningAudio: [
+    ["audio/sentences/tashikameru.wav"],
+    ["audio/sentences/warau.wav"],
+    ["audio/sentences/sugu.wav", "audio/sentences/ni.wav", "audio/sentences/neru.wav"],
+    ["audio/sentences/ryouri.wav", "audio/sentences/wo.wav", "audio/sentences/suru.wav"]
+  ],
+
+  chunks: [
+    { romaji: "dareka ga", hiragana: "だれかが", english: "someone" },
+    { romaji: "boku no namae wo", hiragana: "ぼくのなまえを", english: "my name" },
+    { romaji: "hen na koe de", hiragana: "へんなこえで", english: "in a strange voice" },
+    { romaji: "yonde", hiragana: "よんで", english: "called" },
+
+    { romaji: "mayuge ga", hiragana: "まゆげが", english: "my eyebrows" },
+    { romaji: "fuwatto", hiragana: "ふわっと", english: "lifted lightly" },
+    { romaji: "aagatte", hiragana: "あがって", english: "rose" },
+
+    { romaji: "e...?", hiragana: "えっ…？", english: "a confused sound of surprise" },
+
+    { romaji: "tsugi ni", hiragana: "つぎに", english: "next" },
+    { romaji: "dou naru no", hiragana: "どうなるの", english: "what happens" }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l6_020",
+  meaning: "I heard a loud crash behind me while I was alone in the room. My shoulders jumped, and I let out a frightened 'ひっ…！'. What happens next?",
+  level: 6,
+
+  options: ["ふりむく", "はしる", "かくれる", "どなる"],
+  optionsRomaji: ["furimuku", "hashiru", "kakureru", "donaru"],
+  optionsEN: ["turn around", "run", "hide", "yell"],
+  correct: "ふりむく",
+
+  fullAudio: {
+    daughter: "audio/sentences/inference20.wav",
+    me:       "audio/sentences/inference20.wav"
+  },
+
+  choiceAudio: {
+    options: [
+      ["audio/sentences/furimuku.wav"],
+      ["audio/sentences/hashiru.wav"],
+      ["audio/sentences/kakureru.wav"],
+      ["audio/sentences/donaru.wav"]
+    ]
+  },
+
+  meaningAudio: [
+    ["audio/sentences/furimuku.wav"],
+    ["audio/sentences/hashiru.wav"],
+    ["audio/sentences/kakureru.wav"],
+    ["audio/sentences/donaru.wav"]
+  ],
+
+  chunks: [
+    { romaji: "ushiro de", hiragana: "うしろで", english: "behind me" },
+    { romaji: "ookii oto ga", hiragana: "おおきいおとが", english: "a loud sound" },
+    { romaji: "shite", hiragana: "して", english: "happened" },
+
+    { romaji: "heya ni", hiragana: "へやに", english: "in the room" },
+    { romaji: "hitori de", hiragana: "ひとりで", english: "alone" },
+    { romaji: "ite", hiragana: "いて", english: "being" },
+
+    { romaji: "kata ga", hiragana: "かたが", english: "my shoulders" },
+    { romaji: "biku tto", hiragana: "びくっと", english: "jumped suddenly" },
+    { romaji: "ugokite", hiragana: "うごいて", english: "moved" },
+
+    { romaji: "hi...!", hiragana: "ひっ…！", english: "a sharp frightened inhale" },
+
+    { romaji: "tsugi ni", hiragana: "つぎに", english: "next" },
+    { romaji: "dou naru no", hiragana: "どうなるの", english: "what happens" }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l6_021",
+  meaning: "The older sister dropped all the crayons on the floor, and father let out a tired 'あぁ…'. What happens next?",
+  level: 6,
+
+  options: ["そうじする", "はしる", "かくれる", "どなる"],
+  optionsRomaji: ["souji_suru", "hashiru", "kakureru", "donaru"],
+  optionsEN: ["clean up", "run", "hide", "yell"],
+  correct: "そうじする",
+
+  fullAudio: {
+    daughter: "audio/sentences/inference21.wav",
+    me:       "audio/sentences/inference21.wav"
+  },
+
+  choiceAudio: {
+    options: [
+      ["audio/sentences/souji_suru.wav"],
+      ["audio/sentences/hashiru.wav"],
+      ["audio/sentences/kakureru.wav"],
+      ["audio/sentences/donaru.wav"]
+    ]
+  },
+
+  meaningAudio: [
+    ["audio/sentences/souji_suru.wav"],
+    ["audio/sentences/hashiru.wav"],
+    ["audio/sentences/kakureru.wav"],
+    ["audio/sentences/donaru.wav"]
+  ],
+
+  chunks: [
+    { romaji: "oneesan wa", hiragana: "おねえさんは", english: "the older sister" },
+    { romaji: "kureyon wo", hiragana: "クレヨンを", english: "the crayons" },
+    { romaji: "barabara to", hiragana: "ばらばらと", english: "scattered all over" },
+    { romaji: "otoshite", hiragana: "おとして", english: "dropped" },
+
+    { romaji: "otousan ga", hiragana: "おとうさんが", english: "the father" },
+    { romaji: "aa...", hiragana: "あぁ…", english: "a tired, resigned exhale" },
+    { romaji: "to", hiragana: "と", english: "and then" },
+    { romaji: "nari", hiragana: "なり", english: "let out" },
+
+    { romaji: "tsugi ni", hiragana: "つぎに", english: "next" },
+    { romaji: "dou naru no", hiragana: "どうなるの", english: "what happens" }
+  ]
+},
 
 
 

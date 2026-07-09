@@ -452,6 +452,7 @@ document.addEventListener("DOMContentLoaded", () => {
   Progress4.init();
 });
 
+
 /* ==========================================================
    LEVEL 5 — HTML-BASED PROGRESS UI
 ========================================================== */
