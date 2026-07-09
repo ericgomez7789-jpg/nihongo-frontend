@@ -15906,30 +15906,29 @@ id: "l3-42",
 
 
 
-
 {
   id: "l3-47",
   meaning: "How should I speak to my boss?",
   level: 3,
 
-  options: ["どう", "どうやって", "どのように", "どう話せばいいんですか"],
-  optionsRomaji: ["dou", "douyatte", "donoyouni", "dou hanaseba ii n desuka"],
+  options: ["どう", "どうやって", "どのように", "どういうふうに"],
+  optionsRomaji: ["dou", "douyatte", "donoyouni", "douiu fuuni"],
   optionsEN: [
     "how (general)",
     "how / by what method",
     "in what way / how",
-    "how should I speak?"
+    "in what manner"
   ],
 
-  // ⭐ correct (as you requested)
-  correct: "どう話せばいいんですか",
+  // ⭐ Level‑3 correct form (no conditionals, no advanced grammar)
+  correct: "どういうふうに",
 
   choiceAudio: {
     options: [
       "audio/sentences/dou.wav",
       "audio/sentences/douyatte.wav",
       "audio/sentences/donoyouni.wav",
-      "audio/sentences/dou_hanaseba_ii_n_desuka.wav"
+      "audio/sentences/douiu_fuuni.wav"
     ]
   },
 
@@ -15937,9 +15936,10 @@ id: "l3-42",
     "audio/sentences/dou.wav",
     "audio/sentences/douyatte.wav",
     "audio/sentences/donoyouni.wav",
-    "audio/sentences/dou_hanaseba_ii_n_desuka.wav"
+    "audio/sentences/douiu_fuuni.wav"
   ],
 
+  // ⭐ Level‑3 chunks — NO conjunction chunk included
   chunks: [
     {
       hiragana: "わたし",
@@ -15965,31 +15965,23 @@ id: "l3-42",
       meaning: "to",
       audio: { daughter: "audio/sentences/ni.wav", me: "audio/sentences/ni.wav" }
     },
-
-    // ⭐ requested conditional form
     {
-      hiragana: "どう",
-      romaji: "dou",
-      meaning: "how",
-      audio: { daughter: "audio/sentences/dou.wav", me: "audio/sentences/dou.wav" }
+      hiragana: "どういうふうに",
+      romaji: "douiu fuuni",
+      meaning: "in what manner",
+      audio: { daughter: "audio/sentences/douiu_fuuni.wav", me: "audio/sentences/douiu_fuuni.wav" }
     },
     {
-      hiragana: "はなせば",
-      romaji: "hanaseba",
-      meaning: "if I speak",
-      audio: { daughter: "audio/sentences/hanaseba.wav", me: "audio/sentences/hanaseba.wav" }
+      hiragana: "はなす",
+      romaji: "hanasu",
+      meaning: "to speak",
+      audio: { daughter: "audio/sentences/hanasu.wav", me: "audio/sentences/hanasu.wav" }
     },
     {
-      hiragana: "いい",
-      romaji: "ii",
-      meaning: "good",
-      audio: { daughter: "audio/sentences/ii.wav", me: "audio/sentences/ii.wav" }
-    },
-    {
-      hiragana: "んですか",
-      romaji: "n desuka",
-      meaning: "is it?",
-      audio: { daughter: "audio/sentences/ndesuka.wav", me: "audio/sentences/ndesuka.wav" }
+      hiragana: "の",
+      romaji: "no",
+      meaning: "explanatory marker",
+      audio: { daughter: "audio/sentences/no.wav", me: "audio/sentences/no.wav" }
     },
     {
       hiragana: "？",
@@ -15999,8 +15991,6 @@ id: "l3-42",
     }
   ]
 },
-
-
 
 
 
