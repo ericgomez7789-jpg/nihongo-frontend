@@ -18087,6 +18087,20 @@ const level4 = [
   ]
 },
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
   id: "l4_004",
   level: 4,
@@ -18098,6 +18112,14 @@ const level4 = [
   interjectionQuestion: "How would a listener interject?",
   correctInterjection: "ええっ？",
   distractors: ["まさか！", "うそ！", "あらら"],
+
+  // ⭐ REQUIRED for Level‑4 MCQ rendering
+  interjections: [
+    "ええっ？",
+    "まさか！",
+    "うそ！",
+    "あらら"
+  ],
 
   audio: {
     daughter: [
@@ -18123,32 +18145,25 @@ const level4 = [
   },
 
   chunks: [
-    { romaji: "eki", hiragana: "えき",
-      meaning: "station",
+    { romaji: "eki", hiragana: "えき", meaning: "station",
       audio: { daughter: "audio/sentences/eki.wav", me: "audio/sentences/eki.wav" }
     },
-    { romaji: "ni", hiragana: "に",
-      meaning: "to / at",
+    { romaji: "ni", hiragana: "に", meaning: "to / at",
       audio: { daughter: "audio/sentences/ni.wav", me: "audio/sentences/ni.wav" }
     },
-    { romaji: "tsuita", hiragana: "ついた",
-      meaning: "arrived",
+    { romaji: "tsuita", hiragana: "ついた", meaning: "arrived",
       audio: { daughter: "audio/sentences/tsuita.wav", me: "audio/sentences/tsuita.wav" }
     },
-    { romaji: "shunkan", hiragana: "しゅんかん",
-      meaning: "the moment",
+    { romaji: "shunkan", hiragana: "しゅんかん", meaning: "the moment",
       audio: { daughter: "audio/sentences/shunkan.wav", me: "audio/sentences/shunkan.wav" }
     },
-    { romaji: "densha", hiragana: "でんしゃ",
-      meaning: "train",
+    { romaji: "densha", hiragana: "でんしゃ", meaning: "train",
       audio: { daughter: "audio/sentences/densha.wav", me: "audio/sentences/densha.wav" }
     },
-    { romaji: "ga", hiragana: "が",
-      meaning: "(subject marker)",
+    { romaji: "ga", hiragana: "が", meaning: "(subject marker)",
       audio: { daughter: "audio/sentences/ga.wav", me: "audio/sentences/ga.wav" }
     },
-    { romaji: "choudo", hiragana: "ちょうど",
-      meaning: "just / exactly",
+    { romaji: "choudo", hiragana: "ちょうど", meaning: "just / exactly",
       audio: { daughter: "audio/sentences/choudo.wav", me: "audio/sentences/choudo.wav" }
     },
     { romaji: "itte shimatta", hiragana: "いってしまった",
@@ -18157,6 +18172,20 @@ const level4 = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 {
   id: "l4_005",
