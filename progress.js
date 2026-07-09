@@ -96,28 +96,12 @@ const Progress = {
   }
 };
 
-/* ------------------------------------------------------
-   INIT ON PAGE LOAD
------------------------------------------------------- */
 document.addEventListener("DOMContentLoaded", () => {
   Progress.init();
 });
 
-/* ------------------------------------------------------
-   L1.Reset — Reset Button Wiring
------------------------------------------------------- */
-
-
-
-
-
-
-
-
-
 /* ----------------------------------------------------------
    PROGRESS2 — Level 2 Mastery Tracking
-   (Only increments on correct answers)
 ---------------------------------------------------------- */
 
 const Progress2 = {
@@ -144,10 +128,10 @@ const Progress2 = {
     const key = this.normalize(level);
     if (!this.data[key]) {
       this.data[key] = {
-        total: 0,              // total sentences in Level 2
-        completed: 0,          // number of correctly mastered sentences
-        percent: 0,            // completion %
-        masteredSentences: []  // list of sentence IDs answered correctly
+        total: 0,
+        completed: 0,
+        percent: 0,
+        masteredSentences: []
       };
     }
     return this.data[key];
@@ -161,7 +145,6 @@ const Progress2 = {
     this.save();
   },
 
-  // ⭐ Only called when the user answers correctly
   markSentenceComplete(level, sentenceId) {
     const key = this.normalize(level);
     const d = this.ensure(key);
@@ -214,38 +197,13 @@ const Progress2 = {
   }
 };
 
-/* ------------------------------------------------------
-   INIT ON PAGE LOAD
------------------------------------------------------- */
 document.addEventListener("DOMContentLoaded", () => {
   Progress2.init();
 });
 
-
 /* ----------------------------------------------------------
-   INIT ON PAGE LOAD
+   PROGRESS3 — Level 3 Mastery Tracking
 ---------------------------------------------------------- */
-
-/* ==========================================================
-   LEVEL 3 — HTML‑BASED PROGRESS UI
-========================================================== */
-/* ==========================================================
-   LEVEL 3 — HTML-BASED PROGRESS UI
-========================================================== */
-
-/* ----------------------------------------------------------
-   LEVEL 3 — ISOLATED PROGRESS ENGINE
-   Mirrors Level 1 architecture but fully independent
----------------------------------------------------------- */
-
-
-
-/* ------------------------------------------------------
-   INIT ON PAGE LOAD (duplicate removed)
------------------------------------------------------- */
-
-
-
 
 const Progress3 = {
   data: {},
@@ -271,10 +229,10 @@ const Progress3 = {
     const key = this.normalize(level);
     if (!this.data[key]) {
       this.data[key] = {
-        total: 0,              // total sentences in Level 3
-        completed: 0,          // number of correctly mastered sentences
-        percent: 0,            // completion %
-        masteredSentences: []  // list of sentence IDs answered correctly
+        total: 0,
+        completed: 0,
+        percent: 0,
+        masteredSentences: []
       };
     }
     return this.data[key];
@@ -288,7 +246,6 @@ const Progress3 = {
     this.save();
   },
 
-  // ⭐ Only called when the user answers correctly
   markSentenceComplete(level, sentenceId) {
     const key = this.normalize(level);
     const d = this.ensure(key);
@@ -341,16 +298,15 @@ const Progress3 = {
   }
 };
 
-/* ------------------------------------------------------
-   INIT ON PAGE LOAD
------------------------------------------------------- */
 document.addEventListener("DOMContentLoaded", () => {
   Progress3.init();
 });
+/* ----------------------------------------------------------
+   PROGRESS4 — Level 4 Mastery Tracking (CLEAN VERSION)
+---------------------------------------------------------- */
 
-/* ==========================================================
-   LEVEL 4 — HTML-BASED PROGRESS UI
-========================================================== */
+console.log(">>> Progress4 LOADED");
+
 const Progress4 = {
   data: {},
 
@@ -375,10 +331,10 @@ const Progress4 = {
     const key = this.normalize(level);
     if (!this.data[key]) {
       this.data[key] = {
-        total: 0,              // total sentences in Level 4
-        completed: 0,          // number of correctly mastered sentences
-        percent: 0,            // completion %
-        masteredSentences: []  // list of sentence IDs answered correctly
+        total: 0,
+        completed: 0,
+        percent: 0,
+        masteredSentences: []
       };
     }
     return this.data[key];
@@ -392,16 +348,22 @@ const Progress4 = {
     this.save();
   },
 
-  // ⭐ Only called when the user answers correctly
   markSentenceComplete(level, sentenceId) {
     const key = this.normalize(level);
     const d = this.ensure(key);
+
+    console.log("[Progress4] markSentenceComplete CALLED — key:", key, "sentenceId:", sentenceId);
+    console.log("[Progress4] BEFORE — completed:", d.completed, "mastered:", d.masteredSentences);
 
     if (!d.masteredSentences.includes(sentenceId)) {
       d.masteredSentences.push(sentenceId);
       d.completed = d.masteredSentences.length;
       this.updatePercent(key);
       this.save();
+
+      console.log("[Progress4] AFTER — completed:", d.completed, "mastered:", d.masteredSentences);
+    } else {
+      console.log("[Progress4] SKIPPED — already mastered:", sentenceId);
     }
   },
 
@@ -445,12 +407,18 @@ const Progress4 = {
   }
 };
 
-/* ------------------------------------------------------
-   INIT ON PAGE LOAD
------------------------------------------------------- */
 document.addEventListener("DOMContentLoaded", () => {
   Progress4.init();
 });
+
+
+
+
+
+
+
+
+
 
 
 /* ==========================================================
@@ -481,10 +449,10 @@ const Progress5 = {
     const key = this.normalize(level);
     if (!this.data[key]) {
       this.data[key] = {
-        total: 0,              // total sentences in Level 5
-        completed: 0,          // number of correctly mastered sentences
-        percent: 0,            // completion %
-        masteredSentences: []  // list of sentence IDs answered correctly
+        total: 0,
+        completed: 0,
+        percent: 0,
+        masteredSentences: []
       };
     }
     return this.data[key];
@@ -498,7 +466,6 @@ const Progress5 = {
     this.save();
   },
 
-  // ⭐ Only called when the user answers correctly
   markSentenceComplete(level, sentenceId) {
     const key = this.normalize(level);
     const d = this.ensure(key);
@@ -551,9 +518,6 @@ const Progress5 = {
   }
 };
 
-/* ------------------------------------------------------
-   INIT ON PAGE LOAD
------------------------------------------------------- */
 document.addEventListener("DOMContentLoaded", () => {
   Progress5.init();
 });
@@ -586,10 +550,10 @@ const Progress6 = {
     const key = this.normalize(level);
     if (!this.data[key]) {
       this.data[key] = {
-        total: 0,              // total sentences in Level 6
-        completed: 0,          // number of correctly mastered sentences
-        percent: 0,            // completion %
-        masteredSentences: []  // list of sentence IDs answered correctly
+        total: 0,
+        completed: 0,
+        percent: 0,
+        masteredSentences: []
       };
     }
     return this.data[key];
@@ -603,7 +567,6 @@ const Progress6 = {
     this.save();
   },
 
-  // ⭐ Only called when the user answers correctly
   markSentenceComplete(level, sentenceId) {
     const key = this.normalize(level);
     const d = this.ensure(key);
@@ -656,19 +619,12 @@ const Progress6 = {
   }
 };
 
-/* ------------------------------------------------------
-   INIT ON PAGE LOAD
------------------------------------------------------- */
 document.addEventListener("DOMContentLoaded", () => {
   Progress6.init();
 });
 
-
 /* ==========================================================
    LEVEL 7 — HTML-BASED PROGRESS UI
-========================================================== */
-/* ==========================================================
-   LEVEL 7 — HTML-BASED PROGRESS UI (MIRRORED FROM LEVEL 6)
 ========================================================== */
 
 const Progress7 = {
@@ -695,10 +651,10 @@ const Progress7 = {
     const key = this.normalize(level);
     if (!this.data[key]) {
       this.data[key] = {
-        total: 0,              // total sentences in Level 7
-        completed: 0,          // number of correctly mastered sentences
-        percent: 0,            // completion %
-        masteredSentences: []  // list of sentence IDs answered correctly
+        total: 0,
+        completed: 0,
+        percent: 0,
+        masteredSentences: []
       };
     }
     return this.data[key];
@@ -712,7 +668,6 @@ const Progress7 = {
     this.save();
   },
 
-  // ⭐ Only called when the user answers correctly
   markSentenceComplete(level, sentenceId) {
     const key = this.normalize(level);
     const d = this.ensure(key);
@@ -765,17 +720,14 @@ const Progress7 = {
   }
 };
 
-/* ------------------------------------------------------
-   INIT ON PAGE LOAD
------------------------------------------------------- */
 document.addEventListener("DOMContentLoaded", () => {
   Progress7.init();
 });
 
-
 /* ==========================================================
    LEVEL 8 — HTML-BASED PROGRESS UI
 ========================================================== */
+
 const Progress8 = {
   data: {
     total: 0,
@@ -784,9 +736,6 @@ const Progress8 = {
     masteredSentences: []
   },
 
-  /* ==========================================================
-     INIT — safely merge saved data without breaking structure
-  ========================================================== */
   init() {
     try {
       const saved = JSON.parse(localStorage.getItem("progress8"));
@@ -806,25 +755,16 @@ const Progress8 = {
     }
   },
 
-  /* ==========================================================
-     SAVE
-  ========================================================== */
   save() {
     localStorage.setItem("progress8", JSON.stringify(this.data));
   },
 
-  /* ==========================================================
-     SET TOTAL SENTENCES
-  ========================================================== */
   setTotal(total) {
     this.data.total = total;
     this.updatePercent();
     this.save();
   },
 
-  /* ==========================================================
-     MARK SENTENCE COMPLETE (Level 8 uses only sentenceId)
-  ========================================================== */
   markSentenceComplete(sentenceId) {
     if (!sentenceId) {
       console.warn("[Progress8] markSentenceComplete called with no sentenceId");
@@ -839,16 +779,10 @@ const Progress8 = {
     }
   },
 
-  /* ==========================================================
-     GET PROGRESS
-  ========================================================== */
   getProgress() {
     return this.data;
   },
 
-  /* ==========================================================
-     UPDATE PERCENT
-  ========================================================== */
   updatePercent() {
     if (this.data.total > 0) {
       this.data.percent = Math.round(
@@ -859,9 +793,6 @@ const Progress8 = {
     }
   },
 
-  /* ==========================================================
-     RESET (keeps total)
-  ========================================================== */
   reset() {
     this.data = {
       total: this.data.total,
@@ -873,19 +804,13 @@ const Progress8 = {
   }
 };
 
-/* ==========================================================
-   INIT ON PAGE LOAD
-========================================================== */
 document.addEventListener("DOMContentLoaded", () => {
   Progress8.init();
 });
 
-
 /* ==========================================================
-   Level 9 Progess Bar
+   LEVEL 9 — HTML-BASED PROGRESS UI
 ========================================================== */
-
-
 
 const Progress9 = {
   data: {
@@ -895,9 +820,6 @@ const Progress9 = {
     masteredSentences: []
   },
 
-  /* ==========================================================
-     INIT — safely merge saved data without breaking structure
-  ========================================================== */
   init() {
     try {
       const saved = JSON.parse(localStorage.getItem("progress9"));
@@ -917,25 +839,16 @@ const Progress9 = {
     }
   },
 
-  /* ==========================================================
-     SAVE
-  ========================================================== */
   save() {
     localStorage.setItem("progress9", JSON.stringify(this.data));
   },
 
-  /* ==========================================================
-     SET TOTAL SENTENCES
-  ========================================================== */
   setTotal(total) {
     this.data.total = total;
     this.updatePercent();
     this.save();
   },
 
-  /* ==========================================================
-     MARK SENTENCE COMPLETE (Level 9 uses only sentenceId)
-  ========================================================== */
   markSentenceComplete(sentenceId) {
     if (!sentenceId) {
       console.warn("[Progress9] markSentenceComplete called with no sentenceId");
@@ -950,16 +863,10 @@ const Progress9 = {
     }
   },
 
-  /* ==========================================================
-     GET PROGRESS
-  ========================================================== */
   getProgress() {
     return this.data;
   },
 
-  /* ==========================================================
-     UPDATE PERCENT
-  ========================================================== */
   updatePercent() {
     if (this.data.total > 0) {
       this.data.percent = Math.round(
@@ -970,9 +877,6 @@ const Progress9 = {
     }
   },
 
-  /* ==========================================================
-     RESET (keeps total)
-  ========================================================== */
   reset() {
     this.data = {
       total: this.data.total,
@@ -983,22 +887,19 @@ const Progress9 = {
     this.save();
   }
 };
-/*================================================
-   INIT ON PAGE LOAD
-========================================================== */
+
 document.addEventListener("DOMContentLoaded", () => {
   Progress9.init();
 });
 
-
+/* ==========================================================
+   LEVEL 10 — HTML-BASED PROGRESS UI
+========================================================== */
 
 /* ==========================================================
-  Level 10 — mirrored from Level 9
+   LEVEL 10 — HTML-BASED PROGRESS UI
 ========================================================== */
-/* ==========================================================
-   Level 10 Progress Engine
-   Mirrors Level 9 structure exactly
-========================================================== */
+
 const Progress10 = {
   data: {
     total: 0,
@@ -1007,9 +908,6 @@ const Progress10 = {
     masteredSentences: []
   },
 
-  /* ==========================================================
-     INIT — load saved data OR fall back to memory-only mode
-  ========================================================== */
   init() {
     try {
       const raw = localStorage.getItem("progress10");
@@ -1027,33 +925,23 @@ const Progress10 = {
       }
     } catch (e) {
       console.warn("[Progress10] Storage blocked — running in memory-only mode");
-      // Data stays at defaults
     }
   },
 
-  /* ==========================================================
-     SAVE — safe write (won’t crash if storage is blocked)
-  ========================================================== */
   save() {
     try {
       localStorage.setItem("progress10", JSON.stringify(this.data));
     } catch (e) {
-      console.warn("[Progress10] Save failed — storage blocked");
+      console.warn("[Progress10] Save blocked");
     }
   },
 
-  /* ==========================================================
-     SET TOTAL SENTENCES
-  ========================================================== */
   setTotal(total) {
     this.data.total = total;
     this.updatePercent();
     this.save();
   },
 
-  /* ==========================================================
-     MARK SENTENCE COMPLETE (public API)
-  ========================================================== */
   markSentenceComplete(sentenceId) {
     if (!sentenceId) {
       console.warn("[Progress10] markSentenceComplete called with no sentenceId");
@@ -1068,21 +956,10 @@ const Progress10 = {
     }
   },
 
-  // Backwards compatibility
-  markCompleted(sentenceId) {
-    this.markSentenceComplete(sentenceId);
-  },
-
-  /* ==========================================================
-     GET PROGRESS
-  ========================================================== */
   getProgress() {
     return this.data;
   },
 
-  /* ==========================================================
-     UPDATE PERCENT
-  ========================================================== */
   updatePercent() {
     if (this.data.total > 0) {
       this.data.percent = Math.round(
@@ -1093,32 +970,17 @@ const Progress10 = {
     }
   },
 
-  /* ==========================================================
-     RESET (keeps total)
-  ========================================================== */
   reset() {
-    this.data.completed = 0;
-    this.data.percent = 0;
-    this.data.masteredSentences = [];
+    this.data = {
+      total: this.data.total,
+      completed: 0,
+      percent: 0,
+      masteredSentences: []
+    };
     this.save();
   }
 };
 
-/* ==========================================================
-   INIT ON PAGE LOAD
-========================================================== */
 document.addEventListener("DOMContentLoaded", () => {
   Progress10.init();
-});
-
-/* ==========================================================
-   BLOG / PODCAST STORAGE
-========================================================== */
-
-/* ==========================================================
-   BLOG / PODCAST STORAGE (merged into Progress)
-========================================================== */
-/* ==========================================================
-   BLOG / PODCAST STORAGE (standalone, safe, isolated)
-========================================================== */
-
+  });
