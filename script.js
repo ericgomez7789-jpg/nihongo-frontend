@@ -17862,9 +17862,14 @@ Level 4
 ----------------------------------------------------------------------------------------------------*/
 
 const level4 = [
+
+
+
+
   {
-    id: "l4_001",
+  id: "l4_001",
   level: 4,
+
   jp: "たびするまえにすべてのふくをがっしりとつめこんだ",
   meaning: "Before traveling, I stuffed all my clothes in tightly.",
   englishAudio: "audio/sentences/english_1.wav",
@@ -17872,6 +17877,13 @@ const level4 = [
   interjectionQuestion: "How would a listener interject?",
   correctInterjection: "へぇ〜",
   distractors: ["まじで？", "うそ！"],
+
+  // ⭐ REQUIRED for Level‑4 MCQ rendering
+  interjections: [
+    "へぇ〜",
+    "まじで？",
+    "うそ！"
+  ],
 
   audio: {
     daughter: [
@@ -17897,40 +17909,71 @@ const level4 = [
   },
 
   chunks: [
-    { romaji: "tabi suru", hiragana: "たびする",
+    {
+      romaji: "tabi suru",
+      hiragana: "たびする",
       meaning: "to travel",
       audio: { daughter: "audio/sentences/tabi_suru.wav", me: "audio/sentences/tabi_suru.wav" }
     },
-    { romaji: "mae ni", hiragana: "まえに",
+    {
+      romaji: "mae ni",
+      hiragana: "まえに",
       meaning: "before",
       audio: { daughter: "audio/sentences/mae_ni.wav", me: "audio/sentences/mae_ni.wav" }
     },
-    { romaji: "subete", hiragana: "すべて",
+    {
+      romaji: "subete",
+      hiragana: "すべて",
       meaning: "all / everything",
       audio: { daughter: "audio/sentences/subete.wav", me: "audio/sentences/subete.wav" }
     },
-    { romaji: "no", hiragana: "の",
+    {
+      romaji: "no",
+      hiragana: "の",
       meaning: "of",
       audio: { daughter: "audio/sentences/no.wav", me: "audio/sentences/no.wav" }
     },
-    { romaji: "fuku", hiragana: "ふく",
+    {
+      romaji: "fuku",
+      hiragana: "ふく",
       meaning: "clothes",
       audio: { daughter: "audio/sentences/fuku.wav", me: "audio/sentences/fuku.wav" }
     },
-    { romaji: "wo", hiragana: "を",
+    {
+      romaji: "wo",
+      hiragana: "を",
       meaning: "(object marker)",
       audio: { daughter: "audio/sentences/wo.wav", me: "audio/sentences/wo.wav" }
     },
-    { romaji: "gisshiri to", hiragana: "ぎっしりと",
+    {
+      romaji: "gisshiri to",
+      hiragana: "ぎっしりと",
       meaning: "tightly / firmly",
       audio: { daughter: "audio/sentences/gisshiri_to.wav", me: "audio/sentences/gisshiri_to.wav" }
     },
-    { romaji: "tsumekonda", hiragana: "つめこんだ",
+    {
+      romaji: "tsumekonda",
+      hiragana: "つめこんだ",
       meaning: "stuffed in",
       audio: { daughter: "audio/sentences/tsumekonda.wav", me: "audio/sentences/tsumekonda.wav" }
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
   id: "l4_002",
   level: 4,
@@ -17943,6 +17986,13 @@ const level4 = [
   correctInterjection: "へぇ〜",
   distractors: ["まじで？", "うそ！"],
 
+  // ⭐ REQUIRED for Level‑4 MCQ rendering
+  interjections: [
+    "へぇ〜",
+    "まじで？",
+    "うそ！"
+  ],
+
   audio: {
     daughter: [
       "audio/sentences/asa.wav",
@@ -17965,37 +18015,50 @@ const level4 = [
   },
 
   chunks: [
-    { romaji: "asa", hiragana: "あさ",
+    {
+      romaji: "asa",
+      hiragana: "あさ",
       meaning: "morning",
       audio: { daughter: "audio/sentences/asa.wav", me: "audio/sentences/asa.wav" }
     },
-    { romaji: "okitara", hiragana: "おきたら",
+    {
+      romaji: "okitara",
+      hiragana: "おきたら",
       meaning: "when I woke up",
       audio: { daughter: "audio/sentences/okitara.wav", me: "audio/sentences/okitara.wav" }
     },
-    { romaji: "sumaho", hiragana: "すまほ",
+    {
+      romaji: "sumaho",
+      hiragana: "すまほ",
       meaning: "smartphone",
       audio: { daughter: "audio/sentences/sumaho.wav", me: "audio/sentences/sumaho.wav" }
     },
-    { romaji: "ga", hiragana: "が",
+    {
+      romaji: "ga",
+      hiragana: "が",
       meaning: "(subject marker)",
       audio: { daughter: "audio/sentences/ga.wav", me: "audio/sentences/ga.wav" }
     },
-    { romaji: "mattaku", hiragana: "まったく",
+    {
+      romaji: "mattaku",
+      hiragana: "まったく",
       meaning: "completely / totally",
       audio: { daughter: "audio/sentences/mattaku.wav", me: "audio/sentences/mattaku.wav" }
     },
-    { romaji: "ugokanaku", hiragana: "うごかなく",
+    {
+      romaji: "ugokanaku",
+      hiragana: "うごかなく",
       meaning: "not moving / not working",
       audio: { daughter: "audio/sentences/ugokanaku.wav", me: "audio/sentences/ugokanaku.wav" }
     },
-    { romaji: "natteita", hiragana: "なっていた",
+    {
+      romaji: "natteita",
+      hiragana: "なっていた",
       meaning: "had become",
       audio: { daughter: "audio/sentences/natte_ita.wav", me: "audio/sentences/natte_ita.wav" }
     }
   ]
 },
-
 
 
 
@@ -18269,6 +18332,16 @@ const level4 = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
 {
   id: "l4_006",
   level: 4,
@@ -18280,6 +18353,13 @@ const level4 = [
   interjectionQuestion: "How would a listener interject?",
   correctInterjection: "あらら",
   distractors: ["えっ", "まじで？"],
+
+  // ⭐ REQUIRED for Level‑4 MCQ rendering
+  interjections: [
+    "あらら",
+    "えっ",
+    "まじで？"
+  ],
 
   audio: {
     daughter: [
@@ -18355,7 +18435,6 @@ const level4 = [
     }
   ]
 },
-
 
 
 
@@ -18477,7 +18556,6 @@ const level4 = [
 
 
 
-
 {
   id: "l4_008",
   level: 4,
@@ -18489,6 +18567,13 @@ const level4 = [
   interjectionQuestion: "How would a listener interject?",
   correctInterjection: "やば！",
   distractors: ["えー", "ふむふむ"],
+
+  // ⭐ REQUIRED for Level‑4 MCQ rendering
+  interjections: [
+    "やば！",
+    "えー",
+    "ふむふむ"
+  ],
 
   explanation: "やば！ is used when reacting with shock or urgency, which fits hearing that the phone battery died right before going out.",
 
@@ -18553,6 +18638,15 @@ const level4 = [
 
 
 
+
+
+
+
+
+
+
+
+
 {
   id: "l4_009",
   level: 4,
@@ -18565,7 +18659,12 @@ const level4 = [
   correctInterjection: "うそ！",
   distractors: ["へぇ〜", "まじで？"],
 
-  // ✔ Option B: NO full-sentence audio arrays
+  // ⭐ REQUIRED for Level‑4 MCQ rendering
+  interjections: [
+    "うそ！",
+    "へぇ〜",
+    "まじで？"
+  ],
 
   chunks: [
     {
@@ -18630,7 +18729,6 @@ const level4 = [
     }
   ]
 },
-
 
 
 
@@ -18725,7 +18823,6 @@ const level4 = [
 
 
 
-
 {
   id: "l4_011",
   level: 4,
@@ -18737,6 +18834,13 @@ const level4 = [
   interjectionQuestion: "How would a listener interject?",
   correctInterjection: "まじで？",
   distractors: ["へぇ〜", "ふむふむ"],
+
+  // ⭐ REQUIRED for Level‑4 MCQ rendering
+  interjections: [
+    "まじで？",
+    "へぇ〜",
+    "ふむふむ"
+  ],
 
   audio: {
     daughter: [
@@ -18828,7 +18932,6 @@ const level4 = [
     }
   ]
 },
-
 
 
 
@@ -19284,8 +19387,23 @@ const level4 = [
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
-   id: "l4_016",
+  id: "l4_016",
   level: 4,
 
   jp: "わたしは歩きながらつまずいて転んだ",
@@ -19295,6 +19413,13 @@ const level4 = [
   interjectionQuestion: "How would a listener interject?",
   correctInterjection: "えっ！",
   distractors: ["あら？", "へぇ〜"],
+
+  // ⭐ REQUIRED for Level‑4 MCQ rendering
+  interjections: [
+    "えっ！",
+    "あら？",
+    "へぇ〜"
+  ],
 
   explanation: "“えっ！” expresses sudden concern or surprise when something unexpected happens—like hearing that someone tripped and fell. It’s sharper than mild sympathy (“あら？”) and more reactive than curiosity (“へぇ〜”).",
 
@@ -19476,7 +19601,7 @@ const level4 = [
 
 
 {
-   id: "l4_018",
+  id: "l4_018",
   level: 4,
 
   jp: "ひどいいちにちのあときがらくになる",
@@ -19486,6 +19611,13 @@ const level4 = [
   interjectionQuestion: "How would a listener interject?",
   correctInterjection: "そっかぁ",
   distractors: ["そうなんだ", "へぇ〜"],
+
+  // ⭐ REQUIRED for Level‑4 MCQ rendering
+  interjections: [
+    "そっかぁ",
+    "そうなんだ",
+    "へぇ〜"
+  ],
 
   audio: {
     daughter: [
@@ -19569,6 +19701,20 @@ const level4 = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -19664,21 +19810,27 @@ const level4 = [
 
 
 
-
 {
-  "id": "l4_020",
-  "level": 4,
+  id: "l4_020",
+  level: 4,
 
-  "jp": "ずっとほうっておいたしごとをかたづけてすっきりした",
-  "meaning": "After finally taking care of something I’d been putting off, I felt refreshed.",
-  "englishAudio": "audio/sentences/english_refreshed.wav",
+  jp: "ずっとほうっておいたしごとをかたづけてすっきりした",
+  meaning: "After finally taking care of something I’d been putting off, I felt refreshed.",
+  englishAudio: "audio/sentences/english_refreshed.wav",
 
-  "interjectionQuestion": "How would a listener interject?",
-  "correctInterjection": "そっかぁ",
-  "distractors": ["へぇ〜", "そうなんだ"],
+  interjectionQuestion: "How would a listener interject?",
+  correctInterjection: "そっかぁ",
+  distractors: ["へぇ〜", "そうなんだ"],
 
-  "audio": {
-    "daughter": [
+  // ⭐ REQUIRED for Level‑4 MCQ rendering
+  interjections: [
+    "そっかぁ",
+    "へぇ〜",
+    "そうなんだ"
+  ],
+
+  audio: {
+    daughter: [
       "audio/sentences/zutto.wav",
       "audio/sentences/houtte.wav",
       "audio/sentences/oita.wav",
@@ -19687,7 +19839,7 @@ const level4 = [
       "audio/sentences/sukkiri.wav",
       "audio/sentences/shita.wav"
     ],
-    "me": [
+    me: [
       "audio/sentences/zutto.wav",
       "audio/sentences/houtte.wav",
       "audio/sentences/oita.wav",
@@ -19698,48 +19850,48 @@ const level4 = [
     ]
   },
 
-  "chunks": [
+  chunks: [
     {
-      "romaji": "zutto",
-      "hiragana": "ずっと",
-      "meaning": "for a long time",
-      "audio": { "daughter": "audio/sentences/zutto.wav", "me": "audio/sentences/zutto.wav" }
+      romaji: "zutto",
+      hiragana: "ずっと",
+      meaning: "for a long time",
+      audio: { daughter: "audio/sentences/zutto.wav", me: "audio/sentences/zutto.wav" }
     },
     {
-      "romaji": "houtte",
-      "hiragana": "ほうって",
-      "meaning": "left alone / neglected",
-      "audio": { "daughter": "audio/sentences/houtte.wav", "me": "audio/sentences/houtte.wav" }
+      romaji: "houtte",
+      hiragana: "ほうって",
+      meaning: "left alone / neglected",
+      audio: { daughter: "audio/sentences/houtte.wav", me: "audio/sentences/houtte.wav" }
     },
     {
-      "romaji": "oita",
-      "hiragana": "おいた",
-      "meaning": "left / put",
-      "audio": { "daughter": "audio/sentences/oita.wav", "me": "audio/sentences/oita.wav" }
+      romaji: "oita",
+      hiragana: "おいた",
+      meaning: "left / put",
+      audio: { daughter: "audio/sentences/oita.wav", me: "audio/sentences/oita.wav" }
     },
     {
-      "romaji": "shigoto",
-      "hiragana": "しごと",
-      "meaning": "task / work",
-      "audio": { "daughter": "audio/sentences/shigoto.wav", "me": "audio/sentences/shigoto.wav" }
+      romaji: "shigoto",
+      hiragana: "しごと",
+      meaning: "task / work",
+      audio: { daughter: "audio/sentences/shigoto.wav", me: "audio/sentences/shigoto.wav" }
     },
     {
-      "romaji": "katadzukete",
-      "hiragana": "かたづけて",
-      "meaning": "cleaned up / took care of",
-      "audio": { "daughter": "audio/sentences/katazukete.wav", "me": "audio/sentences/katazukete.wav" }
+      romaji: "katazukete",
+      hiragana: "かたづけて",
+      meaning: "cleaned up / took care of",
+      audio: { daughter: "audio/sentences/katazukete.wav", me: "audio/sentences/katazukete.wav" }
     },
     {
-      "romaji": "sukkiri",
-      "hiragana": "すっきり",
-      "meaning": "refreshed / relieved",
-      "audio": { "daughter": "audio/sentences/sukkiri.wav", "me": "audio/sentences/sukkiri.wav" }
+      romaji: "sukkiri",
+      hiragana: "すっきり",
+      meaning: "refreshed / relieved",
+      audio: { daughter: "audio/sentences/sukkiri.wav", me: "audio/sentences/sukkiri.wav" }
     },
     {
-      "romaji": "shita",
-      "hiragana": "した",
-      "meaning": "did / felt",
-      "audio": { "daughter": "audio/sentences/shita.wav", "me": "audio/sentences/shita.wav" }
+      romaji: "shita",
+      hiragana: "した",
+      meaning: "did / felt",
+      audio: { daughter: "audio/sentences/shita.wav", me: "audio/sentences/shita.wav" }
     }
   ]
 },
@@ -19757,20 +19909,38 @@ const level4 = [
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 {
-  "id": "l4_021",
-  "level": 4,
+  id: "l4_021",
+  level: 4,
 
-  "jp": "むすこがけわしくてたかいいわのかべをのぼっているのをみてはらはらしました",
-  "meaning": "Watching my son climb a steep, high rock wall made me feel nervous.",
-  "englishAudio": "audio/sentences/english_harahara.wav",
+  jp: "むすこがけわしくてたかいいわのかべをのぼっているのをみてはらはらしました",
+  meaning: "Watching my son climb a steep, high rock wall made me feel nervous.",
+  englishAudio: "audio/sentences/english_harahara.wav",
 
-  "interjectionQuestion": "How would a listener interject?",
-  "correctInterjection": "えぇ〜！",
-  "distractors": ["そっかぁ", "そうなんだ"],
+  interjectionQuestion: "How would a listener interject?",
+  correctInterjection: "えぇ〜！",
+  distractors: ["そっかぁ", "そうなんだ"],
 
-  "audio": {
-    "daughter": [
+  // ⭐ REQUIRED for Level‑4 MCQ rendering
+  interjections: [
+    "えぇ〜！",
+    "そっかぁ",
+    "そうなんだ"
+  ],
+
+  audio: {
+    daughter: [
       "audio/sentences/musuko.wav",
       "audio/sentences/kewashikute.wav",
       "audio/sentences/takai.wav",
@@ -19782,10 +19952,9 @@ const level4 = [
       "audio/sentences/no.wav",
       "audio/sentences/wo.wav",
       "audio/sentences/mite.wav",
-      "audio/sentences/harahara_shimashita.wav",
-      
+      "audio/sentences/harahara_shimashita.wav"
     ],
-    "me": [
+    me: [
       "audio/sentences/musuko.wav",
       "audio/sentences/kewashikute.wav",
       "audio/sentences/takai.wav",
@@ -19797,83 +19966,82 @@ const level4 = [
       "audio/sentences/no.wav",
       "audio/sentences/wo.wav",
       "audio/sentences/mite.wav",
-      "audio/sentences/harahara_shimashita.wav",
-      
+      "audio/sentences/harahara_shimashita.wav"
     ]
   },
 
-  "chunks": [
+  chunks: [
     {
-      "romaji": "musuko",
-      "hiragana": "むすこ",
-      "meaning": "son",
-      "audio": { "daughter": "audio/sentences/musuko.wav", "me": "audio/sentences/musuko.wav" }
+      romaji: "musuko",
+      hiragana: "むすこ",
+      meaning: "son",
+      audio: { daughter: "audio/sentences/musuko.wav", me: "audio/sentences/musuko.wav" }
     },
     {
-      "romaji": "kewashikute",
-      "hiragana": "けわしくて",
-      "meaning": "steep / rugged",
-      "audio": { "daughter": "audio/sentences/kewashikute.wav", "me": "audio/sentences/kewashikute.wav" }
+      romaji: "kewashikute",
+      hiragana: "けわしくて",
+      meaning: "steep / rugged",
+      audio: { daughter: "audio/sentences/kewashikute.wav", me: "audio/sentences/kewashikute.wav" }
     },
     {
-      "romaji": "takai",
-      "hiragana": "たかい",
-      "meaning": "high",
-      "audio": { "daughter": "audio/sentences/takai.wav", "me": "audio/sentences/takai.wav" }
+      romaji: "takai",
+      hiragana: "たかい",
+      meaning: "high",
+      audio: { daughter: "audio/sentences/takai.wav", me: "audio/sentences/takai.wav" }
     },
     {
-      "romaji": "iwa",
-      "hiragana": "いわ",
-      "meaning": "rock",
-      "audio": { "daughter": "audio/sentences/iwa.wav", "me": "audio/sentences/iwa.wav" }
+      romaji: "iwa",
+      hiragana: "いわ",
+      meaning: "rock",
+      audio: { daughter: "audio/sentences/iwa.wav", me: "audio/sentences/iwa.wav" }
     },
     {
-      "romaji": "kabe",
-      "hiragana": "かべ",
-      "meaning": "wall",
-      "audio": { "daughter": "audio/sentences/kabe.wav", "me": "audio/sentences/kabe.wav" }
+      romaji: "kabe",
+      hiragana: "かべ",
+      meaning: "wall",
+      audio: { daughter: "audio/sentences/kabe.wav", me: "audio/sentences/kabe.wav" }
     },
     {
-      "romaji": "wo",
-      "hiragana": "を",
-      "meaning": "object marker",
-      "audio": { "daughter": "audio/sentences/wo.wav", "me": "audio/sentences/wo.wav" }
+      romaji: "wo",
+      hiragana: "を",
+      meaning: "object marker",
+      audio: { daughter: "audio/sentences/wo.wav", me: "audio/sentences/wo.wav" }
     },
     {
-      "romaji": "nobotte",
-      "hiragana": "のぼって",
-      "meaning": "climbing (te‑form)",
-      "audio": { "daughter": "audio/sentences/nobotte.wav", "me": "audio/sentences/nobotte.wav" }
+      romaji: "nobotte",
+      hiragana: "のぼって",
+      meaning: "climbing (te‑form)",
+      audio: { daughter: "audio/sentences/nobotte.wav", me: "audio/sentences/nobotte.wav" }
     },
     {
-      "romaji": "iru",
-      "hiragana": "いる",
-      "meaning": "being / doing (progressive)",
-      "audio": { "daughter": "audio/sentences/iru.wav", "me": "audio/sentences/iru.wav" }
+      romaji: "iru",
+      hiragana: "いる",
+      meaning: "being / doing (progressive)",
+      audio: { daughter: "audio/sentences/iru.wav", me: "audio/sentences/iru.wav" }
     },
     {
-      "romaji": "no",
-      "hiragana": "の",
-      "meaning": "nominalizer",
-      "audio": { "daughter": "audio/sentences/no.wav", "me": "audio/sentences/no.wav" }
+      romaji: "no",
+      hiragana: "の",
+      meaning: "nominalizer",
+      audio: { daughter: "audio/sentences/no.wav", me: "audio/sentences/no.wav" }
     },
     {
-      "romaji": "wo",
-      "hiragana": "を",
-      "meaning": "object marker",
-      "audio": { "daughter": "audio/sentences/wo.wav", "me": "audio/sentences/wo.wav" }
+      romaji: "wo",
+      hiragana: "を",
+      meaning: "object marker",
+      audio: { daughter: "audio/sentences/wo.wav", me: "audio/sentences/wo.wav" }
     },
     {
-      "romaji": "mite",
-      "hiragana": "みて",
-      "meaning": "watching",
-      "audio": { "daughter": "audio/sentences/mite.wav", "me": "audio/sentences/mite.wav" }
+      romaji: "mite",
+      hiragana: "みて",
+      meaning: "watching",
+      audio: { daughter: "audio/sentences/mite.wav", me: "audio/sentences/mite.wav" }
     },
     {
-      "romaji": "harahara shimashita",
-      "hiragana": "はらはら しました",
-      "meaning": "nervous / on edge",
-      "audio": { "daughter": "audio/sentences/harahara_shimashita.wav", "me": "audio/sentences/harahara_shimashita.wav" }
+      romaji: "harahara shimashita",
+      hiragana: "はらはら しました",
+      meaning: "nervous / on edge",
+      audio: { daughter: "audio/sentences/harahara_shimashita.wav", me: "audio/sentences/harahara_shimashita.wav" }
     }
   ]
 },
@@ -19892,20 +20060,34 @@ const level4 = [
 
 
 
+
+
+
+
+
+
+
 {
-  "id": "l4_022",
-  "level": 4,
+  id: "l4_022",
+  level: 4,
 
-  "jp": "むすめががけからとびおりてみずにもぐるのをみてこころがどきどきしました",
-  "meaning": "Watching my daughter jump off the cliff and dive into the water made my heart race.",
-  "englishAudio": "audio/sentences/english_dokidoki.wav",
+  jp: "むすめががけからとびおりてみずにもぐるのをみてこころがどきどきしました",
+  meaning: "Watching my daughter jump off the cliff and dive into the water made my heart race.",
+  englishAudio: "audio/sentences/english_dokidoki.wav",
 
-  "interjectionQuestion": "How would a listener interject?",
-  "correctInterjection": "えぇ〜！",
-  "distractors": ["そっかぁ", "そうなんだ"],
+  interjectionQuestion: "How would a listener interject?",
+  correctInterjection: "えぇ〜！",
+  distractors: ["そっかぁ", "そうなんだ"],
 
-  "audio": {
-    "daughter": [
+  // ⭐ REQUIRED for Level‑4 MCQ rendering
+  interjections: [
+    "えぇ〜！",
+    "そっかぁ",
+    "そうなんだ"
+  ],
+
+  audio: {
+    daughter: [
       "audio/sentences/musume.wav",
       "audio/sentences/gake.wav",
       "audio/sentences/kara.wav",
@@ -19917,10 +20099,9 @@ const level4 = [
       "audio/sentences/wo.wav",
       "audio/sentences/mite.wav",
       "audio/sentences/kokoro.wav",
-      "audio/sentences/dokidoki_shimashita.wav",
-      
+      "audio/sentences/dokidoki_shimashita.wav"
     ],
-    "me": [
+    me: [
       "audio/sentences/musume.wav",
       "audio/sentences/gake.wav",
       "audio/sentences/kara.wav",
@@ -19932,188 +20113,82 @@ const level4 = [
       "audio/sentences/wo.wav",
       "audio/sentences/mite.wav",
       "audio/sentences/kokoro.wav",
-      "audio/sentences/dokidoki_shimashita.wav",
-      
+      "audio/sentences/dokidoki_shimashita.wav"
     ]
   },
 
-  "chunks": [
+  chunks: [
     {
-      "romaji": "musume",
-      "hiragana": "むすめ",
-      "meaning": "daughter",
-      "audio": { "daughter": "audio/sentences/musume.wav", "me": "audio/sentences/musume.wav" }
+      romaji: "musume",
+      hiragana: "むすめ",
+      meaning: "daughter",
+      audio: { daughter: "audio/sentences/musume.wav", me: "audio/sentences/musume.wav" }
     },
     {
-      "romaji": "gake",
-      "hiragana": "がけ",
-      "meaning": "cliff",
-      "audio": { "daughter": "audio/sentences/gake.wav", "me": "audio/sentences/gake.wav" }
+      romaji: "gake",
+      hiragana: "がけ",
+      meaning: "cliff",
+      audio: { daughter: "audio/sentences/gake.wav", me: "audio/sentences/gake.wav" }
     },
     {
-      "romaji": "kara",
-      "hiragana": "から",
-      "meaning": "from",
-      "audio": { "daughter": "audio/sentences/kara.wav", "me": "audio/sentences/kara.wav" }
+      romaji: "kara",
+      hiragana: "から",
+      meaning: "from",
+      audio: { daughter: "audio/sentences/kara.wav", me: "audio/sentences/kara.wav" }
     },
     {
-      "romaji": "tobiorite",
-      "hiragana": "とびおりて",
-      "meaning": "jumping down / leaping off",
-      "audio": { "daughter": "audio/sentences/tobiorite.wav", "me": "audio/sentences/tobiorite.wav" }
+      romaji: "tobiorite",
+      hiragana: "とびおりて",
+      meaning: "jumping down / leaping off",
+      audio: { daughter: "audio/sentences/tobiorite.wav", me: "audio/sentences/tobiorite.wav" }
     },
     {
-      "romaji": "mizu",
-      "hiragana": "みず",
-      "meaning": "water",
-      "audio": { "daughter": "audio/sentences/mizu.wav", "me": "audio/sentences/mizu.wav" }
+      romaji: "mizu",
+      hiragana: "みず",
+      meaning: "water",
+      audio: { daughter: "audio/sentences/mizu.wav", me: "audio/sentences/mizu.wav" }
     },
     {
-      "romaji": "ni",
-      "hiragana": "に",
-      "meaning": "into",
-      "audio": { "daughter": "audio/sentences/ni.wav", "me": "audio/sentences/ni.wav" }
+      romaji: "ni",
+      hiragana: "に",
+      meaning: "into",
+      audio: { daughter: "audio/sentences/ni.wav", me: "audio/sentences/ni.wav" }
     },
     {
-      "romaji": "moguru",
-      "hiragana": "もぐる",
-      "meaning": "to dive",
-      "audio": { "daughter": "audio/sentences/moguru.wav", "me": "audio/sentences/moguru.wav" }
+      romaji: "moguru",
+      hiragana: "もぐる",
+      meaning: "to dive",
+      audio: { daughter: "audio/sentences/moguru.wav", me: "audio/sentences/moguru.wav" }
     },
     {
-      "romaji": "no",
-      "hiragana": "の",
-      "meaning": "nominalizer",
-      "audio": { "daughter": "audio/sentences/no.wav", "me": "audio/sentences/no.wav" }
+      romaji: "no",
+      hiragana: "の",
+      meaning: "nominalizer",
+      audio: { daughter: "audio/sentences/no.wav", me: "audio/sentences/no.wav" }
     },
     {
-      "romaji": "wo",
-      "hiragana": "を",
-      "meaning": "object marker",
-      "audio": { "daughter": "audio/sentences/wo.wav", "me": "audio/sentences/wo.wav" }
+      romaji: "wo",
+      hiragana: "を",
+      meaning: "object marker",
+      audio: { daughter: "audio/sentences/wo.wav", me: "audio/sentences/wo.wav" }
     },
     {
-      "romaji": "mite",
-      "hiragana": "みて",
-      "meaning": "watching",
-      "audio": { "daughter": "audio/sentences/mite.wav", "me": "audio/sentences/mite.wav" }
+      romaji: "mite",
+      hiragana: "みて",
+      meaning: "watching",
+      audio: { daughter: "audio/sentences/mite.wav", me: "audio/sentences/mite.wav" }
     },
     {
-      "romaji": "kokoro",
-      "hiragana": "こころ",
-      "meaning": "heart",
-      "audio": { "daughter": "audio/sentences/kokoro.wav", "me": "audio/sentences/kokoro.wav" }
+      romaji: "kokoro",
+      hiragana: "こころ",
+      meaning: "heart",
+      audio: { daughter: "audio/sentences/kokoro.wav", me: "audio/sentences/kokoro.wav" }
     },
     {
-      "romaji": "dokidoki",
-      "hiragana": "どきどきしました",
-      "meaning": "heart racing / nervous excitement",
-      "audio": { "daughter": "audio/sentences/dokidoki_shimashita.wav", "me": "audio/sentences/dokidoki_shimashita.wav" }
-    },
-    
-  ]
-},
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{
-  "id": "l4_023",
-  "level": 4,
-
-  "jp": "「まなぶ」っていうとすぐむすめがぷんぷんしました",
-  "meaning": "When I mentioned 'studying', my daughter immediately got angry.",
-  "englishAudio": "audio/sentences/english_punpun.wav",
-
-  "interjectionQuestion": "How would a listener interject?",
-  "correctInterjection": "えぇ〜！",
-  "distractors": ["そっかぁ", "そうなんだ"],
-
-  "audio": {
-    "daughter": [
-      "audio/sentences/manabu.wav",
-      "audio/sentences/tte.wav",
-      "audio/sentences/iu.wav",
-      "audio/sentences/to.wav",
-      "audio/sentences/sugu.wav",
-      "audio/sentences/musume.wav",
-      "audio/sentences/ga.wav",
-      "audio/sentences/punpun_shimashita.wav"
-    ],
-    "me": [
-      "audio/sentences/manabu.wav",
-      "audio/sentences/tte.wav",
-      "audio/sentences/iu.wav",
-      "audio/sentences/to.wav",
-      "audio/sentences/sugu.wav",
-      "audio/sentences/musume.wav",
-      "audio/sentences/ga.wav",
-      "audio/sentences/punpun_shimashita.wav"
-    ]
-  },
-
-  "chunks": [
-    {
-      "romaji": "manabu",
-      "hiragana": "まなぶ",
-      "meaning": "to study / to learn",
-      "audio": { "daughter": "audio/sentences/manabu.wav", "me": "audio/sentences/manabu.wav" }
-    },
-    {
-      "romaji": "tte",
-      "hiragana": "って",
-      "meaning": "quoting marker",
-      "audio": { "daughter": "audio/sentences/tte.wav", "me": "audio/sentences/tte.wav" }
-    },
-    {
-      "romaji": "iu",
-      "hiragana": "いう",
-      "meaning": "to say",
-      "audio": { "daughter": "audio/sentences/iu.wav", "me": "audio/sentences/iu.wav" }
-    },
-    {
-      "romaji": "to",
-      "hiragana": "と",
-      "meaning": "when / if",
-      "audio": { "daughter": "audio/sentences/to.wav", "me": "audio/sentences/to.wav" }
-    },
-    {
-      "romaji": "sugu",
-      "hiragana": "すぐ",
-      "meaning": "immediately",
-      "audio": { "daughter": "audio/sentences/sugu.wav", "me": "audio/sentences/sugu.wav" }
-    },
-    {
-      "romaji": "musume",
-      "hiragana": "むすめ",
-      "meaning": "daughter",
-      "audio": { "daughter": "audio/sentences/musume.wav", "me": "audio/sentences/musume.wav" }
-    },
-    {
-      "romaji": "ga",
-      "hiragana": "が",
-      "meaning": "subject marker",
-      "audio": { "daughter": "audio/sentences/ga.wav", "me": "audio/sentences/ga.wav" }
-    },
-    {
-      "romaji": "punpun shimashita",
-      "hiragana": "ぷんぷんしました",
-      "meaning": "got angry / was irritated",
-      "audio": { "daughter": "audio/sentences/punpun_shimashita.wav", "me": "audio/sentences/punpun_shimashita.wav" }
+      romaji: "dokidoki",
+      hiragana: "どきどきしました",
+      meaning: "heart racing / nervous excitement",
+      audio: { daughter: "audio/sentences/dokidoki_shimashita.wav", me: "audio/sentences/dokidoki_shimashita.wav" }
     }
   ]
 },
@@ -20133,20 +20208,144 @@ const level4 = [
 
 
 
+
+
+
+
+
 {
-  "id": "l4_024",
-  "level": 4,
+  id: "l4_023",
+  level: 4,
 
-  "jp": "そのこうどうはふさわしくないとむすめにうんざりしながらいいました",
-  "meaning": "I told my daughter that her behavior was inappropriate, feeling fed up.",
-  "englishAudio": "audio/sentences/english_unzari.wav",
+  jp: "「まなぶ」っていうとすぐむすめがぷんぷんしました",
+  meaning: "When I mentioned 'studying', my daughter immediately got angry.",
+  englishAudio: "audio/sentences/english_punpun.wav",
 
-  "interjectionQuestion": "How would a listener interject?",
-  "correctInterjection": "えぇ〜！",
-  "distractors": ["そっかぁ", "そうなんだ"],
+  interjectionQuestion: "How would a listener interject?",
+  correctInterjection: "えぇ〜！",
+  distractors: ["そっかぁ", "そうなんだ"],
 
-  "audio": {
-    "daughter": [
+  // ⭐ REQUIRED for Level‑4 MCQ rendering
+  interjections: [
+    "えぇ〜！",
+    "そっかぁ",
+    "そうなんだ"
+  ],
+
+  audio: {
+    daughter: [
+      "audio/sentences/manabu.wav",
+      "audio/sentences/tte.wav",
+      "audio/sentences/iu.wav",
+      "audio/sentences/to.wav",
+      "audio/sentences/sugu.wav",
+      "audio/sentences/musume.wav",
+      "audio/sentences/ga.wav",
+      "audio/sentences/punpun_shimashita.wav"
+    ],
+    me: [
+      "audio/sentences/manabu.wav",
+      "audio/sentences/tte.wav",
+      "audio/sentences/iu.wav",
+      "audio/sentences/to.wav",
+      "audio/sentences/sugu.wav",
+      "audio/sentences/musume.wav",
+      "audio/sentences/ga.wav",
+      "audio/sentences/punpun_shimashita.wav"
+    ]
+  },
+
+  chunks: [
+    {
+      romaji: "manabu",
+      hiragana: "まなぶ",
+      meaning: "to study / to learn",
+      audio: { daughter: "audio/sentences/manabu.wav", me: "audio/sentences/manabu.wav" }
+    },
+    {
+      romaji: "tte",
+      hiragana: "って",
+      meaning: "quoting marker",
+      audio: { daughter: "audio/sentences/tte.wav", me: "audio/sentences/tte.wav" }
+    },
+    {
+      romaji: "iu",
+      hiragana: "いう",
+      meaning: "to say",
+      audio: { daughter: "audio/sentences/iu.wav", me: "audio/sentences/iu.wav" }
+    },
+    {
+      romaji: "to",
+      hiragana: "と",
+      meaning: "when / if",
+      audio: { daughter: "audio/sentences/to.wav", me: "audio/sentences/to.wav" }
+    },
+    {
+      romaji: "sugu",
+      hiragana: "すぐ",
+      meaning: "immediately",
+      audio: { daughter: "audio/sentences/sugu.wav", me: "audio/sentences/sugu.wav" }
+    },
+    {
+      romaji: "musume",
+      hiragana: "むすめ",
+      meaning: "daughter",
+      audio: { daughter: "audio/sentences/musume.wav", me: "audio/sentences/musume.wav" }
+    },
+    {
+      romaji: "ga",
+      hiragana: "が",
+      meaning: "subject marker",
+      audio: { daughter: "audio/sentences/ga.wav", me: "audio/sentences/ga.wav" }
+    },
+    {
+      romaji: "punpun shimashita",
+      hiragana: "ぷんぷんしました",
+      meaning: "got angry / was irritated",
+      audio: { daughter: "audio/sentences/punpun_shimashita.wav", me: "audio/sentences/punpun_shimashita.wav" }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l4_024",
+  level: 4,
+
+  jp: "そのこうどうはふさわしくないとむすめにうんざりしながらいいました",
+  meaning: "I told my daughter that her behavior was inappropriate, feeling fed up.",
+  englishAudio: "audio/sentences/english_unzari.wav",
+
+  interjectionQuestion: "How would a listener interject?",
+  correctInterjection: "えぇ〜！",
+  distractors: ["そっかぁ", "そうなんだ"],
+
+  // ⭐ REQUIRED for Level‑4 MCQ rendering
+  interjections: [
+    "えぇ〜！",
+    "そっかぁ",
+    "そうなんだ"
+  ],
+
+  audio: {
+    daughter: [
       "audio/sentences/sono.wav",
       "audio/sentences/koudou.wav",
       "audio/sentences/wa.wav",
@@ -20158,7 +20357,7 @@ const level4 = [
       "audio/sentences/shinagara.wav",
       "audio/sentences/iimashita.wav"
     ],
-    "me": [
+    me: [
       "audio/sentences/sono.wav",
       "audio/sentences/koudou.wav",
       "audio/sentences/wa.wav",
@@ -20172,60 +20371,59 @@ const level4 = [
     ]
   },
 
-  "chunks": [
+  chunks: [
     {
-      "hiragana": "その",
-      "meaning": "that",
-      "audio": { "daughter": "audio/sentences/sono.wav", "me": "audio/sentences/sono.wav" }
+      hiragana: "その",
+      meaning: "that",
+      audio: { daughter: "audio/sentences/sono.wav", me: "audio/sentences/sono.wav" }
     },
     {
-      "hiragana": "こうどう",
-      "meaning": "behavior",
-      "audio": { "daughter": "audio/sentences/koudou.wav", "me": "audio/sentences/koudou.wav" }
+      hiragana: "こうどう",
+      meaning: "behavior",
+      audio: { daughter: "audio/sentences/koudou.wav", me: "audio/sentences/koudou.wav" }
     },
     {
-      "hiragana": "は",
-      "meaning": "topic marker",
-      "audio": { "daughter": "audio/sentences/wa.wav", "me": "audio/sentences/wa.wav" }
+      hiragana: "は",
+      meaning: "topic marker",
+      audio: { daughter: "audio/sentences/wa.wav", me: "audio/sentences/wa.wav" }
     },
     {
-      "hiragana": "ふさわしくない",
-      "meaning": "inappropriate",
-      "audio": { "daughter": "audio/sentences/fusawashikunai.wav", "me": "audio/sentences/fusawashikunai.wav" }
+      hiragana: "ふさわしくない",
+      meaning: "inappropriate",
+      audio: { daughter: "audio/sentences/fusawashikunai.wav", me: "audio/sentences/fusawashikunai.wav" }
     },
     {
-      "hiragana": "と",
-      "meaning": "that / quoting",
-      "audio": { "daughter": "audio/sentences/to.wav", "me": "audio/sentences/to.wav" }
+      hiragana: "と",
+      meaning: "that / quoting",
+      audio: { daughter: "audio/sentences/to.wav", me: "audio/sentences/to.wav" }
     },
     {
-      "hiragana": "むすめ",
-      "meaning": "daughter",
-      "audio": { "daughter": "audio/sentences/musume.wav", "me": "audio/sentences/musume.wav" }
+      hiragana: "むすめ",
+      meaning: "daughter",
+      audio: { daughter: "audio/sentences/musume.wav", me: "audio/sentences/musume.wav" }
     },
     {
-      "hiragana": "に",
-      "meaning": "to",
-      "audio": { "daughter": "audio/sentences/ni.wav", "me": "audio/sentences/ni.wav" }
+      hiragana: "に",
+      meaning: "to",
+      audio: { daughter: "audio/sentences/ni.wav", me: "audio/sentences/ni.wav" }
     },
     {
-      "hiragana": "うんざり",
-      "meaning": "while feeling fed up",
-      "audio": { "daughter": "audio/sentences/unzari.wav", "me": "audio/sentences/unzari.wav" }
+      hiragana: "うんざり",
+      meaning: "fed up",
+      audio: { daughter: "audio/sentences/unzari.wav", me: "audio/sentences/unzari.wav" }
     },
     {
-      "hiragana": "しながら",
-      "meaning": "while feeling fed up",
-      "audio": { "daughter": "audio/sentences/shinagara.wav", "me": "audio/sentences/shinagara.wav" }
+      hiragana: "しながら",
+      meaning: "while feeling fed up",
+      audio: { daughter: "audio/sentences/shinagara.wav", me: "audio/sentences/shinagara.wav" }
     },
     {
-      "hiragana": "いいました",
-      "meaning": "said",
-      "audio": { "daughter": "audio/sentences/iimashita.wav", "me": "audio/sentences/iimashita.wav" }
+      hiragana: "いいました",
+      meaning: "said",
+      audio: { daughter: "audio/sentences/iimashita.wav", me: "audio/sentences/iimashita.wav" }
     }
   ]
 },
-
 
 
 
@@ -20383,20 +20581,35 @@ const level4 = [
 
 
 
+
+
+
+
+
+
+
+
 {
-  "id": "l4_026",
-  "level": 4,
+  id: "l4_026",
+  level: 4,
 
-  "jp": "めんどうくさいせいかくがあるひとをあつかうのはむしゃくしゃしてつらいんだ",
-  "meaning": "Dealing with someone who has an annoying personality makes me irritated and it's tough.",
-  "englishAudio": "audio/sentences/english_mendoukusai.wav",
+  jp: "めんどうくさいせいかくがあるひとをあつかうのはむしゃくしゃしてつらいんだ",
+  meaning: "Dealing with someone who has an annoying personality makes me irritated and it's tough.",
+  englishAudio: "audio/sentences/english_mendoukusai.wav",
 
-  "interjectionQuestion": "How would a listener interject?",
-  "correctInterjection": "あらら",
-  "distractors": ["へぇ〜", "そうなんだ"],
+  interjectionQuestion: "How would a listener interject?",
+  correctInterjection: "なるほどね",
+  distractors: ["へぇ〜", "そうなんだ"],
 
-  "audio": {
-    "daughter": [
+  // ⭐ REQUIRED for Level‑4 MCQ rendering
+  interjections: [
+    "なるほどね",
+    "へぇ〜",
+    "そうなんだ"
+  ],
+
+  audio: {
+    daughter: [
       "audio/sentences/mendoukusai.wav",
       "audio/sentences/seikaku.wav",
       "audio/sentences/ga.wav",
@@ -20411,7 +20624,7 @@ const level4 = [
       "audio/sentences/n.wav",
       "audio/sentences/da.wav"
     ],
-    "me": [
+    me: [
       "audio/sentences/mendoukusai.wav",
       "audio/sentences/seikaku.wav",
       "audio/sentences/ga.wav",
@@ -20428,74 +20641,93 @@ const level4 = [
     ]
   },
 
-  "chunks": [
+  chunks: [
     {
-      "hiragana": "めんどうくさい",
-      "meaning": "annoying",
-      "audio": { "daughter": "audio/sentences/mendoukusai.wav", "me": "audio/sentences/mendoukusai.wav" }
+      romaji: "mendoukusai",
+      hiragana: "めんどうくさい",
+      meaning: "annoying",
+      audio: { daughter: "audio/sentences/mendoukusai.wav", me: "audio/sentences/mendoukusai.wav" }
     },
     {
-      "hiragana": "せいかく",
-      "meaning": "personality",
-      "audio": { "daughter": "audio/sentences/seikaku.wav", "me": "audio/sentences/seikaku.wav" }
+      romaji: "seikaku",
+      hiragana: "せいかく",
+      meaning: "personality",
+      audio: { daughter: "audio/sentences/seikaku.wav", me: "audio/sentences/seikaku.wav" }
     },
     {
-      "hiragana": "が",
-      "meaning": "subject marker",
-      "audio": { "daughter": "audio/sentences/ga.wav", "me": "audio/sentences/ga.wav" }
+      romaji: "ga",
+      hiragana: "が",
+      meaning: "subject marker",
+      audio: { daughter: "audio/sentences/ga.wav", me: "audio/sentences/ga.wav" }
     },
     {
-      "hiragana": "ある",
-      "meaning": "to have",
-      "audio": { "daughter": "audio/sentences/aru.wav", "me": "audio/sentences/aru.wav" }
+      romaji: "aru",
+      hiragana: "ある",
+      meaning: "to have",
+      audio: { daughter: "audio/sentences/aru.wav", me: "audio/sentences/aru.wav" }
     },
     {
-      "hiragana": "ひと",
-      "meaning": "person",
-      "audio": { "daughter": "audio/sentences/hito.wav", "me": "audio/sentences/hito.wav" }
+      romaji: "hito",
+      hiragana: "ひと",
+      meaning: "person",
+      audio: { daughter: "audio/sentences/hito.wav", me: "audio/sentences/hito.wav" }
     },
     {
-      "hiragana": "を",
-      "meaning": "object marker",
-      "audio": { "daughter": "audio/sentences/wo.wav", "me": "audio/sentences/wo.wav" }
+      romaji: "wo",
+      hiragana: "を",
+      meaning: "object marker",
+      audio: { daughter: "audio/sentences/wo.wav", me: "audio/sentences/wo.wav" }
     },
     {
-      "hiragana": "あつかう",
-      "meaning": "to deal with",
-      "audio": { "daughter": "audio/sentences/atsukau.wav", "me": "audio/sentences/atsukau.wav" }
+      romaji: "atsukau",
+      hiragana: "あつかう",
+      meaning: "to deal with",
+      audio: { daughter: "audio/sentences/atsukau.wav", me: "audio/sentences/atsukau.wav" }
     },
     {
-      "hiragana": "のは",
-      "meaning": "the act of ~ is",
-      "audio": { "daughter": "audio/sentences/nowa.wav", "me": "audio/sentences/nowa.wav" }
+      romaji: "no wa",
+      hiragana: "のは",
+      meaning: "the act of ~ is",
+      audio: { daughter: "audio/sentences/nowa.wav", me: "audio/sentences/nowa.wav" }
     },
     {
-      "hiragana": "むしゃくしゃ",
-      "meaning": "irritated / frustrated",
-      "audio": { "daughter": "audio/sentences/mushakusha.wav", "me": "audio/sentences/mushakusha.wav" }
+      romaji: "mushakusha",
+      hiragana: "むしゃくしゃ",
+      meaning: "irritated / frustrated",
+      audio: { daughter: "audio/sentences/mushakusha.wav", me: "audio/sentences/mushakusha.wav" }
     },
     {
-      "hiragana": "して",
-      "meaning": "doing / feeling",
-      "audio": { "daughter": "audio/sentences/shite.wav", "me": "audio/sentences/shite.wav" }
+      romaji: "shite",
+      hiragana: "して",
+      meaning: "doing / feeling",
+      audio: { daughter: "audio/sentences/shite.wav", me: "audio/sentences/shite.wav" }
     },
     {
-      "hiragana": "つらい",
-      "meaning": "tough / painful",
-      "audio": { "daughter": "audio/sentences/tsurai.wav", "me": "audio/sentences/tsurai.wav" }
+      romaji: "tsurai",
+      hiragana: "つらい",
+      meaning: "tough / painful",
+      audio: { daughter: "audio/sentences/tsurai.wav", me: "audio/sentences/tsurai.wav" }
     },
     {
-      "hiragana": "ん",
-      "meaning": "explanatory tone",
-      "audio": { "daughter": "audio/sentences/n.wav", "me": "audio/sentences/n.wav" }
+      romaji: "n",
+      hiragana: "ん",
+      meaning: "explanatory tone",
+      audio: { daughter: "audio/sentences/n.wav", me: "audio/sentences/n.wav" }
     },
     {
-      "hiragana": "だ",
-      "meaning": "is",
-      "audio": { "daughter": "audio/sentences/da.wav", "me": "audio/sentences/da.wav" }
+      romaji: "da",
+      hiragana: "だ",
+      meaning: "is",
+      audio: { daughter: "audio/sentences/da.wav", me: "audio/sentences/da.wav" }
     }
   ]
 },
+
+
+
+
+
+
 
 
 
@@ -20600,88 +20832,109 @@ const level4 = [
 
 
 
+
+
+
+
+
+
+
 {
-  "id": "l4_028",
-  "level": 4,
+  id: "l4_028",
+  level: 4,
 
-  "jp": "ぐちぐちしてもんくをすればするほどじょうきょうがこじれる",
-  "meaning": "The more you nag and complain, the more the situation gets complicated.",
-  "englishAudio": "audio/sentences/english_guchiguchi2.wav",
+  jp: "ぐちぐちしてもんくをすればするほどじょうきょうがこじれる",
+  meaning: "The more you nag and complain, the more the situation gets complicated.",
+  englishAudio: "audio/sentences/english_guchiguchi2.wav",
 
-  "interjectionQuestion": "How would a listener interject?",
-  "correctInterjection": "たしかに",
-  "distractors": ["へぇ〜", "そうなんだ"],
+  interjectionQuestion: "How would a listener interject?",
+  correctInterjection: "たしかに",
+  distractors: ["へぇ〜", "そうなんだ"],
 
-  "audio": {
-    "daughter": [
+  // ⭐ REQUIRED for Level‑4 MCQ rendering
+  interjections: [
+    "たしかに",
+    "へぇ〜",
+    "そうなんだ"
+  ],
+
+  audio: {
+    daughter: [
       "audio/sentences/guchiguchi.wav",
       "audio/sentences/shite.wav",
       "audio/sentences/monku.wav",
       "audio/sentences/wo.wav",
       "audio/sentences/sureba.wav",
-      "audio/sentences/suruhodo.wav",
+      "audio/sentences/suru.wav",
+      "audio/sentences/hodo.wav",
       "audio/sentences/joukyou.wav",
       "audio/sentences/ga.wav",
       "audio/sentences/kojireru.wav"
     ],
-    "me": [
+    me: [
       "audio/sentences/guchiguchi.wav",
       "audio/sentences/shite.wav",
       "audio/sentences/monku.wav",
       "audio/sentences/wo.wav",
       "audio/sentences/sureba.wav",
-      "audio/sentences/suruhodo.wav",
+      "audio/sentences/suru.wav",
+      "audio/sentences/hodo.wav",
       "audio/sentences/joukyou.wav",
       "audio/sentences/ga.wav",
       "audio/sentences/kojireru.wav"
     ]
   },
 
-  "chunks": [
+  chunks: [
     {
-      "hiragana": "ぐちぐち",
-      "meaning": "nagging / complaining",
-      "audio": { "daughter": "audio/sentences/guchiguchi.wav", "me": "audio/sentences/guchiguchi.wav" }
+      hiragana: "ぐちぐち",
+      meaning: "nagging / complaining",
+      audio: { daughter: "audio/sentences/guchiguchi.wav", me: "audio/sentences/guchiguchi.wav" }
     },
     {
-      "hiragana": "して",
-      "meaning": "doing",
-      "audio": { "daughter": "audio/sentences/shite.wav", "me": "audio/sentences/shite.wav" }
+      hiragana: "して",
+      meaning: "doing",
+      audio: { daughter: "audio/sentences/shite.wav", me: "audio/sentences/shite.wav" }
     },
     {
-      "hiragana": "もんく",
-      "meaning": "complaint",
-      "audio": { "daughter": "audio/sentences/monku.wav", "me": "audio/sentences/monku.wav" }
+      hiragana: "もんく",
+      meaning: "complaint",
+      audio: { daughter: "audio/sentences/monku.wav", me: "audio/sentences/monku.wav" }
     },
     {
-      "hiragana": "を",
-      "meaning": "object marker",
-      "audio": { "daughter": "audio/sentences/wo.wav", "me": "audio/sentences/wo.wav" }
+      hiragana: "を",
+      meaning: "object marker",
+      audio: { daughter: "audio/sentences/wo.wav", me: "audio/sentences/wo.wav" }
     },
     {
-      "hiragana": "すれば",
-      "meaning": "if you do",
-      "audio": { "daughter": "audio/sentences/sureba.wav", "me": "audio/sentences/sureba.wav" }
+      hiragana: "すれば",
+      meaning: "if you do",
+      audio: { daughter: "audio/sentences/sureba.wav", me: "audio/sentences/sureba.wav" }
     },
     {
-      "hiragana": "するほど",
-      "meaning": "the more you do",
-      "audio": { "daughter": "audio/sentences/suruhodo.wav", "me": "audio/sentences/suruhodo.wav" }
+      hiragana: "する",
+      meaning: "the more you do",
+      audio: { daughter: "audio/sentences/suru.wav", me: "audio/sentences/suru.wav" }
     },
     {
-      "hiragana": "じょうきょう",
-      "meaning": "situation",
-      "audio": { "daughter": "audio/sentences/joukyou.wav", "me": "audio/sentences/joukyou.wav" }
+      hiragana: "ほど",
+      meaning: "the more you do",
+      audio: { daughter: "audio/sentences/hodo.wav", me: "audio/sentences/hodo.wav" }
     },
     {
-      "hiragana": "が",
-      "meaning": "subject marker",
-      "audio": { "daughter": "audio/sentences/ga.wav", "me": "audio/sentences/ga.wav" }
+      hiragana: "じょうきょう",
+      meaning: "situation",
+      audio: { daughter: "audio/sentences/joukyou.wav", me: "audio/sentences/joukyou.wav" }
     },
     {
-      "hiragana": "こじれる",
-      "meaning": "to get complicated / worsen",
-      "audio": { "daughter": "audio/sentences/kojireru.wav", "me": "audio/sentences/kojireru.wav" }
+      hiragana: "が",
+      meaning: "subject marker",
+      audio: { daughter: "audio/sentences/ga.wav", me: "audio/sentences/ga.wav" }
+    },
+    {
+      hiragana: "こじれる",
+      meaning: "to get complicated / worsen",
+      audio: { daughter: "audio/sentences/kojireru.wav", me: "audio/sentences/kojireru.wav" }
     }
   ]
 },
@@ -20701,20 +20954,32 @@ const level4 = [
 
 
 
+
+
+
+
+
 {
-  "id": "l4_029",
-  "level": 4,
+  id: "l4_029",
+  level: 4,
 
-  "jp": "はまべにいきたいくらいしごとにむりやりいかなければなりません",
-  "meaning": "I have to forcibly go to work even though I want to go to the beach that much.",
-  "englishAudio": "audio/sentences/english_hamabe.wav",
+  jp: "はまべにいきたいくらいしごとにむりやりいかなければなりません",
+  meaning: "I have to forcibly go to work even though I want to go to the beach that much.",
+  englishAudio: "audio/sentences/english_hamabe.wav",
 
-  "interjectionQuestion": "How would a listener interject?",
-  "correctInterjection": "たいへんだね",
-  "distractors": ["へぇ〜", "そうなんだ"],
+  interjectionQuestion: "How would a listener interject?",
+  correctInterjection: "たいへんだね",
+  distractors: ["へぇ〜", "そうなんだ"],
 
-  "audio": {
-    "daughter": [
+  // ⭐ REQUIRED for Level‑4 MCQ rendering
+  interjections: [
+    "たいへんだね",
+    "へぇ〜",
+    "そうなんだ"
+  ],
+
+  audio: {
+    daughter: [
       "audio/sentences/hamabe.wav",
       "audio/sentences/ni.wav",
       "audio/sentences/ikitai.wav",
@@ -20725,7 +20990,7 @@ const level4 = [
       "audio/sentences/ikanakereba.wav",
       "audio/sentences/narimasen.wav"
     ],
-    "me": [
+    me: [
       "audio/sentences/hamabe.wav",
       "audio/sentences/ni.wav",
       "audio/sentences/ikitai.wav",
@@ -20738,55 +21003,54 @@ const level4 = [
     ]
   },
 
-  "chunks": [
+  chunks: [
     {
-      "hiragana": "はまべ",
-      "meaning": "beach",
-      "audio": { "daughter": "audio/sentences/hamabe.wav", "me": "audio/sentences/hamabe.wav" }
+      hiragana: "はまべ",
+      meaning: "beach",
+      audio: { daughter: "audio/sentences/hamabe.wav", me: "audio/sentences/hamabe.wav" }
     },
     {
-      "hiragana": "に",
-      "meaning": "to",
-      "audio": { "daughter": "audio/sentences/ni.wav", "me": "audio/sentences/ni.wav" }
+      hiragana: "に",
+      meaning: "to",
+      audio: { daughter: "audio/sentences/ni.wav", me: "audio/sentences/ni.wav" }
     },
     {
-      "hiragana": "いきたい",
-      "meaning": "want to go",
-      "audio": { "daughter": "audio/sentences/ikitai.wav", "me": "audio/sentences/ikitai.wav" }
+      hiragana: "いきたい",
+      meaning: "want to go",
+      audio: { daughter: "audio/sentences/ikitai.wav", me: "audio/sentences/ikitai.wav" }
     },
     {
-      "hiragana": "くらい",
-      "meaning": "to the extent",
-      "audio": { "daughter": "audio/sentences/kurai.wav", "me": "audio/sentences/kurai.wav" }
+      hiragana: "くらい",
+      meaning: "to the extent",
+      audio: { daughter: "audio/sentences/kurai.wav", me: "audio/sentences/kurai.wav" }
     },
     {
-      "hiragana": "しごと",
-      "meaning": "work",
-      "audio": { "daughter": "audio/sentences/shigoto.wav", "me": "audio/sentences/shigoto.wav" }
+      hiragana: "しごと",
+      meaning: "work",
+      audio: { daughter: "audio/sentences/shigoto.wav", me: "audio/sentences/shigoto.wav" }
     },
     {
-      "hiragana": "に",
-      "meaning": "to",
-      "audio": { "daughter": "audio/sentences/ni.wav", "me": "audio/sentences/ni.wav" }
+      hiragana: "に",
+      meaning: "to",
+      audio: { daughter: "audio/sentences/ni.wav", me: "audio/sentences/ni.wav" }
     },
     {
-      "hiragana": "むりやり",
-      "meaning": "forcibly",
-      "audio": { "daughter": "audio/sentences/muriyari.wav", "me": "audio/sentences/muriyari.wav" }
+      hiragana: "むりやり",
+      meaning: "forcibly",
+      audio: { daughter: "audio/sentences/muriyari.wav", me: "audio/sentences/muriyari.wav" }
     },
     {
-      "hiragana": "いかなければ",
-      "meaning": "must go",
-      "audio": { "daughter": "audio/sentences/ikanakereba.wav", "me": "audio/sentences/ikanakereba.wav" }
+      hiragana: "いかなければ",
+      meaning: "must go",
+      audio: { daughter: "audio/sentences/ikanakereba.wav", me: "audio/sentences/ikanakereba.wav" }
     },
     {
-      "hiragana": "なりません",
-      "meaning": "must / have to",
-      "audio": { "daughter": "audio/sentences/narimasen.wav", "me": "audio/sentences/narimasen.wav" }
+      hiragana: "なりません",
+      meaning: "must / have to",
+      audio: { daughter: "audio/sentences/narimasen.wav", me: "audio/sentences/narimasen.wav" }
     }
   ]
 },
-
 
 
 
@@ -20883,20 +21147,31 @@ const level4 = [
 
 
 
+
+
+
+
 {
-  "id": "l4_031",
-  "level": 4,
+  id: "l4_031",
+  level: 4,
 
-  "jp": "がけばたではあるくとすべってもうすこしでおちそうになりました",
-  "meaning": "When I walked by the cliff, I slipped and almost fell off.",
-  "englishAudio": "audio/sentences/english_gakebata.wav",
+  jp: "がけばたではあるくとすべってもうすこしでおちそうになりました",
+  meaning: "When I walked by the cliff, I slipped and almost fell off.",
+  englishAudio: "audio/sentences/english_gakebata.wav",
 
-  "interjectionQuestion": "How would a listener interject?",
-  "correctInterjection": "あぶなっ！",
-  "distractors": ["へぇ〜", "そうなんだ"],
+  interjectionQuestion: "How would a listener interject?",
+  correctInterjection: "あぶなっ！",
+  distractors: ["へぇ〜", "そうなんだ"],
 
-  "audio": {
-    "daughter": [
+  // ⭐ REQUIRED for Level‑4 MCQ rendering
+  interjections: [
+    "あぶなっ！",
+    "へぇ〜",
+    "そうなんだ"
+  ],
+
+  audio: {
+    daughter: [
       "audio/sentences/gakebata.wav",
       "audio/sentences/dewa.wav",
       "audio/sentences/aruku_to.wav",
@@ -20906,7 +21181,7 @@ const level4 = [
       "audio/sentences/ni.wav",
       "audio/sentences/narimashita.wav"
     ],
-    "me": [
+    me: [
       "audio/sentences/gakebata.wav",
       "audio/sentences/dewa.wav",
       "audio/sentences/aruku_to.wav",
@@ -20918,50 +21193,49 @@ const level4 = [
     ]
   },
 
-  "chunks": [
+  chunks: [
     {
-      "hiragana": "がけばた",
-      "meaning": "by the cliff",
-      "audio": { "daughter": "audio/sentences/gakebata.wav", "me": "audio/sentences/gakebata.wav" }
+      hiragana: "がけばた",
+      meaning: "by the cliff",
+      audio: { daughter: "audio/sentences/gakebata.wav", me: "audio/sentences/gakebata.wav" }
     },
     {
-      "hiragana": "では",
-      "meaning": "at that place",
-      "audio": { "daughter": "audio/sentences/dewa.wav", "me": "audio/sentences/dewa.wav" }
+      hiragana: "では",
+      meaning: "at that place",
+      audio: { daughter: "audio/sentences/dewa.wav", me: "audio/sentences/dewa.wav" }
     },
     {
-      "hiragana": "あるくと",
-      "meaning": "when I walk",
-      "audio": { "daughter": "audio/sentences/aruku_to.wav", "me": "audio/sentences/aruku_to.wav" }
+      hiragana: "あるくと",
+      meaning: "when I walk",
+      audio: { daughter: "audio/sentences/aruku_to.wav", me: "audio/sentences/aruku_to.wav" }
     },
     {
-      "hiragana": "すべって",
-      "meaning": "slipped",
-      "audio": { "daughter": "audio/sentences/subette.wav", "me": "audio/sentences/subette.wav" }
+      hiragana: "すべって",
+      meaning: "slipped",
+      audio: { daughter: "audio/sentences/subette.wav", me: "audio/sentences/subette.wav" }
     },
     {
-      "hiragana": "もうすこしで",
-      "meaning": "almost / nearly",
-      "audio": { "daughter": "audio/sentences/mou_sukoshi_de.wav", "me": "audio/sentences/mou_sukoshi_de.wav" }
+      hiragana: "もうすこしで",
+      meaning: "almost / nearly",
+      audio: { daughter: "audio/sentences/mou_sukoshi_de.wav", me: "audio/sentences/mou_sukoshi_de.wav" }
     },
     {
-      "hiragana": "おちそう",
-      "meaning": "about to fall",
-      "audio": { "daughter": "audio/sentences/ochisou.wav", "me": "audio/sentences/ochisou.wav" }
+      hiragana: "おちそう",
+      meaning: "about to fall",
+      audio: { daughter: "audio/sentences/ochisou.wav", me: "audio/sentences/ochisou.wav" }
     },
     {
-      "hiragana": "に",
-      "meaning": "into / toward",
-      "audio": { "daughter": "audio/sentences/ni.wav", "me": "audio/sentences/ni.wav" }
+      hiragana: "に",
+      meaning: "into / toward",
+      audio: { daughter: "audio/sentences/ni.wav", me: "audio/sentences/ni.wav" }
     },
     {
-      "hiragana": "なりました",
-      "meaning": "became / almost happened",
-      "audio": { "daughter": "audio/sentences/narimashita.wav", "me": "audio/sentences/narimashita.wav" }
+      hiragana: "なりました",
+      meaning: "became / almost happened",
+      audio: { daughter: "audio/sentences/narimashita.wav", me: "audio/sentences/narimashita.wav" }
     }
   ]
-},
-
+}
 
 ];
 
@@ -21147,9 +21421,12 @@ L4.renderProgress = function (screenId) {
     screen.prepend(wrapper);
   }
 
-  document.getElementById("l4ProgressBar").style.width = pct + "%";
-  document.getElementById("l4ProgressLabel").textContent =
-    `Progress: ${current} / ${total}`;
+  const bar = wrapper.querySelector("#l4ProgressBar");
+const label = wrapper.querySelector("#l4ProgressLabel");
+
+bar.style.width = pct + "%";
+label.textContent = `Progress: ${current} / ${total}`;
+
 };
 
 
@@ -21169,7 +21446,9 @@ L4.setCurrentSentence = function (sentenceObj) {
 };
 
 L4.getCurrentSentence = function () {
-  return L4.dataset.find(s => s.id === L4.currentSentence) || null;
+ if (!L4.dataset) return null;
+return L4.dataset.find(s => s.id === L4.currentSentence) || null;
+
 };
 
 /* ----------------------------------------------------------
@@ -21560,14 +21839,17 @@ L4.startRound = function () {
 
   // ⭐ Keep linear progression exactly as-is
   const sentence = L4.dataset[L4.round];
+  console.log("CURRENT SENTENCE OBJ:", sentence);   // ⭐ ADDED LINE
   L4.setCurrentSentence(sentence);
   L4.currentSentenceObj = sentence;
 
   // ⭐ Minimal addition: randomize Screen1 objects (NOT chunks, NOT progression)
-  L4.screen1RandomObj = L4.dataset[Math.floor(Math.random() * L4.dataset.length)];
+ L4.screen1RandomObj = L4.dataset[Math.floor(Math.random() * L4.dataset.length)];
+
 
   L4.screen1();
 };
+
 
 
 
@@ -21627,8 +21909,10 @@ L4.screen2 = function () {
 
   L4.show("level4Screen2");
   L4.mcqLocked = false;
-// ⭐ Use the SAME object Screen1 used (mirrors Level 3)
-const s = L4.screen1RandomObj || L4.currentSentenceObj;
+
+  // Use the SAME object Screen1 used
+  const s = L4.screen1RandomObj;
+  L4.currentSentenceObj = s;
 
 
   const mcqBox = document.getElementById("level4McqContainer");
@@ -21638,9 +21922,14 @@ const s = L4.screen1RandomObj || L4.currentSentenceObj;
   const parts = s.chunks.map(ch => ch.hiragana);
   sentenceLine.textContent = parts.join(" ");
 
+  // Fallback if interjections[] missing
+  if (!s.interjections || s.interjections.length === 0) {
+    const distractors = L4.generateDistractors(s.correctInterjection);
+    s.interjections = [s.correctInterjection, ...distractors];
+  }
+
   // Build MCQ options
-  const distractors = L4.generateDistractors(s.correctInterjection);
-  const allOptions = [s.correctInterjection, ...distractors];
+  const allOptions = [...s.interjections];
 
   // Shuffle
   for (let i = allOptions.length - 1; i > 0; i--) {
@@ -21652,11 +21941,15 @@ const s = L4.screen1RandomObj || L4.currentSentenceObj;
   mcqBox.innerHTML = "";
   allOptions.forEach(opt => {
     const btn = document.createElement("button");
-    btn.className = "mcqBtn l4-mcq-btn";   // ⭐ add missing class
+    btn.className = "mcqBtn l4-mcq-btn";
     btn.textContent = opt;
-    // ⭐ FIX — dataset.choice must exist
-  btn.dataset.choice = opt;
-    btn.onclick = () => L4.handleMCQ(opt, btn);
+
+    // ⭐ Minimal required fix
+    btn.dataset.choice = opt;
+
+    // ⭐ Minimal required fix — pass only the button
+    btn.onclick = () => L4.handleMCQ(btn.dataset.choice, btn);
+
     mcqBox.appendChild(btn);
   });
 
@@ -21673,6 +21966,8 @@ const s = L4.screen1RandomObj || L4.currentSentenceObj;
     };
   }
 };
+
+
 
 
 /* ----------------------------------------------------------
@@ -21764,6 +22059,7 @@ L4.handleMCQ = function (choice, btn) {
 
 
 
+
 /* ----------------------------------------------------------
    ⭐ LEVEL 4 — SUMMARY (UNIVERSAL SCREEN 3)
 ---------------------------------------------------------- */
@@ -21789,13 +22085,7 @@ L4.showRoundSummary = function () {
   if (explanationBox) explanationBox.classList.add("hidden");
 
   // ⭐ Use SAME object Screen1 + Screen2 used
-  const s =
-    L4.screen1RandomObj ||
-    L4.currentSentenceObj ||
-    (typeof L4.getCurrentSentence === "function"
-      ? L4.getCurrentSentence()
-      : null);
-
+  const s = L4.screen1RandomObj || L4.currentSentenceObj;
   if (!s) {
     console.error("L4.showRoundSummary() called with no current sentence");
     return;
