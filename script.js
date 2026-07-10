@@ -11476,7 +11476,7 @@ L2.startRound = function () {
   if (window.currentLevel !== 2) return;
 
   // ⭐ HARD GUARD — only run when actually on Screen1
-  if (window.currentScreen !== "level2Screen1") return;
+ 
 
   console.log(`[Level2] startRound() — Round ${L2.round + 1}`);
 
