@@ -3208,6 +3208,101 @@ const sentences = [
       }
     }
   ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l1-84",
+  meaning: "to put effort in / to apply strength",
+  level: 1,
+  chunks: [
+    {
+      romaji: "chikara",
+      hiragana: "ちから",
+      meaning: "to put effort in",
+      audio: {
+        daughter: "audio/sentences/chikare.wav",
+        me: "audio/sentences/chikara.wav"
+      }
+    },
+      {
+      romaji: "wo",
+      hiragana: "を",
+      meaning: "to put effort in",
+      audio: {
+        daughter: "audio/sentences/wo.wav",
+        me: "audio/sentences/wo.wav"
+      }
+    },
+      {
+      romaji: "ireru",
+      hiragana: "いれる",
+      meaning: "to put effort in",
+      audio: {
+        daughter: "audio/sentences/ireru.wav",
+        me: "audio/sentences/ireru.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l1-85",
+  meaning: "to pour milk",
+  level: 1,
+  chunks: [
+    {
+      romaji: "gyuunyuu",
+      hiragana: "ぎゅうにゅう",
+      meaning: "milk",
+      audio: {
+        daughter: "audio/sentences/gyuunyuu.wav",
+        me: "audio/sentences/gyuunyuu.wav"
+      }
+    },
+    {
+      romaji: "wo",
+      hiragana: "を",
+      meaning: "object marker",
+      audio: {
+        daughter: "audio/sentences/wo.wav",
+        me: "audio/sentences/wo.wav"
+      }
+    },
+    {
+      romaji: "sosogu",
+      hiragana: "そそぐ",
+      meaning: "to pour",
+      audio: {
+        daughter: "audio/sentences/sosogu.wav",
+        me: "audio/sentences/sosogu.wav"
+      }
+    }
+  ]
 }
 
 
@@ -25807,6 +25902,243 @@ const level6 = [
 },
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l6_022",
+  meaning: "The little brother knocked over a full cup of juice, and mother let out a shocked 'えぇっ…！'. What happens next?",
+  level: 6,
+
+  options: ["そうじする", "はしる", "かくれる", "どなる"],
+  optionsRomaji: ["souji_suru", "hashiru", "kakureru", "donaru"],
+  optionsEN: ["clean up", "run", "hide", "yell"],
+  correct: "そうじする",
+
+  fullAudio: {
+    daughter: "audio/sentences/inference22.wav",
+    me:       "audio/sentences/inference22.wav"
+  },
+
+  choiceAudio: {
+    options: [
+      ["audio/sentences/souji_suru.wav"],
+      ["audio/sentences/hashiru.wav"],
+      ["audio/sentences/kakureru.wav"],
+      ["audio/sentences/donaru.wav"]
+    ]
+  },
+
+  meaningAudio: [
+    ["audio/sentences/souji_suru.wav"],
+    ["audio/sentences/hashiru.wav"],
+    ["audio/sentences/kakureru.wav"],
+    ["audio/sentences/donaru.wav"]
+  ],
+
+  chunks: [
+    { romaji: "otouto ga", hiragana: "おとうとが", english: "the little brother" },
+    { romaji: "juusu wo", hiragana: "ジュースを", english: "the juice" },
+    { romaji: "zabun to", hiragana: "ざぶんと", english: "with a splash" },
+    { romaji: "koboshite", hiragana: "こぼして", english: "spilled" },
+
+    { romaji: "okaasan ga", hiragana: "おかあさんが", english: "the mother" },
+    { romaji: "ee...!", hiragana: "えぇっ…！", english: "a shocked, startled cry" },
+    { romaji: "to", hiragana: "と", english: "and then" },
+    { romaji: "nari", hiragana: "なり", english: "let out" },
+
+    { romaji: "tsugi ni", hiragana: "つぎに", english: "next" },
+    { romaji: "dou naru no", hiragana: "どうなるの", english: "what happens" }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l6_023",
+  meaning: "The pot on the stove started boiling over. What happens next?",
+  level: 6,
+
+  options: ["ひをとめる", "すわる", "でかける", "ねる"],
+  optionsRomaji: ["hi_wo_tomeru", "suwaru", "dekakeru", "neru"],
+  optionsEN: ["turn off the heat", "sit down", "go out", "sleep"],
+  correct: "ひをとめる",
+
+  fullAudio: {
+    daughter: "audio/sentences/inference23.wav",
+    me:       "audio/sentences/inference23.wav"
+  },
+
+  choiceAudio: {
+    options: [
+      ["audio/sentences/hi_wo_tomeru.wav"],
+      ["audio/sentences/suwaru.wav"],
+      ["audio/sentences/dekakeru.wav"],
+      ["audio/sentences/neru.wav"]
+    ]
+  },
+
+  meaningAudio: [
+    ["audio/sentences/hi_wo_tomeru.wav"],
+    ["audio/sentences/suwaru.wav"],
+    ["audio/sentences/dekakeru.wav"],
+    ["audio/sentences/neru.wav"]
+  ],
+
+  chunks: [
+    { romaji: "nabe ga", hiragana: "なべが", english: "the pot" },
+    { romaji: "bota bota to", hiragana: "ぼたぼたと", english: "dripping / spilling over" },
+    { romaji: "wakiagatte", hiragana: "わきあがって", english: "boiled up / boiled over" },
+
+    { romaji: "tsugi ni", hiragana: "つぎに", english: "next" },
+    { romaji: "dou naru no", hiragana: "どうなるの", english: "what happens" }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l6_024",
+  meaning: "The delivery of the documents is delayed. What will the boss do?",
+  level: 6,
+
+  options: ["どなる", "まつ", "てつだう", "かえる"],
+  optionsRomaji: ["donaru", "matsu", "tetsudau", "kaeru"],
+  optionsEN: ["yell", "wait", "help", "go home"],
+  correct: "どなる",
+
+  fullAudio: {
+    daughter: "audio/sentences/inference24.wav",
+    me:       "audio/sentences/inference24.wav"
+  },
+
+  choiceAudio: {
+    options: [
+      ["audio/sentences/donaru.wav"],
+      ["audio/sentences/matsu.wav"],
+      ["audio/sentences/tetsudau.wav"],
+      ["audio/sentences/kaeru.wav"]
+    ]
+  },
+
+  meaningAudio: [
+    ["audio/sentences/donaru.wav"],
+    ["audio/sentences/matsu.wav"],
+    ["audio/sentences/tetsudau.wav"],
+    ["audio/sentences/kaeru.wav"]
+  ],
+
+  chunks: [
+    { romaji: "shorui wo", hiragana: "しょるいを", english: "the documents" },
+    { romaji: "todokeru no wa", hiragana: "とどけるのは", english: "delivering them" },
+    { romaji: "okurete ite", hiragana: "おくれていて", english: "is delayed" },
+
+    { romaji: "joushi ga", hiragana: "じょうしが", english: "the boss" },
+    { romaji: "dou naru no", hiragana: "どうなるの", english: "what will happen / what will he do" }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l6_026",
+  meaning: "My daughter asked me to take her to the park, but I said I'm busy. What happens next?",
+  level: 6,
+
+  options: ["しょんぼりする", "おこる", "わらう", "はしる"],
+  optionsRomaji: ["shonbori_suru", "okoru", "warau", "hashiru"],
+  optionsEN: ["get sad", "get angry", "laugh", "run"],
+  correct: "しょんぼりする",
+
+  fullAudio: {
+    daughter: "audio/sentences/inference26.wav",
+    me:       "audio/sentences/inference26.wav"
+  },
+
+  choiceAudio: {
+    options: [
+      ["audio/sentences/shonbori_suru.wav"],
+      ["audio/sentences/okoru.wav"],
+      ["audio/sentences/warau.wav"],
+      ["audio/sentences/hashiru.wav"]
+    ]
+  },
+
+  meaningAudio: [
+    ["audio/sentences/shonbori_suru.wav"],
+    ["audio/sentences/okoru.wav"],
+    ["audio/sentences/warau.wav"],
+    ["audio/sentences/hashiru.wav"]
+  ],
+
+  chunks: [
+    { romaji: "musume wa", hiragana: "むすめは", english: "my daughter" },
+    { romaji: "boku ni", hiragana: "ぼくに", english: "to me" },
+    { romaji: "kouen ni", hiragana: "こうえんに", english: "to the park" },
+    { romaji: "tsurete itte mo ii ka", hiragana: "つれていってもいいか", english: "if I can take her" },
+    { romaji: "to tanonde", hiragana: "とたのんで", english: "asked" },
+
+    { romaji: "boku wa", hiragana: "ぼくは", english: "I" },
+    { romaji: "isogashii to", hiragana: "いそがしいと", english: "that I'm busy" },
+    { romaji: "iimashita", hiragana: "いいました", english: "said" },
+
+    { romaji: "tsugi ni", hiragana: "つぎに", english: "next" },
+    { romaji: "musume ga dou naru no", hiragana: "むすめがどうなるの", english: "what happens to her" }
+  ]
+},
 
 
 
