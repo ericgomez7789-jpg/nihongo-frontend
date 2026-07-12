@@ -3525,6 +3525,106 @@ const sentences = [
 
 
 
+
+
+{
+  id: "l1-88",
+  meaning: "Put on a jacket.",
+  level: 1,
+  chunks: [
+    {
+      romaji: "uwagi",
+      hiragana: "うわぎ",
+      meaning: "jacket / coat",
+      audio: {
+        daughter: "audio/sentences/uwagi.wav",
+        me: "audio/sentences/uwagi.wav"
+      }
+    },
+    {
+      romaji: "wo",
+      hiragana: "を",
+      meaning: "object marker",
+      audio: {
+        daughter: "audio/sentences/wo.wav",
+        me: "audio/sentences/wo.wav"
+      }
+    },
+    {
+      romaji: "kiru",
+      hiragana: "きる",
+      meaning: "to put on (clothes)",
+      audio: {
+        daughter: "audio/sentences/kiru.wav",
+        me: "audio/sentences/kiru.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l1-89",
+  meaning: "Put on shoes.",
+  level: 1,
+  chunks: [
+    {
+      romaji: "kutsu",
+      hiragana: "くつ",
+      meaning: "shoes",
+      audio: {
+        daughter: "audio/sentences/kutsu.wav",
+        me: "audio/sentences/kutsu.wav"
+      }
+    },
+    {
+      romaji: "wo",
+      hiragana: "を",
+      meaning: "object marker",
+      audio: {
+        daughter: "audio/sentences/wo.wav",
+        me: "audio/sentences/wo.wav"
+      }
+    },
+    {
+      romaji: "haku",
+      hiragana: "はく",
+      meaning: "to put on (shoes, pants, skirt)",
+      audio: {
+        daughter: "audio/sentences/haku.wav",
+        me: "audio/sentences/haku.wav"
+      }
+    }
+  ]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 // ⭐ ADD THIS PATCH RIGHT HERE
