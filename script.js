@@ -15740,7 +15740,6 @@ id: "l3-42",
 
 
 
-
 {
   id: "l3-44",
   meaning: "How do I do this homework?",
@@ -15755,7 +15754,6 @@ id: "l3-42",
     "how / in what manner"
   ],
 
-  // ⭐ correct: どうやって is the natural choice for “How do I do this?”
   correct: "どうやって",
 
   choiceAudio: {
@@ -15794,7 +15792,6 @@ id: "l3-42",
       audio: { daughter: "audio/sentences/wo.wav", me: "audio/sentences/wo.wav" }
     },
 
-    // ⭐ conjunction (method question)
     {
       hiragana: "どうやって",
       romaji: "douyatte",
@@ -15822,7 +15819,6 @@ id: "l3-42",
     }
   ]
 },
-
 
 
 
