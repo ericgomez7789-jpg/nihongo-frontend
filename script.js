@@ -15218,54 +15218,106 @@ id: "l3-32",
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
-id: "l3-33",
-  meaning: "Can you do it this way?",
+  id: "l3-38",
+  meaning: "How did you solve that problem?",
   level: 3,
 
-  options: ["こうして", "こういうふうに", "どのように", "どうやって"],
-  optionsRomaji: ["koushite", "kouiufuuni", "donoyouni", "douyatte"],
-  optionsEN: ["like this (do it this way)", "like this (manner)", "in what manner", "how / by what method"],
+  options: ["どうやって", "どのように", "どういうふうに", "どう"],
+  optionsRomaji: ["douyatte", "donoyouni", "douiufuuni", "dou"],
+  optionsEN: ["how / by what method", "in what manner", "in what way (specific)", "how"],
 
-  correct: "こうして",
+  correct: "どうやって",
 
   choiceAudio: {
     options: [
-      "audio/sentences/koushite.wav",
-      "audio/sentences/kouiufuuni.wav",
+      "audio/sentences/douyatte.wav",
       "audio/sentences/donoyouni.wav",
-      "audio/sentences/douyatte.wav"
+      "audio/sentences/douiufuuni.wav",
+      "audio/sentences/dou.wav"
     ]
   },
 
   meaningAudio: [
-    "audio/sentences/koushite.wav",
-    "audio/sentences/kouiufuuni.wav",
+    "audio/sentences/douyatte.wav",
     "audio/sentences/donoyouni.wav",
-    "audio/sentences/douyatte.wav"
+    "audio/sentences/douiufuuni.wav",
+    "audio/sentences/dou.wav"
   ],
 
   chunks: [
     {
-      hiragana: "こうして",
-      romaji: "koushite",
-      meaning: "do it like this",
-      audio: { daughter: "audio/sentences/koushite.wav", me: "audio/sentences/koushite.wav" }
+      hiragana: "どうやって",
+      romaji: "douyatte",
+      meaning: "how / by what method",
+      audio: { daughter: "audio/sentences/douyatte.wav", me: "audio/sentences/douyatte.wav" }
     },
     {
-      hiragana: "やって",
-      romaji: "yatte",
-      meaning: "do (and)",
-      audio: { daughter: "audio/sentences/yatte.wav", me: "audio/sentences/yatte.wav" }
+      hiragana: "その",
+      romaji: "sono",
+      meaning: "that",
+      audio: { daughter: "audio/sentences/sono.wav", me: "audio/sentences/sono.wav" }
     },
     {
-      hiragana: "もらえますか",
-      romaji: "moraemasu ka",
-      meaning: "can you do it for me",
-      audio: { daughter: "audio/sentences/moraemasuka.wav", me: "audio/sentences/moraemasuka.wav" }
+      hiragana: "もんだい",
+      romaji: "mondai",
+      meaning: "problem",
+      audio: { daughter: "audio/sentences/mondai.wav", me: "audio/sentences/mondai.wav" }
+    },
+    {
+      hiragana: "を",
+      romaji: "wo",
+      meaning: "object marker",
+      audio: { daughter: "audio/sentences/wo.wav", me: "audio/sentences/wo.wav" }
+    },
+    {
+      hiragana: "といた",
+      romaji: "toita",
+      meaning: "solved",
+      audio: { daughter: "audio/sentences/toita.wav", me: "audio/sentences/toita.wav" }
+    },
+    {
+      hiragana: "んですか",
+      romaji: "n desuka",
+      meaning: "polite explanatory question",
+      audio: { daughter: "audio/sentences/n_desuka.wav", me: "audio/sentences/n_desuka.wav" }
     }
   ]
-},
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
 id: "l3-34",
   meaning: "How do you think I should start?",
