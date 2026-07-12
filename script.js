@@ -3423,6 +3423,106 @@ const sentences = [
 
 
 
+{
+  id: "l1-87",
+  meaning: "In the kitchen, the dishes are scattered and it's a mess.",
+  level: 1,
+  chunks: [
+    {
+      romaji: "daidokoro",
+      hiragana: "だいどころ",
+      meaning: "kitchen",
+      audio: {
+        daughter: "audio/sentences/daidokoro.wav",
+        me: "audio/sentences/daidokoro.wav"
+      }
+    },
+    {
+      romaji: "dewa",
+      hiragana: "では",
+      meaning: "in / at",
+      audio: {
+        daughter: "audio/sentences/dewa.wav",
+        me: "audio/sentences/dewa.wav"
+      }
+    },
+    {
+      romaji: "sara",
+      hiragana: "さら",
+      meaning: "dish",
+      audio: {
+        daughter: "audio/sentences/sara.wav",
+        me: "audio/sentences/sara.wav"
+      }
+    },
+    {
+      romaji: "ga",
+      hiragana: "が",
+      meaning: "subject marker",
+      audio: {
+        daughter: "audio/sentences/ga.wav",
+        me: "audio/sentences/ga.wav"
+      }
+    },
+    {
+      romaji: "barabara to",
+      hiragana: "ばらばらと",
+      meaning: "scattered",
+      audio: {
+        daughter: "audio/sentences/barabara_to.wav",
+        me: "audio/sentences/barabara_to.wav"
+      }
+    },
+    {
+      romaji: "chirakatte",
+      hiragana: "ちらかって",
+      meaning: "scattered around / cluttered",
+      audio: {
+        daughter: "audio/sentences/chirakatte.wav",
+        me: "audio/sentences/chirakatte.wav"
+      }
+    },
+    {
+      romaji: "ite",
+      hiragana: "いて",
+      meaning: "and (te‑form)",
+      audio: {
+        daughter: "audio/sentences/ite.wav",
+        me: "audio/sentences/ite.wav"
+      }
+    },
+    {
+      romaji: "mechakucha",
+      hiragana: "めちゃくちゃ",
+      meaning: "a mess",
+      audio: {
+        daughter: "audio/sentences/mechakucha.wav",
+        me: "audio/sentences/mechakucha.wav"
+      }
+    },
+    {
+      romaji: "desu",
+      hiragana: "です",
+      meaning: "is",
+      audio: {
+        daughter: "audio/sentences/desu.wav",
+        me: "audio/sentences/desu.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ];
@@ -26565,6 +26665,139 @@ const level6 = [
     { romaji: "tsugi ni dou naru no", hiragana: "つぎに どうなるの", english: "what happens next" }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l6-30",
+  meaning: "In the kitchen, my daughter has scattered the dishes everywhere, leaving it totally messy, and I react with 'eh!' — what happens next?",
+  level: 6,
+
+  options: ["かたづけはじめる", "もっとちらかす", "ないてしまう", "しずかになる"],
+  optionsRomaji: ["katazuke_hajimeru", "motto_chirakasu", "naite_shimau", "shizuka_ni_naru"],
+  optionsEN: ["start cleaning up", "make an even bigger mess", "start crying", "become quiet"],
+  correct: "かたづけはじめる",
+
+  fullAudio: {
+    daughter: "audio/sentences/inference30.wav",
+    me:       "audio/sentences/inference30.wav"
+  },
+
+  choiceAudio: {
+    options: [
+      ["audio/sentences/katazuke_hajimeru.wav"],
+      ["audio/sentences/motto_chirakasu.wav"],
+      ["audio/sentences/naite_shimau.wav"],
+      ["audio/sentences/shizuka_ni_naru.wav"]
+    ]
+  },
+
+  meaningAudio: [
+    ["audio/sentences/katazuke_hajimeru.wav"],
+    ["audio/sentences/motto_chirakasu.wav"],
+    ["audio/sentences/naite_shimau.wav"],
+    ["audio/sentences/shizuka_ni_naru.wav"]
+  ],
+
+  chunks: [
+    { romaji: "daidokoro dewa", hiragana: "だいどころでは", english: "in the kitchen" },
+    { romaji: "musume ga", hiragana: "むすめが", english: "my daughter" },
+    { romaji: "sara wo", hiragana: "さらを", english: "the dishes" },
+    { romaji: "barabara to", hiragana: "ばらばらと", english: "scattered" },
+    { romaji: "chirakatte", hiragana: "ちらかって", english: "messily spread around" },
+    { romaji: "mechakucha no mama desu", hiragana: "めちゃくちゃの ままです", english: "left totally messy" },
+    { romaji: "e tte", hiragana: "えって", english: "I react with 'eh!'" },
+    { romaji: "tsugi ni dou naru no", hiragana: "つぎに どうなるの", english: "what happens next" }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l6-31",
+  meaning: "During camping, while I was slowly entering the water, both my daughters suddenly began splashing it vigorously—what happens next?",
+  level: 6,
+
+  options: ["びっくりする", "おこる", "わらいだす", "とびあがる"],
+  optionsRomaji: ["bikkuri_suru", "okoru", "waraidasu", "tobi_agaru"],
+  optionsEN: ["get startled", "get angry", "burst into laughter", "jump up"],
+  correct: "びっくりする",
+
+  fullAudio: {
+    daughter: "audio/sentences/inference31.wav",
+    me:       "audio/sentences/inference31.wav"
+  },
+
+  choiceAudio: {
+    options: [
+      ["audio/sentences/bikkuri_suru.wav"],
+      ["audio/sentences/okoru.wav"],
+      ["audio/sentences/waraidasu.wav"],
+      ["audio/sentences/tobi_agaru.wav"]
+    ]
+  },
+
+  meaningAudio: [
+    ["audio/sentences/bikkuri_suru.wav"],
+    ["audio/sentences/okoru.wav"],
+    ["audio/sentences/waraidasu.wav"],
+    ["audio/sentences/tobi_agaru.wav"]
+  ],
+
+  chunks: [
+    { romaji: "nojukuchuu dewa", hiragana: "のじゅくちゅうでは", english: "during camping" },
+    { romaji: "boku ga", hiragana: "ぼくが", english: "I" },
+    { romaji: "mizu ni yukkuri haitte iru toki", hiragana: "みずに ゆっくり はいっている とき", english: "while slowly entering the water" },
+    { romaji: "futari no musume ga", hiragana: "ふたりの むすめが", english: "both my daughters" },
+    { romaji: "mizu wo", hiragana: "みずを", english: "the water" },
+    { romaji: "jabujabu to", hiragana: "じゃぶじゃぶと", english: "vigorously splashing" },
+    { romaji: "tatakidashita", hiragana: "たたきだした", english: "began hitting/splashing" },
+    { romaji: "tsugi ni dou naru no", hiragana: "つぎに どうなるの", english: "what happens next" }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
