@@ -26413,6 +26413,75 @@ const level6 = [
 
 
 
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l6-29",
+  meaning: "While sleeping outdoors all night, sweating until drenched, then diving into water the next morning—what happens next?",
+  level: 6,
+
+  options: ["ひやっとする", "ねむくなる", "はしゃぐ", "おどる"],
+  optionsRomaji: ["hiyatto_suru", "nemuku_naru", "hashagu", "odoru"],
+  optionsEN: ["feel a cold shock", "get sleepy", "get excited", "dance"],
+  correct: "ひやっとする",
+
+  fullAudio: {
+    daughter: "audio/sentences/inference29.wav",
+    me:       "audio/sentences/inference29.wav"
+  },
+
+  choiceAudio: {
+    options: [
+      ["audio/sentences/hiyatto_suru.wav"],
+      ["audio/sentences/nemuku_naru.wav"],
+      ["audio/sentences/hashagu.wav"],
+      ["audio/sentences/odoru.wav"]
+    ]
+  },
+
+  meaningAudio: [
+    ["audio/sentences/hiyatto_suru.wav"],
+    ["audio/sentences/nemuku_naru.wav"],
+    ["audio/sentences/hashagu.wav"],
+    ["audio/sentences/odoru.wav"]
+  ],
+
+  chunks: [
+    { romaji: "nojukuchuu dewa", hiragana: "のじゅくちゅうでは", english: "while sleeping outdoors" },
+    { romaji: "yodooshi nenagara", hiragana: "よどおし ねながら", english: "sleeping all night long" },
+    { romaji: "bishobisho ni ase wo kaite", hiragana: "びしょびしょに あせを かいて", english: "sweating until drenched" },
+    { romaji: "tsugi no asa", hiragana: "つぎの あさ", english: "the next morning" },
+    { romaji: "mizu ni moguru to", hiragana: "みずに もぐると", english: "if I dive into water" },
+    { romaji: "tsugi ni dou naru no", hiragana: "つぎに どうなるの", english: "what happens next" }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 
