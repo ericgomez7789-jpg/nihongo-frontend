@@ -26180,7 +26180,7 @@ const level6 = [
 
 
 {
-  id: "l6_026",
+  id: "l6_025",
   meaning: "My daughter asked me to take her to the park, but I said I'm busy. What happens next?",
   level: 6,
 
@@ -26190,8 +26190,8 @@ const level6 = [
   correct: "しょんぼりする",
 
   fullAudio: {
-    daughter: "audio/sentences/inference26.wav",
-    me:       "audio/sentences/inference26.wav"
+    daughter: "audio/sentences/inference25.wav",
+    me:       "audio/sentences/inference25.wav"
   },
 
   choiceAudio: {
@@ -26234,6 +26234,176 @@ const level6 = [
 
 
 
+
+
+
+
+
+
+
+
+
+{
+  id: "l6_026",
+  meaning: "I exposed my body to the intensely blazing sun for a long time. What happens next?",
+  level: 6,
+
+  options: ["ひやけする", "おどる", "さけぶ", "はしゃぐ"],
+  optionsRomaji: ["hiyake_suru", "odoru", "sakebu", "hashagu"],
+  optionsEN: ["get a sunburn", "dance", "shout", "get excited"],
+  correct: "ひやけする",
+
+  fullAudio: {
+    daughter: "audio/sentences/inference26.wav",
+    me:       "audio/sentences/inference26.wav"
+  },
+
+  choiceAudio: {
+    options: [
+      ["audio/sentences/hiyake_suru.wav"],
+      ["audio/sentences/odoru.wav"],
+      ["audio/sentences/sakebu.wav"],
+      ["audio/sentences/hashagu.wav"]
+    ]
+  },
+
+  meaningAudio: [
+    ["audio/sentences/hiyake_suru.wav"],
+    ["audio/sentences/odoru.wav"],
+    ["audio/sentences/sakebu.wav"],
+    ["audio/sentences/hashagu.wav"]
+  ],
+
+  chunks: [
+    { romaji: "giragira to teru", hiragana: "ぎらぎらとてる", english: "blazing intensely" },
+    { romaji: "taiyou ni", hiragana: "たいように", english: "in the sun" },
+    { romaji: "karada wo", hiragana: "からだを", english: "my body" },
+    { romaji: "nagai aida", hiragana: "ながいあいだ", english: "for a long time" },
+    { romaji: "sarashite", hiragana: "さらして", english: "exposed" },
+
+    { romaji: "tsugi ni", hiragana: "つぎに", english: "next" },
+    { romaji: "boku ga dou naru no", hiragana: "ぼくがどうなるの", english: "what happens to me" }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l6-27",
+  meaning: "While sleeping in a humid tent with almost no air coming in, what happens next?",
+  level: 6,
+
+  options: ["ひやけする", "あせをかく", "めまいがする", "のどがかわく"],
+  optionsRomaji: ["hiyake_suru", "ase_wo_kaku", "memai_ga_suru", "nodo_ga_kawaku"],
+  optionsEN: ["get a sunburn", "sweat", "feel dizzy", "get thirsty"],
+  correct: "あせをかく",
+
+  fullAudio: {
+    daughter: "audio/sentences/inference27.wav",
+    me:       "audio/sentences/inference27.wav"
+  },
+
+  choiceAudio: {
+    options: [
+      ["audio/sentences/hiyake_suru.wav"],
+      ["audio/sentences/ase_wo_kaku.wav"],
+      ["audio/sentences/memai_ga_suru.wav"],
+      ["audio/sentences/nodo_ga_kawaku.wav"]
+    ]
+  },
+
+  meaningAudio: [
+    ["audio/sentences/hiyake_suru.wav"],
+    ["audio/sentences/ase_wo_kaku.wav"],
+    ["audio/sentences/memai_ga_suru.wav"],
+    ["audio/sentences/nodo_ga_kawaku.wav"]
+  ],
+
+  chunks: [
+    { romaji: "nojukuchuu dewa", hiragana: "のじゅくちゅうでは", english: "while sleeping outdoors" },
+    { romaji: "kaze ga haitte konakute", hiragana: "かぜがはいってこなくて", english: "with no air coming in" },
+    { romaji: "mushiatsui tenmaku no naka de", hiragana: "むしあついてんまくのなかで", english: "inside a humid tent" },
+    { romaji: "nemuru to", hiragana: "ねると", english: "if I sleep" },
+
+    { romaji: "tsugi ni", hiragana: "つぎに", english: "next" },
+    { romaji: "boku ga dou naru no", hiragana: "ぼくがどうなるの", english: "what happens to me" }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l6-28",
+  meaning: "Since I couldn't sleep well while camping outdoors, what happens the next day?",
+  level: 6,
+
+  options: ["ねむくなる", "はしゃぐ", "おどる", "わらう"],
+  optionsRomaji: ["nemuku_naru", "hashagu", "odoru", "warau"],
+  optionsEN: ["get sleepy", "get excited", "dance", "laugh"],
+  correct: "ねむくなる",
+
+  fullAudio: {
+    daughter: "audio/sentences/inference28.wav",
+    me:       "audio/sentences/inference28.wav"
+  },
+
+  choiceAudio: {
+    options: [
+      ["audio/sentences/nemuku_naru.wav"],
+      ["audio/sentences/hashagu.wav"],
+      ["audio/sentences/odoru.wav"],
+      ["audio/sentences/warau.wav"]
+    ]
+  },
+
+  meaningAudio: [
+    ["audio/sentences/nemuku_naru.wav"],
+    ["audio/sentences/hashagu.wav"],
+    ["audio/sentences/odoru.wav"],
+    ["audio/sentences/warau.wav"]
+  ],
+
+  chunks: [
+    { romaji: "nojukuchuu dewa", hiragana: "のじゅくちゅうでは", english: "while sleeping outdoors" },
+    { romaji: "amari nemurenakatta node", hiragana: "あまりねむれなかったので", english: "since I couldn't sleep well" },
+    { romaji: "tsugi no hi ni", hiragana: "つぎのひに", english: "the next day" },
+    { romaji: "dou naru no", hiragana: "どうなるの", english: "what happens" }
+  ]
+},
 
 
 
