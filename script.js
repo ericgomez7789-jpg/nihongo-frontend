@@ -15299,7 +15299,7 @@ id: "l3-32",
       audio: { daughter: "audio/sentences/n_desuka.wav", me: "audio/sentences/n_desuka.wav" }
     }
   ]
-}
+},
 
 
 
@@ -17540,6 +17540,9 @@ const L3 = {
 
   dataset: level3Sentences,   // your Level‑3 dataset
   currentSentence: null,
+  activeScreen: null,
+
+
   mcqLocked: false,
 
   audio: {
@@ -18041,6 +18044,8 @@ L3.generateDistractors = function (correct) {
    ⭐ LEVEL 3 — SCREEN 2 (MCQ)
 ---------------------------------------------------------- */
 L3.screen2 = function () {
+  L3.activeScreen = "screen2";
+
   console.log("[Level3] screen2()");
 
   const replayBtn = document.getElementById("l3ReplaySentenceBtn");
@@ -18135,15 +18140,19 @@ L3.handleMCQ = function (choice) {
 
   // Move to summary after short delay
   setTimeout(() => {
+    if (L3.activeScreen !== "screen2") return;   // ⭐ ONE‑LINE FIX
     L3.showRoundSummary();
   }, 900);
 };
+
 
 /* ----------------------------------------------------------
    ⭐ LEVEL 3 — SUMMARY
 ---------------------------------------------------------- */
 
 L3.showRoundSummary = function () {
+  L3.activeScreen = "screen3";
+
   const s = L3.currentSentence;
 
   L3.stopAllAudio();
@@ -21709,6 +21718,9 @@ const L4 = {
 
   dataset: level4,  // Level‑4 dataset (interjections)
   currentSentence: null,
+
+  activeScreen: null,   // ✔ correct syntax
+
   mcqLocked: false,
 
   audio: {
@@ -21717,6 +21729,9 @@ const L4 = {
     current: null
   }
 };
+
+
+
 
 window.L4 = window.L4 || {};
 
@@ -22337,6 +22352,7 @@ const sentence = L4.screen1RandomObj || L4.currentSentenceObj || L4.getCurrentSe
 
 
 L4.screen2 = function () {
+  L4.activeScreen = "screen2";   // ⭐ ONE‑LINE FIX
   console.log("[Level4] screen2()");
 
   const replayBtn = document.getElementById("l4ReplaySentenceBtn");
@@ -22461,6 +22477,7 @@ L4.handleMCQ = function (choice, btn) {
     });
 
     setTimeout(() => {
+      if (L4.activeScreen !== "screen2") return;   // ⭐ ONE‑LINE FIX
       L4.showRoundSummary();
     }, 600);
 
@@ -22480,6 +22497,7 @@ L4.handleMCQ = function (choice, btn) {
     }
 
     setTimeout(() => {
+      if (L4.activeScreen !== "screen2") return;   // ⭐ ONE‑LINE FIX
       L4.showRoundSummary();
     }, 900);
   }
@@ -22495,11 +22513,17 @@ L4.handleMCQ = function (choice, btn) {
 
 
 
+
 /* ----------------------------------------------------------
    ⭐ LEVEL 4 — SUMMARY (UNIVERSAL SCREEN 3)
 ---------------------------------------------------------- */
 
 L4.showRoundSummary = function () {
+  
+  L4.activeScreen = "screen3";   // ⭐ ONE‑LINE FIX
+
+  console.log("[Level4] showRoundSummary()");
+
   console.log("[Level4] showRoundSummary()");
 
   // Hide Level 4 wrapper completely
@@ -24095,6 +24119,7 @@ const L5 = {
   dataset: level5Sentences,   // your Level‑5 dataset
   currentSentence: null,
   mcqLocked: false,
+activeScreen: null,
 
   audio: {
     cancelToken: { cancel: false },
@@ -24312,6 +24337,8 @@ if (l4Box) l4Box.classList.add("hidden");
 
 
 L5.showRoundSummary = function () {
+  L5.activeScreen = "screen3";   // ⭐ ONE‑LINE FIX
+
   const s = L5.currentSentence;
 
   L5.stopAllAudio();
@@ -24374,6 +24401,7 @@ L5.showRoundSummary = function () {
     L5.startRound();
   };
 };
+
 
 /* ----------------------------------------------------------
    ⭐ LEVEL 5 — FINAL SUMMARY
@@ -24589,6 +24617,8 @@ L5.generateDistractors = function (correctCounter) {
 ---------------------------------------------------------- */
 
 L5.screen2 = function () {
+  L5.activeScreen = "screen2";
+
   console.log("[Level5] screen2()");
 
   const replayBtn = document.getElementById("l5ReplaySentenceBtn");
@@ -24672,6 +24702,11 @@ L5.handleMCQ = function (choice) {
 
   // Move to summary
   setTimeout(() => {
+    setTimeout(() => {
+  if (L5.activeScreen !== "screen2") return;   // ⭐ ONE‑LINE FIX
+  L5.showRoundSummary();
+}, 900);
+
     L5.showRoundSummary();
   }, 900);
 };
@@ -26890,6 +26925,7 @@ const L6 = {
   dataset: level6,   // your Level‑6 dataset array
   currentSentence: null,
   mcqLocked: false,
+activeScreen: null,
 
   audio: {
     cancelToken: { cancel: false },
@@ -27314,6 +27350,8 @@ L6.screen1 = function () {
 ========================================================== */
 
 L6.screen2 = function () {
+  L6.activeScreen = "screen2";
+
   console.log("[Level6] screen2()");
 
   const replayBtn = document.getElementById("l6ReplaySentenceBtn");
@@ -27406,6 +27444,7 @@ L6.handleMCQ = function (choice, index) {
 
   // ⭐ Move to summary
   setTimeout(() => {
+     if (L6.activeScreen !== "screen2") return;   // ⭐ ONE‑LINE FIX
     L6.showRoundSummary();
   }, 900);
 };
@@ -27415,6 +27454,8 @@ L6.handleMCQ = function (choice, index) {
 ========================================================== */
 
 L6.showRoundSummary = function () {
+  L6.activeScreen = "screen3";
+
   console.log("[Level6] showRoundSummary()");
 
   const s = L6.currentSentenceObj;
@@ -27951,6 +27992,7 @@ const L7 = {
 
   dataset: level7,   // your Level‑7 dataset array
   currentSentence: null,
+activeScreen: null,
 
   // No MCQ lock needed (split columns)
   columnLocked: false,
@@ -28401,6 +28443,8 @@ L7.screen1 = function () {
    ⭐ LEVEL 7 — SCREEN 2 (SPLIT‑COLUMN MATCHING)
 ========================================================== */
 L7.screen2 = function () {
+  L7.activeScreen = "screen2";
+
   console.log("[Level7] screen2()");
 
   // ⭐ Use the FULL OBJECT, not the ID
@@ -28523,6 +28567,7 @@ L7.handleColumnChoice = function (opt, btn) {
   // Level 6 increments inside the summary Next button
 
   setTimeout(() => {
+     if (L7.activeScreen !== "screen2") return;   // ⭐ ONE‑LINE FIX
     L7.showRoundSummary();
   }, 800);
 };
@@ -28542,6 +28587,8 @@ L7.handleColumnChoice = function (opt, btn) {
 ========================================================== */
 
 L7.showRoundSummary = function () {
+  L7.activeScreen = "screen3";
+
   console.log("[Level7] showRoundSummary()");
 
   const s = L7.currentSentenceObj;   // ⭐ Use the full object
@@ -29328,6 +29375,7 @@ const L8 = {
 
   // No MCQ lock needed (split columns)
   columnLocked: false,
+activeScreen: null,
 
   audio: {
     cancelToken: { cancel: false },
@@ -29778,6 +29826,8 @@ L8.screen1 = function () {
 Screen 2
 --------------------------------------------------------------------------------*/
 L8.screen2 = function () {
+  L8.activeScreen = "screen2";
+
   if (!L8.active) return;
   console.log("[Level8] ACTIVE screen2 VERSION — marker A");
   console.log("[Level8] screen2()");
@@ -29897,6 +29947,7 @@ L8.handleColumnChoice = function (opt, btn) {
   }
 
   setTimeout(() => {
+    if (L8.activeScreen !== "screen2") return;   // ⭐ ONE‑LINE FIX
     L8.showRoundSummary();
   }, 800);
 };
@@ -29909,6 +29960,8 @@ L8.handleColumnChoice = function (opt, btn) {
    ⭐ LEVEL 8 — ROUND SUMMARY
 ========================================================== */
 L8.showRoundSummary = function () {
+  L8.activeScreen = "screen3";
+
   if (!L8.active) return;
   console.log("[Level8] showRoundSummary()");
 
@@ -30652,6 +30705,7 @@ const L9 = {
 
   // Split-column lock (same mechanic as Level 8)
   columnLocked: false,
+activeScreen: null,
 
   // Audio safety system (Level‑9 only)
   audio: {
@@ -31233,6 +31287,8 @@ L9.screen1 = function () {
      • Defensive checks (missing sentence, missing DOM nodes)
 ========================================================== */
 L9.screen2 = function () {
+  L9.activeScreen = "screen2";
+
   console.log("[Level9] screen2()");
 
   const s = L9.currentSentenceObj;
@@ -31382,6 +31438,7 @@ L9.handleColumnChoice = function (opt, btn) {
   }
 
   setTimeout(() => {
+    if (L9.activeScreen !== "screen2") return;   // ⭐ ONE‑LINE FIX
     L9.showRoundSummary();
   }, 800);
 };
@@ -31445,6 +31502,8 @@ L9.generateExplanation = function (sentence) {
      • State progression (round++, end-of-level detection)
 ========================================================== */
 L9.showRoundSummary = function () {
+  L9.activeScreen = "screen3";
+
   console.log("[Level9] showRoundSummary()");
 
   const s = L9.currentSentenceObj;
@@ -32159,6 +32218,7 @@ const L10 = {
 
   // Split-column lock (same mechanic as Level 9)
   columnLocked: false,
+activeScreen: null,
 
   // Audio safety system (Level‑10 only)
   audio: {
@@ -32484,6 +32544,11 @@ L10.handleColumnChoice = function (opt, btn) {
   btn.offsetHeight;
 
   setTimeout(() => {
+    setTimeout(() => {
+  if (L10.activeScreen !== "screen2") return;   // ⭐ ONE‑LINE FIX
+  L10.showRoundSummary();
+}, 800);
+
     L10.showRoundSummary();
   }, 800);
 };
@@ -32770,6 +32835,8 @@ L10.screen1 = function () {
 ========================================================== */
 
 L10.screen2 = function () {
+  L10.activeScreen = "screen2";
+
   console.log("[Level10] screen2()");
 
   // Get full sentence object
@@ -32881,6 +32948,8 @@ L10.screen2 = function () {
    ⭐ LEVEL 10 — ROUND SUMMARY
 ========================================================== */
 L10.showRoundSummary = function () {
+  L10.activeScreen = "screen3";
+
   console.log("[Level10] showRoundSummary()");
 
   const s = L10.getCurrentSentence();
