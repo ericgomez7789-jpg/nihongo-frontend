@@ -12687,6 +12687,20 @@ const level3Sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
   id: "l3-6",
   meaning: "Even though he was tired, he kept working.",
@@ -13106,6 +13120,17 @@ const level3Sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -13538,6 +13563,21 @@ const level3Sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
   id: "l3-16",
   meaning: "I didn’t eat breakfast, so I became really hungry.",
@@ -13969,6 +14009,20 @@ const level3Sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
  id: "l3-21",
   meaning: "I studied a lot, however I didn't pass the exam.",
@@ -14478,6 +14532,24 @@ const level3Sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
  id: "l3-26",
   meaning: "How did you make this?",
@@ -14819,6 +14891,23 @@ const level3Sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
 id: "l3-31",
   meaning: "Can you show me how to do it like this?",
@@ -16126,36 +16215,38 @@ id: "l3-42",
 
 
 
-
 {
   id: "l3-48",
   meaning: "Anyway, I need to finish this report.",
   level: 3,
 
-  options: ["どう", "どうやって", "どのように", "どういうふうに"],
-  optionsRomaji: ["dou", "douyatte", "donoyouni", "douiu fuuni"],
+  // ⭐ Correct MCQ options (conjunction family)
+  options: ["とにかく", "しかし", "それで", "だから"],
+  optionsRomaji: ["tonikaku", "shikashi", "sorede", "dakara"],
   optionsEN: [
-    "how (general)",
-    "how / by what method",
-    "in what way / how",
-    "in what manner"
+    "anyway / in any case",
+    "however",
+    "so / as a result",
+    "so / therefore"
   ],
 
+  // ⭐ Correct answer
   correct: "とにかく",
 
+  // ⭐ Audio aligned with options
   choiceAudio: {
     options: [
+      "audio/sentences/tonikaku.wav",
       "audio/sentences/shikashi.wav",
       "audio/sentences/sorede.wav",
-      "audio/sentences/tonikaku.wav",
       "audio/sentences/dakara.wav"
     ]
   },
 
   meaningAudio: [
+    "audio/sentences/tonikaku.wav",
     "audio/sentences/shikashi.wav",
     "audio/sentences/sorede.wav",
-    "audio/sentences/tonikaku.wav",
     "audio/sentences/dakara.wav"
   ],
 
@@ -16216,7 +16307,6 @@ id: "l3-42",
     }
   ]
 },
-
 
 
 
@@ -16710,7 +16800,7 @@ id: "l3-42",
 
 
 {
-  id: "l3-55",
+  id: "l3-53",
   meaning: "When I think about going to work, I feel gloomy and heavy-hearted. So I took the day off and felt cheerful.",
   level: 3,
 
@@ -16872,7 +16962,7 @@ id: "l3-42",
 
 
 {
-  id: "l3-57",
+  id: "l3-54",
   meaning: "I thought the weather would be nice this morning and tried to go out. But instead it rained, and I felt disappointed.",
   level: 3,
 
@@ -17030,7 +17120,7 @@ id: "l3-42",
 
 
 {
-  id: "l3-58",
+  id: "l3-55",
   meaning: "My daughter loves olives and devours them. In contrast, I don’t really like them.",
   level: 3,
 
