@@ -1481,8 +1481,26 @@ const sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
-   id: "l1-42",
+  id: "l1-42",
   meaning: "It's eight twenty in the morning.",
   level: 1,
   chunks: [
@@ -1505,12 +1523,6 @@ const sentences = [
       audio: { daughter: "audio/sentences/ji.wav", me: "audio/sentences/ji.wav" }
     },
     {
-      romaji: "ni",
-      hiragana: "に",
-      meaning: "two (tens place for 20)",
-      audio: { daughter: "audio/sentences/ni.wav", me: "audio/sentences/ni.wav" }
-    },
-    {
       romaji: "juu",
       hiragana: "じゅう",
       meaning: "ten",
@@ -1526,11 +1538,25 @@ const sentences = [
       romaji: "desu",
       hiragana: "です",
       meaning: "is",
-      audio: { daughter: "audio/sentences/desu.wav", me: "audio/sentences/desu.wav" 
-     }
+      audio: { daughter: "audio/sentences/desu.wav", me: "audio/sentences/desu.wav" }
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
    id: "l1-43",
   meaning: "It's nine forty five in the evening.",
@@ -3303,8 +3329,84 @@ const sentences = [
       }
     }
   ]
-}
+},
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l1-86",
+  meaning: "the window is stained",
+  level: 1,
+  chunks: [
+    {
+      romaji: "mado",
+      hiragana: "まど",
+      meaning: "window",
+      audio: {
+        daughter: "audio/sentences/mado.wav",
+        me: "audio/sentences/mado.wav"
+      }
+    },
+    {
+      romaji: "ga",
+      hiragana: "が",
+      meaning: "subject marker",
+      audio: {
+        daughter: "audio/sentences/ga.wav",
+        me: "audio/sentences/ga.wav"
+      }
+    },
+    {
+      romaji: "shimi",
+      hiragana: "しみ",
+      meaning: "stain",
+      audio: {
+        daughter: "audio/sentences/shimi.wav",
+        me: "audio/sentences/shimi.wav"
+      }
+    },
+    {
+      romaji: "de",
+      hiragana: "で",
+      meaning: "by / with",
+      audio: {
+        daughter: "audio/sentences/de.wav",
+        me: "audio/sentences/de.wav"
+      }
+    },
+    {
+      romaji: "yogorete",
+      hiragana: "よごれて",
+      meaning: "dirty / stained (te‑form)",
+      audio: {
+        daughter: "audio/sentences/yogorete.wav",
+        me: "audio/sentences/yogorete.wav"
+      }
+    },
+    {
+      romaji: "iru",
+      hiragana: "いる",
+      meaning: "is",
+      audio: {
+        daughter: "audio/sentences/iru.wav",
+        me: "audio/sentences/iru.wav"
+      }
+    }
+  ]
+},
 
 
 
