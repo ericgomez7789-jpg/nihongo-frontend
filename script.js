@@ -27334,7 +27334,79 @@ const level6 = [
     { romaji: "itatte nari", hiragana: "いたっ…って なり", english: "went 'itatt…'" },
     { romaji: "tsugi ni dou naru no", hiragana: "つぎに どうなるの", english: "what happens next" }
   ]
-}
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l6-38",
+  meaning: "While sleeping outside, when my wife realized I had brought the Nintendo Switch, she went 'haaa…' — what happens next?",
+  level: 6,
+
+  options: ["つまが あきれる", "つまが おこる", "つまが わらう", "つまが ちかづく"],
+  optionsRomaji: ["tsuma_ga_akireru", "tsuma_ga_okoru", "tsuma_ga_warau", "tsuma_ga_chikazuku"],
+  optionsEN: ["my wife gets exasperated", "my wife gets angry", "my wife laughs", "my wife comes closer"],
+  correct: "つまが あきれる",
+
+  fullAudio: {
+    daughter: "audio/sentences/inference38.wav",
+    me:       "audio/sentences/inference38.wav"
+  },
+
+  choiceAudio: {
+    options: [
+      ["audio/sentences/tsuma_ga_akireru.wav"],
+      ["audio/sentences/tsuma_ga_okoru.wav"],
+      ["audio/sentences/tsuma_ga_warau.wav"],
+      ["audio/sentences/tsuma_ga_chikazuku.wav"]
+    ]
+  },
+
+  meaningAudio: [
+    ["audio/sentences/tsuma_ga_akireru.wav"],
+    ["audio/sentences/tsuma_ga_okoru.wav"],
+    ["audio/sentences/tsuma_ga_warau.wav"],
+    ["audio/sentences/tsuma_ga_chikazuku.wav"]
+  ],
+
+  chunks: [
+    { romaji: "nojukuchuu dewa", hiragana: "のじゅくちゅうでは", english: "while sleeping outside" },
+    { romaji: "boku ga", hiragana: "ぼくが", english: "I" },
+    { romaji: "Nintendo Switch wo", hiragana: "Nintendo Switchを", english: "Nintendo Switch" },
+    { romaji: "mottekita to", hiragana: "もってきた と", english: "brought it" },
+    { romaji: "tsuma ga wakatta toki", hiragana: "つまが わかった とき", english: "when my wife realized" },
+    { romaji: "haaa tte nari", hiragana: "はぁぁ…って なり", english: "went 'haaa…'" },
+    { romaji: "tsugi ni dou naru no", hiragana: "つぎに どうなるの", english: "what happens next" }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
