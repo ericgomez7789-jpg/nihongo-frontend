@@ -27285,6 +27285,73 @@ const level6 = [
 
 
 
+{
+  id: "l6-37",
+  meaning: "While sleeping outside, when a bee got into my drink and I swatted it away, it came back and stung me — I went 'itatt…' — what happens next?",
+  level: 6,
+
+  options: ["ハチが にげる", "ぼくが さけぶ", "ハチが もっと くる", "ハチが とまる"],
+  optionsRomaji: ["hachi_ga_nigeru", "boku_ga_sakebu", "hachi_ga_motto_kuru", "hachi_ga_tomaru"],
+  optionsEN: ["the bee flees", "I shout", "more bees come", "the bee stops moving"],
+  correct: "ぼくが さけぶ",
+
+  fullAudio: {
+    daughter: "audio/sentences/inference37.wav",
+    me:       "audio/sentences/inference37.wav"
+  },
+
+  choiceAudio: {
+    options: [
+      ["audio/sentences/hachi_ga_nigeru.wav"],
+      ["audio/sentences/boku_ga_sakebu.wav"],
+      ["audio/sentences/hachi_ga_motto_kuru.wav"],
+      ["audio/sentences/hachi_ga_tomaru.wav"]
+    ]
+  },
+
+  meaningAudio: [
+    ["audio/sentences/hachi_ga_nigeru.wav"],
+    ["audio/sentences/boku_ga_sakebu.wav"],
+    ["audio/sentences/hachi_ga_motto_kuru.wav"],
+    ["audio/sentences/hachi_ga_tomaru.wav"]
+  ],
+
+  chunks: [
+    { romaji: "nojukuchuu dewa", hiragana: "のじゅくちゅうでは", english: "while sleeping outside" },
+    { romaji: "hachi ga", hiragana: "ハチが", english: "a bee" },
+    { romaji: "boku no nomimono ni haitte ite", hiragana: "ぼくの のみものに はいっていて", english: "was inside my drink" },
+    { romaji: "sokode boku ga hachi wo tataki oiharau to", hiragana: "そこで ぼくが ハチを たたき おいはらう と", english: "when I swatted the bee away" },
+    { romaji: "hachi ga modotte boku wo kande", hiragana: "ハチが もどって ぼくを かんで", english: "the bee came back and stung me" },
+    { romaji: "itatte nari", hiragana: "いたっ…って なり", english: "went 'itatt…'" },
+    { romaji: "tsugi ni dou naru no", hiragana: "つぎに どうなるの", english: "what happens next" }
+  ]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
