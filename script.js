@@ -3772,6 +3772,104 @@ const sentences = [
 
 
 
+
+
+
+
+{
+  id: "l1-93",
+  meaning: "Be careful.",
+  level: 1,
+  chunks: [
+    {
+      romaji: "ki",
+      hiragana: "き",
+      meaning: "attention / care / spirit",
+      audio: {
+        daughter: "audio/sentences/ki.wav",
+        me: "audio/sentences/ki.wav"
+      }
+    },
+    {
+      romaji: "wo",
+      hiragana: "を",
+      meaning: "object marker",
+      audio: {
+        daughter: "audio/sentences/wo.wav",
+        me: "audio/sentences/wo.wav"
+      }
+    },
+    {
+      romaji: "tsukeru",
+      hiragana: "つける",
+      meaning: "to apply / to put on / to pay (attention)",
+      audio: {
+        daughter: "audio/sentences/tsukeru.wav",
+        me: "audio/sentences/tsukeru.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l1-94",
+  meaning: "Turn on the light / light a fire.",
+  level: 1,
+  chunks: [
+    {
+      romaji: "hi",
+      hiragana: "ひ",
+      meaning: "light / fire",
+      audio: {
+        daughter: "audio/sentences/hi.wav",
+        me: "audio/sentences/hi.wav"
+      }
+    },
+    {
+      romaji: "wo",
+      hiragana: "を",
+      meaning: "object marker",
+      audio: {
+        daughter: "audio/sentences/wo.wav",
+        me: "audio/sentences/wo.wav"
+      }
+    },
+    {
+      romaji: "tsukeru",
+      hiragana: "つける",
+      meaning: "to turn on / to ignite",
+      audio: {
+        daughter: "audio/sentences/tsukeru.wav",
+        me: "audio/sentences/tsukeru.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 // ⭐ ADD THIS PATCH RIGHT HERE
