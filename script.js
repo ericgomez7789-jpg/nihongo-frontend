@@ -14921,6 +14921,23 @@ const level3Sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
  id: "l3-27",
   meaning: "What kind of music do you like?",
@@ -16861,9 +16878,19 @@ id: "l3-42",
 
 
 
+
+
+
+
+
+
+
+
+
+
 {
   id: "l3-51",
-  meaning: "When the dog looked at me, it got excited and started barking. So I said 'be quiet.'",
+  meaning: "When the dog looked at me, it got excited and started barking, so I said 'be quiet.'",
   level: 3,
 
   options: ["しかし", "そこで", "それで", "けれど"],
@@ -16875,7 +16902,6 @@ id: "l3-42",
     "but / although"
   ],
 
-  // ⭐ correct: それで (event → reaction)
   correct: "それで",
 
   choiceAudio: {
@@ -16949,24 +16975,15 @@ id: "l3-42",
       meaning: "started barking",
       audio: { daughter: "audio/sentences/hoedashita.wav", me: "audio/sentences/hoedashita.wav" }
     },
+
+    // ⭐ conjunction (appears ONLY on Screen 2)
     {
       hiragana: "それで",
       romaji: "sorede",
       meaning: "so / as a result",
       audio: { daughter: "audio/sentences/sorede.wav", me: "audio/sentences/sorede.wav" }
     },
-    {
-      hiragana: "ぼく",
-      romaji: "boku",
-      meaning: "I",
-      audio: { daughter: "audio/sentences/boku.wav", me: "audio/sentences/boku.wav" }
-    },
-    {
-      hiragana: "は",
-      romaji: "wa",
-      meaning: "topic marker",
-      audio: { daughter: "audio/sentences/wa.wav", me: "audio/sentences/wa.wav" }
-    },
+
     {
       hiragana: "だまれ",
       romaji: "damare",
@@ -16984,17 +17001,9 @@ id: "l3-42",
       romaji: "itta",
       meaning: "said",
       audio: { daughter: "audio/sentences/itta.wav", me: "audio/sentences/itta.wav" }
-    },
-    {
-      hiragana: "。",
-      romaji: "",
-      meaning: "period",
-      audio: { daughter: "audio/sentences/period.wav", me: "audio/sentences/period.wav" }
     }
   ]
 },
-
-
 
 
 
@@ -17062,7 +17071,7 @@ id: "l3-42",
       hiragana: "まなぶ",
       romaji: "manabu",
       meaning: "to study / to learn",
-      audio: { daughter: "audio/sentences/manabu.wav", me: "audio/sentences/manabu.wav" }
+      audio: { daughter: "audio/sentences/.wav", me: "audio/sentences/manabu.wav" }
     },
     {
       hiragana: "の",
