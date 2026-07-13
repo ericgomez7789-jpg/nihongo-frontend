@@ -26034,8 +26034,8 @@ const level6 = [
   correct: "ほほえむ",
 
   fullAudio: {
-    daughter: "audio/sentences/inference16b.wav",
-    me:       "audio/sentences/inference16b.wav"
+    daughter: "audio/sentences/inference16.wav",
+    me:       "audio/sentences/inference16.wav"
   },
 
   choiceAudio: {
@@ -26155,8 +26155,8 @@ const level6 = [
   correct: "いいなおす",
 
   fullAudio: {
-    daughter: "audio/sentences/inference18c.wav",
-    me:       "audio/sentences/inference18c.wav"
+    daughter: "audio/sentences/inference18.wav",
+    me:       "audio/sentences/inference18.wav"
   },
 
   choiceAudio: {
