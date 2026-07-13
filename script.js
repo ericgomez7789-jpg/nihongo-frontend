@@ -3610,7 +3610,154 @@ const sentences = [
       }
     }
   ]
-}
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l1-90",
+  meaning: "Go outside.",
+  level: 1,
+  chunks: [
+    {
+      romaji: "soto",
+      hiragana: "そと",
+      meaning: "outside",
+      audio: {
+        daughter: "audio/sentences/soto.wav",
+        me: "audio/sentences/soto.wav"
+      }
+    },
+    {
+      romaji: "ni",
+      hiragana: "に",
+      meaning: "direction marker",
+      audio: {
+        daughter: "audio/sentences/ni.wav",
+        me: "audio/sentences/ni.wav"
+      }
+    },
+    {
+      romaji: "deru",
+      hiragana: "でる",
+      meaning: "to go out / to step outside",
+      audio: {
+        daughter: "audio/sentences/deru.wav",
+        me: "audio/sentences/deru.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l1-91",
+  meaning: "Go inside the house.",
+  level: 1,
+  chunks: [
+    {
+      romaji: "ie",
+      hiragana: "いえ",
+      meaning: "house",
+      audio: {
+        daughter: "audio/sentences/ie.wav",
+        me: "audio/sentences/ie.wav"
+      }
+    },
+    {
+      romaji: "ni",
+      hiragana: "に",
+      meaning: "direction marker",
+      audio: {
+        daughter: "audio/sentences/ni.wav",
+        me: "audio/sentences/ni.wav"
+      }
+    },
+    {
+      romaji: "hairu",
+      hiragana: "はいる",
+      meaning: "to enter / to go inside",
+      audio: {
+        daughter: "audio/sentences/hairu.wav",
+        me: "audio/sentences/hairu.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l1-92",
+  meaning: "Put on clothes.",
+  level: 1,
+  chunks: [
+    {
+      romaji: "fuku",
+      hiragana: "ふく",
+      meaning: "clothes",
+      audio: {
+        daughter: "audio/sentences/fuku.wav",
+        me: "audio/sentences/fuku.wav"
+      }
+    },
+    {
+      romaji: "wo",
+      hiragana: "を",
+      meaning: "object marker",
+      audio: {
+        daughter: "audio/sentences/wo.wav",
+        me: "audio/sentences/wo.wav"
+      }
+    },
+    {
+      romaji: "kiru",
+      hiragana: "きる",
+      meaning: "to put on (clothes on upper body)",
+      audio: {
+        daughter: "audio/sentences/kiru.wav",
+        me: "audio/sentences/kiru.wav"
+      }
+    }
+  ]
+},
+
 
 
 
