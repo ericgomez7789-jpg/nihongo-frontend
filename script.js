@@ -26989,6 +26989,234 @@ const level6 = [
 
 
 
+{
+  id: "l6-32",
+  meaning: "While sleeping outside, the person next to me stayed up late and left their music playing, and I went 'haa…' — what happens next?",
+  level: 6,
+
+  options: ["ねむれない", "けいさつがくる", "あさまでしずかになる", "でんきをけす"],
+  optionsRomaji: ["nemurenai", "keisatsu_ga_kuru", "asa_made_shizuka_ni_naru", "denki_wo_kesu"],
+  optionsEN: ["can't sleep", "the police come", "it becomes quiet until morning", "they turn off the lights"],
+  correct: "ねむれない",
+
+  fullAudio: {
+    daughter: "audio/sentences/inference32.wav",
+    me:       "audio/sentences/inference32.wav"
+  },
+
+  choiceAudio: {
+    options: [
+      ["audio/sentences/nemurenai.wav"],
+      ["audio/sentences/keisatsu_ga_kuru.wav"],
+      ["audio/sentences/asa_made_shizuka.wav"],
+      ["audio/sentences/denki_wo_kesu.wav"]
+    ]
+  },
+
+  meaningAudio: [
+    ["audio/sentences/nemurenai.wav"],
+    ["audio/sentences/keisatsu_ga_kuru.wav"],
+    ["audio/sentences/asa_made_shizuka.wav"],
+    ["audio/sentences/denki_wo_kesu.wav"]
+  ],
+
+  chunks: [
+    { romaji: "nojukuchuu dewa", hiragana: "のじゅくちゅうでは", english: "while sleeping outside" },
+    { romaji: "tonari no hito ga", hiragana: "となりの ひとが", english: "the person next to me" },
+    { romaji: "yofukashi shite", hiragana: "よふかしして", english: "stayed up late" },
+    { romaji: "ongaku wo", hiragana: "おんがくを", english: "the music" },
+    { romaji: "tsukeppanashi ni shite oite", hiragana: "つけっぱなしに して おいて", english: "left it playing" },
+    { romaji: "boku wa", hiragana: "ぼくは", english: "I" },
+    { romaji: "haa tte nari", hiragana: "はぁ…って なり", english: "went 'haa…'" },
+    { romaji: "tsugi ni dou naru no", hiragana: "つぎに どうなるの", english: "what happens next" }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l6-33",
+  meaning: "While sleeping outside, many people around me kept their campfires burning, and I went 'haa…' — what happens next?",
+  level: 6,
+
+  options: ["ねむれない", "けむりがくる", "しずかになる", "けっきょく ひが きえる"],
+  optionsRomaji: ["nemurenai", "kemuri_ga_kuru", "shizuka_ni_naru", "kekkyoku_hi_ga_kieru"],
+  optionsEN: ["can't sleep", "smoke comes toward me", "it becomes quiet", "eventually the fire dies out"],
+  correct: "けっきょく ひが きえる",
+
+  fullAudio: {
+    daughter: "audio/sentences/inference33.wav",
+    me:       "audio/sentences/inference33.wav"
+  },
+
+  choiceAudio: {
+    options: [
+      ["audio/sentences/nemurenai.wav"],
+      ["audio/sentences/kemuri_ga_kuru.wav"],
+      ["audio/sentences/shizuka_ni_naru.wav"],
+      ["audio/sentences/kekkyoku_hi_ga_kieru.wav"]
+    ]
+  },
+
+  meaningAudio: [
+    ["audio/sentences/nemurenai.wav"],
+    ["audio/sentences/kemuri_ga_kuru.wav"],
+    ["audio/sentences/shizuka_ni_naru.wav"],
+    ["audio/sentences/kekkyoku_hi_ga_kieru.wav"]
+  ],
+
+  chunks: [
+    { romaji: "nojukuchuu dewa", hiragana: "のじゅくちゅうでは", english: "while sleeping outside" },
+    { romaji: "mawari no hito ga ookute", hiragana: "まわりの ひとが おおくて", english: "there are many people around me" },
+    { romaji: "takibi wo", hiragana: "たきびを", english: "their campfires" },
+    { romaji: "tsukeppanashi ni shite oite", hiragana: "つけっぱなしに して おいて", english: "kept them burning" },
+    { romaji: "boku wa", hiragana: "ぼくは", english: "I" },
+    { romaji: "haa tte nari", hiragana: "はぁ…って なり", english: "went 'haa…'" },
+    { romaji: "tsugi ni dou naru no", hiragana: "つぎに どうなるの", english: "what happens next" }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l6-34",
+  meaning: "While sleeping outside, I lit the impressive flame I had brought beforehand, and everyone went 'haaaaa…' with widened eyes and held their breath — what happens next?",
+  level: 6,
+
+  options: ["むしが ちかづく", "むしが にげる", "むしが とまる", "むしが みえなくなる"],
+  optionsRomaji: ["mushi_ga_chikazuku", "mushi_ga_nigeru", "mushi_ga_tomaru", "mushi_ga_mienakunaru"],
+  optionsEN: ["the bugs approach", "the bugs flee", "the bugs stop moving", "the bugs disappear"],
+  correct: "むしが ちかづく",
+
+  fullAudio: {
+    daughter: "audio/sentences/inference34.wav",
+    me:       "audio/sentences/inference34.wav"
+  },
+
+  choiceAudio: {
+    options: [
+      ["audio/sentences/mushi_ga_chikazuku.wav"],
+      ["audio/sentences/mushi_ga_nigeru.wav"],
+      ["audio/sentences/mushi_ga_tomaru.wav"],
+      ["audio/sentences/mushi_ga_mienakunaru.wav"]
+    ]
+  },
+
+  meaningAudio: [
+    ["audio/sentences/mushi_ga_chikazuku.wav"],
+    ["audio/sentences/mushi_ga_nigeru.wav"],
+    ["audio/sentences/mushi_ga_tomaru.wav"],
+    ["audio/sentences/mushi_ga_mienakunaru.wav"]
+  ],
+
+  chunks: [
+    { romaji: "nojukuchuu dewa", hiragana: "のじゅくちゅうでは", english: "while sleeping outside" },
+    { romaji: "watashi ga arakajime mottekite oita", hiragana: "わたしが あらかじめ もってきて おいた", english: "I had brought beforehand" },
+    { romaji: "rippa na tomoshibi wo", hiragana: "りっぱな ともしびを", english: "an impressive flame" },
+    { romaji: "tsukete", hiragana: "つけて", english: "lit it" },
+    { romaji: "minna wa", hiragana: "みんなは", english: "everyone" },
+    { romaji: "haaaaa tte", hiragana: "はぁぁぁ…って", english: "went 'haaaaa…'" },
+    { romaji: "me ga mihatta mama", hiragana: "めが みはった まま", english: "with widened eyes" },
+    { romaji: "iki wo nonde", hiragana: "いきを のんで", english: "held their breath" },
+    { romaji: "mushi wa tsugi ni dou naru no", hiragana: "むしは つぎに どうなるの", english: "what happens next" }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l6-35",
+  meaning: "While sleeping outside, when we unpacked our luggage and realized we forgot to bring insect repellent, we went 'aaaaaa…' — what happens next?",
+  level: 6,
+
+  options: ["むしが ちかづく", "むしが にげる", "むしが とまる", "むしが みえなくなる"],
+  optionsRomaji: ["mushi_ga_chikazuku", "mushi_ga_nigeru", "mushi_ga_tomaru", "mushi_ga_mienakunaru"],
+  optionsEN: ["the bugs approach", "the bugs flee", "the bugs stop moving", "the bugs disappear"],
+  correct: "むしが ちかづく",
+
+  fullAudio: {
+    daughter: "audio/sentences/inference35.wav",
+    me:       "audio/sentences/inference35.wav"
+  },
+
+  choiceAudio: {
+    options: [
+      ["audio/sentences/mushi_ga_chikazuku.wav"],
+      ["audio/sentences/mushi_ga_nigeru.wav"],
+      ["audio/sentences/mushi_ga_tomaru.wav"],
+      ["audio/sentences/mushi_ga_mienakunaru.wav"]
+    ]
+  },
+
+  meaningAudio: [
+    ["audio/sentences/mushi_ga_chikazuku.wav"],
+    ["audio/sentences/mushi_ga_nigeru.wav"],
+    ["audio/sentences/mushi_ga_tomaru.wav"],
+    ["audio/sentences/mushi_ga_mienakunaru.wav"]
+  ],
+
+  chunks: [
+    { romaji: "nojukuchuu dewa", hiragana: "のじゅくちゅうでは", english: "while sleeping outside" },
+    { romaji: "wareware ga", hiragana: "われわれが", english: "we" },
+    { romaji: "nimotsu wo hodoku toki", hiragana: "荷物を ほどく とき", english: "when we unpacked our luggage" },
+    { romaji: "mushiyoke wo mottekuru no wo wasureta to wakatte", hiragana: "虫よけを もってくる のを わすれた と わかって", english: "realized we forgot insect repellent" },
+    { romaji: "aaaaaa tte nari", hiragana: "あぁぁぁ…って なり", english: "went 'aaaaaa…'" },
+    { romaji: "tsugi ni dou naru no", hiragana: "つぎに どうなるの", english: "what happens next" }
+  ]
+},
+
+
+
+
+
 
 
 
