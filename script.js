@@ -27230,6 +27230,64 @@ const level6 = [
 
 
 
+{
+  id: "l6-36",
+  meaning: "While sleeping outside, when I ran the car into dirt and sand and it got stuck, I went 'haaa…', then I engaged four-wheel drive and felt relieved — what happens next?",
+  level: 6,
+
+  options: ["くるまが まえに すすむ", "くるまが また はまる", "すなと つちが とれる", "タイヤが すべりだす"],
+  optionsRomaji: ["kuruma_ga_mae_ni_susumu", "kuruma_ga_mata_hamaru", "suna_to_tsuchi_ga_toreru", "taiya_ga_suberidasu"],
+  optionsEN: ["the car moves forward", "the car gets stuck again", "the sand and dirt fall off", "the tires start slipping"],
+  correct: "くるまが まえに すすむ",
+
+  fullAudio: {
+    daughter: "audio/sentences/inference36.wav",
+    me:       "audio/sentences/inference36.wav"
+  },
+
+  choiceAudio: {
+    options: [
+      ["audio/sentences/kuruma_ga_mae_ni_susumu.wav"],
+      ["audio/sentences/kuruma_ga_mata_hamaru.wav"],
+      ["audio/sentences/suna_to_tsuchi_ga_toreru.wav"],
+      ["audio/sentences/taiya_ga_suberidasu.wav"]
+    ]
+  },
+
+  meaningAudio: [
+    ["audio/sentences/kuruma_ga_mae_ni_susumu.wav"],
+    ["audio/sentences/kuruma_ga_mata_hamaru.wav"],
+    ["audio/sentences/suna_to_tsuchi_ga_toreru.wav"],
+    ["audio/sentences/taiya_ga_suberidasu.wav"]
+  ],
+
+  chunks: [
+    { romaji: "nojukuchuu dewa", hiragana: "のじゅくちゅうでは", english: "while sleeping outside" },
+    { romaji: "tsuchi to suna ni", hiragana: "土と砂に", english: "into dirt and sand" },
+    { romaji: "kuruma wo hashiraseru to", hiragana: "くるまを はしらせる と", english: "when I ran the car" },
+    { romaji: "tsuchi to suna de umatte", hiragana: "土と砂で うまって", english: "it got buried in dirt and sand" },
+    { romaji: "haaaa tte nari", hiragana: "はぁぁ…って なり", english: "went 'haaa…'" },
+    { romaji: "yonrinkudou wo tsukete", hiragana: "四輪駆動を つけて", english: "engaged four-wheel drive" },
+    { romaji: "umaranaku natte hotto shimashita", hiragana: "うまらなく なって ほっと しました", english: "it got unstuck and I felt relieved" },
+    { romaji: "tsugi ni dou naru no", hiragana: "つぎに どうなるの", english: "what happens next" }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ];
