@@ -3870,6 +3870,24 @@ const sentences = [
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 // ⭐ ADD THIS PATCH RIGHT HERE
@@ -11673,29 +11691,27 @@ function createAndWireLevel2ReplayButton(currentAudioChunks) {
       L2.audio.cancelToken.cancel = false;
     }
 
-    // ⭐ Correct generation increment (Level‑2 scoped)
-    L2.audio.generation++;
+    // ⭐ FIX: Remove generation increment (already handled in screen2)
+    // L2.audio.generation++;
 
-    // ⭐ Unlock replay
-    L2._locked = false;
+    // ⭐ FIX: Remove unlock (causes MCQ desync)
+    // L2._locked = false;
 
-    // ⭐ Restart timer
-    if (L2.timerInterval) {
-      clearInterval(L2.timerInterval);
-    }
-
-    let timeLeft = 30;
-    const timerEl = document.getElementById("level2Timer");
-    if (timerEl) timerEl.textContent = timeLeft;
-
-    L2.timerInterval = setInterval(() => {
-      timeLeft--;
-      if (timerEl) timerEl.textContent = timeLeft;
-      if (timeLeft <= 0) {
-        clearInterval(L2.timerInterval);
-        L2.onComplete();
-      }
-    }, 1000);
+    // ⭐ FIX: Remove timer restart (causes double timers)
+    // if (L2.timerInterval) {
+    //   clearInterval(L2.timerInterval);
+    // }
+    // let timeLeft = 30;
+    // const timerEl = document.getElementById("level2Timer");
+    // if (timerEl) timerEl.textContent = timeLeft;
+    // L2.timerInterval = setInterval(() => {
+    //   timeLeft--;
+    //   if (timerEl) timerEl.textContent = timeLeft;
+    //   if (timeLeft <= 0) {
+    //     clearInterval(L2.timerInterval);
+    //     L2.onComplete();
+    //   }
+    // }, 1000);
 
     // ⭐ Replay using Level‑2 safe engine
     L2.playChunkSequence2(
@@ -11704,13 +11720,14 @@ function createAndWireLevel2ReplayButton(currentAudioChunks) {
         // ⭐ Prevent callback firing after navigation
         if (window.currentScreen !== "level2Screen2") return;
 
-        // ⭐ Prevent Level‑2 from restarting the round
-        L2._locked = true;
+        // ⭐ FIX: Do NOT lock here (screen2 handles lock state)
+        // L2._locked = true;
       },
       currentAudioChunks
     );
   };
 }
+
 
 
 
@@ -27640,8 +27657,6 @@ const level6 = [
     { romaji: "tsugi ni dou naru no", hiragana: "つぎに どうなるの", english: "what happens next" }
   ]
 },
-
-
 
 
 
