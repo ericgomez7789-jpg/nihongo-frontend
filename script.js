@@ -36591,79 +36591,42 @@ function l12AnalyzeIntentClause(text) {
    ⭐ MULTI-SENTENCE INTENT ANALYZER (PUBLIC)
 ========================================================== */
 function l12AnalyzeIntent(rawText) {
-  // 1. Split BEFORE normalization
-  const rawClauses = l12SplitClauses(rawText);
+  const clauses = l12SplitClauses(rawText);
+  const results = [];
 
-  // 2. Normalize EACH clause individually
-  const clauses = rawClauses.map(c => l12Normalize(c));
+  for (const clause of clauses) {
+    const t = l12Normalize(clause);
 
-  // 3. Analyze each clause
-  const intents = clauses.map(c => ({
-    clause: c,
-    intent: l12AnalyzeIntentClause(c)
-  }));
+    let type = "free";
+    let nuance = null;
 
-  const intentPriority = {
-    greeting: 90,
-    request: 80,
-    ask_status: 70,
-    status_reply: 70,
-    ask_opinion: 65,
-    ask_plan: 60,
-    plan_reply: 55,
-    cant_help: 50,
-    conditional: 45,
-    social_humble: 40,
-    social_honorific: 40,
-    thanks: 35,
-    apology: 35,
-    tired: 30,
-    happy: 30,
-    sad: 30,
-    angry: 30,
-    ask_preference: 25,
-    yesno_question: 20,
-    food_drink: 15,
-    study: 15,
-    free: 0
-  };
+    if (/こんにちは|やあ|もしもし/.test(t)) type = "greeting";
+    else if (/してみて|はなして/.test(t)) type = "request";
+    else if (/げんき|元気/.test(t) && /か/.test(t)) type = "ask_status";
+    else if (/よかった/.test(t)) type = "status_reply";
+    else if (/どうおもう|どう思う|意見/.test(t)) type = "ask_opinion";
+    else if (/なにをする|何をする|予定/.test(t)) type = "ask_plan";
+    else if (/するつもり/.test(t)) type = "plan_reply";
 
-  // 4. Pick primary intent by score
-  let primary = intents.reduce((best, current) => {
-    const score = intentPriority[current.intent.type] || 0;
-    return score > best.score
-      ? { score, intent: current.intent }
-      : best;
-  }, { score: -1, intent: intents[0].intent }).intent;
+    // can't-help nuances
+    if (/ずにはいられない/.test(t)) { type = "cant_help"; nuance = "zuni"; }
+    else if (/てたまらない/.test(t)) { type = "cant_help"; nuance = "tamaranai"; }
+    else if (/てならない/.test(t)) { type = "cant_help"; nuance = "naranai"; }
+    else if (/ざるをえない/.test(t)) { type = "cant_help"; nuance = "zaru"; }
+    else if (/てしかたがない/.test(t)) { type = "cant_help"; nuance = "shikata"; }
 
-  // 5. Merge context
-  l12Context.lastIntent = primary.type;
-  l12Context.politeness = primary.politeness || l12Context.politeness;
-  l12Context.tense = primary.tense || l12Context.tense;
-  l12Context.voice = primary.voice || l12Context.voice;
-  l12Context.volition = primary.volition || l12Context.volition;
-
-  // 6. Topic + emotion extraction
-  let topic = l12Context.lastTopic;
-  let emotion = l12Context.emotion;
-
-  for (const { intent } of intents) {
-    if (intent.topic) topic = intent.topic;
-    if (["tired", "happy", "sad", "angry"].includes(intent.type)) {
-      emotion = intent.type;
-    }
+    results.push({
+      type,
+      nuance,
+      politeness: l12Context.politeness,
+      emotion: l12Context.emotion,
+      voice: l12Context.voice
+    });
   }
 
-  l12Context.lastTopic = topic || l12Context.lastTopic;
-  l12Context.emotion = emotion || l12Context.emotion;
-
-  // 7. Final return
-  return {
-    ...primary,
-    topic: topic || primary.topic || null,
-    emotion: emotion || null
-  };
+  return results;
 }
+
 
 
 
@@ -36673,174 +36636,188 @@ function l12AnalyzeIntent(rawText) {
 /* ==========================================================
    ⭐ REPLY GENERATOR (USES INTENT + CONTEXT)
 ========================================================== */
-function l12GenerateReply(normalized) {
-  const intent = l12AnalyzeIntent(normalized);
+function l12GenerateReply(rawText) {
+  const intents = l12AnalyzeIntent(rawText);
   const politeness = l12Context.politeness;
 
   const polite = (casual, politeForm) =>
     politeness === "polite" ? politeForm : casual;
 
-  switch (intent.type) {
+  const replies = [];
 
-    case "greeting":
-      return polite(
-        "こんにちは。きょうはどんなことはなしたい？",
-        "こんにちは。本日はどのようなことをおはなしされたいですか。"
-      );
+  for (const intent of intents) {
+    switch (intent.type) {
 
-    case "request":
-      return polite(
-        "うん、いいよ。じゃあじゆうにはなしてみるね。",
-        "はい、かしこまりました。それでは、じゆうにおはなししてみますね。"
-      );
+      case "greeting":
+        replies.push(polite(
+          "こんにちは。きょうはどんなことはなしたい？",
+          "こんにちは。本日はどのようなことをおはなしされたいですか。"
+        ));
+        break;
 
-    case "ask_status":
-      return polite(
-        "うん、げんきだよ。きみは？",
-        "はい、おかげさまでげんきです。あなたはいかがですか。"
-      );
+      case "request":
+        replies.push(polite(
+          "うん、いいよ。じゃあじゆうにはなしてみるね。",
+          "はい、かしこまりました。それでは、じゆうにおはなししてみますね。"
+        ));
+        break;
 
-    case "status_reply":
-      return polite(
-        "そっか、よかった。きょうはどんなことをはなしたい？",
-        "それはよかったです。本日はどのようなおはなしをされますか。"
-      );
+      case "ask_status":
+        replies.push(polite(
+          "うん、げんきだよ。きみは？",
+          "はい、おかげさまでげんきです。あなたはいかがですか。"
+        ));
+        break;
 
-    case "ask_opinion":
-      return polite(
-        "そうだね…。ぼくはけっこういいとおもうよ。きみは？",
-        "そうですね…。わたしはそのように感じています。あなたはどのようにお考えになりますか。"
-      );
+      case "status_reply":
+        replies.push(polite(
+          "そっか、よかった。きょうはどんなことをはなしたい？",
+          "それはよかったです。本日はどのようなおはなしをされますか。"
+        ));
+        break;
 
-    /* ------------------------------
-       ASK PLAN
-    ------------------------------ */
-    case "ask_plan":
-      return polite(
-        "きょう？とくにきまってないよ。きみはなにをするの？",
-        "本日ですか？とくに予定はございません。あなたはどのようにおすごしになりますか。"
-      );
+      case "ask_opinion":
+        replies.push(polite(
+          "そうだね…。ぼくはけっこういいとおもうよ。きみは？",
+          "そうですね…。わたしはそのように感じています。あなたはどのようにお考えになりますか。"
+        ));
+        break;
 
-    /* ------------------------------
-       PLAN REPLY
-    ------------------------------ */
-    case "plan_reply":
-      return polite(
-        "そっか。あとでうんどうするつもりなんだね。いいね！",
-        "そうなんですね。のちほど運動されるご予定なのですね。すてきですね。"
-      );
+      case "ask_plan":
+        replies.push(polite(
+          "きょう？とくにきまってないよ。きみはなにをするの？",
+          "本日ですか？とくに予定はございません。あなたはどのようにおすごしになりますか。"
+        ));
+        break;
 
-    case "cant_help":
-      switch (intent.nuance) {
-        case "zuni": return "うん、そのきもちおさえられないよね。";
-        case "tamaranai": return "すごくつよいきもちなんだね。";
-        case "naranai": return "しぜんとそうかんじちゃうんだね。";
-        case "zaru": return "やらざるをえないじょうきょうなんだね。";
-        case "shikata": return "そうするしかなかったんだね。";
-      }
-      return "うん、きもちがとまらないかんじなんだね。";
+      case "plan_reply":
+        replies.push(polite(
+          "そっか。あとでうんどうするつもりなんだね。いいね！",
+          "そうなんですね。のちほど運動されるご予定なのですね。すてきですね。"
+        ));
+        break;
 
-    case "conditional":
-      return polite(
-        "なるほど、もしそうなったらそうするんだね。",
-        "なるほど、もしそのような状況になったらそうされるごよていなのですね。"
-      );
+      case "cant_help":
+        switch (intent.nuance) {
+          case "zuni": replies.push("うん、そのきもちおさえられないよね。"); break;
+          case "tamaranai": replies.push("すごくつよいきもちなんだね。"); break;
+          case "naranai": replies.push("しぜんとそうかんじちゃうんだね。"); break;
+          case "zaru": replies.push("やらざるをえないじょうきょうなんだね。"); break;
+          case "shikata": replies.push("そうするしかなかったんだね。"); break;
+          default:
+            replies.push("うん、きもちがとまらないかんじなんだね。");
+        }
+        break;
 
-    case "social_humble":
-      return "ていねいなことばづかいだね。なにかあらたまったようす？";
+      case "conditional":
+        replies.push(polite(
+          "なるほど、もしそうなったらそうするんだね。",
+          "なるほど、もしそのような状況になったらそうされるごよていなのですね。"
+        ));
+        break;
 
-    case "social_honorific":
-      return "けいごがつかわれているね。だれかにたいしてのはなし？";
+      case "social_humble":
+        replies.push("ていねいなことばづかいだね。なにかあらたまったようす？");
+        break;
 
-    case "thanks":
-      return polite(
-        "どういたしまして。そういってもらえてうれしいよ。",
-        "どういたしまして。そのように言っていただけてうれしいです。"
-      );
+      case "social_honorific":
+        replies.push("けいごがつかわれているね。だれかにたいしてのはなし？");
+        break;
 
-    case "apology":
-      return polite(
-        "だいじょうぶだよ。なにがあったの？",
-        "だいじょうぶですよ。なにがあったのか、おはなししていただけますか。"
-      );
+      case "thanks":
+        replies.push(polite(
+          "どういたしまして。そういってもらえてうれしいよ。",
+          "どういたしまして。そのように言っていただけてうれしいです。"
+        ));
+        break;
 
-    case "tired":
-      return polite(
-        "つかれたんだね。すこしやすみながらはなそうか。",
-        "おつかれなんですね。すこしやすみながらおはなししましょうか。"
-      );
+      case "apology":
+        replies.push(polite(
+          "だいじょうぶだよ。なにがあったの？",
+          "だいじょうぶですよ。なにがあったのか、おはなししていただけますか。"
+        ));
+        break;
 
-    case "happy":
-      return polite(
-        "いいね！そのきもち、もっときかせて。",
-        "それはすてきですね。そのお気持ちを、もうすこしくわしくおきかせください。"
-      );
+      case "tired":
+        replies.push(polite(
+          "つかれたんだね。すこしやすみながらはなそうか。",
+          "おつかれなんですね。すこしやすみながらおはなししましょうか。"
+        ));
+        break;
 
-    case "sad":
-      return polite(
-        "そっか…。つらかったね。よかったら、もうすこしはなしてみて。",
-        "そうでしたか…。つらかったですね。よろしければ、もうすこしくわしくおはなしください。"
-      );
+      case "happy":
+        replies.push(polite(
+          "いいね！そのきもち、もっときかせて。",
+          "それはすてきですね。そのお気持ちを、もうすこしくわしくおきかせください。"
+        ));
+        break;
 
-    case "angry":
-      return polite(
-        "おこってるみたいだね。なにがあったのか、ゆっくりきかせて。",
-        "おこっていらっしゃるようですね。なにがあったのか、ゆっくりおはなししていただけますか。"
-      );
+      case "sad":
+        replies.push(polite(
+          "そっか…。つらかったね。よかったら、もうすこしはなしてみて。",
+          "そうでしたか…。つらかったですね。よろしければ、もうすこしくわしくおはなしください。"
+        ));
+        break;
 
-    case "ask_preference":
-      return polite(
-        "ぼくはコーヒーがすきかな。きみは？",
-        "わたしはコーヒーがすきですね。あなたはなにがおすきですか。"
-      );
+      case "angry":
+        replies.push(polite(
+          "おこってるみたいだね。なにがあったのか、ゆっくりきかせて。",
+          "おこっていらっしゃるようですね。なにがあったのか、ゆっくりおはなししていただけますか。"
+        ));
+        break;
 
-    case "yesno_question":
-      return polite(
-        "うーん、どうだろうね。きみはどうおもう？",
-        "そうですね…。あなたはどうおおもいになりますか。"
-      );
+      case "ask_preference":
+        replies.push(polite(
+          "ぼくはコーヒーがすきかな。きみは？",
+          "わたしはコーヒーがすきですね。あなたはなにがおすきですか。"
+        ));
+        break;
 
-    case "food_drink":
-      return polite(
-        "たべもののはなし、いいね。きみのすきなものはなに？",
-        "たべもののはなしはたのしいですね。あなたのおすきなものはなんですか。"
-      );
+      case "yesno_question":
+        replies.push(polite(
+          "うーん、どうだろうね。きみはどうおもう？",
+          "そうですね…。あなたはどうおおもいになりますか。"
+        ));
+        break;
 
-    case "study":
-      return polite(
-        "にほんごのべんきょう、えらいね。いまどんなことをしてるの？",
-        "にほんごのべんきょうをされているんですね。いまはどのようなことをしていらっしゃいますか。"
-      );
+      case "food_drink":
+        replies.push(polite(
+          "たべもののはなし、いいね。きみのすきなものはなに？",
+          "たべもののはなしはたのしいですね。あなたのおすきなものはなんですか。"
+        ));
+        break;
 
-    case "voice":
-      if (intent.voice === "causative") return "だれかに〜させるっていうはなしなんだね。";
-      if (intent.voice === "passive") return "〜されるほうのきもちなんだね。";
-      if (intent.voice === "causative_passive") return "むりやりやらされてるかんじなのかな。";
-      return "そのこうどうのうらに、いろんなきもちがありそうだね。";
+      case "study":
+        replies.push(polite(
+          "にほんごのべんきょう、えらいね。いまどんなことをしてるの？",
+          "にほんごのべんきょうをされているんですね。いまはどのようなことをしていらっしゃいますか。"
+        ));
+        break;
 
-    /* ------------------------------
-       FALLBACK
-    ------------------------------ */
-    case "free":
-    default:
-      if (l12Context.emotion === "sad") {
-        return polite(
-          "さっきかなしいっていってたけど、いまはどう？",
-          "さきほどかなしいとおっしゃっていましたが、いまはどんなお気持ちですか。"
-        );
-      }
-      if (l12Context.emotion === "tired") {
-        return polite(
-          "つかれてるみたいだけど、むりしないでね。",
-          "おつかれのようですので、どうかむりはなさらないでくださいね。"
-        );
-      }
-      return polite(
-        "なるほどね。つづきをきかせて。",
-        "なるほど、そうなのですね。よろしければ、つづきもおきかせください。"
-      );
+      case "voice":
+        if (intent.voice === "causative") replies.push("だれかに〜させるっていうはなしなんだね。");
+        else if (intent.voice === "passive") replies.push("〜されるほうのきもちなんだね。");
+        else if (intent.voice === "causative_passive") replies.push("むりやりやらされてるかんじなのかな。");
+        else replies.push("そのこうどうのうらに、いろんなきもちがありそうだね。");
+        break;
+
+      case "free":
+      default:
+        replies.push(polite(
+          "なるほどね。つづきをきかせて。",
+          "なるほど、そうなのですね。よろしければ、つづきもおきかせください。"
+        ));
+        break;
+    }
   }
+
+  return replies.join("\n");
 }
+
+
+
+
+
 
 
 /* ----------------------------------------------------------
@@ -36853,7 +36830,7 @@ function handleL12UserReply() {
   const raw = inputEl.value.trim();
   if (!raw) return;
 
-  // Show user bubble with RAW text (not normalized)
+  // Show user bubble with RAW text
   l12AppendUserMessage(raw);
 
   // Clear input
@@ -36865,6 +36842,7 @@ function handleL12UserReply() {
   // Show system bubble
   l12AppendSystemMessage(reply);
 }
+
 
 
 
@@ -37754,66 +37732,80 @@ if (!level11Btn) {
 
 
 
-  // ---------------------------------------------------------
-  // LEVEL 12 (GATED, ISOLATED, CLEAN)
-  // ---------------------------------------------------------
-  const level12Btn = document.getElementById("level12Btn");
 
-  if (!level12Btn) {
-    console.error("Level 12 button not found in DOM");
-  } else {
-    level12Btn.addEventListener("click", async () => {
-      console.log("[Level 12] Gated handler fired");
 
-      const user = window.currentUser;
-      if (!user) {
-        alert("You must be logged in to access Level 12.");
-        window.location.href = "blog-podcast.html";
-        return;
-      }
 
-      // Instant unlock if success.html already set the flag
-      if (localStorage.getItem("premiumUnlock") === "true") {
-        console.log("premiumUnlock flag detected — Level 12 unlocked.");
-        document.querySelectorAll(".screen").forEach(s => s.classList.add("hidden"));
-        document.getElementById("level12Screen")?.classList.remove("hidden");
-        startLevel12();
-        return;
-      }
 
-      // Otherwise check real membership in Supabase
-      const { data, error } = await sb
-        .from("profiles")
-        .select("membership_status, membership_plan")
-        .eq("email", user.email)
-        .maybeSingle();
 
-      console.log("Membership result:", { data, error });
 
-      if (error) {
-        console.error("Membership query error:", error);
-        alert("Membership check failed. Please try again.");
-        return;
-      }
 
-      const status = data?.membership_status;
-      const plan = data?.membership_plan;
-      const allowed = ["premium-monthly", "premium-yearly", "lifetime"];
 
-      if (status === "active" && allowed.includes(plan)) {
-        console.log("User already has premium — unlocking Level 12.");
 
-        localStorage.setItem("premiumUnlock", "true");
+// ---------------------------------------------------------
+// LEVEL 12 (GATED, ISOLATED, CLEAN)
+// ---------------------------------------------------------
+const level12Btn = document.getElementById("level12Btn");
 
-        document.querySelectorAll(".screen").forEach(s => s.classList.add("hidden"));
-        document.getElementById("level12Screen")?.classList.remove("hidden");
-        startLevel12();
-        return;
-      }
+if (!level12Btn) {
+  console.error("Level 12 button not found in DOM");
+} else {
+  level12Btn.addEventListener("click", async () => {
+    console.log("[Level 12] Gated handler fired");
 
-      alert("Level 12 is locked. Premium required.");
-      window.location.href = "membership.html";
-    });
-  }
+    const user = window.currentUser;
+    if (!user) {
+      alert("You must be logged in to access Level 12.");
+      window.location.href = "blog-podcast.html";
+      return;
+    }
 
+    // ⭐ FAST-PATH: localStorage unlock
+    if (localStorage.getItem("premiumUnlock") === "true") {
+      console.log("premiumUnlock flag detected — Level 12 unlocked.");
+
+      startLevel12(); // ⭐ Activate Level 12 FIRST
+
+      document.querySelectorAll(".screen").forEach(s => s.classList.add("hidden"));
+      document.getElementById("level12Screen")?.classList.remove("hidden");
+
+      return;
+    }
+
+    // ⭐ REAL MEMBERSHIP CHECK
+    const { data, error } = await sb
+      .from("profiles")
+      .select("membership_status, membership_plan")
+      .eq("email", user.email)
+      .maybeSingle();
+
+    console.log("Membership result:", { data, error });
+
+    if (error) {
+      console.error("Membership query error:", error);
+      alert("Membership check failed. Please try again.");
+      return;
+    }
+
+    const status = data?.membership_status;
+    const plan = data?.membership_plan;
+    const allowed = ["premium-monthly", "premium-yearly", "lifetime"];
+
+    // ⭐ Supabase premium unlock
+    if (status === "active" && allowed.includes(plan)) {
+      console.log("User already has premium — unlocking Level 12.");
+
+      localStorage.setItem("premiumUnlock", "true");
+
+      startLevel12(); // ⭐ Activate Level 12 FIRST
+
+      document.querySelectorAll(".screen").forEach(s => s.classList.add("hidden"));
+      document.getElementById("level12Screen")?.classList.remove("hidden");
+
+      return;
+    }
+
+    alert("Level 12 is locked. Premium required.");
+    window.location.href = "membership.html";
+  });
+}
 });
