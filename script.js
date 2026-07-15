@@ -36480,14 +36480,18 @@ const l12Context = {
 /* ==========================================================
    ⭐ HELPERS — CLAUSE SPLITTING & MERGE
 ========================================================== */
-function l12SplitClauses(text) {
-  // very simple: split on 。！？ and common connectors
-  const rawClauses = text
+function l12SplitClauses(rawText) {
+  if (!rawText) return [];
+
+  // Split BEFORE normalization
+  const clauses = rawText
     .split(/。|！|!|？|\?|それから|そして|あとで|それで/g)
     .map(c => c.trim())
     .filter(c => c.length > 0);
-  return rawClauses.length > 0 ? rawClauses : [text];
+
+  return clauses.length > 0 ? clauses : [rawText];
 }
+
 
 
 
@@ -36495,264 +36499,174 @@ function l12SplitClauses(text) {
    ⭐ SINGLE-CLAUSE INTENT ANALYZER
    (Internal helper, no context merge yet)
 ========================================================== */
-function l12AnalyzeIntentClause(text) {
-  const has = (s) => text.includes(s);
-
-  /* ------------------------------
-     POLITENESS LEVEL
-  ------------------------------ */
-  let politeness = "neutral";
-  if (text.includes("です") || text.includes("ます")) {
-    politeness = "polite";
-  } else if (text.endsWith("だ") || text.endsWith("よ") || text.endsWith("ね")) {
-    politeness = "casual";
-  }
-
-  /* ------------------------------
-     TENSE / ASPECT
-  ------------------------------ */
-  let tense = "present";
-  if (has("ている")) tense = "progressive";
-  else if (has("つもり") || has("よてい") || has("予定") || has("だろう") || has("かもしれない"))
-    tense = "future";
-  else if (text.endsWith("た") || text.endsWith("だった"))
-    tense = "past";
-
-  /* ------------------------------
-     VOICE
-  ------------------------------ */
-  let voice = null;
-  if (has("させられ")) voice = "causative_passive";
-  else if (has("させる")) voice = "causative";
-  else if (has("られる") || has("れる")) voice = "passive";
-
-  /* ------------------------------
-     VOLITION
-  ------------------------------ */
-  let volition = false;
-  if (has("しよう") || has("いこう") || has("つもり") || has("たい")) {
-    volition = true;
-  }
-
-  /* ------------------------------
-     GREETING
-  ------------------------------ */
-  if (has("こんにちは") || has("こんいちわ") || has("おはよう") || has("こんばんは")) {
-    return { type: "greeting", politeness, tense, voice, volition };
-  }
-
-  /* ------------------------------
-     REQUEST
-  ------------------------------ */
-  if (
-    text.endsWith("て") ||
-    text.endsWith("てね") ||
-    has("てみて") ||
-    has("てください") ||
-    has("てほしい")
-  ) {
-    return { type: "request", politeness, tense, voice, volition };
-  }
-
-  /* ------------------------------
-     STATUS QUESTION
-  ------------------------------ */
-  if (
-    (has("どう") && text.endsWith("か")) ||
-    has("ちょうし") ||
-    has("さいきん") ||
-    (has("きょう") && has("どう")) ||
-    has("いちにち")
-  ) {
-    return { type: "ask_status", politeness, tense, voice, volition };
-  }
-
-  /* ------------------------------
-     STATUS REPLY
-  ------------------------------ */
-  if (
-    has("おかげさまで") ||
-    (has("げんき") && has("です")) ||
-    has("まあまあ") ||
-    has("ぼちぼち") ||
-    has("だいじょうぶ")
-  ) {
-    return { type: "status_reply", politeness, tense, voice, volition };
-  }
-
-  /* ------------------------------
-     ASK OPINION
-  ------------------------------ */
-  if (
-    has("どうおも") ||
-    has("どう思") ||
-    has("どうおもいになります") ||
-    has("どう考")
-  ) {
-    return { type: "ask_opinion", politeness, tense, voice, volition };
-  }
-
-  /* ------------------------------
-     ASK PLAN / SCHEDULE
-  ------------------------------ */
-  if (
-    (has("きょう") || has("あした") || has("よてい") || has("予定") || has("こんしゅう")) &&
-    (has("なに") || has("どう")) &&
-    (has("する") || has("します") || text.endsWith("か"))
-  ) {
-    return { type: "ask_plan", politeness, tense, voice, volition };
-  }
-
-  /* ------------------------------
-     PLAN REPLY (future intention)
-  ------------------------------ */
-  if (
-    has("つもり") ||
-    has("よてい") ||
-    has("予定") ||
-    has("あとで") ||
-    has("のちほど")
-  ) {
-    return { type: "plan_reply", politeness, tense, voice, volition };
-  }
-
-  /* ------------------------------
-     CAN'T HELP
-  ------------------------------ */
-  if (has("ずにはいられない")) return { type: "cant_help", nuance: "zuni", politeness, tense, voice, volition };
-  if (has("てたまらない"))   return { type: "cant_help", nuance: "tamaranai", politeness, tense, voice, volition };
-  if (has("てならない"))     return { type: "cant_help", nuance: "naranai", politeness, tense, voice, volition };
-  if (has("ざるをえない"))   return { type: "cant_help", nuance: "zaru", politeness, tense, voice, volition };
-  if (has("てしかたがない")) return { type: "cant_help", nuance: "shikata", politeness, tense, voice, volition };
-
-  /* ------------------------------
-     CONDITIONAL
-  ------------------------------ */
-  if (has("たら") || has("なら") || has("ば") || (has("と") && text.length > 3)) {
-    return { type: "conditional", politeness, tense, voice, volition };
-  }
-
-  /* ------------------------------
-     SOCIAL REGISTER
-  ------------------------------ */
-  if (has("いたします") || has("いたす") || has("まいります") || has("まいる")) {
-    return { type: "social_humble", politeness, tense, voice, volition };
-  }
-  if (has("なさいます") || has("なさる") || has("いらっしゃる") || has("いらっしゃいます")) {
-    return { type: "social_honorific", politeness, tense, voice, volition };
-  }
-
-  /* ------------------------------
-     THANKS
-  ------------------------------ */
-  if (has("ありがとう") || has("ありがと")) {
-    return { type: "thanks", politeness, tense, voice, volition };
-  }
-
-  /* ------------------------------
-     APOLOGY
-  ------------------------------ */
-  if (has("ごめん") || has("すみません") || has("すまん")) {
-    return { type: "apology", politeness, tense, voice, volition };
-  }
-
-  /* ------------------------------
-     FEELINGS
-  ------------------------------ */
-  if (has("つかれた") || has("しんどい") || has("だるい") || has("ねむい"))
-    return { type: "tired", politeness, tense, voice, volition };
-  if (has("うれしい") || has("たのしい") || has("わくわく"))
-    return { type: "happy", politeness, tense, voice, volition };
-  if (has("かなしい") || has("さびしい"))
-    return { type: "sad", politeness, tense, voice, volition };
-  if (has("いらいら") || has("むかつく") || has("おこってる"))
-    return { type: "angry", politeness, tense, voice, volition };
-
-  /* ------------------------------
-     PREFERENCE QUESTION
-  ------------------------------ */
-  if (has("すき") && (has("なに") || has("どんな"))) {
-    return { type: "ask_preference", politeness, tense, voice, volition };
-  }
-
-  /* ------------------------------
-     YES/NO QUESTION (restricted)
-  ------------------------------ */
-  if (
-    text.endsWith("か") &&
-    !has("どう") &&
-    !has("なに") &&
-    !has("どんな") &&
-    !has("なんで") &&
-    !has("どうして")
-  ) {
-    return { type: "yesno_question", politeness, tense, voice, volition };
-  }
-
-  /* ------------------------------
-     FOOD / DRINK
-  ------------------------------ */
-  let topic = null;
-  if (has("たべ") || has("ごはん") || has("パン") || has("コーヒー") || has("ビール")) {
-    topic = "food";
-  }
-
-  /* ------------------------------
-     STUDY
-  ------------------------------ */
-  if (has("べんきょう") || has("にほんご")) {
-    topic = "study";
-    return { type: "study", politeness, tense, voice, volition, topic };
-  }
-
-  if (topic) {
-    return { type: "food_drink", politeness, tense, voice, volition, topic };
-  }
-
-  /* ------------------------------
-     FALLBACK
-  ------------------------------ */
-  return { type: "free", politeness, tense, voice, volition };
+function l12DetectPoliteness(text) {
+  if (/(です|ます|でした|ました)/.test(text)) return "polite";
+  if (/(だ|よ|ね)$/.test(text)) return "casual";
+  return "neutral";
 }
+
+function l12DetectTense(text) {
+  if (text.includes("ている")) return "progressive";
+  if (/(つもり|予定|よてい|だろう|かもしれない)/.test(text)) return "future";
+  if (/(た|だった)$/.test(text)) return "past";
+  return "present";
+}
+
+function l12DetectVoice(text) {
+  if (text.includes("させられ")) return "causative_passive";
+  if (text.includes("させる")) return "causative";
+  if (/(られる|れる)/.test(text)) return "passive";
+  return null;
+}
+
+function l12DetectVolition(text) {
+  return /(しよう|いこう|たい|つもり)/.test(text);
+}
+
+
+const intentRules = [
+  { name: "greeting", match: t => /(こんにちは|こんいちわ|おはよう|こんばんは)/.test(t) },
+  { name: "request", match: t => /(て$|てね$|てみて|てください|てほしい)/.test(t) },
+  { name: "ask_status", match: t => /(どう.*か|ちょうし|さいきん|きょう.*どう|いちにち)/.test(t) },
+  { name: "status_reply", match: t => /(おかげさまで|げんきです|まあまあ|ぼちぼち|だいじょうぶ)/.test(t) },
+  { name: "ask_opinion", match: t => /(どう思|どうおも|どう考)/.test(t) },
+  { name: "ask_plan", match: t => /(きょう|あした|予定|よてい|こんしゅう).*(なに|どう).*(する|します|か)/.test(t) },
+  { name: "plan_reply", match: t => /(つもり|予定|よてい|あとで|のちほど)/.test(t) },
+  { name: "cant_help", match: t => /(ずにはいられない|てたまらない|てならない|ざるをえない|てしかたがない)/.test(t) },
+  { name: "conditional", match: t => /(たら|なら|ば|[^と]と)/.test(t) },
+  { name: "social_humble", match: t => /(いたします|いたす|まいります|まいる)/.test(t) },
+  { name: "social_honorific", match: t => /(なさいます|なさる|いらっしゃる|いらっしゃいます)/.test(t) },
+  { name: "thanks", match: t => /(ありがとう|ありがと)/.test(t) },
+  { name: "apology", match: t => /(ごめん|すみません|すまん)/.test(t) },
+  { name: "tired", match: t => /(つかれた|しんどい|だるい|ねむい)/.test(t) },
+  { name: "happy", match: t => /(うれしい|たのしい|わくわく)/.test(t) },
+  { name: "sad", match: t => /(かなしい|さびしい)/.test(t) },
+  { name: "angry", match: t => /(いらいら|むかつく|おこってる)/.test(t) },
+  { name: "ask_preference", match: t => /(すき).*(なに|どんな)/.test(t) },
+  { name: "yesno_question", match: t => t.endsWith("か") && !/(どう|なに|どんな|なんで|どうして)/.test(t) },
+  { name: "food_drink", match: t => /(たべ|ごはん|パン|コーヒー|ビール)/.test(t), topic: "food" },
+  { name: "study", match: t => /(べんきょう|にほんご)/.test(t), topic: "study" }
+];
+
+
+/* ============================================================
+   LEVEL 12 — CLEAN INTENT CLAUSE ANALYZER
+   Modular, predictable, and easier to extend
+============================================================ */
+
+function l12AnalyzeIntentClause(text) {
+  const politeness = l12DetectPoliteness(text);
+  const tense = l12DetectTense(text);
+  const voice = l12DetectVoice(text);
+  const volition = l12DetectVolition(text);
+
+  // Loop through rule table
+  for (const rule of intentRules) {
+    if (rule.match(text)) {
+      return {
+        type: rule.name,
+        politeness,
+        tense,
+        voice,
+        volition,
+        topic: rule.topic || null
+      };
+    }
+  }
+
+  // Fallback
+  return {
+    type: "free",
+    politeness,
+    tense,
+    voice,
+    volition,
+    topic: null
+  };
+}
+
 
 
 /* ==========================================================
    ⭐ MULTI-SENTENCE INTENT ANALYZER (PUBLIC)
 ========================================================== */
-function l12AnalyzeIntent(normalized) {
-  const clauses = l12SplitClauses(normalized);
-  const intents = clauses.map(c => l12AnalyzeIntentClause(c));
+function l12AnalyzeIntent(rawText) {
+  // 1. Split BEFORE normalization
+  const rawClauses = l12SplitClauses(rawText);
 
-  // pick first non-free as primary
-  let primary = intents.find(i => i.type !== "free") || intents[0];
+  // 2. Normalize EACH clause individually
+  const clauses = rawClauses.map(c => l12Normalize(c));
 
-  // merge politeness / emotion / topic / tense / voice / volition into context
+  // 3. Analyze each clause
+  const intents = clauses.map(c => ({
+    clause: c,
+    intent: l12AnalyzeIntentClause(c)
+  }));
+
+  const intentPriority = {
+    greeting: 90,
+    request: 80,
+    ask_status: 70,
+    status_reply: 70,
+    ask_opinion: 65,
+    ask_plan: 60,
+    plan_reply: 55,
+    cant_help: 50,
+    conditional: 45,
+    social_humble: 40,
+    social_honorific: 40,
+    thanks: 35,
+    apology: 35,
+    tired: 30,
+    happy: 30,
+    sad: 30,
+    angry: 30,
+    ask_preference: 25,
+    yesno_question: 20,
+    food_drink: 15,
+    study: 15,
+    free: 0
+  };
+
+  // 4. Pick primary intent by score
+  let primary = intents.reduce((best, current) => {
+    const score = intentPriority[current.intent.type] || 0;
+    return score > best.score
+      ? { score, intent: current.intent }
+      : best;
+  }, { score: -1, intent: intents[0].intent }).intent;
+
+  // 5. Merge context
   l12Context.lastIntent = primary.type;
   l12Context.politeness = primary.politeness || l12Context.politeness;
   l12Context.tense = primary.tense || l12Context.tense;
   l12Context.voice = primary.voice || l12Context.voice;
   l12Context.volition = primary.volition || l12Context.volition;
 
-  // topic & emotion from any clause
+  // 6. Topic + emotion extraction
   let topic = l12Context.lastTopic;
   let emotion = l12Context.emotion;
 
-  for (const i of intents) {
-    if (i.topic) topic = i.topic;
-    if (["tired", "happy", "sad", "angry"].includes(i.type)) {
-      emotion = i.type;
+  for (const { intent } of intents) {
+    if (intent.topic) topic = intent.topic;
+    if (["tired", "happy", "sad", "angry"].includes(intent.type)) {
+      emotion = intent.type;
     }
   }
 
   l12Context.lastTopic = topic || l12Context.lastTopic;
   l12Context.emotion = emotion || l12Context.emotion;
 
+  // 7. Final return
   return {
     ...primary,
     topic: topic || primary.topic || null,
-    emotion: emotion || null,
+    emotion: emotion || null
   };
 }
+
+
+
 
 
 
@@ -36939,18 +36853,19 @@ function handleL12UserReply() {
   const raw = inputEl.value.trim();
   if (!raw) return;
 
-  const normalized = l12ProcessUserInput(raw);
+  // Show user bubble with RAW text (not normalized)
+  l12AppendUserMessage(raw);
 
-  // show user bubble (normalized kana)
-  l12AppendUserMessage(normalized);
-
-  // clear input
+  // Clear input
   inputEl.value = "";
 
-  // generate semantic reply
-  const reply = l12GenerateReply(normalized);
+  // Generate semantic reply using RAW text
+  const reply = l12GenerateReply(raw);
+
+  // Show system bubble
   l12AppendSystemMessage(reply);
 }
+
 
 
 /* ----------------------------------------------------------
@@ -36988,6 +36903,24 @@ function startLevel12() {
     };
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
