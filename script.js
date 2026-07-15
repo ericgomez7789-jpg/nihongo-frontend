@@ -27672,6 +27672,93 @@ const level6 = [
 
 
 
+{
+  id: "l6-39",
+  meaning: "While sleeping outside, when I realized our two daughters forgot to put on sunscreen and went 'aaah...', what happens next?",
+  level: 6,
+
+  options: [
+    "ひやけに なる",
+    "つまが あわてる",
+    "むすめが わらう",
+    "なにも おこらない"
+  ],
+  optionsRomaji: [
+    "hiyake_ni_naru",
+    "tsuma_ga_awateru",
+    "musume_ga_warau",
+    "nanimo_okoranai"
+  ],
+  optionsEN: [
+    "they get sunburned",
+    "my wife panics",
+    "the daughters laugh",
+    "nothing happens"
+  ],
+  correct: "ひやけに なる",
+
+  fullAudio: {
+    daughter: "audio/sentences/inference39.wav",
+    me:       "audio/sentences/inference39.wav"
+  },
+
+  choiceAudio: {
+    options: [
+      ["audio/sentences/hiyake_ni_naru.wav"],
+      ["audio/sentences/tsuma_ga_awateru.wav"],
+      ["audio/sentences/musume_ga_warau.wav"],
+      ["audio/sentences/nanimo_okoranai.wav"]
+    ]
+  },
+
+  meaningAudio: [
+    ["audio/sentences/hiyake_ni_naru.wav"],
+    ["audio/sentences/tsuma_ga_awateru.wav"],
+    ["audio/sentences/musume_ga_warau.wav"],
+    ["audio/sentences/nanimo_okoranai.wav"]
+  ],
+
+  chunks: [
+    { romaji: "nojukuchuu dewa", hiragana: "のじゅくちゅうでは", english: "while sleeping outside" },
+    { romaji: "futari no musume ga", hiragana: "ふたりの むすめが", english: "our two daughters" },
+    { romaji: "hiyakedomé wo", hiragana: "ひやけどめを", english: "sunscreen" },
+    { romaji: "nuru no wo wasureta to", hiragana: "ぬる のを わすれた と", english: "forgot to put it on" },
+    { romaji: "boku ga wakatte", hiragana: "ぼくが わかって", english: "when I realized" },
+    { romaji: "aaa tte nari", hiragana: "あぁぁぁって なり", english: "went 'aaah…'" },
+    { romaji: "tsugi ni dou naru no", hiragana: "つぎに どうなるの", english: "what happens next" }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -28733,6 +28820,21 @@ Level 7
 
   meaning: "If you're going to Japan, you'll need a travel permit."
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
    id: "l7_008",
   level: 7,
@@ -28768,6 +28870,894 @@ Level 7
 
   meaning: "If you move the phone screen lightly, the screen will change."
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l7_009",
+  level: 7,
+
+  english: {
+    text: "If you don't put forth any effort into studying, you will not move forward.",
+    audio: "audio/sentences/english9.wav"
+  },
+
+  japaneseOptions: [
+    {
+      text: "まなびながら ちからを いれなければ、まえに すすみません。",
+      correct: true
+    },
+    {
+      text: "まなびながら ちからを いれたら、まえに すすみません。",
+      correct: false
+    },
+    {
+      text: "まなびながら ちからを いれれば、まえに すすみません。",
+      correct: false
+    },
+    {
+      text: "まなびながら ちからを いれると、まえに すすみません。",
+      correct: false
+    }
+  ],
+
+  summaryChunks: [
+    { hiragana: "ちからをいれなければ", romaji: "chikara o irenakereba", english: "if you don't put in effort" },
+    { hiragana: "まえにすすみません", romaji: "mae ni susumimasen", english: "you will not move forward" }
+  ],
+
+  meaning: "If you don't put forth any effort into studying, you will not move forward."
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l7_010",
+  level: 7,
+
+  english: {
+    text: "If you study with a positive attitude, moving forward will be easy.",
+    audio: "audio/sentences/english10.wav"
+  },
+
+  japaneseOptions: [
+    {
+      text: "せいきょくてきに べんきょうすれば、まえに すすむのは やさしいです。",
+      correct: true
+    },
+    {
+      text: "せいきょくてきに べんきょうしたら、まえに すすむのは やさしいです。",
+      correct: false
+    },
+    {
+      text: "せいきょくてきに べんきょうすると、まえに すすむのは やさしいです。",
+      correct: false
+    },
+    {
+      text: "せいきょくてきに べんきょうするなら、まえに すすむのは やさしいです。",
+      correct: false
+    }
+  ],
+
+  summaryChunks: [
+    { hiragana: "べんきょうすれば", romaji: "benkyou sureba", english: "if you study" },
+    { hiragana: "まえにすすむのはやさしい", romaji: "mae ni susumu no wa yasashii", english: "moving forward will be easy" }
+  ],
+
+  meaning: "If you study with a positive attitude, moving forward will be easy."
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l7_011",
+  level: 7,
+
+  english: {
+    text: "If you spill juice on the floor, mom will get mad.",
+    audio: "audio/sentences/english11.wav"
+  },
+
+  japaneseOptions: [
+    {
+      text: "ジュースをゆかにこぼしたら、ママがおこります。",
+      correct: true
+    },
+    {
+      text: "ジュースをゆかにこぼすなら、ママがおこります。",
+      correct: false
+    },
+    {
+      text: "ジュースをゆかにこぼすと、ママがおこります。",
+      correct: false
+    },
+    {
+      text: "ジュースをゆかにこぼせば、ママがおこります。",
+      correct: false
+    }
+  ],
+
+  summaryChunks: [
+    { hiragana: "ジュースをゆかにこぼしたら", romaji: "juusu o yuka ni koboshitara", english: "if you spill juice on the floor" },
+    { hiragana: "ママがおこります", romaji: "mama ga okorimasu", english: "mom will get mad" }
+  ],
+
+  meaning: "If you spill juice on the floor, mom will get mad."
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l7_012",
+  level: 7,
+
+  english: {
+    text: "If you keep complaining, dad will get angry.",
+    audio: "audio/sentences/english12.wav"
+  },
+
+  japaneseOptions: [
+    {
+      text: "ぐちぐち もんくを いいつづけたら、パパは おこります。",
+      correct: true
+    },
+    {
+      text: "ぐちぐち もんくを いいつづけるなら、パパは おこります。",
+      correct: false
+    },
+    {
+      text: "ぐちぐち もんくを いいつづけると、パパは おこります。",
+      correct: false
+    },
+    {
+      text: "ぐちぐち もんくを いいつづければ、パパは おこります。",
+      correct: false
+    }
+  ],
+
+  summaryChunks: [
+    { hiragana: "ぐちぐちもんくをいいつづけたら", romaji: "guchiguchi monku o iitsuzuketara", english: "if you keep complaining" },
+    { hiragana: "パパはおこります", romaji: "papa wa okorimasu", english: "dad will get angry" }
+  ],
+
+  meaning: "If you keep complaining, dad will get angry."
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l7_013",
+  level: 7,
+
+  english: {
+    text: "If you want to relax and play, first you must finish your studies.",
+    audio: "audio/sentences/english13.wav"
+  },
+
+  japaneseOptions: [
+    {
+      text: "リラックスしてあそびたいなら、まずべんきょうをおわらなければなりません。",
+      correct: true
+    },
+    {
+      text: "リラックスしてあそびたいと、まずべんきょうをおわらなければなりません。",
+      correct: false
+    },
+    {
+      text: "リラックスしてあそびたいば、まずべんきょうをおわらなければなりません。",
+      correct: false
+    },
+    {
+      text: "リラックスしてあそびたいたら、まずべんきょうをおわらなければなりません。",
+      correct: false
+    }
+  ],
+
+  summaryChunks: [
+    { hiragana: "リラックスしてあそびたいなら", romaji: "rirakkusu shite asobitai nara", english: "if you want to relax and play" },
+    { hiragana: "べんきょうをおわらなければならない", romaji: "benkyou o owaranakereba naranai", english: "you must finish your studies" }
+  ],
+
+  meaning: "If you want to relax and play, first you must finish your studies."
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l7_014",
+  level: 7,
+
+  english: {
+    text: "If you want to enjoy your vacation, first handle your obligations at home.",
+    audio: "audio/sentences/english14.wav"
+  },
+
+  japaneseOptions: [
+    {
+      text: "バケーションをたのしみたいなら、まずいえのぎむをすませなければなりません。",
+      correct: true
+    },
+    {
+      text: "バケーションをたのしみたいと、まずいえのぎむをすませなければなりません。",
+      correct: false
+    },
+    {
+      text: "バケーションをたのしみたいば、まずいえのぎむをすませなければなりません。",
+      correct: false
+    },
+    {
+      text: "バケーションをたのしみたいたら、まずいえのぎむをすませなければなりません。",
+      correct: false
+    }
+  ],
+
+  summaryChunks: [
+    { hiragana: "バケーションをたのしみたいなら", romaji: "bakeshon o tanoshimitai nara", english: "if you want to enjoy your vacation" },
+    { hiragana: "いえのぎむをすませなければならない", romaji: "ie no gimu o sumasenakereba naranai", english: "you must handle your obligations at home" }
+  ],
+
+  meaning: "If you want to enjoy your vacation, first handle your obligations at home."
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l7_015",
+  level: 7,
+
+  english: {
+    text: "If you show an attitude toward mom, she will get mad.",
+    audio: "audio/sentences/english15.wav"
+  },
+
+  japaneseOptions: [
+    {
+      text: "ママにたいどをみせると、おこります。",
+      correct: true
+    },
+    {
+      text: "ママにたいどをみせたら、おこります。",
+      correct: false
+    },
+    {
+      text: "ママにたいどをみせれば、おこります。",
+      correct: false
+    },
+    {
+      text: "ママにたいどをみせるなら、おこります。",
+      correct: false
+    }
+  ],
+
+  summaryChunks: [
+    { hiragana: "ママにたいどをみせると", romaji: "mama ni taido o miseru to", english: "if you show an attitude toward mom" },
+    { hiragana: "おこります", romaji: "okorimasu", english: "she will get mad" }
+  ],
+
+  meaning: "If you show an attitude toward mom, she will get mad."
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l7_016",
+  level: 7,
+
+  english: {
+    text: "If you raise the music volume, dad will get annoyed.",
+    audio: "audio/sentences/english16.wav"
+  },
+
+  japaneseOptions: [
+    {
+      text: "もしおんがくの音をふやすと、ちちがいらいらします。",
+      correct: true
+    },
+    {
+      text: "もしおんがくの音をふやしたら、ちちがいらいらします。",
+      correct: false
+    },
+    {
+      text: "もしおんがくの音をふやせば、ちちがいらいらします。",
+      correct: false
+    },
+    {
+      text: "もしおんがくの音をふやすなら、ちちがいらいらします。",
+      correct: false
+    }
+  ],
+
+  summaryChunks: [
+    { hiragana: "おんがくの音をふやすと", romaji: "ongaku no oto o fuyasu to", english: "if you raise the music volume" },
+    { hiragana: "ちちがいらいらします", romaji: "chichi ga iraira shimasu", english: "dad will get annoyed" }
+  ],
+
+  meaning: "If you raise the music volume, dad will get annoyed."
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l7_017",
+  level: 7,
+
+  english: {
+    text: "If you talk back, mom will get mad.",
+    audio: "audio/sentences/english17.wav"
+  },
+
+  japaneseOptions: [
+    {
+      text: "くちがえすと、はははおこります。",
+      correct: true
+    },
+    {
+      text: "くちがえしたら、はははおこります。",
+      correct: false
+    },
+    {
+      text: "くちがえせば、はははおこります。",
+      correct: false
+    },
+    {
+      text: "くちがえすなら、はははおこります。",
+      correct: false
+    }
+  ],
+
+  summaryChunks: [
+    { hiragana: "くちがえすと", romaji: "kuchigaesu to", english: "if you talk back" },
+    { hiragana: "はははおこります", romaji: "haha wa okorimasu", english: "mom will get mad" }
+  ],
+
+  meaning: "If you talk back, mom will get mad."
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l7_018",
+  level: 7,
+
+  english: {
+    text: "Whenever my daughter goes to the store with me, she asks to buy candy.",
+    audio: "audio/sentences/english18.wav"
+  },
+
+  japaneseOptions: [
+    {
+      text: "むすめとぼくがみせにいくと、むすめはあめだまをかってほしいとたのみます。",
+      correct: true
+    },
+    {
+      text: "むすめとぼくがみせにいったら、むすめはあめだまをかってほしいとたのみます。",
+      correct: false
+    },
+    {
+      text: "むすめとぼくがみせにいけば、むすめはあめだまをかってほしいとたのみます。",
+      correct: false
+    },
+    {
+      text: "むすめとぼくがみせにいくなら、むすめはあめだまをかってほしいとたのみます。",
+      correct: false
+    }
+  ],
+
+  summaryChunks: [
+    { hiragana: "みせにいくと", romaji: "mise ni iku to", english: "whenever we go to the store" },
+    { hiragana: "あめだまをかってほしいとたのむ", romaji: "amedama o katte hoshii to tanomu", english: "she asks to buy candy" }
+  ],
+
+  meaning: "Whenever my daughter goes to the store with me, she asks to buy candy."
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l7_019",
+  level: 7,
+
+  english: {
+    text: "When we all went camping, we all had fun.",
+    audio: "audio/sentences/english19.wav"
+  },
+
+  japaneseOptions: [
+    {
+      text: "みんなでのじゅくにいったら、みんながたのしんだ。",
+      correct: true
+    },
+    {
+      text: "みんなでのじゅくにいくと、みんながたのしんだ。",
+      correct: false
+    },
+    {
+      text: "みんなでのじゅくにいけば、みんながたのしんだ。",
+      correct: false
+    },
+    {
+      text: "みんなでのじゅくにいくなら、みんながたのしんだ。",
+      correct: false
+    }
+  ],
+
+  summaryChunks: [
+    { hiragana: "のじゅくにいったら", romaji: "nojuku ni ittara", english: "when we went camping" },
+    { hiragana: "みんながたのしんだ", romaji: "minna ga tanoshinda", english: "everyone had fun" }
+  ],
+
+  meaning: "When we all went camping, we all had fun."
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l7_020",
+  level: 7,
+
+  english: {
+    text: "If you litter on the beach, it will look messy.",
+    audio: "audio/sentences/english20.wav"
+  },
+
+  japaneseOptions: [
+    {
+      text: "うみべでポイすてをすると、めちゃくちゃによごれてみえる。",
+      correct: true
+    },
+    {
+      text: "うみべでポイすてをしたら、めちゃくちゃによごれてみえる。",
+      correct: false
+    },
+    {
+      text: "うみべでポイすてをすれば、めちゃくちゃによごれてみえる。",
+      correct: false
+    },
+    {
+      text: "うみべでポイすてをするなら、めちゃくちゃによごれてみえる。",
+      correct: false
+    }
+  ],
+
+  summaryChunks: [
+    { hiragana: "ポイすてをすると", romaji: "poisute o suru to", english: "if you litter" },
+    { hiragana: "よごれてみえる", romaji: "yogorete mieru", english: "it will look messy" }
+  ],
+
+  meaning: "If you litter on the beach, it will look messy."
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l7_021",
+  level: 7,
+
+  english: {
+    text: "If I stay up late, I will feel tired the next day.",
+    audio: "audio/sentences/english21.wav"
+  },
+
+  japaneseOptions: [
+    {
+      text: "よるおそくまでおきていれば、つぎのひつかれてしまいます。",
+      correct: true
+    },
+    {
+      text: "よるおそくまでおきていたら、つぎのひつかれてしまいます。",
+      correct: false
+    },
+    {
+      text: "よるおそくまでおきていると、つぎのひつかれてしまいます。",
+      correct: false
+    },
+    {
+      text: "よるおそくまでおきているなら、つぎのひつかれてしまいます。",
+      correct: false
+    }
+  ],
+
+  summaryChunks: [
+    { hiragana: "おきていれば", romaji: "okite ireba", english: "if I stay up late" },
+    { hiragana: "つぎのひつかれる", romaji: "tsugi no hi tsukareru", english: "I will feel tired the next day" }
+  ],
+
+  meaning: "If I stay up late, I will feel tired the next day."
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l7_022",
+  level: 7,
+
+  english: {
+    text: "If you want to enjoy your day, you must pull yourself together and finish studying.",
+    audio: "audio/sentences/english22.wav"
+  },
+
+  japaneseOptions: [
+    {
+      text: "一日をたのしみたいなら、しっかりしてべんきょうをおわらせなければならない。",
+      correct: true
+    },
+    {
+      text: "一日をたのしみたいと、しっかりしてべんきょうをおわらせなければならない。",
+      correct: false
+    },
+    {
+      text: "一日をたのしみたいば、しっかりしてべんきょうをおわらせなければならない。",
+      correct: false
+    },
+    {
+      text: "一日をたのしみたいたら、しっかりしてべんきょうをおわらせなければならない。",
+      correct: false
+    }
+  ],
+
+  summaryChunks: [
+    { hiragana: "たのしみたいなら", romaji: "tanoshimitai nara", english: "if you want to enjoy your day" },
+    { hiragana: "しっかりして", romaji: "shikkari shite", english: "pull yourself together" },
+    { hiragana: "べんきょうをおわらせなければならない", romaji: "benkyou o owarasenakereba naranai", english: "you must finish studying" }
+  ],
+
+  meaning: "If you want to enjoy your day, you must pull yourself together and finish studying."
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l7_023",
+  level: 7,
+
+  english: {
+    text: "If you need help, please ask.",
+    audio: "audio/sentences/english23.wav"
+  },
+
+  japaneseOptions: [
+    {
+      text: "もしおてつだいがひつようなら、たのんでください。",
+      correct: true
+    },
+    {
+      text: "もしおてつだいがひつようと、たのんでください。",
+      correct: false
+    },
+    {
+      text: "もしおてつだいがひつようば、たのんでください。",
+      correct: false
+    },
+    {
+      text: "もしおてつだいがひつようたら、たのんでください。",
+      correct: false
+    }
+  ],
+
+  summaryChunks: [
+    { hiragana: "ひつようなら", romaji: "hitsuyou nara", english: "if you need help" },
+    { hiragana: "たのんでください", romaji: "tanonde kudasai", english: "please ask" }
+  ],
+
+  meaning: "If you need help, please ask."
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l7_024",
+  level: 7,
+
+  english: {
+    text: "If you show up late to work, you may get a lecture from your boss.",
+    audio: "audio/sentences/english24.wav"
+  },
+
+  japaneseOptions: [
+    {
+      text: "しごとにおくれていったら、じょうしにしかられるかもしれない。",
+      correct: true
+    },
+    {
+      text: "しごとにおくれていくと、じょうしにしかられるかもしれない。",
+      correct: false
+    },
+    {
+      text: "しごとにおくれていけば、じょうしにしかられるかもしれない。",
+      correct: false
+    },
+    {
+      text: "しごとにおくれていくなら、じょうしにしかられるかもしれない。",
+      correct: false
+    }
+  ],
+
+  summaryChunks: [
+    { hiragana: "おくれていったら", romaji: "okurete ittara", english: "if you show up late" },
+    { hiragana: "しかられるかもしれない", romaji: "shikarareru kamoshirenai", english: "you may get a lecture" }
+  ],
+
+  meaning: "If you show up late to work, you may get a lecture from your boss."
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l7_025",
+  level: 7,
+
+  english: {
+    text: "If I don't hurry, I will not finish my work.",
+    audio: "audio/sentences/english25.wav"
+  },
+
+  japaneseOptions: [
+    {
+      text: "いそがなかったら、しごとがおわらない。",
+      correct: true
+    },
+    {
+      text: "いそがないと、しごとがおわらない。",
+      correct: false
+    },
+    {
+      text: "いそがなければ、しごとがおわらない。",
+      correct: false
+    },
+    {
+      text: "いそがないなら、しごとがおわらない。",
+      correct: false
+    }
+  ],
+
+  summaryChunks: [
+    { hiragana: "いそがなかったら", romaji: "isoganakattara", english: "if I don't hurry" },
+    { hiragana: "しごとがおわらない", romaji: "shigoto ga owaranai", english: "I won't finish my work" }
+  ],
+
+  meaning: "If I don't hurry, I will not finish my work."
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -29708,6 +30698,19 @@ const level8 = [
     meaning: "Hmm, I was trying to decide which book to read next."
   },
 
+
+
+
+
+
+
+
+
+
+
+
+
+
   {
   id: "L8-002",
   level: 8,
@@ -29730,6 +30733,20 @@ const level8 = [
 
   meaning: "Um, I want to go to the beach but I have to go to work."
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -29759,6 +30776,19 @@ const level8 = [
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
   id: "L8-004",
   level: 8,
@@ -29782,6 +30812,19 @@ const level8 = [
 
   meaning: "Oh no! It's best not to run down the stairs. If you're not careful, you'll definitely trip, miss your step, and fall."
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -29812,6 +30855,19 @@ const level8 = [
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
   id: "L8-006",
   level: 8,
@@ -29835,6 +30891,19 @@ const level8 = [
 
   meaning: "While reading a book with my daughter, she playfully tilted it slightly sideways so that I couldn't see it. As a result I asked why."
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -29865,6 +30934,20 @@ const level8 = [
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
   id: "L8-008",
   level: 8,
@@ -29888,6 +30971,21 @@ const level8 = [
 
   meaning: "Whenever I suggest we study, my daughter just grins and says, Nah."
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -29918,6 +31016,20 @@ const level8 = [
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
   id: "L8-010",
   level: 8,
@@ -29944,6 +31056,21 @@ const level8 = [
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
   id: "L8-011",
   level: 8,
@@ -29967,6 +31094,21 @@ const level8 = [
 
   meaning: "Whenever I’m at the park with my daughter, she finds something like a water bottle, fills it with water, and splashes me. I react with a dramatic Whoa! and join the game."
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -30020,6 +31162,21 @@ const level8 = [
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
   id: "L8-014",
   level: 8,
@@ -30043,6 +31200,19 @@ const level8 = [
 
   meaning: "While I was wrestling around with my daughter, I let out a fart and my daughter yelled out whoa!"
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -30074,6 +31244,21 @@ const level8 = [
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
   id: "L8-016",
   level: 8,
@@ -30097,6 +31282,21 @@ const level8 = [
 
   meaning: "While lying next to my daughter and talking to each other, she was looking at the phone and when she averted her eyes I stretched out my arm and dangled my pinky to distract her and she laughed."
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -30127,6 +31327,22 @@ const level8 = [
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
   id: "L8-018",
   level: 8,
@@ -30150,6 +31366,76 @@ const level8 = [
 
   meaning: "While on a flight, the baby in front of me pooped, and I gagged because it smelled so bad."
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "L8-019",
+  level: 8,
+
+  japanese: "ときどきむすめがなにかをはなそうとしたところだったんだ。そしたらぼくがくちをさえぎって「ちょっとまって、まずぼくのはなしをおわらせて」といったんだ。そうするとむすめがあははとわらいだしたんだ。",
+  audio: "audio/sentences/paraphrase19.wav",
+
+  paraphraseOptions: [
+    {
+      text: "むすめがはなしだそうとしたとき、ぼくがくちをさえぎってじぶんのはなしをおわらせようとしたら、むすめがわらいだしたんだ。",
+      correct: true
+    },
+    {
+      text: "ぼくがはなしだそうとしたら、むすめがくちをさえぎっておこったんだ。",
+      correct: false
+    },
+    {
+      text: "むすめがなにもいっていないのに、ぼくがいきなりおこりだしたんだ。",
+      correct: false
+    },
+    {
+      text: "むすめがわらいながらはなしていて、ぼくがそれをきいていたんだ。",
+      correct: false
+    },
+    {
+      text: "ぼくがはなしをやめたら、むすめがくちをさえぎってしまったんだ。",
+      correct: false
+    }
+  ],
+
+  summaryChunks: [
+    { hiragana: "むすめがはなそうとした", romaji: "musume ga hanasou to shita", english: "my daughter tried to speak" },
+    { hiragana: "ぼくがくちをさえぎった", romaji: "boku ga kuchi o saegitta", english: "I interrupted her" },
+    { hiragana: "あははとわらいだした", romaji: "ahaha to waraidashita", english: "she burst out laughing" }
+  ],
+
+  meaning: "Sometimes when my daughter tries to say something, I interrupt her and tell her to let me finish, and then she suddenly bursts out laughing."
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ];
 
