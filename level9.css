@@ -170,3 +170,25 @@
   font-weight: 600;
   color: #222;
 }
+
+#l9SummaryContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* ⭐ centers the table */
+  width: 100%;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: center;  /* ⭐ centers each row */
+  gap: 20px;
+  width: 100%;
+  max-width: 600px;         /* ⭐ prevents stretching too wide */
+  margin: 6px 0;
+}
+
+#level9Screen3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* centers everything inside */
+}

@@ -32691,6 +32691,14 @@ const level9Data = [
 
 
 
+
+
+
+
+
+
+
+
 {
    id: "l9_006",
   level: 9,
@@ -32719,6 +32727,16 @@ const level9Data = [
 
 
 
+
+
+
+
+
+
+
+
+
+
 {
    id: "l9_007",
   level: 9,
@@ -32742,6 +32760,17 @@ const level9Data = [
 
   meaning: "When I see how he looks, my chest tightens and I can’t help but feel sad."
 },
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -32854,6 +32883,15 @@ const level9Data = [
 
 
 
+
+
+
+
+
+
+
+
+
 {
    id: "l9_012",
   level: 9,
@@ -32878,6 +32916,58 @@ const level9Data = [
 
   meaning: "Because I’ve been studying Japanese for a long time, I can’t stop wanting to go to Japan."
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l9_013",
+  level: 9,
+
+  japanese: {
+    text: "しごとを やすみたい くらい、いやいや しごとに いくしか ありません。",
+    audio: "audio/sentences/nuance13.wav"
+  },
+
+  // ⭐ LEFT SIDE: plain paraphrase, NO nuance grammar
+  paraphraseOptions: buildNuanceOptions(
+    "しごとを やすみたい くらい、いやいや しごとに いくしか ありません",
+    "しごとに いきたくないきもちが つよい",
+    "いかざるを えない"
+  ),
+
+  summaryChunks: [
+    { hiragana: "しごとを やすみたい くらい", romaji: "shigoto o yasumitai kurai", english: "to the point that I want to take a day off" },
+    { hiragana: "いやいや しごとに いくしか", romaji: "iyaiya shigoto ni iku shika", english: "I reluctantly have no choice but to go to work" },
+    { hiragana: "ありません", romaji: "arimasen", english: "there’s no other option" }
+  ],
+
+  meaning: "I want to take a day off so badly, but I reluctantly have no choice but to go to work."
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ];
@@ -33719,7 +33809,7 @@ L9.showRoundSummary = function () {
   // Show summary screen
   L9.show("level9Screen3");
 
-  // Render progress bar (same as Level 8)
+  // Render progress bar
   L9.renderProgress("level9Screen3");
 
   // DOM lookups
@@ -33753,7 +33843,7 @@ L9.showRoundSummary = function () {
   }
 
   /* ----------------------------------------------------------
-     EXPLANATION (dynamic grammar explanation)
+     EXPLANATION (dynamic grammar explanation + global notes)
   ---------------------------------------------------------- */
   if (correctOption) {
     const text = correctOption.text;
@@ -33838,10 +33928,24 @@ L9.showRoundSummary = function () {
     }
 
     explanationBox.innerHTML = explanation;
+
+    // ⭐ Additional global grammar notes
+    const extraGrammarNotes = `
+      <hr style="margin: 12px 0; opacity: 0.3;">
+      <strong>Additional Grammar Notes:</strong><br><br>
+
+      ・「〜てならない」 is also used for <em>prohibition</em> in classical Japanese.<br>
+      ・「〜てたまらない」 is also used for <em>emotional or physical inability to endure</em>.<br>
+      ・「〜ざるをえない」 is also used for <em>forced necessity / no choice</em>.<br>
+      ・「〜ずにはいられない」 is also used for <em>being unable to avoid doing something due to circumstances or necessity</em>.<br>
+      ・「〜てしかたがない」 is also used for <em>resignation or helplessness</em>.<br>
+    `;
+
+    explanationBox.innerHTML += extraGrammarNotes;
   }
 
   /* ----------------------------------------------------------
-     CHUNK TABLE
+     CHUNK TABLE (centered)
   ---------------------------------------------------------- */
   if (Array.isArray(s.summaryChunks)) {
     s.summaryChunks.forEach(chunk => {
@@ -33859,7 +33963,7 @@ L9.showRoundSummary = function () {
   }
 
   /* ----------------------------------------------------------
-     REPLAY BUTTON (mirror Level 8)
+     REPLAY BUTTON
   ---------------------------------------------------------- */
   createAndWireLevel9ReplayButton("level9Screen3", s.japanese?.audio);
 
@@ -33884,6 +33988,28 @@ L9.showRoundSummary = function () {
     };
   }
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
