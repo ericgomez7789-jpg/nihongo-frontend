@@ -29809,7 +29809,69 @@ Level 7
   ],
 
   meaning: "If I don't hurry, I will not finish my work."
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l7_026",
+  level: 7,
+
+  english: {
+    text: "If you don't control your emotions, you will be taken advantage of by the other person.",
+    audio: "audio/sentences/english26.wav"
+  },
+
+  japaneseOptions: [
+    {
+      text: "もし かんじょう を おさえなければ、あいて に つけこまれる。",
+      correct: true
+    },
+    {
+      text: "かんじょう を おさえないと、あいて に つけこまれる。",
+      correct: false
+    },
+    {
+      text: "かんじょう を おさえなかったら、あいて に つけこまれる。",
+      correct: false
+    },
+    {
+      text: "かんじょう を おさえないなら、あいて に つけこまれる。",
+      correct: false
+    }
+  ],
+
+  summaryChunks: [
+    { hiragana: "もし", romaji: "moshi", english: "if" },
+    { hiragana: "かんじょう を おさえなければ", romaji: "kanjou wo osaenakereba", english: "if you don't control your emotions" },
+    { hiragana: "あいて に つけこまれる", romaji: "aite ni tsukekomareru", english: "you will be taken advantage of" }
+  ],
+
+  meaning: "If you don't control your emotions, you will be taken advantage of by the other person."
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
