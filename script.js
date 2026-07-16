@@ -34681,6 +34681,72 @@ const level10Data = [
 
 
 
+
+
+
+
+
+
+
+{
+  id: "l10_s8",
+  level: 10,
+
+  japanese: {
+    polite: {
+      text:
+        "かんじゃは いしゃに そうだんしたくて ちかづいて、こう いいます。たいちょうが だいぶ よくなってきましたので、きょう たいいんしても よろしいでしょうか。",
+      audio: "audio/sentences/register15.wav"
+    },
+
+    honorific: {
+      text:
+        "かんじゃは いしゃに ごそうだんしたくて ちかづいて、こう 申し上げます。たいちょうが だいぶ よくなってまいりましたので、きょう たいいんさせて いただいても よろしいでしょうか。",
+      audio: "audio/sentences/register16.wav"
+    }
+  },
+
+  paraphraseOptions: [
+    { text: "きょう、たいいんしても よろしいですか。", correct: true },
+
+    { text: "もう びょういんには いたくありません。", correct: false },
+    { text: "たいいんは しません。", correct: false },
+    { text: "あした また きます。", correct: false },
+    { text: "たいちょうは よくありません。", correct: false }
+  ],
+
+  summaryChunks: [
+    { hiragana: "かんじゃ", romaji: "kanja", english: "patient" },
+    { hiragana: "いしゃ", romaji: "isha", english: "doctor" },
+    { hiragana: "たいちょう", romaji: "taichou", english: "physical condition" },
+    { hiragana: "よくなってきた", romaji: "yoku natte kita", english: "has improved" },
+    { hiragana: "たいいん", romaji: "taiin", english: "discharge from hospital" },
+    { hiragana: "よろしいでしょうか", romaji: "yoroshii deshou ka", english: "may I / is it alright" }
+  ],
+
+  correctAnswerChunks: [
+    { hiragana: "きょう", romaji: "kyou", english: "today" },
+    { hiragana: "たいいんして", romaji: "taiin shite", english: "to be discharged" },
+    { hiragana: "よろしいですか", romaji: "yoroshii desu ka", english: "may I" }
+  ],
+
+  meaning:
+    "A patient approaches the doctor to consult about something. Because their physical condition has greatly improved, they politely ask if they may be discharged from the hospital today. The honorific version uses very formal expressions such as ご相談する, 申し上げる, and 〜させていただく."
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 /* ==========================================================
    ⭐ LEVEL 10 — CORE STATE (FULLY ISOLATED)
