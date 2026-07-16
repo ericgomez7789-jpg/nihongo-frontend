@@ -32970,6 +32970,162 @@ const level9Data = [
 
 
 
+
+{
+  id: "l9_014",
+  level: 9,
+
+  japanese: {
+    text: "のじゅくの あとに、うちに かえると どうしても あたたかい おゆを あびたい。",
+    audio: "audio/sentences/nuance14.wav"
+  },
+
+  paraphraseOptions: buildNuanceOptions(
+    "のじゅくの あとに、うちに かえると どうしても あたたかい おゆを あびたい",
+    "あたたかい おゆを あびたいきもちが とても つよい",
+    "てたまらない"
+  ),
+
+  summaryChunks: [
+    { hiragana: "のじゅくの あとに", romaji: "nojuku no ato ni", english: "after sleeping outdoors" },
+    { hiragana: "うちに かえると", romaji: "uchi ni kaeru to", english: "when I return home" },
+    { hiragana: "あたたかい おゆを あびたくて", romaji: "atatakai oyu o abitakute", english: "I want to bathe in warm water" },
+    { hiragana: "たまらない", romaji: "tamaranai", english: "I can’t stand how strong the feeling is" }
+  ],
+
+  meaning: "After sleeping outdoors, when I return home, I can’t stand how badly I want to bathe in warm water."
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l9_015",
+  level: 9,
+
+  japanese: {
+    text: "のじゅくちゅうでは むしあつい テントに ねむりながら、びしょびしょ あせを かかざるを えない。",
+    audio: "audio/sentences/nuance15.wav"
+  },
+
+  paraphraseOptions: buildNuanceOptions(
+    "のじゅくちゅうでは むしあつい テントに ねむりながら、びしょびしょ あせを かかざるを えない",
+    "むしあつい テントで ねむっていて、どうしても あせを たくさん かいた",
+    "ざるをえない"
+  ),
+
+  summaryChunks: [
+    { hiragana: "のじゅくちゅうでは", romaji: "nojuku chuu dewa", english: "while sleeping outdoors" },
+    { hiragana: "むしあつい テントに ねむりながら", romaji: "mushiatsui tento ni nemurinagara", english: "while sleeping in a humid tent" },
+    { hiragana: "びしょびしょ あせを かいて", romaji: "bishobisho ase o kaite", english: "sweating heavily" },
+    { hiragana: "ざるを えない", romaji: "zaru o enai", english: "have no choice but to / forced necessity" }
+  ],
+
+  meaning: "While sleeping in a humid tent during outdoor camping, I had no choice but to sweat heavily."
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l9_016",
+  level: 9,
+
+  japanese: {
+    text: "ひやけが そんなに いたいので、むすめが どうしても しくしく なきたい。",
+    audio: "audio/sentences/nuance16.wav"
+  },
+
+  paraphraseOptions: buildNuanceOptions(
+    "ひやけが そんなに いたいので、むすめが どうしても しくしく なきたい",
+    "ひやけが とても いたくて、むすめは しくしく なきたくて たまらない",
+    "てたまらない"
+  ),
+
+  summaryChunks: [
+    { hiragana: "ひやけが そんなに いたいので", romaji: "hiyake ga sonnani itai node", english: "because the sunburn hurts so much" },
+    { hiragana: "むすめが", romaji: "musume ga", english: "my daughter" },
+    { hiragana: "しくしく なきたくて", romaji: "shikushiku nakitakute", english: "wants to cry softly" },
+    { hiragana: "たまらない", romaji: "tamaranai", english: "can’t endure the feeling" }
+  ],
+
+  meaning: "Because her sunburn hurts so much, my daughter can’t stand how badly she wants to cry."
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l9_017",
+  level: 9,
+
+  japanese: {
+    text: "てんまくの なかでは ねながら あせを かいてから、みずに どうしても はいりたい。",
+    audio: "audio/sentences/nuance17.wav"
+  },
+
+  paraphraseOptions: buildNuanceOptions(
+    "てんまくの なかでは ねながら あせを かいてから、みずに どうしても はいりたい",
+    "テントの なかで あせを かいたので、みずに はいりたくて たまらない",
+    "てたまらない"
+  ),
+
+  summaryChunks: [
+    { hiragana: "てんまくの なかでは", romaji: "tenmaku no naka dewa", english: "inside the tent" },
+    { hiragana: "ねながら あせを かいてから", romaji: "nenagara ase o kaite kara", english: "after sweating while sleeping" },
+    { hiragana: "みずに はいりたくて", romaji: "mizu ni hairitakute", english: "want to get into the water" },
+    { hiragana: "たまらない", romaji: "tamaranai", english: "can’t stand the urge" }
+  ],
+
+  meaning: "After sweating while sleeping inside the tent, I can’t stand how badly I want to get into the water."
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 
