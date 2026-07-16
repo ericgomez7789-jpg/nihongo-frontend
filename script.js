@@ -12788,6 +12788,11 @@ Level 3
 ------------------------------------------------------------------------------------------------------------*/
 
 const level3Sentences = [
+
+
+
+
+
   {
     id: "l3-1",
 
@@ -15260,8 +15265,28 @@ const level3Sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
- id: "l3-28",
+  id: "l3-28",
   meaning: "Please do it like this.",
   level: 3,
 
@@ -15308,6 +15333,23 @@ const level3Sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
  id: "l3-29",
   meaning: "Why can't I do it like that?",
@@ -28610,6 +28652,20 @@ Level 7
 
     meaning: "If it rains, I will stay home."
   },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   {
      id: "l7_002",
   level: 7,
@@ -28645,6 +28701,20 @@ Level 7
 
   meaning: "If you're hungry, I can make something."
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
    id: "l7_003",
   level: 7,
@@ -29739,20 +29809,7 @@ Level 7
   ],
 
   meaning: "If I don't hurry, I will not finish my work."
-},
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 
 
@@ -36631,8 +36688,6 @@ function l12AnalyzeIntent(rawText) {
 
 
 
-
-
 /* ==========================================================
    ⭐ REPLY GENERATOR (USES INTENT + CONTEXT)
 ========================================================== */
@@ -36640,8 +36695,7 @@ function l12GenerateReply(rawText) {
   const intents = l12AnalyzeIntent(rawText);
   const politeness = l12Context.politeness;
 
-  const polite = (casual, politeForm) =>
-    politeness === "polite" ? politeForm : casual;
+  const pick = (list) => list[Math.floor(Math.random() * list.length)];
 
   const replies = [];
 
@@ -36649,169 +36703,137 @@ function l12GenerateReply(rawText) {
     switch (intent.type) {
 
       case "greeting":
-        replies.push(polite(
-          "こんにちは。きょうはどんなことはなしたい？",
-          "こんにちは。本日はどのようなことをおはなしされたいですか。"
-        ));
+        replies.push(
+          politeness === "polite"
+            ? pick([
+                "こんにちは。本日はどのようなことをおはなしされたいですか。",
+                "こんにちは。本日はなにをおはなしになりますか。",
+                "こんにちは。本日はどのようにすごされていますか。"
+              ])
+            : pick([
+                "こんにちは。きょうはどんなことはなしたい？",
+                "こんにちは。きょうはなにしてるの？",
+                "こんにちは。きょうはどんなきぶん？"
+              ])
+        );
         break;
 
       case "request":
-        replies.push(polite(
-          "うん、いいよ。じゃあじゆうにはなしてみるね。",
-          "はい、かしこまりました。それでは、じゆうにおはなししてみますね。"
-        ));
+        replies.push(
+          politeness === "polite"
+            ? pick([
+                "はい、かしこまりました。それでは、じゆうにおはなししてみますね。",
+                "承知いたしました。では、おはなしをすすめますね。",
+                "はい、わかりました。では、おはなしいたしますね。"
+              ])
+            : pick([
+                "うん、いいよ。じゃあじゆうにはなしてみるね。",
+                "わかったよ。じゃあつづけるね。",
+                "うん、OK。じゃあはなすね。"
+              ])
+        );
         break;
 
       case "ask_status":
-        replies.push(polite(
-          "うん、げんきだよ。きみは？",
-          "はい、おかげさまでげんきです。あなたはいかがですか。"
-        ));
+        replies.push(
+          politeness === "polite"
+            ? pick([
+                "はい、おかげさまでげんきです。あなたはいかがですか。",
+                "はい、げんきにしております。あなたはどうですか。",
+                "はい、問題なくすごしております。あなたは？"
+              ])
+            : pick([
+                "うん、げんきだよ。きみは？",
+                "げんきだよ。そっちは？",
+                "まあまあかな。きみは？"
+              ])
+        );
         break;
 
       case "status_reply":
-        replies.push(polite(
-          "そっか、よかった。きょうはどんなことをはなしたい？",
-          "それはよかったです。本日はどのようなおはなしをされますか。"
-        ));
+        replies.push(
+          politeness === "polite"
+            ? pick([
+                "それはよかったです。本日はどのようなおはなしをされますか。",
+                "それは安心しました。本日はなにをおはなしになりますか。",
+                "それはすてきですね。本日はどんなことをされますか。"
+              ])
+            : pick([
+                "そっか、よかった。きょうはどんなことをはなしたい？",
+                "そっか。じゃあつづきをきかせて。",
+                "よかったね。きょうはなにするの？"
+              ])
+        );
         break;
 
       case "ask_opinion":
-        replies.push(polite(
-          "そうだね…。ぼくはけっこういいとおもうよ。きみは？",
-          "そうですね…。わたしはそのように感じています。あなたはどのようにお考えになりますか。"
-        ));
+        replies.push(
+          politeness === "polite"
+            ? pick([
+                "そうですね…。わたしはそのように感じています。あなたはどうお考えになりますか。",
+                "そうですね…。わたしはそう思います。あなたは？",
+                "なるほど…。わたしはそのように感じますが、あなたはいかがですか。"
+              ])
+            : pick([
+                "そうだね…。ぼくはけっこういいとおもうよ。きみは？",
+                "うーん、わりとすきかな。きみは？",
+                "そうかもね。きみはどうおもう？"
+              ])
+        );
         break;
 
       case "ask_plan":
-        replies.push(polite(
-          "きょう？とくにきまってないよ。きみはなにをするの？",
-          "本日ですか？とくに予定はございません。あなたはどのようにおすごしになりますか。"
-        ));
+        replies.push(
+          politeness === "polite"
+            ? pick([
+                "本日ですか？とくに予定はございません。あなたはどのようにおすごしになりますか。",
+                "本日ですか？まだ決めておりません。あなたはどうされますか。",
+                "本日ですか？ゆっくりすごす予定でございます。あなたは？"
+              ])
+            : pick([
+                "きょう？よていがあまりないよ。きみはなにをするの？",
+                "きょう？とくにきまってないよ。きみはどうするの？",
+                "きょう？まだきめてないんだ。きみは？",
+                "きょう？のんびりすごすつもりだよ。きみは？"
+              ])
+        );
         break;
 
       case "plan_reply":
-        replies.push(polite(
-          "そっか。あとでうんどうするつもりなんだね。いいね！",
-          "そうなんですね。のちほど運動されるご予定なのですね。すてきですね。"
-        ));
+        replies.push(
+          politeness === "polite"
+            ? pick([
+                "そうなんですね。のちほど運動されるご予定なのですね。すてきですね。",
+                "なるほど、あとでご予定があるのですね。よい一日をおすごしください。",
+                "そうですか。ゆっくりすごされるのですね。すてきですね。"
+              ])
+            : pick([
+                "そっか、あとでうんどうするんだね。いいじゃん！",
+                "なるほどね。あとでよていあるんだ。たのしんで！",
+                "そっか。ゆっくりすごすんだね。いいね！"
+              ])
+        );
         break;
 
-      case "cant_help":
-        switch (intent.nuance) {
-          case "zuni": replies.push("うん、そのきもちおさえられないよね。"); break;
-          case "tamaranai": replies.push("すごくつよいきもちなんだね。"); break;
-          case "naranai": replies.push("しぜんとそうかんじちゃうんだね。"); break;
-          case "zaru": replies.push("やらざるをえないじょうきょうなんだね。"); break;
-          case "shikata": replies.push("そうするしかなかったんだね。"); break;
-          default:
-            replies.push("うん、きもちがとまらないかんじなんだね。");
-        }
-        break;
-
-      case "conditional":
-        replies.push(polite(
-          "なるほど、もしそうなったらそうするんだね。",
-          "なるほど、もしそのような状況になったらそうされるごよていなのですね。"
-        ));
-        break;
-
-      case "social_humble":
-        replies.push("ていねいなことばづかいだね。なにかあらたまったようす？");
-        break;
-
-      case "social_honorific":
-        replies.push("けいごがつかわれているね。だれかにたいしてのはなし？");
-        break;
-
-      case "thanks":
-        replies.push(polite(
-          "どういたしまして。そういってもらえてうれしいよ。",
-          "どういたしまして。そのように言っていただけてうれしいです。"
-        ));
-        break;
-
-      case "apology":
-        replies.push(polite(
-          "だいじょうぶだよ。なにがあったの？",
-          "だいじょうぶですよ。なにがあったのか、おはなししていただけますか。"
-        ));
-        break;
-
-      case "tired":
-        replies.push(polite(
-          "つかれたんだね。すこしやすみながらはなそうか。",
-          "おつかれなんですね。すこしやすみながらおはなししましょうか。"
-        ));
-        break;
-
-      case "happy":
-        replies.push(polite(
-          "いいね！そのきもち、もっときかせて。",
-          "それはすてきですね。そのお気持ちを、もうすこしくわしくおきかせください。"
-        ));
-        break;
-
-      case "sad":
-        replies.push(polite(
-          "そっか…。つらかったね。よかったら、もうすこしはなしてみて。",
-          "そうでしたか…。つらかったですね。よろしければ、もうすこしくわしくおはなしください。"
-        ));
-        break;
-
-      case "angry":
-        replies.push(polite(
-          "おこってるみたいだね。なにがあったのか、ゆっくりきかせて。",
-          "おこっていらっしゃるようですね。なにがあったのか、ゆっくりおはなししていただけますか。"
-        ));
-        break;
-
-      case "ask_preference":
-        replies.push(polite(
-          "ぼくはコーヒーがすきかな。きみは？",
-          "わたしはコーヒーがすきですね。あなたはなにがおすきですか。"
-        ));
-        break;
-
-      case "yesno_question":
-        replies.push(polite(
-          "うーん、どうだろうね。きみはどうおもう？",
-          "そうですね…。あなたはどうおおもいになりますか。"
-        ));
-        break;
-
-      case "food_drink":
-        replies.push(polite(
-          "たべもののはなし、いいね。きみのすきなものはなに？",
-          "たべもののはなしはたのしいですね。あなたのおすきなものはなんですか。"
-        ));
-        break;
-
-      case "study":
-        replies.push(polite(
-          "にほんごのべんきょう、えらいね。いまどんなことをしてるの？",
-          "にほんごのべんきょうをされているんですね。いまはどのようなことをしていらっしゃいますか。"
-        ));
-        break;
-
-      case "voice":
-        if (intent.voice === "causative") replies.push("だれかに〜させるっていうはなしなんだね。");
-        else if (intent.voice === "passive") replies.push("〜されるほうのきもちなんだね。");
-        else if (intent.voice === "causative_passive") replies.push("むりやりやらされてるかんじなのかな。");
-        else replies.push("そのこうどうのうらに、いろんなきもちがありそうだね。");
-        break;
-
-      case "free":
       default:
-        replies.push(polite(
-          "なるほどね。つづきをきかせて。",
-          "なるほど、そうなのですね。よろしければ、つづきもおきかせください。"
-        ));
+        replies.push(
+          politeness === "polite"
+            ? pick([
+                "なるほど…。もうすこしおはなしをきかせていただけますか。",
+                "そうなのですね…。よろしければ、つづきをおしえてください。",
+                "かしこまりました…。もうすこしおはなしをうかがってもよろしいですか。"
+              ])
+            : pick([
+                "なるほどね…。もうちょっときかせて！",
+                "そっか…。つづきおしえて！",
+                "へえ…。もっとはなしてみて！"
+              ])
+        );
         break;
     }
   }
 
-  return replies.join("\n");
+  return replies.length > 0 ? pick(replies) : "なるほどね。もうすこしおしえて！";
 }
 
 
@@ -37796,10 +37818,10 @@ if (!level12Btn) {
 
       localStorage.setItem("premiumUnlock", "true");
 
-      startLevel12(); // ⭐ Activate Level 12 FIRST
-
       document.querySelectorAll(".screen").forEach(s => s.classList.add("hidden"));
-      document.getElementById("level12Screen")?.classList.remove("hidden");
+document.getElementById("level12Screen")?.classList.remove("hidden");
+
+startLevel12(); // ⭐ correct order
 
       return;
     }
@@ -37807,5 +37829,6 @@ if (!level12Btn) {
     alert("Level 12 is locked. Premium required.");
     window.location.href = "membership.html";
   });
+            
 }
 });
