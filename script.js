@@ -14229,6 +14229,26 @@ const level3Sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
   id: "l3-17",
   meaning: "The cat scratched the door, and then the door opened immediately.",
@@ -15922,6 +15942,24 @@ id: "l3-36",
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
 id: "l3-37",
   meaning: "How did you get here?",
@@ -33125,6 +33163,121 @@ const level9Data = [
 
 
 
+{
+  id: "l9_018",
+  level: 9,
+
+  japanese: {
+    text: "おんがくを きくと、こころが ぬくもりと よろこびを どうしても かんじてしまう。",
+    audio: "audio/sentences/nuance18.wav"
+  },
+
+  paraphraseOptions: buildNuanceOptions(
+    "おんがくを きくと、こころが ぬくもりと よろこびを どうしても かんじてしまう",
+    "おんがくを きくと、こころが ぬくもりと よろこびを かんじずには いられない",
+    "ずにはいられない"
+  ),
+
+  summaryChunks: [
+    { hiragana: "おんがくを きくと", romaji: "ongaku o kiku to", english: "when I listen to music" },
+    { hiragana: "こころが ぬくもりと よろこび", romaji: "kokoro ga nukumori to yorokobi", english: "warmth and joy fill my heart" },
+    { hiragana: "かんじずには いられない", romaji: "kanjizu niwa irarenai", english: "I can’t help but feel it" }
+  ],
+
+  meaning: "When I listen to music, I can’t help but feel warmth and joy in my heart."
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l9_019",
+  level: 9,
+
+  japanese: {
+    text: "がっこうで むすめが しょうを もらうのを みると、ぼくは こころが どうしても ほこりに おもってしまう。",
+    audio: "audio/sentences/nuance19.wav"
+  },
+
+  paraphraseOptions: buildNuanceOptions(
+    "がっこうで むすめが しょうを もらうのを みると、ぼくは こころが どうしても ほこりに おもってしまう",
+    "がっこうで むすめが しょうを もらうのを みると、ぼくは こころが ほこりに おもわずには いられなかった",
+    "ずにはいられない"
+  ),
+
+  summaryChunks: [
+    { hiragana: "しょうを もらうのを みると", romaji: "shou o morau no o miru to", english: "when I see her receive an award" },
+    { hiragana: "こころが ほこりに おもう", romaji: "kokoro ga hokori ni omou", english: "feel proud in my heart" },
+    { hiragana: "おもわずには いられない", romaji: "omowazu niwa irarenai", english: "I can’t help but feel it" }
+  ],
+
+  meaning: "When I see my daughter receive an award at school, I can’t help but feel proud."
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l9_020",
+  level: 9,
+
+  japanese: {
+    text: "むすめを すくすくと はえていくのを ながめると、ぼくは こころが ぬくもりを どうしても かんじてしまう。",
+    audio: "audio/sentences/nuance20.wav"
+  },
+
+  paraphraseOptions: buildNuanceOptions(
+    "むすめを すくすくと はえていくのを ながめると、ぼくは こころが ぬくもりを どうしても かんじてしまう",
+    "むすめを すくすくと はえていくのを ながめると、ぼくは こころが ぬくもりを かんじずには いられない",
+    "ずにはいられない"
+  ),
+
+  summaryChunks: [
+    { hiragana: "すくすくと はえていくのを ながめると", romaji: "sukusuku to haete iku no o nagameru to", english: "when I watch her grow so quickly" },
+    { hiragana: "こころが ぬくもりを かんじる", romaji: "kokoro ga nukumori o kanjiru", english: "my heart feels warmth" },
+    { hiragana: "かんじずには いられない", romaji: "kanjizu niwa irarenai", english: "I can’t help but feel it" }
+  ],
+
+  meaning: "When I watch my daughter grow so quickly, I can’t help but feel warmth in my heart."
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ];
 
@@ -34732,7 +34885,131 @@ const level10Data = [
 
   meaning:
     "A patient approaches the doctor to consult about something. Because their physical condition has greatly improved, they politely ask if they may be discharged from the hospital today. The honorific version uses very formal expressions such as ご相談する, 申し上げる, and 〜させていただく."
-}
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l10_s9",
+  level: 10,
+
+  japanese: {
+    polite: {
+      text:
+        "おやは せんせいに はなしを したくて ちかづいて、こう いいます。むすめが さいきん とても がんばっていますので、すこし おはなしする じかんを いただけますか。",
+      audio: "audio/sentences/register17.wav"
+    },
+
+    honorific: {
+      text:
+        "おやは せんせいに ごはなしを したくて ちかづいて、こう 申し上げます。むすめが さいきん とても がんばっておりますので、すこし おはなしする じかんを いただけませんでしょうか。",
+      audio: "audio/sentences/register18.wav"
+    }
+  },
+
+  paraphraseOptions: [
+    { text: "すこし おはなしする じかんを いただけますか。", correct: true },
+
+    { text: "むすめは がんばっていません。", correct: false },
+    { text: "せんせいとは はなしを したくありません。", correct: false },
+    { text: "じかんは いりません。", correct: false },
+    { text: "あした また きます。", correct: false }
+  ],
+
+  summaryChunks: [
+    { hiragana: "おや", romaji: "oya", english: "parent" },
+    { hiragana: "せんせい", romaji: "sensei", english: "teacher" },
+    { hiragana: "がんばっています", romaji: "ganbatte imasu", english: "is working hard" },
+    { hiragana: "おはなしする じかん", romaji: "ohanashi suru jikan", english: "time to talk" },
+    { hiragana: "いただけますか", romaji: "itadakemasu ka", english: "may I receive / could you give me" }
+  ],
+
+  correctAnswerChunks: [
+    { hiragana: "すこし", romaji: "sukoshi", english: "a little / some" },
+    { hiragana: "おはなしする じかん", romaji: "ohanashi suru jikan", english: "time to talk" },
+    { hiragana: "いただけますか", romaji: "itadakemasu ka", english: "may I receive / could you give me" }
+  ],
+
+  meaning:
+    "A parent approaches the teacher wanting to talk. Because their daughter has been working very hard recently, they politely ask if they could have a little time to speak. The honorific version uses very formal expressions such as ごはなし, 申し上げる, and 〜いただけませんでしょうか."
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l10_s10",
+  level: 10,
+
+  japanese: {
+    polite: {
+      text:
+        "しゃいんは ぶちょうに はなしを したくて ちかづいて、こう いいます。きのうの プロジェクトの しりょうが まとまりましたので、すこし ごてんけん いただけますか。",
+      audio: "audio/sentences/register19.wav"
+    },
+
+    honorific: {
+      text:
+        "しゃいんは ぶちょうに ごはなしを したくて ちかづいて、こう 申し上げます。きのうの プロジェクトの しりょうが まとまりましたので、すこし ごてんけん いただけませんでしょうか。",
+      audio: "audio/sentences/register20.wav"
+    }
+  },
+
+  paraphraseOptions: [
+    { text: "しりょうを ごてんけん いただけますか。", correct: true },
+
+    { text: "しりょうは まとまっていません。", correct: false },
+    { text: "ぶちょうとは はなしを したくありません。", correct: false },
+    { text: "てんけんは いりません。", correct: false },
+    { text: "あした また つくります。", correct: false }
+  ],
+
+  summaryChunks: [
+    { hiragana: "しゃいん", romaji: "shain", english: "employee" },
+    { hiragana: "ぶちょう", romaji: "buchou", english: "department manager" },
+    { hiragana: "しりょう", romaji: "shiryou", english: "documents / materials" },
+    { hiragana: "まとまりました", romaji: "matomarimashita", english: "have been completed" },
+    { hiragana: "ごてんけん", romaji: "gotenken", english: "inspection / review (honorific)" },
+    { hiragana: "いただけますか", romaji: "itadakemasu ka", english: "may I receive / could you give me" }
+  ],
+
+  correctAnswerChunks: [
+    { hiragana: "しりょう", romaji: "shiryou", english: "documents" },
+    { hiragana: "ごてんけん いただけますか", romaji: "gotenken itadakemasu ka", english: "may I ask you to review them" }
+  ],
+
+  meaning:
+    "An employee approaches the department manager wanting to talk. Because the project documents were completed yesterday, they politely ask if the manager could review them. The honorific version uses very formal expressions such as ごはなし, 申し上げます, and 〜いただけませんでしょうか."
+},
 
 
 
@@ -35907,6 +36184,70 @@ const interjectionScenario = {
 };
 
 
+
+const storeHelpScenario = {
+  id: "l11_scenario_03",
+  title: "Asking for Help in a Store",
+  description: "Ask a store clerk for help finding an item and respond naturally.",
+  systemTurns: [
+    {
+      jp: "すみません、なにをおさがしですか？",
+      expected: [
+        "ティッシュをさがしています",
+        "ティッシュをさがしているんですが",
+        "ティッシュありますか",
+
+        // romaji
+        "tisshu wo sagashiteimasu",
+        "tisshu wo sagashiteirun desu ga",
+        "tisshu arimasu ka"
+      ],
+      correction: "しぜんな言い方は「ティッシュをさがしています。」です。"
+    },
+    {
+      jp: "ティッシュはあちらのかどのラックにありますよ。",
+      expected: [
+        "ありがとうございます",
+        "あ、ありがとうございます",
+        "わかりました",
+
+        // romaji
+        "arigatou gozaimasu",
+        "a arigatou gozaimasu",
+        "wakarimashita"
+      ],
+      correction: "「ありがとうございます。」がいちばんしぜんです。"
+    },
+    {
+      jp: "ほかにおてつだいできることはありますか？",
+      expected: [
+        "だいじょうぶです",
+        "だいじょうぶですありがとう",
+        "もうだいじょうぶです",
+
+        // romaji
+        "daijoubu desu",
+        "daijoubu desu arigatou",
+        "mou daijoubu desu"
+      ],
+      correction: "「だいじょうぶです。」がしぜんです。"
+    },
+    {
+      jp: "かしこまりました。ごゆっくりどうぞ。",
+      expected: [
+        "はい",
+        "ありがとうございます",
+
+        // romaji
+        "hai",
+        "arigatou gozaimasu"
+      ],
+      correction: null
+    }
+  ]
+};
+
+
 /* ---------------------------------------------------------
   Converter
 --------------------------------------------------------- */
@@ -36265,6 +36606,7 @@ function loadScenario(scenario) {
 
 const cafeBtn = document.getElementById("cafeBtn");
 const interjectionBtn = document.getElementById("interjectionBtn");
+const storeHelpBtn = document.getElementById("storeHelpBtn");
 
 if (cafeBtn) {
   cafeBtn.onclick = () => {
@@ -36281,6 +36623,16 @@ if (interjectionBtn) {
     startLevel11(currentScenario);
   };
 }
+
+
+if (storeHelpBtn) {
+  storeHelpBtn.onclick = () => {
+    loadScenario(storeHelpScenario);
+    showScreen("level11Screen");
+    startLevel11(currentScenario);
+  };
+}
+
 
 /*------------------------------------------------------------------------------------
 Dynamic Level 11 Home Button
