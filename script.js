@@ -37419,21 +37419,76 @@ function l12AnalyzeIntent(rawText) {
     let type = "free";
     let nuance = null;
 
-    if (/こんにちは|やあ|もしもし/.test(t)) type = "greeting";
-    else if (/してみて|はなして/.test(t)) type = "request";
-    else if (/げんき|元気/.test(t) && /か/.test(t)) type = "ask_status";
-    else if (/よかった/.test(t)) type = "status_reply";
-    else if (/どうおもう|どう思う|意見/.test(t)) type = "ask_opinion";
-    else if (/なにをする|何をする|予定/.test(t)) type = "ask_plan";
-    else if (/するつもり/.test(t)) type = "plan_reply";
+    // --------------------------------------------------
+    // BASIC INTENTS
+    // --------------------------------------------------
+    if (/こんにちは|やあ|もしもし/.test(t)) {
+      type = "greeting";
 
-    // can't-help nuances
-    if (/ずにはいられない/.test(t)) { type = "cant_help"; nuance = "zuni"; }
-    else if (/てたまらない/.test(t)) { type = "cant_help"; nuance = "tamaranai"; }
-    else if (/てならない/.test(t)) { type = "cant_help"; nuance = "naranai"; }
-    else if (/ざるをえない/.test(t)) { type = "cant_help"; nuance = "zaru"; }
-    else if (/てしかたがない/.test(t)) { type = "cant_help"; nuance = "shikata"; }
+    } else if (/してみて|はなして/.test(t)) {
+      type = "request";
 
+    } else if (/げんき|元気/.test(t) && /か/.test(t)) {
+      type = "ask_status";
+
+    } else if (/よかった/.test(t)) {
+      type = "status_reply";
+
+    } else if (/どうおもう|どう思う|意見/.test(t)) {
+      type = "ask_opinion";
+
+    } else if (/なにをする|何をする|予定/.test(t)) {
+      type = "ask_plan";
+
+    } else if (/するつもり/.test(t)) {
+      type = "plan_reply";
+    }
+
+    // --------------------------------------------------
+    // DAY STATUS (NEW)
+    // --------------------------------------------------
+    if (/いちにち|一日/.test(t) && /どう/.test(t)) {
+      type = "ask_day_status";
+    }
+
+    // --------------------------------------------------
+    // NEGATIVE / RELUCTANT PLAN (NEW)
+    // --------------------------------------------------
+    if (
+      /むり|むりやり|いや|つら|しんど/.test(t) ||
+      /muriyari/.test(t) ||
+      /hataraku tsumori/.test(t)
+    ) {
+      type = "negative_plan";
+    }
+
+    // --------------------------------------------------
+    // CAN'T-HELP EMOTIONAL NUANCES
+    // --------------------------------------------------
+    if (/ずにはいられない/.test(t)) {
+      type = "cant_help";
+      nuance = "zuni";
+
+    } else if (/てたまらない/.test(t)) {
+      type = "cant_help";
+      nuance = "tamaranai";
+
+    } else if (/てならない/.test(t)) {
+      type = "cant_help";
+      nuance = "naranai";
+
+    } else if (/ざるをえない/.test(t)) {
+      type = "cant_help";
+      nuance = "zaru";
+
+    } else if (/てしかたがない/.test(t)) {
+      type = "cant_help";
+      nuance = "shikata";
+    }
+
+    // --------------------------------------------------
+    // RESULT OBJECT
+    // --------------------------------------------------
     results.push({
       type,
       nuance,
@@ -37450,6 +37505,9 @@ function l12AnalyzeIntent(rawText) {
 
 
 
+
+
+
 /* ==========================================================
    ⭐ REPLY GENERATOR (USES INTENT + CONTEXT)
 ========================================================== */
@@ -37458,12 +37516,14 @@ function l12GenerateReply(rawText) {
   const politeness = l12Context.politeness;
 
   const pick = (list) => list[Math.floor(Math.random() * list.length)];
-
   const replies = [];
 
   for (const intent of intents) {
     switch (intent.type) {
 
+      // --------------------------------------------------
+      // GREETING
+      // --------------------------------------------------
       case "greeting":
         replies.push(
           politeness === "polite"
@@ -37480,6 +37540,9 @@ function l12GenerateReply(rawText) {
         );
         break;
 
+      // --------------------------------------------------
+      // REQUEST
+      // --------------------------------------------------
       case "request":
         replies.push(
           politeness === "polite"
@@ -37491,11 +37554,14 @@ function l12GenerateReply(rawText) {
             : pick([
                 "うん、いいよ。じゃあじゆうにはなしてみるね。",
                 "わかったよ。じゃあつづけるね。",
-                "うん、OK。じゃあはなすね。"
+                "うん、OK。じゃあはなすね."
               ])
         );
         break;
 
+      // --------------------------------------------------
+      // ASK STATUS
+      // --------------------------------------------------
       case "ask_status":
         replies.push(
           politeness === "polite"
@@ -37512,6 +37578,28 @@ function l12GenerateReply(rawText) {
         );
         break;
 
+      // --------------------------------------------------
+      // ASK DAY STATUS (NEW)
+      // --------------------------------------------------
+      case "ask_day_status":
+        replies.push(
+          politeness === "polite"
+            ? pick([
+                "本日はおだやかにすごしております。あなたはいかがですか。",
+                "本日はわりと順調にすごしております。あなたはどのような一日ですか。",
+                "本日はとくに問題なくすごしております。あなたは？"
+              ])
+            : pick([
+                "きょうはまあまあかな。きみは？",
+                "きょうはふつうだよ。そっちは？",
+                "きょうはわりといいよ。きみは？"
+              ])
+        );
+        break;
+
+      // --------------------------------------------------
+      // STATUS REPLY
+      // --------------------------------------------------
       case "status_reply":
         replies.push(
           politeness === "polite"
@@ -37528,6 +37616,9 @@ function l12GenerateReply(rawText) {
         );
         break;
 
+      // --------------------------------------------------
+      // ASK OPINION
+      // --------------------------------------------------
       case "ask_opinion":
         replies.push(
           politeness === "polite"
@@ -37544,6 +37635,9 @@ function l12GenerateReply(rawText) {
         );
         break;
 
+      // --------------------------------------------------
+      // ASK PLAN
+      // --------------------------------------------------
       case "ask_plan":
         replies.push(
           politeness === "polite"
@@ -37561,6 +37655,9 @@ function l12GenerateReply(rawText) {
         );
         break;
 
+      // --------------------------------------------------
+      // PLAN REPLY
+      // --------------------------------------------------
       case "plan_reply":
         replies.push(
           politeness === "polite"
@@ -37577,6 +37674,28 @@ function l12GenerateReply(rawText) {
         );
         break;
 
+      // --------------------------------------------------
+      // NEGATIVE PLAN
+      // --------------------------------------------------
+      case "negative_plan":
+        replies.push(
+          politeness === "polite"
+            ? pick([
+                "そうなのですね…。たいへんそうですが、むりをなさらないでくださいね。",
+                "なるほど…。おしごとたいへんそうですね。ごむりのないように。",
+                "そうですか…。つらいときはすこしやすむこともたいせつですよ。"
+              ])
+            : pick([
+                "そっか…。むりしないでね。",
+                "たいへんだね…。すこしでもやすめるといいけど。",
+                "そっか…。がんばりすぎないようにね。"
+              ])
+        );
+        break;
+
+      // --------------------------------------------------
+      // DEFAULT
+      // --------------------------------------------------
       default:
         replies.push(
           politeness === "polite"
@@ -37597,6 +37716,8 @@ function l12GenerateReply(rawText) {
 
   return replies.length > 0 ? pick(replies) : "なるほどね。もうすこしおしえて！";
 }
+
+
 
 
 
