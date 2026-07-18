@@ -35024,6 +35024,297 @@ const level10Data = [
 
 
 
+
+
+
+{
+  id: "l10_s11",
+  level: 10,
+
+  japanese: {
+    polite: {
+      text:
+        "おきゃくさまは ホテルのスタッフに はなしを したくて ちかづいて、こう いいます。もし かのうでしたら、へやを もうすこし ひろいタイプに かえて いただけますか。",
+      audio: "audio/sentences/register21.wav"
+    },
+
+    honorific: {
+      text:
+        "おきゃくさまは ホテルのスタッフに ごはなしを したくて ちかづいて、こう 申し上げます。もし かのうでございましたら、へやを もうすこし ひろいタイプに おかえいただけませんでしょうか。",
+      audio: "audio/sentences/register22.wav"
+    }
+  },
+
+  paraphraseOptions: [
+    { text: "へやを ひろいタイプに おかえいただけますか。", correct: true },
+
+    { text: "へやは このままで いいです。", correct: false },
+    { text: "かえる ひつようは ありません。", correct: false },
+    { text: "ホテルには とまりません。", correct: false },
+    { text: "ひろいへやは ありません。", correct: false }
+  ],
+
+  summaryChunks: [
+    { hiragana: "おきゃくさま", romaji: "okyakusama", english: "customer / guest (honorific)" },
+    { hiragana: "スタッフ", romaji: "sutaffu", english: "staff" },
+    { hiragana: "へや", romaji: "heya", english: "room" },
+    { hiragana: "かえる", romaji: "kaeru", english: "to change (something)" },
+    { hiragana: "ひろいタイプ", romaji: "hiroi taipu", english: "larger type" },
+    { hiragana: "おかえいただく", romaji: "okae itadaku", english: "honorific 'to change' (receive the action)" }
+  ],
+
+  correctAnswerChunks: [
+    { hiragana: "ひろいタイプ", romaji: "hiroi taipu", english: "larger type" },
+    { hiragana: "おかえいただけますか", romaji: "okae itadakemasu ka", english: "may I ask you to change it" }
+  ],
+
+  meaning:
+    "A hotel guest approaches a staff member wanting to talk. They politely ask if it would be possible to change their room to a larger type. The honorific version uses very formal expressions such as ごはなし, 申し上げます, and おかえいただけませんでしょうか to reflect the staff’s respectful language toward the guest."
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l10_s12",
+  level: 10,
+
+  japanese: {
+    polite: {
+      text:
+        "うぇいたーは おきゃくさまに はなしを したくて ちかづいて、こう いいます。すこし おまちいただいて おりましたが、もし よろしければ、こちらの せきに うつって いただけますか。",
+      audio: "audio/sentences/register23.wav"
+    },
+
+    honorific: {
+      text:
+        "うぇいたーは おきゃくさまに ごはなしを したくて ちかづいて、こう もうしあげます。すこし おまちいただいて おりましたが、もし よろしければ、こちらの せきに おうつりいただけませんでしょうか。",
+      audio: "audio/sentences/register24.wav"
+    }
+  },
+
+  paraphraseOptions: [
+    { text: "こちらの せきに おうつりいただけますか。", correct: true },
+
+    { text: "せきは かえられません。", correct: false },
+    { text: "ここで まちつづけます。", correct: false },
+    { text: "おきゃくさまは すわりたくありません。", correct: false },
+    { text: "せきは ありません。", correct: false }
+  ],
+
+  summaryChunks: [
+    { hiragana: "うぇいたー", romaji: "ueitaa", english: "waiter" },
+    { hiragana: "おきゃくさま", romaji: "okyakusama", english: "customer (honorific)" },
+    { hiragana: "せき", romaji: "seki", english: "seat" },
+    { hiragana: "うつる", romaji: "utsuru", english: "to move (to another place)" },
+    { hiragana: "おうつりいただく", romaji: "outsuri itadaku", english: "honorific 'to move'" },
+    { hiragana: "おまちいただく", romaji: "omachi itadaku", english: "to wait (honorific)" }
+  ],
+
+  correctAnswerChunks: [
+    { hiragana: "こちらの せき", romaji: "kochira no seki", english: "this seat" },
+    { hiragana: "おうつりいただけますか", romaji: "outsuri itadakemasu ka", english: "may I ask you to move here" }
+  ],
+
+  meaning:
+    "A waiter approaches a customer to speak. After mentioning that the customer has been waiting, the waiter politely asks if they could move to a different seat. The honorific version uses expressions such as ごはなし, もうしあげます, おまちいただく, and おうつりいただけませんでしょうか to show respect toward the customer."
+},
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l10_s13",
+  level: 10,
+
+  japanese: {
+    polite: {
+      text:
+        "てんいんは おきゃくさまに おねがいが あって ちかづいて、こう いいます。こちらの しょうひんを ごらんいただいて おりましたが、もし よろしければ、さいごに かくにんを させて いただけますか。",
+      audio: "audio/sentences/register25.wav"
+    },
+
+    honorific: {
+      text:
+        "てんいんは お客様に お願いが ございまして ちかづき、こう もうしあげます。こちらの 商品を ご覧いただいて おりましたが、もし よろしければ、さいごに ご確認を させていただけませんでしょうか。",
+      audio: "audio/sentences/register26.wav"
+    }
+  },
+
+  paraphraseOptions: [
+    { text: "さいごに ごかくにんを させていただけますか。", correct: true },
+
+    { text: "かくにんは いりません。", correct: false },
+    { text: "しょうひんは みません。", correct: false },
+    { text: "あとで きます。", correct: false },
+    { text: "てんいんでは ありません。", correct: false }
+  ],
+
+  summaryChunks: [
+    { hiragana: "てんいん", romaji: "ten'in", english: "store clerk" },
+    { hiragana: "しょうひん", romaji: "shouhin", english: "product / item" },
+    { hiragana: "ごらんいただく", romaji: "goran itadaku", english: "to look (honorific)" },
+    { hiragana: "かくにん", romaji: "kakunin", english: "confirmation" },
+    { hiragana: "ごかくにん", romaji: "go-kakunin", english: "honorific confirmation" },
+    { hiragana: "させていただく", romaji: "sasete itadaku", english: "to humbly do" }
+  ],
+
+  correctAnswerChunks: [
+    { hiragana: "さいごに ごかくにん", romaji: "saigo ni go-kakunin", english: "final confirmation" },
+    { hiragana: "させていただけますか", romaji: "sasete itadakemasu ka", english: "may I humbly do" }
+  ],
+
+  meaning:
+    "A store clerk approaches a customer with a request. After noting that the customer has been looking at a product, the clerk politely asks if they may perform a final confirmation. The honorific version uses expressions such as ご覧いただく, お願いがございます, and ご確認をさせていただけませんでしょうか to show respect toward the customer."
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l10_s14",
+  level: 10,
+
+  japanese: {
+    polite: {
+      text:
+        "てんいんは おきゃくさまに はなしかけたくて ちかづいて、こう いいます。しょうひんを ごらんいただいて おりましたが、もし よろしければ、こちらの べつの しょうひんを しょうかい させて いただけますか。",
+      audio: "audio/sentences/register27.wav"
+    },
+
+    honorific: {
+      text:
+        "てんいんは おきゃくさまに はなしかけたくて ちかづき、こう もうしあげます。しょうひんを ごらんいただいて おりましたが、もし よろしければ、こちらの べつの しょうひんを ごしょうかい させて いただけませんでしょうか。",
+      audio: "audio/sentences/register28.wav"
+    }
+  },
+
+  paraphraseOptions: [
+    { text: "べつの しょうひんを ごしょうかい させて いただけますか。", correct: true },
+
+    { text: "しょうひんは みたくありません。", correct: false },
+    { text: "しょうかいは いりません。", correct: false },
+    { text: "ここで まちます。", correct: false },
+    { text: "てんいんでは ありません。", correct: false }
+  ],
+
+  summaryChunks: [
+    { hiragana: "てんいん", romaji: "ten'in", english: "store clerk" },
+    { hiragana: "しょうひん", romaji: "shouhin", english: "product / item" },
+    { hiragana: "ごらんいただく", romaji: "goran itadaku", english: "to graciously look" },
+    { hiragana: "しょうかい", romaji: "shoukai", english: "introduction" },
+    { hiragana: "ごしょうかい", romaji: "goshoukai", english: "honorific introduction" },
+    { hiragana: "させていただく", romaji: "sasete itadaku", english: "to humbly do" }
+  ],
+
+  correctAnswerChunks: [
+    { hiragana: "べつの しょうひん", romaji: "betsu no shouhin", english: "another product" },
+    { hiragana: "ごしょうかい させて いただけますか", romaji: "goshoukai sasete itadakemasu ka", english: "may I humbly introduce it" }
+  ],
+
+  meaning:
+    "A store clerk approaches a customer who has been looking at a product. Using polite language, the clerk asks if they may introduce another item. The honorific version uses forms such as ごらんいただく, もうしあげます, and ごしょうかいさせていただけませんでしょうか to show respect toward the customer while humbling the speaker."
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l10_s15",
+  level: 10,
+
+  japanese: {
+    polite: {
+      text:
+        "てんいんは おきゃくさまに はなしかけたくて ちかづいて、こう いいます。ながいあいだ おまちいただいて おりましたが、もし よろしければ、こちらで てつづきを つづけさせて いただけますか。",
+      audio: "audio/sentences/register29.wav"
+    },
+
+    honorific: {
+      text:
+        "てんいんは おきゃくさまに はなしかけたくて ちかづき、こう もうしあげます。ながいあいだ おまちいただいて おりましたが、もし よろしければ、こちらで ごてつづきを つづけさせて いただけませんでしょうか。",
+      audio: "audio/sentences/register30.wav"
+    }
+  },
+
+  paraphraseOptions: [
+    { text: "こちらで ごてつづきを つづけさせて いただけますか。", correct: true },
+
+    { text: "てつづきは しません。", correct: false },
+    { text: "まだ まちつづけます。", correct: false },
+    { text: "ここでは できません。", correct: false },
+    { text: "てんいんでは ありません。", correct: false }
+  ],
+
+  summaryChunks: [
+    { hiragana: "おまちいただく", romaji: "omachi itadaku", english: "to graciously wait" },
+    { hiragana: "てつづき", romaji: "tetsuzuki", english: "procedure / process" },
+    { hiragana: "ごてつづき", romaji: "gotetsuzuki", english: "honorific procedure" },
+    { hiragana: "つづける", romaji: "tsuzukeru", english: "to continue" },
+    { hiragana: "させていただく", romaji: "sasete itadaku", english: "to humbly do" },
+    { hiragana: "もうしあげる", romaji: "moushiageru", english: "to humbly say" }
+  ],
+
+  correctAnswerChunks: [
+    { hiragana: "こちらで ごてつづき", romaji: "kochira de gotetsuzuki", english: "the procedure here" },
+    { hiragana: "つづけさせて いただけますか", romaji: "tsuzukesasete itadakemasu ka", english: "may I continue it" }
+  ],
+
+  meaning:
+    "A store clerk approaches a customer who has been waiting for a long time. Using polite language, the clerk asks if they may continue the procedure here. The honorific version uses forms such as おまちいただく, ごてつづき, もうしあげます, and つづけさせていただけませんでしょうか to show respect toward the customer while humbling the speaker."
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 /* ==========================================================
    ⭐ LEVEL 10 — CORE STATE (FULLY ISOLATED)
