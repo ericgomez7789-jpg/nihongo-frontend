@@ -34496,7 +34496,9 @@ Level10
 ========================================================== */
 
 const level10Data = [
-{
+
+
+ {
   id: "l10_s1",
   level: 10,
 
@@ -34513,30 +34515,42 @@ const level10Data = [
     }
   },
 
+  // ⭐ reply-mode: student gives polite response
   paraphraseOptions: [
-    { text: "はい、ぜんぶ やってきました。", correct: true },
+    { text: "はい、やってきました。", correct: true },
+
     { text: "うん、やったよ。", correct: false },
-    { text: "はい、やらせて いただきました。", correct: false },
-    { text: "はい、せんせいが やりました。", correct: false },
-    { text: "まあ、だいたいね。", correct: false }
+    { text: "まあ、すこしだけ です。", correct: false },
+    { text: "まだ できていません。", correct: false },
+    { text: "しゅくだいは ありません。", correct: false }
   ],
 
   summaryChunks: [
-    { hiragana: "じゅぎょうが はじまるまえ", romaji: "jugyou ga hajimaru mae", english: "before class begins" },
-    { hiragana: "きょうしつで あいました", romaji: "kyoushitsu de aimashita", english: "met in the classroom" },
-    { hiragana: "しゅくだいは やってきましたか", romaji: "shukudai wa yatte kimashita ka", english: "did you do your homework?" },
-    { hiragana: "つぎに なにを いいますか", romaji: "tsugi ni nani o iimasu ka", english: "what do you say next?" }
+    { hiragana: "しゅくだい", romaji: "shukudai", english: "homework" },
+    { hiragana: "やってきましたか", romaji: "yatte kimashita ka", english: "did you do it?" },
+    { hiragana: "はい", romaji: "hai", english: "yes" },
+    { hiragana: "やってきました", romaji: "yatte kimashita", english: "I did it" }
   ],
 
+  // ⭐ reply-mode: student’s polite acceptance
   correctAnswerChunks: [
     { hiragana: "はい", romaji: "hai", english: "yes" },
-    { hiragana: "ぜんぶ", romaji: "zenbu", english: "all of it" },
-    { hiragana: "やってきました", romaji: "yatte kimashita", english: "I completed it" }
+    { hiragana: "やってきました", romaji: "yatte kimashita", english: "I did it" }
   ],
 
   meaning:
-    "Before class began today, the teacher met the student in the classroom and asked whether the homework was done. What would you say next?"
+    "Before class began, the teacher asked the student whether the homework was done. In reply mode, the student responds naturally and politely: 「はい、やってきました。」."
 },
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -34559,32 +34573,45 @@ const level10Data = [
     }
   },
 
+  // ⭐ reply-mode: patron gives polite response
   paraphraseOptions: [
-    { text: "はい、このへんの にほんしの ほんを さがしています。", correct: true },
-    { text: "うん、なんか ある？", correct: false },
-    { text: "はい、さがさせて いただいております。", correct: false },
-    { text: "いいえ、あなたが さがしてください。", correct: false },
-    { text: "まあ、べつに どれでも いいです。", correct: false }
+    { text: "はい、あります。", correct: true },
+
+    { text: "いいえ、ありません。", correct: false },
+    { text: "わかりません。", correct: false },
+    { text: "あとで ききます。", correct: false },
+    { text: "しょくいんさんでは ありません。", correct: false }
   ],
 
   summaryChunks: [
-    { hiragana: "としょかんで", romaji: "toshokan de", english: "at the library" },
-    { hiragana: "しずかに べんきょうしていると", romaji: "shizuka ni benkyou shite iru to", english: "studying quietly" },
-    { hiragana: "しょくいんさんが きいてきました", romaji: "shokuin-san ga kiite kimashita", english: "a staff member asked" },
-    { hiragana: "さがしている ほんは ありますか", romaji: "sagashite iru hon wa arimasu ka", english: "is there a book you're looking for?" },
-    { hiragana: "つぎに なにを いいますか", romaji: "tsugi ni nani o iimasu ka", english: "what do you say next?" }
+    { hiragana: "としょかん", romaji: "toshokan", english: "library" },
+    { hiragana: "しょくいんさん", romaji: "shokuin-san", english: "staff member" },
+    { hiragana: "さがしている", romaji: "sagashite iru", english: "looking for" },
+    { hiragana: "ほん", romaji: "hon", english: "book" },
+    { hiragana: "あります", romaji: "arimasu", english: "there is / I have it" }
   ],
 
+  // ⭐ reply-mode: patron’s polite acceptance
   correctAnswerChunks: [
     { hiragana: "はい", romaji: "hai", english: "yes" },
-    { hiragana: "このへんの", romaji: "kono hen no", english: "around here" },
-    { hiragana: "にほんしの ほんを", romaji: "nihonshi no hon o", english: "a Japanese history book" },
-    { hiragana: "さがしています", romaji: "sagashite imasu", english: "I’m looking for" }
+    { hiragana: "あります", romaji: "arimasu", english: "I have it / it exists" }
   ],
 
   meaning:
-    "While you were studying quietly at the library today, a staff member approached and asked if there was a book you were looking for. What would you say next?"
+    "While studying quietly at the library, a staff member asks whether you are looking for a particular book. In reply mode, the patron responds naturally and politely: 「はい、あります。」."
 },
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -34607,32 +34634,46 @@ const level10Data = [
     }
   },
 
+  // ⭐ reply-mode: section chief gives polite response
   paraphraseOptions: [
-    { text: "はい、ゆっくり やすめました。ありがとうございます。", correct: true },
-    { text: "うん、ふつう。", correct: false },
-    { text: "はい、やすませて いただきました。", correct: false },
-    { text: "まあ、べつに きかないで ください。", correct: false },
-    { text: "えっと、なんだっけ。わすれました。", correct: false }
+    { text: "そうですか、ゆっくり やすめて よかったですね。", correct: true },
+
+    { text: "ふつう でしたね。", correct: false },
+    { text: "しゅうまつの はなしは いりません。", correct: false },
+    { text: "あとで ききます。", correct: false },
+    { text: "しょちょうでは ありません。", correct: false }
   ],
 
   summaryChunks: [
-    { hiragana: "あさ に", romaji: "asa ni", english: "in the morning" },
-    { hiragana: "かいしゃ に はいる と", romaji: "kaisha ni hairu to", english: "when entering the office" },
-    { hiragana: "すぐ しょちょう に あいました", romaji: "sugu shochou ni aimashita", english: "immediately met the section chief" },
-    { hiragana: "しゅうまつ は どう でしたか", romaji: "shuumatsu wa dou deshita ka", english: "how was your weekend?" },
-    { hiragana: "つぎ に なに を いいますか", romaji: "tsugi ni nani o iimasu ka", english: "what do you say next?" }
+    { hiragana: "しゅうまつ", romaji: "shuumatsu", english: "weekend" },
+    { hiragana: "どう でしたか", romaji: "dou deshita ka", english: "how was it" },
+    { hiragana: "ゆっくり", romaji: "yukkuri", english: "slowly / calmly" },
+    { hiragana: "やすめて", romaji: "yasumete", english: "to rest" },
+    { hiragana: "よかったですね", romaji: "yokatta desu ne", english: "that’s good" }
   ],
 
+  // ⭐ reply-mode: section chief’s natural polite response
   correctAnswerChunks: [
-    { hiragana: "はい", romaji: "hai", english: "yes" },
-    { hiragana: "ゆっくり", romaji: "yukkuri", english: "slowly / calmly" },
-    { hiragana: "やすめました", romaji: "yasumemashita", english: "I was able to rest" },
-    { hiragana: "ありがとうございます", romaji: "arigatou gozaimasu", english: "thank you" }
+    { hiragana: "ゆっくり やすめて", romaji: "yukkuri yasumete", english: "rested well" },
+    { hiragana: "よかったですね", romaji: "yokatta desu ne", english: "that’s good" }
   ],
 
   meaning:
-    "In the morning, as you entered the office, you immediately met the section chief. He asked how your weekend was. What would you say next?"
+    "In the morning, as you entered the office, you met the section chief, who asked how your weekend was. In reply mode, the section chief responds naturally and politely: 「そうですか、ゆっくり やすめて よかったですね。」."
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -34645,42 +34686,50 @@ const level10Data = [
   japanese: {
     polite: {
       text:
-        "けさ かいぎ の まえ に ぶちょう が わたし の つくえ の まえ に きて「きのう おねがい した しりょう は もう できて いますか」と ききました。つぎ に なに を いいますか。",
+        "けさ かいぎの まえに ぶちょうが わたしの つくえの まえに きて「きのう おねがいした しりょうは もう できて いますか」と ききました。つぎに なにを いいますか。",
       audio: "audio/sentences/register4.wav"
     },
     honorific: {
       text:
-        "けさ かいぎ の まえ に ぶちょう が わたし の つくえ の まえ に いらっしゃって「きのう おねがい した しりょう は もう できて いますか」と おきき に なりました。つぎ に なに を もうしますか。",
+        "けさ かいぎの まえに ぶちょうが わたしの つくえの まえに いらっしゃって「きのう おねがいした しりょうは もう できて いますか」と おききに なりました。つぎに なにを もうしますか。",
       audio: "audio/sentences/register5.wav"
     }
   },
 
+  // ⭐ reply-mode: manager gives polite acceptance
   paraphraseOptions: [
-    { text: "はい、すぐ に おもち します。", correct: true },
+    { text: "はい、すぐに おねがいします。", correct: true },
 
-    { text: "うん、だいたい できてるよ。", correct: false },
-    { text: "はい、つくらせて いただきました。", correct: false },
-    { text: "まだ です。まって ください。", correct: false },
-    { text: "えっと、なんだっけ。わすれました。", correct: false }
+    { text: "まだ できていません。", correct: false },
+    { text: "あとで おねがいします。", correct: false },
+    { text: "しりょうは いりません。", correct: false },
+    { text: "ぶちょうでは ありません。", correct: false }
   ],
 
   summaryChunks: [
     { hiragana: "けさ", romaji: "kesa", english: "this morning" },
-    { hiragana: "かいぎ の まえ に", romaji: "kaigi no mae ni", english: "before the meeting" },
-    { hiragana: "ぶちょう が きて", romaji: "buchou ga kite", english: "the department chief came" },
-    { hiragana: "しりょう は もう できて いますか", romaji: "shiryou wa mou dekite imasu ka", english: "is the document already finished?" },
-    { hiragana: "つぎ に なに を いいますか", romaji: "tsugi ni nani o iimasu ka", english: "what do you say next?" }
+    { hiragana: "かいぎ", romaji: "kaigi", english: "meeting" },
+    { hiragana: "しりょう", romaji: "shiryou", english: "documents" },
+    { hiragana: "できて いますか", romaji: "dekite imasu ka", english: "is it finished?" },
+    { hiragana: "おねがいします", romaji: "onegaishimasu", english: "please / I accept" }
   ],
 
+  // ⭐ reply-mode: manager’s polite acceptance
   correctAnswerChunks: [
-    { hiragana: "はい", romaji: "hai", english: "yes" },
-    { hiragana: "すぐ に", romaji: "sugu ni", english: "right away" },
-    { hiragana: "おもち します", romaji: "omochi shimasu", english: "I will bring it (humble)" }
+    { hiragana: "すぐに", romaji: "sugu ni", english: "right away" },
+    { hiragana: "おねがいします", romaji: "onegaishimasu", english: "please / I accept" }
   ],
 
   meaning:
-    "Before the meeting this morning, the department chief came to your desk and asked if the document he requested yesterday was already finished. What would you say next?"
+    "Before the meeting this morning, the department manager asked whether the requested documents were finished. In reply mode, the manager responds naturally and politely: 「はい、すぐに おねがいします。」."
 },
+
+
+
+
+
+
+
 
 
 
@@ -34693,23 +34742,24 @@ const level10Data = [
   japanese: {
     polite: {
       text:
-        "かいしゃいんは ぶちょうに なにかを ききたくて よりついて、こう いいます。きょうのよていについて、すこしだけへんこうをおねがいしたいのですが、ぶちょう、いまおはなししてもよろしいでしょうか。",
+        "かいしゃいんは ぶちょうに なにかを ききたくて よりついて、こう いいます。きょうの よていについて、すこしだけ へんこうを おねがいしたいのですが、ぶちょう、いま おはなししても よろしいでしょうか。",
       audio: "audio/sentences/register9.wav"
     },
     honorific: {
       text:
-        "かいしゃいんは ぶちょうに なにかを ききたくて よりついて、こう いいます。きょうのごよていについて、すこしだけへんこうをおねがいしたく、ぶちょう、いまおはなしさせていただいてもよろしいでしょうか。",
+        "かいしゃいんは ぶちょうに なにかを ききたくて よりついて、こう もうしあげます。きょうの ごよていについて、すこしだけ へんこうを おねがいしたく、ぶちょう、いま おはなしさせて いただいても よろしいでしょうか。",
       audio: "audio/sentences/register10.wav"
     }
   },
 
+  // ⭐ reply-mode: manager gives polite acceptance
   paraphraseOptions: [
-    { text: "はい、すこしだけ おじかん を いただけますか。", correct: true },
+    { text: "はい、いま おはなししても だいじょうぶです。", correct: true },
 
-    { text: "うん、ちょっと いい？", correct: false },
-    { text: "よていは そのままで おねがいします。", correct: false },
-    { text: "へんこうは できません。", correct: false },
-    { text: "あとで おねがいします。", correct: false }
+    { text: "いまは むりです。", correct: false },
+    { text: "よていは かえられません。", correct: false },
+    { text: "あとで おねがいします。", correct: false },
+    { text: "ぶちょうでは ありません。", correct: false }
   ],
 
   summaryChunks: [
@@ -34717,23 +34767,40 @@ const level10Data = [
     { hiragana: "へんこう", romaji: "henkou", english: "change" },
     { hiragana: "おねがい", romaji: "onegai", english: "request" },
     { hiragana: "おはなし", romaji: "ohanashi", english: "to talk" },
-    { hiragana: "よろしいでしょうか", romaji: "yoroshii deshou ka", english: "may I / is it okay" }
+    { hiragana: "だいじょうぶです", romaji: "daijoubu desu", english: "it is okay" }
   ],
 
+  // ⭐ reply-mode: manager’s polite acceptance
   correctAnswerChunks: [
-    { hiragana: "すこしだけ", romaji: "sukoshi dake", english: "just a little" },
-    { hiragana: "おじかん", romaji: "ojikan", english: "your time" },
-    { hiragana: "いただけますか", romaji: "itadakemasu ka", english: "may I receive (humble)" }
+    { hiragana: "いま おはなししても", romaji: "ima ohanashi shite mo", english: "to speak now" },
+    { hiragana: "だいじょうぶです", romaji: "daijoubu desu", english: "it is okay" }
   ],
 
   meaning:
-    "An employee approaches the department manager because they want to ask something. They politely request a small change to the manager’s schedule and ask if they may speak now."
+    "An employee approaches the department manager to request a small change to the schedule and asks if they may speak now. In reply mode, the manager responds naturally and politely: 「はい、いま おはなししても だいじょうぶです。」."
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
-
-
-
-
   id: "l10_s6",
   level: 10,
 
@@ -34751,32 +34818,43 @@ const level10Data = [
     }
   },
 
+  // ⭐ Updated: now these are boss replies, not paraphrases
   paraphraseOptions: [
-    { text: "はい、れんきゅうに にほんへ いっても いいですか。", correct: true },
+    { text: "はい、こんどのれんきゅうに にほんに いっても よろしいです。", correct: true },
 
-    { text: "うん、にほんいってくるわ。", correct: false },
-    { text: "れんきゅうは つかいません。", correct: false },
-    { text: "にほんには いきません。", correct: false },
-    { text: "あとで かんがえます。", correct: false }
+    { text: "うん、いってきなよ。", correct: false },
+    { text: "れんきゅうは つかえません。", correct: false },
+    { text: "にほんに いくのは だめです。", correct: false },
+    { text: "あとで もういちど そうだんしてください。", correct: false }
   ],
 
   summaryChunks: [
-    { hiragana: "ながいあいだ", romaji: "nagai aida", english: "for a long time" },
-    { hiragana: "べんきょうしてきた", romaji: "benkyou shite kita", english: "have been studying" },
     { hiragana: "れんきゅう", romaji: "renkyuu", english: "holiday break" },
     { hiragana: "にほんにいく", romaji: "nihon ni iku", english: "to go to Japan" },
-    { hiragana: "よろしいでしょうか", romaji: "yoroshii deshou ka", english: "may I / is it alright" }
+    { hiragana: "よろしいでしょうか", romaji: "yoroshii deshou ka", english: "may I / is it alright" },
+    { hiragana: "よろしいです", romaji: "yoroshii desu", english: "it is alright (granting permission)" }
   ],
 
+  // ⭐ Updated: boss’s approval, not a paraphrase
   correctAnswerChunks: [
-    { hiragana: "れんきゅう", romaji: "renkyuu", english: "holiday break" },
-    { hiragana: "にほんへ", romaji: "nihon e", english: "to Japan" },
-    { hiragana: "いってもいいですか", romaji: "itte mo ii desu ka", english: "may I go" }
+    { hiragana: "こんどのれんきゅう", romaji: "kondo no renkyuu", english: "the upcoming holiday break" },
+    { hiragana: "にほんに", romaji: "nihon ni", english: "to Japan" },
+    { hiragana: "いっても よろしいです", romaji: "itte mo yoroshii desu", english: "it is alright to go" }
   ],
 
   meaning:
-    "An employee approaches the department manager to consult about something. Because they have been studying Japanese for a long time, they politely ask if they may travel to Japan during the upcoming holiday break."
+    "An employee approaches the department manager to ask for permission to travel to Japan during the upcoming holiday break. The correct reply from the manager is a polite approval: 「こんどのれんきゅうに にほんに いっても よろしいです。」."
 },
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -34785,51 +34863,50 @@ const level10Data = [
 
 {
   id: "l10_s7",
-  "level": 10,
+  level: 10,
 
-  "japanese": {
-    "polite": {
-      "text":
-        "わたしは サービス係です。おきゃくさまに お会いすると、すぐに ごあんないして ごちゅうもんを うかがいます。",
-      "audio": "audio/sentences/register13.wav"
+  japanese: {
+    polite: {
+      text:
+        "わたしは さーびすがかりです。おきゃくさまに おあいすると、すぐに ごあんないして ごちゅうもんを うかがいます。",
+      audio: "audio/sentences/register13.wav"
     },
 
-    "honorific": {
-      "text":
-        "わたくしは サービス係でございます。お客様に お目にかかりましたら、すぐに ご案内いたし、ご注文を 承ります。",
-      "audio": "audio/sentences/register14.wav"
+    honorific: {
+      text:
+        "わたくしは さーびすがかりでございます。おきゃくさまに おめに かかりましたら、すぐに ごあんないいたし、ごちゅうもんを うけたまわります。",
+      audio: "audio/sentences/register14.wav"
     }
   },
 
-  "paraphraseOptions": [
-    { "text": "すぐに ごあんないして、ごちゅうもんを うかがっても よろしいですか。", "correct": true },
+  // ⭐ reply-mode: customer gives polite acceptance
+  paraphraseOptions: [
+    { text: "はい、あんないと ちゅうもんを おねがいします。", correct: true },
 
-    { "text": "いらっしゃいませ、なんでも いいですよ。", "correct": false },
-    { "text": "ごちゅうもんは ありません。", "correct": false },
-    { "text": "あとで きます。", "correct": false },
-    { "text": "サービス係では ありません。", "correct": false }
+    { text: "ちゅうもんは ありません。", correct: false },
+    { text: "あとで きます。", correct: false },
+    { text: "なんでも いいです。", correct: false },
+    { text: "おきゃくさまでは ありません。", correct: false }
   ],
 
-  "summaryChunks": [
-    { "hiragana": "サービス係", "romaji": "saabisu gakari", "english": "service staff" },
-    { "hiragana": "おきゃくさま", "romaji": "okyakusama", "english": "customer (polite)" },
-    { "hiragana": "ごあんない", "romaji": "go-annai", "english": "guidance / showing the way" },
-    { "hiragana": "ごちゅうもん", "romaji": "go-chuumon", "english": "order (customer order)" },
-    { "hiragana": "うかがいます", "romaji": "ukagaimasu", "english": "to ask (humble)" },
-    { "hiragana": "承ります", "romaji": "uketamawarimasu", "english": "to accept (very humble)" }
+  summaryChunks: [
+    { hiragana: "さーびすがかり", romaji: "saabisu gakari", english: "service staff" },
+    { hiragana: "おきゃくさま", romaji: "okyakusama", english: "customer" },
+    { hiragana: "ごあんない", romaji: "go-annai", english: "guidance" },
+    { hiragana: "ごちゅうもん", romaji: "go-chuumon", english: "order" },
+    { hiragana: "うかがいます", romaji: "ukagaimasu", english: "to ask (humble)" },
+    { hiragana: "うけたまわります", romaji: "uketamawarimasu", english: "to accept (humble)" }
   ],
 
-  "correctAnswerChunks": [
-    { "hiragana": "ごあんない", "romaji": "go-annai", "english": "guidance" },
-    { "hiragana": "ごちゅうもん", "romaji": "go-chuumon", "english": "order" },
-    { "hiragana": "うかがっても よろしいですか", "romaji": "ukagatte mo yoroshii desu ka", "english": "may I ask (polite/humble)" }
+  // ⭐ reply-mode: customer’s polite acceptance
+  correctAnswerChunks: [
+    { hiragana: "あんないと ちゅうもん", romaji: "annai to chuumon", english: "guidance and order" },
+    { hiragana: "おねがいします", romaji: "onegaishimasu", english: "please / I accept" }
   ],
 
-  "meaning":
-    "A service staff member explains their role: when they meet a customer, they immediately guide them and take their order. The honorific version uses very formal expressions such as お目にかかる, ご案内いたす, and ご注文を承る."
+  meaning:
+    "A service staff member explains their role: when they meet a customer, they immediately guide them and take their order. In reply mode, the customer responds naturally and politely: 「はい、あんないと ちゅうもんを おねがいします。」."
 },
-
-
 
 
 
@@ -34854,18 +34931,19 @@ const level10Data = [
 
     honorific: {
       text:
-        "かんじゃは いしゃに ごそうだんしたくて ちかづいて、こう 申し上げます。たいちょうが だいぶ よくなってまいりましたので、きょう たいいんさせて いただいても よろしいでしょうか。",
+        "かんじゃは いしゃに ごそうだんしたくて ちかづいて、こう もうしあげます。たいちょうが だいぶ よくなってまいりましたので、きょう たいいんさせて いただいても よろしいでしょうか。",
       audio: "audio/sentences/register16.wav"
     }
   },
 
+  // ⭐ reply-mode: doctor gives polite acceptance
   paraphraseOptions: [
-    { text: "きょう、たいいんしても よろしいですか。", correct: true },
+    { text: "はい、きょう たいいんしても だいじょうぶです。", correct: true },
 
-    { text: "もう びょういんには いたくありません。", correct: false },
-    { text: "たいいんは しません。", correct: false },
-    { text: "あした また きます。", correct: false },
-    { text: "たいちょうは よくありません。", correct: false }
+    { text: "たいいんは できません。", correct: false },
+    { text: "あした に してください。", correct: false },
+    { text: "まだ よく なっていません。", correct: false },
+    { text: "いしゃでは ありません。", correct: false }
   ],
 
   summaryChunks: [
@@ -34873,20 +34951,19 @@ const level10Data = [
     { hiragana: "いしゃ", romaji: "isha", english: "doctor" },
     { hiragana: "たいちょう", romaji: "taichou", english: "physical condition" },
     { hiragana: "よくなってきた", romaji: "yoku natte kita", english: "has improved" },
-    { hiragana: "たいいん", romaji: "taiin", english: "discharge from hospital" },
-    { hiragana: "よろしいでしょうか", romaji: "yoroshii deshou ka", english: "may I / is it alright" }
+    { hiragana: "たいいん", romaji: "taiin", english: "discharge" },
+    { hiragana: "だいじょうぶです", romaji: "daijoubu desu", english: "it is okay" }
   ],
 
+  // ⭐ reply-mode: doctor’s polite acceptance
   correctAnswerChunks: [
-    { hiragana: "きょう", romaji: "kyou", english: "today" },
-    { hiragana: "たいいんして", romaji: "taiin shite", english: "to be discharged" },
-    { hiragana: "よろしいですか", romaji: "yoroshii desu ka", english: "may I" }
+    { hiragana: "きょう たいいんしても", romaji: "kyou taiin shite mo", english: "to be discharged today" },
+    { hiragana: "だいじょうぶです", romaji: "daijoubu desu", english: "it is okay" }
   ],
 
   meaning:
-    "A patient approaches the doctor to consult about something. Because their physical condition has greatly improved, they politely ask if they may be discharged from the hospital today. The honorific version uses very formal expressions such as ご相談する, 申し上げる, and 〜させていただく."
+    "A patient approaches the doctor and politely asks if they may be discharged today. In reply mode, the doctor responds naturally and politely: 「はい、きょう たいいんしても だいじょうぶです。」."
 },
-
 
 
 
@@ -34916,18 +34993,19 @@ const level10Data = [
 
     honorific: {
       text:
-        "おやは せんせいに ごはなしを したくて ちかづいて、こう 申し上げます。むすめが さいきん とても がんばっておりますので、すこし おはなしする じかんを いただけませんでしょうか。",
+        "おやは せんせいに ごはなしを したくて ちかづいて、こう もうしあげます。むすめが さいきん とても がんばっておりますので、すこし おはなしする じかんを いただけませんでしょうか。",
       audio: "audio/sentences/register18.wav"
     }
   },
 
+  // ⭐ reply-mode: teacher gives polite acceptance
   paraphraseOptions: [
-    { text: "すこし おはなしする じかんを いただけますか。", correct: true },
+    { text: "はい、すこし じかんを おとりできます。", correct: true },
 
-    { text: "むすめは がんばっていません。", correct: false },
-    { text: "せんせいとは はなしを したくありません。", correct: false },
-    { text: "じかんは いりません。", correct: false },
-    { text: "あした また きます。", correct: false }
+    { text: "いまは はなせません。", correct: false },
+    { text: "じかんは ありません。", correct: false },
+    { text: "あとで おねがいします。", correct: false },
+    { text: "せんせいでは ありません。", correct: false }
   ],
 
   summaryChunks: [
@@ -34935,20 +35013,17 @@ const level10Data = [
     { hiragana: "せんせい", romaji: "sensei", english: "teacher" },
     { hiragana: "がんばっています", romaji: "ganbatte imasu", english: "is working hard" },
     { hiragana: "おはなしする じかん", romaji: "ohanashi suru jikan", english: "time to talk" },
-    { hiragana: "いただけますか", romaji: "itadakemasu ka", english: "may I receive / could you give me" }
+    { hiragana: "おとりできます", romaji: "otori dekimasu", english: "I can make time" }
   ],
 
   correctAnswerChunks: [
-    { hiragana: "すこし", romaji: "sukoshi", english: "a little / some" },
-    { hiragana: "おはなしする じかん", romaji: "ohanashi suru jikan", english: "time to talk" },
-    { hiragana: "いただけますか", romaji: "itadakemasu ka", english: "may I receive / could you give me" }
+    { hiragana: "すこし じかん", romaji: "sukoshi jikan", english: "a little time" },
+    { hiragana: "おとりできます", romaji: "otori dekimasu", english: "I can make time" }
   ],
 
   meaning:
-    "A parent approaches the teacher wanting to talk. Because their daughter has been working very hard recently, they politely ask if they could have a little time to speak. The honorific version uses very formal expressions such as ごはなし, 申し上げる, and 〜いただけませんでしょうか."
+    "A parent approaches the teacher and politely asks for a little time to talk. In reply mode, the teacher responds naturally and politely: 「はい、すこし じかんを おとりできます。」."
 },
-
-
 
 
 
@@ -34973,24 +35048,25 @@ const level10Data = [
   japanese: {
     polite: {
       text:
-        "しゃいんは ぶちょうに はなしを したくて ちかづいて、こう いいます。きのうの プロジェクトの しりょうが まとまりましたので、すこし ごてんけん いただけますか。",
+        "しゃいんは ぶちょうに はなしを したくて ちかづいて、こう いいます。きのうの ぷろじぇくとの しりょうが まとまりましたので、すこし ごてんけん いただけますか。",
       audio: "audio/sentences/register19.wav"
     },
 
     honorific: {
       text:
-        "しゃいんは ぶちょうに ごはなしを したくて ちかづいて、こう 申し上げます。きのうの プロジェクトの しりょうが まとまりましたので、すこし ごてんけん いただけませんでしょうか。",
+        "しゃいんは ぶちょうに ごはなしを したくて ちかづいて、こう もうしあげます。きのうの ぷろじぇくとの しりょうが まとまりましたので、すこし ごてんけん いただけませんでしょうか。",
       audio: "audio/sentences/register20.wav"
     }
   },
 
+  // ⭐ reply-mode: manager gives polite acceptance
   paraphraseOptions: [
-    { text: "しりょうを ごてんけん いただけますか。", correct: true },
+    { text: "はい、しりょうを てんけん いたします。", correct: true },
 
-    { text: "しりょうは まとまっていません。", correct: false },
-    { text: "ぶちょうとは はなしを したくありません。", correct: false },
+    { text: "しりょうは みません。", correct: false },
     { text: "てんけんは いりません。", correct: false },
-    { text: "あした また つくります。", correct: false }
+    { text: "あした に してください。", correct: false },
+    { text: "ぶちょうでは ありません。", correct: false }
   ],
 
   summaryChunks: [
@@ -34998,20 +35074,18 @@ const level10Data = [
     { hiragana: "ぶちょう", romaji: "buchou", english: "department manager" },
     { hiragana: "しりょう", romaji: "shiryou", english: "documents / materials" },
     { hiragana: "まとまりました", romaji: "matomarimashita", english: "have been completed" },
-    { hiragana: "ごてんけん", romaji: "gotenken", english: "inspection / review (honorific)" },
-    { hiragana: "いただけますか", romaji: "itadakemasu ka", english: "may I receive / could you give me" }
+    { hiragana: "ごてんけん", romaji: "gotenken", english: "honorific review" },
+    { hiragana: "てんけん いたします", romaji: "tenken itashimasu", english: "I will review (polite/humble)" }
   ],
 
   correctAnswerChunks: [
-    { hiragana: "しりょう", romaji: "shiryou", english: "documents" },
-    { hiragana: "ごてんけん いただけますか", romaji: "gotenken itadakemasu ka", english: "may I ask you to review them" }
+    { hiragana: "しりょうを", romaji: "shiryou o", english: "the documents" },
+    { hiragana: "てんけん いたします", romaji: "tenken itashimasu", english: "I will review them" }
   ],
 
   meaning:
-    "An employee approaches the department manager wanting to talk. Because the project documents were completed yesterday, they politely ask if the manager could review them. The honorific version uses very formal expressions such as ごはなし, 申し上げます, and 〜いただけませんでしょうか."
+    "An employee approaches the department manager and politely asks if the manager could review the project documents. In reply mode, the manager responds naturally and politely: 「はい、しりょうを てんけん いたします。」."
 },
-
-
 
 
 
@@ -35045,32 +35119,42 @@ const level10Data = [
     }
   },
 
+  // ⭐ Reply-mode: guest gives a natural acceptance
   paraphraseOptions: [
-    { text: "へやを ひろいタイプに おかえいただけますか。", correct: true },
+    { text: "はい、ひろいタイプの へやで おねがいします。", correct: true },
 
     { text: "へやは このままで いいです。", correct: false },
-    { text: "かえる ひつようは ありません。", correct: false },
+    { text: "ひろいへやは いりません。", correct: false },
     { text: "ホテルには とまりません。", correct: false },
-    { text: "ひろいへやは ありません。", correct: false }
+    { text: "かえる ひつようは ありません。", correct: false }
   ],
 
   summaryChunks: [
     { hiragana: "おきゃくさま", romaji: "okyakusama", english: "customer / guest (honorific)" },
     { hiragana: "スタッフ", romaji: "sutaffu", english: "staff" },
     { hiragana: "へや", romaji: "heya", english: "room" },
-    { hiragana: "かえる", romaji: "kaeru", english: "to change (something)" },
     { hiragana: "ひろいタイプ", romaji: "hiroi taipu", english: "larger type" },
-    { hiragana: "おかえいただく", romaji: "okae itadaku", english: "honorific 'to change' (receive the action)" }
+    { hiragana: "おかえいただく", romaji: "okae itadaku", english: "honorific 'to change'" }
   ],
 
+  // ⭐ Reply-mode: guest’s polite acceptance
   correctAnswerChunks: [
-    { hiragana: "ひろいタイプ", romaji: "hiroi taipu", english: "larger type" },
-    { hiragana: "おかえいただけますか", romaji: "okae itadakemasu ka", english: "may I ask you to change it" }
+    { hiragana: "ひろいタイプの へや", romaji: "hiroi taipu no heya", english: "a larger room type" },
+    { hiragana: "おねがいします", romaji: "onegaishimasu", english: "please / I accept" }
   ],
 
   meaning:
-    "A hotel guest approaches a staff member wanting to talk. They politely ask if it would be possible to change their room to a larger type. The honorific version uses very formal expressions such as ごはなし, 申し上げます, and おかえいただけませんでしょうか to reflect the staff’s respectful language toward the guest."
+    "A hotel guest politely asks a staff member if it would be possible to switch to a larger room type. In reply mode, the guest responds naturally and politely: 「はい、ひろいタイプの へやで おねがいします。」."
 },
+
+
+
+
+
+
+
+
+
 
 
 
@@ -35103,12 +35187,13 @@ const level10Data = [
     }
   },
 
+  // ⭐ Reply-mode: customer gives a natural acceptance
   paraphraseOptions: [
-    { text: "こちらの せきに おうつりいただけますか。", correct: true },
+    { text: "はい、こちらの せきで おねがいします。", correct: true },
 
     { text: "せきは かえられません。", correct: false },
     { text: "ここで まちつづけます。", correct: false },
-    { text: "おきゃくさまは すわりたくありません。", correct: false },
+    { text: "すわりたくありません。", correct: false },
     { text: "せきは ありません。", correct: false }
   ],
 
@@ -35116,19 +35201,29 @@ const level10Data = [
     { hiragana: "うぇいたー", romaji: "ueitaa", english: "waiter" },
     { hiragana: "おきゃくさま", romaji: "okyakusama", english: "customer (honorific)" },
     { hiragana: "せき", romaji: "seki", english: "seat" },
-    { hiragana: "うつる", romaji: "utsuru", english: "to move (to another place)" },
+    { hiragana: "うつる", romaji: "utsuru", english: "to move" },
     { hiragana: "おうつりいただく", romaji: "outsuri itadaku", english: "honorific 'to move'" },
     { hiragana: "おまちいただく", romaji: "omachi itadaku", english: "to wait (honorific)" }
   ],
 
+  // ⭐ Reply-mode: customer’s polite acceptance
   correctAnswerChunks: [
     { hiragana: "こちらの せき", romaji: "kochira no seki", english: "this seat" },
-    { hiragana: "おうつりいただけますか", romaji: "outsuri itadakemasu ka", english: "may I ask you to move here" }
+    { hiragana: "おねがいします", romaji: "onegaishimasu", english: "please / I accept" }
   ],
 
   meaning:
-    "A waiter approaches a customer to speak. After mentioning that the customer has been waiting, the waiter politely asks if they could move to a different seat. The honorific version uses expressions such as ごはなし, もうしあげます, おまちいただく, and おうつりいただけませんでしょうか to show respect toward the customer."
+    "A waiter approaches a customer and politely asks if they could move to a different seat. In reply mode, the customer responds naturally and politely: 「はい、こちらの せきで おねがいします。」."
 },
+
+
+
+
+
+
+
+
+
 
 
 
@@ -35158,8 +35253,9 @@ const level10Data = [
     }
   },
 
+  // ⭐ Reply-mode: customer gives a natural acceptance
   paraphraseOptions: [
-    { text: "さいごに ごかくにんを させていただけますか。", correct: true },
+    { text: "はい、さいごの かくにんを おねがいします。", correct: true },
 
     { text: "かくにんは いりません。", correct: false },
     { text: "しょうひんは みません。", correct: false },
@@ -35176,14 +35272,19 @@ const level10Data = [
     { hiragana: "させていただく", romaji: "sasete itadaku", english: "to humbly do" }
   ],
 
+  // ⭐ Reply-mode: customer’s polite acceptance
   correctAnswerChunks: [
-    { hiragana: "さいごに ごかくにん", romaji: "saigo ni go-kakunin", english: "final confirmation" },
-    { hiragana: "させていただけますか", romaji: "sasete itadakemasu ka", english: "may I humbly do" }
+    { hiragana: "さいごの かくにん", romaji: "saigo no kakunin", english: "final confirmation" },
+    { hiragana: "おねがいします", romaji: "onegaishimasu", english: "please / I accept" }
   ],
 
   meaning:
-    "A store clerk approaches a customer with a request. After noting that the customer has been looking at a product, the clerk politely asks if they may perform a final confirmation. The honorific version uses expressions such as ご覧いただく, お願いがございます, and ご確認をさせていただけませんでしょうか to show respect toward the customer."
+    "A store clerk approaches a customer with a request and politely asks if they may perform a final confirmation. In reply mode, the customer responds naturally and politely: 「はい、さいごの かくにんを おねがいします。」."
 },
+
+
+
+
 
 
 
@@ -35216,11 +35317,12 @@ const level10Data = [
     }
   },
 
+  // ⭐ Reply-mode: customer gives a natural acceptance
   paraphraseOptions: [
-    { text: "べつの しょうひんを ごしょうかい させて いただけますか。", correct: true },
+    { text: "はい、べつの しょうひんも おねがいします。", correct: true },
 
-    { text: "しょうひんは みたくありません。", correct: false },
     { text: "しょうかいは いりません。", correct: false },
+    { text: "しょうひんは みたくありません。", correct: false },
     { text: "ここで まちます。", correct: false },
     { text: "てんいんでは ありません。", correct: false }
   ],
@@ -35234,15 +35336,15 @@ const level10Data = [
     { hiragana: "させていただく", romaji: "sasete itadaku", english: "to humbly do" }
   ],
 
+  // ⭐ Reply-mode: customer’s polite acceptance
   correctAnswerChunks: [
     { hiragana: "べつの しょうひん", romaji: "betsu no shouhin", english: "another product" },
-    { hiragana: "ごしょうかい させて いただけますか", romaji: "goshoukai sasete itadakemasu ka", english: "may I humbly introduce it" }
+    { hiragana: "おねがいします", romaji: "onegaishimasu", english: "please / I accept" }
   ],
 
   meaning:
-    "A store clerk approaches a customer who has been looking at a product. Using polite language, the clerk asks if they may introduce another item. The honorific version uses forms such as ごらんいただく, もうしあげます, and ごしょうかいさせていただけませんでしょうか to show respect toward the customer while humbling the speaker."
+    "A store clerk approaches a customer who has been looking at a product and politely asks if they may introduce another item. In reply mode, the customer responds naturally and politely: 「はい、べつの しょうひんも おねがいします。」."
 },
-
 
 
 
@@ -35273,12 +35375,13 @@ const level10Data = [
     }
   },
 
+  // ⭐ Reply-mode: customer gives a natural acceptance
   paraphraseOptions: [
-    { text: "こちらで ごてつづきを つづけさせて いただけますか。", correct: true },
+    { text: "はい、こちらで おねがいします。", correct: true },
 
+    { text: "いいえ、ここでは できません。", correct: false },
+    { text: "まだ まちます。", correct: false },
     { text: "てつづきは しません。", correct: false },
-    { text: "まだ まちつづけます。", correct: false },
-    { text: "ここでは できません。", correct: false },
     { text: "てんいんでは ありません。", correct: false }
   ],
 
@@ -35291,14 +35394,15 @@ const level10Data = [
     { hiragana: "もうしあげる", romaji: "moushiageru", english: "to humbly say" }
   ],
 
+  // ⭐ Reply-mode: customer’s polite acceptance
   correctAnswerChunks: [
-    { hiragana: "こちらで ごてつづき", romaji: "kochira de gotetsuzuki", english: "the procedure here" },
-    { hiragana: "つづけさせて いただけますか", romaji: "tsuzukesasete itadakemasu ka", english: "may I continue it" }
+    { hiragana: "こちらで", romaji: "kochira de", english: "here" },
+    { hiragana: "おねがいします", romaji: "onegaishimasu", english: "please / I accept" }
   ],
 
   meaning:
-    "A store clerk approaches a customer who has been waiting for a long time. Using polite language, the clerk asks if they may continue the procedure here. The honorific version uses forms such as おまちいただく, ごてつづき, もうしあげます, and つづけさせていただけませんでしょうか to show respect toward the customer while humbling the speaker."
-},
+    "A store clerk approaches a customer who has been waiting for a long time and politely asks if they may continue the procedure here. In reply mode, the customer gives a natural, polite acceptance: 「はい、こちらで おねがいします。」."
+}
 
 
 
@@ -36539,6 +36643,70 @@ const storeHelpScenario = {
 };
 
 
+const bakeryOrderScenario = {
+  id: "l11_scenario_04",
+  title: "Ordering at a Bakery",
+  description: "Order bread at a bakery and respond naturally.",
+  systemTurns: [
+    {
+      jp: "いらっしゃいませ。なにをおさがしですか？",
+      expected: [
+        "メロンパンをさがしています",
+        "メロンパンください",
+        "メロンパンありますか",
+
+        // romaji
+        "meronpan wo sagashiteimasu",
+        "meronpan kudasai",
+        "meronpan arimasu ka"
+      ],
+      correction: "しぜんな言い方は「メロンパンください。」です。"
+    },
+    {
+      jp: "メロンパンはそちらのショーケースにございますよ。",
+      expected: [
+        "ありがとうございます",
+        "あ、ありがとうございます",
+        "わかりました",
+
+        // romaji
+        "arigatou gozaimasu",
+        "a arigatou gozaimasu",
+        "wakarimashita"
+      ],
+      correction: "「ありがとうございます。」がいちばんしぜんです。"
+    },
+    {
+      jp: "ほかにおさがしのものはありますか？",
+      expected: [
+        "だいじょうぶです",
+        "だいじょうぶですありがとう",
+        "もうだいじょうぶです",
+
+        // romaji
+        "daijoubu desu",
+        "daijoubu desu arigatou",
+        "mou daijoubu desu"
+      ],
+      correction: "「だいじょうぶです。」がしぜんです。"
+    },
+    {
+      jp: "かしこまりました。レジまでどうぞ。",
+      expected: [
+        "はい",
+        "ありがとうございます",
+
+        // romaji
+        "hai",
+        "arigatou gozaimasu"
+      ],
+      correction: null
+    }
+  ]
+};
+
+
+
 /* ---------------------------------------------------------
   Converter
 --------------------------------------------------------- */
@@ -36898,6 +37066,7 @@ function loadScenario(scenario) {
 const cafeBtn = document.getElementById("cafeBtn");
 const interjectionBtn = document.getElementById("interjectionBtn");
 const storeHelpBtn = document.getElementById("storeHelpBtn");
+const bakeryBtn = document.getElementById("bakeryBtn"); // ⭐ NEW
 
 if (cafeBtn) {
   cafeBtn.onclick = () => {
@@ -36915,7 +37084,6 @@ if (interjectionBtn) {
   };
 }
 
-
 if (storeHelpBtn) {
   storeHelpBtn.onclick = () => {
     loadScenario(storeHelpScenario);
@@ -36923,6 +37091,15 @@ if (storeHelpBtn) {
     startLevel11(currentScenario);
   };
 }
+
+if (bakeryBtn) { // ⭐ NEW
+  bakeryBtn.onclick = () => {
+    loadScenario(bakeryOrderScenario);
+    showScreen("level11Screen");
+    startLevel11(currentScenario);
+  };
+}
+
 
 
 /*------------------------------------------------------------------------------------
