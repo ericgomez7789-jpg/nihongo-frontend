@@ -37276,6 +37276,327 @@ const cleaningArgumentScenario = {
 };
 
 
+const bathTimeArgumentScenario = {
+  id: "l11_scenario_14",
+  title: "Bath Time Argument (Mother & Daughter)",
+  description: "A short argument between a mother and daughter about taking a bath.",
+  systemTurns: [
+    {
+      jp: "もう よるだよ。おふろに はいってくれる？",
+      expected: [
+        "えー はいりたくないです",
+        "まだ あそびたいです",
+        "あとで はいります",
+
+        // romaji
+        "ee hairitakunai desu",
+        "mada asobitai desu",
+        "atode hairimasu"
+      ],
+      correction: "「えー はいりたくないです。」が いちばん しぜんです。"
+    },
+    {
+      jp: "きょうは あつかったでしょ。からだを あらったほうが いいよ。",
+      expected: [
+        "ほんとうに きょうは むりです",
+        "すこしなら はいれます",
+        "わかった はいります",
+
+        // romaji
+        "hontou ni kyou wa muri desu",
+        "sukoshi nara hairemasu",
+        "wakatta hairimasu"
+      ],
+      correction: "「わかった はいります。」が しぜんです。"
+    },
+    {
+      jp: "じゃあ みじかくても いいよ。シャンプーだけ する？",
+      expected: [
+        "シャンプーだけなら いいです",
+        "ぜんぶは いやです",
+        "どっちでも いいです",
+
+        // romaji
+        "shampoo dake nara ii desu",
+        "zenbu wa iya desu",
+        "docchi demo ii desu"
+      ],
+      correction: "「シャンプーだけなら いいです。」が しぜんです。"
+    },
+    {
+      jp: "ありがとう。おわったら パジャマに きがえてね。",
+      expected: [
+        "はい",
+        "わかりました",
+
+        // romaji
+        "hai",
+        "wakarimashita"
+      ],
+      correction: null
+    }
+  ]
+};
+
+
+
+const flossArgumentScenario = {
+  id: "l11_scenario_15",
+  title: "Flossing Argument (Mother & Daughter)",
+  description: "A short argument between a mother and daughter about flossing their teeth.",
+  systemTurns: [
+    {
+      jp: "ねえ、きょうも フロス してくれる？ はを きれいに するためだよ。",
+      expected: [
+        "えー したくないです",
+        "めんどうです",
+        "あとで します",
+
+        // romaji
+        "ee shitakunai desu",
+        "mendou desu",
+        "atode shimasu"
+      ],
+      correction: "「えー したくないです。」が いちばん しぜんです。"
+    },
+    {
+      jp: "フロスを しないと、はの あいだに ばいきんが のこるんだよ。むしばに なるよ。",
+      expected: [
+        "むしばは いやです",
+        "でも やっぱり めんどうです",
+        "すこしなら できます",
+
+        // romaji
+        "mushiba wa iya desu",
+        "demo yappari mendou desu",
+        "sukoshi nara dekimasu"
+      ],
+      correction: "「むしばは いやです。」が しぜんです。"
+    },
+    {
+      jp: "じゃあ みじかくても いいよ。10びょうだけ やろうか。",
+      expected: [
+        "10びょうだけなら いいです",
+        "すこしなら がんばれます",
+        "どっちでも いいです",
+
+        // romaji
+        "juubyou dake nara ii desu",
+        "sukoshi nara ganbaremasu",
+        "docchi demo ii desu"
+      ],
+      correction: "「10びょうだけなら いいです。」が しぜんです。"
+    },
+    {
+      jp: "ありがとう。これで はが もっと つよくなるよ。",
+      expected: [
+        "はい",
+        "わかりました",
+
+        // romaji
+        "hai",
+        "wakarimashita"
+      ],
+      correction: null
+    }
+  ]
+};
+
+
+
+const bankAmountScenario = {
+  id: "l11_scenario_16",
+  title: "Bank Deposit and Withdrawal (Teller & Customer)",
+  description: "A conversation at the bank where the customer deposits or withdraws money and tells the amount.",
+  systemTurns: [
+    {
+      jp: "こんにちは。きょうは あずけますか？ それとも おろしますか？",
+      expected: [
+        "あずけたいです",
+        "おろしたいです",
+        "どちらも したいです",
+
+        // romaji
+        "azuketai desu",
+        "oroshitai desu",
+        "dochira mo shitai desu"
+      ],
+      correction: "「あずけたいです。」か「おろしたいです。」が しぜんです。"
+    },
+    {
+      jp: "わかりました。では、いくら あずけますか？",
+      expected: [
+        "ごせんえん あずけます",
+        "いちまんえん あずけたいです",
+        "にせんえんだけ あずけます",
+
+        // romaji
+        "go-sen en azukemasu",
+        "ichi-man en azuketai desu",
+        "ni-sen en dake azukemasu"
+      ],
+      correction: "きんがく＋えん＋あずけます が いちばん しぜんです。"
+    },
+    {
+      jp: "では、いくら おろしますか？",
+      expected: [
+        "さんぜんえん おろします",
+        "いちまんごせんえん おろしたいです",
+        "すこしだけ おろします",
+
+        // romaji
+        "san-zen en oroshimasu",
+        "ichi-man go-sen en oroshitai desu",
+        "sukoshi dake oroshimasu"
+      ],
+      correction: "きんがく＋えん＋おろします が しぜんです。"
+    },
+    {
+      jp: "ありがとうございます。こちらで かくにん してください。",
+      expected: [
+        "はい",
+        "わかりました",
+
+        // romaji
+        "hai",
+        "wakarimashita"
+      ],
+      correction: null
+    }
+  ]
+};
+
+
+
+const workTaskScenario = {
+  id: "l11_scenario_17",
+  title: "Changing Work Tasks (Boss & Worker)",
+  description: "A conversation where the boss changes the worker’s task and the worker hesitates.",
+  systemTurns: [
+    {
+      jp: "きょうの たすく、すこし かえても いいですか？",
+      expected: [
+        "はい、だいじょうぶです",
+        "えー、きょうは むりです",
+        "すこしなら できます",
+
+        // romaji
+        "hai, daijoubu desu",
+        "ee, kyou wa muri desu",
+        "sukoshi nara dekimasu"
+      ],
+      correction: "「はい、だいじょうぶです。」が いちばん しぜんです。"
+    },
+    {
+      jp: "あたらしい しりょうを つくって ほしいんです。じかんは ありますか？",
+      expected: [
+        "じかんは すこしだけ あります",
+        "きょうは いそがしいです",
+        "あとで できます",
+
+        // romaji
+        "jikan wa sukoshi dake arimasu",
+        "kyou wa isogashii desu",
+        "atode dekimasu"
+      ],
+      correction: "「じかんは すこしだけ あります。」が しぜんです。"
+    },
+    {
+      jp: "じゃあ、みじかい しりょうで いいですよ。10ぷんで おねがいできますか？",
+      expected: [
+        "10ぷんで できます",
+        "10ぷんは むりです",
+        "すこし まってください",
+
+        // romaji
+        "juppun de dekimasu",
+        "juppun wa muri desu",
+        "sukoshi matte kudasai"
+      ],
+      correction: "「10ぷんで できます。」が しぜんです。"
+    },
+    {
+      jp: "たすかります。おわったら わたしに おしえてくださいね。",
+      expected: [
+        "はい",
+        "わかりました",
+
+        // romaji
+        "hai",
+        "wakarimashita"
+      ],
+      correction: null
+    }
+  ]
+};
+
+
+
+const clothingDeptScenario = {
+  id: "l11_scenario_18",
+  title: "Choosing Clothes at the Store (Clerk & Customer)",
+  description: "A conversation where the store clerk asks about clothing size and color, and the customer responds.",
+  systemTurns: [
+    {
+      jp: "いらっしゃいませ。どんな ふくを おさがしですか？",
+      expected: [
+        "シャツを さがしています",
+        "ズボンが ほしいです",
+        "まだ きめていません",
+
+        // romaji
+        "shatsu o sagashiteimasu",
+        "zubon ga hoshii desu",
+        "mada kimeteimasen"
+      ],
+      correction: "「シャツを さがしています。」が いちばん しぜんです。"
+    },
+    {
+      jp: "わかりました。サイズは なんサイズが いいですか？",
+      expected: [
+        "Mサイズが いいです",
+        "Lサイズを ためしたいです",
+        "ちいさい サイズが いいです",
+
+        // romaji
+        "emu saizu ga ii desu",
+        "eru saizu o tameshitai desu",
+        "chiisai saizu ga ii desu"
+      ],
+      correction: "サイズ＋が いいです が しぜんです。"
+    },
+    {
+      jp: "では、いろは どれが いいですか？ あか、しろ、くろが あります。",
+      expected: [
+        "くろが いいです",
+        "あかを みたいです",
+        "どれでも いいです",
+
+        // romaji
+        "kuro ga ii desu",
+        "aka o mitai desu",
+        "dore demo ii desu"
+      ],
+      correction: "「くろが いいです。」が しぜんです。"
+    },
+    {
+      jp: "ありがとうございます。こちらを きてみて くださいね。",
+      expected: [
+        "はい",
+        "わかりました",
+
+        // romaji
+        "hai",
+        "wakarimashita"
+      ],
+      correction: null
+    }
+  ]
+};
+
+
+
+
 
 /* ---------------------------------------------------------
   Converter
@@ -37646,6 +37967,13 @@ const schoolClubBtn = document.getElementById("schoolClubBtn");
 const trainStationBtn = document.getElementById("trainStationBtn");
 const homeFamilyBtn = document.getElementById("homeFamilyBtn");
 const cleaningArgumentBtn = document.getElementById("cleaningArgumentBtn");
+const bathTimeArgumentBtn = document.getElementById("bathTimeArgumentBtn");
+const flossArgumentBtn = document.getElementById("flossArgumentBtn");
+const bankAmountBtn = document.getElementById("bankAmountBtn");
+const workTaskBtn = document.getElementById("workTaskBtn");
+const clothingDeptBtn = document.getElementById("clothingDeptBtn");
+
+
 
 
 
@@ -37754,6 +38082,50 @@ if (homeFamilyBtn) {
 if (cleaningArgumentBtn) {
   cleaningArgumentBtn.onclick = () => {
     loadScenario(cleaningArgumentScenario);
+    showScreen("level11Screen");
+    startLevel11(currentScenario);
+  };
+}
+
+
+if (bathTimeArgumentBtn) {
+  bathTimeArgumentBtn.onclick = () => {
+    loadScenario(bathTimeArgumentScenario);
+    showScreen("level11Screen");
+    startLevel11(currentScenario);
+  };
+}
+
+if (flossArgumentBtn) {
+  flossArgumentBtn.onclick = () => {
+    loadScenario(flossArgumentScenario);
+    showScreen("level11Screen");
+    startLevel11(currentScenario);
+  };
+}
+
+
+if (bankAmountBtn) {
+  bankAmountBtn.onclick = () => {
+    loadScenario(bankAmountScenario);
+    showScreen("level11Screen");
+    startLevel11(currentScenario);
+  };
+}
+
+
+if (workTaskBtn) {
+  workTaskBtn.onclick = () => {
+    loadScenario(workTaskScenario);
+    showScreen("level11Screen");
+    startLevel11(currentScenario);
+  };
+}
+
+
+if (clothingDeptBtn) {
+  clothingDeptBtn.onclick = () => {
+    loadScenario(clothingDeptScenario);
     showScreen("level11Screen");
     startLevel11(currentScenario);
   };
