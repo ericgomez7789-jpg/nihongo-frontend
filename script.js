@@ -24874,12 +24874,14 @@ function showLevel5FinalSummary() {
     L5.stopAllAudio();
   }
 
+  // ⭐ THIS MUST MATCH YOUR HTML ID
   L5.show("level5Screen4");
 
   document.getElementById("l5SessionRounds").textContent = L5.TOTAL_ROUNDS;
   document.getElementById("l5SessionScore").textContent = L5.score;
   document.getElementById("l5SessionCorrect").textContent = L5.score;
 }
+
 
 /* ----------------------------------------------------------
    ⭐ LEVEL 5 — FINAL SUMMARY
@@ -25238,6 +25240,29 @@ if (startLevel5Btn) {
   });
 }
 
+
+
+/* ----------------------------------------------------------
+   ⭐ LEVEL 5 — SCREEN4 HOME BUTTON HANDLER
+---------------------------------------------------------- */
+
+const l5HomeBtn = document.getElementById("l5HomeBtn");
+
+if (l5HomeBtn) {
+  l5HomeBtn.addEventListener("click", () => {
+    L5.stopAllAudio();
+
+    // Hide ALL Level 5 screens
+    document.getElementById("level5Screen4")?.classList.add("hidden");
+    document.getElementById("screen2L5")?.classList.add("hidden");
+
+    // Show screen0 (menu)
+    document.getElementById("screen0")?.classList.remove("hidden");
+
+    L5.currentSentence = null;
+    L5.activeScreen = "menu";
+  });
+}
 
 
 
