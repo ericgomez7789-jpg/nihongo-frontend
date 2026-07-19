@@ -36707,6 +36707,576 @@ const bakeryOrderScenario = {
 
 
 
+const hospitalRoomScenario = {
+  id: "l11_scenario_05",
+  title: "Requesting a Room Change at the Hospital",
+  description: "Politely ask a nurse about changing to another hospital room and respond naturally.",
+  systemTurns: [
+    {
+      jp: "こんにちは。きょうは どのような ごようけんですか？",
+      expected: [
+        "へやを かえたいです",
+        "へやを かえてもらえますか",
+        "へやの へんこうを おねがいします",
+
+        // romaji
+        "heya wo kaetai desu",
+        "heya wo kaete moraemasu ka",
+        "heya no henkou wo onegaishimasu"
+      ],
+      correction: "しぜんな言い方は「へやを かえてもらえますか。」です。"
+    },
+    {
+      jp: "はい、かのうですよ。どのタイプの おへやを ごきぼうですか？",
+      expected: [
+        "しずかな へやが いいです",
+        "ひとりの へやが いいです",
+        "べつの へやを おねがいします",
+
+        // romaji
+        "shizuka na heya ga ii desu",
+        "hitori no heya ga ii desu",
+        "betsu no heya wo onegaishimasu"
+      ],
+      correction: "「しずかな へやが いいです。」が いちばん しぜんです。"
+    },
+    {
+      jp: "わかりました。しずかな へやを かくにんしますね。ほかに ごきぼうは ありますか？",
+      expected: [
+        "だいじょうぶです",
+        "もう だいじょうぶです",
+        "だいじょうぶです ありがとう",
+
+        // romaji
+        "daijoubu desu",
+        "mou daijoubu desu",
+        "daijoubu desu arigatou"
+      ],
+      correction: "「だいじょうぶです。」が しぜんです。"
+    },
+    {
+      jp: "かしこまりました。すぐに ごあんないいたします。",
+      expected: [
+        "はい",
+        "ありがとうございます",
+
+        // romaji
+        "hai",
+        "arigatou gozaimasu"
+      ],
+      correction: null
+    }
+  ]
+};
+
+
+const schoolHelpScenario = {
+  id: "l11_scenario_06",
+  title: "Asking a Teacher for Help at School",
+  description: "Ask a teacher for help with something at school and respond naturally.",
+  systemTurns: [
+    {
+      jp: "こんにちは。どうしましたか？",
+      expected: [
+        "しつもんが あります",
+        "すこし おてつだいを おねがいします",
+        "ききたいことが あります",
+
+        // romaji
+        "shitsumon ga arimasu",
+        "sukoshi otetsudai wo onegaishimasu",
+        "kikitai koto ga arimasu"
+      ],
+      correction: "しぜんな言い方は「しつもんが あります。」です。"
+    },
+    {
+      jp: "いいですよ。なにを しつもんしたいですか？",
+      expected: [
+        "この しゅくだいが わかりません",
+        "この もんだいを おしえてください",
+        "ここが むずかしいです",
+
+        // romaji
+        "kono shukudai ga wakarimasen",
+        "kono mondai wo oshiete kudasai",
+        "koko ga muzukashii desu"
+      ],
+      correction: "「この しゅくだいが わかりません。」が いちばん しぜんです。"
+    },
+    {
+      jp: "なるほど。ここは こう かんがえると わかりやすいですよ。ほかに しつもんは ありますか？",
+      expected: [
+        "だいじょうぶです",
+        "もう だいじょうぶです",
+        "だいじょうぶです ありがとう",
+
+        // romaji
+        "daijoubu desu",
+        "mou daijoubu desu",
+        "daijoubu desu arigatou"
+      ],
+      correction: "「だいじょうぶです。」が しぜんです。"
+    },
+    {
+      jp: "よかったです。では、じゅぎょうに もどってくださいね。",
+      expected: [
+        "はい",
+        "ありがとうございます",
+
+        // romaji
+        "hai",
+        "arigatou gozaimasu"
+      ],
+      correction: null
+    }
+  ]
+};
+
+
+
+const classmateHelpScenario = {
+  id: "l11_scenario_07",
+  title: "Asking a Classmate for Help",
+  description: "Ask a classmate for help with schoolwork and respond naturally.",
+  systemTurns: [
+    {
+      jp: "こんにちは。いま すこし いいですか？",
+      expected: [
+        "はい いいですよ",
+        "だいじょうぶです",
+        "すこしなら いいです",
+
+        // romaji
+        "hai ii desu yo",
+        "daijoubu desu",
+        "sukoshi nara ii desu"
+      ],
+      correction: "しぜんな言い方は「はい いいですよ。」です。"
+    },
+    {
+      jp: "ありがとう。じつは この しゅくだいが ちょっと わからなくて…",
+      expected: [
+        "ここが むずかしいです",
+        "この もんだいを おしえてください",
+        "どう やれば いいですか",
+
+        // romaji
+        "koko ga muzukashii desu",
+        "kono mondai wo oshiete kudasai",
+        "dou yareba ii desu ka"
+      ],
+      correction: "「ここが むずかしいです。」が いちばん しぜんです。"
+    },
+    {
+      jp: "ああ ここは こう かんがえると わかりやすいよ。ほかに しつもんは ある？",
+      expected: [
+        "だいじょうぶです",
+        "もう だいじょうぶです",
+        "だいじょうぶです ありがとう",
+
+        // romaji
+        "daijoubu desu",
+        "mou daijoubu desu",
+        "daijoubu desu arigatou"
+      ],
+      correction: "「だいじょうぶです。」が しぜんです。"
+    },
+    {
+      jp: "よかった。じゃあ いっしょに がんばろうね。",
+      expected: [
+        "はい",
+        "ありがとうございます",
+
+        // romaji
+        "hai",
+        "arigatou gozaimasu"
+      ],
+      correction: null
+    }
+  ]
+};
+
+
+
+const libraryHelpScenario = {
+  id: "l11_scenario_08",
+  title: "Asking a Librarian for Help",
+  description: "Ask a librarian for help finding a book and respond naturally.",
+  systemTurns: [
+    {
+      jp: "こんにちは。なにか おさがしですか？",
+      expected: [
+        "はい ほんを さがしています",
+        "さがしている ほんが あります",
+        "すこし てつだってください",
+
+        // romaji
+        "hai hon wo sagashiteimasu",
+        "sagashiteiru hon ga arimasu",
+        "sukoshi tetsudatte kudasai"
+      ],
+      correction: "しぜんな言い方は「はい ほんを さがしています。」です。"
+    },
+    {
+      jp: "わかりました。どんな ほんを おさがしですか？",
+      expected: [
+        "にほんしの ほんです",
+        "れきしの ほんです",
+        "この ぶんやの ほんを さがしています",
+
+        // romaji
+        "nihonshi no hon desu",
+        "rekishi no hon desu",
+        "kono bunya no hon wo sagashiteimasu"
+      ],
+      correction: "「にほんしの ほんです。」が いちばん しぜんです。"
+    },
+    {
+      jp: "にほんしの ほんですね。あちらの たなに ありますよ。ほかに おてつだい できますか？",
+      expected: [
+        "だいじょうぶです",
+        "もう だいじょうぶです",
+        "だいじょうぶです ありがとう",
+
+        // romaji
+        "daijoubu desu",
+        "mou daijoubu desu",
+        "daijoubu desu arigatou"
+      ],
+      correction: "「だいじょうぶです。」が しぜんです。"
+    },
+    {
+      jp: "かしこまりました。ごゆっくり どうぞ。",
+      expected: [
+        "はい",
+        "ありがとうございます",
+
+        // romaji
+        "hai",
+        "arigatou gozaimasu"
+      ],
+      correction: null
+    }
+  ]
+};
+
+
+
+const campusDirectionsScenario = {
+  id: "l11_scenario_09",
+  title: "Asking for Directions on Campus",
+  description: "Ask someone on campus for directions and respond naturally.",
+  systemTurns: [
+    {
+      jp: "こんにちは。どこか おさがしですか？",
+      expected: [
+        "はい きょうしつを さがしています",
+        "はい この ばしょが わかりません",
+        "すこし みちを おしえてください",
+
+        // romaji
+        "hai kyoushitsu wo sagashiteimasu",
+        "hai kono basho ga wakarimasen",
+        "sukoshi michi wo oshiete kudasai"
+      ],
+      correction: "しぜんな言い方は「はい きょうしつを さがしています。」です。"
+    },
+    {
+      jp: "どの きょうしつですか？",
+      expected: [
+        "A103です",
+        "A103の きょうしつです",
+        "A103に いきたいです",
+
+        // romaji
+        "A103 desu",
+        "A103 no kyoushitsu desu",
+        "A103 ni ikitai desu"
+      ],
+      correction: "「A103です。」が いちばん しぜんです。"
+    },
+    {
+      jp: "A103ですね。あちらの かいだんを のぼって みぎに まがると ありますよ。ほかに なにか てつだいましょうか？",
+      expected: [
+        "だいじょうぶです",
+        "もう だいじょうぶです",
+        "だいじょうぶです ありがとう",
+
+        // romaji
+        "daijoubu desu",
+        "mou daijoubu desu",
+        "daijoubu desu arigatou"
+      ],
+      correction: "「だいじょうぶです。」が しぜんです。"
+    },
+    {
+      jp: "よかったです。きをつけて いってくださいね。",
+      expected: [
+        "はい",
+        "ありがとうございます",
+
+        // romaji
+        "hai",
+        "arigatou gozaimasu"
+      ],
+      correction: null
+    }
+  ]
+};
+
+const schoolClubScenario = {
+  id: "l11_scenario_10",
+  title: "Asking About Joining a School Club",
+  description: "Ask a student about joining a school club and respond naturally.",
+  systemTurns: [
+    {
+      jp: "こんにちは。ぶかつに きょうみが あるんですか？",
+      expected: [
+        "はい きょうみがあります",
+        "はい すこし きょうみがあります",
+        "はい ぶかつに はいりたいです",
+
+        // romaji
+        "hai kyoumi ga arimasu",
+        "hai sukoshi kyoumi ga arimasu",
+        "hai bukatsu ni hairitai desu"
+      ],
+      correction: "しぜんな言い方は「はい きょうみがあります。」です。"
+    },
+    {
+      jp: "どの ぶかつに はいりたいんですか？",
+      expected: [
+        "テニスぶです",
+        "テニスぶに きょうみがあります",
+        "テニスぶに はいりたいです",
+
+        // romaji
+        "tenisu bu desu",
+        "tenisu bu ni kyoumi ga arimasu",
+        "tenisu bu ni hairitai desu"
+      ],
+      correction: "「テニスぶです。」が いちばん しぜんです。"
+    },
+    {
+      jp: "テニスぶですね。あしたの ごごに けんがくが できますよ。ほかに しつもんは ありますか？",
+      expected: [
+        "だいじょうぶです",
+        "もう だいじょうぶです",
+        "だいじょうぶです ありがとう",
+
+        // romaji
+        "daijoubu desu",
+        "mou daijoubu desu",
+        "daijoubu desu arigatou"
+      ],
+      correction: "「だいじょうぶです。」が しぜんです。"
+    },
+    {
+      jp: "わかりました。じゃあ あした まっていますね。",
+      expected: [
+        "はい",
+        "ありがとうございます",
+
+        // romaji
+        "hai",
+        "arigatou gozaimasu"
+      ],
+      correction: null
+    }
+  ]
+};
+
+
+
+const trainStationScenario = {
+  id: "l11_scenario_11",
+  title: "Asking for Help at a Train Station",
+  description: "Ask someone at the station for help and respond naturally.",
+  systemTurns: [
+    {
+      jp: "こんにちは。なにか おてつだい しましょうか？",
+      expected: [
+        "はい みちを ききたいです",
+        "はい すこし ききたいことがあります",
+        "はい この でんしゃが わかりません",
+
+        // romaji
+        "hai michi wo kikitai desu",
+        "hai sukoshi kikitai koto ga arimasu",
+        "hai kono densha ga wakarimasen"
+      ],
+      correction: "しぜんな言い方は「はい みちを ききたいです。」です。"
+    },
+    {
+      jp: "どこまで いきたいんですか？",
+      expected: [
+        "しんじゅくまで いきたいです",
+        "しんじゅくに いきたいです",
+        "しんじゅくです",
+
+        // romaji
+        "shinjuku made ikitai desu",
+        "shinjuku ni ikitai desu",
+        "shinjuku desu"
+      ],
+      correction: "「しんじゅくです。」が いちばん しぜんです。"
+    },
+    {
+      jp: "しんじゅくですね。あちらの ホームから のれば いけますよ。ほかに なにか しつもんは ありますか？",
+      expected: [
+        "だいじょうぶです",
+        "もう だいじょうぶです",
+        "だいじょうぶです ありがとう",
+
+        // romaji
+        "daijoubu desu",
+        "mou daijoubu desu",
+        "daijoubu desu arigatou"
+      ],
+      correction: "「だいじょうぶです。」が しぜんです。"
+    },
+    {
+      jp: "よかったです。きをつけて いってくださいね。",
+      expected: [
+        "はい",
+        "ありがとうございます",
+
+        // romaji
+        "hai",
+        "arigatou gozaimasu"
+      ],
+      correction: null
+    }
+  ]
+};
+
+
+const homeFamilyScenario = {
+  id: "l11_scenario_12",
+  title: "Talking at Home With Family",
+  description: "Talk with your parents or siblings at home and respond naturally.",
+  systemTurns: [
+    {
+      jp: "おかえり。きょうは どうだった？",
+      expected: [
+        "ふつうでした",
+        "たのしかったです",
+        "ちょっと つかれました",
+
+        // romaji
+        "futsuu deshita",
+        "tanoshikatta desu",
+        "chotto tsukaremashita"
+      ],
+      correction: "しぜんな言い方は「ふつうでした。」です。"
+    },
+    {
+      jp: "そうなんだ。おとうとが きょう おもしろいことを いっていましたよ。",
+      expected: [
+        "なにを いっていましたか",
+        "どんなことですか",
+        "きになります",
+
+        // romaji
+        "nani wo itteimashita ka",
+        "donna koto desu ka",
+        "ki ni narimasu"
+      ],
+      correction: "「なにを いっていましたか。」が いちばん しぜんです。"
+    },
+    {
+      jp: "あさから ずっと あそびたいって いってました。ほかに きょうのこと なんか ありますか？",
+      expected: [
+        "だいじょうぶです",
+        "とくに ありません",
+        "だいじょうぶです ありがとう",
+
+        // romaji
+        "daijoubu desu",
+        "toku ni arimasen",
+        "daijoubu desu arigatou"
+      ],
+      correction: "「とくに ありません。」が しぜんです。"
+    },
+    {
+      jp: "わかったよ。じゃあ ゆっくり やすんでね。",
+      expected: [
+        "はい",
+        "ありがとうございます",
+
+        // romaji
+        "hai",
+        "arigatou gozaimasu"
+      ],
+      correction: null
+    }
+  ]
+};
+
+const cleaningArgumentScenario = {
+  id: "l11_scenario_13",
+  title: "Arguing About Cleaning",
+  description: "A short argument between mother and daughter about cleaning.",
+  systemTurns: [
+    {
+      jp: "おねがい。きょうは おさらを あらってくれる？",
+      expected: [
+        "えー きょうは やりたくないです",
+        "ちょっと つかれています",
+        "あとで やります",
+
+        // romaji
+        "ee kyou wa yaritakunai desu",
+        "chotto tsukareteimasu",
+        "atode yarimasu"
+      ],
+      correction: "しぜんな言い方は「えー きょうは やりたくないです。」です。"
+    },
+    {
+      jp: "でも だれも やってないよ。すこしだけで いいから。",
+      expected: [
+        "ほんとうに きょうは むりです",
+        "すこしなら できます",
+        "あとで ちゃんと やります",
+
+        // romaji
+        "hontou ni kyou wa muri desu",
+        "sukoshi nara dekimasu",
+        "atode chanto yarimasu"
+      ],
+      correction: "「すこしなら できます。」が いちばん しぜんです。"
+    },
+    {
+      jp: "じゃあ すこしだけ おねがいね。おさらか、まどふきか、どっちが いい？",
+      expected: [
+        "おさらが いいです",
+        "まどふきが いいです",
+        "どっちでも いいです",
+
+        // romaji
+        "osara ga ii desu",
+        "madofuki ga ii desu",
+        "docchi demo ii desu"
+      ],
+      correction: "「どっちでも いいです。」が しぜんです。"
+    },
+    {
+      jp: "ありがとう。おわったら よるごはん てつだってね。",
+      expected: [
+        "はい",
+        "わかりました",
+
+        // romaji
+        "hai",
+        "wakarimashita"
+      ],
+      correction: null
+    }
+  ]
+};
+
+
+
 /* ---------------------------------------------------------
   Converter
 --------------------------------------------------------- */
@@ -37066,7 +37636,19 @@ function loadScenario(scenario) {
 const cafeBtn = document.getElementById("cafeBtn");
 const interjectionBtn = document.getElementById("interjectionBtn");
 const storeHelpBtn = document.getElementById("storeHelpBtn");
-const bakeryBtn = document.getElementById("bakeryBtn"); // ⭐ NEW
+const bakeryBtn = document.getElementById("bakeryBtn");
+const hospitalBtn = document.getElementById("hospitalBtn"); // ⭐ NEW
+const schoolBtn = document.getElementById("schoolBtn");
+const classmateBtn = document.getElementById("classmateBtn");
+const libraryBtn = document.getElementById("libraryBtn");
+const campusBtn = document.getElementById("campusBtn");
+const schoolClubBtn = document.getElementById("schoolClubBtn");
+const trainStationBtn = document.getElementById("trainStationBtn");
+const homeFamilyBtn = document.getElementById("homeFamilyBtn");
+const cleaningArgumentBtn = document.getElementById("cleaningArgumentBtn");
+
+
+
 
 if (cafeBtn) {
   cafeBtn.onclick = () => {
@@ -37092,7 +37674,7 @@ if (storeHelpBtn) {
   };
 }
 
-if (bakeryBtn) { // ⭐ NEW
+if (bakeryBtn) {
   bakeryBtn.onclick = () => {
     loadScenario(bakeryOrderScenario);
     showScreen("level11Screen");
@@ -37100,6 +37682,82 @@ if (bakeryBtn) { // ⭐ NEW
   };
 }
 
+if (hospitalBtn) { // ⭐ NEW
+  hospitalBtn.onclick = () => {
+    loadScenario(hospitalRoomScenario);
+    showScreen("level11Screen");
+    startLevel11(currentScenario);
+  };
+}
+
+if (schoolBtn) {
+  schoolBtn.onclick = () => {
+    loadScenario(schoolHelpScenario);
+    showScreen("level11Screen");
+    startLevel11(currentScenario);
+  };
+}
+
+
+
+if (classmateBtn) {
+  classmateBtn.onclick = () => {
+    loadScenario(classmateHelpScenario);
+    showScreen("level11Screen");
+    startLevel11(currentScenario);
+  };
+}
+
+
+if (libraryBtn) {
+  libraryBtn.onclick = () => {
+    loadScenario(libraryHelpScenario);
+    showScreen("level11Screen");
+    startLevel11(currentScenario);
+  };
+}
+
+if (campusBtn) {
+  campusBtn.onclick = () => {
+    loadScenario(campusDirectionsScenario);
+    showScreen("level11Screen");
+    startLevel11(currentScenario);
+  };
+}
+
+
+if (schoolClubBtn) {
+  schoolClubBtn.onclick = () => {
+    loadScenario(schoolClubScenario);
+    showScreen("level11Screen");
+    startLevel11(currentScenario);
+  };
+}
+
+if (trainStationBtn) {
+  trainStationBtn.onclick = () => {
+    loadScenario(trainStationScenario);
+    showScreen("level11Screen");
+    startLevel11(currentScenario);
+  };
+}
+
+
+if (homeFamilyBtn) {
+  homeFamilyBtn.onclick = () => {
+    loadScenario(homeFamilyScenario);
+    showScreen("level11Screen");
+    startLevel11(currentScenario);
+  };
+}
+
+if (cleaningArgumentBtn) {
+  cleaningArgumentBtn.onclick = () => {
+    loadScenario(cleaningArgumentScenario);
+    showScreen("level11Screen");
+    startLevel11(currentScenario);
+  };
+}
 
 
 /*------------------------------------------------------------------------------------
