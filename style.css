@@ -319,3 +319,14 @@ body {
   background: #333;
 }
 
+#header-logo {
+    position: fixed;          /* floats above everything */
+    top: 20px;                /* distance from top */
+    right: 20px;              /* distance from right */
+    z-index: 9999;            /* stays above screens */
+}
+
+#header-logo img {
+    width: 140px;
+    height: auto;
+}

@@ -156,6 +156,71 @@ const sentences = [
 
 
 
+{
+  id: "l1-es-4",
+  meaning: "What do you do in your free time?",
+  level: 1,
+  chunks: [
+    {
+      romaji: "qué",
+      hiragana: "qué",
+      meaning: "what",
+      audio: {
+        daughter: "audio/spanish/que.wav",
+        me: "audio/spanish/que.wav"
+      }
+    },
+    {
+      romaji: "haces",
+      hiragana: "haces",
+      meaning: "do (you)",
+      audio: {
+        daughter: "audio/spanish/haces.wav",
+        me: "audio/spanish/haces.wav"
+      }
+    },
+    {
+      romaji: "en",
+      hiragana: "en",
+      meaning: "in",
+      audio: {
+        daughter: "audio/spanish/en.wav",
+        me: "audio/spanish/en.wav"
+      }
+    },
+    {
+      romaji: "tu",
+      hiragana: "tu",
+      meaning: "your",
+      audio: {
+        daughter: "audio/spanish/tu.wav",
+        me: "audio/spanish/tu.wav"
+      }
+    },
+    {
+      romaji: "tiempo",
+      hiragana: "tiempo",
+      meaning: "time",
+      audio: {
+        daughter: "audio/spanish/tiempo.wav",
+        me: "audio/spanish/tiempo.wav"
+      }
+    },
+    {
+      romaji: "libre",
+      hiragana: "libre",
+      meaning: "free",
+      audio: {
+        daughter: "audio/spanish/libre.wav",
+        me: "audio/spanish/libre.wav"
+      }
+    }
+  ]
+},
+
+
+
+
 
 
 
