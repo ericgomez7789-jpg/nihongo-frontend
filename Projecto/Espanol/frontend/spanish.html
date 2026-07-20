@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Método Tori — Aprender Español</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Global + Level CSS -->
+  
+  <link rel="stylesheet" href="espanol.css">
+  
+  <!-- Engine -->
+   <script src="Progress.js" defer></script>
+  <script src="spanish.js" defer></script>
+</head>
+
+<body>
+
+  <!-- ⭐ GLOBAL SCORE KEEPER ⭐ -->
+  <div id="scoreKeeper" class="score-keeper"></div>
+
+  <!-- ⭐⭐⭐ LANDING SCREEN ⭐⭐⭐ -->
+  <div id="landingScreen" class="screen">
+
+    <h1 class="title">Método Tori — Aprendizaje Cognitivo</h1>
+
+    <p style="font-size: 20px; color: #bbb; max-width: 480px; line-height: 1.5;">
+      Inspirado por una niña, impulsado por tareas cognitivas.<br>
+      Aprende español como el cerebro adquiere el lenguaje naturalmente.
+    </p>
+
+    <div style="margin-top: 32px;">
+      <button id="startLearningBtn" class="iconBtn" style="font-size: 20px; padding: 14px 26px;">
+        Comenzar →
+      </button>
+    </div>
+
+    <!-- Highlights -->
+    <div style="margin-top: 60px; max-width: 520px;">
+
+      <div style="margin-bottom: 30px;">
+        <div style="font-size: 26px;">⚡ Aprendizaje rápido</div>
+        <div style="color: #aaa; margin-top: 6px;">
+          Tareas basadas en fragmentos que reflejan cómo los niños adquieren el idioma.
+        </div>
+      </div>
+
+      <div style="margin-bottom: 30px;">
+        <div style="font-size: 26px;">🎧 Inmersión auditiva</div>
+        <div style="color: #aaa; margin-top: 6px;">
+          Escucha, ordena y responde. Tu cerebro capta ritmo, fragmentos y significado.
+        </div>
+      </div>
+
+      <div style="margin-bottom: 30px;">
+        <div style="font-size: 26px;">📈 Progresión de 6 niveles</div>
+        <div style="color: #aaa; margin-top: 6px;">
+          Los niveles 1–6 desarrollan habilidades auditivas y cognitivas esenciales.
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div style="margin-top: 80px; color: #666; font-size: 14px;">
+      © <span id="year"></span> Método Tori — Aprendizaje Cognitivo
+    </div>
+
+  </div>
+
+  <!-- ⭐⭐⭐ SCREEN 0 — LEVEL SELECT ⭐⭐⭐ -->
+  <div id="screen0" class="screen hidden">
+
+    <h1 class="title">Selecciona un Nivel</h1>
+
+    <div id="levelSelect">
+      <button class="levelBtn" data-level="1">Nivel 1</button>
+
+      
+      <button class="levelBtn" data-level="2">Nivel 2</button>
+      <button class="levelBtn" data-level="3">Nivel 3</button>
+      <button class="levelBtn" data-level="4">Nivel 4</button>
+      <button class="levelBtn" data-level="5">Nivel 5</button>
+      <button class="levelBtn" data-level="6">Nivel 6</button>
+      
+    </div>
+
+  </div>
+
+  <!-- ⭐⭐⭐ SCREEN 1 — AUDIO-ONLY LISTENING ⭐⭐⭐ -->
+  <div id="screen1" class="screen hidden">
+    <h2 class="title">Escucha con atención</h2>
+    <div class="instruction-line">Solo escucha — no respondas todavía.</div>
+    <div class="instruction-line">Hay 5 rondas por sesión.</div>
+    <div class="instruction-line">Algunas frases se repetirán para reforzar el aprendizaje.</div>
+  </div>
+
+  <!-- ⭐⭐⭐ SCREEN 2 — CHUNK PUZZLE ⭐⭐⭐ -->
+  <div id="screen2" class="screen hidden">
+
+    <button id="replaySentenceBtn" class="iconBtn replay-top">🔁 Repetir</button>
+
+    <div id="level1Screen2" class="level-block">
+      <div id="screen2Timer" class="timerDisplay"></div>
+      <div id="chunkContainer" class="chunk-container"></div>
+      <div id="dropLines" class="drop-lines"></div>
+    </div>
+
+  </div>
+<!-- ⭐⭐⭐ SCREEN 3 — MEANING + PER-SENTENCE SUMMARY ⭐⭐⭐ -->
+<div id="screen3" class="screen hidden">
+  <h1 class="title">Significado</h1>
+
+  <div class="meaning-box" id="meaningBox"></div>
+
+  <!-- Per-sentence chunk summary -->
+  <div id="summaryContainer" class="summary-container"></div>
+
+  <!-- Optional: correct drops -->
+  <div id="summaryCorrectDrops" class="summary-correct-drops"></div>
+
+  <!-- Replay + Next controls -->
+  <div class="summary-controls">
+    <button id="screen3ReplayBtn" class="iconBtn">Repetir</button>
+    <button id="screen3NextBtn" class="iconBtn">Siguiente</button>
+  </div>
+</div>
+
+
+  <!-- ⭐⭐⭐ SCREEN 4 — SESSION SUMMARY ⭐⭐⭐ -->
+  <div id="screen4" class="screen hidden">
+    <h1 class="title">Resumen</h1>
+
+    <div class="session-summary-box" id="sessionSummary"></div>
+
+    <div class="session-controls">
+      <button id="restartBtn" class="iconBtn">Reiniciar</button>
+      <button id="backToLevelsBtn" class="iconBtn">Niveles</button>
+    </div>
+  </div>
+
+</body>
+</html>
