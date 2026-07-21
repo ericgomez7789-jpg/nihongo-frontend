@@ -4,8 +4,7 @@
   <meta charset="UTF-8" />
   <title>Tori's Method — Blog & Podcast</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="stylesheet" href="logo.css">
-
+  <link rel="stylesheet" href="logo.css">
 
   <style>
     body {
@@ -17,14 +16,18 @@
       padding: 0 20px 60px;
       line-height: 1.7;
     }
+
     a { color: #7fd1ff; text-decoration: none; }
     a:hover { text-decoration: underline; }
+
     h1, h2, h3 { font-weight: 600; }
+
     article {
       margin-bottom: 60px;
       border-bottom: 1px solid #333;
       padding-bottom: 40px;
     }
+
     textarea, input {
       width: 100%;
       background: #111;
@@ -35,6 +38,7 @@
       margin-top: 10px;
       font-size: 15px;
     }
+
     button {
       margin-top: 10px;
       padding: 10px 16px;
@@ -45,7 +49,9 @@
       font-size: 15px;
       cursor: pointer;
     }
+
     button:hover { background: #3aa0ff; }
+
     .danger-btn { background: #ff4d4d; }
     .danger-btn:hover { background: #ff6666; }
 
@@ -66,283 +72,217 @@
 </head>
 
 <body>
+
 <div id="header-logo">
   <img src="audio/logo/toris_logo.png" alt="App Logo">
 </div>
 
-  <h1>Tori's Method — Blog & Podcast</h1>
-  <p>Updates, dev logs, thoughts, and short podcast-style audio notes.</p>
+<h1>Tori's Method — Blog & Podcast</h1>
+<p>Updates, dev logs, thoughts, and short podcast-style audio notes.</p>
 
-  <div id="unlockPrompt"></div>
+<div id="unlockPrompt"></div>
 
-  <!-- LOGIN UI -->
-  <div id="authBox">
-    <h2>Login</h2>
-    <input id="email" placeholder="Email" />
-    <input id="password" type="password" placeholder="Password" />
-    <button onclick="login()">Login</button>
-    <button onclick="signup()">Sign Up</button>
+<!-- LOGIN UI -->
+<div id="authBox">
+  <h2>Login</h2>
+  <input id="email" placeholder="Email" />
+  <input id="password" type="password" placeholder="Password" />
+  <button onclick="login()">Login</button>
+  <button onclick="signup()">Sign Up</button>
+</div>
+
+<!-- LOGOUT UI -->
+<div id="logoutBox" style="display:none; margin-bottom:30px;">
+  <button onclick="logout()">Logout</button>
+
+  <div style="margin-bottom:20px;">
+    <a href="membership.html" style="color:#7fd1ff; font-size:18px;">Membership →</a>
   </div>
+</div>
 
-  <!-- LOGOUT UI -->
-  <div id="logoutBox" style="display:none; margin-bottom:30px;">
-    <button onclick="logout()">Logout</button>
+<!-- BLOG APP -->
+<div id="app">
 
-    <div style="margin-bottom:20px;">
-      <a href="membership.html" style="color:#7fd1ff; font-size:18px;">Membership →</a>
-    </div>
-  </div>
+  <h2>Write a Post, Question, or Feedback</h2>
+  <input id="newTitle" placeholder="Post title (optional)" />
+  <textarea id="newBody" rows="4" placeholder="Write your message here..."></textarea>
+  <button onclick="publishPost()">Publish Post</button>
 
-  <!-- BLOG APP -->
-  <div id="app">
+  <hr style="margin: 40px 0; border-color:#333;">
 
-    <h2>Write a Post, Question, or Feedback</h2>
-    <input id="newTitle" placeholder="Post title (optional)" />
-    <textarea id="newBody" rows="4" placeholder="Write your message here..."></textarea>
-    <button onclick="publishPost()">Publish Post</button>
+  <div id="posts"></div>
 
-    <hr style="margin: 40px 0; border-color:#333;">
+  <h2 style="margin-top:60px;">Add Podcast Audio Clip (URL)</h2>
+  <textarea id="audioInput" rows="3" placeholder="Paste audio URL here..."></textarea>
+  <button onclick="publishAudio()">Publish Audio Clip</button>
 
-    <div id="posts"></div>
+  <h2 style="margin-top:40px;">Record Podcast Audio Clip</h2>
+  <button id="recordBtn">🎙 Start Recording</button>
+  <button id="stopBtn" disabled>⏹ Stop Recording</button>
+  <p id="recordStatus" style="color:#aaa; margin-top:10px;"></p>
 
-    <h2 style="margin-top:60px;">Add Podcast Audio Clip (URL)</h2>
-    <textarea id="audioInput" rows="3" placeholder="Paste audio URL here..."></textarea>
-    <button onclick="publishAudio()">Publish Audio Clip</button>
+  <p style="margin-top: 40px;">
+    <a href="index.html">← Back to Tori's Method</a>
+  </p>
 
-    <h2 style="margin-top:40px;">Record Podcast Audio Clip</h2>
-    <button id="recordBtn">🎙 Start Recording</button>
-    <button id="stopBtn" disabled>⏹ Stop Recording</button>
-    <p id="recordStatus" style="color:#aaa; margin-top:10px;"></p>
-<p style="margin-top: 40px;">
-  <a href="index.html">← Back to Tori's Method</a>
-</p>
+  <p style="margin-top: 20px;">
+    <a href="/search-anchor.html" style="color: #4ea3ff;">
+      Learn how Tori’s Method works →
+    </a>
+  </p>
 
-<p style="margin-top: 20px;">
-  <a href="/search-anchor.html" style="color: #4ea3ff;">
-    Learn how Tori’s Method works →
-  </a>
-</p>
-
-<p style="margin-top: 12px;">
-  <a href="/pillar.html" style="color: #4ea3ff;">
-    Why listening is the hardest skill →
-  </a>
-</p>
-
-
-
+  <p style="margin-top: 12px;">
+    <a href="/pillar.html" style="color: #4ea3ff;">
+      Why listening is the hardest skill →
+    </a>
+  </p>
+</div>
 
 <script type="module">
   import { supabase } from "./supabaseClient.js";
 
-  // your blog logic here
-</script>
+  /* LOGIN */
+  async function login() {
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
 
+    const { error } = await supabase.auth.signInWithPassword({ email, password });
 
-
-
-
-
-
-
-
-
-
-    /* UNLOCK PROMPT */
-    const params = new URLSearchParams(window.location.search);
-    const msg = params.get("msg");
-    if (msg) {
-      const box = document.getElementById("unlockPrompt");
-      box.textContent = msg;
-      box.style.display = "block";
+    if (error) {
+      alert(error.message);
+      return;
     }
 
-    /* INITIAL SESSION CHECK (prevents flash) */
-    blogSupabase.auth.getSession().then(({ data }) => {
-      const loggedIn = !!data.session;
+    window.location.reload();
+  }
+  window.login = login;
 
-      document.getElementById("authBox").style.display = loggedIn ? "none" : "block";
-      document.getElementById("logoutBox").style.display = loggedIn ? "block" : "none";
-      document.getElementById("app").style.display = loggedIn ? "block" : "none";
+  /* SIGNUP */
+  async function signup() {
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
 
-      if (loggedIn) renderPosts();
-    });
+    const { error } = await supabase.auth.signUp({ email, password });
 
-    /* LOGIN / SIGNUP / LOGOUT */
-    async function login() {
-      const email = document.getElementById("email").value.trim();
-      const password = document.getElementById("password").value.trim();
-      const { error } = await blogSupabase.auth.signInWithPassword({ email, password });
-      if (error) alert(error.message);
+    if (error) {
+      alert(error.message);
+      return;
     }
 
-    async function signup() {
-      const email = document.getElementById("email").value.trim();
-      const password = document.getElementById("password").value.trim();
-      const { error } = await blogSupabase.auth.signUp({ email, password });
-      if (error) alert(error.message);
-      else alert("Signup successful. Check your email to confirm.");
-    }
+    alert("Signup successful! Check your email to confirm.");
+  }
+  window.signup = signup;
 
-    async function logout() {
-      await blogSupabase.auth.signOut();
+  /* LOGOUT */
+  async function logout() {
+    await supabase.auth.signOut();
+    window.location.reload();
+  }
+  window.logout = logout;
 
-      document.getElementById("authBox").style.display = "block";
-      document.getElementById("logoutBox").style.display = "none";
-      document.getElementById("app").style.display = "none";
-      document.getElementById("posts").innerHTML = "";
-    }
+  /* AUTH STATE */
+  supabase.auth.onAuthStateChange(async (event, session) => {
+    const loggedIn = !!session;
 
-    /* AUTH STATE LISTENER */
-    blogSupabase.auth.onAuthStateChange(async (event, session) => {
-      const loggedIn = !!session;
+    document.getElementById("authBox").style.display = loggedIn ? "none" : "block";
+    document.getElementById("logoutBox").style.display = loggedIn ? "block" : "none";
+    document.getElementById("app").style.display = loggedIn ? "block" : "none";
 
-      document.getElementById("authBox").style.display = loggedIn ? "none" : "block";
-      document.getElementById("logoutBox").style.display = loggedIn ? "block" : "none";
-      document.getElementById("app").style.display = loggedIn ? "block" : "none";
+    if (loggedIn) renderPosts();
+  });
 
-      if (loggedIn) renderPosts();
-    });
+  /* BLOG LOGIC */
+  const Blog = {
+    async getPosts() {
+      const { data } = await supabase
+        .from("posts")
+        .select("id, title, body, audio_url, created_at")
+        .order("created_at", { ascending: false });
+      return data || [];
+    },
 
-    /* BLOG LOGIC */
-    const Blog = {
-      async getPosts() {
-        const { data } = await blogSupabase
-          .from("posts")
-          .select("id, title, body, audio_url, created_at")
-          .order("created_at", { ascending: false });
-        return data || [];
-      },
+    async addPost({ title, body, audio }) {
+      let audio_url = null;
 
-      async addPost({ title, body, audio }) {
-        let audio_url = null;
+      if (audio instanceof Blob) {
+        const fileName = `audio-${Date.now()}.webm`;
+        const { error } = await supabase.storage
+          .from("audio")
+          .upload(fileName, audio, { contentType: "audio/webm" });
 
-        if (audio instanceof Blob) {
-          const fileName = `audio-${Date.now()}.webm`;
-          const { error } = await blogSupabase.storage
+        if (!error) {
+          audio_url = supabase.storage
             .from("audio")
-            .upload(fileName, audio, { contentType: "audio/webm" });
-
-          if (!error) {
-            audio_url = blogSupabase.storage
-              .from("audio")
-              .getPublicUrl(fileName).data.publicUrl;
-          }
+            .getPublicUrl(fileName).data.publicUrl;
         }
-
-        if (typeof audio === "string") audio_url = audio;
-
-        await blogSupabase.from("posts").insert({ title, body, audio_url });
-      },
-
-      async deletePost(id) {
-        await blogSupabase.from("posts").delete().eq("id", id);
       }
-    };
 
+      if (typeof audio === "string") audio_url = audio;
+
+      await supabase.from("posts").insert({ title, body, audio_url });
+    },
+
+    async deletePost(id) {
+      await supabase.from("posts").delete().eq("id", id);
+    }
+  };
+
+  async function renderPosts() {
+    const posts = await Blog.getPosts();
     const container = document.getElementById("posts");
 
-    async function renderPosts() {
-      const posts = await Blog.getPosts();
-
-      if (!posts.length) {
-        container.innerHTML = "<p>No posts yet.</p>";
-        return;
-      }
-
-      container.innerHTML = posts.map(post => `
-        <article>
-          <h2>${post.title}</h2>
-          <p style="color:#aaa; font-size:14px;">
-            ${new Date(post.created_at).toLocaleString()}
-          </p>
-
-          <button class="danger-btn" onclick="handleDeletePost('${post.id}')">
-            Delete Post
-          </button>
-
-          ${post.body ? `<p>${post.body}</p>` : ""}
-          ${post.audio_url ? `
-            <audio controls style="margin-top:20px; width:100%;">
-              <source src="${post.audio_url}">
-            </audio>
-          ` : ""}
-        </article>
-      `).join("");
+    if (!posts.length) {
+      container.innerHTML = "<p>No posts yet.</p>";
+      return;
     }
 
-    window.handleDeletePost = async (id) => {
-      if (!confirm("Delete this post?")) return;
-      await Blog.deletePost(id);
-      renderPosts();
-    };
+    container.innerHTML = posts.map(post => `
+      <article>
+        <h2>${post.title}</h2>
+        <p style="color:#aaa; font-size:14px;">
+          ${new Date(post.created_at).toLocaleString()}
+        </p>
 
-    window.publishPost = async () => {
-      const title = document.getElementById("newTitle").value.trim();
-      const body = document.getElementById("newBody").value.trim();
-      if (!body) return;
+        <button class="danger-btn" onclick="handleDeletePost('${post.id}')">
+          Delete Post
+        </button>
 
-      await Blog.addPost({ title: title || "Untitled", body });
-      document.getElementById("newTitle").value = "";
-      document.getElementById("newBody").value = "";
-      renderPosts();
-    };
+        ${post.body ? `<p>${post.body}</p>` : ""}
+        ${post.audio_url ? `
+          <audio controls style="margin-top:20px; width:100%;">
+            <source src="${post.audio_url}">
+          </audio>
+        ` : ""}
+      </article>
+    `).join("");
+  }
 
-    window.publishAudio = async () => {
-      const audio = document.getElementById("audioInput").value.trim();
-      if (!audio) return;
+  window.handleDeletePost = async (id) => {
+    if (!confirm("Delete this post?")) return;
+    await Blog.deletePost(id);
+    renderPosts();
+  };
 
-      await Blog.addPost({ title: "Podcast Audio Clip", body: "", audio });
-      document.getElementById("audioInput").value = "";
-      renderPosts();
-    };
+  window.publishPost = async () => {
+    const title = document.getElementById("newTitle").value.trim();
+    const body = document.getElementById("newBody").value.trim();
+    if (!body) return;
 
-    /* AUDIO RECORDING */
-    let mediaRecorder;
-    let audioChunks = [];
+    await Blog.addPost({ title: title || "Untitled", body });
+    document.getElementById("newTitle").value = "";
+    document.getElementById("newBody").value = "";
+    renderPosts();
+  };
 
-    const recordBtn = document.getElementById("recordBtn");
-    const stopBtn = document.getElementById("stopBtn");
-    const recordStatus = document.getElementById("recordStatus");
+  window.publishAudio = async () => {
+    const audio = document.getElementById("audioInput").value.trim();
+    if (!audio) return;
 
-    recordBtn.onclick = async () => {
-      try {
-        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-        mediaRecorder = new MediaRecorder(stream);
-        audioChunks = [];
-        mediaRecorder.start();
-
-        recordBtn.disabled = true;
-        stopBtn.disabled = false;
-        recordStatus.textContent = "Recording... 🎤";
-
-        mediaRecorder.ondataavailable = e => audioChunks.push(e.data);
-      } catch {
-        recordStatus.textContent = "Microphone access denied.";
-      }
-    };
-
-    stopBtn.onclick = () => {
-      mediaRecorder.stop();
-      recordBtn.disabled = false;
-      stopBtn.disabled = true;
-      recordStatus.textContent = "Processing audio...";
-
-      mediaRecorder.onstop = async () => {
-        const audioBlob = new Blob(audioChunks, { type: "audio/webm" });
-
-        recordStatus.textContent = "Uploading audio...";
-        await Blog.addPost({
-          title: "Recorded Audio Clip",
-          body: "",
-          audio: audioBlob
-        });
-
-        recordStatus.textContent = "Recorded audio saved.";
-        renderPosts();
-      };
-    };
-  </script>
+    await Blog.addPost({ title: "Podcast Audio Clip", body: "", audio });
+    document.getElementById("audioInput").value = "";
+    renderPosts();
+  };
+</script>
 
 </body>
 </html>
