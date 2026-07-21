@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Membership – Nihongo App</title>
-<link rel="stylesheet" href="logo.css">
+  <link rel="stylesheet" href="logo.css">
 
   <style>
     body {
@@ -15,11 +15,10 @@
     }
 
     .screen {
-      display: block;
-      background: #000;
-      color: #fff;
       min-height: 100vh;
       padding: 40px;
+      background: #000;
+      color: #fff;
     }
 
     .title {
@@ -88,167 +87,179 @@
 </head>
 
 <body>
+
 <div id="header-logo">
   <img src="audio/logo/toris_logo.png" alt="App Logo">
 </div>
 
-  <div class="screen">
-    <h1 class="title">Membership</h1>
+<div class="screen">
+  <h1 class="title">Membership</h1>
 
-    <p style="text-align:center; color:#bbb; margin-bottom:30px;">
-      Choose a plan to unlock all levels.
-    </p>
+  <p style="text-align:center; color:#bbb; margin-bottom:30px;">
+    Choose a plan to unlock all levels.
+  </p>
 
-    <!-- BASIC MONTHLY -->
-    <div class="plan" id="basic-monthly-card">
-      <h2>Basic</h2>
-      <div class="price">$7.99 / month</div>
-      <p>Unlocks Levels 4–8</p>
-      <button class="subscribeBtn" id="basic-monthly-btn"
-        onclick="window.location.href='checkout-basic.html'">
-        Continue to Checkout
-      </button>
-    </div>
-
-    <!-- PREMIUM MONTHLY -->
-    <div class="plan" id="premium-monthly-card">
-      <h2>Premium</h2>
-      <div class="price">$14.99 / month</div>
-      <p>Unlocks ALL Levels (4–12)</p>
-      <button class="subscribeBtn" id="premium-monthly-btn"
-        onclick="window.location.href='checkout-premium-monthly.html'">
-        Continue to Checkout
-      </button>
-    </div>
-
-    <!-- BASIC YEARLY -->
-    <div class="plan" id="basic-yearly-card">
-      <h2>Basic Yearly</h2>
-      <div class="price">$79.99 / year</div>
-      <p>Unlocks Levels 4–8</p>
-      <button class="subscribeBtn" id="basic-yearly-btn"
-        onclick="window.location.href='checkout-basic-yearly.html'">
-        Continue to Checkout
-      </button>
-    </div>
-
-    <!-- PREMIUM YEARLY -->
-    <div class="plan" id="premium-yearly-card">
-      <h2>Premium Yearly</h2>
-      <div class="price">$149.99 / year</div>
-      <p>Unlocks ALL Levels (4–12)</p>
-      <button class="subscribeBtn" id="premium-yearly-btn"
-        onclick="window.location.href='checkout-premium-yearly.html'">
-        Continue to Checkout
-      </button>
-    </div>
-
-    <!-- LIFETIME -->
-    <div class="plan" id="lifetime-card">
-      <h2>Lifetime Access</h2>
-      <div class="price">$199.99 one-time</div>
-      <p>Unlocks ALL Levels + all future languages</p>
-      <button class="subscribeBtn" id="lifetime-btn"
-        onclick="window.location.href='checkout-lifetime.html'">
-        Continue to Checkout
-      </button>
-    </div>
-
-    <div class="back-link">
-      <a href="index.html">← Back to Nihongo App</a>
-    </div>
+  <!-- BASIC MONTHLY -->
+  <div class="plan" id="basic-monthly-card">
+    <h2>Basic</h2>
+    <div class="price">$7.99 / month</div>
+    <p>Unlocks Levels 4–8</p>
+    <button class="subscribeBtn" id="basic-monthly-btn"
+      onclick="window.location.href='checkout-basic.html'">
+      Continue to Checkout
+    </button>
   </div>
 
-  <!-- Supabase client -->
-  <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+  <!-- PREMIUM MONTHLY -->
+  <div class="plan" id="premium-monthly-card">
+    <h2>Premium</h2>
+    <div class="price">$14.99 / month</div>
+    <p>Unlocks ALL Levels (4–12)</p>
+    <button class="subscribeBtn" id="premium-monthly-btn"
+      onclick="window.location.href='checkout-premium-monthly.html'">
+      Continue to Checkout
+    </button>
+  </div>
 
-  <script>
-    const sb = window.supabase.createClient(
-  "https://dpaugaohbgpbtsstfihm.supabase.co",
-  "sb_publishable_RQV6i4UiMHXTEOs1L0xpYQ_ug4IRSXr"
-);
+  <!-- BASIC YEARLY -->
+  <div class="plan" id="basic-yearly-card">
+    <h2>Basic Yearly</h2>
+    <div class="price">$79.99 / year</div>
+    <p>Unlocks Levels 4–8</p>
+    <button class="subscribeBtn" id="basic-yearly-btn"
+      onclick="window.location.href='checkout-basic-yearly.html'">
+      Continue to Checkout
+    </button>
+  </div>
 
+  <!-- PREMIUM YEARLY -->
+  <div class="plan" id="premium-yearly-card">
+    <h2>Premium Yearly</h2>
+    <div class="price">$149.99 / year</div>
+    <p>Unlocks ALL Levels (4–12)</p>
+    <button class="subscribeBtn" id="premium-yearly-btn"
+      onclick="window.location.href='checkout-premium-yearly.html'">
+      Continue to Checkout
+    </button>
+  </div>
 
-    async function fetchMembership() {
-      const { data: sessionData } = await sb.auth.getSession();
-      const user = sessionData.session?.user;
+  <!-- LIFETIME -->
+  <div class="plan" id="lifetime-card">
+    <h2>Lifetime Access</h2>
+    <div class="price">$199.99 one-time</div>
+    <p>Unlocks ALL Levels + all future languages</p>
+    <button class="subscribeBtn" id="lifetime-btn"
+      onclick="window.location.href='checkout-lifetime.html'">
+      Continue to Checkout
+    </button>
+  </div>
 
-      if (!user) return { status: "none", plan: "none" };
+  <div class="back-link">
+    <a href="index.html">← Back to Nihongo App</a>
+  </div>
+</div>
 
-      const { data } = await sb
-        .from("profiles")
-        .select("membership_status, membership_plan")
-        .eq("email", user.email)
-        .maybeSingle();
+<!-- Supabase client -->
+<script src="https://unpkg.com/@supabase/supabase-js@2"></script>
 
-      if (!data) return { status: "none", plan: "none" };
+<script>
+  const sb = window.supabase.createClient(
+    "https://dpaugaohbgpbtsstfihm.supabase.co",
+    "sb_publishable_RQV6i4UiMHXTEOs1L0xpYQ_ug4IRSXr"
+  );
 
-      return {
-        status: data.membership_status,
-        plan: data.membership_plan
-      };
+  /* ⭐ Create profile row if missing */
+  async function ensureMembershipRow() {
+    const { data: sessionData } = await sb.auth.getSession();
+    const user = sessionData.session?.user;
+
+    if (!user) return;
+
+    await sb.from("profiles").upsert({
+      email: user.email,
+      membership_status: "none",
+      membership_plan: "none"
+    });
+  }
+
+  async function fetchMembership() {
+    const { data: sessionData } = await sb.auth.getSession();
+    const user = sessionData.session?.user;
+
+    if (!user) return { status: "none", plan: "none" };
+
+    const { data } = await sb
+      .from("profiles")
+      .select("membership_status, membership_plan")
+      .eq("email", user.email)
+      .maybeSingle();
+
+    if (!data) return { status: "none", plan: "none" };
+
+    return {
+      status: data.membership_status,
+      plan: data.membership_plan
+    };
+  }
+
+  function disablePlan(cardId, btnId) {
+    const card = document.getElementById(cardId);
+    const btn = document.getElementById(btnId);
+
+    card.style.border = "2px solid #4caf50";
+    btn.classList.add("disabled");
+    btn.innerText = "You already have this plan";
+    btn.onclick = null;
+  }
+
+  (async function init() {
+    /* ⭐ Ensure profile row exists */
+    await ensureMembershipRow();
+
+    const membership = await fetchMembership();
+    console.log("DEBUG MEMBERSHIP:", membership);
+
+    const status = membership.status;
+    const plan = membership.plan;
+
+    if (localStorage.getItem("justPaid") === "true") {
+      localStorage.removeItem("justPaid");
+
+      if (status === "active") {
+        window.location.href = "index.html";
+        return;
+      }
     }
 
-    function disablePlan(cardId, btnId) {
-      const card = document.getElementById(cardId);
-      const btn = document.getElementById(btnId);
+    if (status !== "active") return;
 
-      card.style.border = "2px solid #4caf50";
-      btn.classList.add("disabled");
-      btn.innerText = "You already have this plan";
-      btn.onclick = null;
+    if (plan === "basic-monthly") {
+      disablePlan("basic-monthly-card", "basic-monthly-btn");
+      return;
     }
 
-    (async function init() {
-      const membership = await fetchMembership();
-      console.log("DEBUG MEMBERSHIP:", membership);
+    if (plan === "basic-yearly") {
+      disablePlan("basic-yearly-card", "basic-yearly-btn");
+      return;
+    }
 
-      const status = membership.status;
-      const plan = membership.plan;
+    if (plan === "premium-monthly") {
+      disablePlan("premium-monthly-card", "premium-monthly-btn");
+      return;
+    }
 
-      // Auto‑unlock after Stripe redirect
-      if (localStorage.getItem("justPaid") === "true") {
-        localStorage.removeItem("justPaid");
+    if (plan === "premium-yearly") {
+      disablePlan("premium-yearly-card", "premium-yearly-btn");
+      return;
+    }
 
-        if (status === "active") {
-          window.location.href = "index.html";
-          return;
-        }
-      }
-
-      // Not logged in or no plan → show all plans normally
-      if (status !== "active") return;
-
-      // BASIC USERS → allow upgrades
-      if (plan === "basic-monthly") {
-        disablePlan("basic-monthly-card", "basic-monthly-btn");
-        return;
-      }
-
-      if (plan === "basic-yearly") {
-        disablePlan("basic-yearly-card", "basic-yearly-btn");
-        return;
-      }
-
-      // PREMIUM USERS → disable Premium, allow Lifetime upgrade
-      if (plan === "premium-monthly") {
-        disablePlan("premium-monthly-card", "premium-monthly-btn");
-        return;
-      }
-
-      if (plan === "premium-yearly") {
-        disablePlan("premium-yearly-card", "premium-yearly-btn");
-        return;
-      }
-
-      // LIFETIME USERS → disable Lifetime, redirect home
-      if (plan === "lifetime") {
-        disablePlan("lifetime-card", "lifetime-btn");
-        setTimeout(() => window.location.href = "index.html", 1500);
-        return;
-      }
-    })();
-  </script>
+    if (plan === "lifetime") {
+      disablePlan("lifetime-card", "lifetime-btn");
+      setTimeout(() => window.location.href = "index.html", 1500);
+      return;
+    }
+  })();
+</script>
 
 </body>
 </html>
