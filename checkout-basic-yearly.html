@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Checkout – Basic Yearly Plan</title>
-<link rel="stylesheet" href="logo.css">
-
+  <link rel="stylesheet" href="logo.css">
 
   <style>
     body {
@@ -70,7 +69,6 @@
   <img src="audio/logo/toris_logo.png" alt="App Logo">
 </div>
 
-
   <div class="container">
     <h1>Basic Yearly Plan Checkout</h1>
     <p>Unlock Levels 4–8 for a full year.</p>
@@ -112,6 +110,13 @@
 
   <!-- Supabase client -->
   <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+
+  <script>
+    const sb = window.supabase.createClient(
+      "https://dpaugaohbgpbtsstfihm.supabase.co",
+      "sb_publishable_RQV6i4UiMHXTEOs1L0xpYQ_ug4IRSXr"
+    );
+  </script>
 
 </body>
 </html>

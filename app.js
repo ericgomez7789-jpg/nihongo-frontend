@@ -3,10 +3,9 @@
 // ============================================================
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
-const supabaseUrl = "https://uuunamcyjlhgjrihhcyv.supabase.co";
+const supabaseUrl = "https://dpaugaohbgpbtsstfihm.supabase.co";
 const supabaseKey =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InV1dW5hbWN5amxoZ2pyaWhoY3l2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODEwNDQ5NDEsImV4cCI6MjA5NjYyMDk0MX0.i_WcLHDq7PTG8lMoeXxcvgKGbZr0GWlDrlEJycHEVak";
-
+"sb_publishable_RQV6i4UiMHXTEOs1L0xpYQ_ug4IRSXr";
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 // Make Supabase global

@@ -42,6 +42,11 @@ const sentences = [
     ]
   },
 
+
+
+
+
+
   {
      id: "l1-2",
     meaning: "Are you well?",
@@ -81,6 +86,10 @@ const sentences = [
 
 
 
+
+
+
+  
 
 {
   id: "l1-3",
@@ -201,6 +210,19 @@ const sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
    id: "l1-5",
   meaning: "I play games",
