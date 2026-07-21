@@ -130,20 +130,23 @@
 </p>
 
 
-  <!-- Supabase MUST load before script -->
-  <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
 
-  <script>
-    /* SAFETY CHECK */
-    if (!window.supabase) {
-      console.error("Supabase failed to load.");
-    }
 
-    /* SUPABASE CLIENT */
-    const blogSupabase = window.supabase.createClient(
-      "https://uuunamcyjlhgjrihhcyv.supabase.co",
-      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InV1dW5hbWN5amxoZ2pyaWhoY3l2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODEwNDQ5NDEsImV4cCI6MjA5NjYyMDk0MX0.i_WcLHDq7PTG8lMoeXxcvgKGbZr0GWlDrlEJycHEVak"
-    );
+<script type="module">
+  import { supabase } from "./supabaseClient.js";
+
+  // your blog logic here
+</script>
+
+
+
+
+
+
+
+
+
+
 
     /* UNLOCK PROMPT */
     const params = new URLSearchParams(window.location.search);
