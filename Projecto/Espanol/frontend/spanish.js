@@ -220,7 +220,40 @@ const sentences = [
 
 
 
-
+{
+  id: "l1-es-5",
+  meaning: "I play games.",
+  level: 1,
+  chunks: [
+    {
+      romaji: "yo",
+      hiragana: "yo",
+      meaning: "I",
+      audio: {
+        daughter: "audio/spanish/yo.wav",
+        me: "audio/spanish/yo.wav"
+      }
+    },
+    {
+      romaji: "juego",
+      hiragana: "juego",
+      meaning: "play",
+      audio: {
+        daughter: "audio/spanish/juego.wav",
+        me: "audio/spanish/juego.wav"
+      }
+    },
+    {
+      romaji: "juegos",
+      hiragana: "juegos",
+      meaning: "games",
+      audio: {
+        daughter: "audio/spanish/juegos.wav",
+        me: "audio/spanish/juegos.wav"
+      }
+    }
+  ]
+},
 
 
 
