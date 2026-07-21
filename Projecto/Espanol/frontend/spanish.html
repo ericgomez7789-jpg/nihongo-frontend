@@ -121,7 +121,50 @@
     </div>
   </div>
 
-  <!-- Screens 1–4 remain unchanged -->
+  <!-- ⭐⭐⭐ SCREEN 1 — LISTENING ONLY ⭐⭐⭐ -->
+  <div id="screen1" class="screen hidden">
+    <h2 class="title">Escucha con atención</h2>
+    <div class="instruction-line">Solo escucha — no respondas todavía.</div>
+    <div class="instruction-line">Hay 5 rondas por sesión.</div>
+    <div class="instruction-line">Algunas frases se repetirán para reforzar el aprendizaje.</div>
+  </div>
+
+  <!-- ⭐⭐⭐ SCREEN 2 — CHUNK PUZZLE ⭐⭐⭐ -->
+  <div id="screen2" class="screen hidden">
+    <button id="replaySentenceBtn" class="iconBtn replay-top">🔁 Repetir</button>
+
+    <div id="level1Screen2" class="level-block">
+      <div id="screen2Timer" class="timerDisplay"></div>
+      <div id="chunkContainer" class="chunk-container"></div>
+      <div id="dropLines" class="drop-lines"></div>
+    </div>
+  </div>
+
+  <!-- ⭐⭐⭐ SCREEN 3 — MEANING + SUMMARY ⭐⭐⭐ -->
+  <div id="screen3" class="screen hidden">
+    <h1 class="title">Significado</h1>
+
+    <div class="meaning-box" id="meaningBox"></div>
+    <div id="summaryContainer" class="summary-container"></div>
+    <div id="summaryCorrectDrops" class="summary-correct-drops"></div>
+
+    <div class="summary-controls">
+      <button id="screen3ReplayBtn" class="iconBtn">Repetir</button>
+      <button id="screen3NextBtn" class="iconBtn">Siguiente</button>
+    </div>
+  </div>
+
+  <!-- ⭐⭐⭐ SCREEN 4 — SESSION SUMMARY ⭐⭐⭐ -->
+  <div id="screen4" class="screen hidden">
+    <h1 class="title">Resumen</h1>
+
+    <div class="session-summary-box" id="sessionSummary"></div>
+
+    <div class="session-controls">
+      <button id="restartBtn" class="iconBtn">Reiniciar</button>
+      <button id="backToLevelsBtn" class="iconBtn">Niveles</button>
+    </div>
+  </div>
 
 </body>
 </html>
