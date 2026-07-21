@@ -1357,19 +1357,21 @@
 <script src="https://unpkg.com/wanakana"></script>
 <script src="progress.js"></script>
 
-<!-- Supabase client MUST load before boot() -->
-<script src="https://unpkg.com/@supabase/supabase-js@2"></script>
 
 
-<script>
-  const sb = window.supabase.createClient(
-    "https://dpaugaohbgpbtsstfihm.supabase.co",
-    "sb_publishable_RQV6i4UiMHXTEOs1L0xpYQ_ug4IRSXr");
-</script>
 
 
-<!-- ⭐ BOOT GOES HERE — BEFORE script.js ⭐ -->
-<script>
+
+
+
+
+
+
+
+
+<script type="module">
+  import { supabase as sb } from "./supabaseClient.js";
+
   async function boot() {
     const { data } = await sb.auth.getSession();
 
@@ -1384,6 +1386,20 @@
 
   boot();
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!-- NOW script.js can safely use window.currentUser -->
 <script src="script.js?v=3"></script>
