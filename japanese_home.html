@@ -1365,12 +1365,15 @@
 
 
 
+<!-- ⭐ Load Supabase FIRST -->
+<script type="module" src="app.js"></script>
 
-
+<!-- ⭐ Then run your boot logic -->
 <script type="module">
   const sb = window.sb;
 
   async function boot() {
+    // Always safe now — sb is guaranteed to exist
     const { data } = await sb.auth.getSession();
 
     window.currentUser = data.session?.user || null;
@@ -1384,6 +1387,7 @@
 
   boot();
 </script>
+
 
 
 
