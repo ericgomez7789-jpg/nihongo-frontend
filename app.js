@@ -16,10 +16,7 @@ window.sb = supabase;
 // ============================================================
 //  Ensure Profile Row Exists (Correct, RLS-Safe)
 // ============================================================
-async function ensureProfileRow() {
-  const { data: sessionData } = await supabase.auth.getSession();
-  const user = sessionData.session?.user;
-
+async function ensureProfileRow(user) {
   if (!user?.id) {
     console.log("No user logged in — skipping profile creation.");
     return null;
@@ -64,20 +61,25 @@ async function ensureProfileRow() {
 
 
 // ============================================================
-//  Auth State Initialization Guard
+//  Auth Boot (Session-Ready, Race-Condition-Proof)
 // ============================================================
-let hasInitialized = false;
+async function bootAuth() {
+  // Wait until Supabase session is fully ready
+  const { data: { session } } = await supabase.auth.getSession();
 
-supabase.auth.onAuthStateChange(async (event, session) => {
-  const user = session?.user;
-  if (!user) return;
+  if (!session) {
+    console.log("Session not ready yet — waiting for login.");
+    return;
+  }
 
-  if (hasInitialized) return;
-  hasInitialized = true;
+  const user = session.user;
+  console.log("Boot user:", user);
 
-  console.log("User logged in:", user.email);
+  await ensureProfileRow(user);
+}
 
-  await ensureProfileRow();
+supabase.auth.onAuthStateChange(async () => {
+  bootAuth();
 });
 
 
