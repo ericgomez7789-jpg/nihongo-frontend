@@ -1367,10 +1367,8 @@
 
 
 
-
-
 <script type="module">
-  import { supabase as sb } from "./supabaseClient.js";
+  const sb = window.sb;
 
   async function boot() {
     const { data } = await sb.auth.getSession();

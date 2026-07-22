@@ -149,15 +149,14 @@
   </div>
 </div>
 
-<!-- ⭐ Shared Supabase Client -->
 <script type="module">
-  import { supabase } from "./supabaseClient.js";
+  const supabase = window.sb;
 
   async function ensureMembershipRow() {
     const { data: sessionData } = await supabase.auth.getSession();
     const user = sessionData.session?.user;
 
-    if (!user || !user.email) return;
+    if (!user?.email) return;
 
     const { data: existing } = await supabase
       .from("profiles")
@@ -202,7 +201,6 @@
 
   (async function init() {
     await ensureMembershipRow();
-
     const membership = await fetchMembership();
     console.log("DEBUG MEMBERSHIP:", membership);
   })();

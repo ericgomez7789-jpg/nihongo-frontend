@@ -138,8 +138,23 @@
   </p>
 </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <script type="module">
-  import { supabase } from "./supabaseClient.js";
+  const supabase = window.sb;
 
   /* LOGIN */
   async function login() {
@@ -283,6 +298,7 @@
     renderPosts();
   };
 </script>
+
 
 </body>
 </html>

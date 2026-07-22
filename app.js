@@ -1,26 +1,26 @@
 // ============================================================
-//  Initialize Supabase Client (ESM)
+//  Supabase Client (Single Instance)
 // ============================================================
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
 const supabaseUrl = "https://dpaugaohbgpbtsstfihm.supabase.co";
-const supabaseKey =
-"sb_publishable_RQV6i4UiMHXTEOs1L0xpYQ_ug4IRSXr";
+const supabaseKey = "sb_publishable_RQV6i4UiMHXTEOs1L0xpYQ_ug4IRSXr";
+
 const supabase = createClient(supabaseUrl, supabaseKey);
 
-// Make Supabase global
+// Expose globally for all modules
 window.sb = supabase;
 
 
 
 // ============================================================
-//  Ensure Membership Row ALWAYS Exists (but NEVER overwrite)
+//  Ensure Membership Row Exists (Never Overwrite)
 // ============================================================
 async function ensureMembershipRow() {
   const { data: sessionData } = await supabase.auth.getSession();
   const user = sessionData.session?.user;
 
-  if (!user || !user.email) {
+  if (!user?.email) {
     console.log("No user logged in — skipping profile creation.");
     return;
   }
@@ -37,7 +37,6 @@ async function ensureMembershipRow() {
     return;
   }
 
-  // If exists → do nothing
   if (existing) {
     console.log("Profile already exists:", user.email);
     return;
@@ -61,25 +60,28 @@ async function ensureMembershipRow() {
 
 
 
+// ============================================================
+//  Auth State Initialization Guard
+// ============================================================
 let hasInitialized = false;
 
 supabase.auth.onAuthStateChange(async (event, session) => {
-  if (!session?.user?.email) return;
+  const email = session?.user?.email;
+  if (!email) return;
 
-  if (hasInitialized) return;   // ⭐ Prevent repeated triggers
+  if (hasInitialized) return;
   hasInitialized = true;
 
-  console.log("User logged in:", session.user.email);
+  console.log("User logged in:", email);
   await ensureMembershipRow();
 });
 
 
 
 // ============================================================
-//  Fetch Membership Status (REFRESH + READ UPDATED ROW)
+//  Fetch Membership Status (Always Fresh)
 // ============================================================
 async function fetchMembership() {
-  // Refresh session after Stripe redirect
   await supabase.auth.refreshSession();
 
   const { data: sessionData } = await supabase.auth.getSession();
@@ -90,7 +92,6 @@ async function fetchMembership() {
     return { status: "none", plan: null };
   }
 
-  // Fetch membership from profiles table
   const { data: profile, error } = await supabase
     .from("profiles")
     .select("membership_status, membership_plan")
@@ -109,6 +110,7 @@ async function fetchMembership() {
     plan: profile.membership_plan
   };
 }
+
 
 
 // ============================================================
