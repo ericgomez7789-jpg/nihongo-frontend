@@ -14,7 +14,7 @@ window.sb = supabase;
 
 
 // ============================================================
-//  Ensure Profile Row Exists (Profiles-Only Membership System)
+//  Ensure Profile Row Exists (Correct, RLS-Safe)
 // ============================================================
 async function ensureProfileRow() {
   const { data: sessionData } = await supabase.auth.getSession();
@@ -22,27 +22,10 @@ async function ensureProfileRow() {
 
   if (!user?.id) {
     console.log("No user logged in — skipping profile creation.");
-    return;
+    return null;
   }
 
-  // Check if profile exists by ID (correct)
-  const { data: existing, error: fetchError } = await supabase
-    .from("profiles")
-    .select("id")
-    .eq("id", user.id)
-    .maybeSingle();
-
-  if (fetchError) {
-    console.error("Profile fetch error:", fetchError);
-    return;
-  }
-
-  if (existing) {
-    console.log("Profile already exists:", user.email);
-    return;
-  }
-
-  // Create new profile with correct default membership fields
+  // Try inserting — 409 means "already exists", which is OK
   const { error: insertError } = await supabase
     .from("profiles")
     .insert({
@@ -55,10 +38,27 @@ async function ensureProfileRow() {
     });
 
   if (insertError) {
-    console.error("Profile insert error:", insertError);
-  } else {
-    console.log("Profile created for:", user.email);
+    if (insertError.code === "409") {
+      console.log("Profile already exists:", user.email);
+    } else {
+      console.error("Profile insert error:", insertError);
+    }
   }
+
+  // Always fetch profile after insert attempt
+  const { data: profile, error: selectError } = await supabase
+    .from("profiles")
+    .select("*")
+    .eq("id", user.id)
+    .single();
+
+  if (selectError) {
+    console.error("Profile select error:", selectError);
+    return null;
+  }
+
+  console.log("Profile loaded:", profile);
+  return profile;
 }
 
 
@@ -76,6 +76,7 @@ supabase.auth.onAuthStateChange(async (event, session) => {
   hasInitialized = true;
 
   console.log("User logged in:", user.email);
+
   await ensureProfileRow();
 });
 
@@ -101,7 +102,7 @@ async function fetchMembership() {
     };
   }
 
-  // Fetch full profile by ID (correct)
+  // Fetch full profile by ID
   const { data: profile, error } = await supabase
     .from("profiles")
     .select("*")
