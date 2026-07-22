@@ -263,6 +263,70 @@ const sentences = [
 
 
 
+{
+  id: "l1-es-6",
+  meaning: "I go to school.",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "yo",
+      hiragana: "yo",
+      meaning: "I",
+      audio: {
+        daughter: "audio/spanish/yo.wav",
+        me: "audio/spanish/yo.wav"
+      }
+    },
+    {
+      romaji: "voy",
+      hiragana: "voy",
+      meaning: "go",
+      audio: {
+        daughter: "audio/spanish/voy.wav",
+        me: "audio/spanish/voy.wav"
+      }
+    },
+    {
+      romaji: "a",
+      hiragana: "a",
+      meaning: "to",
+      audio: {
+        daughter: "audio/spanish/a.wav",
+        me: "audio/spanish/a.wav"
+      }
+    },
+    {
+      romaji: "la",
+      hiragana: "la",
+      meaning: "the (feminine)",
+      audio: {
+        daughter: "audio/spanish/la.wav",
+        me: "audio/spanish/la.wav"
+      }
+    },
+    {
+      romaji: "escuela",
+      hiragana: "escuela",
+      meaning: "school",
+      audio: {
+        daughter: "audio/spanish/escuela.wav",
+        me: "audio/spanish/escuela.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 // ⭐ ADD THIS PATCH RIGHT HERE
