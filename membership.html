@@ -149,62 +149,47 @@
   </div>
 </div>
 
+
+
+
+
+
+
+<!-- ⭐ Load Supabase FIRST -->
+<script type="module" src="app.js"></script>
+
+<!-- ⭐ Then run membership logic -->
 <script type="module">
-  const supabase = window.sb;
+  const sb = window.sb;
 
-  async function ensureMembershipRow() {
-    const { data: sessionData } = await supabase.auth.getSession();
-    const user = sessionData.session?.user;
+  async function bootMembership() {
+    const { data } = await sb.auth.getSession();
+    const user = data.session?.user || null;
 
-    if (!user?.email) return;
+    window.currentUser = user;
+    console.log("Membership boot user:", user);
 
-    const { data: existing } = await supabase
-      .from("profiles")
-      .select("email")
-      .eq("email", user.email)
-      .maybeSingle();
-
-    if (!existing) {
-      await supabase.from("profiles").insert({
-        email: user.email,
-        membership_status: "none",
-        membership_plan: null
-      });
+    if (!user) {
+      console.log("No user logged in — redirecting.");
+      window.location.href = "blog-podcast.html";
+      return;
     }
-  }
 
-  supabase.auth.onAuthStateChange(async (event, session) => {
-    if (session?.user?.email) {
-      await ensureMembershipRow();
-    }
-  });
-
-  async function fetchMembership() {
-    await supabase.auth.refreshSession();
-
-    const { data: sessionData } = await supabase.auth.getSession();
-    const user = sessionData.session?.user;
-
-    if (!user) return { status: "none", plan: null };
-
-    const { data: profile } = await supabase
+    // Fetch membership
+    const { data: profile } = await sb
       .from("profiles")
       .select("membership_status, membership_plan")
       .eq("email", user.email)
-      .single();
+      .maybeSingle();
 
-    return {
-      status: profile?.membership_status || "none",
-      plan: profile?.membership_plan || null
-    };
+    console.log("Membership profile:", profile);
+
+    // Your existing UI logic continues here...
   }
 
-  (async function init() {
-    await ensureMembershipRow();
-    const membership = await fetchMembership();
-    console.log("DEBUG MEMBERSHIP:", membership);
-  })();
+  bootMembership();
 </script>
+
 
 </body>
 </html>
