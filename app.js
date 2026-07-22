@@ -8,28 +8,28 @@ const supabaseKey = "sb_publishable_RQV6i4UiMHXTEOs1L0xpYQ_ug4IRSXr";
 
 const supabase = createClient(supabaseUrl, supabaseKey);
 
-// Expose globally for all modules
+// Expose globally
 window.sb = supabase;
 
 
 
 // ============================================================
-//  Ensure Membership Row Exists (Never Overwrite)
+//  Ensure Profile Row Exists (Profiles-Only Membership System)
 // ============================================================
-async function ensureMembershipRow() {
+async function ensureProfileRow() {
   const { data: sessionData } = await supabase.auth.getSession();
   const user = sessionData.session?.user;
 
-  if (!user?.email) {
+  if (!user?.id) {
     console.log("No user logged in — skipping profile creation.");
     return;
   }
 
-  // Check if profile already exists
+  // Check if profile exists by ID (correct)
   const { data: existing, error: fetchError } = await supabase
     .from("profiles")
-    .select("email")
-    .eq("email", user.email)
+    .select("id")
+    .eq("id", user.id)
     .maybeSingle();
 
   if (fetchError) {
@@ -42,13 +42,16 @@ async function ensureMembershipRow() {
     return;
   }
 
-  // Create new profile with default membership
+  // Create new profile with correct default membership fields
   const { error: insertError } = await supabase
     .from("profiles")
     .insert({
+      id: user.id,
       email: user.email,
-      membership_status: "none",
-      membership_plan: null
+      membership_status: "inactive",
+      membership_plan: null,
+      stripe_customer_id: null,
+      stripe_subscription_id: null
     });
 
   if (insertError) {
@@ -66,22 +69,23 @@ async function ensureMembershipRow() {
 let hasInitialized = false;
 
 supabase.auth.onAuthStateChange(async (event, session) => {
-  const email = session?.user?.email;
-  if (!email) return;
+  const user = session?.user;
+  if (!user) return;
 
   if (hasInitialized) return;
   hasInitialized = true;
 
-  console.log("User logged in:", email);
-  await ensureMembershipRow();
+  console.log("User logged in:", user.email);
+  await ensureProfileRow();
 });
 
 
 
 // ============================================================
-//  Fetch Membership Status (Always Fresh)
+//  Fetch Membership (Always Fresh)
 // ============================================================
 async function fetchMembership() {
+  // Refresh session to avoid stale reads after Stripe redirect
   await supabase.auth.refreshSession();
 
   const { data: sessionData } = await supabase.auth.getSession();
@@ -89,25 +93,38 @@ async function fetchMembership() {
 
   if (!user) {
     console.log("No user logged in.");
-    return { status: "none", plan: null };
+    return {
+      status: "inactive",
+      plan: null,
+      stripe_customer_id: null,
+      stripe_subscription_id: null
+    };
   }
 
+  // Fetch full profile by ID (correct)
   const { data: profile, error } = await supabase
     .from("profiles")
-    .select("membership_status, membership_plan")
-    .eq("email", user.email)
+    .select("*")
+    .eq("id", user.id)
     .single();
 
   if (error) {
     console.error("Membership fetch error:", error);
-    return { status: "none", plan: null };
+    return {
+      status: "inactive",
+      plan: null,
+      stripe_customer_id: null,
+      stripe_subscription_id: null
+    };
   }
 
   console.log("Membership fetched:", profile);
 
   return {
     status: profile.membership_status,
-    plan: profile.membership_plan
+    plan: profile.membership_plan,
+    stripe_customer_id: profile.stripe_customer_id,
+    stripe_subscription_id: profile.stripe_subscription_id
   };
 }
 

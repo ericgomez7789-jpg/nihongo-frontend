@@ -55,18 +55,6 @@
     .danger-btn { background: #ff4d4d; }
     .danger-btn:hover { background: #ff6666; }
 
-    #unlockPrompt {
-      display: none;
-      background: #222;
-      border: 1px solid #444;
-      padding: 16px;
-      border-radius: 8px;
-      margin-bottom: 20px;
-      color: #f0f0f0;
-      font-size: 16px;
-      line-height: 1.5;
-    }
-
     #app { display: none; }
   </style>
 </head>
@@ -79,8 +67,6 @@
 
 <h1>Tori's Method — Blog & Podcast</h1>
 <p>Updates, dev logs, thoughts, and short podcast-style audio notes.</p>
-
-<div id="unlockPrompt"></div>
 
 <!-- LOGIN UI -->
 <div id="authBox">
@@ -138,14 +124,13 @@
   </p>
 </div>
 
-<!-- ⭐ LOAD SUPABASE CLIENT FIRST -->
+<!-- Supabase client -->
 <script type="module" src="app.js"></script>
 
-<!-- ⭐ PAGE LOGIC -->
+<!-- Page logic -->
 <script type="module">
   const supabase = window.sb;
 
-  /* LOGIN */
   async function login() {
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
@@ -161,7 +146,6 @@
   }
   window.login = login;
 
-  /* SIGNUP */
   async function signup() {
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
@@ -177,14 +161,12 @@
   }
   window.signup = signup;
 
-  /* LOGOUT */
   async function logout() {
     await supabase.auth.signOut();
     window.location.reload();
   }
   window.logout = logout;
 
-  /* AUTH STATE */
   supabase.auth.onAuthStateChange(async (event, session) => {
     const loggedIn = !!session;
 
@@ -195,7 +177,6 @@
     if (loggedIn) renderPosts();
   });
 
-  /* BLOG LOGIC */
   const Blog = {
     async getPosts() {
       const { data } = await supabase

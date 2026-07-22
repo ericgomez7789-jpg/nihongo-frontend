@@ -50,6 +50,13 @@
       background: #5ecf63;
     }
 
+    .checkoutBtn.disabled {
+      background: #333;
+      border-color: #555;
+      color: #777;
+      cursor: default;
+    }
+
     .back {
       margin-top: 20px;
     }
@@ -60,7 +67,6 @@
     }
   </style>
 
-  <!-- Stripe.js -->
   <script src="https://js.stripe.com/v3"></script>
 </head>
 
@@ -76,17 +82,56 @@
   <p>Levels 1–3 are always free.</p>
   <p>Price: <strong>$299.99 one‑time</strong></p>
 
-  <button class="checkoutBtn" onclick="startCheckout()">Proceed to Payment</button>
+  <button id="checkoutBtn" class="checkoutBtn">Proceed to Payment</button>
 
   <div class="back">
     <a href="membership.html">← Back to Membership</a>
   </div>
 </div>
 
-<script>
+<!-- Load Supabase client -->
+<script type="module" src="app.js"></script>
+
+<script type="module">
+  const sb = window.sb;
   const stripe = Stripe("pk_live_51TiJc5F0QR7lUrADCcjTU7P0u3PCEqZknbU9HK9VfQCsY3uRRRi7ZQzwKoU90aRLNvuv31bd37vFRxwywzyiR1cY0069mgLBWo");
 
+  const btn = document.getElementById("checkoutBtn");
+
+  async function checkMembership() {
+    await sb.auth.refreshSession();
+
+    const { data: sessionData } = await sb.auth.getSession();
+    const user = sessionData.session?.user;
+
+    if (!user) {
+      alert("Please log in first.");
+      window.location.href = "blog-podcast.html";
+      return false;
+    }
+
+    const { data: profile } = await sb
+      .from("profiles")
+      .select("*")
+      .eq("id", user.id)
+      .single();
+
+    console.log("Profile:", profile);
+
+    if (profile.membership_status === "active") {
+      btn.classList.add("disabled");
+      btn.textContent = "Already Subscribed";
+      btn.onclick = null;
+      return false;
+    }
+
+    return true;
+  }
+
   async function startCheckout() {
+    const allowed = await checkMembership();
+    if (!allowed) return;
+
     try {
       const response = await fetch(
         "https://nihongo-backend-jlm3.onrender.com/create-checkout-session-lifetime",
@@ -111,6 +156,8 @@
       alert("Something went wrong starting checkout.");
     }
   }
+
+  btn.onclick = startCheckout;
 </script>
 
 </body>

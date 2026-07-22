@@ -1364,7 +1364,6 @@
 
 
 
-
 <!-- ⭐ Load Supabase FIRST -->
 <script type="module" src="app.js"></script>
 
@@ -1373,15 +1372,43 @@
   const sb = window.sb;
 
   async function boot() {
-    // Always safe now — sb is guaranteed to exist
+    // Always refresh session after redirect
+    await sb.auth.refreshSession();
+
     const { data } = await sb.auth.getSession();
+    const user = data.session?.user || null;
 
-    window.currentUser = data.session?.user || null;
-    console.log("Boot user:", window.currentUser);
+    window.currentUser = user;
+    console.log("Boot user:", user);
 
-    if (localStorage.getItem("premiumUnlock") === "true") {
-      console.log("premiumUnlock detected — user has premium");
+    if (!user) {
+      console.log("No user logged in — redirecting.");
+      window.location.href = "blog-podcast.html";
+      return;
+    }
+
+    // Fetch full membership profile
+    const { data: profile } = await sb
+      .from("profiles")
+      .select("*")
+      .eq("id", user.id)
+      .single();
+
+    console.log("Profile:", profile);
+
+    // Expose membership to the page
+    window.membershipStatus = profile.membership_status;
+    window.membershipPlan = profile.membership_plan;
+    window.stripeCustomerId = profile.stripe_customer_id;
+    window.stripeSubscriptionId = profile.stripe_subscription_id;
+
+    // Premium unlock logic
+    if (profile.membership_status === "active") {
+      console.log("Premium membership detected.");
       window.hasPremium = true;
+    } else {
+      console.log("No premium membership.");
+      window.hasPremium = false;
     }
   }
 

@@ -99,47 +99,52 @@
     Choose a plan to unlock all levels.
   </p>
 
+  <!-- BASIC MONTHLY -->
   <div class="plan" id="basic-monthly-card">
     <h2>Basic</h2>
     <div class="price">$7.99 / month</div>
     <p>Unlocks Levels 4–8</p>
-    <button class="subscribeBtn" onclick="window.location.href='checkout-basic.html'">
+    <button class="subscribeBtn" id="btn-basic-monthly">
       Continue to Checkout
     </button>
   </div>
 
+  <!-- PREMIUM MONTHLY -->
   <div class="plan" id="premium-monthly-card">
     <h2>Premium</h2>
     <div class="price">$14.99 / month</div>
     <p>Unlocks ALL Levels (4–12)</p>
-    <button class="subscribeBtn" onclick="window.location.href='checkout-premium-monthly.html'">
+    <button class="subscribeBtn" id="btn-premium-monthly">
       Continue to Checkout
     </button>
   </div>
 
+  <!-- BASIC YEARLY -->
   <div class="plan" id="basic-yearly-card">
     <h2>Basic Yearly</h2>
     <div class="price">$79.99 / year</div>
     <p>Unlocks Levels 4–8</p>
-    <button class="subscribeBtn" onclick="window.location.href='checkout-basic-yearly.html'">
+    <button class="subscribeBtn" id="btn-basic-yearly">
       Continue to Checkout
     </button>
   </div>
 
+  <!-- PREMIUM YEARLY -->
   <div class="plan" id="premium-yearly-card">
     <h2>Premium Yearly</h2>
     <div class="price">$149.99 / year</div>
     <p>Unlocks ALL Levels (4–12)</p>
-    <button class="subscribeBtn" onclick="window.location.href='checkout-premium-yearly.html'">
+    <button class="subscribeBtn" id="btn-premium-yearly">
       Continue to Checkout
     </button>
   </div>
 
+  <!-- LIFETIME -->
   <div class="plan" id="lifetime-card">
     <h2>Lifetime Access</h2>
     <div class="price">$199.99 one-time</div>
     <p>Unlocks ALL Levels + all future languages</p>
-    <button class="subscribeBtn" onclick="window.location.href='checkout-lifetime.html'">
+    <button class="subscribeBtn" id="btn-lifetime">
       Continue to Checkout
     </button>
   </div>
@@ -149,16 +154,10 @@
   </div>
 </div>
 
-
-
-
-
-
-
-<!-- ⭐ Load Supabase FIRST -->
+<!-- Load Supabase -->
 <script type="module" src="app.js"></script>
 
-<!-- ⭐ Then run membership logic -->
+<!-- Membership Logic -->
 <script type="module">
   const sb = window.sb;
 
@@ -166,30 +165,54 @@
     const { data } = await sb.auth.getSession();
     const user = data.session?.user || null;
 
-    window.currentUser = user;
     console.log("Membership boot user:", user);
 
     if (!user) {
-      console.log("No user logged in — redirecting.");
       window.location.href = "blog-podcast.html";
       return;
     }
 
-    // Fetch membership
+    // ⭐ Force fresh session after Stripe redirect
+    await sb.auth.refreshSession();
+
+    // ⭐ Fetch full profile using ID (correct)
     const { data: profile } = await sb
       .from("profiles")
-      .select("membership_status, membership_plan")
-      .eq("email", user.email)
-      .maybeSingle();
+      .select("*")
+      .eq("id", user.id)
+      .single();
 
     console.log("Membership profile:", profile);
 
-    // Your existing UI logic continues here...
+    // ⭐ Block duplicate payments
+    if (profile.membership_status === "active") {
+      document.querySelectorAll(".subscribeBtn").forEach(btn => {
+        btn.classList.add("disabled");
+        btn.textContent = "Already Subscribed";
+        btn.onclick = null;
+      });
+      return;
+    }
+
+    // ⭐ Attach checkout buttons (only if not subscribed)
+    document.getElementById("btn-basic-monthly").onclick = () =>
+      window.location.href = "checkout-basic.html";
+
+    document.getElementById("btn-premium-monthly").onclick = () =>
+      window.location.href = "checkout-premium-monthly.html";
+
+    document.getElementById("btn-basic-yearly").onclick = () =>
+      window.location.href = "checkout-basic-yearly.html";
+
+    document.getElementById("btn-premium-yearly").onclick = () =>
+      window.location.href = "checkout-premium-yearly.html";
+
+    document.getElementById("btn-lifetime").onclick = () =>
+      window.location.href = "checkout-lifetime.html";
   }
 
   bootMembership();
 </script>
-
 
 </body>
 </html>
