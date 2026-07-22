@@ -109,12 +109,12 @@
       return false;
     }
 
-    // Fetch profile safely
+    // Fetch profile safely (FIXED)
     const { data: profile, error } = await sb
       .from("profiles")
       .select("*")
       .eq("id", user.id)
-      .single();
+      .maybeSingle();   // ← FIXED
 
     if (error) {
       console.error("Profile fetch error:", error);

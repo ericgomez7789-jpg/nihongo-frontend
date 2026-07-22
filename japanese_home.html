@@ -1361,8 +1361,6 @@
 
 
 
-
-
 <!-- ⭐ Load Supabase FIRST -->
 <script type="module" src="app.js"></script>
 
@@ -1386,12 +1384,12 @@
       return;
     }
 
-    // 3. Fetch profile safely
+    // 3. Fetch profile safely (FIXED)
     const { data: profile, error } = await sb
       .from("profiles")
       .select("*")
       .eq("id", user.id)
-      .single();
+      .maybeSingle();   // ← FIXED
 
     if (error) {
       console.error("Profile fetch error:", error);

@@ -154,8 +154,6 @@
   </div>
 </div>
 
-<!-- Load Supabase -->
-<script type="module" src="app.js"></script>
 
 <!-- Membership Logic -->
 <script type="module">
@@ -173,16 +171,16 @@
       return;
     }
 
-    // Ensure profile exists (safe)
+    // Refresh session to avoid stale reads
     await sb.auth.refreshSession();
     await sb.auth.getSession(); // stabilize
 
-    // Fetch profile
+    // Fetch profile safely (no 406 errors)
     const { data: profile, error } = await sb
       .from("profiles")
       .select("*")
       .eq("id", user.id)
-      .single();
+      .maybeSingle();  // FIXED
 
     if (error) {
       console.error("Membership profile fetch error:", error);
@@ -192,7 +190,7 @@
     console.log("Membership profile:", profile);
 
     // Already subscribed
-    if (profile.membership_status === "active") {
+    if (profile?.membership_status === "active") {
       document.querySelectorAll(".subscribeBtn").forEach(btn => {
         btn.classList.add("disabled");
         btn.textContent = "Already Subscribed";

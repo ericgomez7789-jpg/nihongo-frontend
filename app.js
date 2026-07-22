@@ -14,7 +14,7 @@ window.sb = supabase;
 
 
 // ============================================================
-//  Ensure Profile Row Exists (Correct, RLS-Safe)
+//  Ensure Profile Row Exists (Correct, RLS-Safe, No Duplicate Inserts)
 // ============================================================
 async function ensureProfileRow(user) {
   if (!user?.id) {
@@ -22,8 +22,25 @@ async function ensureProfileRow(user) {
     return null;
   }
 
-  // Try inserting — 409 means "already exists", which is OK
-  const { error: insertError } = await supabase
+  // 1. Check if profile already exists
+  const { data: existingProfile, error: selectError } = await supabase
+    .from("profiles")
+    .select("*")
+    .eq("id", user.id)
+    .maybeSingle(); // <-- FIXED
+
+  if (selectError) {
+    console.error("Profile select error:", selectError);
+  }
+
+  // 2. If profile exists → return it
+  if (existingProfile) {
+    console.log("Profile already exists:", existingProfile.email);
+    return existingProfile;
+  }
+
+  // 3. Insert new profile only when missing
+  const { data: newProfile, error: insertError } = await supabase
     .from("profiles")
     .insert({
       id: user.id,
@@ -32,30 +49,17 @@ async function ensureProfileRow(user) {
       membership_plan: null,
       stripe_customer_id: null,
       stripe_subscription_id: null
-    });
-
-  if (insertError) {
-    if (insertError.code === "409") {
-      console.log("Profile already exists:", user.email);
-    } else {
-      console.error("Profile insert error:", insertError);
-    }
-  }
-
-  // Always fetch profile after insert attempt
-  const { data: profile, error: selectError } = await supabase
-    .from("profiles")
-    .select("*")
-    .eq("id", user.id)
+    })
+    .select()
     .single();
 
-  if (selectError) {
-    console.error("Profile select error:", selectError);
+  if (insertError) {
+    console.error("Profile insert error:", insertError);
     return null;
   }
 
-  console.log("Profile loaded:", profile);
-  return profile;
+  console.log("Profile created:", newProfile);
+  return newProfile;
 }
 
 
@@ -64,7 +68,6 @@ async function ensureProfileRow(user) {
 //  Auth Boot (Session-Ready, Race-Condition-Proof)
 // ============================================================
 async function bootAuth() {
-  // Wait until Supabase session is fully ready
   const { data: { session } } = await supabase.auth.getSession();
 
   if (!session) {
@@ -85,10 +88,9 @@ supabase.auth.onAuthStateChange(async () => {
 
 
 // ============================================================
-//  Fetch Membership (Always Fresh)
+//  Fetch Membership (Always Fresh, No 406 Errors)
 // ============================================================
 async function fetchMembership() {
-  // Refresh session to avoid stale reads after Stripe redirect
   await supabase.auth.refreshSession();
 
   const { data: sessionData } = await supabase.auth.getSession();
@@ -104,12 +106,12 @@ async function fetchMembership() {
     };
   }
 
-  // Fetch full profile by ID
+  // Fetch profile safely
   const { data: profile, error } = await supabase
     .from("profiles")
     .select("*")
     .eq("id", user.id)
-    .single();
+    .maybeSingle(); // <-- FIXED
 
   if (error) {
     console.error("Membership fetch error:", error);
