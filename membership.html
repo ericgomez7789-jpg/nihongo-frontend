@@ -162,8 +162,9 @@
   const sb = window.sb;
 
   async function bootMembership() {
-    const { data } = await sb.auth.getSession();
-    const user = data.session?.user || null;
+    // Wait for real session
+    const { data: sessionData } = await sb.auth.getSession();
+    const user = sessionData.session?.user || null;
 
     console.log("Membership boot user:", user);
 
@@ -172,19 +173,25 @@
       return;
     }
 
-    // ⭐ Force fresh session after Stripe redirect
+    // Ensure profile exists (safe)
     await sb.auth.refreshSession();
+    await sb.auth.getSession(); // stabilize
 
-    // ⭐ Fetch full profile using ID (correct)
-    const { data: profile } = await sb
+    // Fetch profile
+    const { data: profile, error } = await sb
       .from("profiles")
       .select("*")
       .eq("id", user.id)
       .single();
 
+    if (error) {
+      console.error("Membership profile fetch error:", error);
+      return;
+    }
+
     console.log("Membership profile:", profile);
 
-    // ⭐ Block duplicate payments
+    // Already subscribed
     if (profile.membership_status === "active") {
       document.querySelectorAll(".subscribeBtn").forEach(btn => {
         btn.classList.add("disabled");
@@ -194,7 +201,7 @@
       return;
     }
 
-    // ⭐ Attach checkout buttons (only if not subscribed)
+    // Attach checkout buttons
     document.getElementById("btn-basic-monthly").onclick = () =>
       window.location.href = "checkout-basic.html";
 

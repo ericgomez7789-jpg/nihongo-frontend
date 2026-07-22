@@ -1363,7 +1363,6 @@
 
 
 
-
 <!-- ⭐ Load Supabase FIRST -->
 <script type="module" src="app.js"></script>
 
@@ -1372,37 +1371,42 @@
   const sb = window.sb;
 
   async function boot() {
-    // Always refresh session after redirect
+    // 1. Stabilize session (critical after Stripe redirect)
     await sb.auth.refreshSession();
-
-    const { data } = await sb.auth.getSession();
-    const user = data.session?.user || null;
+    const { data: sessionData } = await sb.auth.getSession();
+    const user = sessionData.session?.user || null;
 
     window.currentUser = user;
     console.log("Boot user:", user);
 
+    // 2. Redirect if not logged in
     if (!user) {
       console.log("No user logged in — redirecting.");
       window.location.href = "blog-podcast.html";
       return;
     }
 
-    // Fetch full membership profile
-    const { data: profile } = await sb
+    // 3. Fetch profile safely
+    const { data: profile, error } = await sb
       .from("profiles")
       .select("*")
       .eq("id", user.id)
       .single();
 
+    if (error) {
+      console.error("Profile fetch error:", error);
+      return;
+    }
+
     console.log("Profile:", profile);
 
-    // Expose membership to the page
+    // 4. Expose membership to the page
     window.membershipStatus = profile.membership_status;
     window.membershipPlan = profile.membership_plan;
     window.stripeCustomerId = profile.stripe_customer_id;
     window.stripeSubscriptionId = profile.stripe_subscription_id;
 
-    // Premium unlock logic
+    // 5. Premium unlock logic
     if (profile.membership_status === "active") {
       console.log("Premium membership detected.");
       window.hasPremium = true;
@@ -1414,6 +1418,7 @@
 
   boot();
 </script>
+
 
 
 

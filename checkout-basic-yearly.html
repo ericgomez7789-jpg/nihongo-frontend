@@ -98,27 +98,33 @@
   const btn = document.getElementById("checkoutBtn");
 
   async function checkMembership() {
-    // Refresh session to avoid stale reads
+    // Stabilize session
     await sb.auth.refreshSession();
-
     const { data: sessionData } = await sb.auth.getSession();
     const user = sessionData.session?.user;
 
     if (!user) {
       alert("Please log in first.");
       window.location.href = "blog-podcast.html";
-      return;
+      return false;
     }
 
-    // Fetch full profile by ID (correct)
-    const { data: profile } = await sb
+    // Fetch profile safely
+    const { data: profile, error } = await sb
       .from("profiles")
       .select("*")
       .eq("id", user.id)
       .single();
 
+    if (error) {
+      console.error("Profile fetch error:", error);
+      alert("Unable to load your membership profile.");
+      return false;
+    }
+
     console.log("Profile:", profile);
 
+    // Block duplicate payments
     if (profile.membership_status === "active") {
       btn.classList.add("disabled");
       btn.textContent = "Already Subscribed";

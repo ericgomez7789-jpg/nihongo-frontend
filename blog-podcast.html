@@ -1,61 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Tori's Method — Blog & Podcast</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <title>Membership – Nihongo App</title>
   <link rel="stylesheet" href="logo.css">
 
   <style>
     body {
-      background: #050505;
-      color: #f5f5f5;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      max-width: 720px;
-      margin: 40px auto;
-      padding: 0 20px 60px;
-      line-height: 1.7;
+      background: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
     }
 
-    a { color: #7fd1ff; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
-    h1, h2, h3 { font-weight: 600; }
-
-    article {
-      margin-bottom: 60px;
-      border-bottom: 1px solid #333;
-      padding-bottom: 40px;
+    .screen {
+      min-height: 100vh;
+      padding: 40px;
+      background: #000;
+      color: #fff;
     }
 
-    textarea, input {
-      width: 100%;
+    .title {
+      font-size: 32px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .plan {
       background: #111;
-      color: #eee;
-      border: 1px solid #333;
-      padding: 10px;
-      border-radius: 6px;
-      margin-top: 10px;
-      font-size: 15px;
+      border: 1px solid #444;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 480px;
+      transition: border 0.3s ease;
     }
 
-    button {
-      margin-top: 10px;
-      padding: 10px 16px;
-      background: #1e90ff;
-      border: none;
+    .plan h2 {
+      margin-top: 0;
+      font-size: 24px;
+    }
+
+    .price {
+      font-size: 26px;
+      font-weight: bold;
+      margin: 10px 0;
+      color: #4caf50;
+    }
+
+    .subscribeBtn {
+      background: #222;
+      color: #fff;
+      border: 1px solid #444;
+      padding: 12px 20px;
+      font-size: 16px;
       border-radius: 6px;
-      color: white;
-      font-size: 15px;
       cursor: pointer;
+      width: 100%;
+      margin-top: 10px;
+      transition: background 0.2s ease;
     }
 
-    button:hover { background: #3aa0ff; }
+    .subscribeBtn:hover {
+      background: #333;
+    }
 
-    .danger-btn { background: #ff4d4d; }
-    .danger-btn:hover { background: #ff6666; }
+    .subscribeBtn.disabled {
+      background: #333;
+      border-color: #555;
+      color: #777;
+      cursor: default;
+    }
 
-    #app { display: none; }
+    .back-link {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .back-link a {
+      color: #7fd1ff;
+      text-decoration: none;
+      font-size: 16px;
+    }
   </style>
 </head>
 
@@ -65,208 +92,133 @@
   <img src="audio/logo/toris_logo.png" alt="App Logo">
 </div>
 
-<h1>Tori's Method — Blog & Podcast</h1>
-<p>Updates, dev logs, thoughts, and short podcast-style audio notes.</p>
+<div class="screen">
+  <h1 class="title">Membership</h1>
 
-<!-- LOGIN UI -->
-<div id="authBox">
-  <h2>Login</h2>
-  <input id="email" placeholder="Email" />
-  <input id="password" type="password" placeholder="Password" />
-  <button onclick="login()">Login</button>
-  <button onclick="signup()">Sign Up</button>
-</div>
+  <p style="text-align:center; color:#bbb; margin-bottom:30px;">
+    Choose a plan to unlock all levels.
+  </p>
 
-<!-- LOGOUT UI -->
-<div id="logoutBox" style="display:none; margin-bottom:30px;">
-  <button onclick="logout()">Logout</button>
+  <!-- BASIC MONTHLY -->
+  <div class="plan" id="basic-monthly-card">
+    <h2>Basic</h2>
+    <div class="price">$7.99 / month</div>
+    <p>Unlocks Levels 4–8</p>
+    <button class="subscribeBtn" id="btn-basic-monthly">
+      Continue to Checkout
+    </button>
+  </div>
 
-  <div style="margin-bottom:20px;">
-    <a href="membership.html" style="color:#7fd1ff; font-size:18px;">Membership →</a>
+  <!-- PREMIUM MONTHLY -->
+  <div class="plan" id="premium-monthly-card">
+    <h2>Premium</h2>
+    <div class="price">$14.99 / month</div>
+    <p>Unlocks ALL Levels (4–12)</p>
+    <button class="subscribeBtn" id="btn-premium-monthly">
+      Continue to Checkout
+    </button>
+  </div>
+
+  <!-- BASIC YEARLY -->
+  <div class="plan" id="basic-yearly-card">
+    <h2>Basic Yearly</h2>
+    <div class="price">$79.99 / year</div>
+    <p>Unlocks Levels 4–8</p>
+    <button class="subscribeBtn" id="btn-basic-yearly">
+      Continue to Checkout
+    </button>
+  </div>
+
+  <!-- PREMIUM YEARLY -->
+  <div class="plan" id="premium-yearly-card">
+    <h2>Premium Yearly</h2>
+    <div class="price">$149.99 / year</div>
+    <p>Unlocks ALL Levels (4–12)</p>
+    <button class="subscribeBtn" id="btn-premium-yearly">
+      Continue to Checkout
+    </button>
+  </div>
+
+  <!-- LIFETIME -->
+  <div class="plan" id="lifetime-card">
+    <h2>Lifetime Access</h2>
+    <div class="price">$199.99 one-time</div>
+    <p>Unlocks ALL Levels + all future languages</p>
+    <button class="subscribeBtn" id="btn-lifetime">
+      Continue to Checkout
+    </button>
+  </div>
+
+  <div class="back-link">
+    <a href="index.html">← Back to Nihongo App</a>
   </div>
 </div>
 
-<!-- BLOG APP -->
-<div id="app">
-
-  <h2>Write a Post, Question, or Feedback</h2>
-  <input id="newTitle" placeholder="Post title (optional)" />
-  <textarea id="newBody" rows="4" placeholder="Write your message here..."></textarea>
-  <button onclick="publishPost()">Publish Post</button>
-
-  <hr style="margin: 40px 0; border-color:#333;">
-
-  <div id="posts"></div>
-
-  <h2 style="margin-top:60px;">Add Podcast Audio Clip (URL)</h2>
-  <textarea id="audioInput" rows="3" placeholder="Paste audio URL here..."></textarea>
-  <button onclick="publishAudio()">Publish Audio Clip</button>
-
-  <h2 style="margin-top:40px;">Record Podcast Audio Clip</h2>
-  <button id="recordBtn">🎙 Start Recording</button>
-  <button id="stopBtn" disabled>⏹ Stop Recording</button>
-  <p id="recordStatus" style="color:#aaa; margin-top:10px;"></p>
-
-  <p style="margin-top: 40px;">
-    <a href="index.html">← Back to Tori's Method</a>
-  </p>
-
-  <p style="margin-top: 20px;">
-    <a href="/search-anchor.html" style="color: #4ea3ff;">
-      Learn how Tori’s Method works →
-    </a>
-  </p>
-
-  <p style="margin-top: 12px;">
-    <a href="/pillar.html" style="color: #4ea3ff;">
-      Why listening is the hardest skill →
-    </a>
-  </p>
-</div>
-
-<!-- Supabase client -->
+<!-- Load Supabase -->
 <script type="module" src="app.js"></script>
 
-<!-- Page logic -->
+<!-- Membership Logic -->
 <script type="module">
-  const supabase = window.sb;
+  const sb = window.sb;
 
-  async function login() {
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
+  async function bootMembership() {
+    // 1. Wait for real session
+    const { data: sessionData } = await sb.auth.getSession();
+    const user = sessionData.session?.user || null;
 
-    const { error } = await supabase.auth.signInWithPassword({ email, password });
+    console.log("Membership boot user:", user);
+
+    if (!user) {
+      window.location.href = "blog-podcast.html";
+      return;
+    }
+
+    // 2. Stabilize session after Stripe redirect
+    await sb.auth.refreshSession();
+    await sb.auth.getSession();
+
+    // 3. Fetch profile safely
+    const { data: profile, error } = await sb
+      .from("profiles")
+      .select("*")
+      .eq("id", user.id)
+      .single();
 
     if (error) {
-      alert(error.message);
+      console.error("Membership profile fetch error:", error);
       return;
     }
 
-    window.location.reload();
-  }
-  window.login = login;
+    console.log("Membership profile:", profile);
 
-  async function signup() {
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
-
-    const { error } = await supabase.auth.signUp({ email, password });
-
-    if (error) {
-      alert(error.message);
+    // 4. Already subscribed → disable buttons
+    if (profile.membership_status === "active") {
+      document.querySelectorAll(".subscribeBtn").forEach(btn => {
+        btn.classList.add("disabled");
+        btn.textContent = "Already Subscribed";
+        btn.onclick = null;
+      });
       return;
     }
 
-    alert("Signup successful! Check your email to confirm.");
-  }
-  window.signup = signup;
+    // 5. Attach checkout buttons
+    document.getElementById("btn-basic-monthly").onclick = () =>
+      window.location.href = "checkout-basic.html";
 
-  async function logout() {
-    await supabase.auth.signOut();
-    window.location.reload();
-  }
-  window.logout = logout;
+    document.getElementById("btn-premium-monthly").onclick = () =>
+      window.location.href = "checkout-premium-monthly.html";
 
-  supabase.auth.onAuthStateChange(async (event, session) => {
-    const loggedIn = !!session;
+    document.getElementById("btn-basic-yearly").onclick = () =>
+      window.location.href = "checkout-basic-yearly.html";
 
-    document.getElementById("authBox").style.display = loggedIn ? "none" : "block";
-    document.getElementById("logoutBox").style.display = loggedIn ? "block" : "none";
-    document.getElementById("app").style.display = loggedIn ? "block" : "none";
+    document.getElementById("btn-premium-yearly").onclick = () =>
+      window.location.href = "checkout-premium-yearly.html";
 
-    if (loggedIn) renderPosts();
-  });
-
-  const Blog = {
-    async getPosts() {
-      const { data } = await supabase
-        .from("posts")
-        .select("id, title, body, audio_url, created_at")
-        .order("created_at", { ascending: false });
-      return data || [];
-    },
-
-    async addPost({ title, body, audio }) {
-      let audio_url = null;
-
-      if (audio instanceof Blob) {
-        const fileName = `audio-${Date.now()}.webm`;
-        const { error } = await supabase.storage
-          .from("audio")
-          .upload(fileName, audio, { contentType: "audio/webm" });
-
-        if (!error) {
-          audio_url = supabase.storage
-            .from("audio")
-            .getPublicUrl(fileName).data.publicUrl;
-        }
-      }
-
-      if (typeof audio === "string") audio_url = audio;
-
-      await supabase.from("posts").insert({ title, body, audio_url });
-    },
-
-    async deletePost(id) {
-      await supabase.from("posts").delete().eq("id", id);
-    }
-  };
-
-  async function renderPosts() {
-    const posts = await Blog.getPosts();
-    const container = document.getElementById("posts");
-
-    if (!posts.length) {
-      container.innerHTML = "<p>No posts yet.</p>";
-      return;
-    }
-
-    container.innerHTML = posts.map(post => `
-      <article>
-        <h2>${post.title}</h2>
-        <p style="color:#aaa; font-size:14px;">
-          ${new Date(post.created_at).toLocaleString()}
-        </p>
-
-        <button class="danger-btn" onclick="handleDeletePost('${post.id}')">
-          Delete Post
-        </button>
-
-        ${post.body ? `<p>${post.body}</p>` : ""}
-        ${post.audio_url ? `
-          <audio controls style="margin-top:20px; width:100%;">
-            <source src="${post.audio_url}">
-          </audio>
-        ` : ""}
-      </article>
-    `).join("");
+    document.getElementById("btn-lifetime").onclick = () =>
+      window.location.href = "checkout-lifetime.html";
   }
 
-  window.handleDeletePost = async (id) => {
-    if (!confirm("Delete this post?")) return;
-    await Blog.deletePost(id);
-    renderPosts();
-  };
-
-  window.publishPost = async () => {
-    const title = document.getElementById("newTitle").value.trim();
-    const body = document.getElementById("newBody").value.trim();
-    if (!body) return;
-
-    await Blog.addPost({ title: title || "Untitled", body });
-    document.getElementById("newTitle").value = "";
-    document.getElementById("newBody").value = "";
-    renderPosts();
-  };
-
-  window.publishAudio = async () => {
-    const audio = document.getElementById("audioInput").value.trim();
-    if (!audio) return;
-
-    await Blog.addPost({ title: "Podcast Audio Clip", body: "", audio });
-    document.getElementById("audioInput").value = "";
-    renderPosts();
-  };
+  bootMembership();
 </script>
 
 </body>
