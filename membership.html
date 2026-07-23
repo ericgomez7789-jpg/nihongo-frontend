@@ -99,54 +99,39 @@
     Choose a plan to unlock all levels.
   </p>
 
-  <!-- BASIC MONTHLY -->
   <div class="plan" id="basic-monthly-card">
     <h2>Basic</h2>
     <div class="price">$7.99 / month</div>
     <p>Unlocks Levels 4–8</p>
-    <button class="subscribeBtn" id="btn-basic-monthly">
-      Continue to Checkout
-    </button>
+    <button class="subscribeBtn" id="btn-basic-monthly">Continue to Checkout</button>
   </div>
 
-  <!-- PREMIUM MONTHLY -->
   <div class="plan" id="premium-monthly-card">
     <h2>Premium</h2>
     <div class="price">$14.99 / month</div>
     <p>Unlocks ALL Levels (4–12)</p>
-    <button class="subscribeBtn" id="btn-premium-monthly">
-      Continue to Checkout
-    </button>
+    <button class="subscribeBtn" id="btn-premium-monthly">Continue to Checkout</button>
   </div>
 
-  <!-- BASIC YEARLY -->
   <div class="plan" id="basic-yearly-card">
     <h2>Basic Yearly</h2>
     <div class="price">$79.99 / year</div>
     <p>Unlocks Levels 4–8</p>
-    <button class="subscribeBtn" id="btn-basic-yearly">
-      Continue to Checkout
-    </button>
+    <button class="subscribeBtn" id="btn-basic-yearly">Continue to Checkout</button>
   </div>
 
-  <!-- PREMIUM YEARLY -->
   <div class="plan" id="premium-yearly-card">
     <h2>Premium Yearly</h2>
     <div class="price">$149.99 / year</div>
     <p>Unlocks ALL Levels (4–12)</p>
-    <button class="subscribeBtn" id="btn-premium-yearly">
-      Continue to Checkout
-    </button>
+    <button class="subscribeBtn" id="btn-premium-yearly">Continue to Checkout</button>
   </div>
 
-  <!-- LIFETIME -->
   <div class="plan" id="lifetime-card">
     <h2>Lifetime Access</h2>
     <div class="price">$199.99 one-time</div>
     <p>Unlocks ALL Levels + all future languages</p>
-    <button class="subscribeBtn" id="btn-lifetime">
-      Continue to Checkout
-    </button>
+    <button class="subscribeBtn" id="btn-lifetime">Continue to Checkout</button>
   </div>
 
   <div class="back-link">
@@ -155,41 +140,40 @@
 </div>
 
 
+
+
+
+
+<!-- Load Supabase FIRST -->
+<script type="module" src="app.js"></script>
+
 <!-- Membership Logic -->
 <script type="module">
   const sb = window.sb;
 
   async function bootMembership() {
-    // Wait for real session
     const { data: sessionData } = await sb.auth.getSession();
     const user = sessionData.session?.user || null;
-
-    console.log("Membership boot user:", user);
 
     if (!user) {
       window.location.href = "blog-podcast.html";
       return;
     }
 
-    // Refresh session to avoid stale reads
     await sb.auth.refreshSession();
-    await sb.auth.getSession(); // stabilize
+    await sb.auth.getSession();
 
-    // Fetch profile safely (no 406 errors)
     const { data: profile, error } = await sb
       .from("profiles")
       .select("*")
       .eq("id", user.id)
-      .maybeSingle();  // FIXED
+      .maybeSingle();
 
     if (error) {
       console.error("Membership profile fetch error:", error);
       return;
     }
 
-    console.log("Membership profile:", profile);
-
-    // Already subscribed
     if (profile?.membership_status === "active") {
       document.querySelectorAll(".subscribeBtn").forEach(btn => {
         btn.classList.add("disabled");
@@ -199,7 +183,6 @@
       return;
     }
 
-    // Attach checkout buttons
     document.getElementById("btn-basic-monthly").onclick = () =>
       window.location.href = "checkout-basic.html";
 

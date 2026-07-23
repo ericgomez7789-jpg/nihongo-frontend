@@ -1361,6 +1361,15 @@
 
 
 
+
+
+
+
+
+
+
+
+
 <!-- ⭐ Load Supabase FIRST -->
 <script type="module" src="app.js"></script>
 
@@ -1369,53 +1378,66 @@
   const sb = window.sb;
 
   async function boot() {
-    // 1. Stabilize session (critical after Stripe redirect)
-    await sb.auth.refreshSession();
-    const { data: sessionData } = await sb.auth.getSession();
-    const user = sessionData.session?.user || null;
+    // 1. Get current session
+    const { data: initialSession } = await sb.auth.getSession();
+    const initialUser = initialSession.session?.user || null;
 
-    window.currentUser = user;
-    console.log("Boot user:", user);
-
-    // 2. Redirect if not logged in
-    if (!user) {
+    // 2. Redirect if not logged in (fast fail)
+    if (!initialUser) {
       console.log("No user logged in — redirecting.");
       window.location.href = "blog-podcast.html";
       return;
     }
 
-    // 3. Fetch profile safely (FIXED)
+    // 3. Stabilize session (critical after Stripe redirect)
+    await sb.auth.refreshSession();
+    const { data: sessionData } = await sb.auth.getSession();
+    const user = sessionData.session?.user || initialUser;
+
+    window.currentUser = user;
+    console.log("Boot user:", user);
+
+    // 4. Fetch profile safely
     const { data: profile, error } = await sb
       .from("profiles")
       .select("*")
       .eq("id", user.id)
-      .maybeSingle();   // ← FIXED
+      .maybeSingle();
 
     if (error) {
       console.error("Profile fetch error:", error);
       return;
     }
 
+    if (!profile) {
+      console.warn("No profile row found for user:", user.id);
+      return;
+    }
+
     console.log("Profile:", profile);
 
-    // 4. Expose membership to the page
+    // 5. Expose membership to the page
     window.membershipStatus = profile.membership_status;
     window.membershipPlan = profile.membership_plan;
     window.stripeCustomerId = profile.stripe_customer_id;
     window.stripeSubscriptionId = profile.stripe_subscription_id;
 
-    // 5. Premium unlock logic
-    if (profile.membership_status === "active") {
-      console.log("Premium membership detected.");
-      window.hasPremium = true;
-    } else {
-      console.log("No premium membership.");
-      window.hasPremium = false;
-    }
+    // 6. Premium unlock logic
+    window.hasPremium = profile.membership_status === "active";
+    console.log(
+      window.hasPremium
+        ? "Premium membership detected."
+        : "No premium membership."
+    );
   }
 
   boot();
 </script>
+
+
+
+
+
 
 
 
