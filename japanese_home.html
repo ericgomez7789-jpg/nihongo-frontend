@@ -1369,70 +1369,63 @@
 
 
 
+async function boot() {
+  // 1. Get current session
+  const { data: initialSession } = await sb.auth.getSession();
+  const initialUser = initialSession.session?.user || null;
 
-<!-- ⭐ Load Supabase FIRST -->
-<script type="module" src="app.js"></script>
+  // ❌ Removed forced redirect
+  // Users can now access japanese_home.html without logging in
 
-<!-- ⭐ Then run your boot logic -->
-<script type="module">
-  const sb = window.sb;
+  // 2. Stabilize session (still safe to run even if user is null)
+  await sb.auth.refreshSession();
+  const { data: sessionData } = await sb.auth.getSession();
+  const user = sessionData.session?.user || initialUser;
 
-  async function boot() {
-    // 1. Get current session
-    const { data: initialSession } = await sb.auth.getSession();
-    const initialUser = initialSession.session?.user || null;
+  window.currentUser = user;
+  console.log("Boot user:", user);
 
-    // 2. Redirect if not logged in (fast fail)
-    if (!initialUser) {
-      console.log("No user logged in — redirecting.");
-      window.location.href = "blog-podcast.html";
-      return;
-    }
-
-    // 3. Stabilize session (critical after Stripe redirect)
-    await sb.auth.refreshSession();
-    const { data: sessionData } = await sb.auth.getSession();
-    const user = sessionData.session?.user || initialUser;
-
-    window.currentUser = user;
-    console.log("Boot user:", user);
-
-    // 4. Fetch profile safely
-    const { data: profile, error } = await sb
-      .from("profiles")
-      .select("*")
-      .eq("id", user.id)
-      .maybeSingle();
-
-    if (error) {
-      console.error("Profile fetch error:", error);
-      return;
-    }
-
-    if (!profile) {
-      console.warn("No profile row found for user:", user.id);
-      return;
-    }
-
-    console.log("Profile:", profile);
-
-    // 5. Expose membership to the page
-    window.membershipStatus = profile.membership_status;
-    window.membershipPlan = profile.membership_plan;
-    window.stripeCustomerId = profile.stripe_customer_id;
-    window.stripeSubscriptionId = profile.stripe_subscription_id;
-
-    // 6. Premium unlock logic
-    window.hasPremium = profile.membership_status === "active";
-    console.log(
-      window.hasPremium
-        ? "Premium membership detected."
-        : "No premium membership."
-    );
+  // 3. If user is not logged in, skip profile fetch
+  if (!user) {
+    console.log("No user logged in — loading public mode.");
+    window.hasPremium = false;
+    return; // Stop here, no profile to fetch
   }
 
-  boot();
-</script>
+  // 4. Fetch profile safely
+  const { data: profile, error } = await sb
+    .from("profiles")
+    .select("*")
+    .eq("id", user.id)
+    .maybeSingle();
+
+  if (error) {
+    console.error("Profile fetch error:", error);
+    return;
+  }
+
+  if (!profile) {
+    console.warn("No profile row found for user:", user.id);
+    return;
+  }
+
+  console.log("Profile:", profile);
+
+  // 5. Expose membership to the page
+  window.membershipStatus = profile.membership_status;
+  window.membershipPlan = profile.membership_plan;
+  window.stripeCustomerId = profile.stripe_customer_id;
+  window.stripeSubscriptionId = profile.stripe_subscription_id;
+
+  // 6. Premium unlock logic
+  window.hasPremium = profile.membership_status === "active";
+  console.log(
+    window.hasPremium
+      ? "Premium membership detected."
+      : "No premium membership."
+  );
+}
+
 
 
 

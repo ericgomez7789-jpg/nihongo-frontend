@@ -180,11 +180,7 @@
     const { data: sessionData } = await sb.auth.getSession();
     const user = sessionData.session?.user || null;
 
-    if (!user) {
-      window.location.href = "blog-podcast.html";
-      return;
-    }
-
+    
     await sb.auth.refreshSession();
     await sb.auth.getSession();
 
