@@ -336,7 +336,7 @@ body {
 
 @media (max-width: 600px) {
   #header-logo img {
-    width: 180px;   /* bigger on mobile */
+    width: 100px;   /* bigger on mobile */
   }
 }
 
