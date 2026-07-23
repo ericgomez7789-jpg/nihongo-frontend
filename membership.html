@@ -103,46 +103,71 @@
     <h2>Basic</h2>
     <div class="price">$7.99 / month</div>
     <p>Unlocks Levels 4–8</p>
-    <button class="subscribeBtn" id="btn-basic-monthly">Continue to Checkout</button>
+    <button
+      class="subscribeBtn"
+      id="btn-basic-monthly"
+      data-plan="basic-monthly"
+    >
+      Continue to Checkout
+    </button>
   </div>
 
   <div class="plan" id="premium-monthly-card">
     <h2>Premium</h2>
     <div class="price">$14.99 / month</div>
     <p>Unlocks ALL Levels (4–12)</p>
-    <button class="subscribeBtn" id="btn-premium-monthly">Continue to Checkout</button>
+    <button
+      class="subscribeBtn"
+      id="btn-premium-monthly"
+      data-plan="premium-monthly"
+    >
+      Continue to Checkout
+    </button>
   </div>
 
   <div class="plan" id="basic-yearly-card">
     <h2>Basic Yearly</h2>
     <div class="price">$79.99 / year</div>
     <p>Unlocks Levels 4–8</p>
-    <button class="subscribeBtn" id="btn-basic-yearly">Continue to Checkout</button>
+    <button
+      class="subscribeBtn"
+      id="btn-basic-yearly"
+      data-plan="basic-yearly"
+    >
+      Continue to Checkout
+    </button>
   </div>
 
   <div class="plan" id="premium-yearly-card">
     <h2>Premium Yearly</h2>
     <div class="price">$149.99 / year</div>
     <p>Unlocks ALL Levels (4–12)</p>
-    <button class="subscribeBtn" id="btn-premium-yearly">Continue to Checkout</button>
+    <button
+      class="subscribeBtn"
+      id="btn-premium-yearly"
+      data-plan="premium-yearly"
+    >
+      Continue to Checkout
+    </button>
   </div>
 
   <div class="plan" id="lifetime-card">
     <h2>Lifetime Access</h2>
     <div class="price">$199.99 one-time</div>
     <p>Unlocks ALL Levels + all future languages</p>
-    <button class="subscribeBtn" id="btn-lifetime">Continue to Checkout</button>
+    <button
+      class="subscribeBtn"
+      id="btn-lifetime"
+      data-plan="lifetime"
+    >
+      Continue to Checkout
+    </button>
   </div>
 
   <div class="back-link">
     <a href="index.html">← Back to Nihongo App</a>
   </div>
 </div>
-
-
-
-
-
 
 <!-- Load Supabase FIRST -->
 <script type="module" src="app.js"></script>
@@ -175,12 +200,19 @@
     }
 
     if (profile?.membership_status === "active") {
+      const currentPlan = profile.membership_plan; // e.g. "premium-monthly"
+
       document.querySelectorAll(".subscribeBtn").forEach(btn => {
-        btn.classList.add("disabled");
-        btn.textContent = "Already Subscribed";
-        btn.onclick = null;
+        const planId = btn.dataset.plan; // e.g. data-plan="premium-monthly"
+
+        if (planId === currentPlan) {
+          btn.classList.add("disabled");
+          btn.textContent = "Already Subscribed";
+          btn.onclick = null;
+        }
       });
-      return;
+
+      // still allow navigation for other plans (upgrade/downgrade)
     }
 
     document.getElementById("btn-basic-monthly").onclick = () =>
