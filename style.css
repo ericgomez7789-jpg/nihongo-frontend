@@ -331,3 +331,19 @@ body {
     width: 140px;
     height: auto;
 }
+
+
+
+@media (max-width: 600px) {
+  #header-logo img {
+    width: 180px;   /* bigger on mobile */
+  }
+}
+
+
+@media (max-width: 600px) {
+  .language-button {
+    font-size: 22px;
+    padding: 18px 0;
+  }
+}
