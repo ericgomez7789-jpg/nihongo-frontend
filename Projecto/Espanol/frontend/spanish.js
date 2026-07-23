@@ -325,6 +325,48 @@ const sentences = [
 
 
 
+{
+  id: "l1-es-7",
+  meaning: "I go to the river.",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "voy",
+      hiragana: "voy",
+      meaning: "I go",
+      audio: {
+        daughter: "audio/spanish/voy.wav",
+        me: "audio/spanish/voy.wav"
+      }
+    },
+    {
+      romaji: "al",
+      hiragana: "al",
+      meaning: "to the",
+      audio: {
+        daughter: "audio/spanish/al.wav",
+        me: "audio/spanish/al.wav"
+      }
+    },
+    {
+      romaji: "río",
+      hiragana: "río",
+      meaning: "river",
+      audio: {
+        daughter: "audio/spanish/rio.wav",
+        me: "audio/spanish/rio.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
 
 
 ];

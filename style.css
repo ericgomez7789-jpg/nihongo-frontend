@@ -98,8 +98,9 @@ body {
 /* ⭐⭐⭐ FIXED TIMER — ALWAYS VISIBLE ABOVE PROGRESS BAR ⭐⭐⭐ */
 #screen2Timer {
   position: absolute;
-  top: 70px;          /* BELOW progress bar (usually ~50px tall) */
-  right: 20px;
+ top: 140px;        /* keep your spacing */
+  left: 20px;        /* move to left side */
+  right: auto;
   font-size: 32px;
   font-weight: bold;
   color: #ff4444;
