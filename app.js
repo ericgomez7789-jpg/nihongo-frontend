@@ -10,3 +10,19 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 
 // Expose globally
 window.sb = supabase;
+
+// ============================================================
+//  FIX: Ensure window.currentUser is ALWAYS set
+// ============================================================
+
+async function initUser() {
+  const { data: sessionData } = await supabase.auth.getSession();
+  window.currentUser = sessionData.session?.user || null;
+}
+
+initUser();
+
+// Keep user updated on login/logout
+supabase.auth.onAuthStateChange((_event, session) => {
+  window.currentUser = session?.user || null;
+});
