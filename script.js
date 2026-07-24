@@ -239,12 +239,6 @@ const sentences = [
         me: "audio/sentences/gemu.wav"
       }
     },
-
-
-
-
-
-
     {
       romaji: "wo",
       hiragana: "を",
@@ -396,6 +390,21 @@ const sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
    id: "l1-9",
   meaning: "Put on your hat.",
@@ -27955,7 +27964,7 @@ const level6 = [
     { romaji: "tsugi ni dou naru no", hiragana: "つぎに どうなるの", english: "what happens next" },
     { romaji: "fotottekuru", hiragana: "ふとってくる", english: "I start gaining weight" }
   ]
-}
+},
 
 
 
@@ -27970,24 +27979,58 @@ const level6 = [
 
 
 
+{
+  id: "l6-41",
+  meaning: "When the wind is blowing and I leave the window wide open, what happens next?",
+  level: 6,
 
+  options: [
+    "へやが さむくなる",
+    "カーテンが ゆれる",
+    "かぜが はいって ふく",
+    "ほこりが はいってくる"
+  ],
+  optionsRomaji: [
+    "heya_ga_samukunaru",
+    "kaaten_ga_yureru",
+    "kaze_ga_haitte_fuku",
+    "hokori_ga_haittekuru"
+  ],
+  optionsEN: [
+    "the room gets cold",
+    "the curtains sway",
+    "the wind blows in",
+    "dust comes in"
+  ],
+  correct: "かぜが はいって ふく",
 
+  fullAudio: {
+    daughter: "audio/sentences/inference41.wav",
+    me:       "audio/sentences/inference41.wav"
+  },
 
+  choiceAudio: {
+    options: [
+      ["audio/sentences/heya_ga_samukunaru.wav"],
+      ["audio/sentences/kaaten_ga_yureru.wav"],
+      ["audio/sentences/kaze_ga_haitte_fuku.wav"],
+      ["audio/sentences/hokori_ga_haittekuru.wav"]
+    ]
+  },
 
+  meaningAudio: [
+    ["audio/sentences/heya_ga_samukunaru.wav"],
+    ["audio/sentences/kaaten_ga_yureru.wav"],
+    ["audio/sentences/kaze_ga_haitte_fuku.wav"],
+    ["audio/sentences/hokori_ga_haittekuru.wav"]
+  ],
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  chunks: [
+    { romaji: "kaze ga fuite iru aida", hiragana: "かぜが ふいている あいだ", english: "while the wind is blowing" },
+    { romaji: "mado wo akeppanashi ni shite oku to", hiragana: "まどを あけっぱなしに しておく と", english: "if I leave the window wide open" },
+    { romaji: "tsugi ni dou naru no", hiragana: "つぎに どうなるの", english: "what happens next" }
+  ]
+},
 
 
 
