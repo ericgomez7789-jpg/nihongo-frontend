@@ -10,7 +10,7 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 
 // Expose globally
 window.sb = supabase;
-
+window.supabaseUrl = supabaseUrl;   // ⭐ NEW LINE
 // ============================================================
 //  FIX: Ensure window.currentUser is ALWAYS set
 // ============================================================
