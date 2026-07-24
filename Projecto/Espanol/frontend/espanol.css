@@ -106,10 +106,10 @@ body {
 #screen2Timer {
   position: absolute;
   top: 70px;
-  right: 20px;
+  left: 20px;     /* moved from right → left */
   font-size: 34px;
   font-weight: bold;
-  color: #d9534f;                /* warm red */
+  color: #d9534f;
   z-index: 999999;
   pointer-events: none;
 }
