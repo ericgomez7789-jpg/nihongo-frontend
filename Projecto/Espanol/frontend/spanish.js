@@ -369,6 +369,52 @@ const sentences = [
 
 
 
+{
+  id: "l1-es-8",
+  meaning: "I climb the mountain.",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "subo",
+      hiragana: "subo",
+      meaning: "I climb",
+      audio: {
+        daughter: "audio/spanish/subo.wav",
+        me: "audio/spanish/subo.wav"
+      }
+    },
+    {
+      romaji: "la",
+      hiragana: "la",
+      meaning: "the",
+      audio: {
+        daughter: "audio/spanish/la.wav",
+        me: "audio/spanish/la.wav"
+      }
+    },
+    {
+      romaji: "montaña",
+      hiragana: "montaña",
+      meaning: "mountain",
+      audio: {
+        daughter: "audio/spanish/montana.wav",
+        me: "audio/spanish/montana.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 // ⭐ ADD THIS PATCH RIGHT HERE
