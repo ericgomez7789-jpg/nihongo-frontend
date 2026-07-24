@@ -239,6 +239,12 @@ const sentences = [
         me: "audio/sentences/gemu.wav"
       }
     },
+
+
+
+
+
+
     {
       romaji: "wo",
       hiragana: "を",
@@ -260,6 +266,15 @@ const sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
 {
    id: "l1-6",
   meaning: "I go to school",
@@ -294,6 +309,15 @@ const sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
 {
    id: "l1-7",
   meaning: "I go to the river",
@@ -328,6 +352,16 @@ const sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
 {
    id: "l1-8",
   meaning: "I climb the mountain",
@@ -27858,6 +27892,70 @@ const level6 = [
   ]
 },
 
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l6-40",
+  meaning: "If I don’t exercise, what happens next?",
+  level: 6,
+
+  options: [
+    "ふとってくる",
+    "つまが おこる",
+    "むすめが はげます",
+    "なにも おこらない"
+  ],
+  optionsRomaji: [
+    "fotottekuru",
+    "tsuma_ga_okoru",
+    "musume_ga_hagemasu",
+    "nanimo_okoranai"
+  ],
+  optionsEN: [
+    "I start gaining weight",
+    "my wife gets mad",
+    "my daughter encourages me",
+    "nothing happens"
+  ],
+  correct: "ふとってくる",
+
+  fullAudio: {
+    daughter: "audio/sentences/inference40.wav",
+    me:       "audio/sentences/inference40.wav"
+  },
+
+  choiceAudio: {
+    options: [
+      ["audio/sentences/fotottekuru.wav"],
+      ["audio/sentences/tsuma_ga_okoru.wav"],
+      ["audio/sentences/musume_ga_hagemasu.wav"],
+      ["audio/sentences/nanimo_okoranai.wav"]
+    ]
+  },
+
+  meaningAudio: [
+    ["audio/sentences/fotottekuru.wav"],
+    ["audio/sentences/tsuma_ga_okoru.wav"],
+    ["audio/sentences/musume_ga_hagemasu.wav"],
+    ["audio/sentences/nanimo_okoranai.wav"]
+  ],
+
+  chunks: [
+    { romaji: "undou shinakereba", hiragana: "うんどう しなければ", english: "if I don’t exercise" },
+    { romaji: "tsugi ni dou naru no", hiragana: "つぎに どうなるの", english: "what happens next" },
+    { romaji: "fotottekuru", hiragana: "ふとってくる", english: "I start gaining weight" }
+  ]
+}
 
 
 
