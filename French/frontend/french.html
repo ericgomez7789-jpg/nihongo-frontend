@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+ 
+  <meta charset="UTF-8">
+  <title>Méthode Tori — Apprendre le Français</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="french.css">
+
+
+  <script src="Progress.js" defer></script>
+  <script src="french.js" defer></script>
+  <link rel="stylesheet" href="logo.css">
+</head>
+
+<body>
+<div id="header-logo">
+    <img src="toris logo image.png" alt="App Logo">
+</div>
+
+  <div id="scoreKeeper" class="score-keeper"></div>
+
+  <!-- ⭐⭐⭐ LANDING SCREEN ⭐⭐⭐ -->
+  <div id="landingScreen" class="screen">
+
+    <h1 class="title">Méthode Tori — Apprentissage Cognitif</h1>
+
+    <p style="font-size: 20px; color: #bbb; max-width: 480px; line-height: 1.5;">
+      Inspiré par une enfant, propulsé par des tâches cognitives.<br>
+      Apprends le français comme le cerveau acquiert naturellement une langue.
+    </p>
+
+    <div style="margin-top: 32px;">
+      <button id="startLearningBtn" class="iconBtn" style="font-size: 20px; padding: 14px 26px;">
+        Commencer →
+      </button>
+    </div>
+
+    <!-- Highlights -->
+    <div style="margin-top: 60px; max-width: 520px;">
+
+      <div style="margin-bottom: 30px;">
+        <div style="font-size: 26px;">⚡ Apprentissage rapide</div>
+        <div style="color: #aaa; margin-top: 6px;">
+          Tâches basées sur des fragments, reflétant la manière dont les enfants acquièrent la langue.
+        </div>
+      </div>
+
+      <div style="margin-bottom: 30px;">
+        <div style="font-size: 26px;">🎧 Immersion auditive</div>
+        <div style="color: #aaa; margin-top: 6px;">
+          Écoute, organise et réponds. Ton cerveau capte le rythme, les fragments et le sens.
+        </div>
+      </div>
+
+      <div style="margin-bottom: 30px;">
+        <div style="font-size: 26px;">📈 Progression de 6 niveaux</div>
+        <div style="color: #aaa; margin-top: 6px;">
+          Les niveaux 1–6 développent les compétences auditives et cognitives essentielles.
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ⭐⭐⭐ FRENCH DESCRIPTION BLOCK ⭐⭐⭐ -->
+    <div style="margin-top: 50px; max-width: 520px; color: #aaa; font-size: 16px; line-height: 1.7;">
+
+      <p>
+        Même si le français est considéré comme plus accessible que d’autres langues, la plupart des apprenants
+        rencontrent le même obstacle : <b>comprendre ce qu’ils entendent en temps réel</b>. Mémoriser des mots ne garantit
+        pas que tu puisses réagir à une phrase naturelle prononcée par un francophone. C’est pourquoi cette méthode est
+        entièrement basée sur l’écoute.
+      </p>
+
+      <p style="margin-top: 14px;">
+        La Méthode Tori suit le cadre européen <b>CECR</b> (A1–C2), mais l’adapte à un système cognitif de six niveaux.
+        Chaque niveau entraîne une compétence mentale distincte : écouter, interpréter, inférer, réorganiser et finalement
+        répondre avec naturel.
+      </p>
+
+      <p style="margin-top: 14px;">
+        Les niveaux 1–2 développent les bases : verbes essentiels, questions, prépositions et connecteurs naturels.
+        Le niveau 3 introduit des <b>tâches d’inférence</b>, où tu dois déduire intention, contexte et signification à partir
+        de l’audio. Le niveau 4 se concentre sur le <b>paraphrasage</b>, une compétence clé pour atteindre B1/B2 en compréhension :
+        exprimer la même idée avec d’autres mots, démontrant une compréhension réelle plutôt qu’une simple mémoire.
+      </p>
+
+      <p style="margin-top: 14px;">
+        Les niveaux 5–6 sont entièrement conversationnels. Tu pratiqueras des dialogues naturels et des scènes d’inférence
+        reflétant la manière dont nous pensons et réagissons dans des situations réelles. Cette approche accélère la
+        compréhension auditive beaucoup plus rapidement que les méthodes traditionnelles basées sur la lecture ou la grammaire.
+      </p>
+
+      <p style="margin-top: 14px;">
+        En termes de CECR, un débutant peut progresser de <b>A1 à A2</b> tout en développant une compréhension auditive
+        proche de <b>B1/B2</b>. Cela se produit parce que la méthode entraîne la compétence la plus difficile à acquérir :
+        <b>comprendre le français naturel sans dépendre de traductions</b>.
+      </p>
+
+      <p style="margin-top: 14px;">
+        Apprends le français comme les francophones l’acquièrent : en écoutant, en organisant des fragments et en comprenant
+        le sens sans mémorisation mécanique. Cette méthode n’enseigne pas des astuces d’examen ; elle enseigne la compétence
+        qui compte réellement : <b>comprendre et réagir au français réel</b>.
+      </p>
+
+    </div>
+
+    <!-- Footer -->
+    <div style="margin-top: 80px; color: #666; font-size: 14px;">
+      © <span id="year"></span> Méthode Tori — Apprentissage Cognitif
+    </div>
+
+  </div>
+
+  <!-- ⭐⭐⭐ SCREEN 0 — LEVEL SELECT ⭐⭐⭐ -->
+  <div id="screen0" class="screen hidden">
+    <h1 class="title">Sélectionne un Niveau</h1>
+
+    <div id="levelSelect">
+      <button class="levelBtn" data-level="1">Niveau 1</button>
+      <button class="levelBtn" data-level="2">Niveau 2</button>
+      <button class="levelBtn" data-level="3">Niveau 3</button>
+      <button class="levelBtn" data-level="4">Niveau 4</button>
+      <button class="levelBtn" data-level="5">Niveau 5</button>
+      <button class="levelBtn" data-level="6">Niveau 6</button>
+    </div>
+  </div>
+
+  <!-- ⭐⭐⭐ SCREEN 1 — LISTENING ONLY ⭐⭐⭐ -->
+  <div id="screen1" class="screen hidden">
+    <h2 class="title">Écoute attentivement</h2>
+    <div class="instruction-line">Écoute seulement — ne réponds pas encore.</div>
+    <div class="instruction-line">Il y a 5 tours par session.</div>
+    <div class="instruction-line">Certaines phrases se répéteront pour renforcer l’apprentissage.</div>
+  </div>
+
+  <!-- ⭐⭐⭐ SCREEN 2 — CHUNK PUZZLE ⭐⭐⭐ -->
+  <div id="screen2" class="screen hidden">
+    <button id="replaySentenceBtn" class="iconBtn replay-top">🔁 Répéter</button>
+
+    <div id="level1Screen2" class="level-block">
+      <div id="screen2Timer" class="timerDisplay"></div>
+      <div id="chunkContainer" class="chunk-container"></div>
+      <div id="dropLines" class="drop-lines"></div>
+    </div>
+  </div>
+
+  <!-- ⭐⭐⭐ SCREEN 3 — MEANING + SUMMARY ⭐⭐⭐ -->
+  <div id="screen3" class="screen hidden">
+    <h1 class="title">Signification</h1>
+
+    <div class="meaning-box" id="meaningBox"></div>
+    <div id="summaryContainer" class="summary-container"></div>
+    <div id="summaryCorrectDrops" class="summary-correct-drops"></div>
+
+    <div class="summary-controls">
+      <button id="screen3ReplayBtn" class="iconBtn">Répéter</button>
+      <button id="screen3NextBtn" class="iconBtn">Suivant</button>
+    </div>
+  </div>
+
+  <!-- ⭐⭐⭐ SCREEN 4 — SESSION SUMMARY ⭐⭐⭐ -->
+  <div id="screen4" class="screen hidden">
+    <h1 class="title">Résumé</h1>
+
+    <div class="session-summary-box" id="sessionSummary"></div>
+
+    <div class="session-controls">
+      <button id="restartBtn" class="iconBtn">Recommencer</button>
+      <button id="backToLevelsBtn" class="iconBtn">Niveaux</button>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+#header-logo {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+#header-logo img {
+  width: 140px;
+  height: auto;
+}
+
+
+#screen0 {
+  padding-top: 160px;
+}
+

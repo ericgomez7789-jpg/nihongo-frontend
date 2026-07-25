@@ -1,0 +1,332 @@
+/* ==========================================================
+   GLOBAL FRENCH THEME — COOL MODERN
+========================================================== */
+
+body {
+  background: #eef3f8;           /* cool soft blue */
+  color: #1f2a44;                /* deep navy */
+  font-family: Arial, sans-serif;
+
+  margin: 0;
+  padding: 0;
+}
+
+/* Screens */
+.screen {
+  display: none;
+  background: #eef3f8;
+  color: #1f2a44;
+  min-height: 100vh;
+  padding: 40px;
+}
+
+/* Visible screen */
+.screen:not(.hidden) {
+  display: block;
+}
+
+/* Required for JS screen switching */
+.hidden {
+  display: none !important;
+}
+
+/* Titles */
+.title {
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: #0f1b33;                /* darker navy */
+  font-weight: 700;
+}
+
+/* ==========================================================
+   LEVEL SELECT BUTTONS
+========================================================== */
+
+.levelBtn {
+  background: #dce7f5;           /* pale blue */
+  color: #0f1b33;
+  border: 2px solid #b8c9e3;
+  padding: 6px 10px;
+  margin: 6px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 90px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.levelBtn:hover {
+  background: #c7d8ef;
+}
+
+/* ==========================================================
+   MUSIC CONTROLS
+========================================================== */
+
+.music-controls {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+.iconBtn {
+  background: #dce7f5;
+  color: #0f1b33;
+  border: 2px solid #b8c9e3;
+  padding: 10px 14px;
+  margin-left: 6px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.iconBtn:hover {
+  background: #c7d8ef;
+}
+
+/* ==========================================================
+   SCREEN 2 — CHUNK PUZZLE / ARRANGE MODE
+========================================================== */
+
+.replay-top {
+  margin-bottom: 20px;
+  font-size: 24px;
+  padding: 12px 24px;
+  background: #dce7f5;
+  border: 2px solid #b8c9e3;
+  border-radius: 10px;
+  color: #0f1b33;
+  font-weight: 700;
+}
+
+/* Timer */
+#screen2Timer {
+  position: absolute;
+  top: 70px;
+  left: 20px;
+  font-size: 34px;
+  font-weight: bold;
+  color: #e63946;                /* French red accent */
+  z-index: 999999;
+  pointer-events: none;
+}
+
+/* Scrambled chunks container */
+.chunk-container {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Chunk buttons — slightly narrower than Spanish */
+.chunkBtn {
+  font-size: 30px;
+  padding: 20px 28px;
+  margin: 12px;
+  border-radius: 14px;
+  background: #dce7f5;
+  color: #0f1b33;
+  border: 3px solid #b8c9e3;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 180px;
+  min-height: 80px;
+  text-align: center;
+
+  cursor: grab;
+  -webkit-user-drag: element;
+  user-select: none;
+  touch-action: none;
+}
+
+.chunkBtn:hover {
+  background: #c7d8ef;
+}
+
+.chunkBtn:active {
+  cursor: grabbing;
+}
+
+/* Drop lines container */
+.drop-lines {
+  display: block;
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* Drop line boxes */
+.dropLine {
+  width: 180px;
+  height: 80px;
+  border: 3px dashed #9aaac4;
+  border-radius: 12px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  color: #6c7a96;
+  margin: 12px;
+}
+
+/* Correct placement */
+.dropLine.correct {
+  border-color: #2a9d8f;         /* teal success */
+  background: #e0f4f1;
+  color: #2a9d8f;
+}
+
+/* ==========================================================
+   SCREEN 3 — MEANING SCREEN
+========================================================== */
+
+.meaning-box {
+  font-size: 28px;
+  margin: 20px auto 30px auto;
+  padding: 20px 24px;
+  max-width: 520px;
+  text-align: center;
+  background: #f7fbff;
+  border-radius: 14px;
+  border: 2px solid #b8c9e3;
+  color: #0f1b33;
+}
+
+.summary-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 20px auto;
+  max-width: 520px;
+}
+
+.summary-row {
+  background: #f7fbff;
+  border: 2px solid #b8c9e3;
+  border-radius: 12px;
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.summary-hiragana {
+  font-size: 28px;
+  color: #0f1b33;
+}
+
+.summary-romaji {
+  font-size: 20px;
+  color: #5a6a85;
+}
+
+.summary-english {
+  font-size: 20px;
+  color: #2a9d8f;
+}
+
+.summary-controls {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* ==========================================================
+   EXPLANATION BLOCK
+========================================================== */
+
+.explanation-box {
+  margin: 20px auto 40px auto;
+  max-width: 520px;
+  padding: 20px 24px;
+  background: #f7fbff;
+  border: 2px solid #b8c9e3;
+  border-radius: 12px;
+  font-size: 20px;
+  color: #0f1b33;
+  line-height: 1.6;
+  white-space: pre-line;
+}
+
+/* ==========================================================
+   SESSION SUMMARY
+========================================================== */
+
+.session-summary-box {
+  margin-top: 20px;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 14px;
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  font-size: 1.2rem;
+  border: 2px solid #b8c9e3;
+  color: #0f1b33;
+}
+
+.session-line {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.session-controls {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* ==========================================================
+   LEVEL BLOCKS
+========================================================== */
+
+.level-block {
+  margin-top: 20px;
+  padding: 10px 0;
+}
+
+.level-block.hidden {
+  display: none !important;
+}
+
+.instruction-line {
+  font-size: 1.2rem;
+  color: #0f1b33;
+  text-align: center;
+  margin: 8px 0 12px 0;
+}
+
+/* ==========================================================
+   LEVEL 2 — MCQ MODE
+========================================================== */
+
+.mcq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.mcqBtn {
+  padding: 16px 20px;
+  font-size: 1.3rem;
+  border-radius: 10px;
+  border: 3px solid #b8c9e3;
+  background: #dce7f5;
+  color: #0f1b33;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  font-weight: 600;
+}
+
+.mcqBtn:hover {
+  background: #c7d8ef;
+}
