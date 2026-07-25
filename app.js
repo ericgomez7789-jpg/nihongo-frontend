@@ -26,3 +26,17 @@ initUser();
 supabase.auth.onAuthStateChange((_event, session) => {
   window.currentUser = session?.user || null;
 });
+
+// ============================================================
+//  ⭐ VIEW COUNTER (Option A — Frontend Only)
+// ============================================================
+async function incrementView() {
+  const { error } = await sb
+    .from("views_counter")
+    .update({ total_views: sb.sql`total_views + 1` })
+    .eq("id", 1);
+
+  if (error) console.error("View increment error:", error);
+}
+
+incrementView();
