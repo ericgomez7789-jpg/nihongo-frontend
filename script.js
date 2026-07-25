@@ -28039,6 +28039,234 @@ const level6 = [
 
 
 
+{
+  id: "l6-42",
+  meaning: "When someone says you are short, what happens next?",
+  level: 6,
+
+  options: [
+    "はずかしくなる",
+    "うれしくなる",
+    "おこる",
+    "なにも おこらない"
+  ],
+  optionsRomaji: [
+    "hazukashiku_naru",
+    "ureshiku_naru",
+    "okoru",
+    "nanimo_okoranai"
+  ],
+  optionsEN: [
+    "you become embarrassed",
+    "you become happy",
+    "you get angry",
+    "nothing happens"
+  ],
+  correct: "はずかしくなる",
+
+  fullAudio: {
+    daughter: "audio/sentences/inference42.wav",
+    me:       "audio/sentences/inference42.wav"
+  },
+
+  choiceAudio: {
+    options: [
+      ["audio/sentences/hazukashiku_naru.wav"],
+      ["audio/sentences/ureshiku_naru.wav"],
+      ["audio/sentences/okoru.wav"],
+      ["audio/sentences/nanimo_okoranai.wav"]
+    ]
+  },
+
+  meaningAudio: [
+    ["audio/sentences/hazukashiku_naru.wav"],
+    ["audio/sentences/ureshiku_naru.wav"],
+    ["audio/sentences/okoru.wav"],
+    ["audio/sentences/nanimo_okoranai.wav"]
+  ],
+
+  chunks: [
+    { romaji: "dareka wa", hiragana: "だれかは", english: "someone" },
+    { romaji: "kimi ga se ga hikui to iu to", hiragana: "きみが せが ひくい と いう と", english: "says you are short" },
+    { romaji: "tsugi ni dou naru no", hiragana: "つぎに どうなるの", english: "what happens next" },
+    { romaji: "hazukashiku naru", hiragana: "はずかしくなる", english: "you become embarrassed" }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l6-43",
+  meaning: "If your pet cat dies, what happens next?",
+  level: 6,
+
+  options: ["かなしくなる", "わらいだす", "おどりはじめる", "すぐわすれる"],
+  optionsRomaji: ["kanashiku_naru", "waraidasu", "odori_hajimeru", "sugu_wasureru"],
+  optionsEN: ["become sad", "start laughing", "start dancing", "forget right away"],
+  correct: "かなしくなる",
+
+  fullAudio: {
+    daughter: "audio/sentences/inference43.wav",
+    me:       "audio/sentences/inference43.wav"
+  },
+
+  choiceAudio: {
+    options: [
+      ["audio/sentences/kanashiku_naru.wav"],
+      ["audio/sentences/waraidasu.wav"],
+      ["audio/sentences/odori_hajimeru.wav"],
+      ["audio/sentences/sugu_wasureru.wav"]
+    ]
+  },
+
+  meaningAudio: [
+    ["audio/sentences/kanashiku_naru.wav"],
+    ["audio/sentences/waraidasu.wav"],
+    ["audio/sentences/odori_hajimeru.wav"],
+    ["audio/sentences/sugu_wasureru.wav"]
+  ],
+
+  chunks: [
+    { romaji: "kaineko ga", hiragana: "かいねこが", english: "your pet cat" },
+    { romaji: "nakunattara", hiragana: "なくなったら", english: "if it dies" },
+    { romaji: "tsugi ni", hiragana: "つぎに", english: "next" },
+    { romaji: "dou naru no", hiragana: "どうなるの", english: "what happens" }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l6-44",
+  meaning: "If you can't find your wallet, what happens next?",
+  level: 6,
+
+  options: ["しんぱいする", "よろこびだす", "ねむくなる", "おどりはじめる"],
+  optionsRomaji: ["shinpai_suru", "yorokobi_dasu", "nemuku_naru", "odori_hajimeru"],
+  optionsEN: ["become worried", "start celebrating", "get sleepy", "start dancing"],
+  correct: "しんぱいする",
+
+  fullAudio: {
+    daughter: "audio/sentences/inference44.wav",
+    me:       "audio/sentences/inference44.wav"
+  },
+
+  choiceAudio: {
+    options: [
+      ["audio/sentences/shinpai_suru.wav"],
+      ["audio/sentences/yorokobi_dasu.wav"],
+      ["audio/sentences/nemuku_naru.wav"],
+      ["audio/sentences/odori_hajimeru.wav"]
+    ]
+  },
+
+  meaningAudio: [
+    ["audio/sentences/shinpai_suru.wav"],
+    ["audio/sentences/yorokobi_dasu.wav"],
+    ["audio/sentences/nemuku_naru.wav"],
+    ["audio/sentences/odori_hajimeru.wav"]
+  ],
+
+  chunks: [
+    { romaji: "saifu ga", hiragana: "さいふが", english: "wallet" },
+    { romaji: "mitsukaranakattara", hiragana: "みつからなかったら", english: "if you can't find it" },
+    { romaji: "tsugi ni", hiragana: "つぎに", english: "next" },
+    { romaji: "dou naru no", hiragana: "どうなるの", english: "what happens" }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l6-45",
+  meaning: "If someone throws a big rock through the windshield, what happens next?",
+  level: 6,
+
+  options: ["おこってくる", "わらいだす", "おどりはじめる", "ねむくなる"],
+  optionsRomaji: ["okotte_kuru", "waraidasu", "odori_hajimeru", "nemuku_naru"],
+  optionsEN: ["to get evidently angry", "start laughing", "start dancing", "get sleepy"],
+  correct: "おこってくる",
+
+  fullAudio: {
+    daughter: "audio/sentences/inference45.wav",
+    me:       "audio/sentences/inference45.wav"
+  },
+
+  choiceAudio: {
+    options: [
+      ["audio/sentences/okotte_kuru.wav"],
+      ["audio/sentences/waraidasu.wav"],
+      ["audio/sentences/odori_hajimeru.wav"],
+      ["audio/sentences/nemuku_naru.wav"]
+    ]
+  },
+
+  meaningAudio: [
+    ["audio/sentences/okotte_kuru.wav"],
+    ["audio/sentences/waraidasu.wav"],
+    ["audio/sentences/odori_hajimeru.wav"],
+    ["audio/sentences/nemuku_naru.wav"]
+  ],
+
+  chunks: [
+    { romaji: "dareka ga", hiragana: "だれかが", english: "someone" },
+    { romaji: "ookii na iwa wo", hiragana: "おおきいないわを", english: "a big rock" },
+    { romaji: "fuubougarasu no mukou ni", hiragana: "ふうぼうがらすのむこうに", english: "to the other side of the windshield" },
+    { romaji: "nageru to", hiragana: "なげると", english: "if they throw it" },
+    { romaji: "tsugi ni", hiragana: "つぎに", english: "next" },
+    { romaji: "dou naru no", hiragana: "どうなるの", english: "what happens" }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
