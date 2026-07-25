@@ -21398,7 +21398,6 @@ const level4 = [
 
 
 
-
 {
   "id": "l4_025",
   "level": 4,
@@ -21411,7 +21410,6 @@ const level4 = [
   "correctInterjection": "へぇ〜",
   "distractors": ["そっかぁ", "そうなんだ"],
 
-  // ⭐ REQUIRED for Level‑4 MCQ rendering
   "interjections": [
     "へぇ〜",
     "そっかぁ",
@@ -21421,6 +21419,7 @@ const level4 = [
   "audio": {
     "daughter": [
       "audio/sentences/tomodachi.wav",
+      "audio/sentences/ga.wav",
       "audio/sentences/watashi.wav",
       "audio/sentences/wo.wav",
       "audio/sentences/konshinkai.wav",
@@ -21436,6 +21435,7 @@ const level4 = [
     ],
     "me": [
       "audio/sentences/tomodachi.wav",
+      "audio/sentences/ga.wav",
       "audio/sentences/watashi.wav",
       "audio/sentences/wo.wav",
       "audio/sentences/konshinkai.wav",
@@ -21457,6 +21457,12 @@ const level4 = [
       "hiragana": "ともだち",
       "meaning": "friend",
       "audio": { "daughter": "audio/sentences/tomodachi.wav", "me": "audio/sentences/tomodachi.wav" }
+    },
+    {
+      "romaji": "ga",
+      "hiragana": "が",
+      "meaning": "subject marker",
+      "audio": { "daughter": "audio/sentences/ga.wav", "me": "audio/sentences/ga.wav" }
     },
     {
       "romaji": "watashi",
@@ -21532,7 +21538,6 @@ const level4 = [
     }
   ]
 },
-
 
 
 
