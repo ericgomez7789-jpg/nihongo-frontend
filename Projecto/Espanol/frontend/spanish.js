@@ -415,6 +415,57 @@ const sentences = [
 
 
 
+{
+  id: "l1-es-9",
+  meaning: "Put on the cap.",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "ponte",
+      hiragana: "ponte",
+      meaning: "put on (yourself)",
+      audio: {
+        daughter: "audio/spanish/ponte.wav",
+        me: "audio/spanish/ponte.wav"
+      }
+    },
+    {
+      romaji: "la",
+      hiragana: "la",
+      meaning: "the",
+      audio: {
+        daughter: "audio/spanish/la.wav",
+        me: "audio/spanish/la.wav"
+      }
+    },
+    {
+      romaji: "gorra",
+      hiragana: "gorra",
+      meaning: "cap",
+      audio: {
+        daughter: "audio/spanish/gorra.wav",
+        me: "audio/spanish/gorra.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 // ⭐ ADD THIS PATCH RIGHT HERE
