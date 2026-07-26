@@ -28345,6 +28345,70 @@ const level6 = [
 
 
 
+{
+  id: "l6-47",
+  meaning: "When Sakura's scent spreads thickly, what happens next?",
+  level: 6,
+
+  options: [
+    "うっとりする",
+    "おこる",
+    "ねむくなる",
+    "なにも おこらない"
+  ],
+  optionsRomaji: [
+    "uttori_suru",
+    "okoru",
+    "nemuku_naru",
+    "nanimo_okoranai"
+  ],
+  optionsEN: [
+    "you feel enchanted",
+    "you get angry",
+    "you get sleepy",
+    "nothing happens"
+  ],
+  correct: "うっとりする",
+
+  fullAudio: {
+    daughter: "audio/sentences/inference47.wav",
+    me:       "audio/sentences/inference47.wav"
+  },
+
+  choiceAudio: {
+    options: [
+      ["audio/sentences/uttori_suru.wav"],
+      ["audio/sentences/okoru.wav"],
+      ["audio/sentences/nemuku_naru.wav"],
+      ["audio/sentences/nanimo_okoranai.wav"]
+    ]
+  },
+
+  meaningAudio: [
+    ["audio/sentences/uttori_suru.wav"],
+    ["audio/sentences/okoru.wav"],
+    ["audio/sentences/nemuku_naru.wav"],
+    ["audio/sentences/nanimo_okoranai.wav"]
+  ],
+
+  chunks: [
+    { romaji: "sakura wa", hiragana: "さくらは", english: "Sakura" },
+    { romaji: "kaori ga", hiragana: "かおりが", english: "the scent" },
+    { romaji: "moumou to", hiragana: "もうもうと", english: "thickly / in a cloud" },
+    { romaji: "hirogaru to", hiragana: "ひろがる と", english: "when it spreads" },
+    { romaji: "tsugi ni", hiragana: "つぎに", english: "next" },
+    { romaji: "dou naru no", hiragana: "どうなるの", english: "what happens" }
+  ]
+},
+
+
+
+
+
+
+
+
+
 
 
 
