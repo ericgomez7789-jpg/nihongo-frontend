@@ -174,9 +174,9 @@ body {
 
 /* Correct placement */
 .dropLine.correct {
-  border-color: #4caf50;
-  background: #e6f4e6;
-  color: #4caf50;
+  border-color: #006847;          /* Mexican flag green */
+  background: #e0f2e8;            /* light emerald tint */
+  color: #006847;                 /* Mexican flag green */
 }
 
 /* ==========================================================

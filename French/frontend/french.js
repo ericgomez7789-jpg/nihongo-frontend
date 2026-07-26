@@ -30,7 +30,7 @@ const sentences = [
 
 
 
-  
+  /*
 
 
 {
@@ -74,11 +74,6 @@ const sentences = [
         me: "audio/fais.wav"
       }
     }
-
-
-
-
-
   ]
 },
 
@@ -87,6 +82,279 @@ const sentences = [
 
 
 
+
+
+
+
+
+
+{
+  id: "l1-fr-2",
+  meaning: "Are you well?",
+  level: 1,
+  chunks: [
+    {
+      romaji: "vous",
+      hiragana: "vous",
+      meaning: "you (polite)",
+      audio: {
+        daughter: "audio/vous.wav",
+        me: "audio/vous.wav"
+      }
+    },
+    {
+      romaji: "allez",
+      hiragana: "allez",
+      meaning: "go / are doing",
+      audio: {
+        daughter: "audio/allez.wav",
+        me: "audio/allez.wav"
+      }
+    },
+    {
+      romaji: "vous‑allez",
+      hiragana: "vous‑allez",
+      meaning: "you are (natural spoken unit)",
+      audio: {
+        daughter: "audio/vous-allez.wav",
+        me: "audio/vous-allez.wav"
+      }
+    },
+    {
+      romaji: "bien",
+      hiragana: "bien",
+      meaning: "well",
+      audio: {
+        daughter: "audio/bien.wav",
+        me: "audio/bien.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l1-fr-3",
+  meaning: "Are you well?",
+  level: 1,
+  chunks: [
+    {
+      romaji: "tu",
+      hiragana: "tu",
+      meaning: "you (informal)",
+      audio: {
+        daughter: "audio/tu.wav",
+        me: "audio/tu.wav"
+      }
+    },
+    {
+      romaji: "vas",
+      hiragana: "vas",
+      meaning: "go / are going",
+      audio: {
+        daughter: "audio/vas.wav",
+        me: "audio/vas.wav"
+      }
+    },
+    {
+      romaji: "vas‑tu",
+      hiragana: "vas‑tu",
+      meaning: "are you (natural spoken unit)",
+      audio: {
+        daughter: "audio/vas-tu.wav",
+        me: "audio/vas-tu.wav"
+      }
+    },
+    {
+      romaji: "bien",
+      hiragana: "bien",
+      meaning: "well",
+      audio: {
+        daughter: "audio/bien.wav",
+        me: "audio/bien.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+{
+  id: "l1-fr-4",
+  meaning: "Are we going to the park.",
+  level: 1,
+  chunks: [
+    {
+      romaji: "nous",
+      hiragana: "nous",
+      meaning: "we",
+      audio: {
+        daughter: "audio/nous.wav",
+        me: "audio/nous.wav"
+      }
+    },
+    {
+      romaji: "allons",
+      hiragana: "allons",
+      meaning: "go / are going",
+      audio: {
+        daughter: "audio/allons.wav",
+        me: "audio/allons.wav"
+      }
+    },
+    {
+      romaji: "allons‑nous",
+      hiragana: "allons‑nous",
+      meaning: "are we (natural spoken inversion)",
+      audio: {
+        daughter: "audio/allons-nous.wav",
+        me: "audio/allons-nous.wav"
+      }
+    },
+    {
+      romaji: "au",
+      hiragana: "au",
+      meaning: "to the",
+      audio: {
+        daughter: "audio/au.wav",
+        me: "audio/au.wav"
+      }
+    },
+    {
+      romaji: "parc",
+      hiragana: "parc",
+      meaning: "park",
+      audio: {
+        daughter: "audio/parc.wav",
+        me: "audio/parc.wav"
+      }
+    }
+  ]
+},
+
+
+
+*/
+
+
+
+
+
+
+{
+  id: "l1-fr-5",
+  meaning: "Are we going to school?",
+  level: 1,
+  chunks: [
+    {
+      romaji: "est‑ce",
+      hiragana: "est‑ce",
+      meaning: "(question prefix part 1)",
+      audio: {
+        daughter: "audio/est-ce.wav",
+        me: "audio/est-ce.wav"
+      }
+    },
+    {
+      romaji: "que",
+      hiragana: "que",
+      meaning: "(question prefix part 2)",
+      audio: {
+        daughter: "audio/que.wav",
+        me: "audio/que.wav"
+      }
+    },
+    {
+      romaji: "est‑ce que",
+      hiragana: "est‑ce que",
+      meaning: "(full question prefix)",
+      audio: {
+        daughter: "audio/est-ce_que.wav",
+        me: "audio/est-ce_que.wav"
+      }
+    },
+    {
+      romaji: "nous",
+      hiragana: "nous",
+      meaning: "we",
+      audio: {
+        daughter: "audio/nous.wav",
+        me: "audio/nous.wav"
+      }
+    },
+    {
+      romaji: "allons",
+      hiragana: "allons",
+      meaning: "go / are going",
+      audio: {
+        daughter: "audio/allons.wav",
+        me: "audio/allons.wav"
+      }
+    },
+    {
+      romaji: "allons‑nous",
+      hiragana: "allons‑nous",
+      meaning: "are we (inverted form)",
+      audio: {
+        daughter: "audio/allons-nous.wav",
+        me: "audio/allons-nous.wav"
+      }
+    },
+    {
+      romaji: "à",
+      hiragana: "a",
+      meaning: "to",
+      audio: {
+        daughter: "audio/a.wav",
+        me: "audio/a.wav"
+      }
+    },
+    {
+      romaji: "le",
+      hiragana: "le",
+      meaning: "the",
+      audio: {
+        daughter: "audio/le.wav",
+        me: "audio/le.wav"
+      }
+    },
+    {
+      romaji: "école",
+      hiragana: "ecole",
+      meaning: "school",
+      audio: {
+        daughter: "audio/ecole.wav",
+        me: "audio/ecole.wav"
+      }
+    },
+    {
+      romaji: "à‑l’école",
+      hiragana: "a-lecole",
+      meaning: "to the school (natural spoken unit)",
+      audio: {
+        daughter: "audio/a-lecole.wav",
+        me: "audio/a-lecole.wav"
+      }
+    }
+  ]
+},
 
 
 
