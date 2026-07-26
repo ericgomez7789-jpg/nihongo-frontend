@@ -28412,6 +28412,73 @@ const level6 = [
 
 
 
+
+
+{
+  id: "l6-48",
+  meaning: "When thunder sounds and a streak of lightning appears, what happens next?",
+  level: 6,
+
+  options: [
+    "あめが ふる",
+    "おこる",
+    "ねむくなる",
+    "なにも おこらない"
+  ],
+  optionsRomaji: [
+    "ame_ga_furu",
+    "okoru",
+    "nemuku_naru",
+    "nanimo_okoranai"
+  ],
+  optionsEN: [
+    "it rains",
+    "you get angry",
+    "you get sleepy",
+    "nothing happens"
+  ],
+  correct: "あめが ふる",
+
+  fullAudio: {
+    daughter: "audio/sentences/inference48.wav",
+    me:       "audio/sentences/inference48.wav"
+  },
+
+  choiceAudio: {
+    options: [
+      ["audio/sentences/ame_ga_furu.wav"],
+      ["audio/sentences/okoru.wav"],
+      ["audio/sentences/nemuku_naru.wav"],
+      ["audio/sentences/nanimo_okoranai.wav"]
+    ]
+  },
+
+  meaningAudio: [
+    ["audio/sentences/ame_ga_furu.wav"],
+    ["audio/sentences/okoru.wav"],
+    ["audio/sentences/nemuku_naru.wav"],
+    ["audio/sentences/nanimo_okoranai.wav"]
+  ],
+
+  chunks: [
+    { romaji: "kaminari wa", hiragana: "かみなりは", english: "thunder" },
+    { romaji: "oto ga nattara", hiragana: "おとが なったら", english: "if the sound happens" },
+    { romaji: "soshite", hiragana: "そして", english: "and then" },
+    { romaji: "inazuma wa", hiragana: "いなずまは", english: "lightning" },
+    { romaji: "hitosuji ga mietara", hiragana: "ひとすじ が みえたら", english: "if a streak appears" },
+    { romaji: "tsugi ni", hiragana: "つぎに", english: "next" },
+    { romaji: "dou naru no", hiragana: "どうなるの", english: "what happens" }
+  ]
+},
+
+
+
+
+
+
+
+
+
 ];
 
 
