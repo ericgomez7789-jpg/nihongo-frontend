@@ -28275,7 +28275,60 @@ const level6 = [
 
 
 
+{
+  id: "l6-46",
+  meaning: "If you become completely exhausted, what happens next?",
+  level: 6,
 
+  options: [
+    "ねむくなる",
+    "はずかしくなる",
+    "おこる",
+    "なにも おこらない"
+  ],
+  optionsRomaji: [
+    "nemuku_naru",
+    "hazukashiku_naru",
+    "okoru",
+    "nanimo_okoranai"
+  ],
+  optionsEN: [
+    "you get sleepy",
+    "you become embarrassed",
+    "you get angry",
+    "nothing happens"
+  ],
+  correct: "ねむくなる",
+
+  fullAudio: {
+    daughter: "audio/sentences/inference46.wav",
+    me:       "audio/sentences/inference46.wav"
+  },
+
+  choiceAudio: {
+    options: [
+      ["audio/sentences/nemuku_naru.wav"],
+      ["audio/sentences/hazukashiku_naru.wav"],
+      ["audio/sentences/okoru.wav"],
+      ["audio/sentences/nanimo_okoranai.wav"]
+    ]
+  },
+
+  meaningAudio: [
+    ["audio/sentences/nemuku_naru.wav"],
+    ["audio/sentences/hazukashiku_naru.wav"],
+    ["audio/sentences/okoru.wav"],
+    ["audio/sentences/nanimo_okoranai.wav"]
+  ],
+
+  chunks: [
+    { romaji: "moshi", hiragana: "もし", english: "if" },
+    { romaji: "hetoheto ni", hiragana: "へとへとに", english: "completely exhausted" },
+    { romaji: "tsukarete ireba", hiragana: "つかれて いれば", english: "if you are tired" },
+    { romaji: "tsugi ni", hiragana: "つぎに", english: "next" },
+    { romaji: "dou naru no", hiragana: "どうなるの", english: "what happens" }
+  ]
+},
 
 
 
