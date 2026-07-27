@@ -1,0 +1,10 @@
+/* ⭐ Level‑2 MCQ feedback */
+#level2McqContainer .mcqBtn.correct {
+  background-color: #4CAF50; /* green */
+  color: white;
+}
+
+#level2McqContainer .mcqBtn.wrong {
+  background-color: #F44336; /* red */
+  color: white;
+}

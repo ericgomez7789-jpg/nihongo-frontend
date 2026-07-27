@@ -1530,6 +1530,664 @@ function level1_screen2(sentence) {
    ⭐ LEVEL 2 — ISOLATED GLOBAL STATE
    (No sharing with Level 1 or any other level)
 ========================================================== */
+const level2Sentences = [
+  {
+    id: "l2_001",
+    sentence: "Podemos quedarnos en el parque pero va a llover.",
+    conjunction: "pero",
+    meaning: "We can stay in the park, but it's going to rain.",
+
+    fullAudio: "audio/spanish/conjunction1.wav",  // ← STRING
+
+    chunks: [
+      {
+        audio: {
+          me: "audio/spanish/conjunction1.wav",
+          daughter: "audio/spanish/conjunction1.wav"
+        }
+      }
+    ]
+  }
+];
+
+
+
+
+
+
+
+
+
+const L2 = {
+  round: 0,
+  score: 0,
+  TOTAL_ROUNDS: 4,
+
+  dataset: level2Sentences,
+  currentSentence: null,
+  activeScreen: null,
+
+  mcqLocked: false,
+
+  audio: {
+    cancelToken: { cancel: false },
+    generation: 0,
+    current: null
+  }
+};
+
+L2.stopAllAudio = function () {
+  L2.audio.cancelToken.cancel = true;
+  L2.audio.generation++;
+
+  if (L2.audio.current) {
+    try {
+      L2.audio.current.pause();
+      L2.audio.current.currentTime = 0;
+    } catch (e) {}
+    L2.audio.current = null;
+  }
+};
+
+L2.setCurrentSentence = function (sentenceObj) {
+  if (!sentenceObj) {
+    console.error("L2.setCurrentSentence called with invalid sentence:", sentenceObj);
+    return;
+  }
+
+  L2.currentSentence = sentenceObj;
+};
+
+L2.getCurrentSentence = function () {
+  return L2.currentSentence || null;
+};
+
+
+L2.updateScoreKeeper = function () {
+  const roundsEl = document.getElementById("l2SessionRounds");
+  const scoreEl = document.getElementById("l2SessionScore");
+  const correctEl = document.getElementById("l2SessionCorrect");
+
+  if (roundsEl) roundsEl.textContent = L2.round;
+  if (scoreEl) scoreEl.textContent = L2.score;
+  if (correctEl) correctEl.textContent = L2.correct;
+};
+
+
+
+
+document.getElementById("l2PlayAgainBtn")?.addEventListener("click", () => {
+  L2.mcqLocked = false;
+
+  if (L2.audio && L2.audio.cancelToken) {
+    L2.audio.cancelToken.cancel = true;
+  }
+  if (L2.audio) {
+    L2.audio.generation++;
+    L2.audio.current = null;
+  }
+
+  L2.stopAllAudio();
+
+  L2.round = 0;
+  L2.score = 0;
+
+  L2.show("level2Screen1");
+  L2.startRound();
+});
+
+document.getElementById("l2HomeBtn")?.addEventListener("click", () => {
+  L2.mcqLocked = true;
+
+  if (L2.audio && L2.audio.cancelToken) {
+    L2.audio.cancelToken.cancel = true;
+  }
+  if (L2.audio) {
+    L2.audio.generation++;
+    L2.audio.current = null;
+  }
+
+  L2.stopAllAudio();
+
+  showScreen("screen0");
+});
+
+
+L2.playNaturalSentence = function (callback) {
+  const s = L2.getCurrentSentence();
+  console.log("[Level2] playNaturalSentence() sentence:", s);
+
+  if (!s || !s.fullAudio) {
+    console.log("[Level2] No fullAudio, calling callback immediately");
+    if (typeof callback === "function") callback();
+    return;
+  }
+
+  const audio = new Audio(s.fullAudio);
+  L2.audio.current = audio;
+
+  audio.onended = () => {
+    console.log("[Level2] audio ended");
+    if (typeof callback === "function") callback();
+  };
+
+  audio.onerror = (e) => {
+    console.log("[Level2] audio error", e);
+    if (typeof callback === "function") callback();
+  };
+
+  audio.play().then(() => {
+    console.log("[Level2] audio playing:", s.fullAudio);
+  }).catch(err => {
+    console.log("[Level2] audio play() failed:", err);
+    if (typeof callback === "function") callback();
+  });
+};
+
+
+
+
+
+
+L2.show = function (id) {
+  // Hide Level 4 explanation if present
+  const l4Box = document.getElementById("level4ExplanationBox");
+  if (l4Box) l4Box.classList.add("hidden");
+
+  // Hide ALL Level 2 screens
+  document.querySelectorAll(".level2-screen")
+    .forEach(el => el.classList.add("hidden"));
+
+  // LEVEL 2 SCREENS
+  if (id.startsWith("level2")) {
+
+    // Show wrapper
+    const wrapper = document.getElementById("level2Wrapper");
+    if (wrapper) wrapper.classList.remove("hidden");
+
+    // Show the specific Level 2 screen
+    const target = document.getElementById(id);
+    if (target) target.classList.remove("hidden");
+
+    return;
+  }
+
+  // UNIVERSAL SUMMARY SCREEN (screen3)
+  if (id === "screen3") {
+    document.getElementById("level2Wrapper")?.classList.add("hidden");
+
+    document.querySelectorAll(".screen").forEach(s => s.classList.add("hidden"));
+    document.getElementById("screen3")?.classList.remove("hidden");
+    return;
+  }
+};
+
+
+
+L2.startRound = function () {
+  console.log(`[Level2] startRound() — Round ${L2.round + 1}`);
+
+  // Reset audio state
+  L2.stopAllAudio();
+  L2.audio.cancelToken.cancel = false;
+  L2.audio.generation++;
+
+  L2.mcqLocked = false;
+
+  // ⭐ Randomize sentence every round
+  const sentence = L2.dataset[Math.floor(Math.random() * L2.dataset.length)];
+
+  // ⭐ Always store the full object
+  L2.setCurrentSentence(sentence);
+
+  // Show Screen 1 (natural sentence audio)
+  L2.screen1();
+
+  // ⭐ Wrap-around increment
+  L2.round++;
+  if (L2.round >= L2.dataset.length) {
+    L2.round = 0;
+  }
+};
+
+
+
+
+
+L2.screen1 = function () {
+  console.log("[Level2] screen1()");
+
+  const replayBtn = document.getElementById("l2ReplaySentenceBtn");
+  if (replayBtn) replayBtn.style.display = "none";
+
+  if (typeof L2.stopAllAudio === "function") {
+    L2.stopAllAudio();
+  }
+
+  if (L2.audio && L2.audio.cancelToken) {
+    L2.audio.cancelToken.cancel = false;
+  }
+
+  if (L2.audio) {
+    L2.audio.generation++;
+    L2.audio.current = null;
+  }
+
+  const sentence = L2.dataset[Math.floor(Math.random() * L2.dataset.length)];
+  L2.currentSentence = sentence;
+
+  L2.show("level2Screen1");
+
+  const screenEl = document.getElementById("level2Screen1");
+  if (screenEl && L2.Reset && typeof L2.Reset.attach === "function") {
+    L2.Reset.attach(screenEl, "screen1");
+  }
+
+  if (typeof L2.renderProgress === "function") {
+    L2.renderProgress("level2Screen1");
+  }
+
+  L2.playNaturalSentence(() => {
+
+    // Guards
+    if (window.currentScreen !== "level2Screen1") return;
+    if (window.currentLevel !== 2) return;
+
+    // ⭐ Give time to hear the audio
+    // Use a longer delay — 1500ms is a good starting point
+    setTimeout(() => {
+
+      if (window.currentScreen !== "level2Screen1") return;
+      if (window.currentLevel !== 2) return;
+
+      L2.screen2();
+
+    }, 1500); // ← increase this to give more time
+  });
+};
+
+
+
+
+
+
+
+L2.conjunctionCategories = {
+  contrast: ["pero", "sin embargo", "aunque"],
+  cause: ["porque", "ya que", "puesto que"],
+  sequence: ["luego", "entonces", "después"],
+  addition: ["y", "además"],
+  condition: ["si"]
+};
+
+
+L2.generateDistractors = function (correct) {
+  const distractors = new Set();
+
+  let categoryKey = null;
+  for (const key in L2.conjunctionCategories) {
+    if (L2.conjunctionCategories[key].includes(correct)) {
+      categoryKey = key;
+      break;
+    }
+  }
+
+  const pool = [];
+  for (const key in L2.conjunctionCategories) {
+    if (key !== categoryKey) {
+      pool.push(...L2.conjunctionCategories[key]);
+    }
+  }
+
+  while (distractors.size < 3 && pool.length > 0) {
+    const pick = pool[Math.floor(Math.random() * pool.length)];
+    if (pick !== correct) distractors.add(pick);
+  }
+
+  return Array.from(distractors).slice(0, 3);
+};
+
+
+L2.screen2 = function () {
+  L2.activeScreen = "screen2";
+  console.log("[Level2] screen2()");
+
+  L2.show("level2Screen2");
+
+  requestAnimationFrame(() => {
+    const replayBtn = document.getElementById("l2ReplaySentenceBtn");
+    if (replayBtn) replayBtn.style.display = "inline-block";
+
+    L2.mcqLocked = false;
+
+    const s = L2.currentSentence;
+    const mcqBox = document.getElementById("level2McqContainer");
+    const sentenceLine = document.getElementById("level2SentenceLine");
+
+    if (!sentenceLine) {
+      console.warn("❌ level2SentenceLine missing from DOM");
+      return;
+    }
+
+    sentenceLine.textContent = s.sentence.replace(s.conjunction, "_____");
+
+    const distractors = L2.generateDistractors(s.conjunction);
+    const allOptions = [s.conjunction, ...distractors];
+
+    for (let i = allOptions.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [allOptions[i], allOptions[j]] = [allOptions[j], allOptions[i]];
+    }
+
+    mcqBox.innerHTML = "";
+    allOptions.forEach(opt => {
+      const btn = document.createElement("button");
+      btn.className = "mcqBtn";
+      btn.textContent = opt;
+      btn.onclick = () => L2.handleMCQ(opt);
+      mcqBox.appendChild(btn);
+    });
+
+    if (replayBtn) {
+      replayBtn.onclick = () => {
+        if (L2.mcqLocked) return;
+
+        L2.stopAllAudio();
+        L2.audio.cancelToken.cancel = false;
+        L2.audio.generation++;
+
+        L2.playNaturalSentence(() => {});
+      };
+    }
+  });
+};
+
+
+
+
+L2.handleMCQ = function (choice) {
+  if (L2.mcqLocked) return;
+  L2.mcqLocked = true;
+
+  const s = L2.currentSentence;        // full object
+  const correct = s.conjunction;       // correct answer
+
+  const normalize = str => str.trim().normalize("NFC");
+  const isCorrect = normalize(choice) === normalize(correct);
+
+  const buttons = document.querySelectorAll("#level2McqContainer .mcqBtn");
+
+  // ⭐ Lock buttons + color feedback (same as Level‑6)
+  buttons.forEach(btn => {
+    btn.disabled = true;
+    const val = normalize(btn.textContent.trim());
+    if (val === normalize(correct)) {
+      btn.classList.add("correct");    // green
+    } else {
+      btn.classList.add("wrong");      // red
+    }
+  });
+
+  // ⭐ Correct answer logic
+  if (isCorrect) {
+    L2.score++;
+    Progress3.markSentenceComplete("level2", s.id);
+  }
+
+  L2.updateScoreKeeper();
+
+  // ⭐ Increment round
+  L2.round++;
+
+  // ⭐ Move to summary (Level‑6 style guard)
+  setTimeout(() => {
+    if (L2.activeScreen !== "screen2") return;
+    L2.showRoundSummary();
+  }, 900);
+};
+
+
+
+L2.showRoundSummary = function () {
+  L2.activeScreen = "screen3";
+
+  const s = L2.currentSentence;
+
+  L2.stopAllAudio();
+
+  L2.show("screen3");
+
+  document.getElementById("meaningBox").textContent = s.meaning;
+
+  document.getElementById("summaryCorrectDrops").textContent =
+    `Correct Answer: ${s.conjunction}`;
+
+  const cont = document.getElementById("summaryContainer");
+  cont.innerHTML = "";
+
+  const row = document.createElement("div");
+  row.className = "summary-row";
+  row.innerHTML = `
+    <div class="summary-hiragana">${s.sentence}</div>
+    <div class="summary-romaji">${s.conjunction}</div>
+    <div class="summary-english">${s.meaning}</div>
+  `;
+  cont.appendChild(row);
+
+  document.getElementById("screen3ReplayBtn").onclick = () => {
+    L2.stopAllAudio();
+    L2.audio.cancelToken.cancel = false;
+    L2.audio.generation++;
+    L2.audio.current = null;
+
+    L2.playNaturalSentence(() => {});
+  };
+
+  document.getElementById("screen3NextBtn").onclick = () => {
+    L2.mcqLocked = true;
+    L2.stopAllAudio();
+
+    document.getElementById("screen3")?.classList.add("hidden");
+
+    document.getElementById("screen2L2")?.classList.remove("hidden");
+    document.getElementById("level2Wrapper")?.classList.remove("hidden");
+
+    if (L2.round >= L2.TOTAL_ROUNDS) {
+      showLevel2FinalSummary();
+      return;
+    }
+
+    L2.currentSentence = null;
+    L2.startRound();
+  };
+};
+
+
+
+function showLevel2FinalSummary() {
+  L2.mcqLocked = true;
+
+  if (L2.audio && L2.audio.cancelToken) {
+    L2.audio.cancelToken.cancel = true;
+  }
+
+  if (L2.audio) {
+    L2.audio.generation++;
+    L2.audio.current = null;
+  }
+
+  if (typeof L2.stopAllAudio === "function") {
+    L2.stopAllAudio();
+  }
+
+  L2.show("level2Screen4");
+
+  document.getElementById("l2SessionRounds").textContent = L2.TOTAL_ROUNDS;
+  document.getElementById("l2SessionScore").textContent = L2.score;
+  document.getElementById("l2SessionCorrect").textContent = L2.score;
+}
+
+
+
+window.L2 = window.L2 || {};
+
+L2.Reset = {
+  attach(screenEl, screenName) {
+    if (!screenEl) return;
+    if (screenName !== "screen1") return;
+
+    let btn = screenEl.querySelector(".resetBtn");
+
+    if (!btn) {
+      btn = document.createElement("button");
+      btn.className = "resetBtn";
+      btn.textContent = "Reset Level 2";
+
+      btn.style.position = "absolute";
+      btn.style.top = "10px";
+      btn.style.right = "10px";
+      btn.style.zIndex = "9999";
+
+      screenEl.appendChild(btn);
+    }
+
+    btn.style.display = "block";
+
+    if (!btn.dataset.wired) {
+      btn.dataset.wired = "true";
+
+      btn.onclick = () => {
+        if (typeof L2.stopAllAudio === "function") {
+          L2.stopAllAudio();
+        }
+
+        if (L2.audio && L2.audio.cancelToken) {
+          L2.audio.cancelToken.cancel = true;
+        }
+
+        if (L2.audio) {
+          L2.audio.generation++;
+          L2.audio.current = null;
+        }
+
+        Progress3.resetLevel("level2");
+
+        setTimeout(() => {
+          L2.start();
+        }, 0);
+      };
+    }
+  }
+};
+
+
+
+L2.renderProgress = function (screenId) {
+  const screen = document.getElementById(screenId);
+  if (!screen) return;
+
+  const p = Progress3.getLevelProgress("level2");
+  const total = p.total;
+  const current = p.completed;
+  const pct = p.percent;
+
+  let wrapper = document.getElementById("l2ProgressWrapper");
+  if (!wrapper) {
+    wrapper = document.createElement("div");
+    wrapper.id = "l2ProgressWrapper";
+    wrapper.style.marginBottom = "20px";
+
+    wrapper.innerHTML = `
+      <div id="l2ProgressLabel" style="
+        font-size: 18px;
+        margin-bottom: 6px;
+        color: #fff;
+        text-align: center;
+      "></div>
+
+      <div id="l2ProgressOuter" style="
+        width: 100%;
+        height: 10px;
+        background: #333;
+        border-radius: 6px;
+        overflow: hidden;
+      ">
+        <div id="l2ProgressBar" style="
+          height: 100%;
+          width: 0%;
+          background: #4caf50;
+          transition: width 0.3s ease;
+        "></div>
+      </div>
+    `;
+  }
+
+  const title = screen.querySelector(".title");
+  if (title && !wrapper.parentNode) {
+    title.insertAdjacentElement("afterend", wrapper);
+  } else if (!wrapper.parentNode) {
+    screen.prepend(wrapper);
+  }
+
+  document.getElementById("l2ProgressBar").style.width = pct + "%";
+  document.getElementById("l2ProgressLabel").textContent =
+    `Progress: ${current} / ${total}`;
+};
+
+
+
+L2.start = function () {
+  console.log("[Level2] start()");
+
+  L2.round = 0;
+  L2.score = 0;
+  L2.mcqLocked = false;
+  L2.currentSentence = null;
+
+  if (Array.isArray(L2.dataset)) {
+    Progress3.setTotal("level2", L2.dataset.length);
+  }
+
+  if (typeof L2.stopAllAudio === "function") {
+    L2.stopAllAudio();
+  }
+
+  if (L2.audio && L2.audio.cancelToken) {
+    L2.audio.cancelToken.cancel = false;
+  }
+
+  // ⭐ REMOVE THIS — it breaks screen1
+  // document.getElementById("level2Wrapper")?.classList.remove("hidden");
+
+  document.getElementById("level3Wrapper")?.classList.add("hidden");
+  document.getElementById("level1Screen2")?.classList.add("hidden");
+
+  L2.startRound();
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1583,7 +2241,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
-/*
+
 
   // ---------------------------------------------------------
   // LEVEL 2
@@ -1602,6 +2260,11 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("[Level 2] Isolated handler fired");
     launchLevel(2, L2.start);
   });
+
+
+
+/*
+
 
 
 
