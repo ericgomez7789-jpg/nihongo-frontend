@@ -464,6 +464,61 @@ const sentences = [
 
 
 
+{
+  id: "l1-es-10",
+  meaning: "Give it your best.",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "echa",
+      hiragana: "echa",
+      meaning: "give / put",
+      audio: {
+        daughter: "audio/spanish/echa.wav",
+        me: "audio/spanish/echa.wav"
+      }
+    },
+    {
+      romaji: "le",
+      hiragana: "le",
+      meaning: "to it — a tiny pronoun that points the action toward something",
+      audio: {
+        daughter: "audio/spanish/le.wav",
+        me: "audio/spanish/le.wav"
+      }
+    },
+    {
+      romaji: "ganas",
+      hiragana: "ganas",
+      meaning: "effort / desire",
+      audio: {
+        daughter: "audio/spanish/ganas.wav",
+        me: "audio/spanish/ganas.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ];
