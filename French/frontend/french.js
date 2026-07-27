@@ -365,6 +365,235 @@ const sentences = [
 
 
 
+
+
+{
+  id: "l1-fr-6",
+  meaning: "I write with a pencil.",
+  level: 1,
+  chunks: [
+    {
+      romaji: "je",
+      hiragana: "je",
+      meaning: "I",
+      audio: {
+        daughter: "audio/french/je.wav",
+        me: "audio/french/je.wav"
+      }
+    },
+    {
+      romaji: "écris",
+      hiragana: "écris",
+      meaning: "write",
+      audio: {
+        daughter: "audio/french/ecris.wav",
+        me: "audio/french/ecris.wav"
+      }
+    },
+    {
+      romaji: "j'écris",
+      hiragana: "j'écris",
+      meaning: "I write (natural spoken unit)",
+      audio: {
+        daughter: "audio/french/jecris.wav",
+        me: "audio/french/jecris.wav"
+      }
+    },
+    {
+      romaji: "avec",
+      hiragana: "avec",
+      meaning: "with",
+      audio: {
+        daughter: "audio/french/avec.wav",
+        me: "audio/french/avec.wav"
+      }
+    },
+    {
+      romaji: "un",
+      hiragana: "un",
+      meaning: "a / one",
+      audio: {
+        daughter: "audio/french/un.wav",
+        me: "audio/french/un.wav"
+      }
+    },
+    {
+      romaji: "crayon",
+      hiragana: "crayon",
+      meaning: "pencil",
+      audio: {
+        daughter: "audio/french/crayon.wav",
+        me: "audio/french/crayon.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+{
+  id: "l1-fr-7",
+  meaning: "What are you writing?",
+  level: 1,
+  chunks: [
+    {
+      romaji: "qu’est‑ce",
+      hiragana: "qu’est‑ce",
+      meaning: "what (part 1)",
+      audio: {
+        daughter: "audio/french/questce.wav",
+        me: "audio/french/questce.wav"
+      }
+    },
+    {
+      romaji: "que",
+      hiragana: "que",
+      meaning: "what (part 2)",
+      audio: {
+        daughter: "audio/french/que.wav",
+        me: "audio/french/que.wav"
+      }
+    },
+    {
+      romaji: "tu",
+      hiragana: "tu",
+      meaning: "you",
+      audio: {
+        daughter: "audio/french/tu.wav",
+        me: "audio/french/tu.wav"
+      }
+    },
+    {
+      romaji: "écris",
+      hiragana: "écris",
+      meaning: "write / writing",
+      audio: {
+        daughter: "audio/french/ecris.wav",
+        me: "audio/french/ecris.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l1-fr-8",
+  meaning: "What are you writing?",
+  level: 1,
+  chunks: [
+    {
+      romaji: "tu",
+      hiragana: "tu",
+      meaning: "you",
+      audio: {
+        daughter: "audio/french/tu.wav",
+        me: "audio/french/tu.wav"
+      }
+    },
+    {
+      romaji: "écris",
+      hiragana: "écris",
+      meaning: "write / writing",
+      audio: {
+        daughter: "audio/french/ecris.wav",
+        me: "audio/french/ecris.wav"
+      }
+    },
+    {
+      romaji: "quoi",
+      hiragana: "quoi",
+      meaning: "what",
+      audio: {
+        daughter: "audio/french/quoi.wav",
+        me: "audio/french/quoi.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l1-fr-9",
+  meaning: "We are going to the park.",
+  level: 1,
+  chunks: [
+    {
+      romaji: "on",
+      hiragana: "on",
+      meaning: "we (spoken)",
+      audio: {
+        daughter: "audio/french/on.wav",
+        me: "audio/french/on.wav"
+      }
+    },
+    {
+      romaji: "va",
+      hiragana: "va",
+      meaning: "go / are going",
+      audio: {
+        daughter: "audio/french/va.wav",
+        me: "audio/french/va.wav"
+      }
+    },
+    {
+      romaji: "au",
+      hiragana: "au",
+      meaning: "to the",
+      audio: {
+        daughter: "audio/french/au.wav",
+        me: "audio/french/au.wav"
+      }
+    },
+    {
+      romaji: "parc",
+      hiragana: "parc",
+      meaning: "park",
+      audio: {
+        daughter: "audio/french/parc.wav",
+        me: "audio/french/parc.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 // ⭐ ADD THIS PATCH RIGHT HERE
