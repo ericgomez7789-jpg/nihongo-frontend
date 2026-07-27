@@ -32208,6 +32208,59 @@ const level8 = [
 
 
 
+
+{
+  id: "L8-020",
+  level: 8,
+
+  japanese: "ぼくがあおむけにねころびながら、片足をあげて足もとをじゆうにゆらゆらゆらゆらしていたら、むすめが「うわあ」ってなって、とくべつなわらいを出しました。",
+  audio: "audio/sentences/paraphrase20.wav",
+
+  paraphraseOptions: [
+    {
+      text: "ぼくがあおむけにねころんで片足をゆらゆらゆらゆらしていたら、むすめが「うわあ」ってなってとくべつなわらいをしたんだ。",
+      correct: true
+    },
+    {
+      text: "むすめがあおむけにねころんで足をゆらゆらしていたら、ぼくが「うわあ」ってなってわらったんだ。",
+      correct: false
+    },
+    {
+      text: "ぼくがねころんでじっとしていたら、むすめがしずかにうなずいたんだ。",
+      correct: false
+    },
+    {
+      text: "むすめが足をゆらゆらしていたら、ぼくがびっくりしてさけんだんだ。",
+      correct: false
+    },
+    {
+      text: "ぼくが立ちながら足をゆらゆらしていたら、むすめがこわがってしまったんだ。",
+      correct: false
+    }
+  ],
+
+  summaryChunks: [
+    { hiragana: "あおむけにねころんだ", romaji: "aomuke ni nekoronda", english: "I lay on my back" },
+    { hiragana: "片足をゆらゆらした", romaji: "kataashi o yurayura shita", english: "I wiggled one leg" },
+    { hiragana: "むすめがとくべつなわらいをした", romaji: "musume ga tokubetsu na warai o shita", english: "my daughter gave her special laugh" }
+  ],
+
+  meaning: "While lying on my back and wiggling one leg playfully, my daughter reacted with “uwaa!” and burst into her special kind of laugh."
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 /* ==========================================================
