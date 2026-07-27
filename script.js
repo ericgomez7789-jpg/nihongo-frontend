@@ -39318,7 +39318,10 @@ function l12Normalize(text) {
   // katakana → hiragana
   t = wanakana.toHiragana(t);
 
-  // remove spaces
+  // FIX wanakana romaji → kana mistake
+  t = t.replace(/こんにちわ/g, "こんにちは");
+
+  // remove spaces + newlines
   t = t.replace(/\s+/g, "");
 
   // hybrid romaji conversion
@@ -39331,6 +39334,7 @@ function l12Normalize(text) {
 
   return t;
 }
+
 
 
 /* ----------------------------------------------------------
@@ -39534,7 +39538,7 @@ function l12AnalyzeIntent(rawText) {
     // --------------------------------------------------
     // BASIC INTENTS
     // --------------------------------------------------
-    if (/こんにちは|やあ|もしもし/.test(t)) {
+    if (/こんにちは|konnichiwa|やあ|yaa|もしもし|moshimoshi/.test(t)) {
       type = "greeting";
 
     } else if (/してみて|はなして/.test(t)) {
@@ -39554,7 +39558,11 @@ function l12AnalyzeIntent(rawText) {
 
     } else if (/するつもり/.test(t)) {
       type = "plan_reply";
-    }
+      } else if (/たいんです|たいです|むしろ|かわりに/.test(t)) {
+  type = "desire_preference";
+}
+
+    
 
     // --------------------------------------------------
     // DAY STATUS (NEW)
@@ -39666,7 +39674,8 @@ function l12GenerateReply(rawText) {
             : pick([
                 "うん、いいよ。じゃあじゆうにはなしてみるね。",
                 "わかったよ。じゃあつづけるね。",
-                "うん、OK。じゃあはなすね."
+                "うん、OK。じゃあはなすね。"
+
               ])
         );
         break;
@@ -39804,6 +39813,27 @@ function l12GenerateReply(rawText) {
               ])
         );
         break;
+
+
+              // --------------------------------------------------
+      // DESIRE / PREFERENCE (NEW)
+      // --------------------------------------------------
+      case "desire_preference":
+        replies.push(
+          politeness === "polite"
+            ? pick([
+                "なるほど…。そのお気持ち、よくわかりますよ。",
+                "そうなのですね…。ご家族とすごしたいお気持ちは大切ですね。",
+                "なるほど…。そのように感じておられるのですね。"
+              ])
+            : pick([
+                "そっか…。その気持ちわかるよ。",
+                "なるほどね…。家族といたいんだね。",
+                "そっか…。そういう気持ちもたいせつだよ。"
+              ])
+        );
+        break;
+
 
       // --------------------------------------------------
       // DEFAULT
