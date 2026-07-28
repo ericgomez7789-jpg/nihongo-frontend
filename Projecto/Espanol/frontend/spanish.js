@@ -414,7 +414,6 @@ const sentences = [
 
 
 
-
 {
   id: "l1-es-9",
   meaning: "Put on the cap.",
@@ -422,12 +421,21 @@ const sentences = [
 
   chunks: [
     {
-      romaji: "ponte",
-      hiragana: "ponte",
-      meaning: "put on (yourself)",
+      romaji: "pon",
+      hiragana: "pon",
+      meaning: "put on",
       audio: {
-        daughter: "audio/spanish/ponte.wav",
-        me: "audio/spanish/ponte.wav"
+        daughter: "audio/spanish/pon.wav",
+        me: "audio/spanish/pon.wav"
+      }
+    },
+    {
+      romaji: "te",
+      hiragana: "te",
+      meaning: "yourself",
+      audio: {
+        daughter: "audio/spanish/te.wav",
+        me: "audio/spanish/te.wav"
       }
     },
     {
@@ -499,6 +507,16 @@ const sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1602,7 +1620,46 @@ const level2Sentences = [
         }
       }
     ]
-  }
+  },
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l2_002",
+  sentence: "Mañana hay un examen entonces voy a ir estudiar ahora.",
+  conjunction: "entonces",
+  meaning: "There’s an exam tomorrow, so I'm going to go study now.",
+
+  fullAudio: "audio/spanish/conjunction2.wav",
+
+  chunks: [
+    {
+      audio: {
+        me: "audio/spanish/conjunction2.wav",
+        daughter: "audio/spanish/conjunction2.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 
