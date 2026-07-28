@@ -593,6 +593,174 @@ const sentences = [
 
 
 
+{
+  id: "l1-fr-10",
+  meaning: "I climb the mountain.",
+  level: 1,
+  chunks: [
+    {
+      romaji: "je",
+      hiragana: "je",
+      meaning: "I",
+      audio: {
+        daughter: "audio/french/je.wav",
+        me: "audio/french/je.wav"
+      }
+    },
+    {
+      romaji: "monte",
+      hiragana: "monte",
+      meaning: "climb / go up",
+      audio: {
+        daughter: "audio/french/monte.wav",
+        me: "audio/french/monte.wav"
+      }
+    },
+    {
+      romaji: "la",
+      hiragana: "la",
+      meaning: "the",
+      audio: {
+        daughter: "audio/french/la.wav",
+        me: "audio/french/la.wav"
+      }
+    },
+    {
+      romaji: "montagne",
+      hiragana: "montagne",
+      meaning: "mountain",
+      audio: {
+        daughter: "audio/french/montagne.wav",
+        me: "audio/french/montagne.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+{
+  id: "l1-fr-11",
+  meaning: "We get on the bus.",
+  level: 1,
+  chunks: [
+    {
+      romaji: "on",
+      hiragana: "on",
+      meaning: "we (spoken)",
+      audio: {
+        daughter: "audio/french/on.wav",
+        me: "audio/french/on.wav"
+      }
+    },
+    {
+      romaji: "monte",
+      hiragana: "monte",
+      meaning: "get on / go up",
+      audio: {
+        daughter: "audio/french/monte.wav",
+        me: "audio/french/monte.wav"
+      }
+    },
+    {
+      romaji: "dans",
+      hiragana: "dans",
+      meaning: "in / into",
+      audio: {
+        daughter: "audio/french/dans.wav",
+        me: "audio/french/dans.wav"
+      }
+    },
+    {
+      romaji: "le",
+      hiragana: "le",
+      meaning: "the",
+      audio: {
+        daughter: "audio/french/le.wav",
+        me: "audio/french/le.wav"
+      }
+    },
+    {
+      romaji: "bus",
+      hiragana: "bus",
+      meaning: "bus",
+      audio: {
+        daughter: "audio/french/bus.wav",
+        me: "audio/french/bus.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l1-fr-12",
+  meaning: "Put on your clothes.",
+  level: 1,
+  chunks: [
+    {
+      romaji: "mets",
+      hiragana: "mets",
+      meaning: "put on",
+      audio: {
+        daughter: "audio/french/mets.wav",
+        me: "audio/french/mets.wav"
+      }
+    },
+    {
+      romaji: "tes",
+      hiragana: "tes",
+      meaning: "your",
+      audio: {
+        daughter: "audio/french/tes.wav",
+        me: "audio/french/tes.wav",
+        combo: "audio/french/mets-tes.wav"
+      }
+    },
+    {
+      romaji: "vêtements",
+      hiragana: "vetements",
+      meaning: "clothes",
+      audio: {
+        daughter: "audio/french/vetements.wav",
+        me: "audio/french/vetements.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ];
 
