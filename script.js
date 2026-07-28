@@ -32271,6 +32271,67 @@ const level8 = [
 
 
 
+
+
+{
+  id: "L8-021",
+  level: 8,
+
+  japanese: "ある夜、むすめとかわりばんこでベッドの上を飛び跳ねていたら、いきなりベッドの脚が折れて、むすめは「わー！」ってなって笑い出した。",
+  audio: "audio/sentences/paraphrase21.wav",
+
+  paraphraseOptions: [
+    {
+      text: "ある夜、むすめとかわりばんこでベッドの上を飛び跳ねていたら、急にベッドの脚が折れて、むすめが「わー！」って言って大笑いしたんだ。",
+      correct: true
+    },
+    {
+      text: "ある夜、ぼくがひとりでベッドの上を飛び跳ねていたら、むすめがこわがって泣き出したんだ。",
+      correct: false
+    },
+    {
+      text: "ある夜、むすめがベッドの下でじっとしていたら、ぼくが「わー！」って言っておどろかせたんだ。",
+      correct: false
+    },
+    {
+      text: "ある夜、ベッドの脚が折れたけど、むすめはしずかにうなずいただけだったんだ。",
+      correct: false
+    },
+    {
+      text: "ある夜、むすめとベッドの上でねころんでいたら、むすめが「わー！」って言って走り出したんだ。",
+      correct: false
+    }
+  ],
+
+  summaryChunks: [
+    { hiragana: "かわりばんこでとびはねた", romaji: "kawaribanko de tobihaneta", english: "we jumped on the bed taking turns" },
+    { hiragana: "ベッドのあしがおれた", romaji: "beddo no ashi ga oreta", english: "the bed leg snapped" },
+    { hiragana: "むすめがわらいだした", romaji: "musume ga waraidashita", english: "my daughter burst out laughing" }
+  ],
+
+  meaning: "One night, while my daughter and I were jumping on the bed taking turns, the bed leg suddenly snapped, and she shouted 'waa!' and burst into laughter."
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 /* ==========================================================
@@ -39616,8 +39677,9 @@ function l12AnalyzeIntent(rawText) {
     } else if (/どうおもう|どう思う|意見/.test(t)) {
       type = "ask_opinion";
 
-    } else if (/なにをする|何をする|予定/.test(t)) {
-      type = "ask_plan";
+    } else if (/なにをする|何をする|予定|yotei/.test(t)) {
+  type = "ask_plan";
+
 
     } else if (/するつもり/.test(t)) {
       type = "plan_reply";
