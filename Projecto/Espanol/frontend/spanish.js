@@ -432,7 +432,7 @@ const sentences = [
     {
       romaji: "te",
       hiragana: "te",
-      meaning: "yourself",
+      meaning: "yourself — a reflexive pronoun that shows the action is done to your own body",
       audio: {
         daughter: "audio/spanish/te.wav",
         me: "audio/spanish/te.wav"
@@ -520,7 +520,32 @@ const sentences = [
 
 
 
+{
+  id: "l1-es-11",
+  meaning: "Take care of yourself.",
+  level: 1,
 
+  chunks: [
+    {
+      romaji: "cuida",
+      hiragana: "cuida",
+      meaning: "take care",
+      audio: {
+        daughter: "audio/spanish/cuida.wav",
+        me: "audio/spanish/cuida.wav"
+      }
+    },
+    {
+      romaji: "te",
+      hiragana: "te",
+      meaning: "yourself — a reflexive pronoun that shows the action is done to your own body",
+      audio: {
+        daughter: "audio/spanish/te.wav",
+        me: "audio/spanish/te.wav"
+      }
+    }
+  ]
+},
 
 
 
