@@ -958,8 +958,8 @@ const sentences = [
       hiragana: "d'où",
       meaning: "from where (natural spoken unit)",
       audio: {
-        daughter: "audio/french/dou.wav",
-        me: "audio/french/dou.wav"
+        daughter: "audio/french/d-ou.wav",
+        me: "audio/french/d-ou.wav"
       }
     },
     {
