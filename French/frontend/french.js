@@ -756,6 +756,252 @@ const sentences = [
 
 
 
+{
+  id: "l1-fr-13",
+  meaning: "I will put on a shirt.",
+  level: 1,
+  chunks: [
+    {
+      romaji: "je",
+      hiragana: "je",
+      meaning: "I",
+      audio: {
+        daughter: "audio/french/je.wav",
+        me: "audio/french/je.wav"
+      }
+    },
+    {
+      romaji: "vais",
+      hiragana: "vais",
+      meaning: "am going to / will",
+      audio: {
+        daughter: "audio/french/vais.wav",
+        me: "audio/french/vais.wav"
+      }
+    },
+    {
+      romaji: "mettre",
+      hiragana: "mettre",
+      meaning: "put on",
+      audio: {
+        daughter: "audio/french/mettre.wav",
+        me: "audio/french/mettre.wav"
+      }
+    },
+    {
+      romaji: "une",
+      hiragana: "une",
+      meaning: "a",
+      audio: {
+        daughter: "audio/french/une.wav",
+        me: "audio/french/une.wav"
+      }
+    },
+    {
+      romaji: "chemise",
+      hiragana: "chemise",
+      meaning: "shirt",
+      audio: {
+        daughter: "audio/french/chemise.wav",
+        me: "audio/french/chemise.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+{
+  id: "l1-fr-14",
+  meaning: "I put on pants.",
+  level: 1,
+  chunks: [
+    {
+      romaji: "je",
+      hiragana: "je",
+      meaning: "I",
+      audio: {
+        daughter: "audio/french/je.wav",
+        me: "audio/french/je.wav"
+      }
+    },
+    {
+      romaji: "mets",
+      hiragana: "mets",
+      meaning: "put on",
+      audio: {
+        daughter: "audio/french/mets.wav",
+        me: "audio/french/mets.wav"
+      }
+    },
+    {
+      romaji: "un",
+      hiragana: "un",
+      meaning: "a (masculine)",
+      audio: {
+        daughter: "audio/french/un.wav",
+        me: "audio/french/un.wav"
+      }
+    },
+    {
+      romaji: "pantalon",
+      hiragana: "pantalon",
+      meaning: "pants",
+      audio: {
+        daughter: "audio/french/pantalon.wav",
+        me: "audio/french/pantalon.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l1-fr-15",
+  meaning: "Do your best.",
+  level: 1,
+  chunks: [
+    {
+      romaji: "fais",
+      hiragana: "fais",
+      meaning: "do",
+      audio: {
+        daughter: "audio/french/fais.wav",
+        me: "audio/french/fais.wav"
+      }
+    },
+    {
+      romaji: "de",
+      hiragana: "de",
+      meaning: "of",
+      audio: {
+        daughter: "audio/french/de.wav",
+        me: "audio/french/de.wav"
+      }
+    },
+    {
+      romaji: "ton",
+      hiragana: "ton",
+      meaning: "your",
+      audio: {
+        daughter: "audio/french/ton.wav",
+        me: "audio/french/ton.wav"
+      }
+    },
+    {
+      romaji: "mieux",
+      hiragana: "mieux",
+      meaning: "best",
+      audio: {
+        daughter: "audio/french/mieux.wav",
+        me: "audio/french/mieux.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l1-fr-16",
+  meaning: "Where are you from.",
+  level: 1,
+  chunks: [
+    {
+      romaji: "de",
+      hiragana: "de",
+      meaning: "from",
+      audio: {
+        daughter: "audio/french/de.wav",
+        me: "audio/french/de.wav"
+      }
+    },
+    {
+      romaji: "où",
+      hiragana: "ou",
+      meaning: "where",
+      audio: {
+        daughter: "audio/french/ou.wav",
+        me: "audio/french/ou.wav"
+      }
+    },
+    {
+      romaji: "d'où",
+      hiragana: "d'où",
+      meaning: "from where (natural spoken unit)",
+      audio: {
+        daughter: "audio/french/dou.wav",
+        me: "audio/french/dou.wav"
+      }
+    },
+    {
+      romaji: "viens",
+      hiragana: "viens",
+      meaning: "come",
+      audio: {
+        daughter: "audio/french/viens.wav",
+        me: "audio/french/viens.wav"
+      }
+    },
+    {
+      romaji: "tu",
+      hiragana: "tu",
+      meaning: "you",
+      audio: {
+        daughter: "audio/french/tu.wav",
+        me: "audio/french/tu.wav"
+      }
+    },
+    {
+      romaji: "viens-tu",
+      hiragana: "viens-tu",
+      meaning: "come you (natural spoken unit)",
+      audio: {
+        daughter: "audio/french/viens-tu.wav",
+        me: "audio/french/viens-tu.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
 
 
 

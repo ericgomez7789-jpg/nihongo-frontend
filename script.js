@@ -439,6 +439,17 @@ const sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
 {
    id: "l1-10",
   meaning: "Do your best",
@@ -514,6 +525,18 @@ const sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
 {
    id: "l1-13",
   meaning: "Thank you for the meal",
@@ -539,6 +562,20 @@ const sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
    id: "l1-14",
   meaning: "Let's eat",
@@ -555,6 +592,18 @@ const sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
 {
    id: "l1-15",
   meaning: "Thank you for your hard work",
@@ -580,6 +629,20 @@ const sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
    id: "l1-16",
   meaning: "I come from the United States",
@@ -32312,6 +32375,61 @@ const level8 = [
   meaning: "One night, while my daughter and I were jumping on the bed taking turns, the bed leg suddenly snapped, and she shouted 'waa!' and burst into laughter."
 },
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "L8-022",
+  level: 8,
+
+  japanese: "ある日、むすめといっしょに二階建ての家の二階で遊んでいた。ふたりは時間におくれていて、いそいで学校へ行くふりをして道として廊下をつかった。わたる前に左となりしか見なくて歩きはじめたら、車みたいな感じで壁をつかって向こうへぶつかって穴をあけてしまった。むすめは身をみはって「へえ…」ってなり、ぼくもおどろいた。",
+  audio: "audio/sentences/paraphrase22.wav",
+
+  paraphraseOptions: [
+    {
+      text: "ある日、むすめと二階で遊んでいて、急いで廊下を歩きだしたら壁にぶつかって穴をあけてしまい、むすめが「へえ…」って言っておどろいたんだ。",
+      correct: true
+    },
+    {
+      text: "ある日、むすめと一階で静かに遊んでいたら、ぼくが壁をけって穴をあけてしまったんだ。",
+      correct: false
+    },
+    {
+      text: "ある日、むすめが廊下を走っていたら、車が家の中に入ってきて壁をこわしたんだ。",
+      correct: false
+    },
+    {
+      text: "ある日、ぼくが二階で遊んでいたら、むすめがこわがって泣き出したんだ。",
+      correct: false
+    },
+    {
+      text: "ある日、ふたりで学校へ行こうとしていたら、むすめが壁を見つめてじっと立ち止まったんだ。",
+      correct: false
+    }
+  ],
+
+  summaryChunks: [
+    { hiragana: "にかいであそんだ", romaji: "nikai de asonda", english: "we played on the second floor" },
+    { hiragana: "ろうかをつかった", romaji: "rouka o tsukatta", english: "we used the hallway" },
+    { hiragana: "かべにぶつかってあなをあけた", romaji: "kabe ni butsukatte ana o aketa", english: "we hit the wall and made a hole" },
+    { hiragana: "むすめがおどろいた", romaji: "musume ga odoroita", english: "my daughter was surprised" }
+  ],
+
+  meaning: "One day, while my daughter and I were playing on the second floor of our two‑story house, we hurried down the hallway pretending to go to school. We only looked to the left before moving, bumped into the wall like a car, and made a hole. My daughter widened her eyes and said 'hee…', and I was surprised too."
+},
 
 
 
