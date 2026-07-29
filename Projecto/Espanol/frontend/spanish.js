@@ -559,6 +559,84 @@ const sentences = [
 
 
 
+{
+  id: "l1-es-12",
+  meaning: "I'm already leaving.",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "ya",
+      hiragana: "ya",
+      meaning: "already",
+      audio: {
+        daughter: "audio/spanish/ya.wav",
+        me: "audio/spanish/ya.wav"
+      }
+    },
+    {
+      romaji: "me",
+      hiragana: "me",
+      meaning: "myself — reflexive pronoun showing the action applies to your own body",
+      audio: {
+        daughter: "audio/spanish/me.wav",
+        me: "audio/spanish/me.wav"
+      }
+    },
+    {
+      romaji: "voy",
+      hiragana: "voy",
+      meaning: "I go / I'm going",
+      audio: {
+        daughter: "audio/spanish/voy.wav",
+        me: "audio/spanish/voy.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l1-es-13",
+  meaning: "Goodbye.",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "adios",
+      hiragana: "adios",
+      meaning: "goodbye",
+      audio: {
+        daughter: "audio/spanish/adios.wav",
+        me: "audio/spanish/adios.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1675,6 +1753,36 @@ const level2Sentences = [
   ]
 },
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l2_003",
+  sentence: "Se me olvidó la cartera y por eso regreso a la casa.",
+  conjunction: "por eso",
+  meaning: "I forgot my wallet, and that's why I'm going back home.",
+
+  fullAudio: "audio/spanish/conjunction3.wav",
+
+  chunks: [
+    {
+      audio: {
+        me: "audio/spanish/conjunction3.wav",
+        daughter: "audio/spanish/conjunction3.wav"
+      }
+    }
+  ]
+},
 
 
 
