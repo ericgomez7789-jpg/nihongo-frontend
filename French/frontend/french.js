@@ -377,8 +377,8 @@ const sentences = [
       hiragana: "je",
       meaning: "I",
       audio: {
-        daughter: "audio/french/je.wav",
-        me: "audio/french/je.wav"
+        daughter: "audio/je.wav",
+        me: "audio/je.wav"
       }
     },
     {
@@ -386,8 +386,8 @@ const sentences = [
       hiragana: "écris",
       meaning: "write",
       audio: {
-        daughter: "audio/french/ecris.wav",
-        me: "audio/french/ecris.wav"
+        daughter: "audio/ecris.wav",
+        me: "audio/ecris.wav"
       }
     },
     {
@@ -395,8 +395,8 @@ const sentences = [
       hiragana: "j'écris",
       meaning: "I write (natural spoken unit)",
       audio: {
-        daughter: "audio/french/jecris.wav",
-        me: "audio/french/jecris.wav"
+        daughter: "audio/jecris.wav",
+        me: "audio/jecris.wav"
       }
     },
     {
@@ -404,8 +404,8 @@ const sentences = [
       hiragana: "avec",
       meaning: "with",
       audio: {
-        daughter: "audio/french/avec.wav",
-        me: "audio/french/avec.wav"
+        daughter: "audio/avec.wav",
+        me: "audio/avec.wav"
       }
     },
     {
@@ -413,8 +413,8 @@ const sentences = [
       hiragana: "un",
       meaning: "a / one",
       audio: {
-        daughter: "audio/french/un.wav",
-        me: "audio/french/un.wav"
+        daughter: "audio/un.wav",
+        me: "audio/un.wav"
       }
     },
     {
@@ -422,8 +422,8 @@ const sentences = [
       hiragana: "crayon",
       meaning: "pencil",
       audio: {
-        daughter: "audio/french/crayon.wav",
-        me: "audio/french/crayon.wav"
+        daughter: "audio/crayon.wav",
+        me: "audio/crayon.wav"
       }
     }
   ]
@@ -447,8 +447,8 @@ const sentences = [
       hiragana: "qu’est‑ce",
       meaning: "what (part 1)",
       audio: {
-        daughter: "audio/french/questce.wav",
-        me: "audio/french/questce.wav"
+        daughter: "audio/questce.wav",
+        me: "audio/questce.wav"
       }
     },
     {
@@ -456,8 +456,8 @@ const sentences = [
       hiragana: "que",
       meaning: "what (part 2)",
       audio: {
-        daughter: "audio/french/que.wav",
-        me: "audio/french/que.wav"
+        daughter: "audio/que.wav",
+        me: "audio/que.wav"
       }
     },
     {
@@ -474,8 +474,8 @@ const sentences = [
       hiragana: "écris",
       meaning: "write / writing",
       audio: {
-        daughter: "audio/french/ecris.wav",
-        me: "audio/french/ecris.wav"
+        daughter: "audio/ecris.wav",
+        me: "audio/ecris.wav"
       }
     }
   ]
@@ -502,8 +502,8 @@ const sentences = [
       hiragana: "tu",
       meaning: "you",
       audio: {
-        daughter: "audio/french/tu.wav",
-        me: "audio/french/tu.wav"
+        daughter: "audio/tu.wav",
+        me: "audio/tu.wav"
       }
     },
     {
@@ -511,8 +511,8 @@ const sentences = [
       hiragana: "écris",
       meaning: "write / writing",
       audio: {
-        daughter: "audio/french/ecris.wav",
-        me: "audio/french/ecris.wav"
+        daughter: "audio/ecris.wav",
+        me: "audio/ecris.wav"
       }
     },
     {
@@ -520,8 +520,8 @@ const sentences = [
       hiragana: "quoi",
       meaning: "what",
       audio: {
-        daughter: "audio/french/quoi.wav",
-        me: "audio/french/quoi.wav"
+        daughter: "audio/quoi.wav",
+        me: "audio/quoi.wav"
       }
     }
   ]
@@ -548,8 +548,8 @@ const sentences = [
       hiragana: "on",
       meaning: "we (spoken)",
       audio: {
-        daughter: "audio/french/on.wav",
-        me: "audio/french/on.wav"
+        daughter: "audio/on.wav",
+        me: "audio/on.wav"
       }
     },
     {
@@ -557,8 +557,8 @@ const sentences = [
       hiragana: "va",
       meaning: "go / are going",
       audio: {
-        daughter: "audio/french/va.wav",
-        me: "audio/french/va.wav"
+        daughter: "audio/va.wav",
+        me: "audio/va.wav"
       }
     },
     {
@@ -566,8 +566,8 @@ const sentences = [
       hiragana: "au",
       meaning: "to the",
       audio: {
-        daughter: "audio/french/au.wav",
-        me: "audio/french/au.wav"
+        daughter: "audio/au.wav",
+        me: "audio/au.wav"
       }
     },
     {
@@ -575,8 +575,8 @@ const sentences = [
       hiragana: "parc",
       meaning: "park",
       audio: {
-        daughter: "audio/french/parc.wav",
-        me: "audio/french/parc.wav"
+        daughter: "audio/parc.wav",
+        me: "audio/parc.wav"
       }
     }
   ]
@@ -603,8 +603,8 @@ const sentences = [
       hiragana: "je",
       meaning: "I",
       audio: {
-        daughter: "audio/french/je.wav",
-        me: "audio/french/je.wav"
+        daughter: "audio/je.wav",
+        me: "audio/je.wav"
       }
     },
     {
@@ -612,8 +612,8 @@ const sentences = [
       hiragana: "monte",
       meaning: "climb / go up",
       audio: {
-        daughter: "audio/french/monte.wav",
-        me: "audio/french/monte.wav"
+        daughter: "audio/monte.wav",
+        me: "audio/monte.wav"
       }
     },
     {
@@ -621,8 +621,8 @@ const sentences = [
       hiragana: "la",
       meaning: "the",
       audio: {
-        daughter: "audio/french/la.wav",
-        me: "audio/french/la.wav"
+        daughter: "audio/la.wav",
+        me: "audio/la.wav"
       }
     },
     {
@@ -630,8 +630,8 @@ const sentences = [
       hiragana: "montagne",
       meaning: "mountain",
       audio: {
-        daughter: "audio/french/montagne.wav",
-        me: "audio/french/montagne.wav"
+        daughter: "audio/montagne.wav",
+        me: "audio/montagne.wav"
       }
     }
   ]
@@ -655,8 +655,8 @@ const sentences = [
       hiragana: "on",
       meaning: "we (spoken)",
       audio: {
-        daughter: "audio/french/on.wav",
-        me: "audio/french/on.wav"
+        daughter: "audio/on.wav",
+        me: "audio/on.wav"
       }
     },
     {
@@ -664,8 +664,8 @@ const sentences = [
       hiragana: "monte",
       meaning: "get on / go up",
       audio: {
-        daughter: "audio/french/monte.wav",
-        me: "audio/french/monte.wav"
+        daughter: "audio/monte.wav",
+        me: "audio/monte.wav"
       }
     },
     {
@@ -673,8 +673,8 @@ const sentences = [
       hiragana: "dans",
       meaning: "in / into",
       audio: {
-        daughter: "audio/french/dans.wav",
-        me: "audio/french/dans.wav"
+        daughter: "audio/dans.wav",
+        me: "audio/dans.wav"
       }
     },
     {
@@ -682,8 +682,8 @@ const sentences = [
       hiragana: "le",
       meaning: "the",
       audio: {
-        daughter: "audio/french/le.wav",
-        me: "audio/french/le.wav"
+        daughter: "audio/le.wav",
+        me: "audio/le.wav"
       }
     },
     {
@@ -691,8 +691,8 @@ const sentences = [
       hiragana: "bus",
       meaning: "bus",
       audio: {
-        daughter: "audio/french/bus.wav",
-        me: "audio/french/bus.wav"
+        daughter: "audio/bus.wav",
+        me: "audio/bus.wav"
       }
     }
   ]
@@ -717,8 +717,8 @@ const sentences = [
       hiragana: "mets",
       meaning: "put on",
       audio: {
-        daughter: "audio/french/mets.wav",
-        me: "audio/french/mets.wav"
+        daughter: "audio/mets.wav",
+        me: "audio/mets.wav"
       }
     },
     {
@@ -726,9 +726,9 @@ const sentences = [
       hiragana: "tes",
       meaning: "your",
       audio: {
-        daughter: "audio/french/tes.wav",
-        me: "audio/french/tes.wav",
-        combo: "audio/french/mets-tes.wav"
+        daughter: "audio/tes.wav",
+        me: "audio/tes.wav",
+        combo: "audio/mets-tes.wav"
       }
     },
     {
@@ -736,8 +736,8 @@ const sentences = [
       hiragana: "vetements",
       meaning: "clothes",
       audio: {
-        daughter: "audio/french/vetements.wav",
-        me: "audio/french/vetements.wav"
+        daughter: "audio/vetements.wav",
+        me: "audio/vetements.wav"
       }
     }
   ]
@@ -766,8 +766,8 @@ const sentences = [
       hiragana: "je",
       meaning: "I",
       audio: {
-        daughter: "audio/french/je.wav",
-        me: "audio/french/je.wav"
+        daughter: "audio/je.wav",
+        me: "audio/je.wav"
       }
     },
     {
@@ -775,8 +775,8 @@ const sentences = [
       hiragana: "vais",
       meaning: "am going to / will",
       audio: {
-        daughter: "audio/french/vais.wav",
-        me: "audio/french/vais.wav"
+        daughter: "audio/vais.wav",
+        me: "audio/vais.wav"
       }
     },
     {
@@ -784,8 +784,8 @@ const sentences = [
       hiragana: "mettre",
       meaning: "put on",
       audio: {
-        daughter: "audio/french/mettre.wav",
-        me: "audio/french/mettre.wav"
+        daughter: "audio/mettre.wav",
+        me: "audio/mettre.wav"
       }
     },
     {
@@ -793,8 +793,8 @@ const sentences = [
       hiragana: "une",
       meaning: "a",
       audio: {
-        daughter: "audio/french/une.wav",
-        me: "audio/french/une.wav"
+        daughter: "audio/une.wav",
+        me: "audio/une.wav"
       }
     },
     {
@@ -802,8 +802,8 @@ const sentences = [
       hiragana: "chemise",
       meaning: "shirt",
       audio: {
-        daughter: "audio/french/chemise.wav",
-        me: "audio/french/chemise.wav"
+        daughter: "audio/chemise.wav",
+        me: "audio/chemise.wav"
       }
     }
   ]
@@ -826,8 +826,8 @@ const sentences = [
       hiragana: "je",
       meaning: "I",
       audio: {
-        daughter: "audio/french/je.wav",
-        me: "audio/french/je.wav"
+        daughter: "audio/je.wav",
+        me: "audio/je.wav"
       }
     },
     {
@@ -835,8 +835,8 @@ const sentences = [
       hiragana: "mets",
       meaning: "put on",
       audio: {
-        daughter: "audio/french/mets.wav",
-        me: "audio/french/mets.wav"
+        daughter: "audio/mets.wav",
+        me: "audio/mets.wav"
       }
     },
     {
@@ -844,8 +844,8 @@ const sentences = [
       hiragana: "un",
       meaning: "a (masculine)",
       audio: {
-        daughter: "audio/french/un.wav",
-        me: "audio/french/un.wav"
+        daughter: "audio/un.wav",
+        me: "audio/un.wav"
       }
     },
     {
@@ -853,8 +853,8 @@ const sentences = [
       hiragana: "pantalon",
       meaning: "pants",
       audio: {
-        daughter: "audio/french/pantalon.wav",
-        me: "audio/french/pantalon.wav"
+        daughter: "audio/pantalon.wav",
+        me: "audio/pantalon.wav"
       }
     }
   ]
@@ -881,8 +881,8 @@ const sentences = [
       hiragana: "fais",
       meaning: "do",
       audio: {
-        daughter: "audio/french/fais.wav",
-        me: "audio/french/fais.wav"
+        daughter: "audio/fais.wav",
+        me: "audio/fais.wav"
       }
     },
     {
@@ -890,8 +890,8 @@ const sentences = [
       hiragana: "de",
       meaning: "of",
       audio: {
-        daughter: "audio/french/de.wav",
-        me: "audio/french/de.wav"
+        daughter: "audio/de.wav",
+        me: "audio/de.wav"
       }
     },
     {
@@ -899,8 +899,8 @@ const sentences = [
       hiragana: "ton",
       meaning: "your",
       audio: {
-        daughter: "audio/french/ton.wav",
-        me: "audio/french/ton.wav"
+        daughter: "audio/ton.wav",
+        me: "audio/ton.wav"
       }
     },
     {
@@ -908,8 +908,8 @@ const sentences = [
       hiragana: "mieux",
       meaning: "best",
       audio: {
-        daughter: "audio/french/mieux.wav",
-        me: "audio/french/mieux.wav"
+        daughter: "audio/mieux.wav",
+        me: "audio/mieux.wav"
       }
     }
   ]
@@ -940,8 +940,8 @@ const sentences = [
       hiragana: "de",
       meaning: "from",
       audio: {
-        daughter: "audio/french/de.wav",
-        me: "audio/french/de.wav"
+        daughter: "audio/de.wav",
+        me: "audio/de.wav"
       }
     },
     {
@@ -949,8 +949,8 @@ const sentences = [
       hiragana: "ou",
       meaning: "where",
       audio: {
-        daughter: "audio/french/ou.wav",
-        me: "audio/french/ou.wav"
+        daughter: "audio/ou.wav",
+        me: "audio/ou.wav"
       }
     },
     {
@@ -958,8 +958,8 @@ const sentences = [
       hiragana: "d'où",
       meaning: "from where (natural spoken unit)",
       audio: {
-        daughter: "audio/french/d-ou.wav",
-        me: "audio/french/d-ou.wav"
+        daughter: "audio/d-ou.wav",
+        me: "audio/d-ou.wav"
       }
     },
     {
@@ -967,8 +967,8 @@ const sentences = [
       hiragana: "viens",
       meaning: "come",
       audio: {
-        daughter: "audio/french/viens.wav",
-        me: "audio/french/viens.wav"
+        daughter: "audio/viens.wav",
+        me: "audio/viens.wav"
       }
     },
     {
@@ -976,8 +976,8 @@ const sentences = [
       hiragana: "tu",
       meaning: "you",
       audio: {
-        daughter: "audio/french/tu.wav",
-        me: "audio/french/tu.wav"
+        daughter: "audio/tu.wav",
+        me: "audio/tu.wav"
       }
     },
     {
@@ -985,8 +985,8 @@ const sentences = [
       hiragana: "viens-tu",
       meaning: "come you (natural spoken unit)",
       audio: {
-        daughter: "audio/french/viens-tu.wav",
-        me: "audio/french/viens-tu.wav"
+        daughter: "audio/viens-tu.wav",
+        me: "audio/viens-tu.wav"
       }
     }
   ]
