@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
 ------------------------------ */
 const sentences = [
 
-
+/*
 
   
 
@@ -528,7 +528,7 @@ const sentences = [
 },
 
 
-
+*/
 
 
 
@@ -589,6 +589,16 @@ const sentences = [
 
 
 
+/*
+
+
+
+
+
+
+
+
+
 
 
 
@@ -636,6 +646,17 @@ const sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -993,7 +1014,7 @@ const sentences = [
 },
 
 
-
+*/
 
 
 
@@ -1115,7 +1136,7 @@ function cancelAllAudioPlayback() {
 
 let level1Score = 0;
 let level1Round = 0;
-const TOTAL_ROUNDS = 5;
+const TOTAL_ROUNDS = 1;
 window.level1TotalRounds = TOTAL_ROUNDS;
 let level1Index = 0;
 let level1Sentences = [];
@@ -2046,6 +2067,21 @@ function level1_screen2(sentence) {
 }
 
 
+
+
+
+document.getElementById("restartBtn").onclick = () => {
+  level1Round = 0;
+  level1Score = 0;
+  correctDrops = 0;
+
+  window.currentLevel = 1;
+  showScreen("screen1");
+};
+
+document.getElementById("backToLevelsBtn").onclick = () => {
+  showScreen("screen0");
+};
 
 
 

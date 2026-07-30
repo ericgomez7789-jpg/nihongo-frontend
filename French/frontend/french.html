@@ -160,16 +160,30 @@
   </div>
 
   <!-- ⭐⭐⭐ SCREEN 4 — SESSION SUMMARY ⭐⭐⭐ -->
-  <div id="screen4" class="screen hidden">
-    <h1 class="title">Résumé</h1>
+ <div id="screen4" class="screen hidden">
+  <h1 class="title">Résumé</h1>
 
-    <div class="session-summary-box" id="sessionSummary"></div>
+  <div class="session-summary-box">
 
-    <div class="session-controls">
-      <button id="restartBtn" class="iconBtn">Recommencer</button>
-      <button id="backToLevelsBtn" class="iconBtn">Niveaux</button>
+    <div class="session-line">
+      Tours : <span id="sessionRounds"></span>
     </div>
+
+    <div class="session-line">
+      Score : <span id="sessionScore"></span>
+    </div>
+
+    <div class="session-line">
+      Réponses correctes : <span id="sessionDrops"></span>
+    </div>
+
   </div>
+
+  <div class="session-controls">
+    <button id="restartBtn" class="iconBtn">Recommencer</button>
+    <button id="backToLevelsBtn" class="iconBtn">Niveaux</button>
+  </div>
+</div>
 
 </body>
 </html>
