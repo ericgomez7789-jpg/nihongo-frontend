@@ -4015,7 +4015,22 @@ const sentences = [
 
 
 
-
+{
+  id: "l1-95",
+  meaning: "I'm home / I'm back.",
+  level: 1,
+  chunks: [
+    {
+      romaji: "tadaima",
+      hiragana: "ただいま",
+      meaning: "I'm home / I'm back",
+      audio: {
+        daughter: "audio/sentences/tadaima.wav",
+        me: "audio/sentences/tadaima.wav"
+      }
+    }
+  ]
+},
 
 
 
@@ -13311,6 +13326,22 @@ const level3Sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
   id: "l3-5",
   meaning: "Even though it was raining, he went for a walk.",
