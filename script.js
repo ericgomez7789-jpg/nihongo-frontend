@@ -4044,6 +4044,35 @@ const sentences = [
 
 
 
+{
+  id: "l1-96",
+  meaning: "Welcome home.",
+  level: 1,
+  chunks: [
+    {
+      romaji: "okaeri",
+      hiragana: "おかえり",
+      meaning: "welcome home",
+      audio: {
+        daughter: "audio/sentences/okaeri.wav",
+        me: "audio/sentences/okaeri.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
