@@ -641,6 +641,56 @@ const sentences = [
 
 
 
+{
+  id: "l1-es-14",
+  meaning: "Where are you from?",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "de",
+      hiragana: "de",
+      meaning: "from",
+      audio: {
+        daughter: "audio/spanish/de.wav",
+        me: "audio/spanish/de.wav"
+      }
+    },
+    {
+      romaji: "donde",
+      hiragana: "donde",
+      meaning: "where",
+      audio: {
+        daughter: "audio/spanish/donde.wav",
+        me: "audio/spanish/donde.wav"
+      }
+    },
+    {
+      romaji: "eres",
+      hiragana: "eres",
+      meaning: "you are (informal)",
+      audio: {
+        daughter: "audio/spanish/eres.wav",
+        me: "audio/spanish/eres.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ];
 
@@ -1797,6 +1847,37 @@ const level2Sentences = [
   ]
 },
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l2_004",
+  sentence: "No hay señal, por eso el teléfono no sirve.",
+  conjunction: "por eso",
+  meaning: "There’s no signal, that's why the phone doesn’t work.",
+
+  fullAudio: "audio/spanish/conjunction4.wav",
+
+  chunks: [
+    {
+      audio: {
+        me: "audio/spanish/conjunction4.wav",
+        daughter: "audio/spanish/conjunction4.wav"
+      }
+    }
+  ]
+},
 
 
 
