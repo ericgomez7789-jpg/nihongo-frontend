@@ -2108,6 +2108,44 @@ function renderSummaryScreen(sentence, nextLevelFn, correctDrops = null, audioCh
   };
 }
 
+function restartLevel1Session() {
+  stopAllAudio();
+
+  // Kill any pending callbacks
+  window.audioCancelToken.cancel = true;
+  window.audioCancelToken = { cancel: false };
+
+  // Reset Level 1 state
+  level1Round = 0;
+  level1Score = 0;
+  correctDrops = 0;
+
+  if (window.L1) {
+    L1.state = "idle";
+    L1.currentSentenceIndex = 0;
+    L1.sessionSentencesCompleted = {};
+    L1.roundHistory = [];
+  }
+
+  // Clear timers
+  if (window.level1Timer) {
+    clearInterval(window.level1Timer);
+    window.level1Timer = null;
+  }
+
+  // Reset UI
+  const roundsEl = document.getElementById("sessionRounds");
+  const scoreEl = document.getElementById("sessionScore");
+  const dropsEl = document.getElementById("sessionDrops");
+
+  if (roundsEl) roundsEl.textContent = "0";
+  if (scoreEl) scoreEl.textContent = "0";
+  if (dropsEl) dropsEl.textContent = "0";
+
+  // Force Level 1 to start fresh
+  showScreen("screen1");
+  startLevel1();   // ⭐ THIS is the missing piece
+}
 
 
 
