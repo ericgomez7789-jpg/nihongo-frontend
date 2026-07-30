@@ -1029,6 +1029,269 @@ const sentences = [
 
 
 
+{
+  id: "l1-fr-17",
+  meaning: "I am from the United States.",
+  level: 1,
+  chunks: [
+    {
+      romaji: "je",
+      hiragana: "je",
+      meaning: "I",
+      audio: {
+        daughter: "audio/je.wav",
+        me: "audio/je.wav"
+      }
+    },
+    {
+      romaji: "viens",
+      hiragana: "viens",
+      meaning: "come / am coming",
+      audio: {
+        daughter: "audio/viens.wav",
+        me: "audio/viens.wav"
+      }
+    },
+    
+    {
+      romaji: "des",
+      hiragana: "des",
+      meaning: "from (plural)",
+      audio: {
+        daughter: "audio/des.wav",
+        me: "audio/des.wav"
+      }
+    },
+    {
+      romaji: "états",
+      hiragana: "etats",
+      meaning: "states",
+      audio: {
+        daughter: "audio/etats.wav",
+        me: "audio/etats.wav"
+      }
+    },
+    {
+      romaji: "unis",
+      hiragana: "unis",
+      meaning: "united",
+      audio: {
+        daughter: "audio/unis.wav",
+        me: "audio/unis.wav"
+      }
+    },
+    
+    {
+      romaji: "des-états-unis",
+      hiragana: "des-etats-unis",
+      meaning: "from the United States (natural spoken unit)",
+      audio: {
+        daughter: "audio/des-etats-unis.wav",
+        me: "audio/des-etats-unis.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l1-fr-18",
+  meaning: "Where do you live.",
+  level: 1,
+  chunks: [
+    {
+      romaji: "où",
+      hiragana: "ou",
+      meaning: "where",
+      audio: {
+        daughter: "audio/ou.wav",
+        me: "audio/ou.wav"
+      }
+    },
+    {
+      romaji: "habites",
+      hiragana: "habites",
+      meaning: "live",
+      audio: {
+        daughter: "audio/habites.wav",
+        me: "audio/habites.wav"
+      }
+    },
+    {
+      romaji: "tu",
+      hiragana: "tu",
+      meaning: "you",
+      audio: {
+        daughter: "audio/tu.wav",
+        me: "audio/tu.wav"
+      }
+    },
+    {
+      romaji: "habites-tu",
+      hiragana: "habites-tu",
+      meaning: "live you (natural spoken unit)",
+      audio: {
+        daughter: "audio/habites-tu.wav",
+        me: "audio/habites-tu.wav"
+      }
+    }
+    
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l1-fr-19",
+  meaning: "Where do you live.",
+  level: 1,
+  chunks: [
+    {
+      romaji: "où",
+      hiragana: "ou",
+      meaning: "where",
+      audio: {
+        daughter: "audio/ou.wav",
+        me: "audio/ou.wav"
+      }
+    },
+    {
+      romaji: "habitez",
+      hiragana: "habitez",
+      meaning: "live",
+      audio: {
+        daughter: "audio/habitez.wav",
+        me: "audio/habitez.wav"
+      }
+    },
+    {
+      romaji: "vous",
+      hiragana: "vous",
+      meaning: "you (formal / plural)",
+      audio: {
+        daughter: "audio/vous.wav",
+        me: "audio/vous.wav"
+      }
+    },
+    {
+      romaji: "habitez-vous",
+      hiragana: "habitez-vous",
+      meaning: "live you (natural spoken unit)",
+      audio: {
+        daughter: "audio/habitez-vous.wav",
+        me: "audio/habitez-vous.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l1-fr-20",
+  meaning: "I want to live in France.",
+  level: 1,
+  chunks: [
+    {
+      romaji: "je",
+      hiragana: "je",
+      meaning: "I",
+      audio: {
+        daughter: "audio/je.wav",
+        me: "audio/je.wav"
+      }
+    },
+    {
+      romaji: "veux",
+      hiragana: "veux",
+      meaning: "want",
+      audio: {
+        daughter: "audio/veux.wav",
+        me: "audio/veux.wav"
+      }
+    },
+    
+    {
+      romaji: "vivre",
+      hiragana: "vivre",
+      meaning: "to live",
+      audio: {
+        daughter: "audio/vivre.wav",
+        me: "audio/vivre.wav"
+      }
+    },
+    {
+      romaji: "en",
+      hiragana: "en",
+      meaning: "in",
+      audio: {
+        daughter: "audio/en.wav",
+        me: "audio/en.wav"
+      }
+    },
+    {
+      romaji: "france",
+      hiragana: "france",
+      meaning: "France",
+      audio: {
+        daughter: "audio/france.wav",
+        me: "audio/france.wav"
+      }
+    }
+   
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 // ⭐ ADD THIS PATCH RIGHT HERE
