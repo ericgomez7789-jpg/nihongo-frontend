@@ -695,6 +695,19 @@ const sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
    id: "l1-17",
   meaning: "Where are you from",
@@ -729,6 +742,21 @@ const sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
    id: "l1-18",
   meaning: "When did you come?",
@@ -754,42 +782,36 @@ const sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
    id: "l1-19",
-  meaning: "When did you come?",
-  level: 1,
-  chunks: [
-    {
-      romaji: "itsu",
-      hiragana: "いつ",
-      meaning: "when",
-      audio: {
-        daughter: "audio/sentences/itsu.wav",
-        me: "audio/sentences/itsu.wav"
-      }
-    },
-    {
-      romaji: "kimashita",
-      hiragana: "きました",
-      meaning: "came",
-      audio: {
-        daughter: "audio/sentences/kimashita.wav",
-        me: "audio/sentences/kimashita.wav"
-      }
-    },
-    {
-      romaji: "ka",
-      hiragana: "か",
-      meaning: "question particle",
-      audio: {
-        daughter: "audio/sentences/ka.wav",
-        me: "audio/sentences/ka.wav"
-      }
-    }
-  ]
-},
-{
-   id: "l1-20",
   meaning: "How do you read this",
   level: 1,
   chunks: [
@@ -840,8 +862,22 @@ const sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
-   id: "l1-21",
+   id: "l1-20",
   meaning: "Touch the window",
   level: 1,
   chunks: [
@@ -893,7 +929,7 @@ const sentences = [
   ]
 },
 {
-   id: "l1-22",
+   id: "l1-21",
   meaning: "get stained",
   level: 1,
   chunks: [
@@ -927,7 +963,7 @@ const sentences = [
   ]
 },
 {
-   id: "l1-23",
+   id: "l1-22",
   meaning: "The ground is covered in snow",
   level: 1,
   chunks: [
@@ -978,8 +1014,21 @@ const sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
-   id: "l1-24",
+   id: "l1-23",
   meaning: "Sit on the chair",
   level: 1,
   chunks: [
@@ -1030,8 +1079,21 @@ const sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
-   id: "l1-25",
+   id: "l1-24",
   meaning: "The footing is unstable",
   level: 1,
   chunks: [
@@ -1064,8 +1126,20 @@ const sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
 {
-   id: "l1-26",
+   id: "l1-25",
   meaning: "The shirt is inside out.",
   level: 1,
   chunks: [
@@ -1107,8 +1181,22 @@ const sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
-   id: "l1-27",
+   id: "l1-26",
   meaning: "Walk on tiptoe.",
   level: 1,
   chunks: [
@@ -1141,8 +1229,19 @@ const sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
 {
-   id: "l1-28",
+   id: "l1-27",
   meaning: "Stretch out your arm.",
   level: 1,
   chunks: [
@@ -1176,7 +1275,7 @@ const sentences = [
   ]
 },
 {
-   id: "l1-29",
+   id: "l1-28",
   meaning: "Nod your head",
   level: 1,
   chunks: [
@@ -1210,7 +1309,7 @@ const sentences = [
   ]
 },
 {
-   id: "l1-30",
+   id: "l1-29",
   meaning: "Murmur your words",
   level: 1,
   chunks: [
@@ -1244,7 +1343,7 @@ const sentences = [
   ]
 },
 {
-   id: "l1-31",
+   id: "l1-30",
   meaning: "Drown in water.",
   level: 1,
   chunks: [
@@ -1280,7 +1379,7 @@ const sentences = [
 
 
 {
-   id: "l1-32",
+   id: "l1-31",
   meaning: "Commit a crime",
   level: 1,
   chunks: [
@@ -1314,7 +1413,7 @@ const sentences = [
   ]
 },
 {
-   id: "l1-33",
+   id: "l1-32",
   meaning: "The boat sinks.",
   level: 1,
   chunks: [
@@ -1348,7 +1447,7 @@ const sentences = [
   ]
 },
 {
-   id: "l1-34",
+   id: "l1-33",
   meaning: "The car crashes.",
   level: 1,
   chunks: [
@@ -1382,7 +1481,7 @@ const sentences = [
   ]
 },
 {
-   id: "l1-35",
+   id: "l1-34",
   meaning: "To get in a habit of.",
   level: 1,
   chunks: [
@@ -1416,7 +1515,7 @@ const sentences = [
   ]
 },
 {
-   id: "l1-36",
+   id: "l1-35",
   meaning: "Interrupt",
   level: 1,
   chunks: [
@@ -1450,7 +1549,7 @@ const sentences = [
   ]
 },
 {
-   id: "l1-37",
+   id: "l1-36",
   meaning: "answer the phone",
   level: 1,
   chunks: [
@@ -1484,7 +1583,7 @@ const sentences = [
   ]
 },
 {
-   id: "l1-38",
+   id: "l1-37",
   meaning: "Call someone",
   level: 1,
   chunks: [
@@ -1518,7 +1617,7 @@ const sentences = [
   ]
 },
 {
-   id: "l1-39",
+   id: "l1-38",
   meaning: "Hang up the phone",
   level: 1,
   chunks: [
@@ -1552,7 +1651,7 @@ const sentences = [
   ]
 },
 {
-   id: "l1-40",
+   id: "l1-39",
   meaning: "It's half past six in the afternoon",
   level: 1,
   chunks: [
@@ -1595,7 +1694,7 @@ const sentences = [
   ]
 },
 {
-   id: "l1-41",
+   id: "l1-40",
   meaning: "Meet my friends",
   level: 1,
   chunks: [
@@ -1647,7 +1746,7 @@ const sentences = [
 
 
 {
-  id: "l1-42",
+  id: "l1-41",
   meaning: "It's eight twenty in the morning.",
   level: 1,
   chunks: [
@@ -1705,7 +1804,7 @@ const sentences = [
 
 
 {
-   id: "l1-43",
+   id: "l1-42",
   meaning: "It's nine forty five in the evening.",
   level: 1,
   chunks: [
@@ -1762,7 +1861,7 @@ const sentences = [
   ]
 },
 {
-   id: "l1-44",
+   id: "l1-43",
   meaning: "Shall we meet tomorrow at 1:15?",
   level: 1,
   chunks: [
@@ -1817,7 +1916,7 @@ const sentences = [
   ]
 },
 {
-   id: "l1-45",
+   id: "l1-44",
   meaning: "The brown boat will capsize.",
   level: 1,
   chunks: [
@@ -1869,7 +1968,7 @@ const sentences = [
   ]
 },
 {
-   id: "l1-46",
+   id: "l1-45",
   meaning: "One drink is one hundred yen.",
   level: 1,
   chunks: [
@@ -1939,7 +2038,7 @@ const sentences = [
   ]
 },
 {
-   id: "l1-47",
+   id: "l1-46",
   meaning: "This is mine.",
   level: 1,
   chunks: [
@@ -1991,7 +2090,7 @@ const sentences = [
   ]
 },
 {
-   id: "l1-48",
+   id: "l1-47",
   meaning: "Three toys were left scattered everywhere.",
   level: 1,
   chunks: [
@@ -2061,7 +2160,7 @@ const sentences = [
   ]
 },
 {
-   id: "l1-49",
+   id: "l1-48",
   meaning: "Move forward",
   level: 1,
   chunks: [
@@ -2095,7 +2194,7 @@ const sentences = [
   ]
 },
 {
-   id: "l1-50",
+   id: "l1-49",
   meaning: "Move backward",
   level: 1,
   chunks: [
@@ -2129,7 +2228,7 @@ const sentences = [
   ]
 },
 {
-   id: "l1-51",
+   id: "l1-50",
   meaning: "Turn right",
   level: 1,
   chunks: [
@@ -2163,7 +2262,7 @@ const sentences = [
   ]
 },
 {
-   id: "l1-52",
+   id: "l1-51",
   meaning: "Listen to the sound",
   level: 1,
   chunks: [
@@ -2197,7 +2296,7 @@ const sentences = [
   ]
 },
 {
-   id: "l1-53",
+   id: "l1-52",
   meaning: "Speak out",
   level: 1,
   chunks: [
@@ -2231,7 +2330,7 @@ const sentences = [
   ]
 },
 {
-   id: "l1-54",
+   id: "l1-53",
   meaning: "Lower your voice",
   level: 1,
   chunks: [
@@ -2265,7 +2364,7 @@ const sentences = [
   ]
 },
 {
-   id: "l1-55",
+   id: "l1-54",
   meaning: "Clap your hands",
   level: 1,
   chunks: [
@@ -2299,7 +2398,7 @@ const sentences = [
   ]
 },
 {
-   id: "l1-56",
+   id: "l1-55",
   meaning: "Stomp your foot",
   level: 1,
   chunks: [
@@ -2333,7 +2432,7 @@ const sentences = [
   ]
 },
 {
-   id: "l1-57",
+   id: "l1-56",
   meaning: "Listen carefully",
   level: 1,
   chunks: [
@@ -2367,7 +2466,7 @@ const sentences = [
   ]
 },
 {
-   id: "l1-58",
+   id: "l1-57",
   meaning: "What does this mean?",
   level: 1,
   chunks: [
@@ -2420,7 +2519,7 @@ const sentences = [
   ]
 },
 {
-   id: "l1-59",
+   id: "l1-58",
   meaning: "Run a business",
   level: 1,
   chunks: [
@@ -2454,7 +2553,7 @@ const sentences = [
   ]
 },
 {
-   id: "l1-60",
+   id: "l1-59",
   meaning: "Cultivate a field",
   level: 1,
   chunks: [
@@ -2488,7 +2587,7 @@ const sentences = [
   ]
 },
 {
-   id: "l1-61",
+   id: "l1-60",
   meaning: "Make your bed",
   level: 1,
   chunks: [
@@ -2522,7 +2621,7 @@ const sentences = [
   ]
 },
 {
-   id: "l1-62",
+   id: "l1-61",
   meaning: "I look with my eyes.",
   level: 1,
   chunks: [
@@ -2556,7 +2655,7 @@ const sentences = [
   ]
 },
 {
-   id: "l1-63",
+   id: "l1-62",
   meaning: "I sweep with a broom.",
   level: 1,
   chunks: [
@@ -2590,7 +2689,7 @@ const sentences = [
   ]
 },
 {
-   id: "l1-64",
+   id: "l1-63",
   meaning: "I smell with my nose.",
   level: 1,
   chunks: [
@@ -2624,7 +2723,7 @@ const sentences = [
   ]
 },
 {
-   id: "l1-65",
+   id: "l1-64",
   meaning: "I eat with chopsticks.",
   level: 1,
   chunks: [
@@ -2658,7 +2757,7 @@ const sentences = [
   ]
 },
 {
-   id: "l1-66",
+   id: "l1-65",
   meaning: "I walk with my feet.",
   level: 1,
   chunks: [
@@ -2692,7 +2791,7 @@ const sentences = [
   ]
 },
 {
-   id: "l1-67",
+   id: "l1-66",
   meaning: "I go by car.",
   level: 1,
   chunks: [
@@ -2726,7 +2825,7 @@ const sentences = [
   ]
 },
 {
-   id: "l1-68",
+   id: "l1-67",
   meaning: "I write with my hand.",
   level: 1,
   chunks: [
@@ -2760,7 +2859,7 @@ const sentences = [
   ]
 },
 {
-   id: "l1-69",
+   id: "l1-68",
   meaning: "I play with a stuffed animal.",
   level: 1,
   chunks: [
@@ -2794,7 +2893,7 @@ const sentences = [
   ]
 },
 {
-   id: "l1-70",
+   id: "l1-69",
   meaning: "I listen with my ears.",
   level: 1,
   chunks: [
@@ -2828,7 +2927,7 @@ const sentences = [
   ]
 },
 {
-   id: "l1-71",
+   id: "l1-70",
   meaning: "I tie with a rope.",
   level: 1,
   chunks: [
@@ -2862,7 +2961,7 @@ const sentences = [
   ]
 },
 {
-   id: "l1-72",
+   id: "l1-71",
   meaning: "I untie the rope with my hands.",
   level: 1,
   chunks: [
@@ -2914,7 +3013,7 @@ const sentences = [
   ]
 },
 {
-   id: "l1-73",
+   id: "l1-72",
   meaning: "I speak in Japanese.",
   level: 1,
   chunks: [
@@ -2953,7 +3052,7 @@ const sentences = [
 
 
 {
-  id: "l1-74",
+  id: "l1-73",
   meaning: "I am happy.",
   level: 1,
   chunks: [
@@ -2983,7 +3082,7 @@ const sentences = [
 
 
 {
-  id: "l1-75",
+  id: "l1-74",
   meaning: "I am sad.",
   level: 1,
   chunks: [
@@ -3015,7 +3114,7 @@ const sentences = [
 
 
 {
-  id: "l1-76",
+  id: "l1-75",
   meaning: "Look through the window.",
   level: 1,
   chunks: [
@@ -3055,7 +3154,7 @@ const sentences = [
 
 
 {
-  id: "l1-77",
+  id: "l1-76",
   meaning: "I am disappointed.",
   level: 1,
   chunks: [
@@ -3085,7 +3184,7 @@ const sentences = [
 
 
 {
-  id: "l1-78",
+  id: "l1-77",
   meaning: "I go to school at 7 o'clock.",
   level: 1,
   chunks: [
@@ -3151,7 +3250,7 @@ const sentences = [
 
 
 {
-  id: "l1-79",
+  id: "l1-78",
   meaning: "I am embarrassed.",
   level: 1,
   chunks: [
@@ -3181,7 +3280,7 @@ const sentences = [
 
 
 {
-  id: "l1-80",
+  id: "l1-79",
   meaning: "It works for me. / It's convenient for me.",
   level: 1,
   chunks: [
@@ -3220,7 +3319,7 @@ const sentences = [
 
 
 {
-  id: "l1-81",
+  id: "l1-80",
   meaning: "Is now a good time to talk?",
   level: 1,
   chunks: [
@@ -3291,7 +3390,7 @@ const sentences = [
 
 
 {
-  id: "l1-82",
+  id: "l1-81",
   meaning: "I am proud.",
   level: 1,
   chunks: [
@@ -3340,7 +3439,7 @@ const sentences = [
 
 
 {
-  id: "l1-83",
+  id: "l1-82",
   meaning: "I am going on an errand.",
   level: 1,
   chunks: [
@@ -3396,7 +3495,7 @@ const sentences = [
 
 
 {
-  id: "l1-84",
+  id: "l1-83",
   meaning: "to put effort in / to apply strength",
   level: 1,
   chunks: [
@@ -3444,7 +3543,7 @@ const sentences = [
 
 
 {
-  id: "l1-85",
+  id: "l1-84",
   meaning: "to pour milk",
   level: 1,
   chunks: [
@@ -3494,7 +3593,7 @@ const sentences = [
 
 
 {
-  id: "l1-86",
+  id: "l1-85",
   meaning: "the window is stained",
   level: 1,
   chunks: [
@@ -3571,7 +3670,7 @@ const sentences = [
 
 
 {
-  id: "l1-87",
+  id: "l1-86",
   meaning: "In the kitchen, the dishes are scattered and it's a mess.",
   level: 1,
   chunks: [
@@ -3675,7 +3774,7 @@ const sentences = [
 
 
 {
-  id: "l1-88",
+  id: "l1-87",
   meaning: "Put on a jacket.",
   level: 1,
   chunks: [
@@ -3725,7 +3824,7 @@ const sentences = [
 
 
 {
-  id: "l1-89",
+  id: "l1-88",
   meaning: "Put on shoes.",
   level: 1,
   chunks: [
@@ -3773,7 +3872,7 @@ const sentences = [
 
 
 {
-  id: "l1-90",
+  id: "l1-89",
   meaning: "Go outside.",
   level: 1,
   chunks: [
@@ -3822,7 +3921,7 @@ const sentences = [
 
 
 {
-  id: "l1-91",
+  id: "l1-90",
   meaning: "Go inside the house.",
   level: 1,
   chunks: [
@@ -3871,7 +3970,7 @@ const sentences = [
 
 
 {
-  id: "l1-92",
+  id: "l1-91",
   meaning: "Put on clothes.",
   level: 1,
   chunks: [
@@ -3924,7 +4023,7 @@ const sentences = [
 
 
 {
-  id: "l1-93",
+  id: "l1-92",
   meaning: "Be careful.",
   level: 1,
   chunks: [
@@ -3972,7 +4071,7 @@ const sentences = [
 
 
 {
-  id: "l1-94",
+  id: "l1-93",
   meaning: "Turn on the light / light a fire.",
   level: 1,
   chunks: [
@@ -4016,7 +4115,7 @@ const sentences = [
 
 
 {
-  id: "l1-95",
+  id: "l1-94",
   meaning: "I'm home / I'm back.",
   level: 1,
   chunks: [
@@ -4045,7 +4144,7 @@ const sentences = [
 
 
 {
-  id: "l1-96",
+  id: "l1-95",
   meaning: "Welcome home.",
   level: 1,
   chunks: [
@@ -13072,6 +13171,20 @@ const level3Sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
   id: "l3-2",
 

@@ -1287,6 +1287,99 @@ const sentences = [
 
 
 
+{
+  id: "l1-fr-18",
+  meaning: "When did you come?",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "quand",
+      hiragana: "quand",
+      meaning: "when",
+      audio: {
+        daughter: "audio/french/quand.wav",
+        me: "audio/french/quand.wav"
+      }
+    },
+    {
+      romaji: "es-tu venu",
+      hiragana: "es-tu venu",
+      meaning: "did you come? (informal)",
+      audio: {
+        daughter: "audio/french/es_tu_venu.wav",
+        me: "audio/french/es_tu_venu.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l1-fr-19",
+  meaning: "Take care.",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "prends",
+      hiragana: "prends",
+      meaning: "take",
+      audio: {
+        daughter: "audio/french/prends.wav",
+        me: "audio/french/prends.wav"
+      }
+    },
+    {
+      romaji: "soin",
+      hiragana: "soin",
+      meaning: "care",
+      audio: {
+        daughter: "audio/french/soin.wav",
+        me: "audio/french/soin.wav"
+      }
+    },
+    {
+      romaji: "de",
+      hiragana: "de",
+      meaning: "of",
+      audio: {
+        daughter: "audio/french/de.wav",
+        me: "audio/french/de.wav"
+      }
+    },
+    {
+      romaji: "toi",
+      hiragana: "toi",
+      meaning: "you / yourself",
+      audio: {
+        daughter: "audio/french/toi.wav",
+        me: "audio/french/toi.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
 
 
 
