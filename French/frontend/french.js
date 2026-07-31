@@ -1286,7 +1286,6 @@ const sentences = [
 
 
 
-
 {
   id: "l1-fr-18",
   meaning: "When did you come?",
@@ -1298,21 +1297,40 @@ const sentences = [
       hiragana: "quand",
       meaning: "when",
       audio: {
-        daughter: "audio/french/quand.wav",
-        me: "audio/french/quand.wav"
+        daughter: "audio/quand.wav",
+        me: "audio/quand.wav"
       }
     },
     {
-      romaji: "es-tu venu",
-      hiragana: "es-tu venu",
-      meaning: "did you come? (informal)",
+      romaji: "es",
+      hiragana: "es",
+      meaning: "are (you)",
       audio: {
-        daughter: "audio/french/es_tu_venu.wav",
-        me: "audio/french/es_tu_venu.wav"
+        daughter: "audio/es.wav",
+        me: "audio/es.wav"
+      }
+    },
+    {
+      romaji: "tu",
+      hiragana: "tu",
+      meaning: "you",
+      audio: {
+        daughter: "audio/tu.wav",
+        me: "audio/tu.wav"
+      }
+    },
+    {
+      romaji: "venu",
+      hiragana: "venu",
+      meaning: "come (past participle)",
+      audio: {
+        daughter: "audio/venu.wav",
+        me: "audio/venu.wav"
       }
     }
   ]
-},
+}
+
 
 
 
@@ -1336,8 +1354,8 @@ const sentences = [
       hiragana: "prends",
       meaning: "take",
       audio: {
-        daughter: "audio/french/prends.wav",
-        me: "audio/french/prends.wav"
+        daughter: "audio/prends.wav",
+        me: "audio/prends.wav"
       }
     },
     {
@@ -1345,8 +1363,8 @@ const sentences = [
       hiragana: "soin",
       meaning: "care",
       audio: {
-        daughter: "audio/french/soin.wav",
-        me: "audio/french/soin.wav"
+        daughter: "audio/soin.wav",
+        me: "audio/soin.wav"
       }
     },
     {
@@ -1354,8 +1372,8 @@ const sentences = [
       hiragana: "de",
       meaning: "of",
       audio: {
-        daughter: "audio/french/de.wav",
-        me: "audio/french/de.wav"
+        daughter: "audio/de.wav",
+        me: "audio/de.wav"
       }
     },
     {
@@ -1363,8 +1381,68 @@ const sentences = [
       hiragana: "toi",
       meaning: "you / yourself",
       audio: {
-        daughter: "audio/french/toi.wav",
-        me: "audio/french/toi.wav"
+        daughter: "audio/toi.wav",
+        me: "audio/toi.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l1-fr-20",
+  meaning: "How do you read this?",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "comment",
+      hiragana: "comment",
+      meaning: "how",
+      audio: {
+        daughter: "audio/comment.wav",
+        me: "audio/comment.wav"
+      }
+    },
+    {
+      romaji: "tu",
+      hiragana: "tu",
+      meaning: "you (informal)",
+      audio: {
+        daughter: "audio/tu.wav",
+        me: "audio/tu.wav"
+      }
+    },
+    {
+      romaji: "lis",
+      hiragana: "lis",
+      meaning: "read",
+      audio: {
+        daughter: "audio/lis.wav",
+        me: "audio/lis.wav"
+      }
+    },
+    {
+      romaji: "ça",
+      hiragana: "ça",
+      meaning: "this",
+      audio: {
+        daughter: "audio/ca.wav",
+        me: "audio/ca.wav"
       }
     }
   ]

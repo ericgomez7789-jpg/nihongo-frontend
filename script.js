@@ -876,6 +876,22 @@ const sentences = [
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
    id: "l1-20",
   meaning: "Touch the window",
