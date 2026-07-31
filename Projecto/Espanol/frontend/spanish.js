@@ -688,6 +688,82 @@ const sentences = [
 
 
 
+{
+  id: "l1-es-15",
+  meaning: "I come from the United States.",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "yo",
+      hiragana: "yo",
+      meaning: "I",
+      audio: {
+        daughter: "audio/spanish/yo.wav",
+        me: "audio/spanish/yo.wav"
+      }
+    },
+    {
+      romaji: "vengo",
+      hiragana: "vengo",
+      meaning: "come",
+      audio: {
+        daughter: "audio/spanish/vengo.wav",
+        me: "audio/spanish/vengo.wav"
+      }
+    },
+    {
+      romaji: "de",
+      hiragana: "de",
+      meaning: "from",
+      audio: {
+        daughter: "audio/spanish/de.wav",
+        me: "audio/spanish/de.wav"
+      }
+    },
+    {
+      romaji: "los",
+      hiragana: "los",
+      meaning: "the (plural)",
+      audio: {
+        daughter: "audio/spanish/los.wav",
+        me: "audio/spanish/los.wav"
+      }
+    },
+    {
+      romaji: "estados",
+      hiragana: "estados",
+      meaning: "states",
+      audio: {
+        daughter: "audio/spanish/estados.wav",
+        me: "audio/spanish/estados.wav"
+      }
+    },
+    {
+      romaji: "unidos",
+      hiragana: "unidos",
+      meaning: "united",
+      audio: {
+        daughter: "audio/spanish/unidos.wav",
+        me: "audio/spanish/unidos.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1520,17 +1596,21 @@ Score summary screen
 function showLevel1FinalSummary() {
   stopAllAudio();
 
-  // ⭐ Kill any leftover Level 1 audio callbacks
+  // Kill any leftover Level 1 audio callbacks
   window.audioCancelToken.cancel = true;
 
   showScreen("screen4");
 
-  // ⭐ Lifetime progress bar (Level 1)
+  // ⭐ Hide restart button (Spanish Level 1 should not restart from summary)
+  const restartBtn = document.getElementById("restartBtn");
+  if (restartBtn) restartBtn.style.display = "none";
+
+  // Lifetime progress bar (Level 1)
   if (window.L1 && typeof L1.renderProgress === "function") {
     L1.renderProgress("screen4");
   }
 
-  // Session-only stats (these stay as-is)
+  // Session-only stats
   const roundsEl = document.getElementById("sessionRounds");
   const scoreEl = document.getElementById("sessionScore");
   const dropsEl = document.getElementById("sessionDrops");
@@ -1539,6 +1619,7 @@ function showLevel1FinalSummary() {
   if (scoreEl) scoreEl.textContent = level1Score;
   if (dropsEl) dropsEl.textContent = Number(correctDrops) || 0;
 }
+
 
 
 
@@ -1879,6 +1960,37 @@ const level2Sentences = [
   ]
 },
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l2_005",
+  sentence: "Quiero mejorar en japonés, por eso practico a diario.",
+  conjunction: "por eso",
+  meaning: "I want to improve my Japanese, that's why I practice daily.",
+
+  fullAudio: "audio/spanish/conjunction5.wav",
+
+  chunks: [
+    {
+      audio: {
+        me: "audio/spanish/conjunction5.wav",
+        daughter: "audio/spanish/conjunction5.wav"
+      }
+    }
+  ]
+},
 
 
 

@@ -465,8 +465,8 @@ const sentences = [
       hiragana: "tu",
       meaning: "you",
       audio: {
-        daughter: "audio/french/tu.wav",
-        me: "audio/french/tu.wav"
+        daughter: "audio/tu.wav",
+        me: "audio/tu.wav"
       }
     },
     {
@@ -1722,10 +1722,17 @@ L1.Reset = {
    ⭐ PLAY FILE PATHS IN ORDER (Screen 1)
 ---------------------------------------------------------- */
 function playChunksInOrder(chunkList, onComplete) {
-  // ⭐ Hard stop any leftover audio
-  //stopAllAudio();
+  console.log("🔊 [L1] playChunksInOrder START");
+  console.log("🔊 [L1] chunkList =", chunkList);
 
-  // ⭐ Reset cancel + increment generation (audio only)
+  // If no chunks, bail early
+  if (!chunkList || !chunkList.length) {
+    console.warn("⚠️ [L1] No chunk files provided.");
+    if (typeof onComplete === "function") onComplete();
+    return;
+  }
+
+  // Reset cancel + increment generation
   window.audioCancelToken.cancel = false;
   window.audioGeneration++;
   const myGen = window.audioGeneration;
@@ -1733,43 +1740,82 @@ function playChunksInOrder(chunkList, onComplete) {
   let index = 0;
 
   function playNext() {
-    // ⭐ Guard audio only — do NOT block transitions
-    if (window.audioCancelToken.cancel || myGen !== window.audioGeneration) return;
+    console.log(`🎵 [L1] playNext() index=${index}`);
 
+    // Guard: audio canceled or generation mismatch
+    if (window.audioCancelToken.cancel) {
+      console.warn("⛔ [L1] audioCancelToken.cancel === true → aborting audio.");
+      return;
+    }
+    if (myGen !== window.audioGeneration) {
+      console.warn("⛔ [L1] audioGeneration mismatch → aborting audio.");
+      return;
+    }
+
+    // Finished all chunks
     if (index >= chunkList.length) {
-      if (!window.audioCancelToken.cancel &&
-          myGen === window.audioGeneration &&
-          typeof onComplete === "function") {
-        onComplete();
-      }
+      console.log("🏁 [L1] All chunks finished.");
+      if (typeof onComplete === "function") onComplete();
       return;
     }
 
     const file = chunkList[index];
+    console.log(`🎧 [L1] Loading audio file:`, file);
+
+    if (!file) {
+      console.error("❌ [L1] Chunk file is undefined → skipping.");
+      index++;
+      playNext();
+      return;
+    }
+
     const audio = new Audio(file);
     window.screen2Audio = audio;
 
+    // Event logs
+    audio.onplay = () => {
+      console.log(`▶️ [L1] onplay fired for: ${file}`);
+    };
+
     audio.onended = () => {
-      if (window.audioCancelToken.cancel || myGen !== window.audioGeneration) return;
+      console.log(`⏹️ [L1] onended fired for: ${file}`);
+      if (window.audioCancelToken.cancel || myGen !== window.audioGeneration) {
+        console.warn("⛔ [L1] Guard triggered inside onended → abort.");
+        return;
+      }
       index++;
       playNext();
     };
 
-    audio.onerror = () => {
-      if (window.audioCancelToken.cancel || myGen !== window.audioGeneration) return;
+    audio.onerror = (err) => {
+      console.error(`💥 [L1] onerror fired for: ${file}`, err);
+      if (window.audioCancelToken.cancel || myGen !== window.audioGeneration) {
+        console.warn("⛔ [L1] Guard triggered inside onerror → abort.");
+        return;
+      }
       index++;
       playNext();
     };
 
-    audio.play().catch(() => {
-      if (window.audioCancelToken.cancel || myGen !== window.audioGeneration) return;
-      index++;
-      playNext();
-    });
+    // Attempt playback
+    audio.play()
+      .then(() => {
+        console.log(`🔈 [L1] play() resolved for: ${file}`);
+      })
+      .catch(err => {
+        console.error(`🚫 [L1] play() rejected for: ${file}`, err);
+        if (window.audioCancelToken.cancel || myGen !== window.audioGeneration) {
+          console.warn("⛔ [L1] Guard triggered inside play().catch → abort.");
+          return;
+        }
+        index++;
+        playNext();
+      });
   }
 
   playNext();
 }
+
 
 
 /* ----------------------------------------------------------
@@ -2109,13 +2155,33 @@ function renderSummaryScreen(sentence, nextLevelFn, correctDrops = null, audioCh
 }
 
 function restartLevel1Session() {
+  // 1. Kill ALL audio immediately
   stopAllAudio();
 
-  // Kill any pending callbacks
+  // 2. Kill ALL pending timeouts (Level 1 + Level 2 + audio)
+  const highestTimeout = setTimeout(() => {});
+  for (let i = 0; i < highestTimeout; i++) {
+    clearTimeout(i);
+  }
+
+  // 3. Kill ALL pending intervals (timers, countdowns)
+  const highestInterval = setInterval(() => {});
+  for (let i = 0; i < highestInterval; i++) {
+    clearInterval(i);
+  }
+
+  // 4. Reset audio cancellation
   window.audioCancelToken.cancel = true;
   window.audioCancelToken = { cancel: false };
 
-  // Reset Level 1 state
+  // 5. Re‑attach Level 1 isolated handler (CRITICAL)
+  const btn = document.querySelector('.levelBtn[data-level="1"]');
+  if (btn) {
+    btn.removeEventListener("click", level1IsolatedHandler);
+    btn.addEventListener("click", level1IsolatedHandler);
+  }
+
+  // 6. Reset Level 1 session state
   level1Round = 0;
   level1Score = 0;
   correctDrops = 0;
@@ -2125,15 +2191,18 @@ function restartLevel1Session() {
     L1.currentSentenceIndex = 0;
     L1.sessionSentencesCompleted = {};
     L1.roundHistory = [];
+
+    // CRITICAL: restore Level‑1 sentence list
+    L1.sentences = sentences.filter(s => s.level === 1);
   }
 
-  // Clear timers
+  // 7. Clear Level 1 timer if it exists
   if (window.level1Timer) {
     clearInterval(window.level1Timer);
     window.level1Timer = null;
   }
 
-  // Reset UI
+  // 8. Reset UI counters
   const roundsEl = document.getElementById("sessionRounds");
   const scoreEl = document.getElementById("sessionScore");
   const dropsEl = document.getElementById("sessionDrops");
@@ -2142,10 +2211,21 @@ function restartLevel1Session() {
   if (scoreEl) scoreEl.textContent = "0";
   if (dropsEl) dropsEl.textContent = "0";
 
-  // Force Level 1 to start fresh
-  showScreen("screen1");
-  startLevel1();   // ⭐ THIS is the missing piece
+  // 9. Launch Level 1 fresh
+  launchLevel(1, level1);
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2158,17 +2238,20 @@ Score summary screen
 function showLevel1FinalSummary() {
   stopAllAudio();
 
-  // ⭐ Kill any leftover Level 1 audio callbacks
   window.audioCancelToken.cancel = true;
 
   showScreen("screen4");
 
-  // ⭐ Lifetime progress bar (Level 1)
+  // ⭐ Hide restart button (French should match Japanese behavior)
+  const restartBtn = document.getElementById("restartBtn");
+  if (restartBtn) restartBtn.style.display = "none";
+
+  // Lifetime progress bar
   if (window.L1 && typeof L1.renderProgress === "function") {
     L1.renderProgress("screen4");
   }
 
-  // Session-only stats (these stay as-is)
+  // Session-only stats
   const roundsEl = document.getElementById("sessionRounds");
   const scoreEl = document.getElementById("sessionScore");
   const dropsEl = document.getElementById("sessionDrops");
@@ -2177,6 +2260,9 @@ function showLevel1FinalSummary() {
   if (scoreEl) scoreEl.textContent = level1Score;
   if (dropsEl) dropsEl.textContent = Number(correctDrops) || 0;
 }
+
+
+
 
 
 
@@ -2444,22 +2530,36 @@ document.addEventListener("DOMContentLoaded", () => {
     startFn();
   }
 
+
+
+
+
+
+
+
+
+
+
+
+
   // ---------------------------------------------------------
   // LEVEL 1
   // ---------------------------------------------------------
-  document.querySelector('.levelBtn[data-level="1"]')
-  ?.addEventListener("click", () => {
- if (window.currentScreen && window.currentScreen !== "screen0") return;
+ function level1IsolatedHandler() {
+  if (window.currentScreen && window.currentScreen !== "screen0") return;
+  if (window.currentLevel !== 0) return;
 
+  window.currentLevel = 1;
+  console.log("[Level 1] Isolated handler fired");
+  launchLevel(1, level1);
+}
 
+// ⭐ Make handler global so restart can remove it
+window.level1IsolatedHandler = level1IsolatedHandler;
 
+const btn = document.querySelector('.levelBtn[data-level="1"]');
+btn?.addEventListener("click", window.level1IsolatedHandler);
 
-    if (window.currentLevel !== 0) return;   // ⭐ Only allow Level 1 when selecting from screen0
-
-    window.currentLevel = 1;
-    console.log("[Level 1] Isolated handler fired");
-    launchLevel(1, level1);
-  });
 
 
 /*
