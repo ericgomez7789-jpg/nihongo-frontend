@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="espanol.css">
 <link rel="stylesheet" href="spanish_level2.css">
+<link rel="stylesheet" href="spanish_level3.css">
   <script src="Progress.js" defer></script>
   <script src="spanish.js" defer></script>
   <link rel="stylesheet" href="logo.css">
@@ -205,6 +206,125 @@
 
 
 
+<!-- ⭐⭐⭐ SCREEN 2L3 — LEVEL 3 INFERENCE (FULLY ISOLATED) ⭐⭐⭐ -->
+<div id="screen2L3" class="level3 hidden">
+
+  <!-- LEVEL 3 REPLAY BUTTON (LEVEL 3 ONLY) -->
+  <button id="l3ReplaySentenceBtn" class="iconBtn replay-top">🔁 Repetir</button>
+
+  <!-- ⭐ LEVEL 3 WRAPPER ⭐ -->
+  <div id="level3Wrapper" class="level3-wrapper">
+
+    <!-- LEVEL 3 SCREEN 1 — AUDIO ONLY -->
+    <div id="level3Screen1" class="level-block level3-screen hidden">
+      <h2 class="title">Escucha con atención</h2>
+      <div class="instruction-line">Solo escucha — no respondas todavía.</div>
+      <div class="instruction-line">La frase se reproducirá normalmente.</div>
+      <div class="instruction-line">Hay 3 rondas por sesión.</div>
+    </div>
+
+    <!-- LEVEL 3 SCREEN 2 — INFERENCE (PARÁFRASIS) -->
+    <div id="level3Screen2" class="level-block level3-screen hidden">
+      <h2 class="title">Elige la inferencia correcta.</h2>
+      <div class="instruction-line">¿Qué ocurre después?</div>
+
+      <!-- Left column: meaning or Spanish sentence -->
+      <div id="l3LeftColumn" class="sentence-line"></div>
+
+      <!-- Right column: paraphrase options -->
+      <div id="l3RightColumn" class="mcq-container"></div>
+
+      <!-- Replay button -->
+      <button id="l3ReplayBtn" class="iconBtn replay-mid">🔁 Repetir</button>
+    </div>
+
+
+
+<!-- ⭐⭐⭐ LEVEL 3 — ROUND SUMMARY ⭐⭐⭐ -->
+<div id="level3Screen3" class="level-block level3-screen hidden">
+  <h2 class="title">Resumen de la ronda</h2>
+
+  <!-- Meaning of the sentence -->
+  <div id="l3MeaningBox" class="meaning-box"></div>
+
+  <!-- Correct inference -->
+  <div id="l3SummaryCorrectDrops" class="summary-correct-drops"></div>
+
+  <!-- Chunk breakdown -->
+  <div id="l3SummaryContainer" class="summary-container"></div>
+
+  <div class="summary-controls">
+    <button id="l3SummaryNextBtn" class="iconBtn">➡️ Siguiente</button>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ⭐ LEVEL 3 FINAL SCORE SCREEN ⭐ -->
+    <!-- ⭐⭐⭐ LEVEL 3 — FINAL SUMMARY ⭐⭐⭐ -->
+<div id="level3Screen4" class="level-block level3-screen hidden">
+  <h2 class="title">Resumen de la sesión</h2>
+
+  <div id="level3FinalSummaryContainer" class="summary-container">
+
+    <div class="summary-row">
+      <span class="summary-label">Rondas completadas:</span>
+      <span id="l3FinalRounds" class="summary-value"></span>
+    </div>
+
+    <div class="summary-row">
+      <span class="summary-label">Puntaje:</span>
+      <span id="l3FinalScore" class="summary-value"></span>
+    </div>
+
+    <div class="summary-row">
+      <span class="summary-label">Respuestas correctas:</span>
+      <span id="l3FinalCorrect" class="summary-value"></span>
+    </div>
+
+  </div>
+
+  <div class="summary-controls">
+    <button id="l3ReplaySummaryBtn" class="iconBtn">🔁 Repetir</button>
+    <button id="l3PlayAgainBtn" class="iconBtn">➡️ Otra vez</button>
+    <button id="l3HomeBtn" class="iconBtn">🏠 Inicio</button>
+  
+
+
+  </div> <!-- END LEVEL 3 WRAPPER -->
+
+</div> <!-- END SCREEN 2L3 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -233,30 +353,15 @@
 
   <!-- ⭐⭐⭐ SCREEN 4 — SESSION SUMMARY ⭐⭐⭐ -->
   <div id="screen4" class="screen hidden">
-  <h1 class="title">Resumen</h1>
+    <h1 class="title">Resumen</h1>
 
-  <div class="session-summary-box">
+    <div class="session-summary-box" id="sessionSummary"></div>
 
-    <div class="session-line">
-      Rondas: <span id="sessionRounds"></span>
+    <div class="session-controls">
+      <button id="restartBtn" class="iconBtn">Reiniciar</button>
+      <button id="backToLevelsBtn" class="iconBtn">Niveles</button>
     </div>
-
-    <div class="session-line">
-      Puntaje: <span id="sessionScore"></span>
-    </div>
-
-    <div class="session-line">
-      Drops correctos: <span id="sessionDrops"></span>
-    </div>
-
   </div>
-
-  <div class="session-controls">
-    <button id="restartBtn" class="iconBtn">Reiniciar</button>
-    <button id="backToLevelsBtn" class="iconBtn">Niveles</button>
-  </div>
-</div>
-
 
 </body>
 </html>
