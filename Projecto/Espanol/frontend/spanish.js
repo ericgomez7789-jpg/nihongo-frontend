@@ -764,6 +764,43 @@ const sentences = [
 
 
 
+{
+  id: "l1-es-16",
+  meaning: "When did you come?",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "cuando",
+      hiragana: "cuando",
+      meaning: "when",
+      audio: {
+        daughter: "audio/spanish/cuando.wav",
+        me: "audio/spanish/cuando.wav"
+      }
+    },
+    {
+      romaji: "viniste",
+      hiragana: "viniste",
+      meaning: "you came",
+      audio: {
+        daughter: "audio/spanish/viniste.wav",
+        me: "audio/spanish/viniste.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1991,6 +2028,38 @@ const level2Sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l2_006",
+  sentence: "Aunque esté lloviendo, él salió a caminar.",
+  conjunction: "aunque",
+  meaning: "Even though it's raining, he went out for a walk.",
+
+  fullAudio: "audio/spanish/conjunction6.wav",
+
+  chunks: [
+    {
+      audio: {
+        me: "audio/spanish/conjunction6.wav",
+        daughter: "audio/spanish/conjunction6.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
 
 
 
