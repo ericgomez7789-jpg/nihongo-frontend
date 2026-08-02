@@ -9,11 +9,11 @@
 }
 
 /* ==========================================================
-   LEVEL 4 — WRAPPER VISIBILITY (CRITICAL FIX)
+   LEVEL 4 — WRAPPER VISIBILITY
 ========================================================== */
 
 .level4-wrapper {
-  display: none;                 /* hidden by default */
+  display: none;
   background: #000;
   color: #fff;
   min-height: 100vh;
@@ -21,19 +21,19 @@
 }
 
 .level4-wrapper:not(.hidden) {
-  display: block;                /* becomes visible when .hidden is removed */
+  display: block;
 }
 
 /* ==========================================================
-   LEVEL 4 — SCREEN VISIBILITY (CRITICAL FIX)
+   LEVEL 4 — SCREEN VISIBILITY
 ========================================================== */
 
 .level4-screen {
-  display: none;                 /* hidden by default */
+  display: none;
 }
 
 .level4-screen:not(.hidden) {
-  display: block;                /* visible when .hidden is removed */
+  display: block;
 }
 
 /* ==========================================================
@@ -80,7 +80,7 @@
 }
 
 /* ==========================================================
-   LEVEL 4 — SCREEN 2 (SPLIT COLUMN PARAPHRASING)
+   LEVEL 4 — SCREEN 2 (SPLIT COLUMN)
 ========================================================== */
 
 .l4-split-container {
@@ -137,17 +137,17 @@
 .l4-correct {
   background-color: #4CAF50 !important;
   border-color: #4CAF50 !important;
-  color: white !important;
+  color: #fff !important;
 }
 
 .l4-wrong {
   background-color: #E53935 !important;
   border-color: #E53935 !important;
-  color: white !important;
+  color: #fff !important;
 }
 
 /* ==========================================================
-   LEVEL 4 — SUMMARY SCREEN (CENTERED TABLE)
+   LEVEL 4 — SUMMARY SCREEN
 ========================================================== */
 
 #l4SummaryContainer {
@@ -164,7 +164,10 @@
   gap: 20px;
   justify-content: center;
   width: 100%;
-  padding: 10px 0;
+  padding: 12px 20px;
+  background: #111;          /* ⭐ FIX: no white background */
+  border-radius: 8px;
+  margin-bottom: 10px;
 }
 
 .summary-spanish,
@@ -172,6 +175,8 @@
   min-width: 140px;
   text-align: center;
   font-size: 1.2rem;
+  color: #fff;               /* ensure readable */
+  background: transparent;   /* ⭐ FIX: prevent white background */
 }
 
 /* ==========================================================
@@ -193,4 +198,30 @@
   display: flex;
   gap: 20px;
   justify-content: center;
+}
+/* ==========================================================
+   LEVEL 4 — CORRECT ANSWER BLOCK (SEPARATED)
+========================================================== */
+
+.correct-answer-block {
+  margin-top: 45px;            /* ⭐ increased separation */
+  padding: 18px 24px;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.correct-answer-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #4CAF50;
+}
+
+.correct-answer-text {
+  font-size: 1.2rem;
+  color: #fff;
+  line-height: 1.6rem;
 }

@@ -3434,8 +3434,7 @@ const level4 = [
     ],
 
     meaning: "I want to go to the beach, but I have to work."
-  }
-
+  },
 
 
 
@@ -3958,10 +3957,10 @@ L4.handleColumnChoice = function (opt, btn) {
 ========================================================== */
 
 L4.showRoundSummary = function () {
+  console.log("[Level4] showRoundSummary()");
   L4.activeScreen = "screen3";
 
   if (!L4.active) return;
-  console.log("[Level4] showRoundSummary()");
 
   const s = L4.currentSentenceObj;
   if (!s) {
@@ -3969,10 +3968,12 @@ L4.showRoundSummary = function () {
     return;
   }
 
+  // Stop audio + reset token
   L4.stopAllAudio();
   L4.audio.cancelToken.cancel = false;
   L4.audio.generation++;
 
+  // Show summary screen
   L4.show("level4Screen3");
 
   const meaningBox = document.getElementById("l4MeaningBox");
@@ -3983,11 +3984,11 @@ L4.showRoundSummary = function () {
     return;
   }
 
-  meaningBox.textContent = "";
+  // Clear old content
+  meaningBox.textContent = s.meaning || "";
   cont.innerHTML = "";
 
-  meaningBox.textContent = s.meaning || "";
-
+  // ⭐ Render summary chunks (Spanish → English)
   if (Array.isArray(s.summaryChunks)) {
     s.summaryChunks.forEach(chunk => {
       const row = document.createElement("div");
@@ -4002,6 +4003,21 @@ L4.showRoundSummary = function () {
     });
   }
 
+  // ⭐ Render correct paraphrase answer
+  const correct = s.paraphraseOptions?.find(o => o.correct);
+  if (correct) {
+    const row = document.createElement("div");
+    row.className = "summary-row";
+
+    row.innerHTML = `
+      <div class="summary-spanish">Correct Answer</div>
+      <div class="summary-english">${correct.text}</div>
+    `;
+
+    cont.appendChild(row);
+  }
+
+  // ⭐ Wire NEXT button
   const nextBtn = document.getElementById("l4SummaryNextBtn");
   if (nextBtn) {
     nextBtn.onclick = () => {
@@ -4020,8 +4036,10 @@ L4.showRoundSummary = function () {
     };
   }
 
+  // ⭐ Wire REPLAY button
   createAndWireLevel4ReplayButton("level4Screen3", s.audio);
 };
+
 
 
 /* ==========================================================
