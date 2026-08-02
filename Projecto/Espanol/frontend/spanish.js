@@ -2963,6 +2963,59 @@ L3.renderProgress = function (screenId) {
 };
 
 
+L3.Reset = {
+  attach(screenEl, screenName) {
+    if (!screenEl) return;
+    if (screenName !== "level3Screen1") return;
+
+    let btn = screenEl.querySelector(".resetBtn");
+
+    if (!btn) {
+      btn = document.createElement("button");
+      btn.className = "resetBtn";
+      btn.textContent = "Reset Level 3";
+
+      btn.style.position = "absolute";
+      btn.style.top = "10px";
+      btn.style.right = "10px";
+      btn.style.zIndex = "9999";
+
+      screenEl.appendChild(btn);
+    }
+
+    btn.style.display = "block";
+
+    if (!btn.dataset.wired) {
+      btn.dataset.wired = "true";
+
+      btn.onclick = () => {
+        // Stop audio
+        if (typeof L3.stopAllAudio === "function") {
+          L3.stopAllAudio();
+        }
+
+        if (L3.audio && L3.audio.cancelToken) {
+          L3.audio.cancelToken.cancel = true;
+        }
+
+        if (L3.audio) {
+          L3.audio.generation++;
+          L3.audio.current = null;
+        }
+
+        // Reset progress
+        Progress3.resetLevel("level3");
+
+        // Restart Level 3 cleanly
+        setTimeout(() => {
+          L3.start();
+        }, 0);
+      };
+    }
+  }
+};
+
+
 /* ==========================================================
    ⭐ LEVEL 3 — SHOW (SCREEN SWITCHER)
 ========================================================== */
@@ -3055,6 +3108,10 @@ L3.screen1 = function () {
   const audioObj = { me: sentence.fullAudio.me };
 
   L3.show("level3Screen1");
+
+  // ⭐ ADD THIS LINE
+  L3.Reset.attach(document.getElementById("level3Screen1"), "level3Screen1");
+
   L3.renderProgress("level3Screen1");
 
   if (!audioObj.me) {
@@ -3068,6 +3125,7 @@ L3.screen1 = function () {
     L3.screen2();
   }, audioObj);
 };
+
 
 
 /* ==========================================================
@@ -3136,7 +3194,9 @@ L3.handleColumnChoice = function (choice, btn) {
     btn.classList.add("l3-correct");
     L3.score++;
 
+    // ⭐ increment progress
     Progress3.markSentenceComplete("level3", L3.currentSentence);
+
   } else {
     btn.classList.add("l3-wrong");
 
@@ -3150,9 +3210,16 @@ L3.handleColumnChoice = function (choice, btn) {
 
   setTimeout(() => {
     if (L3.activeScreen !== "screen2") return;
+
+    // ⭐ show summary screen
     L3.showRoundSummary();
+
+    // ⭐ update progress bar on the visible summary screen
+    L3.renderProgress("level3Screen3");
+
   }, 800);
 };
+
 
 
 /* ==========================================================
@@ -3451,6 +3518,113 @@ function scrambleSentencesLevel4(options, lastOrder) {
   return arr;
 }
 
+L4.renderProgress = function (screenId) {
+  const screen = document.getElementById(screenId);
+  if (!screen) return;
+
+  const p = Progress4.getLevelProgress("level4");
+  const total = p.total;
+  const current = p.completed;
+  const pct = p.percent;
+
+  let wrapper = document.getElementById("l4ProgressWrapper");
+  if (!wrapper) {
+    wrapper = document.createElement("div");
+    wrapper.id = "l4ProgressWrapper";
+    wrapper.style.marginBottom = "20px";
+
+    wrapper.innerHTML = `
+      <div id="l4ProgressLabel" style="
+        font-size: 18px;
+        margin-bottom: 6px;
+        color: #fff;
+        text-align: center;
+      "></div>
+
+      <div id="l4ProgressOuter" style="
+        width: 100%;
+        height: 10px;
+        background: #333;
+        border-radius: 6px;
+        overflow: hidden;
+      ">
+        <div id="l4ProgressBar" style="
+          height: 100%;
+          width: 0%;
+          background: #4caf50;
+          transition: width 0.3s ease;
+        "></div>
+      </div>
+    `;
+  }
+
+  const title = screen.querySelector(".title");
+  if (title && !wrapper.parentNode) {
+    title.insertAdjacentElement("afterend", wrapper);
+  } else if (!wrapper.parentNode) {
+    screen.prepend(wrapper);
+  }
+
+  document.getElementById("l4ProgressBar").style.width = pct + "%";
+  document.getElementById("l4ProgressLabel").textContent =
+    `Progreso: ${current} / ${total}`;
+};
+
+
+
+
+L4.Reset = {
+  attach(screenEl, screenName) {
+    if (!screenEl) return;
+    if (screenName !== "level4Screen1") return;
+
+    let btn = screenEl.querySelector(".resetBtn");
+
+    if (!btn) {
+      btn = document.createElement("button");
+      btn.className = "resetBtn";
+      btn.textContent = "Reset Level 4";
+
+      btn.style.position = "absolute";
+      btn.style.top = "10px";
+      btn.style.right = "10px";
+      btn.style.zIndex = "9999";
+
+      screenEl.appendChild(btn);
+    }
+
+    btn.style.display = "block";
+
+    if (!btn.dataset.wired) {
+      btn.dataset.wired = "true";
+
+      btn.onclick = () => {
+        // Stop audio safely
+        if (typeof L4.stopAllAudio === "function") {
+          L4.stopAllAudio();
+        }
+
+        if (L4.audio && L4.audio.cancelToken) {
+          L4.audio.cancelToken.cancel = true;
+        }
+
+        if (L4.audio) {
+          L4.audio.generation++;
+          L4.audio.current = null;
+        }
+
+        // Reset Level 4 progress
+        Progress4.resetLevel("level4");
+
+        // Restart Level 4 cleanly
+        setTimeout(() => {
+          L4.start();
+        }, 0);
+      };
+    }
+  }
+};
+
 
 /* ==========================================================
    ⭐ LEVEL 4 — SHOW SCREEN (ISOLATED)
@@ -3572,7 +3746,11 @@ L4.screen1 = function () {
 
   L4.show("level4Screen1");
 
-  // optional: L4.renderProgress("level4Screen1");
+  // ⭐ Attach reset button (same architecture as L2/L3)
+  L4.Reset.attach(document.getElementById("level4Screen1"), "level4Screen1");
+
+  // ⭐ Render progress bar (same architecture as L3)
+  L4.renderProgress("level4Screen1");
 
   if (!sentence.audio) {
     console.warn("[Level4] No audio found, skipping to screen2()");
@@ -3606,6 +3784,7 @@ L4.screen1 = function () {
     finish();
   });
 };
+
 
 
 /* ==========================================================
@@ -3700,10 +3879,10 @@ L4.handleColumnChoice = function (opt, btn) {
     btn.classList.add("l4-correct");
     L4.score++;
 
+    // ⭐ increment progress
     Progress4.markSentenceComplete(s.id);
 
     L4.updateScoreKeeper?.();
-    L4.renderProgress?.("level4Screen2");
 
   } else {
     btn.classList.add("l4-wrong");
@@ -3724,9 +3903,16 @@ L4.handleColumnChoice = function (opt, btn) {
 
   setTimeout(() => {
     if (L4.activeScreen !== "screen2") return;
+
+    // ⭐ show summary screen
     L4.showRoundSummary();
+
+    // ⭐ NOW update progress bar (screen3 is visible)
+    L4.renderProgress("level4Screen3");
+
   }, 800);
 };
+
 
 
 /* ==========================================================
