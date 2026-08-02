@@ -4202,29 +4202,15 @@ if (!level4Btn) {
     // Hide all global screens
     document.querySelectorAll(".screen").forEach(s => s.classList.add("hidden"));
 
-    // Show Level 4 ENTRY SCREEN
-    const entry = document.getElementById("screen2L4");
-    if (entry) entry.classList.remove("hidden");
+    // ⭐ Show Level 4 wrapper immediately (no entry screen)
+    const wrapper = document.getElementById("level4Wrapper");
+    if (wrapper) wrapper.classList.remove("hidden");
 
-    // Wire START button
-    const startBtn = document.getElementById("startLevel4Btn");
-    if (startBtn) {
-      startBtn.onclick = () => {
-        console.log("[Level 4] Start button clicked");
-
-        // Hide entry screen
-        entry.classList.add("hidden");
-
-        // ⭐ UNHIDE LEVEL 4 WRAPPER (CRITICAL)
-        const wrapper = document.getElementById("level4Wrapper");
-        if (wrapper) wrapper.classList.remove("hidden");
-
-        // ⭐ Begin Level 4 session
-        L4.start();
-      };
-    }
+    // ⭐ Begin Level 4 session immediately
+    L4.start();
   });
 }
+
 
 
 
