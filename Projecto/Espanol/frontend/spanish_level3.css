@@ -1,66 +1,68 @@
 /* ==========================================================
-   LEVEL 3 — GLOBAL DARK THEME (MATCH LEVEL 2)
+   LEVEL 3 — SPLIT COLUMN INFERENCE (FIXED LAYOUT)
 ========================================================== */
 
-.level3,
-.level3-screen,
-.level3 .summary-row,
-.level3 .summary-container,
-.level3 .l3-column,
-.level3 .l3-split-container {
-  background: #000 !important;   /* same base as Level 2 */
-  color: #fff;
-  font-family: Arial, sans-serif;
+/* Parent container: two columns side-by-side */
+.l3-split-container {
+  display: grid;                 /* ⭐ grid is more stable than flex */
+  grid-template-columns: 1fr 1fr;/* ⭐ left column + right column */
+  gap: 40px;
+  margin: 30px auto;
+  width: 90%;                    /* ⭐ prevents collapsing */
+  max-width: 1200px;
 }
 
-/* Screens */
-.level3-screen {
-  min-height: 100vh;
-  padding: 40px;
-  display: none;
-}
-
-.level3-screen:not(.hidden) {
-  display: block;
-}
-
-/* Titles */
-.level3 .title {
-  font-size: 32px;
-  margin-bottom: 30px;
-  color: #fff;
-}
-
+/* LEFT COLUMN — sentence text */
 /* ==========================================================
-   LEVEL 3 — BUTTONS (MATCH LEVEL 2)
+   LEVEL 3 — LEFT COLUMN (NO BLACK SHADE)
 ========================================================== */
 
-.level3 .iconBtn,
-.level3 .l3-replay-btn,
-.level3 .replay-top {
-  background: #111;              /* same neutral dark as Level 2 */
-  color: #fff;
-  border: 1px solid #444;
-  padding: 10px 20px;
-  border-radius: 8px;
-  cursor: pointer;
+#l3LeftColumn {
+  background: transparent !important;   /* ⭐ remove black shade */
+  font-size: 1.8rem;                    /* keep your size */
+  line-height: 2.4rem;
+  font-weight: 600;
+  padding-right: 20px;                  /* keep spacing */
 }
 
-.level3 .iconBtn:hover,
-.level3 .l3-replay-btn:hover,
-.level3 .replay-top:hover {
+
+/* RIGHT COLUMN — vertical stacked buttons */
+#l3RightColumn {
+  display: flex;
+  flex-direction: column;        /* ⭐ vertical stack */
+  justify-content: flex-start;
+  align-items: stretch;          /* ⭐ full width buttons */
+  gap: 18px;
+  background: #000 !important;
+}
+
+/* Buttons inside RIGHT column */
+#l3RightColumn .l3OptionBtn {
+  width: 100%;                   /* ⭐ full width */
+  padding: 16px 20px;
+  font-size: 1.8rem;             /* ⭐ keep your size */
+  line-height: 2.2rem;
+  font-weight: 600;
+  text-align: left;
+  border-radius: 10px;
+  background: #111;
+  border: 2px solid #444;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+#l3RightColumn .l3OptionBtn:hover {
   background: #222;
 }
 
-/* ==========================================================
-   LEVEL 3 — SPLIT COLUMN INFERENCE
-========================================================== */
-
-.l3-split-container {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  margin: 30px auto;
-  width: fit-content;
+/* Correct / wrong feedback */
+#l3RightColumn .l3OptionBtn.l3-correct {
+  background-color: #4CAF50 !important;
+  color: white !important;
 }
 
+#l3RightColumn .l3OptionBtn.l3-wrong {
+  background-color: #F44336 !important;
+  color: white !important;
+}
