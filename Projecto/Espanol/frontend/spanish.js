@@ -798,12 +798,50 @@ const sentences = [
 
 
 
+{
+  id: "l1-es-17",
+  meaning: "How do you read this?",
+  level: 1,
 
-
-
-
-
-
+  chunks: [
+    {
+      romaji: "como",
+      hiragana: "como",
+      meaning: "how",
+      audio: {
+        daughter: "audio/spanish/como.wav",
+        me: "audio/spanish/como.wav"
+      }
+    },
+    {
+      romaji: "se",
+      hiragana: "se",
+      meaning: "(reflexive marker)",
+      audio: {
+        daughter: "audio/spanish/se.wav",
+        me: "audio/spanish/se.wav"
+      }
+    },
+    {
+      romaji: "lee",
+      hiragana: "lee",
+      meaning: "read",
+      audio: {
+        daughter: "audio/spanish/lee.wav",
+        me: "audio/spanish/lee.wav"
+      }
+    },
+    {
+      romaji: "esto",
+      hiragana: "esto",
+      meaning: "this",
+      audio: {
+        daughter: "audio/spanish/esto.wav",
+        me: "audio/spanish/esto.wav"
+      }
+    }
+  ]
+},
 
 
 
