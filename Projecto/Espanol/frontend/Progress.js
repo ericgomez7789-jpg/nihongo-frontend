@@ -1,6 +1,11 @@
 /* ----------------------------------------------------------
-   PROGRESS — Level 1 (Original)
+   PROGRESS ENGINE — SPANISH VERSION (LEVELS 1–6 ONLY)
+   Unified, offline-first, cloud-ready
 ---------------------------------------------------------- */
+
+/* ==========================================================
+   LEVEL 1 — BASE PROGRESS
+========================================================== */
 
 const Progress = {
   data: {},
@@ -18,78 +23,64 @@ const Progress = {
   },
 
   normalize(level) {
-    if (typeof level === "number") return `level${level}`;
-    return level;
+    return typeof level === "number" ? `level${level}` : level;
   },
 
   ensure(level) {
     const key = this.normalize(level);
     if (!this.data[key]) {
-      this.data[key] = {
-        total: 0,
-        completed: 0,
-        percent: 0,
-        masteredSentences: []
-      };
+      this.data[key] = { total: 0, completed: 0, percent: 0, masteredSentences: [] };
     }
     return this.data[key];
   },
 
   setTotal(level, total) {
-    const key = this.normalize(level);
-    const d = this.ensure(key);
+    const d = this.ensure(level);
     d.total = total;
-    this.updatePercent(key);
+    this.updatePercent(level);
     this.save();
   },
 
   markSentenceComplete(level, sentenceId) {
-    const key = this.normalize(level);
-    const d = this.ensure(key);
-
+    const d = this.ensure(level);
     if (!d.masteredSentences.includes(sentenceId)) {
       d.masteredSentences.push(sentenceId);
       d.completed = d.masteredSentences.length;
-      this.updatePercent(key);
+      this.updatePercent(level);
       this.save();
     }
   },
 
   getLevelProgress(level) {
-    const key = this.normalize(level);
-    return this.ensure(key);
+    return this.ensure(level);
+  },
+
+  getProgress() {
+    return this.getLevelProgress("level1");
   },
 
   updatePercent(level) {
-    const key = this.normalize(level);
-    const d = this.ensure(key);
-
-    d.percent = d.total > 0
-      ? Math.round((d.completed / d.total) * 100)
-      : 0;
+    const d = this.ensure(level);
+    d.percent = d.total > 0 ? Math.round((d.completed / d.total) * 100) : 0;
   },
 
   resetLevel(level) {
-    const key = this.normalize(level);
-    const d = this.ensure(key);
-
+    const d = this.ensure(level);
     d.masteredSentences = [];
     d.completed = 0;
-    this.updatePercent(key);
+    this.updatePercent(level);
     this.save();
   }
 };
 
-document.addEventListener("DOMContentLoaded", () => {
-  Progress.init();
-});
+document.addEventListener("DOMContentLoaded", () => Progress.init());
 
 
-/* ----------------------------------------------------------
+/* ==========================================================
    TEMPLATE MAKER FOR LEVELS 2–6
----------------------------------------------------------- */
+========================================================== */
 
-function createProgressModule(storageKey) {
+function createProgressModule(storageKey, levelKey) {
   return {
     data: {},
 
@@ -106,105 +97,89 @@ function createProgressModule(storageKey) {
     },
 
     normalize(level) {
-      if (typeof level === "number") return `level${level}`;
-      return level;
+      return typeof level === "number" ? `level${level}` : level;
     },
 
     ensure(level) {
       const key = this.normalize(level);
       if (!this.data[key]) {
-        this.data[key] = {
-          total: 0,
-          completed: 0,
-          percent: 0,
-          masteredSentences: []
-        };
+        this.data[key] = { total: 0, completed: 0, percent: 0, masteredSentences: [] };
       }
       return this.data[key];
     },
 
     setTotal(level, total) {
-      const key = this.normalize(level);
-      const d = this.ensure(key);
+      const d = this.ensure(level);
       d.total = total;
-      this.updatePercent(key);
+      this.updatePercent(level);
       this.save();
     },
 
     markSentenceComplete(level, sentenceId) {
-      const key = this.normalize(level);
-      const d = this.ensure(key);
-
+      const d = this.ensure(level);
       if (!d.masteredSentences.includes(sentenceId)) {
         d.masteredSentences.push(sentenceId);
         d.completed = d.masteredSentences.length;
-        this.updatePercent(key);
+        this.updatePercent(level);
         this.save();
       }
     },
 
     getLevelProgress(level) {
-      const key = this.normalize(level);
-      return this.ensure(key);
+      return this.ensure(level);
+    },
+
+    // ⭐ Needed for Level‑4 split‑column module
+    getProgress() {
+      return this.getLevelProgress(levelKey);
     },
 
     updatePercent(level) {
-      const key = this.normalize(level);
-      const d = this.ensure(key);
-
-      d.percent = d.total > 0
-        ? Math.round((d.completed / d.total) * 100)
-        : 0;
+      const d = this.ensure(level);
+      d.percent = d.total > 0 ? Math.round((d.completed / d.total) * 100) : 0;
     },
 
     resetLevel(level) {
-      const key = this.normalize(level);
-      const d = this.ensure(key);
-
+      const d = this.ensure(level);
       d.masteredSentences = [];
       d.completed = 0;
-      this.updatePercent(key);
+      this.updatePercent(level);
       this.save();
     }
   };
 }
 
 
-/* ----------------------------------------------------------
-   PROGRESS2 — Level 2
----------------------------------------------------------- */
-
-const Progress2 = createProgressModule("progress2");
+/* ==========================================================
+   LEVEL 2 — PROGRESS2
+========================================================== */
+const Progress2 = createProgressModule("progress2", "level2");
 document.addEventListener("DOMContentLoaded", () => Progress2.init());
 
 
-/* ----------------------------------------------------------
-   PROGRESS3 — Level 3
----------------------------------------------------------- */
-
-const Progress3 = createProgressModule("progress3");
+/* ==========================================================
+   LEVEL 3 — PROGRESS3
+========================================================== */
+const Progress3 = createProgressModule("progress3", "level3");
 document.addEventListener("DOMContentLoaded", () => Progress3.init());
 
 
-/* ----------------------------------------------------------
-   PROGRESS4 — Level 4
----------------------------------------------------------- */
-
-const Progress4 = createProgressModule("progress4");
+/* ==========================================================
+   LEVEL 4 — PROGRESS4 (SPANISH PARAPHRASING)
+========================================================== */
+const Progress4 = createProgressModule("progress4", "level4");
 document.addEventListener("DOMContentLoaded", () => Progress4.init());
 
 
-/* ----------------------------------------------------------
-   PROGRESS5 — Level 5
----------------------------------------------------------- */
-
-const Progress5 = createProgressModule("progress5");
+/* ==========================================================
+   LEVEL 5 — PROGRESS5
+========================================================== */
+const Progress5 = createProgressModule("progress5", "level5");
 document.addEventListener("DOMContentLoaded", () => Progress5.init());
 
 
-/* ----------------------------------------------------------
-   PROGRESS6 — Level 6
----------------------------------------------------------- */
-
-const Progress6 = createProgressModule("progress6");
+/* ==========================================================
+   LEVEL 6 — PROGRESS6
+========================================================== */
+const Progress6 = createProgressModule("progress6", "level6");
 document.addEventListener("DOMContentLoaded", () => Progress6.init());

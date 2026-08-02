@@ -8,12 +8,13 @@
   font-family: Arial, sans-serif;
 }
 
-/* ⭐ Level 4 screens now use the universal .screen system */
-.level4.screen {
-  background: #000;
-  color: #fff;
-  min-height: 100vh;
-  padding: 40px;
+/* ⭐ Visibility control (correct + minimal) */
+.level4-screen {
+  display: block;
+}
+
+.level4-screen.hidden {
+  display: none;
 }
 
 /* ==========================================================
@@ -27,14 +28,8 @@
 }
 
 /* ==========================================================
-   LEVEL 4 — MUSIC CONTROLS
+   LEVEL 4 — BUTTONS / ICONS
 ========================================================== */
-
-.level4 .music-controls {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-}
 
 .level4 .iconBtn {
   background: #222;
@@ -51,91 +46,132 @@
 }
 
 /* ==========================================================
-   LEVEL 4 — SCREEN 2 (MCQ MODE)
+   LEVEL 4 — REPLAY BUTTON (TOP)
 ========================================================== */
 
 .level4 .replay-top {
+  margin-top: 50px;
   margin-bottom: 20px;
   font-size: 22px;
   padding: 10px 20px;
   background: #222;
   border: 1px solid #555;
   border-radius: 8px;
+  display: inline-block;
 }
 
-.level4 .sentence-line {
-  font-size: 26px;
-  text-align: center;
-  margin-top: 20px;
-  color: #fff;
+/* ==========================================================
+   LEVEL 4 — SCREEN 2 (SPLIT COLUMN PARAPHRASING)
+========================================================== */
+
+.l4-split-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 30px auto;
+  width: fit-content;
 }
 
-.level4 .mcq-container {
+.l4-column {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  margin-top: 20px;
+  gap: 14px;
+  width: 40%;
 }
 
-.level4 .mcqBtn {
-  padding: 14px 18px;
-  font-size: 1.2rem;
-  border-radius: 8px;
-  border: 2px solid #444;
+/* ==========================================================
+   LEVEL 4 — LEFT COLUMN TEXT
+========================================================== */
+
+#l4LeftColumn {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: 600;
+}
+
+/* ==========================================================
+   LEVEL 4 — RIGHT COLUMN OPTION BUTTONS
+========================================================== */
+
+.l4OptionBtn {
+  font-size: 1.3rem;
+  padding: 12px 18px;
+  margin: 8px 0;
+  width: 100%;
+  text-align: left;
+  border-radius: 10px;
   background: #222;
   color: #fff;
+  border: 2px solid #444;
   cursor: pointer;
-  transition: background 0.2s ease;
+  transition: background 0.2s ease, border-color 0.2s ease;
 }
 
-.level4 .mcqBtn:hover {
+.l4OptionBtn:hover {
   background: #333;
 }
 
-.level4 .mcqBtn.correct {
+/* ==========================================================
+   LEVEL 4 — CORRECT / WRONG COLORS
+========================================================== */
+
+.l4-correct {
   background-color: #4CAF50 !important;
+  border-color: #4CAF50 !important;
   color: white !important;
 }
 
-.level4 .mcqBtn.wrong {
+.l4-wrong {
   background-color: #E53935 !important;
+  border-color: #E53935 !important;
   color: white !important;
 }
 
 /* ==========================================================
-   LEVEL 4 — SUMMARY SCREEN
+   LEVEL 4 — SUMMARY SCREEN (CENTERED TABLE)
 ========================================================== */
 
-.level4 .summary-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 14px;
-  margin: 20px auto;
-  max-width: 520px;
+#l4SummaryContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 30px auto;
+  width: fit-content;
 }
 
-.level4 .summary-row {
-  background: #111;
-  border: 1px solid #444;
-  border-radius: 10px;
-  padding: 14px 16px;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 12px;
-
-  font-size: 1.1rem;
-  color: #ccc;
+.summary-row {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  width: 100%;
+  padding: 10px 0;
 }
 
-.level4 .summary-spanish,
-.level4 .summary-english,
-.level4 .summary-hint {
-  color: #fff;
-  display: block;
+.summary-spanish,
+.summary-english {
+  min-width: 140px;
+  text-align: center;
+  font-size: 1.2rem;
 }
 
-/* ⭐ Universal visibility system */
-.hidden {
-  display: none !important;
+/* ==========================================================
+   LEVEL 4 — FINAL SUMMARY SCREEN
+========================================================== */
+
+.summary-label {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.summary-value {
+  font-size: 1.2rem;
+  margin-left: 10px;
+}
+
+.summary-controls {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
 }

@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="espanol.css">
 <link rel="stylesheet" href="spanish_level2.css">
 <link rel="stylesheet" href="spanish_level3.css">
+<link rel="stylesheet" href="spanish_level4.css">
   <script src="Progress.js" defer></script>
   <script src="spanish.js" defer></script>
   <link rel="stylesheet" href="logo.css">
@@ -121,7 +122,8 @@
       <button class="levelBtn" data-level="1">Nivel 1</button>
       <button class="levelBtn" data-level="2">Nivel 2</button>
       <button class="levelBtn" data-level="3">Nivel 3</button>
-      <button class="levelBtn" data-level="4">Nivel 4</button>
+      <button id="level4Btn" class="levelBtn" data-level="4">Nivel 4</button>
+
       <button class="levelBtn" data-level="5">Nivel 5</button>
       <button class="levelBtn" data-level="6">Nivel 6</button>
     </div>
@@ -304,6 +306,128 @@
   </div> <!-- END LEVEL 3 WRAPPER -->
 
 </div> <!-- END SCREEN 2L3 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ⭐⭐⭐ LEVEL 4 ENTRY SCREEN ⭐⭐⭐ -->
+<div id="screen2L4" class="screen hidden">
+  <h2 class="title">Nivel 4 — Parafraseo</h2>
+  <p class="instruction-line">Escucha primero, luego elige la paráfrasis correcta.</p>
+
+  <button id="startLevel4Btn" class="iconBtn">Comenzar Nivel 4 →</button>
+</div>
+
+
+
+
+
+<!-- ⭐ LEVEL 4 WRAPPER ⭐ -->
+<div id="level4Wrapper" class="screen level4 level4-wrapper hidden">
+
+
+  <!-- ⭐ LEVEL 4 SCREEN 1 — AUDIO ONLY ⭐ -->
+  <div id="level4Screen1" class="level-block level4-screen hidden">
+    <h2 class="title">Escucha con atención</h2>
+    <div class="instruction-line">Solo escucha — todavía no respondas.</div>
+    <div class="instruction-line">La frase se reproducirá a velocidad natural.</div>
+    <div class="instruction-line">Hay 3 rondas por sesión.</div>
+
+
+
+
+
+    <!-- Replay button -->
+    <button id="l4ReplaySentenceBtn" class="iconBtn replay-top">🔁 Repetir</button>
+  </div>
+
+  <!-- ⭐ LEVEL 4 SCREEN 2 — SPLIT COLUMN PARAPHRASING ⭐ -->
+  <div id="level4Screen2" class="level-block level4-screen hidden">
+
+    <!-- 🔊 Replay Button (Top‑Left) -->
+    <button id="l4ReplayBtn" class="l4-replay-btn">Repetir audio</button>
+
+    <h2 class="title">Elige la paráfrasis correcta</h2>
+
+    <div class="l4-split-container">
+      <div id="l4LeftColumn" class="l4-column left-column"></div>
+      <div id="l4RightColumn" class="l4-column right-column"></div>
+    </div>
+  </div>
+
+  <!-- ⭐ LEVEL 4 SUMMARY SCREEN ⭐ -->
+  <div id="level4Screen3" class="level-block level4-screen hidden">
+    <h2 class="title">Resumen</h2>
+
+    <!-- Full English meaning -->
+    <div id="l4MeaningBox" class="meaning-box"></div>
+
+    <!-- Chunk table container -->
+    <div id="l4SummaryContainer" class="summary-container"></div>
+
+    <div class="summary-controls">
+      <button id="l4SummaryNextBtn" class="iconBtn">➡️ Siguiente</button>
+    </div>
+  </div>
+
+  <!-- ⭐ LEVEL 4 — FINAL SCORE SCREEN ⭐ -->
+  <div id="level4Screen4" class="level-block level4-screen hidden">
+    <h2 class="title">Resumen de la sesión</h2>
+
+    <div class="summary-container">
+
+      <div class="summary-row">
+        <span class="summary-label">Rondas completadas:</span>
+        <span id="l4FinalRounds" class="summary-value"></span>
+      </div>
+
+      <div class="summary-row">
+        <span class="summary-label">Puntuación:</span>
+        <span id="l4FinalScore" class="summary-value"></span>
+      </div>
+
+      <div class="summary-row">
+        <span class="summary-label">Respuestas correctas:</span>
+        <span id="l4FinalCorrect" class="summary-value"></span>
+      </div>
+
+    </div>
+
+    <div class="summary-controls">
+      <button id="l4PlayAgainBtn" class="iconBtn">🔁 Jugar de nuevo</button>
+      <button id="l4HomeBtn" class="iconBtn">🏠 Inicio</button>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
 
 
 

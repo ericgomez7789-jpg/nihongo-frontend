@@ -3279,11 +3279,742 @@ L3.exitToMenu = function () {
 
 
 /* ==========================================================
-   ⭐ LEVEL 3 — BUTTON HANDLERS
+   ⭐ LEVEL 4 — BUTTON HANDLERS
+========================================================== */
+
+/* ==========================================================
+   ⭐ LEVEL 4 MODULE — ARRANGE MODE
+========================================================== */
+
+/* ==========================================================
+   ⭐ LEVEL 4 — MCQ MODE
+   Uses: universal Screen 1 (audio-only), Screen 2 (MCQ),
+         Screen 3 (summary), Screen 4 (score)
+========================================================== */
+
+/* ==========================================================
+   ⭐ LEVEL 4 MODULE — FULLY ISOLATED
+   No shared globals, no shared handlers, no shared functions.
+========================================================== */
+
+/* ==========================================================
+   ⭐ LEVEL 4 — ISOLATED GLOBAL STATE
+   (No sharing with Level 1 or any other level)
 ========================================================== */
 
 
 
+/* ==========================================================
+   ⭐ LEVEL 4 — CORE STATE (MIRRORED FROM LEVEL 8)
+========================================================== */
+const level4 = [
+  {
+    id: "L4-001",
+    level: 4,
+
+    spanish: "Quiero ir a la playa pero tengo que trabajar.",
+    audio: "audio/spanish/paraphrase1.wav",
+
+    paraphraseOptions: [
+      { text: "Me gustaría ir a la playa, pero tengo obligaciones de trabajo.", correct: true },
+      { text: "Voy a la playa después de terminar todo mi trabajo.", correct: false },
+      { text: "No quiero ir a la playa porque tengo demasiado trabajo.", correct: false },
+      { text: "Tengo tiempo libre y por eso voy a la playa.", correct: false },
+      { text: "Prefiero trabajar en vez de ir a la playa.", correct: false }
+    ],
+
+    summaryChunks: [
+      { spanish: "Quiero ir a la playa", english: "I want to go to the beach" },
+      { spanish: "pero tengo que trabajar", english: "but I have to work" }
+    ],
+
+    meaning: "I want to go to the beach, but I have to work."
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+];
+
+
+
+
+
+
+
+
+
+
+
+
+
+const L4 = {
+  round: 0,
+  score: 0,
+  TOTAL_ROUNDS: 3,
+
+  dataset: level4,   // your Level‑4 dataset array
+  currentSentence: null,
+  currentSentenceObj: null,
+
+  columnLocked: false,
+  activeScreen: null,
+
+  audio: {
+    cancelToken: { cancel: false },
+    generation: 0,
+    current: null
+  }
+};
+
+L4.lastScramble = null;
+
+
+/* ==========================================================
+   ⭐ LEVEL 4 — STOP ALL AUDIO
+========================================================== */
+L4.stopAllAudio = function () {
+  L4.audio.cancelToken.cancel = true;
+  L4.audio.generation++;
+
+  if (L4.audio.current) {
+    try {
+      L4.audio.current.pause();
+      L4.audio.current.currentTime = 0;
+    } catch (e) {}
+    L4.audio.current = null;
+  }
+};
+
+
+/* ==========================================================
+   ⭐ LEVEL 4 — GENERATION GUARDS
+========================================================== */
+L4.generationGuards = function () {
+  L4.audio.cancelToken.cancel = false;
+  L4.audio.generation++;
+  L4.audio.current = null;
+};
+
+
+/* ==========================================================
+   ⭐ LEVEL 4 — SET / GET CURRENT SENTENCE
+========================================================== */
+L4.setCurrentSentence = function (sentenceObj) {
+  if (!sentenceObj || !sentenceObj.id) {
+    console.error("L4.setCurrentSentence called with invalid sentence:", sentenceObj);
+    return;
+  }
+
+  L4.currentSentence = sentenceObj.id;
+  L4.currentSentenceObj = sentenceObj;
+};
+
+L4.getCurrentSentence = function () {
+  return L4.currentSentenceObj;
+};
+
+
+/* ==========================================================
+   ⭐ LEVEL 4 — SCRAMBLER (SPANISH)
+========================================================== */
+function scrambleSentencesLevel4(options, lastOrder) {
+  let arr = [...options];
+
+  // Proper Fisher–Yates shuffle
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+
+  // Prevent identical order
+  if (lastOrder) {
+    const newOrder = arr.map(o => o.text).join("|");
+    const oldOrder = lastOrder.join("|");
+
+    if (newOrder === oldOrder) {
+      return scrambleSentencesLevel4(options, lastOrder);
+    }
+  }
+
+  return arr;
+}
+
+
+
+/* ==========================================================
+   ⭐ LEVEL 4 — SHOW SCREEN
+========================================================== */
+L4.show = function (screenId) {
+
+  // ⭐ ALWAYS hide the Level 4 entry screen
+  const entry = document.getElementById("screen2L4");
+  if (entry) entry.classList.add("hidden");
+
+  // ⭐ Unhide wrapper
+  const wrapper = document.getElementById("level4Wrapper");
+  if (wrapper) wrapper.classList.remove("hidden");
+
+  // Hide all Level 4 screens
+  const screens = [
+    "level4Screen1",
+    "level4Screen2",
+    "level4Screen3",
+    "level4Screen4"
+  ];
+
+  screens.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.classList.add("hidden");
+  });
+
+  // Show target screen
+  const target = document.getElementById(screenId);
+  if (target) target.classList.remove("hidden");
+};
+
+
+
+
+
+
+
+
+
+/* ==========================================================
+   ⭐ LEVEL 4 — START
+========================================================== */
+L4.start = function () {
+  console.log("[Level4] start()");
+
+  L4.active = true;
+  L4.round = 0;
+  L4.score = 0;
+  L4.columnLocked = false;
+  L4.currentSentence = null;
+  L4.currentSentenceObj = null;
+
+  L4.dataset = scrambleSentencesLevel4(level4);
+
+  Progress4.setTotal(level4.length);
+  Progress4.save();
+
+  L4.stopAllAudio();
+  L4.audio.cancelToken.cancel = false;
+
+  document.getElementById("level4Wrapper")?.classList.remove("hidden");
+
+  L4.startRound();
+};
+
+
+/* ==========================================================
+   ⭐ LEVEL 4 — START ROUND
+========================================================== */
+L4.startRound = function () {
+  console.log(`[Level4] startRound() — Round ${L4.round + 1}`);
+  if (!L4.active) return;
+
+  if (L4.round >= L4.TOTAL_ROUNDS) {
+    showLevel4FinalSummary();
+    return;
+  }
+
+  L4.stopAllAudio();
+  L4.audio.cancelToken.cancel = false;
+  L4.audio.generation++;
+
+  L4.columnLocked = false;
+
+  const sentenceObj = L4.dataset[L4.round];
+  L4.currentSentenceObj = sentenceObj;
+
+  L4.lastScramble = null;
+
+  L4.screen1();
+};
+
+
+/* ==========================================================
+   ⭐ LEVEL 4 — SCREEN 1 (SPANISH AUDIO ONLY)
+========================================================== */
+L4.screen1 = function () {
+
+  L4.show("level4Screen1");
+
+  console.log(
+    "wrapper hidden AFTER show():",
+    document.getElementById("level4Wrapper").classList.contains("hidden")
+  );
+
+  console.log("[Level4] screen1()");
+
+  L4.stopAllAudio();
+  L4.audio.cancelToken.cancel = false;
+  L4.audio.generation++;
+
+  const sentence = L4.currentSentenceObj;
+
+  const screenEl = document.getElementById("level4Screen1");
+
+  L4.renderProgress();
+
+  if (!sentence.audio) {
+    console.warn("[Level4] No audio found, skipping to screen2()");
+    L4.screen2();
+    return;
+  }
+
+  const audio = new Audio(sentence.audio);
+  L4.audio.current = audio;
+
+  let safety = setTimeout(() => {
+    console.warn("[Level4] Audio safety timeout — moving to screen2()");
+    L4.screen2();
+  }, 10000);
+
+  const finish = () => {
+    clearTimeout(safety);
+    L4.screen2();
+  };
+
+  audio.onended = finish;
+  audio.onerror = finish;
+
+  audio.play().catch(() => {
+    console.warn("[Level4] Audio play() failed — moving to screen2()");
+    finish();
+  });
+};
+
+
+
+/* ==========================================================
+   ⭐ LEVEL 4 — SCREEN 2 (SPLIT COLUMN)
+========================================================== */
+L4.screen2 = function () {
+  L4.activeScreen = "screen2";
+  if (!L4.active) return;
+  console.log("[Level4] screen2()");
+
+  /* ----------------------------------------------------------
+     1. Retrieve current sentence
+  ---------------------------------------------------------- */
+  const s = L4.currentSentenceObj;
+  if (!s) {
+    console.warn("[Level4] No current sentence — fallback to startRound()");
+    L4.startRound();
+    return;
+  }
+
+  L4.columnLocked = false;
+  L4.show("level4Screen2");
+
+  /* ----------------------------------------------------------
+     2. LEFT COLUMN — Spanish sentence
+  ---------------------------------------------------------- */
+  const leftBox = document.getElementById("l4LeftColumn");
+  if (leftBox) leftBox.textContent = s.spanish;
+
+  /* ----------------------------------------------------------
+     3. RIGHT COLUMN — Paraphrase options (validated)
+  ---------------------------------------------------------- */
+  const rightBox = document.getElementById("l4RightColumn");
+  rightBox.innerHTML = "";
+
+  // Validate paraphraseOptions
+  let opts = Array.isArray(s.paraphraseOptions) ? s.paraphraseOptions : [];
+
+  // Filter out invalid entries
+  opts = opts.filter(o => {
+    const valid = o && typeof o.text === "string";
+    if (!valid) console.warn("[Level4] Invalid paraphrase option:", o);
+    return valid;
+  });
+
+  if (opts.length === 0) {
+    console.error("[Level4] No valid paraphraseOptions for:", s);
+    rightBox.textContent = "⚠️ No paraphrase options available.";
+    return;
+  }
+
+  // Scramble safely
+  const scrambled = scrambleSentencesLevel4(opts, L4.lastScramble);
+
+  // Store last scramble safely
+  L4.lastScramble = scrambled.map(o => o.text);
+
+  // Render buttons
+  scrambled.forEach(opt => {
+    const btn = document.createElement("button");
+    btn.className = "l4OptionBtn";
+    btn.textContent = opt.text;
+
+    btn.onclick = () => {
+      if (L4.columnLocked) return;
+      L4.handleColumnChoice(opt, btn);
+    };
+
+    rightBox.appendChild(btn);
+  });
+
+  /* ----------------------------------------------------------
+     4. Replay button — plays s.audio
+  ---------------------------------------------------------- */
+  const replayBtn = document.getElementById("l4ReplayBtn");
+  if (replayBtn) {
+    replayBtn.style.display = "inline-block";
+    replayBtn.onclick = () => {
+      if (L4.columnLocked) return;
+
+      L4.stopAllAudio();
+      L4.audio.cancelToken.cancel = false;
+      L4.audio.generation++;
+
+      const audio = new Audio(s.audio);
+      L4.audio.current = audio;
+      audio.play().catch(() => {});
+    };
+  }
+};
+
+
+
+
+/* ==========================================================
+   ⭐ LEVEL 4 — HANDLE COLUMN CHOICE
+========================================================== */
+L4.handleColumnChoice = function (opt, btn) {
+  if (!L4.active) return;
+
+  if (L4.columnLocked) return;
+  L4.columnLocked = true;
+
+  const s = L4.currentSentenceObj;
+  if (!s) {
+    L4.startRound();
+    return;
+  }
+
+  if (opt.correct) {
+    btn.classList.add("l4-correct");
+    L4.score++;
+
+    Progress4.markSentenceComplete(s.id);
+    L4.updateScoreKeeper();
+    L4.renderProgress();
+
+  } else {
+    btn.classList.add("l4-wrong");
+
+    const correctOpt = s.paraphraseOptions.find(o => o.correct);
+    if (correctOpt) {
+      document.querySelectorAll(".l4OptionBtn").forEach(b => {
+        if (b.textContent === correctOpt.text) {
+          b.classList.add("l4-correct");
+        }
+      });
+    }
+
+    if (Progress4.storageAvailable !== false) {
+      L4.dataset.push(s);
+    }
+  }
+
+  setTimeout(() => {
+    if (L4.activeScreen !== "screen2") return;
+    L4.showRoundSummary();
+  }, 800);
+};
+
+
+/* ==========================================================
+   ⭐ LEVEL 4 — ROUND SUMMARY
+========================================================== */
+L4.showRoundSummary = function () {
+  L4.activeScreen = "screen3";
+
+  if (!L4.active) return;
+
+  const s = L4.currentSentenceObj;
+  if (!s) return;
+
+  L4.stopAllAudio();
+  L4.audio.cancelToken.cancel = false;
+  L4.audio.generation++;
+
+  L4.show("level4Screen3");
+
+  const meaningBox = document.getElementById("l4MeaningBox");
+  const cont = document.getElementById("l4SummaryContainer");
+
+  meaningBox.textContent = s.meaning || "";
+  cont.innerHTML = "";
+
+  if (Array.isArray(s.summaryChunks)) {
+    s.summaryChunks.forEach(chunk => {
+      const row = document.createElement("div");
+      row.className = "summary-row";
+
+      row.innerHTML = `
+        <div class="summary-spanish">${chunk.spanish || ""}</div>
+        <div class="summary-english">${chunk.english || ""}</div>
+      `;
+
+      cont.appendChild(row);
+    });
+  }
+
+  const nextBtn = document.getElementById("l4SummaryNextBtn");
+  if (nextBtn) {
+    nextBtn.onclick = () => {
+      L4.stopAllAudio();
+      L4.round++;
+
+      if (L4.round >= L4.TOTAL_ROUNDS) {
+        showLevel4FinalSummary();
+        return;
+      }
+
+      L4.currentSentence = null;
+      L4.currentSentenceObj = null;
+
+      L4.startRound();
+    };
+  }
+
+  createAndWireLevel4ReplayButton("level4Screen3", s.audio);
+};
+
+
+/* ==========================================================
+   ⭐ LEVEL 4 — FINAL SUMMARY
+========================================================== */
+function showLevel4FinalSummary() {
+  if (!L4.active) return;
+
+  L4.active = false;
+
+  L4.stopAllAudio();
+  L4.audio.cancelToken.cancel = false;
+  L4.audio.generation++;
+
+  L4.show("level4Screen4");
+
+  const rounds = document.getElementById("l4FinalRounds");
+  const score = document.getElementById("l4FinalScore");
+  const correct = document.getElementById("l4FinalCorrect");
+
+  if (rounds) rounds.textContent = L4.round;
+  if (score) score.textContent = L4.score;
+  if (correct) correct.textContent = L4.score;
+
+  const againBtn = document.getElementById("l4PlayAgainBtn");
+  if (againBtn) {
+    againBtn.onclick = () => {
+      L4.reset();
+      L4.start();
+    };
+  }
+
+  const homeBtn = document.getElementById("l4HomeBtn");
+  if (homeBtn) {
+    homeBtn.onclick = () => {
+      L4.reset();
+      L4.show("screen0");
+    };
+  }
+}
+
+
+/* ==========================================================
+   ⭐ LEVEL 4 — RESET
+========================================================== */
+L4.reset = function () {
+  L4.round = 0;
+  L4.score = 0;
+  L4.currentSentence = null;
+
+  L4.audio.cancelToken.cancel = false;
+  L4.audio.generation++;
+
+  L4.columnLocked = false;
+};
+
+/* ==========================================================
+   ⭐ LEVEL 4 — PROGRESS BAR
+========================================================== */
+L4.renderProgress = function () {
+  const wrapperParent = document.getElementById("level4Wrapper");
+  if (!wrapperParent) return;
+
+  const p = Progress4.getProgress();
+  const pct = p.percent;
+
+  let wrapper = document.getElementById("l4ProgressWrapper");
+  if (!wrapper) {
+    wrapper = document.createElement("div");
+    wrapper.id = "l4ProgressWrapper";
+    wrapper.style.marginBottom = "20px";
+
+    wrapper.innerHTML = `
+      <div id="l4ProgressLabel" style="
+        font-size: 18px;
+        margin-bottom: 6px;
+        color: #fff;
+        text-align: center;
+      "></div>
+
+      <div id="l4ProgressOuter" style="
+        width: 100%;
+        height: 10px;
+        background: #333;
+        border-radius: 6px;
+        overflow: hidden;
+      ">
+        <div id="l4ProgressBar" style="
+          height: 100%;
+          width: 0%;
+          background: #4caf50;
+          transition: width 0.3s ease;
+        "></div>
+      </div>
+    `;
+
+    wrapperParent.prepend(wrapper);
+  }
+
+  document.getElementById("l4ProgressBar").style.width = pct + "%";
+  document.getElementById("l4ProgressLabel").textContent =
+    `Mastery: ${p.completed} / ${p.total}`;
+};
+
+
+/* ==========================================================
+   ⭐ LEVEL 4 — SCORE KEEPER
+========================================================== */
+L4.updateScoreKeeper = function () {
+  const el = document.getElementById("scoreKeeper");
+  if (!el) return;
+
+  const p = Progress4.getProgress();
+  const current = p.completed;
+  const total = p.total;
+
+  el.textContent = `${current} / ${total}`;
+};
+
+
+
+/* ==========================================================
+   ⭐ LEVEL 4 — REPLAY BUTTON CREATOR
+========================================================== */
+function createAndWireLevel4ReplayButton(targetScreenId, audioUrl) {
+  const oldBtn = document.getElementById("l4ReplayBtnDynamic");
+  if (oldBtn) oldBtn.remove();
+
+  const btn = document.createElement("button");
+  btn.id = "l4ReplayBtnDynamic";
+  btn.className = "iconBtn replay-top";
+  btn.textContent = "🔁 Repetir";
+
+  const screen = document.getElementById(targetScreenId);
+  if (!screen) return;
+  screen.appendChild(btn);
+
+  btn.onclick = () => {
+    L4.stopAllAudio();
+    L4.audio.cancelToken.cancel = false;
+    L4.audio.generation++;
+
+    const audio = new Audio(audioUrl);
+    L4.audio.current = audio;
+    audio.play().catch(() => {});
+  };
+}
+
+
+/* ==========================================================
+   ⭐ LEVEL 4 — BUTTON WIRING
+========================================================== */
+function wireLevel4Buttons() {
+  const wrapper = document.getElementById("level4Wrapper");
+  if (!wrapper || wrapper.classList.contains("hidden")) return;
+
+  const startBtn = document.getElementById("startLevel4Btn");
+  if (startBtn) {
+    startBtn.onclick = () => {
+      L4.stopAllAudio();
+      L4.start();
+    };
+  }
+
+  const replayBtn = document.getElementById("l4ReplaySentenceBtn");
+  if (replayBtn) {
+    replayBtn.onclick = () => {
+      if (L4.columnLocked) return;
+
+      const s = L4.currentSentenceObj;
+      if (!s || !s.audio) return;
+
+      L4.stopAllAudio();
+      L4.audio.cancelToken.cancel = false;
+      L4.audio.generation++;
+
+      const audio = new Audio(s.audio);
+      L4.audio.current = audio;
+      audio.play().catch(() => {});
+    };
+  }
+}
+
+document.addEventListener("DOMContentLoaded", wireLevel4Buttons);
+
+
+/* ==========================================================
+   ⭐ LEVEL 4 — CLEANUP
+========================================================== */
+function cleanupLevel4() {
+  L4.active = false;
+
+  try { 
+    if (L4.stopAllAudio) L4.stopAllAudio();
+  } catch (e) {}
+
+  if (L4.timer) { clearTimeout(L4.timer); L4.timer = null; }
+  if (L4.interval) { clearInterval(L4.interval); L4.interval = null; }
+
+  if (Array.isArray(L4.timeouts)) {
+    L4.timeouts.forEach(id => clearTimeout(id));
+    L4.timeouts = [];
+  }
+
+  const ids = [
+    "l4LeftColumn",
+    "l4RightColumn",
+    "l4ReplayBtn",
+    "l4ReplaySentenceBtn",
+    "l4SummaryNextBtn",
+    "l4PlayAgainBtn",
+    "l4HomeBtn"
+  ];
+
+  ids.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.replaceWith(el.cloneNode(true));
+  });
+
+  const wrapper = document.getElementById("level4Wrapper");
+  if (wrapper) wrapper.classList.add("hidden");
+}
 
 
 
@@ -3475,8 +4206,39 @@ if (!level4Btn) {
   });
 }
 
+*/
 
 
+
+// ---------------------------------------------------------
+// LEVEL 4 — UNGATED ACCESS (NO MEMBERSHIP REQUIRED)
+// ---------------------------------------------------------
+level4Btn.addEventListener("click", () => {
+  console.log("[Level 4] Ungated access — entering Level 4");
+
+  // Hide all other screens
+  document.querySelectorAll(".screen").forEach(s => s.classList.add("hidden"));
+
+  // ⭐ Show Level 4 wrapper immediately
+  const wrapper = document.getElementById("level4Wrapper");
+  if (wrapper) wrapper.classList.remove("hidden");
+
+  // ⭐ Start Level 4 module
+  if (typeof L4 !== "undefined" && typeof L4.start === "function") {
+    L4.start();
+  } else {
+    console.error("L4.start() not found — Level 4 module not loaded");
+  }
+});
+
+
+
+
+
+
+
+
+/*
 
 
 
