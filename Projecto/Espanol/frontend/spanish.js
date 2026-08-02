@@ -4210,26 +4210,16 @@ if (!level4Btn) {
 
 
 
-// ---------------------------------------------------------
-// LEVEL 4 — UNGATED ACCESS (NO MEMBERSHIP REQUIRED)
-// ---------------------------------------------------------
+
+
+
+
 level4Btn.addEventListener("click", () => {
   console.log("[Level 4] Ungated access — entering Level 4");
 
-  // Hide all other screens
-  document.querySelectorAll(".screen").forEach(s => s.classList.add("hidden"));
-
-  // ⭐ Show Level 4 wrapper immediately
-  const wrapper = document.getElementById("level4Wrapper");
-  if (wrapper) wrapper.classList.remove("hidden");
-
-  // ⭐ Start Level 4 module
-  if (typeof L4 !== "undefined" && typeof L4.start === "function") {
-    L4.start();
-  } else {
-    console.error("L4.start() not found — Level 4 module not loaded");
-  }
+  launchLevel(4, L4.start);
 });
+
 
 
 
