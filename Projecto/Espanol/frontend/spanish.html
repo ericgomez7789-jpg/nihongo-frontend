@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
- 
   <meta charset="UTF-8">
   <title>Método Tori — Aprender Español</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="espanol.css">
-<link rel="stylesheet" href="spanish_level2.css">
-<link rel="stylesheet" href="spanish_level3.css">
-<link rel="stylesheet" href="spanish_level4.css">
+  <link rel="stylesheet" href="spanish_level2.css">
+  <link rel="stylesheet" href="spanish_level3.css">
+  <link rel="stylesheet" href="spanish_level4.css">
+  <link rel="stylesheet" href="logo.css">
+
+  <!-- Scripts -->
   <script src="Progress.js" defer></script>
   <script src="spanish.js" defer></script>
-  <link rel="stylesheet" href="logo.css">
 </head>
 
 <body>
-<div id="header-logo">
-    <img src="logo/toris_logo.png" alt="App Logo">
-</div>
 
+  <!-- Header -->
+  <div id="header-logo">
+    <img src="logo/toris_logo.png" alt="App Logo">
+  </div>
 
   <div id="scoreKeeper" class="score-keeper"></div>
 
@@ -64,7 +68,7 @@
 
     </div>
 
-    <!-- ⭐⭐⭐ NEW SPANISH DESCRIPTION BLOCK ⭐⭐⭐ -->
+    <!-- Spanish description block -->
     <div style="margin-top: 50px; max-width: 520px; color: #aaa; font-size: 16px; line-height: 1.7;">
 
       <p>
@@ -123,7 +127,6 @@
       <button class="levelBtn" data-level="2">Nivel 2</button>
       <button class="levelBtn" data-level="3">Nivel 3</button>
       <button id="level4Btn" class="levelBtn" data-level="4">Nivel 4</button>
-
       <button class="levelBtn" data-level="5">Nivel 5</button>
       <button class="levelBtn" data-level="6">Nivel 6</button>
     </div>
@@ -148,116 +151,121 @@
     </div>
   </div>
 
+  <!-- ⭐⭐⭐ SCREEN 2L2 — LEVEL 2 CONJUNCTIONS ⭐⭐⭐ -->
+  <div id="screen2L2" class="screen hidden">
 
+    <button id="l2ReplaySentenceBtn" class="iconBtn replay-top">🔁 Repetir</button>
 
+    <div id="level2Wrapper" class="level2-wrapper level2-screen hidden">
 
+      <!-- LEVEL 2 SCREEN 1 — AUDIO ONLY -->
+      <div id="level2Screen1" class="level-block level2-screen hidden">
+        <h2 class="title">Escucha con atención</h2>
+        <div class="instruction-line">Solo escucha — no respondas todavía.</div>
+        <div class="instruction-line">La frase se reproducirá con una conjunción faltante.</div>
+        <div class="instruction-line">Hay 4 rondas por sesión.</div>
+        <div class="instruction-line">Algunas frases se repetirán para reforzar el aprendizaje.</div>
+      </div>
 
+      <!-- LEVEL 2 SCREEN 2 — MCQ -->
+      <div id="level2Screen2" class="level-block level2-screen hidden">
+        <h2 class="title">Elige la conjunción correcta.</h2>
+        <div id="level2SentenceLine" class="sentence-line"></div>
+        <div id="level2McqContainer" class="mcq-container"></div>
+      </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- ⭐⭐⭐ SCREEN 2L2 — LEVEL 2 CONJUNCTIONS (FULLY ISOLATED) ⭐⭐⭐ -->
-<div id="screen2L2" class="screen hidden">
-
-  <!-- LEVEL 2 REPLAY BUTTON (LEVEL 2 ONLY) -->
-  <button id="l2ReplaySentenceBtn" class="iconBtn replay-top">🔁 Repetir</button>
-
-  <!-- ⭐ LEVEL 2 WRAPPER ⭐ -->
-  <div id="level2Wrapper" class="level2-wrapper level2-screen hidden">
-
-    <!-- LEVEL 2 SCREEN 1 — AUDIO ONLY -->
-    <div id="level2Screen1" class="level-block level2-screen hidden">
-      <h2 class="title">Escucha con atención</h2>
-      <div class="instruction-line">Solo escucha — no respondas todavía.</div>
-      <div class="instruction-line">La frase se reproducirá con una conjunción faltante.</div>
-      <div class="instruction-line">Hay 4 rondas por sesión.</div>
-      <div class="instruction-line">Algunas frases se repetirán para reforzar el aprendizaje.</div>
     </div>
-
-    <!-- LEVEL 2 SCREEN 2 — MCQ -->
-    <div id="level2Screen2" class="level-block level2-screen hidden">
-      <h2 class="title">Elige la conjunción correcta.</h2>
-      <div id="level2SentenceLine" class="sentence-line"></div>
-      <div id="level2McqContainer" class="mcq-container"></div>
-    </div>
-
-  </div> <!-- END level2Wrapper -->
-
-</div> <!-- END screen2L2 -->
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- ⭐⭐⭐ SCREEN 2L3 — LEVEL 3 INFERENCE (FULLY ISOLATED) ⭐⭐⭐ -->
-<div id="screen2L3" class="level3 hidden">
-
-  <!-- LEVEL 3 REPLAY BUTTON (LEVEL 3 ONLY) -->
-  <button id="l3ReplaySentenceBtn" class="iconBtn replay-top">🔁 Repetir</button>
-
-  <!-- ⭐ LEVEL 3 WRAPPER ⭐ -->
-  <div id="level3Wrapper" class="level3-wrapper">
-
-    <!-- LEVEL 3 SCREEN 1 — AUDIO ONLY -->
-    <div id="level3Screen1" class="level-block level3-screen hidden">
-      <h2 class="title">Escucha con atención</h2>
-      <div class="instruction-line">Solo escucha — no respondas todavía.</div>
-      <div class="instruction-line">La frase se reproducirá normalmente.</div>
-      <div class="instruction-line">Hay 3 rondas por sesión.</div>
-    </div>
-
-    <!-- LEVEL 3 SCREEN 2 — INFERENCE (PARÁFRASIS) -->
-    <div id="level3Screen2" class="level-block level3-screen hidden">
-      <h2 class="title">Elige la inferencia correcta.</h2>
-      <div class="instruction-line">¿Qué ocurre después?</div>
-
-      <!-- Left column: meaning or Spanish sentence -->
-      <div id="l3LeftColumn" class="sentence-line"></div>
-
-      <!-- Right column: paraphrase options -->
-      <div id="l3RightColumn" class="mcq-container"></div>
-
-      <!-- Replay button -->
-      <button id="l3ReplayBtn" class="iconBtn replay-mid">🔁 Repetir</button>
-    </div>
-
-
-
-<!-- ⭐⭐⭐ LEVEL 3 — ROUND SUMMARY ⭐⭐⭐ -->
-<div id="level3Screen3" class="level-block level3-screen hidden">
-  <h2 class="title">Resumen de la ronda</h2>
-
-  <!-- Meaning of the sentence -->
-  <div id="l3MeaningBox" class="meaning-box"></div>
-
-  <!-- Correct inference -->
-  <div id="l3SummaryCorrectDrops" class="summary-correct-drops"></div>
-
-  <!-- Chunk breakdown -->
-  <div id="l3SummaryContainer" class="summary-container"></div>
-
-  <div class="summary-controls">
-    <button id="l3SummaryNextBtn" class="iconBtn">➡️ Siguiente</button>
   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ⭐⭐⭐ SCREEN 2L3 — LEVEL 3 ENTRY (OPTIONAL) ⭐⭐⭐ -->
+<div id="screen2L3" class="screen hidden">
+  <h2 class="title">Nivel 3 — Inferencia</h2>
+  <p class="instruction-line">Escucha la frase y luego elige la interpretación correcta.</p>
+  <button id="startLevel3Btn" class="iconBtn">Comenzar Nivel 3 →</button>
+</div>
+
+<!-- ⭐⭐⭐ LEVEL 3 WRAPPER (OUTSIDE ALL .screen) ⭐⭐⭐ -->
+<div id="level3Wrapper" class="level3 level3-wrapper hidden">
+
+  <!-- LEVEL 3 SCREEN 1 — AUDIO ONLY -->
+  <div id="level3Screen1" class="level-block level3-screen hidden">
+    <h2 class="title">Escucha con atención</h2>
+    <div class="instruction-line">Solo escucha — todavía no respondas.</div>
+    <div class="instruction-line">La frase se reproducirá a velocidad natural.</div>
+    <div class="instruction-line">Hay 4 rondas por sesión.</div>
+
+    <button id="l3ReplaySentenceBtn" class="iconBtn replay-top">🔁 Repetir</button>
+  </div>
+
+  <!-- LEVEL 3 SCREEN 2 — SPLIT COLUMN INFERENCE -->
+  <div id="level3Screen2" class="level-block level3-screen hidden">
+
+    <button id="l3ReplayBtn" class="l3-replay-btn">Repetir</button>
+
+    <h2 class="title">Elige la interpretación correcta</h2>
+
+    <div class="l3-split-container">
+      <div id="l3LeftColumn" class="l3-column left-column"></div>
+      <div id="l3RightColumn" class="l3-column right-column"></div>
+    </div>
+  </div>
+
+  <!-- LEVEL 3 SUMMARY SCREEN -->
+  <div id="level3Screen3" class="level-block level3-screen hidden">
+    <h2 class="title">Resumen</h2>
+
+    <div id="l3MeaningBox" class="meaning-box"></div>
+    <div id="l3SummaryCorrectDrops" class="summary-line"></div>
+    <div id="l3SummaryContainer" class="summary-container"></div>
+
+    <div class="summary-controls">
+      <button id="l3SummaryNextBtn" class="iconBtn">➡️ Siguiente</button>
+    </div>
+  </div>
+
+  <!-- LEVEL 3 FINAL SCORE SCREEN -->
+  <div id="level3Screen4" class="level-block level3-screen hidden">
+    <h2 class="title">Resumen de la sesión</h2>
+
+    <div class="summary-container">
+      <div class="summary-row">
+        <span class="summary-label">Rondas completadas:</span>
+        <span id="l3FinalRounds" class="summary-value"></span>
+      </div>
+
+      <div class="summary-row">
+        <span class="summary-label">Puntuación:</span>
+        <span id="l3FinalScore" class="summary-value"></span>
+      </div>
+
+      <div class="summary-row">
+        <span class="summary-label">Respuestas correctas:</span>
+        <span id="l3FinalCorrect" class="summary-value"></span>
+      </div>
+    </div>
+
+    <div class="summary-controls">
+      <button id="l3PlayAgainBtn" class="iconBtn">🔁 Jugar de nuevo</button>
+      <button id="l3HomeBtn" class="iconBtn">🏠 Inicio</button>
+    </div>
+  </div>
+
 </div>
 
 
@@ -272,89 +280,41 @@
 
 
 
-    <!-- ⭐ LEVEL 3 FINAL SCORE SCREEN ⭐ -->
-    <!-- ⭐⭐⭐ LEVEL 3 — FINAL SUMMARY ⭐⭐⭐ -->
-<div id="level3Screen4" class="level-block level3-screen hidden">
-  <h2 class="title">Resumen de la sesión</h2>
 
-  <div id="level3FinalSummaryContainer" class="summary-container">
 
-    <div class="summary-row">
-      <span class="summary-label">Rondas completadas:</span>
-      <span id="l3FinalRounds" class="summary-value"></span>
-    </div>
 
-    <div class="summary-row">
-      <span class="summary-label">Puntaje:</span>
-      <span id="l3FinalScore" class="summary-value"></span>
-    </div>
 
-    <div class="summary-row">
-      <span class="summary-label">Respuestas correctas:</span>
-      <span id="l3FinalCorrect" class="summary-value"></span>
-    </div>
 
+
+
+
+
+
+
+  <!-- ⭐⭐⭐ LEVEL 4 ENTRY SCREEN ⭐⭐⭐ -->
+  <div id="screen2L4" class="screen hidden">
+    <h2 class="title">Nivel 4 — Parafraseo</h2>
+    <p class="instruction-line">Escucha la frase y luego elige la paráfrasis correcta.</p>
+    <button id="startLevel4Btn" class="iconBtn">Comenzar Nivel 4 →</button>
   </div>
 
-  <div class="summary-controls">
-    <button id="l3ReplaySummaryBtn" class="iconBtn">🔁 Repetir</button>
-    <button id="l3PlayAgainBtn" class="iconBtn">➡️ Otra vez</button>
-    <button id="l3HomeBtn" class="iconBtn">🏠 Inicio</button>
-  
-
-
-  </div> <!-- END LEVEL 3 WRAPPER -->
-
-</div> <!-- END SCREEN 2L3 -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- ⭐⭐⭐ LEVEL 4 ENTRY SCREEN ⭐⭐⭐ -->
-<div id="screen2L4" class="screen hidden">
-
-  <h2 class="title">Nivel 4 — Parafraseo</h2>
-  <p class="instruction-line">Escucha primero, luego elige la paráfrasis correcta.</p>
-
-  <button id="startLevel4Btn" class="iconBtn">Comenzar Nivel 4 →</button>
-
-  <!-- ⭐ LEVEL 4 WRAPPER (NOW CORRECTLY NESTED INSIDE ENTRY SCREEN) ⭐ -->
+  <!-- ⭐⭐⭐ LEVEL 4 WRAPPER ⭐⭐⭐ -->
   <div id="level4Wrapper" class="level4 level4-wrapper hidden">
 
-    <!-- ⭐ LEVEL 4 SCREEN 1 — AUDIO ONLY ⭐ -->
+    <!-- LEVEL 4 SCREEN 1 — AUDIO ONLY -->
     <div id="level4Screen1" class="level-block level4-screen hidden">
       <h2 class="title">Escucha con atención</h2>
       <div class="instruction-line">Solo escucha — todavía no respondas.</div>
       <div class="instruction-line">La frase se reproducirá a velocidad natural.</div>
       <div class="instruction-line">Hay 3 rondas por sesión.</div>
 
-      <!-- Replay button -->
       <button id="l4ReplaySentenceBtn" class="iconBtn replay-top">🔁 Repetir</button>
     </div>
 
-    <!-- ⭐ LEVEL 4 SCREEN 2 — SPLIT COLUMN PARAPHRASING ⭐ -->
+    <!-- LEVEL 4 SCREEN 2 — SPLIT COLUMN PARAPHRASING -->
     <div id="level4Screen2" class="level-block level4-screen hidden">
 
-      <!-- 🔊 Replay Button (Top‑Left) -->
-      <button id="l4ReplayBtn" class="l4-replay-btn">Repetir audio</button>
+      <button id="l4ReplayBtn" class="l4-replay-btn">Repetir</button>
 
       <h2 class="title">Elige la paráfrasis correcta</h2>
 
@@ -364,14 +324,12 @@
       </div>
     </div>
 
-    <!-- ⭐ LEVEL 4 SUMMARY SCREEN ⭐ -->
+    <!-- LEVEL 4 SUMMARY SCREEN -->
     <div id="level4Screen3" class="level-block level4-screen hidden">
       <h2 class="title">Resumen</h2>
 
-      <!-- Full English meaning -->
       <div id="l4MeaningBox" class="meaning-box"></div>
-
-      <!-- Chunk table container -->
+      <div id="l4SummaryCorrectDrops" class="summary-line"></div>
       <div id="l4SummaryContainer" class="summary-container"></div>
 
       <div class="summary-controls">
@@ -379,12 +337,11 @@
       </div>
     </div>
 
-    <!-- ⭐ LEVEL 4 — FINAL SCORE SCREEN ⭐ -->
+    <!-- LEVEL 4 FINAL SCORE SCREEN -->
     <div id="level4Screen4" class="level-block level4-screen hidden">
       <h2 class="title">Resumen de la sesión</h2>
 
       <div class="summary-container">
-
         <div class="summary-row">
           <span class="summary-label">Rondas completadas:</span>
           <span id="l4FinalRounds" class="summary-value"></span>
@@ -399,7 +356,6 @@
           <span class="summary-label">Respuestas correctas:</span>
           <span id="l4FinalCorrect" class="summary-value"></span>
         </div>
-
       </div>
 
       <div class="summary-controls">
@@ -408,74 +364,16 @@
       </div>
     </div>
 
-  </div> <!-- END WRAPPER -->
-
-</div> <!-- END ENTRY SCREEN -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  </div>
 
   <!-- ⭐⭐⭐ SCREEN 3 — MEANING + SUMMARY ⭐⭐⭐ -->
   <div id="screen3" class="screen hidden">
-    <h1 class="title">Significado</h1>
-
-    <div class="meaning-box" id="meaningBox"></div>
-    <div id="summaryContainer" class="summary-container"></div>
-    <div id="summaryCorrectDrops" class="summary-correct-drops"></div>
-
-    <div class="summary-controls">
-      <button id="screen3ReplayBtn" class="iconBtn">Repetir</button>
-      <button id="screen3NextBtn" class="iconBtn">Siguiente</button>
-    </div>
+    <!-- Meaning + summary content goes here -->
   </div>
 
   <!-- ⭐⭐⭐ SCREEN 4 — SESSION SUMMARY ⭐⭐⭐ -->
   <div id="screen4" class="screen hidden">
-    <h1 class="title">Resumen</h1>
-
-    <div class="session-summary-box" id="sessionSummary"></div>
-
-    <div class="session-controls">
-      <button id="restartBtn" class="iconBtn">Reiniciar</button>
-      <button id="backToLevelsBtn" class="iconBtn">Niveles</button>
-    </div>
+    <!-- Session summary content goes here -->
   </div>
 
 </body>

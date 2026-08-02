@@ -8,13 +8,32 @@
   font-family: Arial, sans-serif;
 }
 
-/* ⭐ Visibility control (correct + minimal) */
-.level4-screen {
-  display: block;
+/* ==========================================================
+   LEVEL 4 — WRAPPER VISIBILITY (CRITICAL FIX)
+========================================================== */
+
+.level4-wrapper {
+  display: none;                 /* hidden by default */
+  background: #000;
+  color: #fff;
+  min-height: 100vh;
+  padding: 40px;
 }
 
-.level4-screen.hidden {
-  display: none;
+.level4-wrapper:not(.hidden) {
+  display: block;                /* becomes visible when .hidden is removed */
+}
+
+/* ==========================================================
+   LEVEL 4 — SCREEN VISIBILITY (CRITICAL FIX)
+========================================================== */
+
+.level4-screen {
+  display: none;                 /* hidden by default */
+}
+
+.level4-screen:not(.hidden) {
+  display: block;                /* visible when .hidden is removed */
 }
 
 /* ==========================================================

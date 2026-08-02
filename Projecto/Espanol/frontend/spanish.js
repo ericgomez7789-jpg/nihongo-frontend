@@ -3353,34 +3353,56 @@ const level4 = [
 
 
 
-
-
+/* ==========================================================
+   ⭐ LEVEL 4 — CORE STATE
+========================================================== */
 
 const L4 = {
   round: 0,
   score: 0,
   TOTAL_ROUNDS: 3,
 
-  dataset: level4,   // your Level‑4 dataset array
-  currentSentence: null,
-  currentSentenceObj: null,
+  dataset: level4,          // Spanish Level 4 dataset
+  currentSentence: null,    // ID
+  currentSentenceObj: null, // full object
 
   columnLocked: false,
   activeScreen: null,
+  screen1Active: false,
 
   audio: {
     cancelToken: { cancel: false },
     generation: 0,
     current: null
-  }
+  },
+
+  lastScramble: null,
+  hasMarked: false
 };
 
-L4.lastScramble = null;
+
+/* ==========================================================
+   ⭐ LEVEL 4 — CURRENT SENTENCE
+========================================================== */
+
+L4.setCurrentSentence = function (sentenceObj) {
+  if (!sentenceObj || !sentenceObj.id) {
+    console.error("L4.setCurrentSentence invalid:", sentenceObj);
+    return;
+  }
+  L4.currentSentence = sentenceObj.id;
+  L4.currentSentenceObj = sentenceObj;
+};
+
+L4.getCurrentSentence = function () {
+  return L4.currentSentenceObj;
+};
 
 
 /* ==========================================================
    ⭐ LEVEL 4 — STOP ALL AUDIO
 ========================================================== */
+
 L4.stopAllAudio = function () {
   L4.audio.cancelToken.cancel = true;
   L4.audio.generation++;
@@ -3398,6 +3420,7 @@ L4.stopAllAudio = function () {
 /* ==========================================================
    ⭐ LEVEL 4 — GENERATION GUARDS
 ========================================================== */
+
 L4.generationGuards = function () {
   L4.audio.cancelToken.cancel = false;
   L4.audio.generation++;
@@ -3406,40 +3429,20 @@ L4.generationGuards = function () {
 
 
 /* ==========================================================
-   ⭐ LEVEL 4 — SET / GET CURRENT SENTENCE
+   ⭐ LEVEL 4 — SENTENCE SCRAMBLER
 ========================================================== */
-L4.setCurrentSentence = function (sentenceObj) {
-  if (!sentenceObj || !sentenceObj.id) {
-    console.error("L4.setCurrentSentence called with invalid sentence:", sentenceObj);
-    return;
-  }
 
-  L4.currentSentence = sentenceObj.id;
-  L4.currentSentenceObj = sentenceObj;
-};
-
-L4.getCurrentSentence = function () {
-  return L4.currentSentenceObj;
-};
-
-
-/* ==========================================================
-   ⭐ LEVEL 4 — SCRAMBLER (SPANISH)
-========================================================== */
 function scrambleSentencesLevel4(options, lastOrder) {
   let arr = [...options];
 
-  // Proper Fisher–Yates shuffle
   for (let i = arr.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [arr[i], arr[j]] = [arr[j], arr[i]];
   }
 
-  // Prevent identical order
   if (lastOrder) {
     const newOrder = arr.map(o => o.text).join("|");
     const oldOrder = lastOrder.join("|");
-
     if (newOrder === oldOrder) {
       return scrambleSentencesLevel4(options, lastOrder);
     }
@@ -3449,21 +3452,22 @@ function scrambleSentencesLevel4(options, lastOrder) {
 }
 
 
-
 /* ==========================================================
-   ⭐ LEVEL 4 — SHOW SCREEN
+   ⭐ LEVEL 4 — SHOW SCREEN (ISOLATED)
 ========================================================== */
+
 L4.show = function (screenId) {
 
-  // ⭐ ALWAYS hide the Level 4 entry screen
-  const entry = document.getElementById("screen2L4");
-  if (entry) entry.classList.add("hidden");
+  // optional special case — exit to home
+  if (screenId === "screen0") {
+    const wrapper = document.getElementById("level4Wrapper");
+    if (wrapper) wrapper.classList.add("hidden");
 
-  // ⭐ Unhide wrapper
-  const wrapper = document.getElementById("level4Wrapper");
-  if (wrapper) wrapper.classList.remove("hidden");
+    const home = document.getElementById("screen0");
+    if (home) home.classList.remove("hidden");
+    return;
+  }
 
-  // Hide all Level 4 screens
   const screens = [
     "level4Screen1",
     "level4Screen2",
@@ -3476,24 +3480,22 @@ L4.show = function (screenId) {
     if (el) el.classList.add("hidden");
   });
 
-  // Show target screen
+  const wrapper = document.getElementById("level4Wrapper");
+  if (wrapper) wrapper.classList.remove("hidden");
+
   const target = document.getElementById(screenId);
   if (target) target.classList.remove("hidden");
 };
 
 
-
-
-
-
-
-
-
 /* ==========================================================
    ⭐ LEVEL 4 — START
 ========================================================== */
+
 L4.start = function () {
   console.log("[Level4] start()");
+
+  L4.screen1Active = false;
 
   L4.active = true;
   L4.round = 0;
@@ -3519,7 +3521,10 @@ L4.start = function () {
 /* ==========================================================
    ⭐ LEVEL 4 — START ROUND
 ========================================================== */
+
 L4.startRound = function () {
+  L4.hasMarked = false;
+
   console.log(`[Level4] startRound() — Round ${L4.round + 1}`);
   if (!L4.active) return;
 
@@ -3546,16 +3551,18 @@ L4.startRound = function () {
 /* ==========================================================
    ⭐ LEVEL 4 — SCREEN 1 (SPANISH AUDIO ONLY)
 ========================================================== */
+
 L4.screen1 = function () {
-
-  L4.show("level4Screen1");
-
-  console.log(
-    "wrapper hidden AFTER show():",
-    document.getElementById("level4Wrapper").classList.contains("hidden")
-  );
-
   console.log("[Level4] screen1()");
+
+  if (L4.screen1Active) {
+    console.warn("[Level4] screen1() called while already active — ignoring");
+    return;
+  }
+  L4.screen1Active = true;
+
+  const replayBtn = document.getElementById("l4ReplaySentenceBtn");
+  if (replayBtn) replayBtn.style.display = "none";
 
   L4.stopAllAudio();
   L4.audio.cancelToken.cancel = false;
@@ -3563,12 +3570,13 @@ L4.screen1 = function () {
 
   const sentence = L4.currentSentenceObj;
 
-  const screenEl = document.getElementById("level4Screen1");
+  L4.show("level4Screen1");
 
-  L4.renderProgress();
+  // optional: L4.renderProgress("level4Screen1");
 
   if (!sentence.audio) {
     console.warn("[Level4] No audio found, skipping to screen2()");
+    L4.screen1Active = false;
     L4.screen2();
     return;
   }
@@ -3577,12 +3585,16 @@ L4.screen1 = function () {
   L4.audio.current = audio;
 
   let safety = setTimeout(() => {
+    if (!L4.screen1Active) return;
     console.warn("[Level4] Audio safety timeout — moving to screen2()");
+    L4.screen1Active = false;
     L4.screen2();
   }, 10000);
 
   const finish = () => {
+    if (!L4.screen1Active) return;
     clearTimeout(safety);
+    L4.screen1Active = false;
     L4.screen2();
   };
 
@@ -3596,18 +3608,16 @@ L4.screen1 = function () {
 };
 
 
-
 /* ==========================================================
-   ⭐ LEVEL 4 — SCREEN 2 (SPLIT COLUMN)
+   ⭐ LEVEL 4 — SCREEN 2 (SPLIT COLUMN PARAPHRASING)
 ========================================================== */
+
 L4.screen2 = function () {
   L4.activeScreen = "screen2";
+
   if (!L4.active) return;
   console.log("[Level4] screen2()");
 
-  /* ----------------------------------------------------------
-     1. Retrieve current sentence
-  ---------------------------------------------------------- */
   const s = L4.currentSentenceObj;
   if (!s) {
     console.warn("[Level4] No current sentence — fallback to startRound()");
@@ -3616,43 +3626,27 @@ L4.screen2 = function () {
   }
 
   L4.columnLocked = false;
+
   L4.show("level4Screen2");
 
-  /* ----------------------------------------------------------
-     2. LEFT COLUMN — Spanish sentence
-  ---------------------------------------------------------- */
   const leftBox = document.getElementById("l4LeftColumn");
   if (leftBox) leftBox.textContent = s.spanish;
 
-  /* ----------------------------------------------------------
-     3. RIGHT COLUMN — Paraphrase options (validated)
-  ---------------------------------------------------------- */
   const rightBox = document.getElementById("l4RightColumn");
   rightBox.innerHTML = "";
 
-  // Validate paraphraseOptions
   let opts = Array.isArray(s.paraphraseOptions) ? s.paraphraseOptions : [];
-
-  // Filter out invalid entries
-  opts = opts.filter(o => {
-    const valid = o && typeof o.text === "string";
-    if (!valid) console.warn("[Level4] Invalid paraphrase option:", o);
-    return valid;
-  });
+  opts = opts.filter(o => o && typeof o.text === "string");
 
   if (opts.length === 0) {
     console.error("[Level4] No valid paraphraseOptions for:", s);
-    rightBox.textContent = "⚠️ No paraphrase options available.";
+    rightBox.textContent = "⚠️ No hay opciones de paráfrasis disponibles.";
     return;
   }
 
-  // Scramble safely
   const scrambled = scrambleSentencesLevel4(opts, L4.lastScramble);
-
-  // Store last scramble safely
   L4.lastScramble = scrambled.map(o => o.text);
 
-  // Render buttons
   scrambled.forEach(opt => {
     const btn = document.createElement("button");
     btn.className = "l4OptionBtn";
@@ -3666,9 +3660,6 @@ L4.screen2 = function () {
     rightBox.appendChild(btn);
   });
 
-  /* ----------------------------------------------------------
-     4. Replay button — plays s.audio
-  ---------------------------------------------------------- */
   const replayBtn = document.getElementById("l4ReplayBtn");
   if (replayBtn) {
     replayBtn.style.display = "inline-block";
@@ -3687,19 +3678,20 @@ L4.screen2 = function () {
 };
 
 
-
-
 /* ==========================================================
    ⭐ LEVEL 4 — HANDLE COLUMN CHOICE
 ========================================================== */
+
 L4.handleColumnChoice = function (opt, btn) {
   if (!L4.active) return;
+  console.log("[Level4] handleColumnChoice()");
 
   if (L4.columnLocked) return;
   L4.columnLocked = true;
 
   const s = L4.currentSentenceObj;
   if (!s) {
+    console.warn("[Level4] No current sentence — fallback to startRound()");
     L4.startRound();
     return;
   }
@@ -3709,8 +3701,9 @@ L4.handleColumnChoice = function (opt, btn) {
     L4.score++;
 
     Progress4.markSentenceComplete(s.id);
-    L4.updateScoreKeeper();
-    L4.renderProgress();
+
+    L4.updateScoreKeeper?.();
+    L4.renderProgress?.("level4Screen2");
 
   } else {
     btn.classList.add("l4-wrong");
@@ -3737,15 +3730,20 @@ L4.handleColumnChoice = function (opt, btn) {
 
 
 /* ==========================================================
-   ⭐ LEVEL 4 — ROUND SUMMARY
+   ⭐ LEVEL 4 — ROUND SUMMARY (SCREEN 3)
 ========================================================== */
+
 L4.showRoundSummary = function () {
   L4.activeScreen = "screen3";
 
   if (!L4.active) return;
+  console.log("[Level4] showRoundSummary()");
 
   const s = L4.currentSentenceObj;
-  if (!s) return;
+  if (!s) {
+    console.warn("[Level4] No current sentence");
+    return;
+  }
 
   L4.stopAllAudio();
   L4.audio.cancelToken.cancel = false;
@@ -3756,8 +3754,15 @@ L4.showRoundSummary = function () {
   const meaningBox = document.getElementById("l4MeaningBox");
   const cont = document.getElementById("l4SummaryContainer");
 
-  meaningBox.textContent = s.meaning || "";
+  if (!meaningBox || !cont) {
+    console.error("[Level4] Missing summary DOM elements");
+    return;
+  }
+
+  meaningBox.textContent = "";
   cont.innerHTML = "";
+
+  meaningBox.textContent = s.meaning || "";
 
   if (Array.isArray(s.summaryChunks)) {
     s.summaryChunks.forEach(chunk => {
@@ -3796,11 +3801,41 @@ L4.showRoundSummary = function () {
 
 
 /* ==========================================================
-   ⭐ LEVEL 4 — FINAL SUMMARY
+   ⭐ LEVEL 4 — DYNAMIC REPLAY BUTTON (SUMMARY)
 ========================================================== */
+
+function createAndWireLevel4ReplayButton(targetScreenId, audioUrl) {
+  const oldBtn = document.getElementById("l4SummaryReplayBtn");
+  if (oldBtn) oldBtn.remove();
+
+  const btn = document.createElement("button");
+  btn.id = "l4SummaryReplayBtn";
+  btn.className = "iconBtn replay-top";
+  btn.textContent = "🔁 Repetir";
+
+  const screen = document.getElementById(targetScreenId);
+  if (!screen) return;
+  screen.appendChild(btn);
+
+  btn.onclick = () => {
+    L4.stopAllAudio();
+    L4.audio.cancelToken.cancel = false;
+    L4.audio.generation++;
+
+    const audio = new Audio(audioUrl);
+    L4.audio.current = audio;
+    audio.play().catch(() => {});
+  };
+}
+
+
+/* ==========================================================
+   ⭐ LEVEL 4 — FINAL SUMMARY (SCREEN 4)
+========================================================== */
+
 function showLevel4FinalSummary() {
   if (!L4.active) return;
-
+  console.log("[Level4] showLevel4FinalSummary()");
   L4.active = false;
 
   L4.stopAllAudio();
@@ -3838,10 +3873,12 @@ function showLevel4FinalSummary() {
 /* ==========================================================
    ⭐ LEVEL 4 — RESET
 ========================================================== */
+
 L4.reset = function () {
   L4.round = 0;
   L4.score = 0;
   L4.currentSentence = null;
+  L4.currentSentenceObj = null;
 
   L4.audio.cancelToken.cancel = false;
   L4.audio.generation++;
@@ -3849,105 +3886,18 @@ L4.reset = function () {
   L4.columnLocked = false;
 };
 
-/* ==========================================================
-   ⭐ LEVEL 4 — PROGRESS BAR
-========================================================== */
-L4.renderProgress = function () {
-  const wrapperParent = document.getElementById("level4Wrapper");
-  if (!wrapperParent) return;
-
-  const p = Progress4.getProgress();
-  const pct = p.percent;
-
-  let wrapper = document.getElementById("l4ProgressWrapper");
-  if (!wrapper) {
-    wrapper = document.createElement("div");
-    wrapper.id = "l4ProgressWrapper";
-    wrapper.style.marginBottom = "20px";
-
-    wrapper.innerHTML = `
-      <div id="l4ProgressLabel" style="
-        font-size: 18px;
-        margin-bottom: 6px;
-        color: #fff;
-        text-align: center;
-      "></div>
-
-      <div id="l4ProgressOuter" style="
-        width: 100%;
-        height: 10px;
-        background: #333;
-        border-radius: 6px;
-        overflow: hidden;
-      ">
-        <div id="l4ProgressBar" style="
-          height: 100%;
-          width: 0%;
-          background: #4caf50;
-          transition: width 0.3s ease;
-        "></div>
-      </div>
-    `;
-
-    wrapperParent.prepend(wrapper);
-  }
-
-  document.getElementById("l4ProgressBar").style.width = pct + "%";
-  document.getElementById("l4ProgressLabel").textContent =
-    `Mastery: ${p.completed} / ${p.total}`;
-};
-
-
-/* ==========================================================
-   ⭐ LEVEL 4 — SCORE KEEPER
-========================================================== */
-L4.updateScoreKeeper = function () {
-  const el = document.getElementById("scoreKeeper");
-  if (!el) return;
-
-  const p = Progress4.getProgress();
-  const current = p.completed;
-  const total = p.total;
-
-  el.textContent = `${current} / ${total}`;
-};
-
-
-
-/* ==========================================================
-   ⭐ LEVEL 4 — REPLAY BUTTON CREATOR
-========================================================== */
-function createAndWireLevel4ReplayButton(targetScreenId, audioUrl) {
-  const oldBtn = document.getElementById("l4ReplayBtnDynamic");
-  if (oldBtn) oldBtn.remove();
-
-  const btn = document.createElement("button");
-  btn.id = "l4ReplayBtnDynamic";
-  btn.className = "iconBtn replay-top";
-  btn.textContent = "🔁 Repetir";
-
-  const screen = document.getElementById(targetScreenId);
-  if (!screen) return;
-  screen.appendChild(btn);
-
-  btn.onclick = () => {
-    L4.stopAllAudio();
-    L4.audio.cancelToken.cancel = false;
-    L4.audio.generation++;
-
-    const audio = new Audio(audioUrl);
-    L4.audio.current = audio;
-    audio.play().catch(() => {});
-  };
-}
-
 
 /* ==========================================================
    ⭐ LEVEL 4 — BUTTON WIRING
 ========================================================== */
+
 function wireLevel4Buttons() {
   const wrapper = document.getElementById("level4Wrapper");
-  if (!wrapper || wrapper.classList.contains("hidden")) return;
+  if (!wrapper || wrapper.classList.contains("hidden")) {
+    return;
+  }
+
+  console.log("[Level4] Wiring buttons");
 
   const startBtn = document.getElementById("startLevel4Btn");
   if (startBtn) {
@@ -3982,15 +3932,27 @@ document.addEventListener("DOMContentLoaded", wireLevel4Buttons);
 /* ==========================================================
    ⭐ LEVEL 4 — CLEANUP
 ========================================================== */
+
 function cleanupLevel4() {
+  console.log("[Level4] cleanup()");
+
   L4.active = false;
 
-  try { 
+  try {
     if (L4.stopAllAudio) L4.stopAllAudio();
-  } catch (e) {}
+  } catch (e) {
+    console.warn("[Level4] stopAllAudio error", e);
+  }
 
-  if (L4.timer) { clearTimeout(L4.timer); L4.timer = null; }
-  if (L4.interval) { clearInterval(L4.interval); L4.interval = null; }
+  if (L4.timer) {
+    clearTimeout(L4.timer);
+    L4.timer = null;
+  }
+
+  if (L4.interval) {
+    clearInterval(L4.interval);
+    L4.interval = null;
+  }
 
   if (Array.isArray(L4.timeouts)) {
     L4.timeouts.forEach(id => clearTimeout(id));
@@ -4015,6 +3977,17 @@ function cleanupLevel4() {
   const wrapper = document.getElementById("level4Wrapper");
   if (wrapper) wrapper.classList.add("hidden");
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4212,13 +4185,47 @@ if (!level4Btn) {
 
 
 
+// ---------------------------------------------------------
+// LEVEL 4 (UNGATED VERSION)
+// ---------------------------------------------------------
+// ---------------------------------------------------------
+// LEVEL 4 (UNGATED VERSION)
+// ---------------------------------------------------------
+const level4Btn = document.getElementById("level4Btn");
 
+if (!level4Btn) {
+  console.error("Level 4 button not found in DOM");
+} else {
+  level4Btn.addEventListener("click", () => {
+    console.log("[Level 4] Ungated handler fired");
 
-level4Btn.addEventListener("click", () => {
-  console.log("[Level 4] Ungated access — entering Level 4");
+    // Hide all global screens
+    document.querySelectorAll(".screen").forEach(s => s.classList.add("hidden"));
 
-  launchLevel(4, L4.start);
-});
+    // Show Level 4 ENTRY SCREEN
+    const entry = document.getElementById("screen2L4");
+    if (entry) entry.classList.remove("hidden");
+
+    // Wire START button
+    const startBtn = document.getElementById("startLevel4Btn");
+    if (startBtn) {
+      startBtn.onclick = () => {
+        console.log("[Level 4] Start button clicked");
+
+        // Hide entry screen
+        entry.classList.add("hidden");
+
+        // ⭐ UNHIDE LEVEL 4 WRAPPER (CRITICAL)
+        const wrapper = document.getElementById("level4Wrapper");
+        if (wrapper) wrapper.classList.remove("hidden");
+
+        // ⭐ Begin Level 4 session
+        L4.start();
+      };
+    }
+  });
+}
+
 
 
 

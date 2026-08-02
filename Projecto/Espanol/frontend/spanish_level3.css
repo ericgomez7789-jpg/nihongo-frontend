@@ -1,24 +1,26 @@
 /* ==========================================================
-   LEVEL 3 — GLOBAL DARK THEME
+   LEVEL 3 — GLOBAL DARK THEME (MATCH LEVEL 2)
 ========================================================== */
 
-.level3 {
-  background: #000;
+.level3,
+.level3-screen,
+.level3 .summary-row,
+.level3 .summary-container,
+.level3 .l3-column,
+.level3 .l3-split-container {
+  background: #000 !important;   /* same base as Level 2 */
   color: #fff;
   font-family: Arial, sans-serif;
 }
 
 /* Screens */
-.level3.screen {
-  display: none;
-  background: #000;
-  color: #fff;
+.level3-screen {
   min-height: 100vh;
   padding: 40px;
+  display: none;
 }
 
-/* Visible screen */
-.level3.screen:not(.hidden) {
+.level3-screen:not(.hidden) {
   display: block;
 }
 
@@ -30,110 +32,35 @@
 }
 
 /* ==========================================================
-   LEVEL 3 — MUSIC CONTROLS (scoped)
+   LEVEL 3 — BUTTONS (MATCH LEVEL 2)
 ========================================================== */
 
-.level3 .music-controls {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-}
-
-.level3 .iconBtn {
-  background: #222;
-  color: #fff;
-  border: 1px solid #555;
-  padding: 8px 12px;
-  margin-left: 6px;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.level3 .iconBtn:hover {
-  background: #333;
-}
-
-/* ==========================================================
-   LEVEL 3 — SCREEN 2 (INFERENCE MODE)
-========================================================== */
-
+.level3 .iconBtn,
+.level3 .l3-replay-btn,
 .level3 .replay-top {
-  margin-bottom: 20px;
-  font-size: 22px;
+  background: #111;              /* same neutral dark as Level 2 */
+  color: #fff;
+  border: 1px solid #444;
   padding: 10px 20px;
-  background: #222;
-  border: 1px solid #555;
   border-radius: 8px;
-}
-
-.level3 .sentence-line {
-  font-size: 26px;
-  text-align: center;
-  margin-top: 20px;
-  color: #fff;
-}
-
-.level3 .mcq-container {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-top: 20px;
-}
-
-.level3 .l3OptionBtn {
-  padding: 14px 18px;
-  font-size: 1.2rem;
-  border-radius: 8px;
-  border: 2px solid #444;
-  background: #222;
-  color: #fff;
   cursor: pointer;
-  transition: background 0.2s ease;
 }
 
-.level3 .l3OptionBtn:hover {
-  background: #333;
-}
-
-.level3 .l3OptionBtn.l3-correct {
-  background-color: #4CAF50 !important;
-  color: white;
-}
-
-.level3 .l3OptionBtn.l3-wrong {
-  background-color: #E53935 !important;
-  color: white;
+.level3 .iconBtn:hover,
+.level3 .l3-replay-btn:hover,
+.level3 .replay-top:hover {
+  background: #222;
 }
 
 /* ==========================================================
-   LEVEL 3 — SUMMARY SCREEN
+   LEVEL 3 — SPLIT COLUMN INFERENCE
 ========================================================== */
 
-.level3 .summary-container {
-  display: grid;                 /* ⭐ same fix as Level 6 */
-  grid-template-columns: 1fr;    /* one row per chunk */
-  gap: 14px;
-  margin: 20px auto;
-  max-width: 520px;
+.l3-split-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 30px auto;
+  width: fit-content;
 }
 
-.level3 .summary-row {
-  background: #111;
-  border: 1px solid #444;
-  border-radius: 10px;
-  padding: 14px 16px;
-
-  /* ⭐ 3-column grid (spanish / english / optional) */
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 12px;
-
-  font-size: 1.1rem;
-  color: #ccc;
-}
-
-.level3 .summary-spanish,
-.level3 .summary-english {
-  color: #fff;
-  display: block;
-}
