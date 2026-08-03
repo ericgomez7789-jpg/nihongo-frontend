@@ -1,3 +1,103 @@
+
+window.GamepadControls = {
+  cursorIndex: 0,
+  tiles: [],
+  activeTile: null,
+  dropZones: [],
+  lastButtonA: false,
+
+  init() {
+    this.cursor = document.createElement("div");
+    this.cursor.id = "gpCursor";
+    this.cursor.style.position = "absolute";
+    this.cursor.style.border = "3px solid #4a90e2";
+    this.cursor.style.borderRadius = "10px";
+    this.cursor.style.pointerEvents = "none";
+    this.cursor.style.zIndex = "99999";
+    document.body.appendChild(this.cursor);
+
+    requestAnimationFrame(this.loop.bind(this));
+  },
+
+  loop() {
+    const gp = navigator.getGamepads()[0];
+    if (!gp) return requestAnimationFrame(this.loop.bind(this));
+
+    // Move cursor with left stick
+    const x = gp.axes[0];
+    const y = gp.axes[1];
+
+    if (Math.abs(x) > 0.3 || Math.abs(y) > 0.3) {
+      this.cursorIndex = Math.max(0, Math.min(this.tiles.length - 1,
+        this.cursorIndex + (x > 0.5 ? 1 : x < -0.5 ? -1 : 0)
+      ));
+    }
+
+    // Position cursor over tile
+    const tile = this.tiles[this.cursorIndex];
+    if (tile) {
+      const r = tile.getBoundingClientRect();
+      this.cursor.style.left = r.left + "px";
+      this.cursor.style.top = r.top + "px";
+      this.cursor.style.width = r.width + "px";
+      this.cursor.style.height = r.height + "px";
+    }
+
+    // A button (button 0)
+    const buttonA = gp.buttons[0].pressed;
+
+    if (buttonA && !this.lastButtonA) {
+      this.handleA(tile);
+    }
+
+    this.lastButtonA = buttonA;
+
+    requestAnimationFrame(this.loop.bind(this));
+  },
+
+  handleA(tile) {
+    if (!this.activeTile) {
+      // Pick up tile
+      this.activeTile = tile;
+      tile.style.outline = "3px solid #ff9800";
+    } else {
+      // Try dropping
+      for (const dz of this.dropZones) {
+        const r = dz.getBoundingClientRect();
+        const cr = this.cursor.getBoundingClientRect();
+        if (cr.left >= r.left && cr.right <= r.right &&
+            cr.top >= r.top && cr.bottom <= r.bottom) {
+
+          dz.textContent = this.activeTile.textContent;
+          dz.classList.add("correct");
+          this.activeTile.style.outline = "";
+          this.activeTile = null;
+
+          L0.checkCompletion();
+          return;
+        }
+      }
+
+      // If no drop zone matched, cancel
+      this.activeTile.style.outline = "";
+      this.activeTile = null;
+    }
+  }
+};
+
+window.GamepadControls.init();
+
+
+
+
+
+
+
+
+
+
+
+
 // -----------------------------------------
 // LEVEL 0 ROOT OBJECT (must come first)
 // -----------------------------------------
@@ -573,6 +673,19 @@ L0.screen2 = function () {
   wireDropZone(kataDrop, "katakana", pair.katakana);
 
   /* -------------------------------------------------------------
+     ⭐ GAMEPAD SUPPORT (NO LOGIC CHANGED)
+  ------------------------------------------------------------- */
+  if (window.GamepadControls) {
+    GamepadControls.tiles = [
+      ...leftBox.querySelectorAll(".kanaTile"),
+      ...rightBox.querySelectorAll(".kanaTile")
+    ];
+
+    GamepadControls.dropZones = [hiraDrop, kataDrop];
+    GamepadControls.cursorIndex = 0;
+  }
+
+  /* -------------------------------------------------------------
      ⭐ REPLAY BUTTON AT BOTTOM
   ------------------------------------------------------------- */
   const replayBtn = document.getElementById("L0replayBtn");
@@ -600,6 +713,7 @@ L0.screen2 = function () {
 
 
 
+
 /* ==========================================================
    COMPLETION + SUMMARY
 ========================================================== */
@@ -617,8 +731,10 @@ L0.checkCompletion = function () {
     L0.columnLocked = true;
 
     L0.score++;
-    if (window.Progress0 && typeof Progress0.markSentenceComplete === "function") {
-      Progress0.markSentenceComplete("level0", L0.currentPairId);
+
+    // ⭐ FIX: increment progress
+    if (window.Progress0 && typeof Progress0.increment === "function") {
+      Progress0.increment("level0");
     }
 
     L0.updateScoreKeeper();
@@ -631,6 +747,7 @@ L0.checkCompletion = function () {
   }
 };
 
+
 L0.showRoundSummary = function () {
   L0.activeScreen = "screen3L0";
 
@@ -640,28 +757,41 @@ L0.showRoundSummary = function () {
     return;
   }
 
+  // Stop audio + reset guards
   L0.stopAllAudio();
   L0.generationGuards();
 
+  // Ensure total rounds is set
   if (!L0.TOTAL_ROUNDS) {
     L0.TOTAL_ROUNDS = L0.dataset.length;
   }
 
-  const hiraBox     = document.getElementById("L0summaryHira");
-  const kataBox     = document.getElementById("L0summaryKata");
-  const meaningBox  = document.getElementById("L0summaryMeaning");
-  const correctLine = document.getElementById("L0summaryCorrectLine");
+  // DOM references
+  const hiraBox       = document.getElementById("L0summaryHira");
+  const kataBox       = document.getElementById("L0summaryKata");
+  const meaningBox    = document.getElementById("L0summaryMeaning");
+  const correctLine   = document.getElementById("L0summaryCorrectLine");
+  const counterLine   = document.getElementById("L0summaryCounter");
+  const nextBtn       = document.getElementById("L0summaryNextBtn");
 
+  // Fill summary fields
   if (hiraBox)    hiraBox.textContent    = pair.hiragana || "—";
   if (kataBox)    kataBox.textContent    = pair.katakana || "—";
   if (meaningBox) meaningBox.textContent = pair.meaning  || "—";
 
+  // Correct answer line
   if (correctLine) {
     correctLine.textContent =
       `Correct answer for this round: ${pair.hiragana} / ${pair.katakana} (${pair.meaning})`;
   }
 
-  const nextBtn = document.getElementById("L0summaryNextBtn");
+  // ⭐ NEW: Round counter line
+  if (counterLine) {
+    counterLine.textContent =
+      `Round ${L0.round + 1} of ${L0.TOTAL_ROUNDS}`;
+  }
+
+  // Next button logic
   if (nextBtn) {
     nextBtn.onclick = () => {
       L0.stopAllAudio();
@@ -672,7 +802,6 @@ L0.showRoundSummary = function () {
         return;
       }
 
-      // ⭐ Use dataset, not queue
       const nextPair = L0.dataset[L0.round];
       if (!nextPair) {
         L0.showFinalSummary();
@@ -680,13 +809,14 @@ L0.showRoundSummary = function () {
       }
 
       L0.setCurrentPair(nextPair);
-
       L0.startRound();
     };
   }
 
+  // Show summary screen
   L0.show("screen3L0");
 };
+
 
 
 

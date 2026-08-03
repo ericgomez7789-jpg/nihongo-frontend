@@ -967,7 +967,7 @@ function cancelAllAudioPlayback() {
 
 let level1Score = 0;
 let level1Round = 0;
-const TOTAL_ROUNDS = 5;
+const TOTAL_ROUNDS = 1;
 window.level1TotalRounds = TOTAL_ROUNDS;
 let level1Index = 0;
 let level1Sentences = [];

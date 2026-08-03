@@ -383,10 +383,27 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  <!-- ⭐⭐⭐ GLOBAL RESET BUTTON MOUNT ⭐⭐⭐ -->
 <div id="globalResetMount"></div>
-
-
 
 
 
@@ -416,10 +433,8 @@
     <div class="level0-side level0-hiragana">
       <h3>Hiragana</h3>
 
-      <!-- Drag tiles -->
       <div id="L0hiraTiles" class="kana-tiles"></div>
 
-      <!-- Drop zone -->
       <div id="L0hiraDrop" class="kana-drop-zone">
         Drop the correct hiragana here
       </div>
@@ -429,28 +444,23 @@
     <div class="level0-side level0-katakana">
       <h3>Katakana</h3>
 
-      <!-- Drag tiles -->
       <div id="L0kataTiles" class="kana-tiles"></div>
 
-      <!-- Drop zone -->
       <div id="L0kataDrop" class="kana-drop-zone">
         Drop the correct katakana here
       </div>
-  </div>
-  </div>
-       <!-- ⭐ PUT THE REPLAY BUTTON HERE ⭐ -->
-  <button id="L0replayBtn">Replay</button>
-  </div>
     </div>
 
+  </div>
+
+  <!-- ⭐ Replay button -->
+  <button id="L0replayBtn">Replay</button>
+</div>
 
 <!-- SCREEN 3 — LEVEL 0 CUSTOM SUMMARY -->
 <div id="screen3L0" class="screen hidden">
   <h2 class="title">Summary</h2>
 
-  <!-- ============================
-       USER CHOICES (NEW + FIXED)
-  ============================= -->
   <div class="summary-line">
     Hiragana chosen: <span id="L0summaryHiraUser">—</span>
   </div>
@@ -459,9 +469,6 @@
     Katakana chosen: <span id="L0summaryKataUser">—</span>
   </div>
 
-  <!-- ============================
-       CORRECT ANSWERS
-  ============================= -->
   <div class="summary-line">
     Correct hiragana: <span id="L0summaryHira">—</span>
   </div>
@@ -474,16 +481,23 @@
     Meaning: <span id="L0summaryMeaning">—</span>
   </div>
 
-  <!-- ============================
-       CORRECT ANSWER LINE
-  ============================= -->
   <div id="L0summaryCorrectLine" class="summary-correct"></div>
+  <div id="L0summaryCounter" class="summary-line"></div>
 
-  <!-- ============================
-       NEXT ROUND BUTTON
-  ============================= -->
   <button id="L0summaryNextBtn" class="primaryBtn">Next round</button>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
