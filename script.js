@@ -5,6 +5,7 @@ window.GamepadControls = {
   dropZones: [],
   lastButtonA: false,
   lastButtonB: false,
+  nextMoveTime: 0,
 
   init() {
     this.cursor = document.createElement("div");
@@ -24,19 +25,27 @@ window.GamepadControls = {
     if (!gp) return requestAnimationFrame(this.loop.bind(this));
 
     /* ---------------------------------------------------------
-       LEFT STICK — TILE SELECTION
+       LEFT STICK — TILE SELECTION (LEGION GO FIX)
     --------------------------------------------------------- */
     const x = gp.axes[0];
+    const now = performance.now();
 
-    if (Math.abs(x) > 0.3) {
+    // Stronger threshold + movement cooldown
+    if (Math.abs(x) > 0.4 && now >= this.nextMoveTime) {
+      const dir = x > 0 ? 1 : -1;
+
       this.cursorIndex = Math.max(
         0,
-        Math.min(this.tiles.length - 1,
-          this.cursorIndex + (x > 0.5 ? 1 : x < -0.5 ? -1 : 0)
-        )
+        Math.min(this.tiles.length - 1, this.cursorIndex + dir)
       );
+
+      // Delay before next movement (console feel)
+      this.nextMoveTime = now + 180;
     }
 
+    /* ---------------------------------------------------------
+       POSITION CURSOR OVER CURRENT TILE
+    --------------------------------------------------------- */
     const tile = this.tiles[this.cursorIndex];
     if (tile) {
       const r = tile.getBoundingClientRect();
@@ -57,15 +66,13 @@ window.GamepadControls = {
     this.lastButtonA = buttonA;
 
     /* ---------------------------------------------------------
-       BUTTON B — CANCEL
+       BUTTON B — CANCEL PICKUP
     --------------------------------------------------------- */
     const buttonB = gp.buttons[1].pressed;
 
-    if (buttonB && !this.lastButtonB) {
-      if (this.activeTile) {
-        this.activeTile.style.outline = "";
-        this.activeTile = null;
-      }
+    if (buttonB && !this.lastButtonB && this.activeTile) {
+      this.activeTile.style.outline = "";
+      this.activeTile = null;
     }
     this.lastButtonB = buttonB;
 
@@ -109,6 +116,23 @@ window.GamepadControls = {
 };
 
 window.GamepadControls.init();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
