@@ -1,3 +1,833 @@
+// -----------------------------------------
+// LEVEL 0 ROOT OBJECT (must come first)
+// -----------------------------------------
+const L0 = {
+  round: 0,
+  score: 0,
+  TOTAL_ROUNDS: 0,
+
+  dataset: [],
+  currentPairId: null,
+  currentPairObj: null,
+
+  activeScreen: null,
+  columnLocked: false,
+
+  audio: {
+    current: null,
+    cancelToken: { cancel: false },
+    generation: 0
+  }
+};
+
+// -----------------------------------------
+// LEVEL 0 DATASET (must come AFTER L0 exists)
+// -----------------------------------------
+L0.dataset = [
+  { id: "e",  hiragana: "え", katakana: "エ", meaning: "e",  audio: "audio/sentences/kana_e.wav" },
+  { id: "i",  hiragana: "い", katakana: "イ", meaning: "i",  audio: "audio/sentences/kana_i.wav" },
+  { id: "o",  hiragana: "お", katakana: "オ", meaning: "o",  audio: "audio/sentences/kana_o.wav" },
+  { id: "u",  hiragana: "う", katakana: "ウ", meaning: "u",  audio: "audio/sentences/kana_u.wav" },
+
+  { id: "sa",  hiragana: "さ", katakana: "サ", meaning: "sa",  audio: "audio/sentences/kana_sa.wav" },
+  { id: "shi", hiragana: "し", katakana: "シ", meaning: "shi", audio: "audio/sentences/kana_shi.wav" },
+  { id: "su",  hiragana: "す", katakana: "ス", meaning: "su",  audio: "audio/sentences/kana_su.wav" },
+  { id: "se",  hiragana: "せ", katakana: "セ", meaning: "se",  audio: "audio/sentences/kana_se.wav" },
+  { id: "so",  hiragana: "そ", katakana: "ソ", meaning: "so",  audio: "audio/sentences/kana_so.wav" },
+
+  { id: "ka",  hiragana: "か", katakana: "カ", meaning: "ka",  audio: "audio/sentences/kana_ka.wav" },
+  { id: "ki",  hiragana: "き", katakana: "キ", meaning: "ki",  audio: "audio/sentences/kana_ki.wav" },
+  { id: "ku",  hiragana: "く", katakana: "ク", meaning: "ku",  audio: "audio/sentences/kana_ku.wav" },
+  { id: "ke",  hiragana: "け", katakana: "ケ", meaning: "ke",  audio: "audio/sentences/kana_ke.wav" },
+  { id: "ko",  hiragana: "こ", katakana: "コ", meaning: "ko",  audio: "audio/sentences/kana_ko.wav" },
+
+  { id: "mu", hiragana: "む", katakana: "ム", meaning: "mu", audio: "audio/sentences/kana_mu.wav" },
+  { id: "ma", hiragana: "ま", katakana: "マ", meaning: "ma", audio: "audio/sentences/kana_ma.wav" },
+  { id: "mi", hiragana: "み", katakana: "ミ", meaning: "mi", audio: "audio/sentences/kana_mi.wav" },
+
+  { id: "he", hiragana: "へ", katakana: "ヘ", meaning: "he", audio: "audio/sentences/kana_he.wav" },
+  { id: "ho", hiragana: "ほ", katakana: "ホ", meaning: "ho", audio: "audio/sentences/kana_ho.wav" },
+  { id: "hi", hiragana: "ひ", katakana: "ヒ", meaning: "hi", audio: "audio/sentences/kana_hi.wav" },
+  { id: "fu", hiragana: "ふ", katakana: "フ", meaning: "fu", audio: "audio/sentences/kana_fu.wav" },
+  { id: "ha", hiragana: "は", katakana: "ハ", meaning: "ha", audio: "audio/sentences/kana_ha.wav" },
+
+  { id: "wa", hiragana: "わ", katakana: "ワ", meaning: "wa", audio: "audio/sentences/kana_wa.wav" },
+  { id: "no", hiragana: "の", katakana: "ノ", meaning: "no", audio: "audio/sentences/kana_no.wav" },
+  { id: "nu", hiragana: "ぬ", katakana: "ヌ", meaning: "nu", audio: "audio/sentences/kana_nu.wav" },
+  { id: "ne", hiragana: "ね", katakana: "ネ", meaning: "ne", audio: "audio/sentences/kana_ne.wav" },
+  { id: "na", hiragana: "な", katakana: "ナ", meaning: "na", audio: "audio/sentences/kana_na.wav" },
+  { id: "ni", hiragana: "に", katakana: "ニ", meaning: "ni", audio: "audio/sentences/kana_ni.wav" },
+
+  { id: "te", hiragana: "て", katakana: "テ", meaning: "te", audio: "audio/sentences/kana_te.wav" },
+  { id: "to", hiragana: "と", katakana: "ト", meaning: "to", audio: "audio/sentences/kana_to.wav" },
+  { id: "tsu", hiragana: "つ", katakana: "ツ", meaning: "tsu", audio: "audio/sentences/kana_tsu.wav" },
+  { id: "chi", hiragana: "ち", katakana: "チ", meaning: "chi", audio: "audio/sentences/kana_chi.wav" },
+  { id: "ta", hiragana: "た", katakana: "タ", meaning: "ta", audio: "audio/sentences/kana_ta.wav" }
+];
+
+
+// -----------------------------------------
+// SET TOTAL ROUNDS
+// -----------------------------------------
+L0.TOTAL_ROUNDS = L0.dataset.length;
+
+
+
+
+
+
+
+
+/* ==========================================================
+   ⭐ LEVEL 0 — KANA DRAG & DROP (SPLIT COLUMN)
+========================================================== */
+
+
+
+window.L0 = window.L0 || L0;
+
+/* ==========================================================
+   UTILITIES
+========================================================== */
+
+function scrambleKanaPairsLevel0(options, lastOrder) {
+  const arr = [...options];
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
+L0.setCurrentPair = function (pairObj) {
+  if (!pairObj || !pairObj.id) {
+    console.error("L0.setCurrentPair called with invalid pair:", pairObj);
+    return;
+  }
+  L0.currentPairId = pairObj.id;
+  L0.currentPairObj = pairObj;
+};
+
+L0.getCurrentPair = function () {
+  return L0.currentPairObj || null;
+};
+
+L0.pairsQueue = [];
+
+L0.loadPairs = function (options) {
+  L0.pairsQueue = scrambleKanaPairsLevel0(options);
+};
+
+L0.getNextPair = function () {
+  if (!L0.pairsQueue || L0.pairsQueue.length === 0) {
+    console.warn("[Level0] No pairs left — stopping Level0");
+    return null;
+  }
+  return L0.pairsQueue.pop();
+};
+
+
+L0.setCurrentPair = function (pairObj) {
+  if (!pairObj || !pairObj.id) {
+    console.error("L0.setCurrentPair called with invalid pair:", pairObj);
+    return;
+  }
+  L0.currentPairId = pairObj.id;
+  L0.currentPairObj = pairObj;
+};
+
+L0.getCurrentPair = function () {
+  return L0.currentPairObj || null;
+};
+
+L0.pairsQueue = [];   // global queue
+
+L0.loadPairs = function(options) {
+  // options = your kana pairs
+  L0.pairsQueue = scrambleKanaPairsLevel0(options);
+};
+
+L0.getNextPair = function() {
+  if (!L0.pairsQueue || L0.pairsQueue.length === 0) {
+    console.warn("[Level0] No pairs left — stopping Level0");
+    return null;
+  }
+
+  return L0.pairsQueue.pop();
+};
+
+
+/* ==========================================================
+   AUDIO GUARDS
+========================================================== */
+
+L0.stopAllAudio = function () {
+  L0.audio.cancelToken.cancel = true;
+  L0.audio.generation++;
+
+  if (L0.audio.current) {
+    try {
+      L0.audio.current.pause();
+      L0.audio.current.currentTime = 0;
+    } catch (e) {}
+    L0.audio.current = null;
+  }
+
+  // also respect global audio safety
+  if (typeof stopAllAudio === "function") {
+    stopAllAudio();
+  }
+};
+
+L0.generationGuards = function () {
+  L0.audio.cancelToken.cancel = false;
+  L0.audio.generation++;
+  L0.audio.current = null;
+};
+
+/* ==========================================================
+   PROGRESS + RESET
+========================================================== */
+
+L0.Reset = {
+  attach(screenEl, screenName) {
+    if (!screenEl) return;
+    if (screenName !== "screen1L0") return;
+
+    let btn = screenEl.querySelector(".resetBtn");
+    if (!btn) {
+      btn = document.createElement("button");
+      btn.className = "resetBtn";
+      btn.textContent = "Reset Level 0";
+
+      btn.style.position = "absolute";
+      btn.style.top = "10px";
+      btn.style.right = "10px";
+      btn.style.zIndex = "9999";
+
+      screenEl.appendChild(btn);
+    }
+
+    btn.style.display = "block";
+
+    if (!btn.dataset.wired) {
+      btn.dataset.wired = "true";
+
+      btn.onclick = () => {
+        L0.stopAllAudio();
+        L0.audio.cancelToken.cancel = true;
+        L0.audio.generation++;
+
+        if (window.Progress0 && typeof Progress0.resetLevel === "function") {
+          Progress0.resetLevel("level0");
+        }
+
+        L0.round = 0;
+        L0.score = 0;
+
+        L0.renderProgress("screen1L0");
+
+        setTimeout(() => {
+          L0.start();
+        }, 0);
+      };
+    }
+  }
+};
+
+L0.renderProgress = function (screenId) {
+  const screen = document.getElementById(screenId);
+  if (!screen || !window.Progress0) return;
+
+  const p = Progress0.getLevelProgress("level0");
+  const current = p.completed;
+  const total = p.total;
+  const pct = p.percent;
+
+  let wrapper = document.getElementById("l0ProgressWrapper");
+  if (!wrapper) {
+    wrapper = document.createElement("div");
+    wrapper.id = "l0ProgressWrapper";
+    wrapper.style.marginBottom = "20px";
+
+    wrapper.innerHTML = `
+      <div id="l0ProgressLabel" style="
+        font-size: 18px;
+        margin-bottom: 6px;
+        color: #fff;
+        text-align: center;
+      "></div>
+
+      <div id="l0ProgressOuter" style="
+        width: 100%;
+        height: 10px;
+        background: #333;
+        border-radius: 6px;
+        overflow: hidden;
+      ">
+        <div id="l0ProgressBar" style="
+          height: 100%;
+          width: 0%;
+          background: #4caf50;
+          transition: width 0.3s ease;
+        "></div>
+      </div>
+    `;
+  }
+
+  const title = screen.querySelector(".title");
+  if (title && !wrapper.parentNode) {
+    title.insertAdjacentElement("afterend", wrapper);
+  } else if (!wrapper.parentNode) {
+    screen.prepend(wrapper);
+  }
+
+  document.getElementById("l0ProgressBar").style.width = pct + "%";
+  document.getElementById("l0ProgressLabel").textContent =
+    `Mastery: ${current} / ${total}`;
+};
+
+L0.updateScoreKeeper = function () {
+  const el = document.getElementById("scoreKeeper");
+  if (!el || !window.Progress0) return;
+
+  const p = Progress0.getLevelProgress("level0");
+  el.textContent = `${p.completed} / ${p.total}`;
+};
+
+/* ==========================================================
+   SCREEN SYSTEM (LOCAL TO LEVEL 0)
+========================================================== */
+
+L0.show = function (screenId) {
+  const screens = ["screen1L0", "screen2L0", "screen3L0", "screen4L0"];
+
+  screens.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.classList.add("hidden");
+  });
+
+  const wrapper = document.getElementById("level0Wrapper");
+  if (wrapper) wrapper.classList.remove("hidden");
+
+  const target = document.getElementById(screenId);
+  if (target) target.classList.remove("hidden");
+
+  L0.activeScreen = screenId;
+};
+
+/* ==========================================================
+   START + ROUND FLOW
+========================================================== */
+
+L0.start = function () {
+
+  // Reset audio state
+  L0.stopAllAudio();
+  L0.audio.cancelToken.cancel = false;
+  L0.audio.generation++;
+
+  // Reset round state
+  L0.round = 0;
+  L0.score = 0;
+  L0.columnLocked = false;
+  L0.currentPairId = null;
+  L0.currentPairObj = null;
+
+  // Reset scramble state
+  L0.lastOrder = null;
+  L0.scrambledPairs = [];
+
+  // ⭐ Use your actual dataset (NOT level0KanaPairs)
+  L0.pairsQueue = scrambleKanaPairsLevel0(L0.dataset, L0.lastOrder);
+
+  // Set total rounds
+  L0.TOTAL_ROUNDS = L0.pairsQueue.length;
+
+  // Show wrapper
+  const wrapper = document.getElementById("level0Wrapper");
+  if (wrapper) wrapper.classList.remove("hidden");
+
+  // Start first round
+  L0.startRound();
+};
+
+
+
+
+L0.startRound = function () {
+  if (!L0.TOTAL_ROUNDS) {
+    L0.TOTAL_ROUNDS = L0.pairsQueue.length;
+  }
+
+  if (L0.round >= L0.TOTAL_ROUNDS) {
+    L0.showFinalSummary();
+    return;
+  }
+
+  L0.stopAllAudio();
+  L0.audio.cancelToken.cancel = false;
+  L0.audio.generation++;
+
+  L0.columnLocked = false;
+
+  // ⭐ Use queue instead of dataset
+  const pair = L0.getNextPair();
+  if (!pair) {
+    L0.showFinalSummary();
+    return;
+  }
+
+  L0.setCurrentPair(pair);
+
+  L0.screen1();
+};
+
+
+/* ==========================================================
+   SCREEN 1 — KANA AUDIO ONLY
+========================================================== */
+
+L0.screen1Active = false;
+
+L0.screen1 = function () {
+  if (L0.screen1Active) return;
+  L0.screen1Active = true;
+
+  L0.stopAllAudio();
+  L0.generationGuards();
+
+  const pair = L0.currentPairObj;
+  if (!pair) {
+    console.warn("[Level0] No current pair — fallback to startRound()");
+    L0.screen1Active = false;
+    L0.startRound();
+    return;
+  }
+
+  L0.show("screen1L0");
+
+  const screenEl = document.getElementById("screen1L0");
+  L0.Reset.attach(screenEl, "screen1L0");
+  L0.renderProgress("screen1L0");
+  L0.updateScoreKeeper();
+
+  if (!pair.audio) {
+    console.warn("[Level0] No audio for pair — moving to screen2L0()");
+    L0.screen1Active = false;
+    L0.screen2();
+    return;
+  }
+
+  const audio = new Audio(pair.audio);
+  L0.audio.current = audio;
+
+  let safety = setTimeout(() => {
+    if (!L0.screen1Active) return;
+    L0.screen1Active = false;
+    L0.screen2();
+  }, 8000);
+
+  const finish = () => {
+    if (!L0.screen1Active) return;
+    clearTimeout(safety);
+    L0.screen1Active = false;
+    L0.screen2();
+  };
+
+  audio.onended = finish;
+  audio.onerror = finish;
+
+  audio.play().catch(() => {
+    finish();
+  });
+};
+
+/* ==========================================================
+   SCREEN 2 — SPLIT COLUMN DRAG & DROP
+========================================================== */
+L0.screen2 = function () {
+  L0.activeScreen = "screen2L0";
+  L0.columnLocked = false;
+
+  const pair = L0.currentPairObj;
+  if (!pair) {
+    console.warn("[Level0] No current pair — fallback to startRound()");
+    L0.startRound();
+    return;
+  }
+
+  /* -------------------------------------------------------------
+     SHOW SCREEN + PROGRESS
+  ------------------------------------------------------------- */
+  L0.renderProgress("screen2L0");
+  L0.show("screen2L0");
+
+  const leftBox = document.getElementById("L0hiraTiles");
+  const rightBox = document.getElementById("L0kataTiles");
+  const hiraDrop = document.getElementById("L0hiraDrop");
+  const kataDrop = document.getElementById("L0kataDrop");
+
+  /* -------------------------------------------------------------
+     RESET UI
+  ------------------------------------------------------------- */
+  leftBox.innerHTML = "";
+  rightBox.innerHTML = "";
+  hiraDrop.textContent = "Drop hiragana here";
+  kataDrop.textContent = "Drop katakana here";
+  hiraDrop.classList.remove("correct");
+  kataDrop.classList.remove("correct");
+
+  /* -------------------------------------------------------------
+     BUILD REAL TILE + 5 DECOYS (HIRAGANA)
+  ------------------------------------------------------------- */
+  const hiraTiles = [pair.hiragana];
+  const allHira = ["あ","い","う","え","お","か","き","く","け","こ","さ","し","す","せ","そ","た","ち","つ","て","と","な","に","ぬ","ね","の","は","ひ","ふ","へ","ほ","ま","み","む","め","も","や","ゆ","よ","ら","り","る","れ","ろ","わ","を","ん"];
+
+  while (hiraTiles.length < 6) {
+    const d = allHira[Math.floor(Math.random() * allHira.length)];
+    if (!hiraTiles.includes(d)) hiraTiles.push(d);
+  }
+
+  for (let i = hiraTiles.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [hiraTiles[i], hiraTiles[j]] = [hiraTiles[j], hiraTiles[i]];
+  }
+
+  hiraTiles.forEach(h => {
+    const btn = document.createElement("div");
+    btn.className = "kanaTile";
+    btn.textContent = h;
+    btn.draggable = true;
+
+    btn.ondragstart = e => {
+      e.dataTransfer.setData("kanaType", "hiragana");
+      e.dataTransfer.setData("kanaValue", h);
+    };
+
+    leftBox.appendChild(btn);
+  });
+
+  /* -------------------------------------------------------------
+     BUILD REAL TILE + 5 DECOYS (KATAKANA)
+  ------------------------------------------------------------- */
+  const kataTiles = [pair.katakana];
+  const allKata = ["ア","イ","ウ","エ","オ","カ","キ","ク","ケ","コ","サ","シ","ス","セ","ソ","タ","チ","ツ","テ","ト","ナ","ニ","ヌ","ネ","ノ","ハ","ヒ","フ","ヘ","ホ","マ","ミ","ム","メ","モ","ヤ","ユ","ヨ","ラ","リ","ル","レ","ロ","ワ","ヲ","ン"];
+
+  while (kataTiles.length < 6) {
+    const d = allKata[Math.floor(Math.random() * allKata.length)];
+    if (!kataTiles.includes(d)) kataTiles.push(d);
+  }
+
+  for (let i = kataTiles.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [kataTiles[i], kataTiles[j]] = [kataTiles[j], kataTiles[i]];
+  }
+
+  kataTiles.forEach(k => {
+    const btn = document.createElement("div");
+    btn.className = "kanaTile";
+    btn.textContent = k;
+    btn.draggable = true;
+
+    btn.ondragstart = e => {
+      e.dataTransfer.setData("kanaType", "katakana");
+      e.dataTransfer.setData("kanaValue", k);
+    };
+
+    rightBox.appendChild(btn);
+  });
+
+  /* -------------------------------------------------------------
+     DROP ZONES
+  ------------------------------------------------------------- */
+  function wireDropZone(zoneEl, expectedType, expectedValue) {
+    zoneEl.ondragover = e => {
+      e.preventDefault();
+      zoneEl.classList.add("dragover");
+    };
+
+    zoneEl.ondragleave = () => {
+      zoneEl.classList.remove("dragover");
+    };
+
+    zoneEl.ondrop = e => {
+      e.preventDefault();
+      zoneEl.classList.remove("dragover");
+      if (L0.columnLocked) return;
+
+      const type = e.dataTransfer.getData("kanaType");
+      const value = e.dataTransfer.getData("kanaValue");
+
+      if (type === expectedType && value === expectedValue) {
+        zoneEl.classList.add("correct");
+        zoneEl.textContent = value;
+        L0.checkCompletion();
+      } else {
+        alert("Try again");
+      }
+    };
+  }
+
+  wireDropZone(hiraDrop, "hiragana", pair.hiragana);
+  wireDropZone(kataDrop, "katakana", pair.katakana);
+
+  /* -------------------------------------------------------------
+     ⭐ REPLAY BUTTON AT BOTTOM
+  ------------------------------------------------------------- */
+  const replayBtn = document.getElementById("L0replayBtn");
+
+  if (replayBtn) {
+    replayBtn.style.display = "block";
+    replayBtn.style.marginTop = "40px";
+    replayBtn.style.marginBottom = "10px";
+    replayBtn.style.textAlign = "center";
+
+    replayBtn.onclick = () => {
+      if (L0.columnLocked) return;
+      if (!pair.audio) return;
+
+      L0.stopAllAudio();
+      L0.audio.cancelToken.cancel = false;
+      L0.audio.generation++;
+
+      const audio = new Audio(pair.audio);
+      L0.audio.current = audio;
+      audio.play().catch(() => {});
+    };
+  }
+};
+
+
+
+/* ==========================================================
+   COMPLETION + SUMMARY
+========================================================== */
+
+L0.checkCompletion = function () {
+  const hiraDrop = document.getElementById("L0hiraDrop");
+  const kataDrop = document.getElementById("L0kataDrop");
+
+  if (!hiraDrop || !kataDrop) return;
+
+  const hiraDone = hiraDrop.classList.contains("correct");
+  const kataDone = kataDrop.classList.contains("correct");
+
+  if (hiraDone && kataDone && !L0.columnLocked) {
+    L0.columnLocked = true;
+
+    L0.score++;
+    if (window.Progress0 && typeof Progress0.markSentenceComplete === "function") {
+      Progress0.markSentenceComplete("level0", L0.currentPairId);
+    }
+
+    L0.updateScoreKeeper();
+    L0.renderProgress("screen2L0");
+
+    setTimeout(() => {
+      if (L0.activeScreen !== "screen2L0") return;
+      L0.showRoundSummary();
+    }, 600);
+  }
+};
+
+L0.showRoundSummary = function () {
+  L0.activeScreen = "screen3L0";
+
+  const pair = L0.currentPairObj;
+  if (!pair) {
+    console.warn("[Level0 Summary] No current pair — cannot render summary");
+    return;
+  }
+
+  L0.stopAllAudio();
+  L0.generationGuards();
+
+  if (!L0.TOTAL_ROUNDS) {
+    L0.TOTAL_ROUNDS = L0.dataset.length;
+  }
+
+  const hiraBox     = document.getElementById("L0summaryHira");
+  const kataBox     = document.getElementById("L0summaryKata");
+  const meaningBox  = document.getElementById("L0summaryMeaning");
+  const correctLine = document.getElementById("L0summaryCorrectLine");
+
+  if (hiraBox)    hiraBox.textContent    = pair.hiragana || "—";
+  if (kataBox)    kataBox.textContent    = pair.katakana || "—";
+  if (meaningBox) meaningBox.textContent = pair.meaning  || "—";
+
+  if (correctLine) {
+    correctLine.textContent =
+      `Correct answer for this round: ${pair.hiragana} / ${pair.katakana} (${pair.meaning})`;
+  }
+
+  const nextBtn = document.getElementById("L0summaryNextBtn");
+  if (nextBtn) {
+    nextBtn.onclick = () => {
+      L0.stopAllAudio();
+      L0.round++;
+
+      if (L0.round >= L0.TOTAL_ROUNDS) {
+        L0.showFinalSummary();
+        return;
+      }
+
+      // ⭐ Use dataset, not queue
+      const nextPair = L0.dataset[L0.round];
+      if (!nextPair) {
+        L0.showFinalSummary();
+        return;
+      }
+
+      L0.setCurrentPair(nextPair);
+
+      L0.startRound();
+    };
+  }
+
+  L0.show("screen3L0");
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================
+   FINAL SUMMARY (SCREEN 4)
+========================================================== */
+
+L0.showFinalSummary = function () {
+  L0.stopAllAudio();
+  L0.generationGuards();
+
+  L0.renderProgress("screen4L0");
+  L0.show("screen4L0");
+
+  const roundsEl = document.getElementById("L0finalRounds");
+  const scoreEl = document.getElementById("L0finalScore");
+  const correctEl = document.getElementById("L0finalCorrect");
+
+  if (roundsEl) roundsEl.textContent = L0.round;
+  if (scoreEl) scoreEl.textContent = L0.score;
+  if (correctEl) correctEl.textContent = L0.score;
+
+  const againBtn = document.getElementById("L0playAgainBtn");
+  if (againBtn) {
+    againBtn.onclick = e => {
+      e.preventDefault();
+      L0.reset();
+      L0.start();
+    };
+  }
+
+  const homeBtn = document.getElementById("L0homeBtn");
+  if (homeBtn) {
+    homeBtn.onclick = e => {
+      e.preventDefault();
+      L0.reset();
+      L0.exitToMenu();
+    };
+  }
+};
+
+L0.reset = function () {
+  L0.round = 0;
+  L0.score = 0;
+  L0.currentPairId = null;
+  L0.currentPairObj = null;
+
+  L0.audio.cancelToken.cancel = false;
+  L0.audio.generation++;
+
+  L0.columnLocked = false;
+};
+
+L0.exitToMenu = function () {
+  L0.stopAllAudio();
+  L0.audio.cancelToken.cancel = false;
+  L0.audio.generation++;
+
+  const wrapper = document.getElementById("level0Wrapper");
+  if (wrapper) wrapper.classList.add("hidden");
+
+  const home = document.getElementById("screen0");
+  if (home) home.classList.remove("hidden");
+};
+
+/* ==========================================================
+   BUTTON WIRING
+========================================================== */
+
+function wireLevel0Buttons() {
+  const wrapper = document.getElementById("level0Wrapper");
+  if (!wrapper) return;
+
+  const startBtn = document.getElementById("startLevel0Btn");
+  if (startBtn) {
+    startBtn.onclick = () => {
+      L0.stopAllAudio();
+      L0.start();
+    };
+  }
+
+  const exitBtn = document.getElementById("L0finalExitBtn");
+  if (exitBtn) {
+    exitBtn.onclick = () => {
+      L0.exitToMenu();
+    };
+  }
+}
+
+document.addEventListener("DOMContentLoaded", wireLevel0Buttons);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* ------------------------------
@@ -40455,6 +41285,38 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById(`screen2L${levelNumber}`)?.classList.remove("hidden");
     startFn();
   }
+
+
+
+
+  // ---------------------------------------------------------
+// LEVEL 0 — ISOLATED HANDLER
+// ---------------------------------------------------------
+document.querySelector('.levelBtn[data-level="0"]')
+  ?.addEventListener("click", () => {
+
+    console.log("[Level 0] Isolated handler fired");
+
+    // Prevent launching if already inside another level
+    if (window.currentScreen && window.currentScreen !== "screen0") return;
+    if (window.currentLevel !== 0) return;
+
+    window.currentLevel = 0;
+    window.currentScreen = "screen1L0";
+
+    // Hide all screens
+    document.querySelectorAll(".screen").forEach(s =>
+      s.classList.add("hidden")
+    );
+
+    // Show Level 0 wrapper + first screen
+    document.getElementById("level0Wrapper")?.classList.remove("hidden");
+    document.getElementById("screen1L0")?.classList.remove("hidden");
+
+    // Start Level 0 engine
+    L0.start();
+  });
+
 
   // ---------------------------------------------------------
   // LEVEL 1

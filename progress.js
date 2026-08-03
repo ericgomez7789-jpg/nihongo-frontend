@@ -1,37 +1,30 @@
-/* ----------------------------------------------------------
-   PROGRESS ENGINE (OFFLINE FIRST, CLOUD-READY)
-   Matches Level 1 architecture in script.js
----------------------------------------------------------- */
+/* ==========================================================
+   LEVEL 0 — HTML-BASED PROGRESS UI
+========================================================== */
 
-const Progress = {
+const Progress0 = {
   data: {},
 
   init() {
     try {
-      this.data = JSON.parse(localStorage.getItem("progress")) || {};
+      this.data = JSON.parse(localStorage.getItem("progress0")) || {};
     } catch (e) {
       this.data = {};
     }
   },
 
   save() {
-    localStorage.setItem("progress", JSON.stringify(this.data));
+    localStorage.setItem("progress0", JSON.stringify(this.data));
   },
 
   normalize(level) {
-    if (typeof level === "number") return `level${level}`;
-    return level;
+    return typeof level === "number" ? `level${level}` : level;
   },
 
   ensure(level) {
     const key = this.normalize(level);
     if (!this.data[key]) {
-      this.data[key] = {
-        total: 0,
-        completed: 0,
-        percent: 0,
-        masteredSentences: []
-      };
+      this.data[key] = { total: 0, completed: 0, percent: 0, masteredSentences: [] };
     }
     return this.data[key];
   },
@@ -57,25 +50,106 @@ const Progress = {
   },
 
   getLevelProgress(level) {
-    const key = this.normalize(level);
-    return this.ensure(key);
+    return this.ensure(this.normalize(level));
   },
 
   updatePercent(level) {
     const key = this.normalize(level);
     const d = this.ensure(key);
-
-    if (d.total > 0) {
-      d.percent = Math.round((d.completed / d.total) * 100);
-    } else {
-      d.percent = 0;
-    }
+    d.percent = d.total > 0 ? Math.round((d.completed / d.total) * 100) : 0;
   },
 
   resetLevel(level) {
     const key = this.normalize(level);
     const d = this.ensure(key);
+    d.masteredSentences = [];
+    d.completed = 0;
+    this.updatePercent(key);
+    this.save();
+  },
 
+  load() {
+    try {
+      return JSON.parse(localStorage.getItem("progress0")) || {};
+    } catch (e) {
+      return {};
+    }
+  },
+
+  saveRaw(obj) {
+    this.data = obj || {};
+    localStorage.setItem("progress0", JSON.stringify(this.data));
+  }
+};
+
+document.addEventListener("DOMContentLoaded", () => Progress0.init());
+
+
+
+/* ==========================================================
+   LEVEL 1 — BASE PROGRESS ENGINE
+========================================================== */
+
+const Progress = {
+  data: {},
+
+  init() {
+    try {
+      this.data = JSON.parse(localStorage.getItem("progress")) || {};
+    } catch (e) {
+      this.data = {};
+    }
+  },
+
+  save() {
+    localStorage.setItem("progress", JSON.stringify(this.data));
+  },
+
+  normalize(level) {
+    return typeof level === "number" ? `level${level}` : level;
+  },
+
+  ensure(level) {
+    const key = this.normalize(level);
+    if (!this.data[key]) {
+      this.data[key] = { total: 0, completed: 0, percent: 0, masteredSentences: [] };
+    }
+    return this.data[key];
+  },
+
+  setTotal(level, total) {
+    const key = this.normalize(level);
+    const d = this.ensure(key);
+    d.total = total;
+    this.updatePercent(key);
+    this.save();
+  },
+
+  markSentenceComplete(level, sentenceId) {
+    const key = this.normalize(level);
+    const d = this.ensure(key);
+
+    if (!d.masteredSentences.includes(sentenceId)) {
+      d.masteredSentences.push(sentenceId);
+      d.completed = d.masteredSentences.length;
+      this.updatePercent(key);
+      this.save();
+    }
+  },
+
+  getLevelProgress(level) {
+    return this.ensure(this.normalize(level));
+  },
+
+  updatePercent(level) {
+    const key = this.normalize(level);
+    const d = this.ensure(key);
+    d.percent = d.total > 0 ? Math.round((d.completed / d.total) * 100) : 0;
+  },
+
+  resetLevel(level) {
+    const key = this.normalize(level);
+    const d = this.ensure(key);
     d.masteredSentences = [];
     d.completed = 0;
     this.updatePercent(key);
@@ -96,659 +170,159 @@ const Progress = {
   }
 };
 
-document.addEventListener("DOMContentLoaded", () => {
-  Progress.init();
-});
-
-/* ----------------------------------------------------------
-   PROGRESS2 — Level 2 Mastery Tracking
----------------------------------------------------------- */
-
-const Progress2 = {
-  data: {},
-
-  init() {
-    try {
-      this.data = JSON.parse(localStorage.getItem("progress2")) || {};
-    } catch (e) {
-      this.data = {};
-    }
-  },
-
-  save() {
-    localStorage.setItem("progress2", JSON.stringify(this.data));
-  },
-
-  normalize(level) {
-    if (typeof level === "number") return `level${level}`;
-    return level;
-  },
-
-  ensure(level) {
-    const key = this.normalize(level);
-    if (!this.data[key]) {
-      this.data[key] = {
-        total: 0,
-        completed: 0,
-        percent: 0,
-        masteredSentences: []
-      };
-    }
-    return this.data[key];
-  },
-
-  setTotal(level, total) {
-    const key = this.normalize(level);
-    const d = this.ensure(key);
-    d.total = total;
-    this.updatePercent(key);
-    this.save();
-  },
-
-  markSentenceComplete(level, sentenceId) {
-    const key = this.normalize(level);
-    const d = this.ensure(key);
-
-    if (!d.masteredSentences.includes(sentenceId)) {
-      d.masteredSentences.push(sentenceId);
-      d.completed = d.masteredSentences.length;
-      this.updatePercent(key);
-      this.save();
-    }
-  },
-
-  getLevelProgress(level) {
-    const key = this.normalize(level);
-    return this.ensure(key);
-  },
-
-  updatePercent(level) {
-    const key = this.normalize(level);
-    const d = this.ensure(key);
-
-    if (d.total > 0) {
-      d.percent = Math.round((d.completed / d.total) * 100);
-    } else {
-      d.percent = 0;
-    }
-  },
-
-  resetLevel(level) {
-    const key = this.normalize(level);
-    const d = this.ensure(key);
-
-    d.masteredSentences = [];
-    d.completed = 0;
-    this.updatePercent(key);
-    this.save();
-  },
-
-  load() {
-    try {
-      return JSON.parse(localStorage.getItem("progress2")) || {};
-    } catch (e) {
-      return {};
-    }
-  },
-
-  saveRaw(obj) {
-    this.data = obj || {};
-    localStorage.setItem("progress2", JSON.stringify(this.data));
-  }
-};
-
-document.addEventListener("DOMContentLoaded", () => {
-  Progress2.init();
-});
-
-/* ----------------------------------------------------------
-   PROGRESS3 — Level 3 Mastery Tracking
----------------------------------------------------------- */
-
-const Progress3 = {
-  data: {},
-
-  init() {
-    try {
-      this.data = JSON.parse(localStorage.getItem("progress3")) || {};
-    } catch (e) {
-      this.data = {};
-    }
-  },
-
-  save() {
-    localStorage.setItem("progress3", JSON.stringify(this.data));
-  },
-
-  normalize(level) {
-    if (typeof level === "number") return `level${level}`;
-    return level;
-  },
-
-  ensure(level) {
-    const key = this.normalize(level);
-    if (!this.data[key]) {
-      this.data[key] = {
-        total: 0,
-        completed: 0,
-        percent: 0,
-        masteredSentences: []
-      };
-    }
-    return this.data[key];
-  },
-
-  setTotal(level, total) {
-    const key = this.normalize(level);
-    const d = this.ensure(key);
-    d.total = total;
-    this.updatePercent(key);
-    this.save();
-  },
-
-  markSentenceComplete(level, sentenceId) {
-    const key = this.normalize(level);
-    const d = this.ensure(key);
-
-    if (!d.masteredSentences.includes(sentenceId)) {
-      d.masteredSentences.push(sentenceId);
-      d.completed = d.masteredSentences.length;
-      this.updatePercent(key);
-      this.save();
-    }
-  },
-
-  getLevelProgress(level) {
-    const key = this.normalize(level);
-    return this.ensure(key);
-  },
-
-  updatePercent(level) {
-    const key = this.normalize(level);
-    const d = this.ensure(key);
-
-    if (d.total > 0) {
-      d.percent = Math.round((d.completed / d.total) * 100);
-    } else {
-      d.percent = 0;
-    }
-  },
-
-  resetLevel(level) {
-    const key = this.normalize(level);
-    const d = this.ensure(key);
-
-    d.masteredSentences = [];
-    d.completed = 0;
-    this.updatePercent(key);
-    this.save();
-  },
-
-  load() {
-    try {
-      return JSON.parse(localStorage.getItem("progress3")) || {};
-    } catch (e) {
-      return {};
-    }
-  },
-
-  saveRaw(obj) {
-    this.data = obj || {};
-    localStorage.setItem("progress3", JSON.stringify(this.data));
-  }
-};
-
-document.addEventListener("DOMContentLoaded", () => {
-  Progress3.init();
-});
-/* ----------------------------------------------------------
-   PROGRESS4 — Level 4 Mastery Tracking (CLEAN VERSION)
----------------------------------------------------------- */
-
-console.log(">>> Progress4 LOADED");
-
-const Progress4 = {
-  data: {},
-
-  init() {
-    try {
-      this.data = JSON.parse(localStorage.getItem("progress4")) || {};
-    } catch (e) {
-      this.data = {};
-    }
-  },
-
-  save() {
-    localStorage.setItem("progress4", JSON.stringify(this.data));
-  },
-
-  normalize(level) {
-    if (typeof level === "number") return `level${level}`;
-    return level;
-  },
-
-  ensure(level) {
-    const key = this.normalize(level);
-    if (!this.data[key]) {
-      this.data[key] = {
-        total: 0,
-        completed: 0,
-        percent: 0,
-        masteredSentences: []
-      };
-    }
-    return this.data[key];
-  },
-
-  setTotal(level, total) {
-    const key = this.normalize(level);
-    const d = this.ensure(key);
-    d.total = total;
-    this.updatePercent(key);
-    this.save();
-  },
-
-  markSentenceComplete(level, sentenceId) {
-    const key = this.normalize(level);
-    const d = this.ensure(key);
-
-    console.log("[Progress4] markSentenceComplete CALLED — key:", key, "sentenceId:", sentenceId);
-    console.log("[Progress4] BEFORE — completed:", d.completed, "mastered:", d.masteredSentences);
-
-    if (!d.masteredSentences.includes(sentenceId)) {
-      d.masteredSentences.push(sentenceId);
-      d.completed = d.masteredSentences.length;
-      this.updatePercent(key);
-      this.save();
-
-      console.log("[Progress4] AFTER — completed:", d.completed, "mastered:", d.masteredSentences);
-    } else {
-      console.log("[Progress4] SKIPPED — already mastered:", sentenceId);
-    }
-  },
-
-  getLevelProgress(level) {
-    const key = this.normalize(level);
-    return this.ensure(key);
-  },
-
-  updatePercent(level) {
-    const key = this.normalize(level);
-    const d = this.ensure(key);
-
-    if (d.total > 0) {
-      d.percent = Math.round((d.completed / d.total) * 100);
-    } else {
-      d.percent = 0;
-    }
-  },
-
-  resetLevel(level) {
-    const key = this.normalize(level);
-    const d = this.ensure(key);
-
-    d.masteredSentences = [];
-    d.completed = 0;
-    this.updatePercent(key);
-    this.save();
-  },
-
-  load() {
-    try {
-      return JSON.parse(localStorage.getItem("progress4")) || {};
-    } catch (e) {
-      return {};
-    }
-  },
-
-  saveRaw(obj) {
-    this.data = obj || {};
-    localStorage.setItem("progress4", JSON.stringify(this.data));
-  }
-};
-
-document.addEventListener("DOMContentLoaded", () => {
-  Progress4.init();
-});
-
-
-
-
-
-
-
-
+document.addEventListener("DOMContentLoaded", () => Progress.init());
 
 
 
 /* ==========================================================
-   LEVEL 5 — HTML-BASED PROGRESS UI
+   TEMPLATE MAKER FOR LEVELS 2–6
 ========================================================== */
 
-const Progress5 = {
-  data: {},
+function createProgressModule(storageKey, levelKey) {
+  return {
+    data: {},
 
-  init() {
-    try {
-      this.data = JSON.parse(localStorage.getItem("progress5")) || {};
-    } catch (e) {
-      this.data = {};
-    }
-  },
+    init() {
+      try {
+        this.data = JSON.parse(localStorage.getItem(storageKey)) || {};
+      } catch (e) {
+        this.data = {};
+      }
+    },
 
-  save() {
-    localStorage.setItem("progress5", JSON.stringify(this.data));
-  },
+    save() {
+      localStorage.setItem(storageKey, JSON.stringify(this.data));
+    },
 
-  normalize(level) {
-    if (typeof level === "number") return `level${level}`;
-    return level;
-  },
+    normalize(level) {
+      return typeof level === "number" ? `level${level}` : level;
+    },
 
-  ensure(level) {
-    const key = this.normalize(level);
-    if (!this.data[key]) {
-      this.data[key] = {
-        total: 0,
-        completed: 0,
-        percent: 0,
-        masteredSentences: []
-      };
-    }
-    return this.data[key];
-  },
+    ensure(level) {
+      const key = this.normalize(level);
+      if (!this.data[key]) {
+        this.data[key] = { total: 0, completed: 0, percent: 0, masteredSentences: [] };
+      }
+      return this.data[key];
+    },
 
-  setTotal(level, total) {
-    const key = this.normalize(level);
-    const d = this.ensure(key);
-    d.total = total;
-    this.updatePercent(key);
-    this.save();
-  },
+    setTotal(level, total) {
+      const d = this.ensure(level);
+      d.total = total;
+      this.updatePercent(level);
+      this.save();
+    },
 
-  markSentenceComplete(level, sentenceId) {
-    const key = this.normalize(level);
-    const d = this.ensure(key);
+    markSentenceComplete(level, sentenceId) {
+      const d = this.ensure(level);
+      if (!d.masteredSentences.includes(sentenceId)) {
+        d.masteredSentences.push(sentenceId);
+        d.completed = d.masteredSentences.length;
+        this.updatePercent(level);
+        this.save();
+      }
+    },
 
-    if (!d.masteredSentences.includes(sentenceId)) {
-      d.masteredSentences.push(sentenceId);
-      d.completed = d.masteredSentences.length;
-      this.updatePercent(key);
+    getLevelProgress(level) {
+      return this.ensure(level);
+    },
+
+    getProgress() {
+      return this.getLevelProgress(levelKey);
+    },
+
+    updatePercent(level) {
+      const d = this.ensure(level);
+      d.percent = d.total > 0 ? Math.round((d.completed / d.total) * 100) : 0;
+    },
+
+    resetLevel(level) {
+      const d = this.ensure(level);
+      d.masteredSentences = [];
+      d.completed = 0;
+      this.updatePercent(level);
       this.save();
     }
-  },
+  };
+}
 
-  getLevelProgress(level) {
-    const key = this.normalize(level);
-    return this.ensure(key);
-  },
 
-  updatePercent(level) {
-    const key = this.normalize(level);
-    const d = this.ensure(key);
-
-    if (d.total > 0) {
-      d.percent = Math.round((d.completed / d.total) * 100);
-    } else {
-      d.percent = 0;
-    }
-  },
-
-  resetLevel(level) {
-    const key = this.normalize(level);
-    const d = this.ensure(key);
-
-    d.masteredSentences = [];
-    d.completed = 0;
-    this.updatePercent(key);
-    this.save();
-  },
-
-  load() {
-    try {
-      return JSON.parse(localStorage.getItem("progress5")) || {};
-    } catch (e) {
-      return {};
-    }
-  },
-
-  saveRaw(obj) {
-    this.data = obj || {};
-    localStorage.setItem("progress5", JSON.stringify(this.data));
-  }
-};
-
-document.addEventListener("DOMContentLoaded", () => {
-  Progress5.init();
-});
 
 /* ==========================================================
-   LEVEL 6 — HTML-BASED PROGRESS UI
+   LEVEL 2 — PROGRESS2
 ========================================================== */
 
-const Progress6 = {
-  data: {},
+const Progress2 = createProgressModule("progress2", "level2");
+document.addEventListener("DOMContentLoaded", () => Progress2.init());
 
-  init() {
-    try {
-      this.data = JSON.parse(localStorage.getItem("progress6")) || {};
-    } catch (e) {
-      this.data = {};
-    }
-  },
 
-  save() {
-    localStorage.setItem("progress6", JSON.stringify(this.data));
-  },
-
-  normalize(level) {
-    if (typeof level === "number") return `level${level}`;
-    return level;
-  },
-
-  ensure(level) {
-    const key = this.normalize(level);
-    if (!this.data[key]) {
-      this.data[key] = {
-        total: 0,
-        completed: 0,
-        percent: 0,
-        masteredSentences: []
-      };
-    }
-    return this.data[key];
-  },
-
-  setTotal(level, total) {
-    const key = this.normalize(level);
-    const d = this.ensure(key);
-    d.total = total;
-    this.updatePercent(key);
-    this.save();
-  },
-
-  markSentenceComplete(level, sentenceId) {
-    const key = this.normalize(level);
-    const d = this.ensure(key);
-
-    if (!d.masteredSentences.includes(sentenceId)) {
-      d.masteredSentences.push(sentenceId);
-      d.completed = d.masteredSentences.length;
-      this.updatePercent(key);
-      this.save();
-    }
-  },
-
-  getLevelProgress(level) {
-    const key = this.normalize(level);
-    return this.ensure(key);
-  },
-
-  updatePercent(level) {
-    const key = this.normalize(level);
-    const d = this.ensure(key);
-
-    if (d.total > 0) {
-      d.percent = Math.round((d.completed / d.total) * 100);
-    } else {
-      d.percent = 0;
-    }
-  },
-
-  resetLevel(level) {
-    const key = this.normalize(level);
-    const d = this.ensure(key);
-
-    d.masteredSentences = [];
-    d.completed = 0;
-    this.updatePercent(key);
-    this.save();
-  },
-
-  load() {
-    try {
-      return JSON.parse(localStorage.getItem("progress6")) || {};
-    } catch (e) {
-      return {};
-    }
-  },
-
-  saveRaw(obj) {
-    this.data = obj || {};
-    localStorage.setItem("progress6", JSON.stringify(this.data));
-  }
-};
-
-document.addEventListener("DOMContentLoaded", () => {
-  Progress6.init();
-});
 
 /* ==========================================================
-   LEVEL 7 — HTML-BASED PROGRESS UI
+   LEVEL 3 — PROGRESS3
 ========================================================== */
 
-const Progress7 = {
-  data: {},
+const Progress3 = createProgressModule("progress3", "level3");
+document.addEventListener("DOMContentLoaded", () => Progress3.init());
 
-  init() {
-    try {
-      this.data = JSON.parse(localStorage.getItem("progress7")) || {};
-    } catch (e) {
-      this.data = {};
-    }
-  },
 
-  save() {
-    localStorage.setItem("progress7", JSON.stringify(this.data));
-  },
-
-  normalize(level) {
-    if (typeof level === "number") return `level${level}`;
-    return level;
-  },
-
-  ensure(level) {
-    const key = this.normalize(level);
-    if (!this.data[key]) {
-      this.data[key] = {
-        total: 0,
-        completed: 0,
-        percent: 0,
-        masteredSentences: []
-      };
-    }
-    return this.data[key];
-  },
-
-  setTotal(level, total) {
-    const key = this.normalize(level);
-    const d = this.ensure(key);
-    d.total = total;
-    this.updatePercent(key);
-    this.save();
-  },
-
-  markSentenceComplete(level, sentenceId) {
-    const key = this.normalize(level);
-    const d = this.ensure(key);
-
-    if (!d.masteredSentences.includes(sentenceId)) {
-      d.masteredSentences.push(sentenceId);
-      d.completed = d.masteredSentences.length;
-      this.updatePercent(key);
-      this.save();
-    }
-  },
-
-  getLevelProgress(level) {
-    const key = this.normalize(level);
-    return this.ensure(key);
-  },
-
-  updatePercent(level) {
-    const key = this.normalize(level);
-    const d = this.ensure(key);
-
-    if (d.total > 0) {
-      d.percent = Math.round((d.completed / d.total) * 100);
-    } else {
-      d.percent = 0;
-    }
-  },
-
-  resetLevel(level) {
-    const key = this.normalize(level);
-    const d = this.ensure(key);
-
-    d.masteredSentences = [];
-    d.completed = 0;
-    this.updatePercent(key);
-    this.save();
-  },
-
-  load() {
-    try {
-      return JSON.parse(localStorage.getItem("progress7")) || {};
-    } catch (e) {
-      return {};
-    }
-  },
-
-  saveRaw(obj) {
-    this.data = obj || {};
-    localStorage.setItem("progress7", JSON.stringify(this.data));
-  }
-};
-
-document.addEventListener("DOMContentLoaded", () => {
-  Progress7.init();
-});
 
 /* ==========================================================
-   LEVEL 8 — HTML-BASED PROGRESS UI
+   LEVEL 4 — PROGRESS4 (SPANISH PARAPHRASING)
+========================================================== */
+
+// console.log(">>> Progress4 LOADED");
+
+const Progress4 = createProgressModule("progress4", "level4");
+
+// Auto-init removed (Option A)
+// document.addEventListener("DOMContentLoaded", () => Progress4.init());
+
+
+
+/* ==========================================================
+   LEVEL 5 — PROGRESS5
+========================================================== */
+
+const Progress5 = createProgressModule("progress5", "level5");
+document.addEventListener("DOMContentLoaded", () => Progress5.init());
+
+
+
+/* ==========================================================
+   LEVEL 6 — PROGRESS6
+========================================================== */
+
+const Progress6 = createProgressModule("progress6", "level6");
+document.addEventListener("DOMContentLoaded", () => Progress6.init());
+
+
+
+/* ==========================================================
+   LEVEL 7 — PROGRESS7
+========================================================== */
+
+const Progress7 = createProgressModule("progress7", "level7");
+document.addEventListener("DOMContentLoaded", () => Progress7.init());
+
+
+
+/* ==========================================================
+   LEVEL 8 — PROGRESS8
 ========================================================== */
 
 const Progress8 = {
-  data: {
-    total: 0,
-    completed: 0,
-    percent: 0,
-    masteredSentences: []
-  },
+  data: { total: 0, completed: 0, percent: 0, masteredSentences: [] },
 
   init() {
     try {
       const saved = JSON.parse(localStorage.getItem("progress8"));
-
       if (saved && typeof saved === "object") {
-        this.data = {
-          total: saved.total ?? this.data.total,
-          completed: saved.completed ?? 0,
-          percent: saved.percent ?? 0,
-          masteredSentences: Array.isArray(saved.masteredSentences)
-            ? saved.masteredSentences
-            : []
-        };
+        this.data.total = saved.total ?? this.data.total;
+        this.data.completed = saved.completed ?? 0;
+        this.data.percent = saved.percent ?? 0;
+        this.data.masteredSentences = Array.isArray(saved.masteredSentences)
+          ? saved.masteredSentences
+          : [];
       }
     } catch (e) {
       console.warn("[Progress8] Failed to load, using defaults");
@@ -766,10 +340,7 @@ const Progress8 = {
   },
 
   markSentenceComplete(sentenceId) {
-    if (!sentenceId) {
-      console.warn("[Progress8] markSentenceComplete called with no sentenceId");
-      return;
-    }
+    if (!sentenceId) return;
 
     if (!this.data.masteredSentences.includes(sentenceId)) {
       this.data.masteredSentences.push(sentenceId);
@@ -784,13 +355,10 @@ const Progress8 = {
   },
 
   updatePercent() {
-    if (this.data.total > 0) {
-      this.data.percent = Math.round(
-        (this.data.completed / this.data.total) * 100
-      );
-    } else {
-      this.data.percent = 0;
-    }
+    this.data.percent =
+      this.data.total > 0
+        ? Math.round((this.data.completed / this.data.total) * 100)
+        : 0;
   },
 
   reset() {
@@ -804,35 +372,27 @@ const Progress8 = {
   }
 };
 
-document.addEventListener("DOMContentLoaded", () => {
-  Progress8.init();
-});
+document.addEventListener("DOMContentLoaded", () => Progress8.init());
+
+
 
 /* ==========================================================
-   LEVEL 9 — HTML-BASED PROGRESS UI
+   LEVEL 9 — PROGRESS9
 ========================================================== */
 
 const Progress9 = {
-  data: {
-    total: 0,
-    completed: 0,
-    percent: 0,
-    masteredSentences: []
-  },
+  data: { total: 0, completed: 0, percent: 0, masteredSentences: [] },
 
   init() {
     try {
       const saved = JSON.parse(localStorage.getItem("progress9"));
-
       if (saved && typeof saved === "object") {
-        this.data = {
-          total: saved.total ?? this.data.total,
-          completed: saved.completed ?? 0,
-          percent: saved.percent ?? 0,
-          masteredSentences: Array.isArray(saved.masteredSentences)
-            ? saved.masteredSentences
-            : []
-        };
+        this.data.total = saved.total ?? this.data.total;
+        this.data.completed = saved.completed ?? 0;
+        this.data.percent = saved.percent ?? 0;
+        this.data.masteredSentences = Array.isArray(saved.masteredSentences)
+          ? saved.masteredSentences
+          : [];
       }
     } catch (e) {
       console.warn("[Progress9] Failed to load, using defaults");
@@ -850,10 +410,7 @@ const Progress9 = {
   },
 
   markSentenceComplete(sentenceId) {
-    if (!sentenceId) {
-      console.warn("[Progress9] markSentenceComplete called with no sentenceId");
-      return;
-    }
+    if (!sentenceId) return;
 
     if (!this.data.masteredSentences.includes(sentenceId)) {
       this.data.masteredSentences.push(sentenceId);
@@ -868,13 +425,10 @@ const Progress9 = {
   },
 
   updatePercent() {
-    if (this.data.total > 0) {
-      this.data.percent = Math.round(
-        (this.data.completed / this.data.total) * 100
-      );
-    } else {
-      this.data.percent = 0;
-    }
+    this.data.percent =
+      this.data.total > 0
+        ? Math.round((this.data.completed / this.data.total) * 100)
+        : 0;
   },
 
   reset() {
@@ -888,25 +442,16 @@ const Progress9 = {
   }
 };
 
-document.addEventListener("DOMContentLoaded", () => {
-  Progress9.init();
-});
+document.addEventListener("DOMContentLoaded", () => Progress9.init());
+
+
 
 /* ==========================================================
-   LEVEL 10 — HTML-BASED PROGRESS UI
-========================================================== */
-
-/* ==========================================================
-   LEVEL 10 — HTML-BASED PROGRESS UI
+   LEVEL 10 — PROGRESS10
 ========================================================== */
 
 const Progress10 = {
-  data: {
-    total: 0,
-    completed: 0,
-    percent: 0,
-    masteredSentences: []
-  },
+  data: { total: 0, completed: 0, percent: 0, masteredSentences: [] },
 
   init() {
     try {
@@ -914,7 +459,6 @@ const Progress10 = {
       if (!raw) return;
 
       const saved = JSON.parse(raw);
-
       if (saved && typeof saved === "object") {
         this.data.total = saved.total || 0;
         this.data.completed = saved.completed || 0;
@@ -943,10 +487,7 @@ const Progress10 = {
   },
 
   markSentenceComplete(sentenceId) {
-    if (!sentenceId) {
-      console.warn("[Progress10] markSentenceComplete called with no sentenceId");
-      return;
-    }
+    if (!sentenceId) return;
 
     if (!this.data.masteredSentences.includes(sentenceId)) {
       this.data.masteredSentences.push(sentenceId);
@@ -961,13 +502,10 @@ const Progress10 = {
   },
 
   updatePercent() {
-    if (this.data.total > 0) {
-      this.data.percent = Math.round(
-        (this.data.completed / this.data.total) * 100
-      );
-    } else {
-      this.data.percent = 0;
-    }
+    this.data.percent =
+      this.data.total > 0
+        ? Math.round((this.data.completed / this.data.total) * 100)
+        : 0;
   },
 
   reset() {
@@ -981,6 +519,4 @@ const Progress10 = {
   }
 };
 
-document.addEventListener("DOMContentLoaded", () => {
-  Progress10.init();
-  });
+document.addEventListener("DOMContentLoaded", () => Progress10.init());
