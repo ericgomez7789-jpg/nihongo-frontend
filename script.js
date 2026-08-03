@@ -7,7 +7,15 @@ window.GamepadControls = {
   lastButtonB: false,
   nextMoveTime: 0,
 
+  // Analog cursor position
+  cursorX: 300,
+  cursorY: 300,
+  speed: 12, // adjust for Legion Go sensitivity
+
   init() {
+    /* ---------------------------------------------------------
+       CREATE ANALOG CURSOR (RIGHT STICK)
+    --------------------------------------------------------- */
     this.cursor = document.createElement("div");
     this.cursor.id = "gpCursor";
     this.cursor.style.position = "absolute";
@@ -15,6 +23,8 @@ window.GamepadControls = {
     this.cursor.style.borderRadius = "10px";
     this.cursor.style.pointerEvents = "none";
     this.cursor.style.zIndex = "99999";
+    this.cursor.style.width = "40px";
+    this.cursor.style.height = "40px";
     document.body.appendChild(this.cursor);
 
     requestAnimationFrame(this.loop.bind(this));
@@ -25,35 +35,37 @@ window.GamepadControls = {
     if (!gp) return requestAnimationFrame(this.loop.bind(this));
 
     /* ---------------------------------------------------------
-       LEFT STICK — TILE SELECTION (LEGION GO FIX)
+       LEFT STICK — TILE SELECTION (SNAP)
     --------------------------------------------------------- */
-    const x = gp.axes[0];
+    const lx = gp.axes[0];
     const now = performance.now();
 
-    // Stronger threshold + movement cooldown
-    if (Math.abs(x) > 0.4 && now >= this.nextMoveTime) {
-      const dir = x > 0 ? 1 : -1;
+    if (Math.abs(lx) > 0.4 && now >= this.nextMoveTime) {
+      const dir = lx > 0 ? 1 : -1;
 
       this.cursorIndex = Math.max(
         0,
         Math.min(this.tiles.length - 1, this.cursorIndex + dir)
       );
 
-      // Delay before next movement (console feel)
       this.nextMoveTime = now + 180;
     }
 
     /* ---------------------------------------------------------
-       POSITION CURSOR OVER CURRENT TILE
+       RIGHT STICK — ANALOG CURSOR MOVEMENT
     --------------------------------------------------------- */
-    const tile = this.tiles[this.cursorIndex];
-    if (tile) {
-      const r = tile.getBoundingClientRect();
-      this.cursor.style.left = r.left + "px";
-      this.cursor.style.top = r.top + "px";
-      this.cursor.style.width = r.width + "px";
-      this.cursor.style.height = r.height + "px";
-    }
+    const rx = gp.axes[2];
+    const ry = gp.axes[3];
+
+    if (Math.abs(rx) > 0.15) this.cursorX += rx * this.speed;
+    if (Math.abs(ry) > 0.15) this.cursorY += ry * this.speed;
+
+    // Clamp cursor inside viewport
+    this.cursorX = Math.max(0, Math.min(window.innerWidth - 40, this.cursorX));
+    this.cursorY = Math.max(0, Math.min(window.innerHeight - 40, this.cursorY));
+
+    this.cursor.style.left = this.cursorX + "px";
+    this.cursor.style.top = this.cursorY + "px";
 
     /* ---------------------------------------------------------
        BUTTON A — PICK UP / DROP
@@ -61,7 +73,7 @@ window.GamepadControls = {
     const buttonA = gp.buttons[0].pressed;
 
     if (buttonA && !this.lastButtonA) {
-      this.handleA(tile);
+      this.handleA();
     }
     this.lastButtonA = buttonA;
 
@@ -82,22 +94,33 @@ window.GamepadControls = {
   /* ---------------------------------------------------------
      HANDLE A BUTTON — SELECT OR DROP
   --------------------------------------------------------- */
-  handleA(tile) {
+  handleA() {
+    /* ---------------------------------------------------------
+       1. If no tile selected → pick up tile under analog cursor
+    --------------------------------------------------------- */
     if (!this.activeTile) {
-      // Pick up tile
-      this.activeTile = tile;
-      tile.style.outline = "3px solid #ff9800";
+      for (const tile of this.tiles) {
+        const r = tile.getBoundingClientRect();
+        if (
+          this.cursorX >= r.left && this.cursorX <= r.right &&
+          this.cursorY >= r.top && this.cursorY <= r.bottom
+        ) {
+          this.activeTile = tile;
+          tile.style.outline = "3px solid #ff9800";
+          return;
+        }
+      }
       return;
     }
 
-    // Try dropping into a zone
+    /* ---------------------------------------------------------
+       2. If tile selected → drop into matching zone
+    --------------------------------------------------------- */
     for (const dz of this.dropZones) {
       const r = dz.getBoundingClientRect();
-      const cr = this.cursor.getBoundingClientRect();
-
       if (
-        cr.left >= r.left && cr.right <= r.right &&
-        cr.top >= r.top && cr.bottom <= r.bottom
+        this.cursorX >= r.left && this.cursorX <= r.right &&
+        this.cursorY >= r.top && this.cursorY <= r.bottom
       ) {
         dz.textContent = this.activeTile.textContent;
         dz.classList.add("correct");
@@ -109,14 +132,15 @@ window.GamepadControls = {
       }
     }
 
-    // No match → cancel
+    /* ---------------------------------------------------------
+       3. No match → cancel
+    --------------------------------------------------------- */
     this.activeTile.style.outline = "";
     this.activeTile = null;
   }
 };
 
 window.GamepadControls.init();
-
 
 
 
