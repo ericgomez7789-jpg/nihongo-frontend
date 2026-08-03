@@ -1,32 +1,48 @@
 window.GamepadControls = {
   cursorIndex: 0,
   tiles: [],
-  activeTile: null,
   dropZones: [],
-  lastButtonA: false,
-  lastButtonB: false,
-  lastButtonX: false,
-  lastButtonY: false,
-  lastButtonLB: false,
-  lastButtonRB: false,
+  activeTile: null,
+
+  lastA: false,
+  lastB: false,
+  lastX: false,
+  lastY: false,
+  lastLB: false,
+  lastRB: false,
+
   nextMoveTime: 0,
 
-  // analog cursor
   cursorX: 300,
   cursorY: 300,
-  speed: 3.0, // tuned for Legion Go
+  speed: 3.0,
 
   init() {
+    /* ---------------------------------------------------------
+       ANALOG CURSOR (FIXED SIZE)
+    --------------------------------------------------------- */
     this.cursor = document.createElement("div");
     this.cursor.id = "gpCursor";
     this.cursor.style.position = "absolute";
+    this.cursor.style.width = "40px";
+    this.cursor.style.height = "40px";
     this.cursor.style.border = "3px solid #4a90e2";
     this.cursor.style.borderRadius = "10px";
     this.cursor.style.pointerEvents = "none";
     this.cursor.style.zIndex = "99999";
-    this.cursor.style.width = "40px";
-    this.cursor.style.height = "40px";
     document.body.appendChild(this.cursor);
+
+    /* ---------------------------------------------------------
+       SNAP HIGHLIGHT BOX (MATCHES TILE SIZE)
+    --------------------------------------------------------- */
+    this.snapBox = document.createElement("div");
+    this.snapBox.id = "gpSnapBox";
+    this.snapBox.style.position = "absolute";
+    this.snapBox.style.border = "3px dashed #4a90e2";
+    this.snapBox.style.borderRadius = "10px";
+    this.snapBox.style.pointerEvents = "none";
+    this.snapBox.style.zIndex = "99998";
+    document.body.appendChild(this.snapBox);
 
     requestAnimationFrame(this.loop.bind(this));
   },
@@ -34,12 +50,13 @@ window.GamepadControls = {
   loop() {
     const gp = navigator.getGamepads()[0] || navigator.getGamepads()[1];
     if (!gp) return requestAnimationFrame(this.loop.bind(this));
+
     const now = performance.now();
 
     /* ---------------------------------------------------------
-       LEFT STICK + D-PAD — TILE SNAP NAVIGATION
+       LEFT STICK + DPAD — TILE SNAP
     --------------------------------------------------------- */
-    const lx = gp.axes[0];
+    const lx = gp.axes[0] || 0;
     const dpadLeft  = gp.buttons[14]?.pressed;
     const dpadRight = gp.buttons[15]?.pressed;
 
@@ -49,18 +66,15 @@ window.GamepadControls = {
     else if (dpadLeft) moveDir = -1;
 
     if (moveDir !== 0 && now >= this.nextMoveTime) {
-      this.cursorIndex = Math.max(
-        0,
-        Math.min(this.tiles.length - 1, this.cursorIndex + moveDir)
-      );
+      this.cursorIndex = Math.max(0, Math.min(this.tiles.length - 1, this.cursorIndex + moveDir));
       this.nextMoveTime = now + 160;
     }
 
     /* ---------------------------------------------------------
-       RIGHT STICK — ANALOG CURSOR MOVEMENT
+       RIGHT STICK — ANALOG CURSOR
     --------------------------------------------------------- */
-    const rx = gp.axes[2];
-    const ry = gp.axes[3];
+    const rx = gp.axes[2] || 0;
+    const ry = gp.axes[3] || 0;
 
     if (Math.abs(rx) > 0.18) this.cursorX += rx * this.speed;
     if (Math.abs(ry) > 0.18) this.cursorY += ry * this.speed;
@@ -72,99 +86,96 @@ window.GamepadControls = {
     this.cursor.style.top = this.cursorY + "px";
 
     /* ---------------------------------------------------------
-       SNAP CURSOR BOX TO CURRENT TILE
+       SNAP BOX — MATCH TILE SIZE
     --------------------------------------------------------- */
     const tile = this.tiles[this.cursorIndex];
     if (tile) {
       const r = tile.getBoundingClientRect();
-      this.cursor.style.width = r.width + "px";
-      this.cursor.style.height = r.height + "px";
+      this.snapBox.style.left = r.left + "px";
+      this.snapBox.style.top = r.top + "px";
+      this.snapBox.style.width = r.width + "px";
+      this.snapBox.style.height = r.height + "px";
     }
 
     /* ---------------------------------------------------------
        BUTTON A — PICK UP / DROP
     --------------------------------------------------------- */
-    const buttonA = gp.buttons[0].pressed;
-    if (buttonA && !this.lastButtonA) this.handleA(tile);
-    this.lastButtonA = buttonA;
+    const A = gp.buttons[0]?.pressed;
+    if (A && !this.lastA) this.handleA(tile);
+    this.lastA = A;
 
     /* ---------------------------------------------------------
        BUTTON B — CANCEL PICKUP
     --------------------------------------------------------- */
-    const buttonB = gp.buttons[1].pressed;
-    if (buttonB && !this.lastButtonB && this.activeTile) {
+    const B = gp.buttons[1]?.pressed;
+    if (B && !this.lastB && this.activeTile) {
       this.activeTile.style.outline = "";
       this.activeTile = null;
     }
-    this.lastButtonB = buttonB;
+    this.lastB = B;
 
     /* ---------------------------------------------------------
        BUTTON X — REPLAY AUDIO
     --------------------------------------------------------- */
-    const buttonX = gp.buttons[2].pressed;
-    if (buttonX && !this.lastButtonX) {
-      if (L0.audio && L0.audio.current) {
+    const X = gp.buttons[2]?.pressed;
+    if (X && !this.lastX) {
+      if (L0.audio?.current) {
         L0.audio.current.pause();
         L0.audio.current.currentTime = 0;
         L0.audio.current.play().catch(() => {});
       }
     }
-    this.lastButtonX = buttonX;
+    this.lastX = X;
 
     /* ---------------------------------------------------------
        BUTTON Y — RESET SELECTION
     --------------------------------------------------------- */
-    const buttonY = gp.buttons[3].pressed;
-    if (buttonY && !this.lastButtonY && this.activeTile) {
+    const Y = gp.buttons[3]?.pressed;
+    if (Y && !this.lastY && this.activeTile) {
       this.activeTile.style.outline = "";
       this.activeTile = null;
     }
-    this.lastButtonY = buttonY;
+    this.lastY = Y;
 
     /* ---------------------------------------------------------
-       LB — MOVE LEFT ONE TILE
+       LB — MOVE LEFT
     --------------------------------------------------------- */
-    const buttonLB = gp.buttons[4].pressed;
-    if (buttonLB && !this.lastButtonLB) {
+    const LB = gp.buttons[4]?.pressed;
+    if (LB && !this.lastLB) {
       this.cursorIndex = Math.max(0, this.cursorIndex - 1);
     }
-    this.lastButtonLB = buttonLB;
+    this.lastLB = LB;
 
     /* ---------------------------------------------------------
-       RB — MOVE RIGHT ONE TILE + DRAG MODE
+       RB — TAP = MOVE RIGHT
+            HOLD = DRAG TILE
     --------------------------------------------------------- */
-    /* ---------------------------------------------------------
-   RB — DRAG MODE (HOLD TO DRAG TILE)
---------------------------------------------------------- */
-const buttonRB = gp.buttons[5].pressed;
+    const RB = gp.buttons[5]?.pressed;
 
-if (buttonRB && !this.lastButtonRB && this.activeTile) {
-  // Remove tile from layout flow
-  const r = this.activeTile.getBoundingClientRect();
+    // TAP
+    if (RB && !this.lastRB) {
+      this.cursorIndex = Math.min(this.tiles.length - 1, this.cursorIndex + 1);
+    }
 
-  this.activeTile.style.position = "absolute";
-  this.activeTile.style.pointerEvents = "none";
-  this.activeTile.style.width = r.width + "px";
-  this.activeTile.style.height = r.height + "px";
-  this.activeTile.style.zIndex = "99998";
+    // HOLD DRAG
+    if (RB && this.activeTile) {
+      const r = this.activeTile.getBoundingClientRect();
+      this.activeTile.style.position = "absolute";
+      this.activeTile.style.zIndex = "99997";
+      this.activeTile.style.left = (this.cursorX - r.width / 2) + "px";
+      this.activeTile.style.top = (this.cursorY - r.height / 2) + "px";
+    }
 
-  // Move tile to body so original spot disappears
-  document.body.appendChild(this.activeTile);
-}
+    this.lastRB = RB;
 
-// While RB is held, drag tile
-if (buttonRB && this.activeTile) {
-  this.activeTile.style.left = (this.cursorX - this.activeTile.offsetWidth / 2) + "px";
-  this.activeTile.style.top = (this.cursorY - this.activeTile.offsetHeight / 2) + "px";
-}
-
-this.lastButtonRB = buttonRB;
-
+    requestAnimationFrame(this.loop.bind(this));
+  },
 
   /* ---------------------------------------------------------
-     HANDLE A BUTTON — SELECT OR DROP
+     HANDLE A — PICK UP OR DROP
   --------------------------------------------------------- */
   handleA(tile) {
+    /* PICK UP */
     if (!this.activeTile) {
       if (!tile) return;
       this.activeTile = tile;
@@ -172,13 +183,17 @@ this.lastButtonRB = buttonRB;
       return;
     }
 
+    /* DROP INTO ZONE */
+    const cursorRect = this.cursor.getBoundingClientRect();
+
     for (const dz of this.dropZones) {
       const r = dz.getBoundingClientRect();
-      const cr = this.cursor.getBoundingClientRect();
 
       if (
-        cr.left >= r.left && cr.right <= r.right &&
-        cr.top >= r.top && cr.bottom <= r.bottom
+        cursorRect.left >= r.left &&
+        cursorRect.right <= r.right &&
+        cursorRect.top >= r.top &&
+        cursorRect.bottom <= r.bottom
       ) {
         dz.textContent = this.activeTile.textContent;
         dz.classList.add("correct");
@@ -190,14 +205,13 @@ this.lastButtonRB = buttonRB;
       }
     }
 
+    /* NO MATCH — CANCEL */
     this.activeTile.style.outline = "";
     this.activeTile = null;
   }
 };
 
 window.GamepadControls.init();
-
-
 
 
 
