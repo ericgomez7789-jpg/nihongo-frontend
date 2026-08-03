@@ -14,7 +14,7 @@ window.GamepadControls = {
   // analog cursor
   cursorX: 300,
   cursorY: 300,
-  speed: 3.2, // smooth + slow for Legion Go
+  speed: 3.0, // tuned for Legion Go
 
   init() {
     this.cursor = document.createElement("div");
@@ -32,7 +32,7 @@ window.GamepadControls = {
   },
 
   loop() {
-    const gp = navigator.getGamepads()[0];
+    const gp = navigator.getGamepads()[0] || navigator.getGamepads()[1];
     if (!gp) return requestAnimationFrame(this.loop.bind(this));
     const now = performance.now();
 
@@ -122,25 +122,29 @@ window.GamepadControls = {
     this.lastButtonY = buttonY;
 
     /* ---------------------------------------------------------
-       LB — SNAP TO FIRST TILE
+       LB — MOVE LEFT ONE TILE
     --------------------------------------------------------- */
     const buttonLB = gp.buttons[4].pressed;
     if (buttonLB && !this.lastButtonLB) {
-      this.cursorIndex = 0;
+      this.cursorIndex = Math.max(0, this.cursorIndex - 1);
     }
     this.lastButtonLB = buttonLB;
 
     /* ---------------------------------------------------------
-       RB — DRAG MODE (HOLD TO DRAG TILE)
+       RB — MOVE RIGHT ONE TILE + DRAG MODE
     --------------------------------------------------------- */
     const buttonRB = gp.buttons[5].pressed;
-    if (buttonRB && !this.lastButtonRB && this.activeTile) {
-      this.activeTile.style.position = "absolute";
-      this.activeTile.style.zIndex = "99998";
+
+    // RB tap = move right
+    if (buttonRB && !this.lastButtonRB) {
+      this.cursorIndex = Math.min(this.tiles.length - 1, this.cursorIndex + 1);
     }
 
+    // RB hold = drag tile
     if (buttonRB && this.activeTile) {
       const r = this.activeTile.getBoundingClientRect();
+      this.activeTile.style.position = "absolute";
+      this.activeTile.style.zIndex = "99998";
       this.activeTile.style.left = (this.cursorX - r.width / 2) + "px";
       this.activeTile.style.top = (this.cursorY - r.height / 2) + "px";
     }
@@ -185,7 +189,6 @@ window.GamepadControls = {
 };
 
 window.GamepadControls.init();
-
 
 
 
