@@ -165,8 +165,22 @@
   background: #3578c4;
   transform: scale(1.05);
 }
+
 /* Darker section headers ONLY on Screen 2 */
 #screen2L0 .level0-side h3 {
-  color: #222; /* same darkness as drop-zone text */
-  font-weight: 600; /* optional: makes it crisper */
+  color: #222;
+  font-weight: 600;
+}
+
+/* -----------------------------------------
+   CURSOR REVEAL — SHOW KANA WHEN HOVERED
+----------------------------------------- */
+
+.kana {
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+.showKana .kana {
+  opacity: 1;
 }
