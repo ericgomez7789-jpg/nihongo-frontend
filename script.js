@@ -133,26 +133,33 @@ window.GamepadControls = {
     /* ---------------------------------------------------------
        RB — MOVE RIGHT ONE TILE + DRAG MODE
     --------------------------------------------------------- */
-    const buttonRB = gp.buttons[5].pressed;
+    /* ---------------------------------------------------------
+   RB — DRAG MODE (HOLD TO DRAG TILE)
+--------------------------------------------------------- */
+const buttonRB = gp.buttons[5].pressed;
 
-    // RB tap = move right
-    if (buttonRB && !this.lastButtonRB) {
-      this.cursorIndex = Math.min(this.tiles.length - 1, this.cursorIndex + 1);
-    }
+if (buttonRB && !this.lastButtonRB && this.activeTile) {
+  // Remove tile from layout flow
+  const r = this.activeTile.getBoundingClientRect();
 
-    // RB hold = drag tile
-    if (buttonRB && this.activeTile) {
-      const r = this.activeTile.getBoundingClientRect();
-      this.activeTile.style.position = "absolute";
-      this.activeTile.style.zIndex = "99998";
-      this.activeTile.style.left = (this.cursorX - r.width / 2) + "px";
-      this.activeTile.style.top = (this.cursorY - r.height / 2) + "px";
-    }
+  this.activeTile.style.position = "absolute";
+  this.activeTile.style.pointerEvents = "none";
+  this.activeTile.style.width = r.width + "px";
+  this.activeTile.style.height = r.height + "px";
+  this.activeTile.style.zIndex = "99998";
 
-    this.lastButtonRB = buttonRB;
+  // Move tile to body so original spot disappears
+  document.body.appendChild(this.activeTile);
+}
 
-    requestAnimationFrame(this.loop.bind(this));
-  },
+// While RB is held, drag tile
+if (buttonRB && this.activeTile) {
+  this.activeTile.style.left = (this.cursorX - this.activeTile.offsetWidth / 2) + "px";
+  this.activeTile.style.top = (this.cursorY - this.activeTile.offsetHeight / 2) + "px";
+}
+
+this.lastButtonRB = buttonRB;
+
 
   /* ---------------------------------------------------------
      HANDLE A BUTTON — SELECT OR DROP
