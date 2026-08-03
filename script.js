@@ -1,10 +1,10 @@
-
 window.GamepadControls = {
   cursorIndex: 0,
   tiles: [],
   activeTile: null,
   dropZones: [],
   lastButtonA: false,
+  lastButtonB: false,
 
   init() {
     this.cursor = document.createElement("div");
@@ -23,17 +23,20 @@ window.GamepadControls = {
     const gp = navigator.getGamepads()[0];
     if (!gp) return requestAnimationFrame(this.loop.bind(this));
 
-    // Move cursor with left stick
+    /* ---------------------------------------------------------
+       LEFT STICK — TILE SELECTION
+    --------------------------------------------------------- */
     const x = gp.axes[0];
-    const y = gp.axes[1];
 
-    if (Math.abs(x) > 0.3 || Math.abs(y) > 0.3) {
-      this.cursorIndex = Math.max(0, Math.min(this.tiles.length - 1,
-        this.cursorIndex + (x > 0.5 ? 1 : x < -0.5 ? -1 : 0)
-      ));
+    if (Math.abs(x) > 0.3) {
+      this.cursorIndex = Math.max(
+        0,
+        Math.min(this.tiles.length - 1,
+          this.cursorIndex + (x > 0.5 ? 1 : x < -0.5 ? -1 : 0)
+        )
+      );
     }
 
-    // Position cursor over tile
     const tile = this.tiles[this.cursorIndex];
     if (tile) {
       const r = tile.getBoundingClientRect();
@@ -43,50 +46,69 @@ window.GamepadControls = {
       this.cursor.style.height = r.height + "px";
     }
 
-    // A button (button 0)
+    /* ---------------------------------------------------------
+       BUTTON A — PICK UP / DROP
+    --------------------------------------------------------- */
     const buttonA = gp.buttons[0].pressed;
 
     if (buttonA && !this.lastButtonA) {
       this.handleA(tile);
     }
-
     this.lastButtonA = buttonA;
+
+    /* ---------------------------------------------------------
+       BUTTON B — CANCEL
+    --------------------------------------------------------- */
+    const buttonB = gp.buttons[1].pressed;
+
+    if (buttonB && !this.lastButtonB) {
+      if (this.activeTile) {
+        this.activeTile.style.outline = "";
+        this.activeTile = null;
+      }
+    }
+    this.lastButtonB = buttonB;
 
     requestAnimationFrame(this.loop.bind(this));
   },
 
+  /* ---------------------------------------------------------
+     HANDLE A BUTTON — SELECT OR DROP
+  --------------------------------------------------------- */
   handleA(tile) {
     if (!this.activeTile) {
       // Pick up tile
       this.activeTile = tile;
       tile.style.outline = "3px solid #ff9800";
-    } else {
-      // Try dropping
-      for (const dz of this.dropZones) {
-        const r = dz.getBoundingClientRect();
-        const cr = this.cursor.getBoundingClientRect();
-        if (cr.left >= r.left && cr.right <= r.right &&
-            cr.top >= r.top && cr.bottom <= r.bottom) {
-
-          dz.textContent = this.activeTile.textContent;
-          dz.classList.add("correct");
-          this.activeTile.style.outline = "";
-          this.activeTile = null;
-
-          L0.checkCompletion();
-          return;
-        }
-      }
-
-      // If no drop zone matched, cancel
-      this.activeTile.style.outline = "";
-      this.activeTile = null;
+      return;
     }
+
+    // Try dropping into a zone
+    for (const dz of this.dropZones) {
+      const r = dz.getBoundingClientRect();
+      const cr = this.cursor.getBoundingClientRect();
+
+      if (
+        cr.left >= r.left && cr.right <= r.right &&
+        cr.top >= r.top && cr.bottom <= r.bottom
+      ) {
+        dz.textContent = this.activeTile.textContent;
+        dz.classList.add("correct");
+        this.activeTile.style.outline = "";
+        this.activeTile = null;
+
+        L0.checkCompletion();
+        return;
+      }
+    }
+
+    // No match → cancel
+    this.activeTile.style.outline = "";
+    this.activeTile = null;
   }
 };
 
 window.GamepadControls.init();
-
 
 
 
