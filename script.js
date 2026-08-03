@@ -5,18 +5,17 @@ window.GamepadControls = {
   dropZones: [],
   lastButtonA: false,
   lastButtonB: false,
-  lastButtonX: false,
-  lastButtonY: false,
   nextMoveTime: 0,
 
   // Analog cursor position
   cursorX: 300,
   cursorY: 300,
-
-  // Slower speed for Legion Go (perfect balance)
-  speed: 2.2, // tuned for smoothness
+  speed: 12, // adjust for Legion Go sensitivity
 
   init() {
+    /* ---------------------------------------------------------
+       CREATE ANALOG CURSOR (RIGHT STICK)
+    --------------------------------------------------------- */
     this.cursor = document.createElement("div");
     this.cursor.id = "gpCursor";
     this.cursor.style.position = "absolute";
@@ -41,7 +40,7 @@ window.GamepadControls = {
     const lx = gp.axes[0];
     const now = performance.now();
 
-    if (Math.abs(lx) > 0.45 && now >= this.nextMoveTime) {
+    if (Math.abs(lx) > 0.4 && now >= this.nextMoveTime) {
       const dir = lx > 0 ? 1 : -1;
 
       this.cursorIndex = Math.max(
@@ -49,17 +48,17 @@ window.GamepadControls = {
         Math.min(this.tiles.length - 1, this.cursorIndex + dir)
       );
 
-      this.nextMoveTime = now + 160; // faster than before, smoother
+      this.nextMoveTime = now + 180;
     }
 
     /* ---------------------------------------------------------
-       RIGHT STICK — ANALOG CURSOR MOVEMENT (SLOW + SMOOTH)
+       RIGHT STICK — ANALOG CURSOR MOVEMENT
     --------------------------------------------------------- */
     const rx = gp.axes[2];
     const ry = gp.axes[3];
 
-    if (Math.abs(rx) > 0.18) this.cursorX += rx * this.speed;
-    if (Math.abs(ry) > 0.18) this.cursorY += ry * this.speed;
+    if (Math.abs(rx) > 0.15) this.cursorX += rx * this.speed;
+    if (Math.abs(ry) > 0.15) this.cursorY += ry * this.speed;
 
     // Clamp cursor inside viewport
     this.cursorX = Math.max(0, Math.min(window.innerWidth - 40, this.cursorX));
@@ -72,55 +71,22 @@ window.GamepadControls = {
        BUTTON A — PICK UP / DROP
     --------------------------------------------------------- */
     const buttonA = gp.buttons[0].pressed;
-    if (buttonA && !this.lastButtonA) this.handleA();
+
+    if (buttonA && !this.lastButtonA) {
+      this.handleA();
+    }
     this.lastButtonA = buttonA;
 
     /* ---------------------------------------------------------
        BUTTON B — CANCEL PICKUP
     --------------------------------------------------------- */
     const buttonB = gp.buttons[1].pressed;
+
     if (buttonB && !this.lastButtonB && this.activeTile) {
       this.activeTile.style.outline = "";
       this.activeTile = null;
     }
     this.lastButtonB = buttonB;
-
-    /* ---------------------------------------------------------
-       BUTTON X — REPLAY AUDIO
-    --------------------------------------------------------- */
-    const buttonX = gp.buttons[2].pressed;
-    if (buttonX && !this.lastButtonX) {
-      if (L0.audio && L0.audio.current) {
-        L0.audio.current.pause();
-        L0.audio.current.currentTime = 0;
-        L0.audio.current.play().catch(() => {});
-      }
-    }
-    this.lastButtonX = buttonX;
-
-    /* ---------------------------------------------------------
-       BUTTON Y — RESET TILE SELECTION
-    --------------------------------------------------------- */
-    const buttonY = gp.buttons[3].pressed;
-    if (buttonY && !this.lastButtonY && this.activeTile) {
-      this.activeTile.style.outline = "";
-      this.activeTile = null;
-    }
-    this.lastButtonY = buttonY;
-
-    /* ---------------------------------------------------------
-       RB BUTTON — DRAG MODE (HOLD TO DRAG TILE)
-    --------------------------------------------------------- */
-    const rb = gp.buttons[5].pressed;
-
-    if (rb && this.activeTile) {
-      const r = this.activeTile.getBoundingClientRect();
-
-      this.activeTile.style.position = "absolute";
-      this.activeTile.style.left = (this.cursorX - r.width / 2) + "px";
-      this.activeTile.style.top = (this.cursorY - r.height / 2) + "px";
-      this.activeTile.style.zIndex = "99998";
-    }
 
     requestAnimationFrame(this.loop.bind(this));
   },
@@ -129,6 +95,9 @@ window.GamepadControls = {
      HANDLE A BUTTON — SELECT OR DROP
   --------------------------------------------------------- */
   handleA() {
+    /* ---------------------------------------------------------
+       1. If no tile selected → pick up tile under analog cursor
+    --------------------------------------------------------- */
     if (!this.activeTile) {
       for (const tile of this.tiles) {
         const r = tile.getBoundingClientRect();
@@ -144,6 +113,9 @@ window.GamepadControls = {
       return;
     }
 
+    /* ---------------------------------------------------------
+       2. If tile selected → drop into matching zone
+    --------------------------------------------------------- */
     for (const dz of this.dropZones) {
       const r = dz.getBoundingClientRect();
       if (
@@ -160,24 +132,15 @@ window.GamepadControls = {
       }
     }
 
+    /* ---------------------------------------------------------
+       3. No match → cancel
+    --------------------------------------------------------- */
     this.activeTile.style.outline = "";
     this.activeTile = null;
   }
 };
 
 window.GamepadControls.init();
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
