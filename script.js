@@ -9,7 +9,6 @@ window.GamepadControls = {
   lastX: false,
   lastY: false,
   lastLB: false,
-  lastRB: false,
 
   nextMoveTime: 0,
 
@@ -33,7 +32,7 @@ window.GamepadControls = {
     document.body.appendChild(this.cursor);
 
     /* ---------------------------------------------------------
-       SNAP HIGHLIGHT BOX (MATCHES TILE SIZE)
+       SNAP BOX (MATCHES TILE SIZE)
     --------------------------------------------------------- */
     this.snapBox = document.createElement("div");
     this.snapBox.id = "gpSnapBox";
@@ -98,6 +97,11 @@ window.GamepadControls = {
     }
 
     /* ---------------------------------------------------------
+       CURSOR HOVER REVEALS KANA
+    --------------------------------------------------------- */
+    this.revealKanaUnderCursor();
+
+    /* ---------------------------------------------------------
        BUTTON A — PICK UP / DROP
     --------------------------------------------------------- */
     const A = gp.buttons[0]?.pressed;
@@ -147,28 +151,33 @@ window.GamepadControls = {
     this.lastLB = LB;
 
     /* ---------------------------------------------------------
-       RB — TAP = MOVE RIGHT
-            HOLD = DRAG TILE
+       RB — REMOVED COMPLETELY
     --------------------------------------------------------- */
-    const RB = gp.buttons[5]?.pressed;
-
-    // TAP
-    if (RB && !this.lastRB) {
-      this.cursorIndex = Math.min(this.tiles.length - 1, this.cursorIndex + 1);
-    }
-
-    // HOLD DRAG
-    if (RB && this.activeTile) {
-      const r = this.activeTile.getBoundingClientRect();
-      this.activeTile.style.position = "absolute";
-      this.activeTile.style.zIndex = "99997";
-      this.activeTile.style.left = (this.cursorX - r.width / 2) + "px";
-      this.activeTile.style.top = (this.cursorY - r.height / 2) + "px";
-    }
-
-    this.lastRB = RB;
 
     requestAnimationFrame(this.loop.bind(this));
+  },
+
+  /* ---------------------------------------------------------
+     REVEAL KANA WHEN CURSOR OVERLAPS TILE
+  --------------------------------------------------------- */
+  revealKanaUnderCursor() {
+    const cursorRect = this.cursor.getBoundingClientRect();
+
+    for (const tile of this.tiles) {
+      const r = tile.getBoundingClientRect();
+
+      const overlap =
+        cursorRect.left < r.right &&
+        cursorRect.right > r.left &&
+        cursorRect.top < r.bottom &&
+        cursorRect.bottom > r.top;
+
+      if (overlap) {
+        tile.classList.add("showKana");
+      } else {
+        tile.classList.remove("showKana");
+      }
+    }
   },
 
   /* ---------------------------------------------------------
@@ -212,7 +221,6 @@ window.GamepadControls = {
 };
 
 window.GamepadControls.init();
-
 
 
 
