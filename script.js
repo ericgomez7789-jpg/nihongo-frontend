@@ -5,12 +5,16 @@ window.GamepadControls = {
   dropZones: [],
   lastButtonA: false,
   lastButtonB: false,
+  lastButtonX: false,
+  lastButtonY: false,
   nextMoveTime: 0,
 
   // Analog cursor position
   cursorX: 300,
   cursorY: 300,
-  speed: 12, // adjust for Legion Go sensitivity
+
+  // Slower speed for Legion Go
+  speed: 4, // was 12 — now MUCH slower and smoother
 
   init() {
     /* ---------------------------------------------------------
@@ -52,7 +56,7 @@ window.GamepadControls = {
     }
 
     /* ---------------------------------------------------------
-       RIGHT STICK — ANALOG CURSOR MOVEMENT
+       RIGHT STICK — ANALOG CURSOR MOVEMENT (SLOWER)
     --------------------------------------------------------- */
     const rx = gp.axes[2];
     const ry = gp.axes[3];
@@ -71,22 +75,56 @@ window.GamepadControls = {
        BUTTON A — PICK UP / DROP
     --------------------------------------------------------- */
     const buttonA = gp.buttons[0].pressed;
-
-    if (buttonA && !this.lastButtonA) {
-      this.handleA();
-    }
+    if (buttonA && !this.lastButtonA) this.handleA();
     this.lastButtonA = buttonA;
 
     /* ---------------------------------------------------------
        BUTTON B — CANCEL PICKUP
     --------------------------------------------------------- */
     const buttonB = gp.buttons[1].pressed;
-
     if (buttonB && !this.lastButtonB && this.activeTile) {
       this.activeTile.style.outline = "";
       this.activeTile = null;
     }
     this.lastButtonB = buttonB;
+
+    /* ---------------------------------------------------------
+       BUTTON X — REPLAY AUDIO
+    --------------------------------------------------------- */
+    const buttonX = gp.buttons[2].pressed;
+    if (buttonX && !this.lastButtonX) {
+      if (L0.audio && L0.audio.current) {
+        L0.audio.current.pause();
+        L0.audio.current.currentTime = 0;
+        L0.audio.current.play().catch(() => {});
+      }
+    }
+    this.lastButtonX = buttonX;
+
+    /* ---------------------------------------------------------
+       BUTTON Y — RESET TILE SELECTION
+    --------------------------------------------------------- */
+    const buttonY = gp.buttons[3].pressed;
+    if (buttonY && !this.lastButtonY && this.activeTile) {
+      this.activeTile.style.outline = "";
+      this.activeTile = null;
+    }
+    this.lastButtonY = buttonY;
+
+    /* ---------------------------------------------------------
+       RB BUTTON — DRAG MODE (HOLD TO DRAG TILE)
+    --------------------------------------------------------- */
+    const rb = gp.buttons[5].pressed; // RB = button index 5
+
+    if (rb && this.activeTile) {
+      const r = this.activeTile.getBoundingClientRect();
+
+      // Move tile with cursor
+      this.activeTile.style.position = "absolute";
+      this.activeTile.style.left = (this.cursorX - r.width / 2) + "px";
+      this.activeTile.style.top = (this.cursorY - r.height / 2) + "px";
+      this.activeTile.style.zIndex = "99998";
+    }
 
     requestAnimationFrame(this.loop.bind(this));
   },
