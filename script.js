@@ -5,6 +5,10 @@ window.GamepadControls = {
   dropZones: [],
   lastButtonA: false,
   lastButtonB: false,
+  lastButtonX: false,
+  lastButtonY: false,
+  lastButtonLB: false,
+  lastButtonRB: false,
   nextMoveTime: 0,
 
   init() {
@@ -24,22 +28,26 @@ window.GamepadControls = {
     const gp = navigator.getGamepads()[0];
     if (!gp) return requestAnimationFrame(this.loop.bind(this));
 
-    /* ---------------------------------------------------------
-       LEFT STICK — TILE SELECTION (LEGION GO FIX)
-    --------------------------------------------------------- */
-    const x = gp.axes[0];
     const now = performance.now();
 
-    // Stronger threshold + movement cooldown
-    if (Math.abs(x) > 0.4 && now >= this.nextMoveTime) {
-      const dir = x > 0 ? 1 : -1;
+    /* ---------------------------------------------------------
+       LEFT STICK + D-PAD — TILE SELECTION (SNAP)
+    --------------------------------------------------------- */
+    const lx = gp.axes[0];
 
+    const dpadLeft  = gp.buttons[14]?.pressed;
+    const dpadRight = gp.buttons[15]?.pressed;
+
+    let moveDir = 0;
+    if (Math.abs(lx) > 0.4) moveDir = lx > 0 ? 1 : -1;
+    else if (dpadRight) moveDir = 1;
+    else if (dpadLeft) moveDir = -1;
+
+    if (moveDir !== 0 && now >= this.nextMoveTime) {
       this.cursorIndex = Math.max(
         0,
-        Math.min(this.tiles.length - 1, this.cursorIndex + dir)
+        Math.min(this.tiles.length - 1, this.cursorIndex + moveDir)
       );
-
-      // Delay before next movement (console feel)
       this.nextMoveTime = now + 180;
     }
 
@@ -59,22 +67,61 @@ window.GamepadControls = {
        BUTTON A — PICK UP / DROP
     --------------------------------------------------------- */
     const buttonA = gp.buttons[0].pressed;
-
-    if (buttonA && !this.lastButtonA) {
-      this.handleA(tile);
-    }
+    if (buttonA && !this.lastButtonA) this.handleA(tile);
     this.lastButtonA = buttonA;
 
     /* ---------------------------------------------------------
        BUTTON B — CANCEL PICKUP
     --------------------------------------------------------- */
     const buttonB = gp.buttons[1].pressed;
-
     if (buttonB && !this.lastButtonB && this.activeTile) {
       this.activeTile.style.outline = "";
       this.activeTile = null;
     }
     this.lastButtonB = buttonB;
+
+    /* ---------------------------------------------------------
+       BUTTON X — REPLAY AUDIO
+    --------------------------------------------------------- */
+    const buttonX = gp.buttons[2].pressed;
+    if (buttonX && !this.lastButtonX) {
+      if (L0.audio && L0.audio.current) {
+        L0.audio.current.pause();
+        L0.audio.current.currentTime = 0;
+        L0.audio.current.play().catch(() => {});
+      }
+    }
+    this.lastButtonX = buttonX;
+
+    /* ---------------------------------------------------------
+       BUTTON Y — RESET SELECTION
+    --------------------------------------------------------- */
+    const buttonY = gp.buttons[3].pressed;
+    if (buttonY && !this.lastButtonY && this.activeTile) {
+      this.activeTile.style.outline = "";
+      this.activeTile = null;
+    }
+    this.lastButtonY = buttonY;
+
+    /* ---------------------------------------------------------
+       LB — SNAP TO FIRST TILE
+    --------------------------------------------------------- */
+    const buttonLB = gp.buttons[4].pressed;
+    if (buttonLB && !this.lastButtonLB) {
+      this.cursorIndex = 0;
+    }
+    this.lastButtonLB = buttonLB;
+
+    /* ---------------------------------------------------------
+       RB — SNAP TO LAST TILE
+    --------------------------------------------------------- */
+    const buttonRB = gp.buttons[5].pressed;
+    if (buttonRB && !this.lastButtonRB) {
+      if (this.tiles.length > 0) {
+        this.cursorIndex = this.tiles.length - 1;
+      }
+    }
+    this.lastButtonRB = buttonRB;
 
     requestAnimationFrame(this.loop.bind(this));
   },
@@ -84,13 +131,12 @@ window.GamepadControls = {
   --------------------------------------------------------- */
   handleA(tile) {
     if (!this.activeTile) {
-      // Pick up tile
+      if (!tile) return;
       this.activeTile = tile;
       tile.style.outline = "3px solid #ff9800";
       return;
     }
 
-    // Try dropping into a zone
     for (const dz of this.dropZones) {
       const r = dz.getBoundingClientRect();
       const cr = this.cursor.getBoundingClientRect();
@@ -109,14 +155,12 @@ window.GamepadControls = {
       }
     }
 
-    // No match → cancel
     this.activeTile.style.outline = "";
     this.activeTile = null;
   }
 };
 
 window.GamepadControls.init();
-
 
 
 
