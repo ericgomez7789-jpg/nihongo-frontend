@@ -11,6 +11,11 @@ window.GamepadControls = {
   lastButtonRB: false,
   nextMoveTime: 0,
 
+  // analog cursor
+  cursorX: 300,
+  cursorY: 300,
+  speed: 3.2, // smooth + slow for Legion Go
+
   init() {
     this.cursor = document.createElement("div");
     this.cursor.id = "gpCursor";
@@ -19,6 +24,8 @@ window.GamepadControls = {
     this.cursor.style.borderRadius = "10px";
     this.cursor.style.pointerEvents = "none";
     this.cursor.style.zIndex = "99999";
+    this.cursor.style.width = "40px";
+    this.cursor.style.height = "40px";
     document.body.appendChild(this.cursor);
 
     requestAnimationFrame(this.loop.bind(this));
@@ -27,19 +34,17 @@ window.GamepadControls = {
   loop() {
     const gp = navigator.getGamepads()[0];
     if (!gp) return requestAnimationFrame(this.loop.bind(this));
-
     const now = performance.now();
 
     /* ---------------------------------------------------------
-       LEFT STICK + D-PAD — TILE SELECTION (SNAP)
+       LEFT STICK + D-PAD — TILE SNAP NAVIGATION
     --------------------------------------------------------- */
     const lx = gp.axes[0];
-
     const dpadLeft  = gp.buttons[14]?.pressed;
     const dpadRight = gp.buttons[15]?.pressed;
 
     let moveDir = 0;
-    if (Math.abs(lx) > 0.4) moveDir = lx > 0 ? 1 : -1;
+    if (Math.abs(lx) > 0.45) moveDir = lx > 0 ? 1 : -1;
     else if (dpadRight) moveDir = 1;
     else if (dpadLeft) moveDir = -1;
 
@@ -48,17 +53,30 @@ window.GamepadControls = {
         0,
         Math.min(this.tiles.length - 1, this.cursorIndex + moveDir)
       );
-      this.nextMoveTime = now + 180;
+      this.nextMoveTime = now + 160;
     }
 
     /* ---------------------------------------------------------
-       POSITION CURSOR OVER CURRENT TILE
+       RIGHT STICK — ANALOG CURSOR MOVEMENT
+    --------------------------------------------------------- */
+    const rx = gp.axes[2];
+    const ry = gp.axes[3];
+
+    if (Math.abs(rx) > 0.18) this.cursorX += rx * this.speed;
+    if (Math.abs(ry) > 0.18) this.cursorY += ry * this.speed;
+
+    this.cursorX = Math.max(0, Math.min(window.innerWidth - 40, this.cursorX));
+    this.cursorY = Math.max(0, Math.min(window.innerHeight - 40, this.cursorY));
+
+    this.cursor.style.left = this.cursorX + "px";
+    this.cursor.style.top = this.cursorY + "px";
+
+    /* ---------------------------------------------------------
+       SNAP CURSOR BOX TO CURRENT TILE
     --------------------------------------------------------- */
     const tile = this.tiles[this.cursorIndex];
     if (tile) {
       const r = tile.getBoundingClientRect();
-      this.cursor.style.left = r.left + "px";
-      this.cursor.style.top = r.top + "px";
       this.cursor.style.width = r.width + "px";
       this.cursor.style.height = r.height + "px";
     }
@@ -113,14 +131,20 @@ window.GamepadControls = {
     this.lastButtonLB = buttonLB;
 
     /* ---------------------------------------------------------
-       RB — SNAP TO LAST TILE
+       RB — DRAG MODE (HOLD TO DRAG TILE)
     --------------------------------------------------------- */
     const buttonRB = gp.buttons[5].pressed;
-    if (buttonRB && !this.lastButtonRB) {
-      if (this.tiles.length > 0) {
-        this.cursorIndex = this.tiles.length - 1;
-      }
+    if (buttonRB && !this.lastButtonRB && this.activeTile) {
+      this.activeTile.style.position = "absolute";
+      this.activeTile.style.zIndex = "99998";
     }
+
+    if (buttonRB && this.activeTile) {
+      const r = this.activeTile.getBoundingClientRect();
+      this.activeTile.style.left = (this.cursorX - r.width / 2) + "px";
+      this.activeTile.style.top = (this.cursorY - r.height / 2) + "px";
+    }
+
     this.lastButtonRB = buttonRB;
 
     requestAnimationFrame(this.loop.bind(this));
@@ -161,7 +185,6 @@ window.GamepadControls = {
 };
 
 window.GamepadControls.init();
-
 
 
 
