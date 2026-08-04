@@ -854,6 +854,55 @@ const sentences = [
 
 
 
+{
+  id: "l1-es-18",
+  meaning: "to touch the window",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "tocar",
+      hiragana: "tocar",
+      meaning: "to touch",
+      audio: {
+        daughter: "audio/spanish/tocar.wav",
+        me: "audio/spanish/tocar.wav"
+      }
+    },
+    {
+      romaji: "la",
+      hiragana: "la",
+      meaning: "the",
+      audio: {
+        daughter: "audio/spanish/la.wav",
+        me: "audio/spanish/la.wav"
+      }
+    },
+    {
+      romaji: "ventana",
+      hiragana: "ventana",
+      meaning: "window",
+      audio: {
+        daughter: "audio/spanish/ventana.wav",
+        me: "audio/spanish/ventana.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2096,6 +2145,36 @@ const level2Sentences = [
       audio: {
         me: "audio/spanish/conjunction6.wav",
         daughter: "audio/spanish/conjunction6.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l2_007",
+  sentence: "Aunque estaba cansado, siguió trabajando.",
+  conjunction: "aunque",
+  meaning: "Even though he was tired, he kept working.",
+
+  fullAudio: "audio/spanish/conjunction7.wav",
+
+  chunks: [
+    {
+      audio: {
+        me: "audio/spanish/conjunction7.wav",
+        daughter: "audio/spanish/conjunction7.wav"
       }
     }
   ]
