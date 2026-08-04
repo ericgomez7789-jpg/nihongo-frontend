@@ -44,49 +44,32 @@ window.GamepadControls = {
     document.body.appendChild(this.snapBox);
 
     /* ---------------------------------------------------------
-       TOUCH SUPPORT — DRAG & DROP
+       iPHONE CLICK-AND-CLICK MODE
     --------------------------------------------------------- */
-    this.tiles.forEach(tile => {
-      tile.addEventListener("touchstart", (e) => {
-        e.preventDefault();
-        this.activeTile = tile;
-        tile.style.outline = "3px solid #ff9800";
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+
+    if (isIOS) {
+      this.tiles.forEach(tile => {
+        tile.addEventListener("click", () => {
+          this.activeTile = tile;
+          tile.style.outline = "3px solid #ff9800";
+        });
       });
 
-      tile.addEventListener("touchmove", (e) => {
-        e.preventDefault();
-        const touch = e.touches[0];
-        const r = tile.getBoundingClientRect();
+      this.dropZones.forEach(zone => {
+        zone.addEventListener("click", () => {
+          if (!this.activeTile) return;
 
-        tile.style.position = "absolute";
-        tile.style.zIndex = "99997";
-        tile.style.left = (touch.clientX - r.width / 2) + "px";
-        tile.style.top = (touch.clientY - r.height / 2) + "px";
+          zone.textContent = this.activeTile.textContent;
+          zone.classList.add("correct");
+
+          this.activeTile.style.outline = "";
+          this.activeTile = null;
+
+          L0.checkCompletion();
+        });
       });
-
-      tile.addEventListener("touchend", (e) => {
-        e.preventDefault();
-        const touch = e.changedTouches[0];
-        const x = touch.clientX;
-        const y = touch.clientY;
-
-        for (const dz of this.dropZones) {
-          const r = dz.getBoundingClientRect();
-          if (x >= r.left && x <= r.right && y >= r.top && y <= r.bottom) {
-            dz.textContent = tile.textContent;
-            dz.classList.add("correct");
-            tile.style.outline = "";
-            this.activeTile = null;
-            L0.checkCompletion();
-            return;
-          }
-        }
-
-        // No match → cancel
-        tile.style.outline = "";
-        this.activeTile = null;
-      });
-    });
+    }
 
     requestAnimationFrame(this.loop.bind(this));
   },
@@ -194,10 +177,6 @@ window.GamepadControls = {
       this.cursorIndex = Math.max(0, this.cursorIndex - 1);
     }
     this.lastLB = LB;
-
-    /* ---------------------------------------------------------
-       RB — REMOVED COMPLETELY
-    --------------------------------------------------------- */
 
     requestAnimationFrame(this.loop.bind(this));
   },
