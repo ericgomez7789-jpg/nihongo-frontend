@@ -44,20 +44,22 @@ window.GamepadControls = {
     document.body.appendChild(this.snapBox);
 
     /* ---------------------------------------------------------
-       iPHONE CLICK-AND-CLICK MODE
+       iPHONE TAP-SELECT / TAP-DROP
     --------------------------------------------------------- */
     const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
 
     if (isIOS) {
       this.tiles.forEach(tile => {
-        tile.addEventListener("click", () => {
+        tile.addEventListener("touchstart", (e) => {
+          e.preventDefault();
           this.activeTile = tile;
           tile.style.outline = "3px solid #ff9800";
         });
       });
 
       this.dropZones.forEach(zone => {
-        zone.addEventListener("click", () => {
+        zone.addEventListener("touchend", (e) => {
+          e.preventDefault();
           if (!this.activeTile) return;
 
           zone.textContent = this.activeTile.textContent;
@@ -71,6 +73,9 @@ window.GamepadControls = {
       });
     }
 
+    /* ---------------------------------------------------------
+       START GAMEPAD LOOP
+    --------------------------------------------------------- */
     requestAnimationFrame(this.loop.bind(this));
   },
 
