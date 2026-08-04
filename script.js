@@ -344,6 +344,8 @@ L0.dataset = [
   { id: "ha", hiragana: "は", katakana: "ハ", meaning: "ha", audio: "audio/sentences/kana_ha.wav" },
 
   { id: "wa", hiragana: "わ", katakana: "ワ", meaning: "wa", audio: "audio/sentences/kana_wa.wav" },
+  { id: "wo", hiragana: "を", katakana: "ヲ", meaning: "wo", audio: "audio/sentences/kana_wo.wav" },
+
   { id: "no", hiragana: "の", katakana: "ノ", meaning: "no", audio: "audio/sentences/kana_no.wav" },
   { id: "nu", hiragana: "ぬ", katakana: "ヌ", meaning: "nu", audio: "audio/sentences/kana_nu.wav" },
   { id: "ne", hiragana: "ね", katakana: "ネ", meaning: "ne", audio: "audio/sentences/kana_ne.wav" },
@@ -363,6 +365,7 @@ L0.dataset = [
   { id: "me", hiragana: "め", katakana: "メ", meaning: "me", audio: "audio/sentences/kana_me.wav" },
   { id: "yo", hiragana: "よ", katakana: "ヨ", meaning: "yo", audio: "audio/sentences/kana_yo.wav" }
 ];
+
 
 
 
