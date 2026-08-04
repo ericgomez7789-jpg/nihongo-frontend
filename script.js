@@ -46,32 +46,44 @@ window.GamepadControls = {
     /* ---------------------------------------------------------
        iPHONE TAP-SELECT / TAP-DROP
     --------------------------------------------------------- */
-    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+    /* ---------------------------------------------------------
+   iPHONE TOUCH HANDLER (MERGED + CLEAN)
+--------------------------------------------------------- */
+const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
 
-    if (isIOS) {
-      this.tiles.forEach(tile => {
-        tile.addEventListener("touchstart", (e) => {
-          e.preventDefault();
-          this.activeTile = tile;
-          tile.style.outline = "3px solid #ff9800";
-        });
-      });
+if (isIOS) {
+  const pickTile = (tile) => {
+    this.activeTile = tile;
+    tile.style.outline = "3px solid #ff9800";
+  };
 
-      this.dropZones.forEach(zone => {
-        zone.addEventListener("touchend", (e) => {
-          e.preventDefault();
-          if (!this.activeTile) return;
+  const dropTile = (zone) => {
+    if (!this.activeTile) return;
 
-          zone.textContent = this.activeTile.textContent;
-          zone.classList.add("correct");
+    zone.textContent = this.activeTile.textContent;
+    zone.classList.add("correct");
 
-          this.activeTile.style.outline = "";
-          this.activeTile = null;
+    this.activeTile.style.outline = "";
+    this.activeTile = null;
 
-          L0.checkCompletion();
-        });
-      });
-    }
+    L0.checkCompletion();
+  };
+
+  this.tiles.forEach(tile => {
+    tile.addEventListener("touchstart", (e) => {
+      e.preventDefault();
+      pickTile(tile);
+    });
+  });
+
+  this.dropZones.forEach(zone => {
+    zone.addEventListener("touchend", (e) => {
+      e.preventDefault();
+      dropTile(zone);
+    });
+  });
+}
+
 
     /* ---------------------------------------------------------
        START GAMEPAD LOOP
