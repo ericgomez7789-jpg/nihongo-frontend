@@ -314,6 +314,8 @@ const L0 = {
 // LEVEL 0 DATASET (must come AFTER L0 exists)
 // -----------------------------------------
 L0.dataset = [
+  { id: "a",  hiragana: "あ", katakana: "ア", meaning: "a",  audio: "audio/sentences/kana_a.wav" },
+
   { id: "e",  hiragana: "え", katakana: "エ", meaning: "e",  audio: "audio/sentences/kana_e.wav" },
   { id: "i",  hiragana: "い", katakana: "イ", meaning: "i",  audio: "audio/sentences/kana_i.wav" },
   { id: "o",  hiragana: "お", katakana: "オ", meaning: "o",  audio: "audio/sentences/kana_o.wav" },
@@ -352,8 +354,16 @@ L0.dataset = [
   { id: "to", hiragana: "と", katakana: "ト", meaning: "to", audio: "audio/sentences/kana_to.wav" },
   { id: "tsu", hiragana: "つ", katakana: "ツ", meaning: "tsu", audio: "audio/sentences/kana_tsu.wav" },
   { id: "chi", hiragana: "ち", katakana: "チ", meaning: "chi", audio: "audio/sentences/kana_chi.wav" },
-  { id: "ta", hiragana: "た", katakana: "タ", meaning: "ta", audio: "audio/sentences/kana_ta.wav" }
+  { id: "ta", hiragana: "た", katakana: "タ", meaning: "ta", audio: "audio/sentences/kana_ta.wav" },
+
+  /* NEW ENTRIES */
+  { id: "mo", hiragana: "も", katakana: "モ", meaning: "mo", audio: "audio/sentences/kana_mo.wav" },
+  { id: "ya", hiragana: "や", katakana: "ヤ", meaning: "ya", audio: "audio/sentences/kana_ya.wav" },
+  { id: "yu", hiragana: "ゆ", katakana: "ユ", meaning: "yu", audio: "audio/sentences/kana_yu.wav" },
+  { id: "me", hiragana: "め", katakana: "メ", meaning: "me", audio: "audio/sentences/kana_me.wav" },
+  { id: "yo", hiragana: "よ", katakana: "ヨ", meaning: "yo", audio: "audio/sentences/kana_yo.wav" }
 ];
+
 
 
 // -----------------------------------------
