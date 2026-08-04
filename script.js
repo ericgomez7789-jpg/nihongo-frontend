@@ -310,59 +310,103 @@ const L0 = {
 // LEVEL 0 DATASET (must come AFTER L0 exists)
 // -----------------------------------------
 L0.dataset = [
-  { id: "a",  hiragana: "あ", katakana: "ア", meaning: "a",  audio: "audio/sentences/kana_a.wav" },
 
-  { id: "e",  hiragana: "え", katakana: "エ", meaning: "e",  audio: "audio/sentences/kana_e.wav" },
-  { id: "i",  hiragana: "い", katakana: "イ", meaning: "i",  audio: "audio/sentences/kana_i.wav" },
-  { id: "o",  hiragana: "お", katakana: "オ", meaning: "o",  audio: "audio/sentences/kana_o.wav" },
-  { id: "u",  hiragana: "う", katakana: "ウ", meaning: "u",  audio: "audio/sentences/kana_u.wav" },
+  /* VOWELS */
+  { id: "a", hiragana: "あ", katakana: "ア", meaning: "a", audio: "audio/sentences/kana_a.wav" },
+  { id: "i", hiragana: "い", katakana: "イ", meaning: "i", audio: "audio/sentences/kana_i.wav" },
+  { id: "u", hiragana: "う", katakana: "ウ", meaning: "u", audio: "audio/sentences/kana_u.wav" },
+  { id: "e", hiragana: "え", katakana: "エ", meaning: "e", audio: "audio/sentences/kana_e.wav" },
+  { id: "o", hiragana: "お", katakana: "オ", meaning: "o", audio: "audio/sentences/kana_o.wav" },
 
-  { id: "sa",  hiragana: "さ", katakana: "サ", meaning: "sa",  audio: "audio/sentences/kana_sa.wav" },
+  /* K ROW */
+  { id: "ka", hiragana: "か", katakana: "カ", meaning: "ka", audio: "audio/sentences/kana_ka.wav" },
+  { id: "ki", hiragana: "き", katakana: "キ", meaning: "ki", audio: "audio/sentences/kana_ki.wav" },
+  { id: "ku", hiragana: "く", katakana: "ク", meaning: "ku", audio: "audio/sentences/kana_ku.wav" },
+  { id: "ke", hiragana: "け", katakana: "ケ", meaning: "ke", audio: "audio/sentences/kana_ke.wav" },
+  { id: "ko", hiragana: "こ", katakana: "コ", meaning: "ko", audio: "audio/sentences/kana_ko.wav" },
+
+  /* S ROW */
+  { id: "sa", hiragana: "さ", katakana: "サ", meaning: "sa", audio: "audio/sentences/kana_sa.wav" },
   { id: "shi", hiragana: "し", katakana: "シ", meaning: "shi", audio: "audio/sentences/kana_shi.wav" },
-  { id: "su",  hiragana: "す", katakana: "ス", meaning: "su",  audio: "audio/sentences/kana_su.wav" },
-  { id: "se",  hiragana: "せ", katakana: "セ", meaning: "se",  audio: "audio/sentences/kana_se.wav" },
-  { id: "so",  hiragana: "そ", katakana: "ソ", meaning: "so",  audio: "audio/sentences/kana_so.wav" },
+  { id: "su", hiragana: "す", katakana: "ス", meaning: "su", audio: "audio/sentences/kana_su.wav" },
+  { id: "se", hiragana: "せ", katakana: "セ", meaning: "se", audio: "audio/sentences/kana_se.wav" },
+  { id: "so", hiragana: "そ", katakana: "ソ", meaning: "so", audio: "audio/sentences/kana_so.wav" },
 
-  { id: "ka",  hiragana: "か", katakana: "カ", meaning: "ka",  audio: "audio/sentences/kana_ka.wav" },
-  { id: "ki",  hiragana: "き", katakana: "キ", meaning: "ki",  audio: "audio/sentences/kana_ki.wav" },
-  { id: "ku",  hiragana: "く", katakana: "ク", meaning: "ku",  audio: "audio/sentences/kana_ku.wav" },
-  { id: "ke",  hiragana: "け", katakana: "ケ", meaning: "ke",  audio: "audio/sentences/kana_ke.wav" },
-  { id: "ko",  hiragana: "こ", katakana: "コ", meaning: "ko",  audio: "audio/sentences/kana_ko.wav" },
+  /* T ROW */
+  { id: "ta", hiragana: "た", katakana: "タ", meaning: "ta", audio: "audio/sentences/kana_ta.wav" },
+  { id: "chi", hiragana: "ち", katakana: "チ", meaning: "chi", audio: "audio/sentences/kana_chi.wav" },
+  { id: "tsu", hiragana: "つ", katakana: "ツ", meaning: "tsu", audio: "audio/sentences/kana_tsu.wav" },
+  { id: "te", hiragana: "て", katakana: "テ", meaning: "te", audio: "audio/sentences/kana_te.wav" },
+  { id: "to", hiragana: "と", katakana: "ト", meaning: "to", audio: "audio/sentences/kana_to.wav" },
 
-  { id: "mu", hiragana: "む", katakana: "ム", meaning: "mu", audio: "audio/sentences/kana_mu.wav" },
-  { id: "ma", hiragana: "ま", katakana: "マ", meaning: "ma", audio: "audio/sentences/kana_ma.wav" },
-  { id: "mi", hiragana: "み", katakana: "ミ", meaning: "mi", audio: "audio/sentences/kana_mi.wav" },
+  /* N ROW */
+  { id: "na", hiragana: "な", katakana: "ナ", meaning: "na", audio: "audio/sentences/kana_na.wav" },
+  { id: "ni", hiragana: "に", katakana: "ニ", meaning: "ni", audio: "audio/sentences/kana_ni.wav" },
+  { id: "nu", hiragana: "ぬ", katakana: "ヌ", meaning: "nu", audio: "audio/sentences/kana_nu.wav" },
+  { id: "ne", hiragana: "ね", katakana: "ネ", meaning: "ne", audio: "audio/sentences/kana_ne.wav" },
+  { id: "no", hiragana: "の", katakana: "ノ", meaning: "no", audio: "audio/sentences/kana_no.wav" },
 
-  { id: "he", hiragana: "へ", katakana: "ヘ", meaning: "he", audio: "audio/sentences/kana_he.wav" },
-  { id: "ho", hiragana: "ほ", katakana: "ホ", meaning: "ho", audio: "audio/sentences/kana_ho.wav" },
+  /* H ROW */
+  { id: "ha", hiragana: "は", katakana: "ハ", meaning: "ha", audio: "audio/sentences/kana_ha.wav" },
   { id: "hi", hiragana: "ひ", katakana: "ヒ", meaning: "hi", audio: "audio/sentences/kana_hi.wav" },
   { id: "fu", hiragana: "ふ", katakana: "フ", meaning: "fu", audio: "audio/sentences/kana_fu.wav" },
-  { id: "ha", hiragana: "は", katakana: "ハ", meaning: "ha", audio: "audio/sentences/kana_ha.wav" },
+  { id: "he", hiragana: "へ", katakana: "ヘ", meaning: "he", audio: "audio/sentences/kana_he.wav" },
+  { id: "ho", hiragana: "ほ", katakana: "ホ", meaning: "ho", audio: "audio/sentences/kana_ho.wav" },
 
+  /* M ROW */
+  { id: "ma", hiragana: "ま", katakana: "マ", meaning: "ma", audio: "audio/sentences/kana_ma.wav" },
+  { id: "mi", hiragana: "み", katakana: "ミ", meaning: "mi", audio: "audio/sentences/kana_mi.wav" },
+  { id: "mu", hiragana: "む", katakana: "ム", meaning: "mu", audio: "audio/sentences/kana_mu.wav" },
+  { id: "me", hiragana: "め", katakana: "メ", meaning: "me", audio: "audio/sentences/kana_me.wav" },
+  { id: "mo", hiragana: "も", katakana: "モ", meaning: "mo", audio: "audio/sentences/kana_mo.wav" },
+
+  /* Y ROW */
+  { id: "ya", hiragana: "や", katakana: "ヤ", meaning: "ya", audio: "audio/sentences/kana_ya.wav" },
+  { id: "yu", hiragana: "ゆ", katakana: "ユ", meaning: "yu", audio: "audio/sentences/kana_yu.wav" },
+  { id: "yo", hiragana: "よ", katakana: "ヨ", meaning: "yo", audio: "audio/sentences/kana_yo.wav" },
+
+  /* R ROW (added per your request) */
+  { id: "ra", hiragana: "ら", katakana: "ラ", meaning: "ra", audio: "audio/sentences/kana_ra.wav" },
+  { id: "ri", hiragana: "り", katakana: "リ", meaning: "ri", audio: "audio/sentences/kana_ri.wav" },
+  { id: "ru", hiragana: "る", katakana: "ル", meaning: "ru", audio: "audio/sentences/kana_ru.wav" },
+  { id: "re", hiragana: "れ", katakana: "レ", meaning: "re", audio: "audio/sentences/kana_re.wav" },
+  { id: "ro", hiragana: "ろ", katakana: "ロ", meaning: "ro", audio: "audio/sentences/kana_ro.wav" },
+
+  /* W ROW */
   { id: "wa", hiragana: "わ", katakana: "ワ", meaning: "wa", audio: "audio/sentences/kana_wa.wav" },
   { id: "wo", hiragana: "を", katakana: "ヲ", meaning: "wo", audio: "audio/sentences/kana_wo.wav" },
 
-  { id: "no", hiragana: "の", katakana: "ノ", meaning: "no", audio: "audio/sentences/kana_no.wav" },
-  { id: "nu", hiragana: "ぬ", katakana: "ヌ", meaning: "nu", audio: "audio/sentences/kana_nu.wav" },
-  { id: "ne", hiragana: "ね", katakana: "ネ", meaning: "ne", audio: "audio/sentences/kana_ne.wav" },
-  { id: "na", hiragana: "な", katakana: "ナ", meaning: "na", audio: "audio/sentences/kana_na.wav" },
-  { id: "ni", hiragana: "に", katakana: "ニ", meaning: "ni", audio: "audio/sentences/kana_ni.wav" },
+  /* N */
+  { id: "n", hiragana: "ん", katakana: "ン", meaning: "n", audio: "audio/sentences/kana_n.wav" },
 
-  { id: "te", hiragana: "て", katakana: "テ", meaning: "te", audio: "audio/sentences/kana_te.wav" },
-  { id: "to", hiragana: "と", katakana: "ト", meaning: "to", audio: "audio/sentences/kana_to.wav" },
-  { id: "tsu", hiragana: "つ", katakana: "ツ", meaning: "tsu", audio: "audio/sentences/kana_tsu.wav" },
-  { id: "chi", hiragana: "ち", katakana: "チ", meaning: "chi", audio: "audio/sentences/kana_chi.wav" },
-  { id: "ta", hiragana: "た", katakana: "タ", meaning: "ta", audio: "audio/sentences/kana_ta.wav" },
+  /* DAKUTEN: G ROW */
+  { id: "ga", hiragana: "が", katakana: "ガ", meaning: "ga", audio: "audio/sentences/kana_ga.wav" },
+  { id: "gi", hiragana: "ぎ", katakana: "ギ", meaning: "gi", audio: "audio/sentences/kana_gi.wav" },
+  { id: "gu", hiragana: "ぐ", katakana: "グ", meaning: "gu", audio: "audio/sentences/kana_gu.wav" },
+  { id: "ge", hiragana: "げ", katakana: "ゲ", meaning: "ge", audio: "audio/sentences/kana_ge.wav" },
+  { id: "go", hiragana: "ご", katakana: "ゴ", meaning: "go", audio: "audio/sentences/kana_go.wav" },
 
-  /* NEW ENTRIES */
-  { id: "mo", hiragana: "も", katakana: "モ", meaning: "mo", audio: "audio/sentences/kana_mo.wav" },
-  { id: "ya", hiragana: "や", katakana: "ヤ", meaning: "ya", audio: "audio/sentences/kana_ya.wav" },
-  { id: "yu", hiragana: "ゆ", katakana: "ユ", meaning: "yu", audio: "audio/sentences/kana_yu.wav" },
-  { id: "me", hiragana: "め", katakana: "メ", meaning: "me", audio: "audio/sentences/kana_me.wav" },
-  { id: "yo", hiragana: "よ", katakana: "ヨ", meaning: "yo", audio: "audio/sentences/kana_yo.wav" },
+  /* DAKUTEN: Z ROW */
+  { id: "za", hiragana: "ざ", katakana: "ザ", meaning: "za", audio: "audio/sentences/kana_za.wav" },
+  { id: "ji", hiragana: "じ", katakana: "ジ", meaning: "ji", audio: "audio/sentences/kana_ji.wav" },
+  { id: "zu", hiragana: "ず", katakana: "ズ", meaning: "zu", audio: "audio/sentences/kana_zu.wav" },
+  { id: "ze", hiragana: "ぜ", katakana: "ゼ", meaning: "ze", audio: "audio/sentences/kana_ze.wav" },
+  { id: "zo", hiragana: "ぞ", katakana: "ゾ", meaning: "zo", audio: "audio/sentences/kana_zo.wav" },
 
-  { id: "n", hiragana: "ん", katakana: "ン", meaning: "n", audio: "audio/sentences/kana_n.wav" }
+  /* DAKUTEN: D ROW (expanded per your request) */
+  { id: "da", hiragana: "だ", katakana: "ダ", meaning: "da", audio: "audio/sentences/kana_da.wav" },
+  { id: "de", hiragana: "で", katakana: "デ", meaning: "de", audio: "audio/sentences/kana_de.wav" },
+  { id: "do", hiragana: "ど", katakana: "ド", meaning: "do", audio: "audio/sentences/kana_do.wav" },
+
+  /* DAKUTEN: B ROW (added per your request) */
+  { id: "ba", hiragana: "ば", katakana: "バ", meaning: "ba", audio: "audio/sentences/kana_ba.wav" },
+  { id: "bi", hiragana: "び", katakana: "ビ", meaning: "bi", audio: "audio/sentences/kana_bi.wav" },
+  { id: "bu", hiragana: "ぶ", katakana: "ブ", meaning: "bu", audio: "audio/sentences/kana_bu.wav" },
+  { id: "be", hiragana: "べ", katakana: "ベ", meaning: "be", audio: "audio/sentences/kana_be.wav" },
+  { id: "bo", hiragana: "ぼ", katakana: "ボ", meaning: "bo", audio: "audio/sentences/kana_bo.wav" }
+
 ];
+
 
 
 
