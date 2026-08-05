@@ -904,6 +904,61 @@ const sentences = [
 
 
 
+{
+  id: "l1-es-19",
+  meaning: "it's going to get stained",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "se",
+      hiragana: "se",
+      meaning: "itself",
+      audio: {
+        daughter: "audio/spanish/se.wav",
+        me: "audio/spanish/se.wav"
+      }
+    },
+    {
+      romaji: "va",
+      hiragana: "va",
+      meaning: "is going",
+      audio: {
+        daughter: "audio/spanish/va.wav",
+        me: "audio/spanish/va.wav"
+      }
+    },
+    {
+      romaji: "a",
+      hiragana: "a",
+      meaning: "to",
+      audio: {
+        daughter: "audio/spanish/a.wav",
+        me: "audio/spanish/a.wav"
+      }
+    },
+    {
+      romaji: "manchar",
+      hiragana: "manchar",
+      meaning: "to stain",
+      audio: {
+        daughter: "audio/spanish/manchar.wav",
+        me: "audio/spanish/manchar.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2181,6 +2236,37 @@ const level2Sentences = [
 },
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l2_008",
+  sentence: "Quería salir afuera pero empezó a llover.",
+  conjunction: "pero",
+  meaning: "He wanted to go outside, but it started to rain.",
+
+  fullAudio: "audio/spanish/conjunction8.wav",
+
+  chunks: [
+    {
+      audio: {
+        me: "audio/spanish/conjunction8.wav",
+        daughter: "audio/spanish/conjunction8.wav"
+      }
+    }
+  ]
+},
 
 
 
