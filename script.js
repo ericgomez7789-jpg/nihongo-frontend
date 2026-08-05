@@ -403,7 +403,25 @@ L0.dataset = [
   { id: "bi", hiragana: "び", katakana: "ビ", meaning: "bi", audio: "audio/sentences/kana_bi.wav" },
   { id: "bu", hiragana: "ぶ", katakana: "ブ", meaning: "bu", audio: "audio/sentences/kana_bu.wav" },
   { id: "be", hiragana: "べ", katakana: "ベ", meaning: "be", audio: "audio/sentences/kana_be.wav" },
-  { id: "bo", hiragana: "ぼ", katakana: "ボ", meaning: "bo", audio: "audio/sentences/kana_bo.wav" }
+  { id: "bo", hiragana: "ぼ", katakana: "ボ", meaning: "bo", audio: "audio/sentences/kana_bo.wav" },
+  
+  /* HANDAKUTEN: P ROW */
+  { id: "pa", hiragana: "ぱ", katakana: "パ", meaning: "pa", audio: "audio/sentences/kana_pa.wav" },
+  { id: "pi", hiragana: "ぴ", katakana: "ピ", meaning: "pi", audio: "audio/sentences/kana_pi.wav" },
+  { id: "pu", hiragana: "ぷ", katakana: "プ", meaning: "pu", audio: "audio/sentences/kana_pu.wav" },
+  { id: "pe", hiragana: "ぺ", katakana: "ペ", meaning: "pe", audio: "audio/sentences/kana_pe.wav" },
+  { id: "po", hiragana: "ぽ", katakana: "ポ", meaning: "po", audio: "audio/sentences/kana_po.wav" },
+
+  /* YŌON: KYA / KYU / KYO */
+  { id: "kya", hiragana: "きゃ", katakana: "キャ", meaning: "kya", audio: "audio/sentences/kana_kya.wav" },
+  { id: "kyu", hiragana: "きゅ", katakana: "キュ", meaning: "kyu", audio: "audio/sentences/kana_kyu.wav" },
+  { id: "kyo", hiragana: "きょ", katakana: "キョ", meaning: "kyo", audio: "audio/sentences/kana_kyo.wav" },
+
+  /* YŌON: SHA / SHU / SHO */
+  { id: "sha", hiragana: "しゃ", katakana: "シャ", meaning: "sha", audio: "audio/sentences/kana_sha.wav" },
+  { id: "shu", hiragana: "しゅ", katakana: "シュ", meaning: "shu", audio: "audio/sentences/kana_shu.wav" },
+  { id: "sho", hiragana: "しょ", katakana: "ショ", meaning: "sho", audio: "audio/sentences/kana_sho.wav" }
+
 
 ];
 
