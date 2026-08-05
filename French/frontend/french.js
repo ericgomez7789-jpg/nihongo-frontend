@@ -1459,6 +1459,57 @@ const sentences = [
 
 
 
+{
+  id: "l1-fr-21",
+  meaning: "to touch the window",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "toucher",
+      hiragana: "toucher",
+      meaning: "to touch",
+      audio: {
+        daughter: "audio/toucher.wav",
+        me: "audio/toucher.wav"
+      }
+    },
+    {
+      romaji: "la",
+      hiragana: "la",
+      meaning: "the",
+      audio: {
+        daughter: "audio/la.wav",
+        me: "audio/la.wav"
+      }
+    },
+    {
+      romaji: "fenêtre",
+      hiragana: "fenetre",
+      meaning: "window",
+      audio: {
+        daughter: "audio/fenetre.wav",
+        me: "audio/fenetre.wav"
+      }
+    }
+  ]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
