@@ -2300,7 +2300,7 @@ const level2Sentences = [
 const L2 = {
   round: 0,
   score: 0,
-  TOTAL_ROUNDS: 1,
+  TOTAL_ROUNDS: 4,
 
   dataset: level2Sentences,
   currentSentence: null,
