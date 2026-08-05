@@ -8,3 +8,34 @@
   background-color: #F44336; /* red */
   color: white;
 }
+
+
+/* ⭐ Level‑2 Summary & Final Summary — lighter textbox backgrounds */
+#level2Screen3 .summary-container,
+#level2Screen4 .summary-container {
+  background-color: #1e1e1e;   /* lighter than pure black */
+  border: 1px solid #333;
+  padding: 18px;
+  border-radius: 12px;
+}
+
+/* ⭐ Individual rows inside the summary */
+#level2Screen3 .summary-row,
+#level2Screen4 .summary-row {
+  background-color: #262626;   /* card-like, readable */
+  border: 1px solid #444;
+  padding: 12px 16px;
+  border-radius: 10px;
+  color: #fff;
+}
+
+/* ⭐ Labels + values */
+#level2Screen3 .summary-label,
+#level2Screen4 .summary-label {
+  color: #ccc;
+}
+
+#level2Screen3 .summary-value,
+#level2Screen4 .summary-value {
+  color: #fff;
+}

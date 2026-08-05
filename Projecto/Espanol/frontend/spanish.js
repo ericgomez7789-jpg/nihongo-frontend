@@ -2029,6 +2029,11 @@ function level1_screen2(sentence) {
    (No sharing with Level 1 or any other level)
 ========================================================== */
 const level2Sentences = [
+
+
+
+
+
   {
     id: "l2_001",
     sentence: "Podemos quedarnos en el parque pero va a llover.",
@@ -2282,7 +2287,6 @@ const level2Sentences = [
 
 
 
-
 ];
 
 
@@ -2296,7 +2300,7 @@ const level2Sentences = [
 const L2 = {
   round: 0,
   score: 0,
-  TOTAL_ROUNDS: 4,
+  TOTAL_ROUNDS: 1,
 
   dataset: level2Sentences,
   currentSentence: null,
