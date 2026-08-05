@@ -1493,7 +1493,67 @@ const sentences = [
       }
     }
   ]
-}
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l1-fr-21",
+  meaning: "I touch the wall",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "je",
+      hiragana: "je",
+      meaning: "I",
+      audio: {
+        daughter: "audio/je.wav",
+        me: "audio/je.wav"
+      }
+    },
+    {
+      romaji: "touche",
+      hiragana: "touche",
+      meaning: "touch",
+      audio: {
+        daughter: "audio/touche.wav",
+        me: "audio/touche.wav"
+      }
+    },
+    {
+      romaji: "le",
+      hiragana: "le",
+      meaning: "the",
+      audio: {
+        daughter: "audio/le.wav",
+        me: "audio/le.wav"
+      }
+    },
+    {
+      romaji: "mur",
+      hiragana: "mur",
+      meaning: "wall",
+      audio: {
+        daughter: "audio/mur.wav",
+        me: "audio/mur.wav"
+      }
+    }
+  ]
+},
 
 
 

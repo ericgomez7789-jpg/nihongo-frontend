@@ -2082,22 +2082,6 @@ const sentences = [
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 {
    id: "l1-20",
   meaning: "Touch the window",
@@ -2150,6 +2134,21 @@ const sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
    id: "l1-21",
   meaning: "get stained",
@@ -14887,6 +14886,20 @@ const level3Sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
   id: "l3-7",
   meaning: "He wanted to go outside, but it started to rain.",
