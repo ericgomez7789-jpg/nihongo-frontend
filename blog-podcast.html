@@ -502,38 +502,26 @@
 
 
 
-
 <script type="module">
   const sbMusic = window.sb;
 
   const privateSongs = [
-    "audio/music/frozen.wav",
-    "audio/music/last_of_the_mohicans.wav",
-    "audio/music/raise_the_colors.wav",
-    "audio/music/korobeiniki.wav",
-    "audio/music/chinese.wav",
-    "audio/music/flower.wav",
-    "audio/music/sway.wav",
-    "audio/music/love.wav",
-    "audio/music/gale.wav",
-    "audio/music/so_happy_together.wav",
-    "audio/music/last_of_the_mohicans2.wav",
-    "audio/music/last_of_the_mohicans3.wav",
-    "audio/music/jamaican.wav",
-    "audio/music/anvil_of_crome.wav",
-    "audio/music/speechless.wav",
-    "audio/music/diamonds_in_the_sky.wav",
-
-
-
-
-
-
-
-
-
-
-
+    "audio/music/frozen.mp3",
+    "audio/music/last_of_the_mohicans.mp3",
+    "audio/music/raise_the_colors.mp3",
+    "audio/music/korobeiniki.mp3",
+    "audio/music/chinese.mp3",
+    "audio/music/flower.mp3",
+    "audio/music/sway.mp3",
+    "audio/music/love.mp3",
+    "audio/music/gale.mp3",
+    "audio/music/so_happy_together.mp3",
+    "audio/music/last_of_the_mohicans2.mp3",
+    "audio/music/last_of_the_mohicans3.mp3",
+    "audio/music/jamaican.mp3",
+    "audio/music/anvil_of_crome.mp3",
+    "audio/music/speechless.mp3",
+    "audio/music/diamonds_in_the_sky.mp3"
   ];
 
   function startRandomMusic() {
@@ -546,12 +534,11 @@
     function playRandom() {
       const randomSong = privateSongs[Math.floor(Math.random() * privateSongs.length)];
       player.src = randomSong;
-      player.volume = 0.20;
+      player.volume = 0.16;
 
       // Safe autoplay workaround
       const tryPlay = () => {
         player.play().catch(() => {
-          // If blocked, wait for ANY user interaction
           window.addEventListener("click", tryPlay, { once: true });
           window.addEventListener("keydown", tryPlay, { once: true });
           window.addEventListener("touchstart", tryPlay, { once: true });
@@ -565,15 +552,25 @@
     setInterval(playRandom, 180000);
   }
 
-  // Delay ensures Supabase is ready
+  // Delay ensures Supabase is ready — but does NOT touch login UI
   setTimeout(() => {
     sbMusic.auth.onAuthStateChange(async (event, session) => {
-      if (session && session.user && session.user.email === "ericgomez89@yahoo.com") {
+
+      // Only start music — do NOT toggle authBox/logoutBox/app
+      if (!session) return;
+
+      if (session.user.email === "ericgomez89@yahoo.com") {
         startRandomMusic();
       }
     });
   }, 300);
 </script>
+
+
+
+
+
+
 
 </body>
 </html>
