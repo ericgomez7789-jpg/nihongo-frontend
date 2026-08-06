@@ -92,6 +92,14 @@
   background: #eef6ff;
   transform: scale(1.02);
 }
+.kana-drop-zone .kanaTile {
+  transform: scale(2.6);
+  font-size: 5.8rem;
+  transition: transform 0.2s ease, font-size 0.2s ease;
+}
+
+
+
 
 /* -----------------------------------------
    SUMMARY SCREEN — SLIGHTLY BIGGER TEXT

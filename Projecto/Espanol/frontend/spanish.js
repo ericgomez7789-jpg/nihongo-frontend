@@ -963,6 +963,81 @@ const sentences = [
 
 
 
+{
+  id: "l1-es-20",
+  meaning: "the floor is covered in snow",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "el",
+      hiragana: "el",
+      meaning: "the",
+      audio: {
+        daughter: "audio/spanish/el.wav",
+        me: "audio/spanish/el.wav"
+      }
+    },
+    {
+      romaji: "piso",
+      hiragana: "piso",
+      meaning: "floor",
+      audio: {
+        daughter: "audio/spanish/piso.wav",
+        me: "audio/spanish/piso.wav"
+      }
+    },
+    {
+      romaji: "esta",
+      hiragana: "está",
+      meaning: "is",
+      audio: {
+        daughter: "audio/spanish/esta.wav",
+        me: "audio/spanish/esta.wav"
+      }
+    },
+    {
+      romaji: "cubierto",
+      hiragana: "cubierto",
+      meaning: "covered",
+      audio: {
+        daughter: "audio/spanish/cubierto.wav",
+        me: "audio/spanish/cubierto.wav"
+      }
+    },
+    {
+      romaji: "de",
+      hiragana: "de",
+      meaning: "with / of",
+      audio: {
+        daughter: "audio/spanish/de.wav",
+        me: "audio/spanish/de.wav"
+      }
+    },
+    {
+      romaji: "nieve",
+      hiragana: "nieve",
+      meaning: "snow",
+      audio: {
+        daughter: "audio/spanish/nieve.wav",
+        me: "audio/spanish/nieve.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ];
 
@@ -2273,6 +2348,37 @@ const level2Sentences = [
   ]
 },
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l2_009",
+  sentence: "Después de un día difícil quize relajarme, sin embargo el teléfono siguió sonando.",
+  conjunction: "sin embargo",
+  meaning: "After a difficult day I wanted to relax, however the phone kept ringing.",
+
+  fullAudio: "audio/spanish/conjunction9.wav",
+
+  chunks: [
+    {
+      audio: {
+        me: "audio/spanish/conjunction9.wav",
+        daughter: "audio/spanish/conjunction9.wav"
+      }
+    }
+  ]
+},
 
 
 
