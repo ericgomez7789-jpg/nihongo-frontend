@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<body style="background:#000;">
+
+<audio id="privatePlayer" autoplay></audio>
+
+<script>
+  let allowedToPlay = false;
+
+  // Listen for login status from parent page
+  window.addEventListener("message", (event) => {
+    if (event.data === "ALLOW_MUSIC") {
+      allowedToPlay = true;
+      startRandomMusic();
+    }
+    if (event.data === "STOP_MUSIC") {
+      allowedToPlay = false;
+      const player = document.getElementById("privatePlayer");
+      player.pause();
+    }
+  });
+
+  const privateSongs = [
+    "audio/music/frozen.mp3",
+    "audio/music/last_of_the_mohicans.mp3",
+    "audio/music/raise_the_colors.mp3",
+    "audio/music/korobeiniki.mp3",
+    "audio/music/chinese.mp3",
+    "audio/music/flower.mp3",
+    "audio/music/sway.mp3",
+    "audio/music/love.mp3",
+    "audio/music/gale.mp3",
+    "audio/music/so_happy_together.mp3",
+    "audio/music/last_of_the_mohicans2.mp3",
+    "audio/music/last_of_the_mohicans3.mp3",
+    "audio/music/jamaican.mp3",
+    "audio/music/anvil_of_crome.mp3",
+    "audio/music/speechless.mp3",
+    "audio/music/diamonds_in_the_sky.mp3",
+    "audio/music/sway_strum.mp3",
+    "audio/music/dawn.mp3",
+    "audio/music/king_arthur.mp3",
+    "audio/music/diamonds_strum.mp3",
+    "audio/music/latina.mp3",
+    "audio/music/king_arthur2.mp3",
+    "audio/music/children.mp3",
+    "audio/music/eiyuu_reimei.mp3",
+    "audio/music/dream_pursuer.mp3",
+    "audio/music/a_child_was_born.mp3",
+    "audio/music/bloodymary.mp3",
+    "audio/music/gangsters_paradise.mp3",
+    "audio/music/color_of_night.mp3",
+    "audio/music/wong_fe_hung.mp3",
+    "audio/music/wong_fe_hung2.mp3",
+    "audio/music/katyusha.mp3",
+    "audio/music/wong_fe_hung3.mp3",
+    "audio/music/wong_fe_hung4.mp3",
+    "audio/music/wong_fe_hung5.mp3",
+    "audio/music/lambada.mp3",
+    "audio/music/alacran.mp3",
+    "audio/music/sway_strum2.mp3",
+    "audio/music/ghost_riders.mp3",
+    "audio/music/bella_chao.mp3",
+    "audio/music/take_church.mp3",
+    "audio/music/unforgiven.mp3"
+  ];
+
+  function startRandomMusic() {
+    if (!allowedToPlay) return;
+
+    const player = document.getElementById("privatePlayer");
+    player.volume = 0.16;
+
+    function playRandom() {
+      if (!allowedToPlay) return;
+      const randomSong = privateSongs[Math.floor(Math.random() * privateSongs.length)];
+      player.src = randomSong;
+      player.play().catch(() => {});
+    }
+
+    playRandom();
+    player.onended = playRandom;
+  }
+</script>
+
+
+</body>
+</html>

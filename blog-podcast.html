@@ -65,7 +65,7 @@
 </head>
 
 <body>
-
+<audio id="privatePlayer" style="display:none;"></audio>
 <div id="header-logo">
   <img src="audio/logo/toris_logo.png" alt="App Logo">
 </div>
@@ -132,10 +132,33 @@
 
 </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- Hidden private music player -->
-<audio id="privatePlayer" style="display:none;"></audio>
+
 
 <!-- Supabase client -->
+ 
 <script type="module" src="app.js"></script>
 
 <script type="module">
@@ -143,15 +166,7 @@
   const MY_EMAIL = "ericgomez89@yahoo.com";
 
   /* FORCE LOGOUT ON PAGE LOAD */
-  sb.auth.getSession().then(async ({ data }) => {
-    if (data.session) {
-      await sb.auth.signOut();
-    }
-
-    document.getElementById("authBox").style.display = "block";
-    document.getElementById("logoutBox").style.display = "none";
-    document.getElementById("app").style.display = "none";
-  });
+  
 
   /* BLOG LOGIC */
   const Blog = {
@@ -224,12 +239,18 @@
   sb.auth.onAuthStateChange(async (event, session) => {
     const loggedIn = !!session;
 
-    if (!loggedIn) {
-      document.getElementById("authBox").style.display = "block";
-      document.getElementById("logoutBox").style.display = "none";
-      document.getElementById("app").style.display = "none";
-      return;
-    }
+    if (session === null) {
+  // Session is still loading — do nothing
+  return;
+}
+
+if (!loggedIn) {
+  document.getElementById("authBox").style.display = "block";
+  document.getElementById("logoutBox").style.display = "none";
+  document.getElementById("app").style.display = "none";
+  return;
+}
+
 
     const userEmail = session.user.email;
 
@@ -266,8 +287,9 @@
     await sb.auth.signOut();
 
     const player = document.getElementById("privatePlayer");
-    player.pause();
-    player.src = "";
+    player.pause();   // stop music
+// DO NOT clear src — this breaks continuity
+
 
     document.getElementById("authBox").style.display = "block";
     document.getElementById("logoutBox").style.display = "none";
@@ -398,32 +420,38 @@
     "audio/music/unforgiven.mp3"
   ];
 
-  function startRandomMusic() {
-    const player = document.getElementById("privatePlayer");
-    if (!player) return;
+  let musicStarted = false;
 
-    player.preload = "auto";
-    player.autoplay = true;
+function startRandomMusic() {
+  if (musicStarted) return;   // ← prevents re-running
+  musicStarted = true;
 
-    function playRandom() {
-      const randomSong = privateSongs[Math.floor(Math.random() * privateSongs.length)];
-      player.src = randomSong;
-      player.volume = 0.16;
+  const player = document.getElementById("privatePlayer");
+  if (!player) return;
 
-      const tryPlay = () => {
-        player.play().catch(() => {
-          window.addEventListener("click", tryPlay, { once: true });
-          window.addEventListener("keydown", tryPlay, { once: true });
-          window.addEventListener("touchstart", tryPlay, { once: true });
-        });
-      };
+  player.preload = "auto";
+  player.autoplay = true;
 
-      tryPlay();
-    }
+  function playRandom() {
+    const randomSong = privateSongs[Math.floor(Math.random() * privateSongs.length)];
+    player.src = randomSong;
+    player.volume = 0.16;
 
-    playRandom();
-    player.onended = playRandom;
+    const tryPlay = () => {
+      player.play().catch(() => {
+        window.addEventListener("click", tryPlay, { once: true });
+        window.addEventListener("keydown", tryPlay, { once: true });
+        window.addEventListener("touchstart", tryPlay, { once: true });
+      });
+    };
+
+    tryPlay();
   }
+
+  playRandom();
+  player.onended = playRandom;
+}
+
 </script>
 
 </body>
