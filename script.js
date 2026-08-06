@@ -420,7 +420,33 @@ L0.dataset = [
   /* YŌON: SHA / SHU / SHO */
   { id: "sha", hiragana: "しゃ", katakana: "シャ", meaning: "sha", audio: "audio/sentences/kana_sha.wav" },
   { id: "shu", hiragana: "しゅ", katakana: "シュ", meaning: "shu", audio: "audio/sentences/kana_shu.wav" },
-  { id: "sho", hiragana: "しょ", katakana: "ショ", meaning: "sho", audio: "audio/sentences/kana_sho.wav" }
+  { id: "sho", hiragana: "しょ", katakana: "ショ", meaning: "sho", audio: "audio/sentences/kana_sho.wav" },
+
+    /* YŌON: CHA / CHU / CHO */
+  { id: "cha", hiragana: "ちゃ", katakana: "チャ", meaning: "cha", audio: "audio/sentences/kana_cha.wav" },
+  { id: "chu", hiragana: "ちゅ", katakana: "チュ", meaning: "chu", audio: "audio/sentences/kana_chu.wav" },
+  { id: "cho", hiragana: "ちょ", katakana: "チョ", meaning: "cho", audio: "audio/sentences/kana_cho.wav" },
+
+  /* YŌON: NYA / NYU / NYO */
+  { id: "nya", hiragana: "にゃ", katakana: "ニャ", meaning: "nya", audio: "audio/sentences/kana_nya.wav" },
+  { id: "nyu", hiragana: "にゅ", katakana: "ニュ", meaning: "nyu", audio: "audio/sentences/kana_nyu.wav" },
+  { id: "nyo", hiragana: "にょ", katakana: "ニョ", meaning: "nyo", audio: "audio/sentences/kana_nyo.wav" },
+
+  /* YŌON: HYA / HYU / HYO */
+  { id: "hya", hiragana: "ひゃ", katakana: "ヒャ", meaning: "hya", audio: "audio/sentences/kana_hya.wav" },
+  { id: "hyu", hiragana: "ひゅ", katakana: "ヒュ", meaning: "hyu", audio: "audio/sentences/kana_hyu.wav" },
+  { id: "hyo", hiragana: "ひょ", katakana: "ヒョ", meaning: "hyo", audio: "audio/sentences/kana_hyo.wav" },
+
+  /* YŌON: MYA / MYU / MYO */
+  { id: "mya", hiragana: "みゃ", katakana: "ミャ", meaning: "mya", audio: "audio/sentences/kana_mya.wav" },
+  { id: "myu", hiragana: "みゅ", katakana: "ミュ", meaning: "myu", audio: "audio/sentences/kana_myu.wav" },
+  { id: "myo", hiragana: "みょ", katakana: "ミョ", meaning: "myo", audio: "audio/sentences/kana_myo.wav" },
+
+  /* YŌON: RYA / RYU / RYO */
+  { id: "rya", hiragana: "りゃ", katakana: "リャ", meaning: "rya", audio: "audio/sentences/kana_rya.wav" },
+  { id: "ryu", hiragana: "りゅ", katakana: "リュ", meaning: "ryu", audio: "audio/sentences/kana_ryu.wav" },
+  { id: "ryo", hiragana: "りょ", katakana: "リョ", meaning: "ryo", audio: "audio/sentences/kana_ryo.wav" }
+
 
 
 ];
@@ -2201,6 +2227,20 @@ const sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
    id: "l1-22",
   meaning: "The ground is covered in snow",
@@ -15005,6 +15045,21 @@ const level3Sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
   id: "l3-8",
   meaning: "Even though he said he was not cold, he was shivering.",
@@ -15101,6 +15156,21 @@ const level3Sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
   id: "l3-9",
   meaning: "Even though she practiced a lot, she didn’t improve.",
@@ -15182,6 +15252,15 @@ const level3Sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
 
 
 

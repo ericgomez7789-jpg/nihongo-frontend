@@ -1287,7 +1287,7 @@ const sentences = [
 
 
 {
-  id: "l1-fr-18",
+  id: "l1-fr-21",
   meaning: "When did you come?",
   level: 1,
 
@@ -1344,7 +1344,7 @@ const sentences = [
 
 
 {
-  id: "l1-fr-19",
+  id: "l1-fr-22",
   meaning: "Take care.",
   level: 1,
 
@@ -1404,7 +1404,7 @@ const sentences = [
 
 
 {
-  id: "l1-fr-20",
+  id: "l1-fr-23",
   meaning: "How do you read this?",
   level: 1,
 
@@ -1460,7 +1460,7 @@ const sentences = [
 
 
 {
-  id: "l1-fr-21",
+  id: "l1-fr-24",
   meaning: "to touch the window",
   level: 1,
 
@@ -1511,7 +1511,7 @@ const sentences = [
 
 
 {
-  id: "l1-fr-21",
+  id: "l1-fr-25",
   meaning: "I touch the wall",
   level: 1,
 
@@ -1550,6 +1550,69 @@ const sentences = [
       audio: {
         daughter: "audio/mur.wav",
         me: "audio/mur.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l1-fr-26",
+  meaning: "don't touch the floor",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "ne",
+      hiragana: "ne",
+      meaning: "not",
+      audio: {
+        daughter: "audio/ne.wav",
+        me: "audio/ne.wav"
+      }
+    },
+    {
+      romaji: "touche",
+      hiragana: "touche",
+      meaning: "touch",
+      audio: {
+        daughter: "audio/touche.wav",
+        me: "audio/touche.wav"
+      }
+    },
+    {
+      romaji: "pas",
+      hiragana: "pas",
+      meaning: "not",
+      audio: {
+        daughter: "audio/pas.wav",
+        me: "audio/pas.wav"
+      }
+    },
+    {
+      romaji: "le",
+      hiragana: "le",
+      meaning: "the",
+      audio: {
+        daughter: "audio/le.wav",
+        me: "audio/le.wav"
+      }
+    },
+    {
+      romaji: "sol",
+      hiragana: "sol",
+      meaning: "floor",
+      audio: {
+        daughter: "audio/sol.wav",
+        me: "audio/sol.wav"
       }
     }
   ]
