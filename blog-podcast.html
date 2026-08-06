@@ -604,55 +604,43 @@
 
     "audio/music/bella_chao.mp3",
 
-    "audio/music/take_church/mp3",
+    "audio/music/take_church.mp3",
 
     "audio/music/unforgiven.mp3",
-
-
 
 
   ];
 
   function startRandomMusic() {
-    const player = document.getElementById("privatePlayer");
-    if (!player) return;
+  const player = document.getElementById("privatePlayer");
+  if (!player) return;
 
-    player.preload = "auto";
-    player.autoplay = true;
+  player.preload = "auto";
+  player.autoplay = true;
 
-    function playRandom() {
-      const randomSong = privateSongs[Math.floor(Math.random() * privateSongs.length)];
-      player.src = randomSong;
-      player.volume = 0.16;
+  function playRandom() {
+    const randomSong = privateSongs[Math.floor(Math.random() * privateSongs.length)];
+    player.src = randomSong;
+    player.volume = 0.16;
 
-      // Safe autoplay workaround
-      const tryPlay = () => {
-        player.play().catch(() => {
-          window.addEventListener("click", tryPlay, { once: true });
-          window.addEventListener("keydown", tryPlay, { once: true });
-          window.addEventListener("touchstart", tryPlay, { once: true });
-        });
-      };
+    const tryPlay = () => {
+      player.play().catch(() => {
+        window.addEventListener("click", tryPlay, { once: true });
+        window.addEventListener("keydown", tryPlay, { once: true });
+        window.addEventListener("touchstart", tryPlay, { once: true });
+      });
+    };
 
-      tryPlay();
-    }
-
-    playRandom();
-    setInterval(playRandom, 180000);
+    tryPlay();
   }
 
-  // Delay ensures Supabase is ready — but does NOT touch login UI
-  setTimeout(() => {
-    sbMusic.auth.onAuthStateChange(async (event, session) => {
+  // Play first song
+  playRandom();
 
-      // Only start music — do NOT toggle authBox/logoutBox/app
-      if (!session) return;
+  // TRUE continuous playback — next song starts when previous ends
+  player.onended = playRandom;
+}
 
-      if (session.user.email === "ericgomez89@yahoo.com") {
-        startRandomMusic();
-      }
-    });
-  }, 300);
 </script>
 
 
