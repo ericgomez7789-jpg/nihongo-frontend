@@ -132,206 +132,25 @@
 
 </div>
 
-
-
-
-
-
-
-
-
-
-<!-- Load main Supabase client -->
-<script type="module" src="app.js"></script>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Tori's Method — Blog & Podcast</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="logo.css">
-
-  <style>
-    body {
-      background: #050505;
-      color: #f5f5f5;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      max-width: 720px;
-      margin: 40px auto;
-      padding: 0 20px 60px;
-      line-height: 1.7;
-    }
-    a { color: #7fd1ff; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    h1, h2, h3 { font-weight: 600; }
-    article {
-      margin-bottom: 60px;
-      border-bottom: 1px solid #333;
-      padding-bottom: 40px;
-    }
-    textarea, input {
-      width: 100%;
-      background: #111;
-      color: #eee;
-      border: 1px solid #333;
-      padding: 10px;
-      border-radius: 6px;
-      margin-top: 10px;
-      font-size: 15px;
-    }
-    button {
-      margin-top: 10px;
-      padding: 10px 16px;
-      background: #1e90ff;
-      border: none;
-      border-radius: 6px;
-      color: white;
-      font-size: 15px;
-      cursor: pointer;
-    }
-    button:hover { background: #3aa0ff; }
-    .danger-btn { background: #ff4d4d; }
-    .danger-btn:hover { background: #ff6666; }
-
-    #unlockPrompt {
-      display: none;
-      background: #222;
-      border: 1px solid #444;
-      padding: 16px;
-      border-radius: 8px;
-      margin-bottom: 20px;
-      color: #f0f0f0;
-      font-size: 16px;
-      line-height: 1.5;
-    }
-
-    #app { display: none; }
-  </style>
-</head>
-
-<body>
-
-<div id="header-logo">
-  <img src="audio/logo/toris_logo.png" alt="App Logo">
-</div>
-
-<h1>Tori's Method — Blog & Podcast</h1>
-<p>Updates, dev logs, thoughts, and short podcast-style audio notes.</p>
-
-<div id="unlockPrompt"></div>
-
-<!-- LOGIN UI -->
-<div id="authBox">
-  <h2>Login</h2>
-  <input id="email" placeholder="Email" />
-  <input id="password" type="password" placeholder="Password" />
-  <button onclick="login()">Login</button>
-  <button onclick="signup()">Sign Up</button>
-</div>
-
-<!-- LOGOUT UI -->
-<div id="logoutBox" style="display:none; margin-bottom:30px;">
-  <button onclick="logout()">Logout</button>
-
-  <div style="margin-bottom:20px;">
-    <a href="membership.html" style="color:#7fd1ff; font-size:18px;">Membership →</a>
-  </div>
-</div>
-
-<!-- BLOG APP -->
-<div id="app">
-
-  <h2>Write a Post, Question, or Feedback</h2>
-  <input id="newTitle" placeholder="Post title (optional)" />
-  <textarea id="newBody" rows="4" placeholder="Write your message here..."></textarea>
-  <button onclick="publishPost()">Publish Post</button>
-
-  <hr style="margin: 40px 0; border-color:#333;">
-
-  <div id="posts"></div>
-
-  <h2 style="margin-top:60px;">Add Podcast Audio Clip (URL)</h2>
-  <textarea id="audioInput" rows="3" placeholder="Paste audio URL here..."></textarea>
-  <button onclick="publishAudio()">Publish Audio Clip</button>
-
-  <h2 style="margin-top:40px;">Record Podcast Audio Clip</h2>
-  <button id="recordBtn">🎙 Start Recording</button>
-  <button id="stopBtn" disabled>⏹ Stop Recording</button>
-  <p id="recordStatus" style="color:#aaa; margin-top:10px;"></p>
-
-  <p style="margin-top: 40px;">
-    <a href="index.html">← Back to Tori's Method</a>
-  </p>
-
-  <p style="margin-top: 20px;">
-    <a href="/search-anchor.html" style="color: #4ea3ff;">
-      Learn how Tori’s Method works →
-    </a>
-  </p>
-
-  <p style="margin-top: 12px;">
-    <a href="/pillar.html" style="color: #4ea3ff;">
-      Why listening is the hardest skill →
-    </a>
-  </p>
-
-</div>
-
 <!-- Hidden private music player -->
 <audio id="privatePlayer" style="display:none;"></audio>
 
-<!-- Load main Supabase client -->
+<!-- Supabase client -->
 <script type="module" src="app.js"></script>
 
 <script type="module">
   const sb = window.sb;
+  const MY_EMAIL = "ericgomez89@yahoo.com";
 
-  /* INITIAL SESSION CHECK */
-  sb.auth.getSession().then(({ data }) => {
-    const loggedIn = !!data.session;
-
-    document.getElementById("authBox").style.display = loggedIn ? "none" : "block";
-    document.getElementById("logoutBox").style.display = loggedIn ? "block" : "none";
-    document.getElementById("app").style.display = loggedIn ? "block" : "none";
-
-    if (loggedIn) renderPosts();
-  });
-
-  /* LOGIN / SIGNUP / LOGOUT */
-  async function login() {
-    const email = document.getElementById("email").value.trim();
-    const password = document.getElementById("password").value.trim();
-    const { error } = await sb.auth.signInWithPassword({ email, password });
-    if (error) alert(error.message);
-  }
-
-  async function signup() {
-    const email = document.getElementById("email").value.trim();
-    const password = document.getElementById("password").value.trim();
-    const { error } = await sb.auth.signUp({ email, password });
-    if (error) alert(error.message);
-    else alert("Signup successful. You can log in now.");
-  }
-
-  async function logout() {
-    await sb.auth.signOut();
+  /* FORCE LOGOUT ON PAGE LOAD */
+  sb.auth.getSession().then(async ({ data }) => {
+    if (data.session) {
+      await sb.auth.signOut();
+    }
 
     document.getElementById("authBox").style.display = "block";
     document.getElementById("logoutBox").style.display = "none";
     document.getElementById("app").style.display = "none";
-    document.getElementById("posts").innerHTML = "";
-  }
-
-  /* AUTH STATE LISTENER */
-  sb.auth.onAuthStateChange(async (event, session) => {
-    const loggedIn = !!session;
-
-    document.getElementById("authBox").style.display = loggedIn ? "none" : "block";
-    document.getElementById("logoutBox").style.display = loggedIn ? "block" : "none";
-    document.getElementById("app").style.display = loggedIn ? "block" : "none";
-
-    if (loggedIn) renderPosts();
   });
 
   /* BLOG LOGIC */
@@ -400,6 +219,66 @@
       </article>
     `).join("");
   }
+
+  /* AUTH STATE LISTENER */
+  sb.auth.onAuthStateChange(async (event, session) => {
+    const loggedIn = !!session;
+
+    if (!loggedIn) {
+      document.getElementById("authBox").style.display = "block";
+      document.getElementById("logoutBox").style.display = "none";
+      document.getElementById("app").style.display = "none";
+      return;
+    }
+
+    const userEmail = session.user.email;
+
+    if (userEmail !== MY_EMAIL) {
+      await sb.auth.signOut();
+      return;
+    }
+
+    document.getElementById("authBox").style.display = "none";
+    document.getElementById("logoutBox").style.display = "block";
+    document.getElementById("app").style.display = "block";
+
+    renderPosts();
+    startRandomMusic();
+  });
+
+  /* LOGIN / SIGNUP / LOGOUT */
+  async function login() {
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value.trim();
+    const { error } = await sb.auth.signInWithPassword({ email, password });
+    if (error) alert(error.message);
+  }
+
+  async function signup() {
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value.trim();
+    const { error } = await sb.auth.signUp({ email, password });
+    if (error) alert(error.message);
+    else alert("Signup successful. You can log in now.");
+  }
+
+  async function logout() {
+    await sb.auth.signOut();
+
+    const player = document.getElementById("privatePlayer");
+    player.pause();
+    player.src = "";
+
+    document.getElementById("authBox").style.display = "block";
+    document.getElementById("logoutBox").style.display = "none";
+    document.getElementById("app").style.display = "none";
+    document.getElementById("posts").innerHTML = "";
+  }
+
+  /* EXPOSE FUNCTIONS TO HTML */
+  window.login = login;
+  window.signup = signup;
+  window.logout = logout;
 
   window.handleDeletePost = async (id) => {
     if (!confirm("Delete this post?")) return;
@@ -473,181 +352,79 @@
     };
   };
 
-  /* EXPOSE FUNCTIONS TO HTML */
-  window.login = login;
-  window.signup = signup;
-  window.logout = logout;
-  window.publishPost = publishPost;
-  window.publishAudio = publishAudio;
-  window.handleDeletePost = handleDeletePost;
-
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script type="module">
-  const sbMusic = window.sb;
-
+  /* MUSIC PLAYER */
   const privateSongs = [
-
-
     "audio/music/frozen.mp3",
-
-   
     "audio/music/last_of_the_mohicans.mp3",
-
-
-     
     "audio/music/raise_the_colors.mp3",
-
-     
-   "audio/music/korobeiniki.mp3",
-
-     
+    "audio/music/korobeiniki.mp3",
     "audio/music/chinese.mp3",
-
-     
     "audio/music/flower.mp3",
-
-     
     "audio/music/sway.mp3",
-
-     
     "audio/music/love.mp3",
-
-     
     "audio/music/gale.mp3",
-
-     
     "audio/music/so_happy_together.mp3",
-
-     
     "audio/music/last_of_the_mohicans2.mp3",
-
-     
     "audio/music/last_of_the_mohicans3.mp3",
-
-     
     "audio/music/jamaican.mp3",
-
-     
     "audio/music/anvil_of_crome.mp3",
-
-     
-   "audio/music/speechless.mp3",
-
-     
+    "audio/music/speechless.mp3",
     "audio/music/diamonds_in_the_sky.mp3",
-
     "audio/music/sway_strum.mp3",
-
     "audio/music/dawn.mp3",
-
     "audio/music/king_arthur.mp3",
-
     "audio/music/diamonds_strum.mp3",
-
     "audio/music/latina.mp3",
-
     "audio/music/king_arthur2.mp3",
-
     "audio/music/children.mp3",
-
     "audio/music/eiyuu_reimei.mp3",
-
     "audio/music/dream_pursuer.mp3",
-
     "audio/music/a_child_was_born.mp3",
-
     "audio/music/bloodymary.mp3",
-
     "audio/music/gangsters_paradise.mp3",
-
     "audio/music/color_of_night.mp3",
-
     "audio/music/wong_fe_hung.mp3",
-
     "audio/music/wong_fe_hung2.mp3",
-
     "audio/music/katyusha.mp3",
-
     "audio/music/wong_fe_hung3.mp3",
-
     "audio/music/wong_fe_hung4.mp3",
-
     "audio/music/wong_fe_hung5.mp3",
-
     "audio/music/lambada.mp3",
-
     "audio/music/alacran.mp3",
-
     "audio/music/sway_strum2.mp3",
-
     "audio/music/ghost_riders.mp3",
-
     "audio/music/bella_chao.mp3",
-
     "audio/music/take_church.mp3",
-
-    "audio/music/unforgiven.mp3",
-
-
+    "audio/music/unforgiven.mp3"
   ];
 
   function startRandomMusic() {
-  const player = document.getElementById("privatePlayer");
-  if (!player) return;
+    const player = document.getElementById("privatePlayer");
+    if (!player) return;
 
-  player.preload = "auto";
-  player.autoplay = true;
+    player.preload = "auto";
+    player.autoplay = true;
 
-  function playRandom() {
-    const randomSong = privateSongs[Math.floor(Math.random() * privateSongs.length)];
-    player.src = randomSong;
-    player.volume = 0.16;
+    function playRandom() {
+      const randomSong = privateSongs[Math.floor(Math.random() * privateSongs.length)];
+      player.src = randomSong;
+      player.volume = 0.16;
 
-    const tryPlay = () => {
-      player.play().catch(() => {
-        window.addEventListener("click", tryPlay, { once: true });
-        window.addEventListener("keydown", tryPlay, { once: true });
-        window.addEventListener("touchstart", tryPlay, { once: true });
-      });
-    };
+      const tryPlay = () => {
+        player.play().catch(() => {
+          window.addEventListener("click", tryPlay, { once: true });
+          window.addEventListener("keydown", tryPlay, { once: true });
+          window.addEventListener("touchstart", tryPlay, { once: true });
+        });
+      };
 
-    tryPlay();
+      tryPlay();
+    }
+
+    playRandom();
+    player.onended = playRandom;
   }
-
-  // Play first song
-  playRandom();
-
-  // TRUE continuous playback — next song starts when previous ends
-  player.onended = playRandom;
-}
-
 </script>
-
-
-
-
-
-
 
 </body>
 </html>
