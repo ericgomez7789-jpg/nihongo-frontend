@@ -23,42 +23,6 @@
 
 
 
-<iframe 
-  src="musicplayer.html" 
-  id="musicFrame" 
-  style="position:fixed; bottom:0; right:0; width:0; height:0; border:none;">
-</iframe>
-
-<!-- Supabase client MUST load before your login-check -->
-<script type="module" src="app.js"></script>
-
-<!-- Login check for music -->
-<script type="module">
-  const sb = window.sb;
-  const MY_EMAIL = "ericgomez89@yahoo.com";
-  const iframe = document.getElementById("musicFrame");
-
-  // Initial session check
-  sb.auth.getSession().then(({ data }) => {
-    const session = data.session;
-
-    if (session && session.user.email === MY_EMAIL) {
-      iframe.contentWindow.postMessage("ALLOW_MUSIC", "*");
-    } else {
-      iframe.contentWindow.postMessage("STOP_MUSIC", "*");
-    }
-  });
-
-  // React to login/logout
-  sb.auth.onAuthStateChange((event, session) => {
-    if (session && session.user.email === MY_EMAIL) {
-      iframe.contentWindow.postMessage("ALLOW_MUSIC", "*");
-    } else {
-      iframe.contentWindow.postMessage("STOP_MUSIC", "*");
-    }
-  });
-</script>
-
 
 
 
@@ -259,12 +223,21 @@
       <div class="instruction-line">Algunas frases se repetirán para reforzar el aprendizaje.</div>
     </div>
 
-    <!-- LEVEL 2 SCREEN 2 — MCQ -->
-    <div id="level2Screen2" class="level-block level2-screen hidden">
-      <h2 class="title">Elige la conjunción correcta.</h2>
-      <div id="level2SentenceLine" class="sentence-line"></div>
-      <div id="level2McqContainer" class="mcq-container"></div>
-    </div>
+
+
+<!-- LEVEL 2 SCREEN 2 — MCQ -->
+<div id="level2Screen2" class="level-block level2-screen hidden">
+  <h2 class="title">Elige la conjunción correcta.</h2>
+  <div id="level2SentenceLine" class="sentence-line"></div>
+  
+  <!-- Placeholder for dashed line (used in Spanish mode) -->
+  <div id="level2DashLine" class="dash-line"></div>
+
+  <div id="level2McqContainer" class="mcq-container"></div>
+</div>
+
+
+
 
     <!-- ⭐ LEVEL 2 SCREEN 4 — FINAL SUMMARY ⭐ -->
     <div id="level2Screen4" class="level-block level2-screen hidden">

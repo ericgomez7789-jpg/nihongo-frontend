@@ -2814,7 +2814,14 @@ L2.screen2 = function () {
       return;
     }
 
-    sentenceLine.textContent = s.sentence.replace(s.conjunction, "_____");
+   
+const blank = "___________"; // or your dashed line
+
+sentenceLine.textContent = s.sentence
+  .replace(new RegExp("\\b" + s.conjunction + "\\b", "gi"), blank)
+  .replace(/\s{2,}/g, " ")   // fix double spaces
+  .trim();
+
 
     const distractors = L2.generateDistractors(s.conjunction);
     const allOptions = [s.conjunction, ...distractors];
@@ -2882,7 +2889,7 @@ L2.handleMCQ = function (choice) {
   L2.updateScoreKeeper();
 
   // ⭐ Increment round
-  L2.round++;
+  
 
   // ⭐ Move to summary (Level‑6 style guard)
   setTimeout(() => {
@@ -4594,6 +4601,46 @@ function cleanupLevel4() {
   const wrapper = document.getElementById("level4Wrapper");
   if (wrapper) wrapper.classList.add("hidden");
 }
+
+
+
+/* ==========================================================
+   ⭐ LEVEL 5 — BUTTON HANDLERS
+========================================================== */
+
+/* ==========================================================
+   ⭐ LEVEL 5 MODULE — ARRANGE MODE
+========================================================== */
+
+/* ==========================================================
+   ⭐ LEVEL 5 — MCQ MODE
+   Uses: universal Screen 1 (audio-only), Screen 2 (MCQ),
+         Screen 3 (summary), Screen 4 (score)
+========================================================== */
+
+/* ==========================================================
+   ⭐ LEVEL 5 MODULE — FULLY ISOLATED
+   No shared globals, no shared handlers, no shared functions.
+========================================================== */
+
+/* ==========================================================
+   ⭐ LEVEL 5 — ISOLATED GLOBAL STATE
+   (No sharing with Level 1 or any other level)
+========================================================== */
+
+
+
+/* ==========================================================
+   ⭐ LEVEL 5 — CORE STATE (MIRRORED FROM LEVEL 8)
+========================================================== */
+
+
+
+
+
+
+
+
 
 
 

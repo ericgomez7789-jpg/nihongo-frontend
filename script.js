@@ -14388,7 +14388,6 @@ const level3Sentences = [
 
 
 
-
   {
     id: "l3-1",
 
