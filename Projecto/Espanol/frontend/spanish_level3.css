@@ -4,65 +4,131 @@
 
 /* Parent container: two columns side-by-side */
 .l3-split-container {
-  display: grid;                 /* ⭐ grid is more stable than flex */
-  grid-template-columns: 1fr 1fr;/* ⭐ left column + right column */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 40px;
   margin: 30px auto;
-  width: 90%;                    /* ⭐ prevents collapsing */
+  width: 90%;
   max-width: 1200px;
 }
 
-/* LEFT COLUMN — sentence text */
 /* ==========================================================
-   LEVEL 3 — LEFT COLUMN (NO BLACK SHADE)
+   LEVEL 3 — LEFT COLUMN (LIGHT + CLEAN)
 ========================================================== */
 
 #l3LeftColumn {
-  background: transparent !important;   /* ⭐ remove black shade */
-  font-size: 1.8rem;                    /* keep your size */
+  background: transparent !important;
+  font-size: 1.8rem;
   line-height: 2.4rem;
   font-weight: 600;
-  padding-right: 20px;                  /* keep spacing */
+  padding-right: 20px;
+  color: #333;                 /* lighter text */
 }
 
+/* ==========================================================
+   LEVEL 3 — RIGHT COLUMN (LIGHTER BACKGROUND)
+========================================================== */
 
-/* RIGHT COLUMN — vertical stacked buttons */
 #l3RightColumn {
   display: flex;
-  flex-direction: column;        /* ⭐ vertical stack */
+  flex-direction: column;
   justify-content: flex-start;
-  align-items: stretch;          /* ⭐ full width buttons */
+  align-items: stretch;
   gap: 18px;
-  background: #000 !important;
+  background: #f4f4f4 !important;   /* ⭐ lighter column */
+  padding: 10px 0;
 }
 
-/* Buttons inside RIGHT column */
+/* ==========================================================
+   LEVEL 3 — OPTION BUTTONS (LIGHTER + CLEANER)
+========================================================== */
+
 #l3RightColumn .l3OptionBtn {
-  width: 100%;                   /* ⭐ full width */
+  width: 100%;
   padding: 16px 20px;
-  font-size: 1.8rem;             /* ⭐ keep your size */
+  font-size: 1.8rem;
   line-height: 2.2rem;
   font-weight: 600;
   text-align: left;
   border-radius: 10px;
-  background: #111;
-  border: 2px solid #444;
-  color: #fff;
+
+  background: #ffffff;          /* ⭐ bright white buttons */
+  border: 2px solid #d0d0d0;    /* ⭐ soft border */
+  color: #333333;               /* ⭐ readable text */
+
   cursor: pointer;
-  transition: background 0.2s ease;
+  transition: background 0.2s ease, border-color 0.2s ease;
 }
 
 #l3RightColumn .l3OptionBtn:hover {
-  background: #222;
+  background: #f0f0f0;          /* ⭐ soft hover */
+  border-color: #bcbcbc;
 }
 
-/* Correct / wrong feedback */
+/* ==========================================================
+   LEVEL 3 — CORRECT / WRONG FEEDBACK (KEEP STRONG COLORS)
+========================================================== */
+
 #l3RightColumn .l3OptionBtn.l3-correct {
   background-color: #4CAF50 !important;
-  color: white !important;
+  color: #fefefe !important;
 }
 
 #l3RightColumn .l3OptionBtn.l3-wrong {
   background-color: #F44336 !important;
-  color: white !important;
+  color: #fefefe !important;
+}
+/* ==========================================================
+   LEVEL 3 — FINAL SUMMARY (LIGHT THEME)
+========================================================== */
+
+#screen4L3,
+#screen4L3 .l3-summary-box {
+  background: #f7f7f7 !important;     /* light background */
+  color: #333 !important;             /* readable text */
+}
+
+/* Summary container */
+.l3-summary-box {
+  padding: 24px;
+  border-radius: 12px;
+  border: 2px solid #e0e0e0;          /* soft border */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  margin: 20px auto;
+  width: 90%;
+  max-width: 700px;
+}
+
+/* Summary lines */
+.l3-summary-line {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin: 12px 0;
+  color: #444 !important;             /* softer text */
+}
+
+/* Summary numbers */
+.l3-summary-value {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #222 !important;             /* darker but not harsh */
+}
+
+/* Play again / exit buttons */
+#l3SummaryPlayAgainBtn,
+#l3SummaryExitBtn {
+  background: #4a90e2;
+  color: #fff;
+  border: none;
+  padding: 14px 28px;
+  font-size: 1.3rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  margin-top: 20px;
+}
+
+#l3SummaryPlayAgainBtn:hover,
+#l3SummaryExitBtn:hover {
+  background: #3578c4;
 }

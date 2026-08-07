@@ -2393,6 +2393,16 @@ const level2Sentences = [
 
 
 
+
+
+
+
+
+
+
+
+
+
 ];
 
 
@@ -3116,7 +3126,7 @@ const level3 = [
 const L3 = {
   round: 0,
   score: 0,
-  TOTAL_ROUNDS: 3,
+  TOTAL_ROUNDS: 1,
 
   dataset: level3,   // your Spanish Level‑3 inference dataset array
   currentSentence: null,

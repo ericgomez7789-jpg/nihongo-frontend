@@ -1633,6 +1633,51 @@ const sentences = [
 
 
 
+{
+id: "l1-fr-27",
+meaning: "to get dirty",
+level: 1,
+chunks: [
+{
+romaji: "se",
+hiragana: "se",
+meaning: "oneself",
+audio: {
+daughter: "audio/se.wav",
+me: "audio/se.wav"
+}
+},
+{
+romaji: "tacher",
+hiragana: "tacher",
+meaning: "stain",
+audio: {
+daughter: "audio/tacher.wav",
+me: "audio/tacher.wav"
+}
+},
+{
+romaji: "se_tacher",
+hiragana: "se_tacher",
+meaning: "to get dirty / to stain oneself",
+audio: {
+daughter: "audio/se_tacher.wav",
+me: "audio/se_tacher.wav"
+}
+}
+]
+},
+
+
+
+
+
+
+
+
+
+
+
 
 
 

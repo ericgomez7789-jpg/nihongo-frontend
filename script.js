@@ -447,7 +447,25 @@ L0.dataset = [
   { id: "ryu", hiragana: "りゅ", katakana: "リュ", meaning: "ryu", audio: "audio/sentences/kana_ryu.wav" },
   { id: "ryo", hiragana: "りょ", katakana: "リョ", meaning: "ryo", audio: "audio/sentences/kana_ryo.wav" }
 
+ /* YŌON: GYA / GYU / GYO */
+  { id: "gya", hiragana: "ぎゃ", katakana: "ギャ", meaning: "gya", audio: "audio/sentences/kana_gya.wav" },
+  { id: "gyu", hiragana: "ぎゅ", katakana: "ギュ", meaning: "gyu", audio: "audio/sentences/kana_gyu.wav" },
+  { id: "gyo", hiragana: "ぎょ", katakana: "ギョ", meaning: "gyo", audio: "audio/sentences/kana_gyo.wav" },
 
+  /* YŌON: JA / JU / JO (from じ / ジ row) */
+  { id: "ja", hiragana: "じゃ", katakana: "ジャ", meaning: "ja", audio: "audio/sentences/kana_ja.wav" },
+  { id: "ju", hiragana: "じゅ", katakana: "ジュ", meaning: "ju", audio: "audio/sentences/kana_ju.wav" },
+  { id: "jo", hiragana: "じょ", katakana: "ジョ", meaning: "jo", audio: "audio/sentences/kana_jo.wav" },
+
+  /* YŌON: BYA / BYU / BYO */
+  { id: "bya", hiragana: "びゃ", katakana: "ビャ", meaning: "bya", audio: "audio/sentences/kana_bya.wav" },
+  { id: "byu", hiragana: "びゅ", katakana: "ビュ", meaning: "byu", audio: "audio/sentences/kana_byu.wav" },
+  { id: "byo", hiragana: "びょ", katakana: "ビョ", meaning: "byo", audio: "audio/sentences/kana_byo.wav" },
+
+  /* YŌON: PYA / PYU / PYO */
+  { id: "pya", hiragana: "ぴゃ", katakana: "ピャ", meaning: "pya", audio: "audio/sentences/kana_pya.wav" },
+  { id: "pyu", hiragana: "ぴゅ", katakana: "ピュ", meaning: "pyu", audio: "audio/sentences/kana_pyu.wav" },
+  { id: "pyo", hiragana: "ぴょ", katakana: "ピョ", meaning: "pyo", audio: "audio/sentences/kana_pyo.wav" }
 
 ];
 
@@ -740,7 +758,15 @@ L0.start = function () {
 
   // Start first round
   L0.startRound();
+
+  // ⭐ AFTER tiles exist → tag compounds
+  document.querySelectorAll('.kanaTile .kana').forEach(k => {
+    if (k.textContent.length > 1) {
+      k.classList.add('compound');
+    }
+  });
 };
+
 
 
 
@@ -1209,6 +1235,7 @@ function wireLevel0Buttons() {
 }
 
 document.addEventListener("DOMContentLoaded", wireLevel0Buttons);
+
 
 
 
@@ -15444,6 +15471,21 @@ const level3Sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
   id: "l3-12",
   meaning: "I was completely exhausted, but anyway I finished my homework.",
@@ -15531,6 +15573,20 @@ const level3Sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
   id: "l3-13",
   meaning: "For some reason I felt lonely, so I called my friend.",
@@ -15612,6 +15668,22 @@ const level3Sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
   id: "l3-14",
   meaning: "I wanted to relax, but I had too much work.",
@@ -15687,6 +15759,22 @@ const level3Sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
   id: "l3-15",
   meaning: "I thought the store would be open, but unexpectedly it was closed.",

@@ -46,7 +46,7 @@
 }
 
 .kanaTile {
-  width: 70px;
+  width: 70px;      /* original size restored */
   height: 70px;
   background: white;
   border: 2px solid #ccc;
@@ -58,6 +58,20 @@
   cursor: grab;
   transition: background 0.2s, border-color 0.2s, transform 0.15s ease;
 }
+
+/* Slightly shrink compounds so they fit */
+/* Make kana compounds horizontal */
+/* Make kana compounds fit inside the tile */
+.kanaTile .kana {
+  line-height: 1;
+  white-space: nowrap;
+  font-size: 1.8rem;   /* compounds now fit perfectly */
+}
+
+
+
+
+
 
 .kanaTile:hover {
   background: #e8e8e8;
@@ -92,14 +106,12 @@
   background: #eef6ff;
   transform: scale(1.02);
 }
+
 .kana-drop-zone .kanaTile {
   transform: scale(2.6);
   font-size: 5.8rem;
   transition: transform 0.2s ease, font-size 0.2s ease;
 }
-
-
-
 
 /* -----------------------------------------
    SUMMARY SCREEN — SLIGHTLY BIGGER TEXT
