@@ -445,7 +445,7 @@ L0.dataset = [
   /* YŌON: RYA / RYU / RYO */
   { id: "rya", hiragana: "りゃ", katakana: "リャ", meaning: "rya", audio: "audio/sentences/kana_rya.wav" },
   { id: "ryu", hiragana: "りゅ", katakana: "リュ", meaning: "ryu", audio: "audio/sentences/kana_ryu.wav" },
-  { id: "ryo", hiragana: "りょ", katakana: "リョ", meaning: "ryo", audio: "audio/sentences/kana_ryo.wav" }
+  { id: "ryo", hiragana: "りょ", katakana: "リョ", meaning: "ryo", audio: "audio/sentences/kana_ryo.wav" },
 
  /* YŌON: GYA / GYU / GYO */
   { id: "gya", hiragana: "ぎゃ", katakana: "ギャ", meaning: "gya", audio: "audio/sentences/kana_gya.wav" },
