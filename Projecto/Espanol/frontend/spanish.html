@@ -21,12 +21,43 @@
 
 
 
+
+
 <iframe 
   src="musicplayer.html" 
   id="musicFrame" 
   style="position:fixed; bottom:0; right:0; width:0; height:0; border:none;">
 </iframe>
 
+<!-- Supabase client MUST load before your login-check -->
+<script type="module" src="app.js"></script>
+
+<!-- Login check for music -->
+<script type="module">
+  const sb = window.sb;
+  const MY_EMAIL = "ericgomez89@yahoo.com";
+  const iframe = document.getElementById("musicFrame");
+
+  // Initial session check
+  sb.auth.getSession().then(({ data }) => {
+    const session = data.session;
+
+    if (session && session.user.email === MY_EMAIL) {
+      iframe.contentWindow.postMessage("ALLOW_MUSIC", "*");
+    } else {
+      iframe.contentWindow.postMessage("STOP_MUSIC", "*");
+    }
+  });
+
+  // React to login/logout
+  sb.auth.onAuthStateChange((event, session) => {
+    if (session && session.user.email === MY_EMAIL) {
+      iframe.contentWindow.postMessage("ALLOW_MUSIC", "*");
+    } else {
+      iframe.contentWindow.postMessage("STOP_MUSIC", "*");
+    }
+  });
+</script>
 
 
 

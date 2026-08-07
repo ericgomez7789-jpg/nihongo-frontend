@@ -1037,6 +1037,73 @@ const sentences = [
 
 
 
+{
+id: "l1-es-21",
+meaning: "sit down on the chair",
+level: 1,
+chunks: [
+{
+romaji: "sienta",
+hiragana: "siéntate (sienta)",
+meaning: "sit",
+audio: {
+daughter: "audio/spanish/sienta.wav",
+me: "audio/spanish/sienta.wav"
+}
+},
+{
+romaji: "te",
+hiragana: "te",
+meaning: "yourself",
+audio: {
+daughter: "audio/spanish/te.wav",
+me: "audio/spanish/te.wav"
+}
+},
+{
+romaji: "en",
+hiragana: "en",
+meaning: "on / in",
+audio: {
+daughter: "audio/spanish/en.wav",
+me: "audio/spanish/en.wav"
+}
+},
+{
+romaji: "la",
+hiragana: "la",
+meaning: "the",
+audio: {
+daughter: "audio/spanish/la.wav",
+me: "audio/spanish/la.wav"
+}
+},
+{
+romaji: "silla",
+hiragana: "silla",
+meaning: "chair",
+audio: {
+daughter: "audio/spanish/silla.wav",
+me: "audio/spanish/silla.wav"
+}
+}
+]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ];
@@ -2383,6 +2450,29 @@ const level2Sentences = [
 
 
 
+
+
+
+
+
+
+
+
+{
+id: "l2_010",
+sentence: "Hace un calor abrasador hoy así que abrí una ventana.",
+conjunction: "así que",
+meaning: "It's scorching hot today so I opened a window.",
+fullAudio: "audio/spanish/conjunction10.wav",
+chunks: [
+{
+audio: {
+me: "audio/spanish/conjunction10.wav",
+daughter: "audio/spanish/conjunction10.wav"
+}
+}
+]
+},
 
 
 
