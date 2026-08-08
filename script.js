@@ -16087,6 +16087,23 @@ const level3Sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
   id: "l3-18",
   meaning: "Instead of going to work, I would rather go to the beach.",

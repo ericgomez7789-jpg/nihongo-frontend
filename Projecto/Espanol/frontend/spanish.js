@@ -1102,6 +1102,68 @@ me: "audio/spanish/silla.wav"
 
 
 
+{
+  id: "l1-es-22",
+  meaning: "the shirt is inside out",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "la",
+      hiragana: "la",
+      meaning: "the (feminine)",
+      audio: {
+        daughter: "audio/spanish/la.wav",
+        me: "audio/spanish/la.wav"
+      }
+    },
+    {
+      romaji: "camisa",
+      hiragana: "camisa",
+      meaning: "shirt",
+      audio: {
+        daughter: "audio/spanish/camisa.wav",
+        me: "audio/spanish/camisa.wav"
+      }
+    },
+    {
+      romaji: "esta",
+      hiragana: "está",
+      meaning: "is",
+      audio: {
+        daughter: "audio/spanish/esta.wav",
+        me: "audio/spanish/esta.wav"
+      }
+    },
+    {
+      romaji: "al",
+      hiragana: "al",
+      meaning: "to the / at the",
+      audio: {
+        daughter: "audio/spanish/al.wav",
+        me: "audio/spanish/al.wav"
+      }
+    },
+    {
+      romaji: "reves",
+      hiragana: "revés",
+      meaning: "inside out / backwards",
+      audio: {
+        daughter: "audio/spanish/reves.wav",
+        me: "audio/spanish/reves.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2477,6 +2539,35 @@ daughter: "audio/spanish/conjunction10.wav"
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l2_011",
+  sentence: "En vez de ir a trabajar prefiero ir a la playa.",
+  conjunction: "en vez de",
+  meaning: "Instead of going to work I prefer to go to the beach.",
+
+  fullAudio: "audio/spanish/conjunction11.wav",
+
+  chunks: [
+    {
+      audio: {
+        me: "audio/spanish/conjunction11.wav",
+        daughter: "audio/spanish/conjunction11.wav"
+      }
+    }
+  ]
+},
 
 
 
