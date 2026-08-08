@@ -4728,9 +4728,973 @@ function cleanupLevel4() {
 
 
 
+/* =====================================================================================
+   SPANISH LEVEL 5 — CLEAN MIRROR OF JAPANESE LEVEL 11 (NO KANA LOGIC)
+   ===================================================================================== */
+
+/* ---------------------------------------------------------
+   SPANISH FILLERS
+--------------------------------------------------------- */
+const L5_FILLERS = [
+  "pues","bueno","entonces","o sea","mmm","eh","este",
+  "a ver","vale","claro","ya","pero","aunque"
+];
+
+/* ---------------------------------------------------------
+   STRIP FILLERS
+--------------------------------------------------------- */
+function stripFillers_es(text) {
+  let t = text;
+  for (const f of L5_FILLERS) {
+    t = t.replace(new RegExp("^" + f, "g"), "");
+    t = t.replace(new RegExp(f + "$", "g"), "");
+  }
+  return t;
+}
+
+/* ---------------------------------------------------------
+   SPANISH NORMALIZER
+--------------------------------------------------------- */
+function l5Normalize(text) {
+  if (!text) return "";
+
+  let t = text.trim().normalize("NFKC");
+
+  // Remove punctuation
+  t = t.replace(/[¡!¿?.,]/g, "");
+
+  // Lowercase
+  t = t.toLowerCase();
+
+  // Remove spaces
+  t = t.replace(/\s+/g, "");
+
+  // Strip fillers
+  t = stripFillers_es(t);
+
+  return t;
+}
+
+/* ---------------------------------------------------------
+   ACCEPTANCE CHECK
+--------------------------------------------------------- */
+function isAcceptable_es(userRaw, expectedListRaw) {
+  if (!userRaw) return false;
+
+  const user = l5Normalize(userRaw);
+  const cleanedUser = stripFillers_es(user);
+
+  const expectedList = expectedListRaw.map(text => {
+    let t = text.trim().normalize("NFKC");
+    t = t.replace(/[¡!¿?.,]/g, "");
+    t = t.toLowerCase();
+    t = t.replace(/\s+/g, "");
+    return stripFillers_es(t);
+  });
+
+  for (const exp of expectedList) {
+    if (cleanedUser === exp) return true;
+    if (cleanedUser.includes(exp)) return true;
+  }
+
+  return false;
+}
 
 
 
+
+
+
+/* ---------------------------------------------------------
+   LEVEL 5 ENGINE OBJECT (MINIMAL MIRROR OF LEVEL 11)
+--------------------------------------------------------- */
+const L5 = {
+  active: false,
+  currentScenario: null,
+  turnIndex: 0,
+
+  start() {
+    console.log("[L5] start()");
+    this.active = true;
+    this.currentScenario = null;
+    this.turnIndex = 0;
+
+    // Reset UI
+    document.getElementById("l5ScenarioSelect")?.classList.remove("hidden");
+    document.getElementById("l5ConversationContainer").innerHTML = "";
+    document.getElementById("l5ScenarioCard").innerHTML = "";
+    document.getElementById("l5InputArea")?.classList.add("hidden");
+    document.getElementById("l5EndControls")?.classList.add("hidden");
+  },
+
+  loadScenario(scenarioObj) {
+    console.log("[L5] loadScenario:", scenarioObj.id);
+
+    this.currentScenario = JSON.parse(JSON.stringify(scenarioObj));
+    this.turnIndex = 0;
+
+    // Hide scenario select
+    document.getElementById("l5ScenarioSelect")?.classList.add("hidden");
+
+    // Show input area
+    document.getElementById("l5InputArea")?.classList.remove("hidden");
+
+    // Fill scenario card
+    document.getElementById("l5ScenarioCard").innerHTML = `
+      <div class="scenario-title">${scenarioObj.title}</div>
+      <div class="scenario-description">${scenarioObj.description}</div>
+    `;
+
+    // Show first system turn
+    this.showSystemTurn();
+  },
+
+  showSystemTurn() {
+    const turn = this.currentScenario.systemTurns[this.turnIndex];
+    if (!turn) return;
+    this.appendSystemMessage(turn.es);
+  },
+
+  appendSystemMessage(text) {
+    const container = document.getElementById("l5ConversationContainer");
+    const bubble = document.createElement("div");
+    bubble.className = "system-message";
+
+    bubble.textContent = text;
+    container.appendChild(bubble);
+  },
+
+  appendUserMessage(text) {
+    const container = document.getElementById("l5ConversationContainer");
+    const bubble = document.createElement("div");
+    bubble.className = "userBubble";
+    bubble.textContent = text;
+    container.appendChild(bubble);
+  },
+
+  handleUserReply(raw) {
+    const turn = this.currentScenario.systemTurns[this.turnIndex];
+    if (!turn) return;
+
+    this.appendUserMessage(raw);
+
+    const expected = turn.expected;
+    const ok = isAcceptable_es(raw, expected);
+
+    if (!ok) {
+      this.appendSystemMessage(turn.correction);
+      return;
+    }
+
+    // Advance
+    this.turnIndex++;
+
+    if (this.turnIndex >= this.currentScenario.systemTurns.length) {
+      this.finishScenario();
+    } else {
+      this.showSystemTurn();
+    }
+  },
+
+  finishScenario() {
+    console.log("[L5] Scenario finished");
+    document.getElementById("l5InputArea")?.classList.add("hidden");
+    document.getElementById("l5EndControls")?.classList.remove("hidden");
+  }
+};
+
+
+const defaultCafe_es = {
+  id: "defaultCafe_es",
+  title: "Café",
+  description: "Default scenario placeholder.",
+  systemTurns: []
+};
+
+
+/* =====================================================================================
+   SPANISH LEVEL 5 SCENARIOS (18 TOTAL)
+   ===================================================================================== */
+
+const l5_scenario_01 = {
+  id: "l5_scenario_01",
+  title: "Pedir café en una cafetería",
+  description: "Estás en una cafetería. Pide una bebida y responde naturalmente.",
+  systemTurns: [
+    {
+      es: "Hola, ¿qué te gustaría pedir?",
+      expected: ["quisiera un café","me gustaría un café"],
+      correction: "La forma más natural es «Quisiera un café»."
+    },
+    {
+      es: "¿Qué tamaño quieres?",
+      expected: ["mediano por favor","tamaño mediano"],
+      correction: "Lo más natural es «Mediano, por favor»."
+    },
+    {
+      es: "¿Quieres azúcar o leche?",
+      expected: ["sí por favor","no gracias"],
+      correction: "Puedes decir «Sí, por favor» o «No, gracias»."
+    },
+    {
+      es: "Perfecto, espera un momento.",
+      expected: ["sí","gracias"],
+      correction: null
+    }
+  ]
+};
+
+/* ---------------------------------------------------------
+   Scenario 02 — Interjections
+--------------------------------------------------------- */
+const l5_scenario_02 = {
+  id: "l5_scenario_02",
+  title: "Reaccionar a noticias sorprendentes",
+  description: "Responde naturalmente con una interjección en español.",
+  systemTurns: [
+    {
+      es: "¡Oye, perdí mi cartera!",
+      expected: ["¿en serio?","¿de verdad?","no puede ser"],
+      correction: "Interjecciones naturales: «¿En serio?» o «No puede ser»."
+    },
+    {
+      es: "Pero alguien amable la devolvió.",
+      expected: ["qué bien","menos mal","ah qué bueno"],
+      correction: "Lo más natural es «Qué bien»."
+    },
+    {
+      es: "Me salvó completamente.",
+      expected: ["me alegro","qué bueno"],
+      correction: "«Me alegro» es lo más natural."
+    },
+    {
+      es: "Gracias por escuchar.",
+      expected: ["de nada","no hay problema"],
+      correction: null
+    }
+  ]
+};
+
+/* ---------------------------------------------------------
+   Scenario 03 — Asking for help in a store
+--------------------------------------------------------- */
+const l5_scenario_03 = {
+  id: "l5_scenario_03",
+  title: "Pedir ayuda en una tienda",
+  description: "Pide ayuda para encontrar un artículo y responde naturalmente.",
+  systemTurns: [
+    {
+      es: "Hola, ¿qué estás buscando?",
+      expected: ["busco pañuelos","estoy buscando pañuelos","¿tienen pañuelos?"],
+      correction: "Lo más natural es «Busco pañuelos»."
+    },
+    {
+      es: "Están en la esquina, en el estante.",
+      expected: ["gracias","muchas gracias","entendido"],
+      correction: "«Gracias» es lo más natural."
+    },
+    {
+      es: "¿Necesitas algo más?",
+      expected: ["no gracias","estoy bien","todo bien gracias"],
+      correction: "«No, gracias» es lo más natural."
+    },
+    {
+      es: "Perfecto, que tengas buen día.",
+      expected: ["gracias","sí"],
+      correction: null
+    }
+  ]
+};
+
+/* ---------------------------------------------------------
+   Scenario 04 — Bakery
+--------------------------------------------------------- */
+const l5_scenario_04 = {
+  id: "l5_scenario_04",
+  title: "Pedir pan en una panadería",
+  description: "Pide pan y responde naturalmente.",
+  systemTurns: [
+    {
+      es: "Hola, ¿qué buscas hoy?",
+      expected: ["quiero un pan dulce","busco pan dulce","¿tienen pan dulce?"],
+      correction: "Lo más natural es «Quiero un pan dulce»."
+    },
+    {
+      es: "Está en la vitrina de allá.",
+      expected: ["gracias","muchas gracias","entendido"],
+      correction: "«Gracias» es lo más natural."
+    },
+    {
+      es: "¿Algo más?",
+      expected: ["no gracias","estoy bien","todo bien gracias"],
+      correction: "«No, gracias» es lo más natural."
+    },
+    {
+      es: "Perfecto, pasa a la caja.",
+      expected: ["sí","gracias"],
+      correction: null
+    }
+  ]
+};
+
+/* ---------------------------------------------------------
+   Scenario 05 — Hospital room change
+--------------------------------------------------------- */
+const l5_scenario_05 = {
+  id: "l5_scenario_05",
+  title: "Cambiar de habitación en el hospital",
+  description: "Pide cambiar de habitación y responde naturalmente.",
+  systemTurns: [
+    {
+      es: "Hola, ¿en qué puedo ayudarte hoy?",
+      expected: ["quiero cambiar de habitación","¿puedo cambiar de habitación?"],
+      correction: "Lo más natural es «¿Puedo cambiar de habitación?»."
+    },
+    {
+      es: "Claro, ¿qué tipo de habitación quieres?",
+      expected: ["una habitación tranquila","una habitación individual"],
+      correction: "«Una habitación tranquila» es lo más natural."
+    },
+    {
+      es: "Perfecto, ¿algo más?",
+      expected: ["no gracias","estoy bien","todo bien gracias"],
+      correction: "«No, gracias» es lo más natural."
+    },
+    {
+      es: "Muy bien, te avisaré pronto.",
+      expected: ["sí","gracias"],
+      correction: null
+    }
+  ]
+};
+
+/* ---------------------------------------------------------
+   Scenario 06 — Asking a teacher for help
+--------------------------------------------------------- */
+const l5_scenario_06 = {
+  id: "l5_scenario_06",
+  title: "Pedir ayuda a un profesor",
+  description: "Pide ayuda con algo en la escuela.",
+  systemTurns: [
+    {
+      es: "Hola, ¿qué pasa?",
+      expected: ["tengo una pregunta","necesito ayuda","tengo una duda"],
+      correction: "Lo más natural es «Tengo una pregunta»."
+    },
+    {
+      es: "Claro, ¿qué quieres preguntar?",
+      expected: ["no entiendo esta tarea","explíqueme este problema","esto es difícil"],
+      correction: "«No entiendo esta tarea» es lo más natural."
+    },
+    {
+      es: "¿Algo más?",
+      expected: ["no gracias","estoy bien","todo bien gracias"],
+      correction: "«No, gracias» es lo más natural."
+    },
+    {
+      es: "Perfecto, vuelve a clase.",
+      expected: ["sí","gracias"],
+      correction: null
+    }
+  ]
+};
+
+/* ---------------------------------------------------------
+   Scenario 07 — Asking a classmate for help
+--------------------------------------------------------- */
+const l5_scenario_07 = {
+  id: "l5_scenario_07",
+  title: "Pedir ayuda a un compañero",
+  description: "Pide ayuda con la tarea.",
+  systemTurns: [
+    {
+      es: "Hola, ¿tienes un momento?",
+      expected: ["sí claro","sí","un momento está bien"],
+      correction: "«Sí, claro» es lo más natural."
+    },
+    {
+      es: "No entiendo esta tarea.",
+      expected: ["esto es difícil","explícame esto","¿cómo se hace esto?"],
+      correction: "«Esto es difícil» es lo más natural."
+    },
+    {
+      es: "¿Algo más?",
+      expected: ["no gracias","estoy bien","todo bien gracias"],
+      correction: "«No, gracias» es lo más natural."
+    },
+    {
+      es: "Perfecto, sigamos estudiando.",
+      expected: ["sí","gracias"],
+      correction: null
+    }
+  ]
+};
+
+/* ---------------------------------------------------------
+   Scenario 08 — Librarian
+--------------------------------------------------------- */
+const l5_scenario_08 = {
+  id: "l5_scenario_08",
+  title: "Pedir ayuda en la biblioteca",
+  description: "Pide ayuda para encontrar un libro.",
+  systemTurns: [
+    {
+      es: "Hola, ¿buscas algo?",
+      expected: ["busco un libro","estoy buscando un libro","necesito ayuda"],
+      correction: "«Busco un libro» es lo más natural."
+    },
+    {
+      es: "¿Qué tipo de libro?",
+      expected: ["un libro de historia","un libro de España","un libro de este tema"],
+      correction: "«Un libro de historia» es lo más natural."
+    },
+    {
+      es: "Está en ese estante. ¿Algo más?",
+      expected: ["no gracias","estoy bien","todo bien gracias"],
+      correction: "«No, gracias» es lo más natural."
+    },
+    {
+      es: "Perfecto, disfruta la lectura.",
+      expected: ["sí","gracias"],
+      correction: null
+    }
+  ]
+};
+
+/* ---------------------------------------------------------
+   Scenario 09 — Campus directions
+--------------------------------------------------------- */
+const l5_scenario_09 = {
+  id: "l5_scenario_09",
+  title: "Pedir direcciones en el campus",
+  description: "Pide ayuda para encontrar un salón.",
+  systemTurns: [
+    {
+      es: "Hola, ¿buscas algún lugar?",
+      expected: ["busco un salón","no encuentro este lugar","¿me dices el camino?"],
+      correction: "«Busco un salón» es lo más natural."
+    },
+    {
+      es: "¿Qué salón?",
+      expected: ["A103","el salón A103","quiero ir a A103"],
+      correction: "«A103» es lo más natural."
+    },
+    {
+      es: "Sube las escaleras y gira a la derecha. ¿Algo más?",
+      expected: ["no gracias","estoy bien","todo bien gracias"],
+      correction: "«No, gracias» es lo más natural."
+    },
+    {
+      es: "Perfecto, cuídate.",
+      expected: ["sí","gracias"],
+      correction: null
+    }
+  ]
+};
+
+/* ---------------------------------------------------------
+   Scenario 10 — School club
+--------------------------------------------------------- */
+const l5_scenario_10 = {
+  id: "l5_scenario_10",
+  title: "Preguntar sobre un club escolar",
+  description: "Pregunta sobre unirte a un club.",
+  systemTurns: [
+    {
+      es: "Hola, ¿te interesa algún club?",
+      expected: ["sí me interesa","sí un poco","sí quiero unirme"],
+      correction: "«Sí, me interesa» es lo más natural."
+    },
+    {
+      es: "¿A cuál club quieres unirte?",
+      expected: ["al club de tenis","me interesa tenis","quiero tenis"],
+      correction: "«Al club de tenis» es lo más natural."
+    },
+    {
+      es: "Puedes visitarlo mañana. ¿Algo más?",
+      expected: ["no gracias","estoy bien","todo bien gracias"],
+      correction: "«No, gracias» es lo más natural."
+    },
+    {
+      es: "Perfecto, te esperamos mañana.",
+      expected: ["sí","gracias"],
+      correction: null
+    }
+  ]
+};
+
+/* ---------------------------------------------------------
+   Scenario 11 — Train station
+--------------------------------------------------------- */
+const l5_scenario_11 = {
+  id: "l5_scenario_11",
+  title: "Pedir ayuda en la estación",
+  description: "Pide ayuda para entender el tren.",
+  systemTurns: [
+    {
+      es: "Hola, ¿te ayudo en algo?",
+      expected: ["quiero preguntar el camino","tengo una duda","no entiendo este tren"],
+      correction: "«Quiero preguntar el camino» es lo más natural."
+    },
+    {
+      es: "¿A dónde vas?",
+      expected: ["a Madrid","quiero ir a Madrid","Madrid"],
+      correction: "«Madrid» es lo más natural."
+    },
+    {
+      es: "Puedes tomar el tren desde esa plataforma. ¿Algo más?",
+      expected: ["no gracias","estoy bien","todo bien gracias"],
+      correction: "«No, gracias» es lo más natural."
+    },
+    {
+      es: "Perfecto, buen viaje.",
+      expected: ["sí","gracias"],
+      correction: null
+    }
+  ]
+};
+
+/* ---------------------------------------------------------
+   Scenario 12 — Home & family
+--------------------------------------------------------- */
+const l5_scenario_12 = {
+  id: "l5_scenario_12",
+  title: "Hablar en casa con la familia",
+  description: "Habla con tus padres o hermanos.",
+  systemTurns: [
+    {
+      es: "Hola, ¿cómo estuvo tu día?",
+      expected: ["normal","bien","un poco cansado"],
+      correction: "«Normal» es lo más natural."
+    },
+    {
+      es: "Tu hermano dijo algo gracioso hoy.",
+      expected: ["¿qué dijo?","¿qué cosa?","me interesa"],
+      correction: "«¿Qué dijo?» es lo más natural."
+    },
+    {
+      es: "¿Algo más que pasó hoy?",
+      expected: ["no mucho","no gracias","todo bien"],
+      correction: "«No mucho» es lo más natural."
+    },
+    {
+      es: "Descansa un poco.",
+      expected: ["sí","gracias"],
+      correction: null
+    }
+  ]
+};
+
+/* ---------------------------------------------------------
+   Scenario 13 — Cleaning argument
+--------------------------------------------------------- */
+const l5_scenario_13 = {
+  id: "l5_scenario_13",
+  title: "Discutir sobre limpiar",
+  description: "Una pequeña discusión sobre limpiar.",
+  systemTurns: [
+    {
+      es: "¿Puedes lavar los platos hoy?",
+      expected: ["no quiero","estoy cansado","lo hago después"],
+      correction: "«No quiero» es lo más natural."
+    },
+    {
+      es: "Solo un poco, nadie lo ha hecho.",
+      expected: ["hoy no puedo","puedo un poco","lo hago después"],
+      correction: "«Puedo un poco» es lo más natural."
+    },
+    {
+      es: "¿Platos o ventanas?",
+      expected: ["platos","ventanas","cualquiera"],
+      correction: "«Cualquiera» es lo más natural."
+    },
+    {
+      es: "Gracias, luego ayuda con la cena.",
+      expected: ["sí","entendido"],
+      correction: null
+    }
+  ]
+};
+
+/* ---------------------------------------------------------
+   Scenario 14 — Bath argument
+--------------------------------------------------------- */
+const l5_scenario_14 = {
+  id: "l5_scenario_14",
+  title: "Discutir sobre bañarse",
+  description: "Una pequeña discusión sobre bañarse.",
+  systemTurns: [
+    {
+      es: "Ya es tarde, ¿puedes bañarte?",
+      expected: ["no quiero","quiero jugar","después"],
+      correction: "«No quiero» es lo más natural."
+    },
+    {
+      es: "Hace calor, es mejor bañarte.",
+      expected: ["hoy no puedo","está bien me baño","puedo un poco"],
+      correction: "«Está bien, me baño» es lo más natural."
+    },
+    {
+      es: "¿Solo shampoo?",
+      expected: ["solo shampoo","no todo","cualquiera"],
+      correction: "«Solo shampoo» es lo más natural."
+    },
+    {
+      es: "Gracias, ponte pijama después.",
+      expected: ["sí","entendido"],
+      correction: null
+    }
+  ]
+};
+
+/* ---------------------------------------------------------
+   Scenario 15 — Floss argument
+--------------------------------------------------------- */
+const l5_scenario_15 = {
+  id: "l5_scenario_15",
+  title: "Discutir sobre usar hilo dental",
+  description: "Una pequeña discusión sobre usar hilo dental.",
+  systemTurns: [
+    {
+      es: "¿Puedes usar hilo dental hoy?",
+      expected: ["no quiero","es molesto","después"],
+      correction: "«No quiero» es lo más natural."
+    },
+    {
+      es: "Si no lo haces, puedes tener caries.",
+      expected: ["no quiero caries","pero es molesto","puedo un poco"],
+      correction: "«No quiero caries» es lo más natural."
+    },
+    {
+      es: "¿Solo diez segundos?",
+      expected: ["solo diez segundos"],
+      correction: "«Solo diez segundos» es lo más natural."
+    },
+    {
+      es: "Gracias, tus dientes estarán más sanos.",
+      expected: ["sí","entendido"],
+      correction: null
+    }
+  ]
+};
+
+/* ---------------------------------------------------------
+   Scenario 16 — Bank deposit & withdrawal
+--------------------------------------------------------- */
+const l5_scenario_16 = {
+  id: "l5_scenario_16",
+  title: "Depositar o retirar dinero en el banco",
+  description: "Indica si quieres depositar o retirar dinero y di la cantidad.",
+  systemTurns: [
+    {
+      es: "Hola, ¿quieres depositar o retirar dinero hoy?",
+      expected: ["quiero depositar","quiero retirar","quiero ambas cosas"],
+      correction: "Lo más natural es «Quiero depositar» o «Quiero retirar»."
+    },
+    {
+      es: "Perfecto, ¿cuánto quieres depositar?",
+      expected: ["quiero depositar cinco mil","deposito diez mil","deposito dos mil"],
+      correction: "Lo más natural es «Deposito + cantidad»."
+    },
+    {
+      es: "¿Y cuánto quieres retirar?",
+      expected: ["retiro tres mil","quiero retirar quince mil","retiro un poco"],
+      correction: "Lo más natural es «Retiro + cantidad»."
+    },
+    {
+      es: "Gracias, confirma aquí por favor.",
+      expected: ["sí","entendido"],
+      correction: null
+    }
+  ]
+};
+
+/* ---------------------------------------------------------
+   Scenario 17 — Work task change
+--------------------------------------------------------- */
+const l5_scenario_17 = {
+  id: "l5_scenario_17",
+  title: "Cambiar tareas en el trabajo",
+  description: "El jefe cambia tu tarea y dudas un poco.",
+  systemTurns: [
+    {
+      es: "¿Puedo cambiar tu tarea de hoy?",
+      expected: ["sí está bien","hoy no puedo","puedo un poco"],
+      correction: "«Sí, está bien» es lo más natural."
+    },
+    {
+      es: "Necesito que prepares un documento nuevo. ¿Tienes tiempo?",
+      expected: ["tengo un poco de tiempo","estoy ocupado","puedo hacerlo después"],
+      correction: "«Tengo un poco de tiempo» es lo más natural."
+    },
+    {
+      es: "Puede ser corto. ¿Puedes hacerlo en diez minutos?",
+      expected: ["sí puedo","diez minutos es difícil","espera un momento"],
+      correction: "«Sí, puedo» es lo más natural."
+    },
+    {
+      es: "Gracias, avísame cuando termines.",
+      expected: ["sí","entendido"],
+      correction: null
+    }
+  ]
+};
+
+/* ---------------------------------------------------------
+   Scenario 18 — Clothing department
+--------------------------------------------------------- */
+const l5_scenario_18 = {
+  id: "l5_scenario_18",
+  title: "Elegir ropa en una tienda",
+  description: "El dependiente pregunta talla y color.",
+  systemTurns: [
+    {
+      es: "Hola, ¿qué tipo de ropa buscas?",
+      expected: ["busco una camisa","quiero unos pantalones","no he decidido"],
+      correction: "«Busco una camisa» es lo más natural."
+    },
+    {
+      es: "¿Qué talla quieres?",
+      expected: ["talla M","quiero talla L","una talla pequeña"],
+      correction: "«Talla + letra» es lo más natural."
+    },
+    {
+      es: "¿Qué color prefieres? Tenemos rojo, blanco y negro.",
+      expected: ["prefiero negro","quiero ver el rojo","cualquiera"],
+      correction: "«Prefiero negro» es lo más natural."
+    },
+    {
+      es: "Gracias, pruébatelo por favor.",
+      expected: ["sí","entendido"],
+      correction: null
+    }
+  ]
+};
+
+/* =====================================================================================
+   SPANISH LEVEL 5 — ENGINE (MINIMIZED)
+   ===================================================================================== */
+
+let l5CurrentScenario = null;
+let l5TurnIndex = 0;
+let l5Active = false;
+
+/* ---------------------------------------------------------
+   LOAD SCENARIO
+--------------------------------------------------------- */
+function loadScenario_es(scenario) {
+  l5CurrentScenario = JSON.parse(JSON.stringify(scenario));
+}
+
+/* ---------------------------------------------------------
+   START LEVEL 5
+--------------------------------------------------------- */
+function startLevel5(scenario) {
+  removeL5HomeButton();
+
+  l5CurrentScenario = JSON.parse(JSON.stringify(scenario));
+  l5TurnIndex = 0;
+  l5Active = true;
+
+  clearConversation();
+  fillScenarioCard_es(l5CurrentScenario);
+  createAndWireLevel5HomeButton();
+  showSystemTurn_es();
+}
+
+/* ---------------------------------------------------------
+   SHOW SYSTEM TURN
+--------------------------------------------------------- */
+function showSystemTurn_es() {
+  const turn = l5CurrentScenario.systemTurns[l5TurnIndex];
+  if (turn) appendSystemMessage(turn.es);
+}
+
+/* ---------------------------------------------------------
+   SCENARIO CARD
+--------------------------------------------------------- */
+function fillScenarioCard_es(scenario) {
+  const card = document.getElementById("l5ScenarioCard");
+  if (!card) return;
+
+  card.innerHTML = `
+    <div class="scenario-title">${scenario.title}</div>
+    <div class="scenario-description">${scenario.description}</div>
+  `;
+}
+
+/* ---------------------------------------------------------
+   HOME BUTTON
+--------------------------------------------------------- */
+function removeL5HomeButton() {
+  const btn = document.getElementById("l5HomeBtn");
+  if (btn) btn.remove();
+}
+
+function createAndWireLevel5HomeButton() {
+  const oldBtn = document.getElementById("l5HomeBtn");
+  if (oldBtn) oldBtn.remove();
+
+  const btn = document.createElement("button");
+  btn.id = "l5HomeBtn";
+  btn.className = "iconBtn home-top";
+  btn.textContent = "🏠 Home";
+
+  const screen = document.getElementById("level5Screen");
+  if (!screen) return;
+  screen.appendChild(btn);
+
+  btn.onclick = () => {
+    l5Active = false;
+    l5TurnIndex = 0;
+    l5CurrentScenario = null;
+
+    const convo = document.getElementById("l5ConversationContainer");
+    if (convo) convo.innerHTML = "";
+
+    btn.remove();
+    showScreen("screen0");
+  };
+}
+
+/* ---------------------------------------------------------
+   GET USER INPUT
+--------------------------------------------------------- */
+function getUserInput_es() {
+  return document.getElementById("l5UserInput").value.trim();
+}
+
+/* ---------------------------------------------------------
+   HANDLE USER REPLY
+--------------------------------------------------------- */
+function handleUserReply_es() {
+  if (!l5Active || !l5CurrentScenario) return;
+
+  const raw = getUserInput_es();
+  if (!raw) return;
+
+  const user = l5Normalize(raw);
+  appendUserMessage(user);
+
+  const turn = l5CurrentScenario.systemTurns[l5TurnIndex];
+  const expected = turn.expected.map(l5Normalize);
+
+  if (!isAcceptable_es(user, expected)) {
+    appendSystemMessage(turn.correction);
+    return;
+  }
+
+  l5TurnIndex++;
+
+  if (l5TurnIndex >= l5CurrentScenario.systemTurns.length) {
+    endScenario_es();
+  } else {
+    showSystemTurn_es();
+  }
+}
+
+/* ---------------------------------------------------------
+   END SCENARIO
+--------------------------------------------------------- */
+function endScenario_es() {
+  l5Active = false;
+  const endControls = document.getElementById("l5EndControls");
+  if (endControls) endControls.classList.remove("hidden");
+}
+
+/* ---------------------------------------------------------
+   UI HELPERS
+--------------------------------------------------------- */
+function appendSystemMessage(text) {
+  const container = document.getElementById("l5ConversationContainer");
+  if (!container) return;
+
+  const div = document.createElement("div");
+  div.className = "system-message chat-bubble";
+  div.textContent = text;
+
+  container.appendChild(div);
+  container.scrollTop = container.scrollHeight;
+}
+
+function appendUserMessage(text) {
+  const container = document.getElementById("l5ConversationContainer");
+  if (!container) return;
+
+  const div = document.createElement("div");
+  div.className = "user-message chat-bubble";
+  div.textContent = text;
+
+  container.appendChild(div);
+  container.scrollTop = container.scrollHeight;
+}
+
+/* ---------------------------------------------------------
+   CLEAR CONVERSATION
+--------------------------------------------------------- */
+function clearConversation() {
+  const container = document.getElementById("l5ConversationContainer");
+  if (container) container.innerHTML = "";
+
+  const input = document.getElementById("l5UserInput");
+  if (input) input.value = "";
+}
+
+/* ---------------------------------------------------------
+   INPUT WIRING
+--------------------------------------------------------- */
+const l5Input = document.getElementById("l5UserInput");
+
+document.getElementById("l5SendBtn").onclick = () => {
+  L5.handleUserReply(l5Input.value);
+};
+
+l5Input.addEventListener("keydown", e => {
+  if (e.key === "Enter" && !e.shiftKey) {
+    e.preventDefault();
+    if (l5Active) handleUserReply_es();
+  }
+});
+
+/* ---------------------------------------------------------
+   NEXT SCENARIO BUTTON
+--------------------------------------------------------- */
+const l5NextBtn = document.getElementById("l5NextScenarioBtn");
+if (l5NextBtn) {
+  l5NextBtn.onclick = () => {
+    startLevel5(l5_scenario_01);
+  };
+}
+
+
+/* ==========================================================
+   LEVEL 5 — SCENARIO BUTTON WIRING
+========================================================== */
+
+/* ==========================================================
+   LEVEL 5 — SCENARIO BUTTON WIRING
+========================================================== */
+
+document.getElementById("cafeBtn_es").onclick = () =>
+  L5.loadScenario(l5_scenario_01);
+
+document.getElementById("interjectionBtn_es").onclick = () =>
+  L5.loadScenario(l5_scenario_02);
+
+document.getElementById("storeHelpBtn_es").onclick = () =>
+  L5.loadScenario(l5_scenario_03);
+
+document.getElementById("bakeryBtn_es").onclick = () =>
+  L5.loadScenario(l5_scenario_04);
+
+document.getElementById("hospitalBtn_es").onclick = () =>
+  L5.loadScenario(l5_scenario_05);
+
+document.getElementById("schoolBtn_es").onclick = () =>
+  L5.loadScenario(l5_scenario_06);
+
+document.getElementById("classmateBtn_es").onclick = () =>
+  L5.loadScenario(l5_scenario_07);
 
 
 
@@ -4976,24 +5940,27 @@ if (!level4Btn) {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 /*
-
-
-
-
-
-
-
-
-
-
-
 
   // ---------------------------------------------------------
   // LEVEL 5
   // ---------------------------------------------------------
   // ---------------------------------------------------------
 // LEVEL 5 (GATED: BASIC OR PREMIUM, ISOLATED, CLEAN)
+// ---------------------------------------------------------
+// ---------------------------------------------------------
+// LEVEL 5 (GATED: BASIC OR PREMIUM)
 // ---------------------------------------------------------
 const level5Btn = document.getElementById("level5Btn");
 
@@ -5002,27 +5969,27 @@ if (!level5Btn) {
 } else {
   level5Btn.addEventListener("click", async () => {
     console.log("[Level 5] Gated handler fired");
+const user = window.currentUser;
+if (!user) {
+  alert("You must be logged in to access Level 5.");
+  window.location.href = "../../../blog-podcast.html";
+  return;
+}
 
-    const user = window.currentUser;
-    if (!user) {
-      alert("You must be logged in to access Level 5.");
-      window.location.href = "blog-podcast.html";
-      return;
-    }
 
-    // Instant unlock if success.html already set the flag
+    // Instant unlock if flag exists
     if (
       localStorage.getItem("basicUnlock") === "true" ||
       localStorage.getItem("premiumUnlock") === "true"
     ) {
       console.log("Unlock flag detected — Level 5 unlocked.");
       document.querySelectorAll(".screen").forEach(s => s.classList.add("hidden"));
-      document.getElementById("screen2L5")?.classList.remove("hidden");
+      document.getElementById("level5Wrapper")?.classList.remove("hidden");
       L5.start();
       return;
     }
 
-    // Otherwise check real membership in Supabase
+    // Supabase membership check
     const { data, error } = await sb
       .from("profiles")
       .select("membership_status, membership_plan")
@@ -5050,7 +6017,6 @@ if (!level5Btn) {
     if (status === "active" && allowed.includes(plan)) {
       console.log("User has Basic or Premium — unlocking Level 5.");
 
-      // Cache unlock for instant future access
       if (plan.startsWith("basic")) {
         localStorage.setItem("basicUnlock", "true");
       } else {
@@ -5058,7 +6024,7 @@ if (!level5Btn) {
       }
 
       document.querySelectorAll(".screen").forEach(s => s.classList.add("hidden"));
-      document.getElementById("screen2L5")?.classList.remove("hidden");
+      document.getElementById("level5Wrapper")?.classList.remove("hidden");
       L5.start();
       return;
     }
@@ -5069,14 +6035,32 @@ if (!level5Btn) {
 }
 
 
+*/
+
+
+
+level5Btn.addEventListener("click", () => {
+  console.log("[Level 5] Ungated handler fired");
+
+  // Hide all screens
+  document.querySelectorAll(".screen").forEach(s => s.classList.add("hidden"));
+
+  // Show Level 5 wrapper
+  document.getElementById("level5Wrapper")?.classList.remove("hidden");
+
+  // ⭐ Show Level 5 screen (THIS WAS MISSING)
+  document.getElementById("level5Screen")?.classList.remove("hidden");
+
+  // Start Level 5
+  L5.start();
+});
 
 
 
 
 
 
-
-
+/*
 
 
 
