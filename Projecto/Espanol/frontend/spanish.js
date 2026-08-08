@@ -4904,12 +4904,22 @@ const L5 = {
 };
 
 
-const defaultCafe_es = {
-  id: "defaultCafe_es",
-  title: "Café",
-  description: "Default scenario placeholder.",
-  systemTurns: []
+
+
+const defaultScenario_es = {
+  id: "defaultScenario_es",
+  title: "Escenario",
+  description: "Escenario predeterminado sin contenido.",
+  systemTurns: [
+    {
+      jp: "Este es un escenario vacío.",
+      expected: ["sí", "ok", "vale"],
+      correction: "Puedes responder con cualquier frase corta."
+    }
+  ]
 };
+
+
 
 
 /* =====================================================================================
@@ -5674,6 +5684,9 @@ if (l5NextBtn) {
 /* ==========================================================
    LEVEL 5 — SCENARIO BUTTON WIRING
 ========================================================== */
+/* ---------------------------------------------------------
+   LEVEL 5 — SCENARIO BUTTON WIRING (FULL)
+--------------------------------------------------------- */
 
 document.getElementById("cafeBtn_es").onclick = () =>
   L5.loadScenario(l5_scenario_01);
@@ -5696,7 +5709,40 @@ document.getElementById("schoolBtn_es").onclick = () =>
 document.getElementById("classmateBtn_es").onclick = () =>
   L5.loadScenario(l5_scenario_07);
 
+/* ⭐ ADD ALL REMAINING BUTTONS BELOW ⭐ */
 
+document.getElementById("libraryBtn_es").onclick = () =>
+  L5.loadScenario(l5_scenario_08);
+
+document.getElementById("campusBtn_es").onclick = () =>
+  L5.loadScenario(l5_scenario_09);
+
+document.getElementById("schoolClubBtn_es").onclick = () =>
+  L5.loadScenario(l5_scenario_10);
+
+document.getElementById("trainStationBtn_es").onclick = () =>
+  L5.loadScenario(l5_scenario_11);
+
+document.getElementById("homeFamilyBtn_es").onclick = () =>
+  L5.loadScenario(l5_scenario_12);
+
+document.getElementById("cleaningArgumentBtn_es").onclick = () =>
+  L5.loadScenario(l5_scenario_13);
+
+document.getElementById("bathTimeArgumentBtn_es").onclick = () =>
+  L5.loadScenario(l5_scenario_14);
+
+document.getElementById("flossArgumentBtn_es").onclick = () =>
+  L5.loadScenario(l5_scenario_15);
+
+document.getElementById("bankAmountBtn_es").onclick = () =>
+  L5.loadScenario(l5_scenario_16);
+
+document.getElementById("workTaskBtn_es").onclick = () =>
+  L5.loadScenario(l5_scenario_17);
+
+document.getElementById("clothingDeptBtn_es").onclick = () =>
+  L5.loadScenario(l5_scenario_18);
 
 
 
@@ -5811,20 +5857,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-/*
 
 
 
 
 
 
-
-  // ---------------------------------------------------------
-  // LEVEL 4
-  // ---------------------------------------------------------
-  // ---------------------------------------------------------
-// LEVEL 4 (GATED: BASIC OR PREMIUM, ISOLATED, CLEAN)
-// ---------------------------------------------------------
 const level4Btn = document.getElementById("level4Btn");
 
 if (!level4Btn) {
@@ -5833,33 +5871,33 @@ if (!level4Btn) {
   level4Btn.addEventListener("click", async () => {
     console.log("[Level 4] Gated handler fired");
 
-    const user = window.currentUser;
+    // ⭐ Prevent crash: sb must exist
+    if (typeof sb === "undefined") {
+      console.error("Supabase client (sb) is not defined.");
+      alert("Internal error: membership system unavailable.");
+      return;
+    }
+
+    let user = window.currentUser;
+
+    // Recover user if window.currentUser is null
     if (!user) {
-      alert("You must be logged in to access Level 4.");
-      window.location.href = "blog-podcast.html";
+      const { data: authUser } = await sb.auth.getUser();
+      if (authUser?.user) user = authUser.user;
+    }
+
+    // If STILL no user → redirect
+    if (!user) {
+      window.location.href = "../../../blog-podcast.html";
       return;
     }
 
-    // Instant unlock if success.html already set the flag
-    if (
-      localStorage.getItem("basicUnlock") === "true" ||
-      localStorage.getItem("premiumUnlock") === "true"
-    ) {
-      console.log("Unlock flag detected — Level 4 unlocked.");
-      document.querySelectorAll(".screen").forEach(s => s.classList.add("hidden"));
-      document.getElementById("screen2L4")?.classList.remove("hidden");
-      L4.start();
-      return;
-    }
-
-    // Otherwise check real membership in Supabase
+    // Membership check
     const { data, error } = await sb
       .from("profiles")
       .select("membership_status, membership_plan")
       .eq("email", user.email)
       .maybeSingle();
-
-    console.log("Membership result (L4):", { data, error });
 
     if (error) {
       console.error("Membership query error:", error);
@@ -5870,62 +5908,20 @@ if (!level4Btn) {
     const status = data?.membership_status;
     const plan = data?.membership_plan;
 
-    const allowed = [
-      "basic-monthly",
-      "basic-yearly",
-      "premium-monthly",
-      "premium-yearly"
-    ];
+    const allowed = ["basic-monthly", "basic-yearly", "lifetime"];
 
-    if (status === "active" && allowed.includes(plan)) {
-      console.log("User has Basic or Premium — unlocking Level 4.");
-
-      // Cache unlock for instant future access
-      if (plan.startsWith("basic")) {
-        localStorage.setItem("basicUnlock", "true");
-      } else {
-        localStorage.setItem("premiumUnlock", "true");
-      }
-
-      document.querySelectorAll(".screen").forEach(s => s.classList.add("hidden"));
-      document.getElementById("screen2L4")?.classList.remove("hidden");
-      L4.start();
+    if (!(status === "active" && allowed.includes(plan))) {
+      alert("Level 4 requires an active Basic or Lifetime subscription.");
+      window.location.href = "membership.html";
       return;
     }
 
-    alert("Level 4 is locked. Basic or Premium required.");
-    window.location.href = "membership.html";
-  });
-}
-
-*/
-
-
-
-
-
-// ---------------------------------------------------------
-// LEVEL 4 (UNGATED VERSION)
-// ---------------------------------------------------------
-// ---------------------------------------------------------
-// LEVEL 4 (UNGATED VERSION)
-// ---------------------------------------------------------
-const level4Btn = document.getElementById("level4Btn");
-
-if (!level4Btn) {
-  console.error("Level 4 button not found in DOM");
-} else {
-  level4Btn.addEventListener("click", () => {
-    console.log("[Level 4] Ungated handler fired");
-
-    // Hide all global screens
+    // ⭐ Your original ungated UX flow (unchanged)
     document.querySelectorAll(".screen").forEach(s => s.classList.add("hidden"));
 
-    // ⭐ Show Level 4 wrapper immediately (no entry screen)
     const wrapper = document.getElementById("level4Wrapper");
     if (wrapper) wrapper.classList.remove("hidden");
 
-    // ⭐ Begin Level 4 session immediately
     L4.start();
   });
 }
@@ -5951,8 +5947,6 @@ if (!level4Btn) {
 
 
 
-/*
-
   // ---------------------------------------------------------
   // LEVEL 5
   // ---------------------------------------------------------
@@ -5962,84 +5956,56 @@ if (!level4Btn) {
 // ---------------------------------------------------------
 // LEVEL 5 (GATED: BASIC OR PREMIUM)
 // ---------------------------------------------------------
-const level5Btn = document.getElementById("level5Btn");
+level5Btn.addEventListener("click", async () => {
+  console.log("[Level 5] Gated handler fired");
 
-if (!level5Btn) {
-  console.error("Level 5 button not found in DOM");
-} else {
-  level5Btn.addEventListener("click", async () => {
-    console.log("[Level 5] Gated handler fired");
-const user = window.currentUser;
-if (!user) {
-  alert("You must be logged in to access Level 5.");
-  window.location.href = "../../../blog-podcast.html";
-  return;
-}
+  // ⭐ Prevent crash: sb must exist (same as Level 4)
+  if (typeof sb === "undefined") {
+    console.error("Supabase client (sb) is not defined.");
+    alert("Internal error: membership system unavailable.");
+    return;
+  }
 
+  // ⭐ Require login
+  let user = window.currentUser;
 
-    // Instant unlock if flag exists
-    if (
-      localStorage.getItem("basicUnlock") === "true" ||
-      localStorage.getItem("premiumUnlock") === "true"
-    ) {
-      console.log("Unlock flag detected — Level 5 unlocked.");
-      document.querySelectorAll(".screen").forEach(s => s.classList.add("hidden"));
-      document.getElementById("level5Wrapper")?.classList.remove("hidden");
-      L5.start();
-      return;
-    }
+  if (!user) {
+    // Try restoring session (same fix used for Level 4)
+    const { data: authUser } = await sb.auth.getUser();
+    if (authUser?.user) user = authUser.user;
+  }
 
-    // Supabase membership check
-    const { data, error } = await sb
-      .from("profiles")
-      .select("membership_status, membership_plan")
-      .eq("email", user.email)
-      .maybeSingle();
+  if (!user) {
+    window.location.href = "../../../blog-podcast.html";
+    return;
+  }
 
-    console.log("Membership result (L5):", { data, error });
+  // ⭐ Check membership in Supabase
+  const { data, error } = await sb
+    .from("profiles")
+    .select("membership_status, membership_plan")
+    .eq("email", user.email)
+    .maybeSingle();
 
-    if (error) {
-      console.error("Membership query error:", error);
-      alert("Membership check failed. Please try again.");
-      return;
-    }
+  if (error) {
+    console.error("Membership query error:", error);
+    alert("Membership check failed. Please try again.");
+    return;
+  }
 
-    const status = data?.membership_status;
-    const plan = data?.membership_plan;
+  const status = data?.membership_status;
+  const plan = data?.membership_plan;
 
-    const allowed = [
-      "basic-monthly",
-      "basic-yearly",
-      "premium-monthly",
-      "premium-yearly"
-    ];
+  // ⭐ Allowed plans (same as Level 4 Spanish)
+  const allowed = ["basic-monthly", "basic-yearly", "lifetime"];
 
-    if (status === "active" && allowed.includes(plan)) {
-      console.log("User has Basic or Premium — unlocking Level 5.");
-
-      if (plan.startsWith("basic")) {
-        localStorage.setItem("basicUnlock", "true");
-      } else {
-        localStorage.setItem("premiumUnlock", "true");
-      }
-
-      document.querySelectorAll(".screen").forEach(s => s.classList.add("hidden"));
-      document.getElementById("level5Wrapper")?.classList.remove("hidden");
-      L5.start();
-      return;
-    }
-
-    alert("Level 5 is locked. Basic or Premium required.");
+  if (!(status === "active" && allowed.includes(plan))) {
+    alert("Level 5 requires an active Basic or Lifetime subscription.");
     window.location.href = "membership.html";
-  });
-}
+    return;
+  }
 
-
-*/
-
-
-
-level5Btn.addEventListener("click", () => {
+  // ⭐⭐⭐ YOUR ORIGINAL UNGATED LOGIC (unchanged)
   console.log("[Level 5] Ungated handler fired");
 
   // Hide all screens
@@ -6048,7 +6014,7 @@ level5Btn.addEventListener("click", () => {
   // Show Level 5 wrapper
   document.getElementById("level5Wrapper")?.classList.remove("hidden");
 
-  // ⭐ Show Level 5 screen (THIS WAS MISSING)
+  // ⭐ Show Level 5 screen
   document.getElementById("level5Screen")?.classList.remove("hidden");
 
   // Start Level 5
@@ -6060,17 +6026,16 @@ level5Btn.addEventListener("click", () => {
 
 
 
+
+
+
+
+
+
+
+
+
 /*
-
-
-
-
-
-
-
-
-
-
 
   // ---------------------------------------------------------
   // LEVEL 6
@@ -6160,6 +6125,7 @@ if (!level6Btn) {
 
 
 
+*/
 
 
 
@@ -6171,513 +6137,7 @@ if (!level6Btn) {
 
 
 
-
-
-  // ---------------------------------------------------------
-  // LEVEL 7
-  // ---------------------------------------------------------
-  // ---------------------------------------------------------
-// LEVEL 7 (GATED: BASIC OR PREMIUM, ISOLATED, CLEAN)
-// ---------------------------------------------------------
-const level7Btn = document.getElementById("level7Btn");
-
-if (!level7Btn) {
-  console.error("Level 7 button not found in DOM");
-} else {
-  level7Btn.addEventListener("click", async () => {
-    console.log("[Level 7] Gated handler fired");
-
-    const user = window.currentUser;
-    if (!user) {
-      alert("You must be logged in to access Level 7.");
-      window.location.href = "blog-podcast.html";
-      return;
-    }
-
-    // Instant unlock if success.html already set the flag
-    if (
-      localStorage.getItem("basicUnlock") === "true" ||
-      localStorage.getItem("premiumUnlock") === "true"
-    ) {
-      console.log("Unlock flag detected — Level 7 unlocked.");
-      document.querySelectorAll(".screen").forEach(s => s.classList.add("hidden"));
-      document.getElementById("screen2L7")?.classList.remove("hidden");
-      L7.start();
-      return;
-    }
-
-    // Otherwise check real membership in Supabase
-    const { data, error } = await sb
-      .from("profiles")
-      .select("membership_status, membership_plan")
-      .eq("email", user.email)
-      .maybeSingle();
-
-    console.log("Membership result (L7):", { data, error });
-
-    if (error) {
-      console.error("Membership query error:", error);
-      alert("Membership check failed. Please try again.");
-      return;
-    }
-
-    const status = data?.membership_status;
-    const plan = data?.membership_plan;
-
-    const allowed = [
-      "basic-monthly",
-      "basic-yearly",
-      "premium-monthly",
-      "premium-yearly"
-    ];
-
-    if (status === "active" && allowed.includes(plan)) {
-      console.log("User has Basic or Premium — unlocking Level 7.");
-
-      // Cache unlock for instant future access
-      if (plan.startsWith("basic")) {
-        localStorage.setItem("basicUnlock", "true");
-      } else {
-        localStorage.setItem("premiumUnlock", "true");
-      }
-
-      document.querySelectorAll(".screen").forEach(s => s.classList.add("hidden"));
-      document.getElementById("screen2L7")?.classList.remove("hidden");
-      L7.start();
-      return;
-    }
-
-    alert("Level 7 is locked. Basic or Premium required.");
-    window.location.href = "membership.html";
-  });
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-  // ---------------------------------------------------------
-  // LEVEL 8
-  // ---------------------------------------------------------
-  // ---------------------------------------------------------
-// LEVEL 8 (GATED: BASIC OR PREMIUM, ISOLATED, CLEAN)
-// ---------------------------------------------------------
-const level8Btn = document.getElementById("level8Btn");
-
-if (!level8Btn) {
-  console.error("Level 8 button not found in DOM");
-} else {
-  level8Btn.addEventListener("click", async () => {
-    console.log("[Level 8] Gated handler fired");
-
-    const user = window.currentUser;
-    if (!user) {
-      alert("You must be logged in to access Level 8.");
-      window.location.href = "blog-podcast.html";
-      return;
-    }
-
-    // Instant unlock if success.html already set the flag
-    if (
-      localStorage.getItem("basicUnlock") === "true" ||
-      localStorage.getItem("premiumUnlock") === "true"
-    ) {
-      console.log("Unlock flag detected — Level 8 unlocked.");
-      document.querySelectorAll(".screen").forEach(s => s.classList.add("hidden"));
-      document.getElementById("screen2L8")?.classList.remove("hidden");
-      L8.start();
-      return;
-    }
-
-    // Otherwise check real membership in Supabase
-    const { data, error } = await sb
-      .from("profiles")
-      .select("membership_status, membership_plan")
-      .eq("email", user.email)
-      .maybeSingle();
-
-    console.log("Membership result (L8):", { data, error });
-
-    if (error) {
-      console.error("Membership query error:", error);
-      alert("Membership check failed. Please try again.");
-      return;
-    }
-
-    const status = data?.membership_status;
-    const plan = data?.membership_plan;
-
-    const allowed = [
-      "basic-monthly",
-      "basic-yearly",
-      "premium-monthly",
-      "premium-yearly"
-    ];
-
-    if (status === "active" && allowed.includes(plan)) {
-      console.log("User has Basic or Premium — unlocking Level 8.");
-
-      // Cache unlock for instant future access
-      if (plan.startsWith("basic")) {
-        localStorage.setItem("basicUnlock", "true");
-      } else {
-        localStorage.setItem("premiumUnlock", "true");
-      }
-
-      document.querySelectorAll(".screen").forEach(s => s.classList.add("hidden"));
-      document.getElementById("screen2L8")?.classList.remove("hidden");
-      L8.start();
-      return;
-    }
-
-    alert("Level 8 is locked. Basic or Premium required.");
-    window.location.href = "membership.html";
-  });
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  // ---------------------------------------------------------
-  // LEVEL 9
-  // ---------------------------------------------------------
-  // ---------------------------------------------------------
-// LEVEL 9 (GATED, ISOLATED, CLEAN)
-// ---------------------------------------------------------
-const level9Btn = document.getElementById("level9Btn");
-
-if (!level9Btn) {
-  console.error("Level 9 button not found in DOM");
-} else {
-  level9Btn.addEventListener("click", async () => {
-    console.log("[Level 9] Gated handler fired");
-
-    const user = window.currentUser;
-    if (!user) {
-      alert("You must be logged in to access Level 9.");
-      window.location.href = "blog-podcast.html";
-      return;
-    }
-
-    // Instant unlock if success.html already set the flag
-    if (localStorage.getItem("premiumUnlock") === "true") {
-      console.log("premiumUnlock flag detected — Level 9 unlocked.");
-      document.querySelectorAll(".screen").forEach(s => s.classList.add("hidden"));
-      document.getElementById("screen2L9")?.classList.remove("hidden");
-      L9.start();
-      return;
-    }
-
-    // Otherwise check real membership in Supabase
-    const { data, error } = await sb
-      .from("profiles")
-      .select("membership_status, membership_plan")
-      .eq("email", user.email)
-      .maybeSingle();
-
-    console.log("Membership result (L9):", { data, error });
-
-    if (error) {
-      console.error("Membership query error:", error);
-      alert("Membership check failed. Please try again.");
-      return;
-    }
-
-    const status = data?.membership_status;
-    const plan = data?.membership_plan;
-    const allowed = ["premium-monthly", "premium-yearly", "lifetime"];
-
-    if (status === "active" && allowed.includes(plan)) {
-      console.log("User already has premium — unlocking Level 9.");
-
-      localStorage.setItem("premiumUnlock", "true");
-
-      document.querySelectorAll(".screen").forEach(s => s.classList.add("hidden"));
-      document.getElementById("screen2L9")?.classList.remove("hidden");
-      L9.start();
-      return;
-    }
-
-    alert("Level 9 is locked. Premium required.");
-    window.location.href = "membership.html";
-  });
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  // ---------------------------------------------------------
-  // LEVEL 10
-  // ---------------------------------------------------------
-  // ---------------------------------------------------------
-// LEVEL 10 (GATED, ISOLATED, CLEAN)
-// ---------------------------------------------------------
-const level10Btn = document.getElementById("level10Btn");
-
-if (!level10Btn) {
-  console.error("Level 10 button not found in DOM");
-} else {
-  level10Btn.addEventListener("click", async () => {
-    console.log("[Level 10] Gated handler fired");
-
-    const user = window.currentUser;
-    if (!user) {
-      alert("You must be logged in to access Level 10.");
-      window.location.href = "blog-podcast.html";
-      return;
-    }
-
-    // Instant unlock if success.html already set the flag
-    if (localStorage.getItem("premiumUnlock") === "true") {
-      console.log("premiumUnlock flag detected — Level 10 unlocked.");
-      document.querySelectorAll(".screen").forEach(s => s.classList.add("hidden"));
-      document.getElementById("screen2L10")?.classList.remove("hidden");
-      L10.start();
-      return;
-    }
-
-    // Otherwise check real membership in Supabase
-    const { data, error } = await sb
-      .from("profiles")
-      .select("membership_status, membership_plan")
-      .eq("email", user.email)
-      .maybeSingle();
-
-    console.log("Membership result (L10):", { data, error });
-
-    if (error) {
-      console.error("Membership query error:", error);
-      alert("Membership check failed. Please try again.");
-      return;
-    }
-
-    const status = data?.membership_status;
-    const plan = data?.membership_plan;
-    const allowed = ["premium-monthly", "premium-yearly", "lifetime"];
-
-    if (status === "active" && allowed.includes(plan)) {
-      console.log("User already has premium — unlocking Level 10.");
-
-      localStorage.setItem("premiumUnlock", "true");
-
-      document.querySelectorAll(".screen").forEach(s => s.classList.add("hidden"));
-      document.getElementById("screen2L10")?.classList.remove("hidden");
-      L10.start();
-      return;
-    }
-
-    alert("Level 10 is locked. Premium required.");
-    window.location.href = "membership.html";
-  });
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  // ---------------------------------------------------------
-  // LEVEL 11 (custom)
-  // ---------------------------------------------------------
-  // ---------------------------------------------------------
-// LEVEL 11 (GATED, ISOLATED, CLEAN)
-// ---------------------------------------------------------
-const level11Btn = document.getElementById("level11Btn");
-
-if (!level11Btn) {
-  console.error("Level 11 button not found in DOM");
-} else {
-  level11Btn.addEventListener("click", async () => {
-    console.log("[Level 11] Gated handler fired");
-
-    const user = window.currentUser;
-    if (!user) {
-      alert("You must be logged in to access Level 11.");
-      window.location.href = "blog-podcast.html";
-      return;
-    }
-
-    // Instant unlock if success.html already set the flag
-    if (localStorage.getItem("premiumUnlock") === "true") {
-      console.log("premiumUnlock flag detected — Level 11 unlocked.");
-      document.querySelectorAll(".screen").forEach(s => s.classList.add("hidden"));
-      document.getElementById("level11Screen")?.classList.remove("hidden");
-      startLevel11(defaultScenario);
-      return;
-    }
-
-    // Otherwise check real membership in Supabase
-    const { data, error } = await sb
-      .from("profiles")
-      .select("membership_status, membership_plan")
-      .eq("email", user.email)
-      .maybeSingle();
-
-    console.log("Membership result (L11):", { data, error });
-
-    if (error) {
-      console.error("Membership query error:", error);
-      alert("Membership check failed. Please try again.");
-      return;
-    }
-
-    const status = data?.membership_status;
-    const plan = data?.membership_plan;
-    const allowed = ["premium-monthly", "premium-yearly", "lifetime"];
-
-    if (status === "active" && allowed.includes(plan)) {
-      console.log("User already has premium — unlocking Level 11.");
-
-      localStorage.setItem("premiumUnlock", "true");
-
-      document.querySelectorAll(".screen").forEach(s => s.classList.add("hidden"));
-      document.getElementById("level11Screen")?.classList.remove("hidden");
-      startLevel11(defaultScenario);
-      return;
-    }
-
-    alert("Level 11 is locked. Premium required.");
-    window.location.href = "membership.html";
-  });
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  // ---------------------------------------------------------
-  // LEVEL 12 (GATED, ISOLATED, CLEAN)
-  // ---------------------------------------------------------
-  const level12Btn = document.getElementById("level12Btn");
-
-  if (!level12Btn) {
-    console.error("Level 12 button not found in DOM");
-  } else {
-    level12Btn.addEventListener("click", async () => {
-      console.log("[Level 12] Gated handler fired");
-
-      const user = window.currentUser;
-      if (!user) {
-        alert("You must be logged in to access Level 12.");
-        window.location.href = "blog-podcast.html";
-        return;
-      }
-
-      // Instant unlock if success.html already set the flag
-      if (localStorage.getItem("premiumUnlock") === "true") {
-        console.log("premiumUnlock flag detected — Level 12 unlocked.");
-        document.querySelectorAll(".screen").forEach(s => s.classList.add("hidden"));
-        document.getElementById("level12Screen")?.classList.remove("hidden");
-        startLevel12();
-        return;
-      }
-
-      // Otherwise check real membership in Supabase
-      const { data, error } = await sb
-        .from("profiles")
-        .select("membership_status, membership_plan")
-        .eq("email", user.email)
-        .maybeSingle();
-
-      console.log("Membership result:", { data, error });
-
-      if (error) {
-        console.error("Membership query error:", error);
-        alert("Membership check failed. Please try again.");
-        return;
-      }
-
-      const status = data?.membership_status;
-      const plan = data?.membership_plan;
-      const allowed = ["premium-monthly", "premium-yearly", "lifetime"];
-
-      if (status === "active" && allowed.includes(plan)) {
-        console.log("User already has premium — unlocking Level 12.");
-
-        localStorage.setItem("premiumUnlock", "true");
-
-        document.querySelectorAll(".screen").forEach(s => s.classList.add("hidden"));
-        document.getElementById("level12Screen")?.classList.remove("hidden");
-        startLevel12();
-        return;
-      }
-
-      alert("Level 12 is locked. Premium required.");
-      window.location.href = "membership.html";
-    });
-
-
-
-
-
-  }
-
-  */
+  
 
 });
 
