@@ -1682,6 +1682,413 @@ me: "audio/se_tacher.wav"
 
 
 
+{
+  id: "l1-fr-28",
+  meaning: "to make a mess",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "mettre",
+      hiragana: "mettre",
+      meaning: "to put",
+      audio: {
+        daughter: "audio/mettre.wav",
+        me: "audio/mettre.wav"
+      }
+    },
+    {
+      romaji: "le",
+      hiragana: "le",
+      meaning: "the",
+      audio: {
+        daughter: "audio/le.wav",
+        me: "audio/le.wav"
+      }
+    },
+    {
+      romaji: "mettre_le",
+      hiragana: "mettre_le",
+      meaning: "to put the",
+      audio: {
+        daughter: "audio/mettre_le.wav",
+        me: "audio/mettre_le.wav"
+      }
+    },
+    {
+      romaji: "désordre",
+      hiragana: "desordre",
+      meaning: "mess / disorder",
+      audio: {
+        daughter: "audio/desordre.wav",
+        me: "audio/desordre.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+{
+  id: "l1-fr-29",
+  meaning: "sit down on the chair",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "asseyez",
+      hiragana: "asseyez",
+      meaning: "sit (imperative)",
+      audio: {
+        daughter: "audio/asseyez.wav",
+        me: "audio/asseyez.wav"
+      }
+    },
+    {
+      romaji: "vous",
+      hiragana: "vous",
+      meaning: "you (formal)",
+      audio: {
+        daughter: "audio/vous.wav",
+        me: "audio/vous.wav"
+      }
+    },
+    {
+      romaji: "asseyez-vous",
+      hiragana: "asseyez-vous",
+      meaning: "sit down",
+      audio: {
+        daughter: "audio/asseyez-vous.wav",
+        me: "audio/asseyez-vous.wav"
+      }
+    },
+    {
+      romaji: "sur",
+      hiragana: "sur",
+      meaning: "on",
+      audio: {
+        daughter: "audio/sur.wav",
+        me: "audio/sur.wav"
+      }
+    },
+    {
+      romaji: "la",
+      hiragana: "la",
+      meaning: "the (feminine)",
+      audio: {
+        daughter: "audio/la.wav",
+        me: "audio/la.wav"
+      }
+    },
+    {
+      romaji: "chaise",
+      hiragana: "chaise",
+      meaning: "chair",
+      audio: {
+        daughter: "audio/chaise.wav",
+        me: "audio/chaise.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l1-fr-30",
+  meaning: "I sit down on the chair",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "je",
+      hiragana: "je",
+      meaning: "I",
+      audio: {
+        daughter: "audio/je.wav",
+        me: "audio/je.wav"
+      }
+    },
+    {
+      romaji: "me",
+      hiragana: "me",
+      meaning: "myself",
+      audio: {
+        daughter: "audio/me.wav",
+        me: "audio/me.wav"
+      }
+    },
+    {
+      romaji: "assois",
+      hiragana: "assois",
+      meaning: "sit",
+      audio: {
+        daughter: "audio/assois.wav",
+        me: "audio/assois.wav"
+      }
+    },
+    {
+      romaji: "m_assois",
+      hiragana: "m_assois",
+      meaning: "I sit (merged form)",
+      audio: {
+        daughter: "audio/m_assois.wav",
+        me: "audio/m_assois.wav"
+      }
+    },
+    {
+      romaji: "sur",
+      hiragana: "sur",
+      meaning: "on",
+      audio: {
+        daughter: "audio/sur.wav",
+        me: "audio/sur.wav"
+      }
+    },
+    {
+      romaji: "la",
+      hiragana: "la",
+      meaning: "the (feminine)",
+      audio: {
+        daughter: "audio/la.wav",
+        me: "audio/la.wav"
+      }
+    },
+    {
+      romaji: "chaise",
+      hiragana: "chaise",
+      meaning: "chair",
+      audio: {
+        daughter: "audio/chaise.wav",
+        me: "audio/chaise.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l1-fr-31",
+  meaning: "you look through the window",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "tu",
+      hiragana: "tu",
+      meaning: "you (informal)",
+      audio: {
+        daughter: "audio/tu.wav",
+        me: "audio/tu.wav"
+      }
+    },
+    {
+      romaji: "regardes",
+      hiragana: "regardes",
+      meaning: "look",
+      audio: {
+        daughter: "audio/regardes.wav",
+        me: "audio/regardes.wav"
+      }
+    },
+    {
+      romaji: "par",
+      hiragana: "par",
+      meaning: "through / by",
+      audio: {
+        daughter: "audio/par.wav",
+        me: "audio/par.wav"
+      }
+    },
+    {
+      romaji: "la",
+      hiragana: "la",
+      meaning: "the (feminine)",
+      audio: {
+        daughter: "audio/la.wav",
+        me: "audio/la.wav"
+      }
+    },
+    {
+      romaji: "fenetre",
+      hiragana: "fenetre",
+      meaning: "window",
+      audio: {
+        daughter: "audio/fenetre.wav",
+        me: "audio/fenetre.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l1-fr-32",
+  meaning: "I watch the television",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "je",
+      hiragana: "je",
+      meaning: "I",
+      audio: {
+        daughter: "audio/je.wav",
+        me: "audio/je.wav"
+      }
+    },
+    {
+      romaji: "regarde",
+      hiragana: "regarde",
+      meaning: "watch",
+      audio: {
+        daughter: "audio/regarde.wav",
+        me: "audio/regarde.wav"
+      }
+    },
+    {
+      romaji: "la",
+      hiragana: "la",
+      meaning: "the (feminine)",
+      audio: {
+        daughter: "audio/la.wav",
+        me: "audio/la.wav"
+      }
+    },
+    {
+      romaji: "television",
+      hiragana: "television",
+      meaning: "television",
+      audio: {
+        daughter: "audio/television.wav",
+        me: "audio/television.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l1-fr-33",
+  meaning: "the floor is covered with snow",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "le",
+      hiragana: "le",
+      meaning: "the (masculine)",
+      audio: {
+        daughter: "audio/le.wav",
+        me: "audio/le.wav"
+      }
+    },
+    {
+      romaji: "sol",
+      hiragana: "sol",
+      meaning: "floor / ground",
+      audio: {
+        daughter: "audio/sol.wav",
+        me: "audio/sol.wav"
+      }
+    },
+    {
+      romaji: "est",
+      hiragana: "est",
+      meaning: "is",
+      audio: {
+        daughter: "audio/est.wav",
+        me: "audio/est.wav"
+      }
+    },
+    {
+      romaji: "couvert",
+      hiragana: "couvert",
+      meaning: "covered",
+      audio: {
+        daughter: "audio/couvert.wav",
+        me: "audio/couvert.wav"
+      }
+    },
+    {
+      romaji: "de",
+      hiragana: "de",
+      meaning: "with / of",
+      audio: {
+        daughter: "audio/de.wav",
+        me: "audio/de.wav"
+      }
+    },
+    {
+      romaji: "neige",
+      hiragana: "neige",
+      meaning: "snow",
+      audio: {
+        daughter: "audio/neige.wav",
+        me: "audio/neige.wav"
+      }
+    }
+  ]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 // ⭐ ADD THIS PATCH RIGHT HERE
