@@ -23766,7 +23766,6 @@ const level4 = [
 
 
 
-
 {
   id: "l4_030",
   level: 4,
@@ -23776,12 +23775,12 @@ const level4 = [
   englishAudio: "audio/sentences/english_fart.wav",
 
   interjectionQuestion: "How would a listener interject?",
-  correctInterjection: "へぇ〜",
-  distractors: ["おっと！", "まさか！"],
+  correctInterjection: "おっと！",
+  distractors: ["へぇ〜", "まさか！"],
 
   interjections: [
-    "へぇ〜",
     "おっと！",
+    "へぇ〜",
     "まさか！"
   ],
 
@@ -23836,7 +23835,6 @@ const level4 = [
     }
   ]
 },
-
 
 
 
