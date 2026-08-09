@@ -41460,24 +41460,28 @@ function l12AnalyzeIntent(rawText) {
       type = "ask_opinion";
 
     } else if (/なにをする|何をする|予定|yotei/.test(t)) {
-  type = "ask_plan";
-
+      type = "ask_plan";
 
     } else if (/するつもり/.test(t)) {
       type = "plan_reply";
 
-      // LIGHT PLAN (NEW)
-      }else if (/たいです/.test(t) && !/家族|気持ち|むしろ|かわりに/.test(t)) {
-  type = "light_plan";
+    } else if (/たいです/.test(t) && !/家族|気持ち|むしろ|かわりに/.test(t)) {
+      type = "light_plan";
 
-      } else if (/たいんです|たいです|むしろ|かわりに/.test(t)) {
+    } else if (/たいんです|たいです|むしろ|かわりに/.test(t)) {
       type = "desire_preference";
+    }
 
+    // --------------------------------------------------
+    // ASK INFORMATION (NEW)
+    // --------------------------------------------------
+   if (
+  /どのぐらい|どれくらい|どのくらい/.test(t) &&
+  /(勉強|べんきょう|時間)/.test(t)
+) {
+  type = "ask_info";
 }
 
-
-
-    
 
     // --------------------------------------------------
     // DAY STATUS (NEW)
@@ -41521,9 +41525,6 @@ function l12AnalyzeIntent(rawText) {
       nuance = "shikata";
     }
 
-    // --------------------------------------------------
-    // RESULT OBJECT
-    // --------------------------------------------------
     results.push({
       type,
       nuance,
@@ -41535,6 +41536,7 @@ function l12AnalyzeIntent(rawText) {
 
   return results;
 }
+
 
 
 
@@ -41768,6 +41770,23 @@ case "light_plan":
               ])
         );
         break;
+
+        case "ask_info":
+  replies.push(
+    politeness === "polite"
+      ? pick([
+          "そうですね…。毎日すこしずつ勉強されるのがいちばん効果的ですよ。だいたい10〜20分ほどがおすすめです。",
+          "目的にもよりますが、毎日10〜20分ほどの勉強がとても効果的ですよ。",
+          "人によりますが、毎日すこしずつ勉強すると上達が早いですよ。10〜20分ほどが目安です。"
+        ])
+      : pick([
+          "うーん、毎日10〜20分くらいがいちばんいいよ。すこしずつやるのが効果的！",
+          "目的にもよるけど、毎日10〜20分くらいで十分だよ。",
+          "人によるけど、毎日ちょっとずつやるのがいちばんいいよ。10〜20分くらいがおすすめ！"
+        ])
+  );
+  break;
+
 
 
       // --------------------------------------------------

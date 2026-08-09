@@ -2670,7 +2670,7 @@ daughter: "audio/spanish/conjunction10.wav"
       }
     }
   ]
-}
+},
 
 
 
