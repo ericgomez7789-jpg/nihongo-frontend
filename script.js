@@ -16198,6 +16198,20 @@ const level3Sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
   id: "l3-19",
   meaning: "I thought it would be easy, but unexpectedly it was very difficult.",
@@ -16273,6 +16287,21 @@ const level3Sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
   id: "l3-20",
   meaning: "Even though it looked easy, it took a long time.",
@@ -16449,6 +16478,21 @@ const level3Sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
  id: "l3-22",
   meaning: "I like meat more than fish.",
@@ -17751,10 +17795,16 @@ id: "l3-37",
       audio: { daughter: "audio/sentences/douyatte.wav", me: "audio/sentences/douyatte.wav" }
     },
     {
-      hiragana: "ここまで",
-      romaji: "kokomade",
+      hiragana: "ここ",
+      romaji: "koko",
       meaning: "to here",
-      audio: { daughter: "audio/sentences/kokomade.wav", me: "audio/sentences/kokomade.wav" }
+      audio: { daughter: "audio/sentences/koko.wav", me: "audio/sentences/koko.wav" }
+    },
+    {
+      hiragana: "まで",
+      romaji: "made",
+      meaning: "to here",
+      audio: { daughter: "audio/sentences/made.wav", me: "audio/sentences/made.wav" }
     },
     {
       hiragana: "きた",

@@ -2072,10 +2072,363 @@ me: "audio/se_tacher.wav"
       }
     }
   ]
-}
+},
 
 
 
+
+
+
+
+
+
+
+
+
+{
+  id: "l1-fr-34",
+  meaning: "the support is unstable",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "le",
+      hiragana: "le",
+      meaning: "the (masculine)",
+      audio: {
+        daughter: "audio/le.wav",
+        me: "audio/le.wav"
+      }
+    },
+    {
+      romaji: "appui",
+      hiragana: "appui",
+      meaning: "support",
+      audio: {
+        daughter: "audio/appui.wav",
+        me: "audio/appui.wav"
+      }
+    },
+    {
+      romaji: "l'appui",
+      hiragana: "l'appui",
+      meaning: "the support (natural spoken unit)",
+      audio: {
+        daughter: "audio/lappui.wav",
+        me: "audio/lappui.wav"
+      }
+    },
+    {
+      romaji: "est",
+      hiragana: "est",
+      meaning: "is",
+      audio: {
+        daughter: "audio/est.wav",
+        me: "audio/est.wav"
+      }
+    },
+    {
+      romaji: "instable",
+      hiragana: "instable",
+      meaning: "unstable",
+      audio: {
+        daughter: "audio/instable.wav",
+        me: "audio/instable.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l1-fr-35",
+  meaning: "the shirt is inside-out",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "le",
+      hiragana: "le",
+      meaning: "the",
+      audio: {
+        daughter: "audio/le.wav",
+        me: "audio/le.wav"
+      }
+    },
+    {
+      romaji: "chemise",
+      hiragana: "chemise",
+      meaning: "shirt",
+      audio: {
+        daughter: "audio/chemise.wav",
+        me: "audio/chemise.wav"
+      }
+    },
+    {
+      romaji: "est",
+      hiragana: "est",
+      meaning: "is",
+      audio: {
+        daughter: "audio/est.wav",
+        me: "audio/est.wav"
+      }
+    },
+    {
+      romaji: "à",
+      hiragana: "a",
+      meaning: "at / in",
+      audio: {
+        daughter: "audio/a.wav",
+        me: "audio/a.wav"
+      }
+    },
+    {
+      romaji: "le",
+      hiragana: "le",
+      meaning: "the",
+      audio: {
+        daughter: "audio/le.wav",
+        me: "audio/le.wav"
+      }
+    },
+    {
+      romaji: "envers",
+      hiragana: "envers",
+      meaning: "inside-out",
+      audio: {
+        daughter: "audio/envers.wav",
+        me: "audio/envers.wav"
+      }
+    },
+
+    /* natural spoken unit: chemise est à l'envers */
+    {
+      romaji: "chemise-est-à-l'envers",
+      hiragana: "chemise-est-a-lenvers",
+      meaning: "shirt is inside-out (natural spoken unit)",
+      audio: {
+        daughter: "audio/chemise-est-a-lenvers.wav",
+        me: "audio/chemise-est-a-lenvers.wav"
+      }
+    },
+
+    /* full merged unit: le chemise est à l'envers */
+    {
+      romaji: "le-chemise-est-à-l'envers",
+      hiragana: "le-chemise-est-a-lenvers",
+      meaning: "the shirt is inside-out (full merged unit)",
+      audio: {
+        daughter: "audio/le-chemise-est-a-lenvers.wav",
+        me: "audio/le-chemise-est-a-lenvers.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l1-fr-36",
+  meaning: "Where are you going?",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "où",
+      hiragana: "ou",
+      meaning: "where",
+      audio: {
+        daughter: "audio/ou.wav",
+        me: "audio/ou.wav"
+      }
+    },
+    {
+      romaji: "vas",
+      hiragana: "vas",
+      meaning: "go",
+      audio: {
+        daughter: "audio/vas.wav",
+        me: "audio/vas.wav"
+      }
+    },
+    {
+      romaji: "tu",
+      hiragana: "tu",
+      meaning: "you",
+      audio: {
+        daughter: "audio/tu.wav",
+        me: "audio/tu.wav"
+      }
+    },
+
+    /* natural spoken unit: vas-tu */
+    {
+      romaji: "vas-tu",
+      hiragana: "vas-tu",
+      meaning: "go you (natural spoken unit)",
+      audio: {
+        daughter: "audio/vas-tu.wav",
+        me: "audio/vas-tu.wav"
+      }
+    },
+
+    /* full merged unit: où vas-tu */
+    {
+      romaji: "où vas-tu",
+      hiragana: "ou-vas-tu",
+      meaning: "where are you going (full merged unit)",
+      audio: {
+        daughter: "audio/ou-vas-tu.wav",
+        me: "audio/ou-vas-tu.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l1-fr-37",
+  meaning: "Where are you going? (formal / plural)",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "où",
+      hiragana: "ou",
+      meaning: "where",
+      audio: {
+        daughter: "audio/ou.wav",
+        me: "audio/ou.wav"
+      }
+    },
+    {
+      romaji: "allez",
+      hiragana: "allez",
+      meaning: "go (formal/plural)",
+      audio: {
+        daughter: "audio/allez.wav",
+        me: "audio/allez.wav"
+      }
+    },
+    {
+      romaji: "vous",
+      hiragana: "vous",
+      meaning: "you (formal/plural)",
+      audio: {
+        daughter: "audio/vous.wav",
+        me: "audio/vous.wav"
+      }
+    },
+
+    /* natural spoken unit: allez-vous */
+    {
+      romaji: "allez-vous",
+      hiragana: "allez-vous",
+      meaning: "go you (natural spoken unit)",
+      audio: {
+        daughter: "audio/allez-vous.wav",
+        me: "audio/allez-vous.wav"
+      }
+    },
+
+    /* full merged unit: où allez-vous */
+    {
+      romaji: "où allez-vous",
+      hiragana: "ou-allez-vous",
+      meaning: "where are you going (full merged unit)",
+      audio: {
+        daughter: "audio/ou-allez-vous.wav",
+        me: "audio/ou-allez-vous.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l1-fr-38",
+  meaning: "Are you cold?",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "tu",
+      hiragana: "tu",
+      meaning: "you",
+      audio: {
+        daughter: "audio/tu.wav",
+        me: "audio/tu.wav"
+      }
+    },
+    {
+      romaji: "as",
+      hiragana: "as",
+      meaning: "have",
+      audio: {
+        daughter: "audio/as.wav",
+        me: "audio/as.wav"
+      }
+    },
+    {
+      romaji: "as-tu",
+      hiragana: "as-tu",
+      meaning: "have you (natural spoken unit)",
+      audio: {
+        daughter: "audio/as-tu.wav",
+        me: "audio/as-tu.wav"
+      }
+    },
+    {
+      romaji: "froid",
+      hiragana: "froid",
+      meaning: "cold",
+      audio: {
+        daughter: "audio/froid.wav",
+        me: "audio/froid.wav"
+      }
+    }
+  ]
+},
 
 
 

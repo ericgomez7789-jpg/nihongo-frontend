@@ -1168,6 +1168,19 @@ me: "audio/spanish/silla.wav"
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 // ⭐ ADD THIS PATCH RIGHT HERE
@@ -2569,6 +2582,36 @@ daughter: "audio/spanish/conjunction10.wav"
   ]
 },
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l2_012",
+  sentence: "Me gusta más la carne que el pescado.",
+  conjunction: "que",
+  meaning: "I like meat more than fish.",
+
+  fullAudio: "audio/spanish/conjunction12.wav",
+
+  chunks: [
+    {
+      audio: {
+        me: "audio/spanish/conjunction12.wav",
+        daughter: "audio/spanish/conjunction12.wav"
+      }
+    }
+  ]
+}
 
 
 
@@ -5768,6 +5811,393 @@ document.getElementById("clothingDeptBtn_es").onclick = () =>
 
 
 
+/* ==========================================================
+   ⭐ LEVEL 6 MODULE — ARRANGE MODE
+========================================================== */
+
+/* ==========================================================
+   ⭐ LEVEL 6 — MCQ MODE
+   Uses: universal Screen 1 (audio-only), Screen 2 (MCQ),
+         Screen 3 (summary), Screen 4 (score)
+========================================================== */
+
+/* ==========================================================
+   ⭐ LEVEL 6 MODULE — FULLY ISOLATED
+   No shared globals, no shared handlers, no shared functions.
+========================================================== */
+
+/* ==========================================================
+   ⭐ LEVEL 6 — ISOLATED GLOBAL STATE
+   (No sharing with Level 1 or any other level)
+========================================================== */
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================
+   LEVEL 6 — SPANISH FREEFLOW CONVERSATION MODULE
+   Mirrors Level 12 architecture (Japanese) but Spanish-specific
+========================================================== */
+
+/* ----------------------------------------------------------
+   PUBLIC ENTRY POINT
+---------------------------------------------------------- */
+function l6ProcessUserInput(rawText) {
+  return l6Normalize(rawText);
+}
+
+/* ----------------------------------------------------------
+   NORMALIZER — Spanish-specific
+---------------------------------------------------------- */
+function l6Normalize(text) {
+  if (!text) return "";
+
+  let t = text.trim().normalize("NFKC").toLowerCase();
+
+  // Remove punctuation except Spanish interrogatives
+  t = t.replace(/[.,!¡?¿]/g, "");
+
+  // Normalize accents
+  const accentMap = {
+    a: "á",
+    e: "é",
+    i: "í",
+    o: "ó",
+    u: "ú",
+    n: "ñ"
+  };
+  // Fix common missing accents (optional)
+  t = t.replace(/senor/g, "señor")
+       .replace(/nino/g, "niño")
+       .replace(/ano/g, "año");
+
+  // Remove extra spaces
+  t = t.replace(/\s+/g, " ");
+
+  return t;
+}
+
+/* ----------------------------------------------------------
+   UI HELPERS
+---------------------------------------------------------- */
+function l6AppendUserMessage(text) {
+  const container = document.getElementById("l6ConversationContainer");
+  const div = document.createElement("div");
+  div.className = "user-message";
+  div.textContent = text;
+  container.appendChild(div);
+  container.scrollTop = container.scrollHeight;
+}
+
+function l6AppendSystemMessage(text) {
+  const container = document.getElementById("l6ConversationContainer");
+  const div = document.createElement("div");
+  div.className = "system-message";
+  div.textContent = text;
+  container.appendChild(div);
+  container.scrollTop = container.scrollHeight;
+}
+
+function l6ClearConversation() {
+  const container = document.getElementById("l6ConversationContainer");
+  container.innerHTML = "";
+}
+
+/* ----------------------------------------------------------
+   CONVERSATION STATE
+---------------------------------------------------------- */
+const l6Context = {
+  politeness: "neutral", // "formal" | "informal" | "neutral"
+  emotion: null,
+  tense: "present",
+  mood: "indicative",
+  lastIntent: null,
+  lastTopic: null
+};
+
+/* ----------------------------------------------------------
+   CLAUSE SPLITTING
+---------------------------------------------------------- */
+function l6SplitClauses(rawText) {
+  if (!rawText) return [];
+
+  const clauses = rawText
+    .split(/\.|!|¡|\?|¿|y luego|después|entonces|luego|así que|por eso/g)
+    .map(c => c.trim())
+    .filter(c => c.length > 0);
+
+  return clauses.length > 0 ? clauses : [rawText];
+}
+
+/* ----------------------------------------------------------
+   DETECTORS
+---------------------------------------------------------- */
+function l6DetectPoliteness(t) {
+  if (/usted|podría|quisiera|sería tan amable/.test(t)) return "formal";
+  if (/tú|oye|vale|dime|haz/.test(t)) return "informal";
+  return "neutral";
+}
+
+function l6DetectTense(t) {
+  if (/estoy .*ando|estoy .*iendo/.test(t)) return "progressive";
+  if (/voy a|iré|haré|mañana/.test(t)) return "future";
+  if (/fui|estuve|hice|quería|había/.test(t)) return "past";
+  return "present";
+}
+
+function l6DetectMood(t) {
+  if (/ojalá|quiera|sea|vaya|pueda/.test(t)) return "subjunctive";
+  if (/haz|ven|dime|cuéntame/.test(t)) return "imperative";
+  return "indicative";
+}
+
+function l6DetectVolition(t) {
+  return /(quiero|me gustaría|quisiera|tengo ganas|pienso)/.test(t);
+}
+
+/* ----------------------------------------------------------
+   INTENT RULES
+---------------------------------------------------------- */
+const l6IntentRules = [
+  { name: "greeting", match: t => /(hola|buenas|qué tal|hey)/.test(t) },
+  { name: "request", match: t => /(puedes|podrías|haz|dime|muéstrame|por favor)/.test(t) },
+  { name: "ask_status", match: t => /(cómo estás|qué tal|cómo te va)/.test(t) },
+  { name: "status_reply", match: t => /(bien|mal|más o menos|todo bien)/.test(t) },
+  { name: "ask_opinion", match: t => /(qué piensas|qué opinas|cómo ves)/.test(t) },
+  { name: "ask_plan", match: t => /(qué harás|qué vas a hacer|planes)/.test(t) },
+  { name: "plan_reply", match: t => /(voy a|pienso|tengo que|después)/.test(t) },
+  { name: "light_plan", match: t => /(tal vez|quizá|me gustaría|puede que)/.test(t) },
+  { name: "desire_preference", match: t => /(me gusta|prefiero|odio|quisiera)/.test(t) },
+  { name: "negative_plan", match: t => /(no quiero|no puedo|me da pereza|no tengo ganas)/.test(t) },
+  { name: "yesno_question", match: t => /^.*\?$/.test(t) },
+  { name: "food_drink", match: t => /(comer|beber|café|pan|agua|cerveza)/.test(t), topic: "food" },
+  { name: "study", match: t => /(estudiar|aprender|practicar)/.test(t), topic: "study" }
+];
+
+/* ----------------------------------------------------------
+   SINGLE-CLAUSE ANALYZER
+---------------------------------------------------------- */
+function l6AnalyzeIntentClause(t) {
+  const politeness = l6DetectPoliteness(t);
+  const tense = l6DetectTense(t);
+  const mood = l6DetectMood(t);
+  const volition = l6DetectVolition(t);
+
+  for (const rule of l6IntentRules) {
+    if (rule.match(t)) {
+      return {
+        type: rule.name,
+        politeness,
+        tense,
+        mood,
+        volition,
+        topic: rule.topic || null
+      };
+    }
+  }
+
+  return {
+    type: "free",
+    politeness,
+    tense,
+    mood,
+    volition,
+    topic: null
+  };
+}
+
+/* ----------------------------------------------------------
+   MULTI-SENTENCE ANALYZER
+---------------------------------------------------------- */
+function l6AnalyzeIntent(rawText) {
+  const clauses = l6SplitClauses(rawText);
+  const results = [];
+
+  for (const clause of clauses) {
+    const t = l6Normalize(clause);
+    results.push(l6AnalyzeIntentClause(t));
+  }
+
+  return results;
+}
+
+/* ----------------------------------------------------------
+   REPLY GENERATOR
+---------------------------------------------------------- */
+function l6GenerateReply(rawText) {
+  const intents = l6AnalyzeIntent(rawText);
+  const politeness = l6Context.politeness;
+
+  const pick = (list) => list[Math.floor(Math.random() * list.length)];
+  const replies = [];
+
+  for (const intent of intents) {
+    switch (intent.type) {
+      case "greeting":
+        replies.push(
+          politeness === "formal"
+            ? pick(["Buenos días. ¿En qué puedo ayudarle hoy?", "Hola, ¿cómo se encuentra usted hoy?"])
+            : pick(["Hola, ¿qué tal?", "Hey, ¿cómo va tu día?"])
+        );
+        break;
+
+      case "request":
+        replies.push(
+          politeness === "formal"
+            ? pick(["Claro, con gusto. Continuaré.", "Por supuesto, procederé."])
+            : pick(["Vale, sigo.", "Ok, continúo."])
+        );
+        break;
+
+      case "ask_status":
+        replies.push(
+          politeness === "formal"
+            ? pick(["Estoy bien, gracias. ¿Y usted?", "Todo en orden. ¿Cómo se encuentra usted?"])
+            : pick(["Todo bien. ¿Y tú?", "Bien aquí. ¿Y tú cómo vas?"])
+        );
+        break;
+
+      case "status_reply":
+        replies.push(
+          politeness === "formal"
+            ? pick(["Me alegra escuchar eso. ¿Qué le gustaría conversar?", "Perfecto. ¿Desea hablar de algo en particular?"])
+            : pick(["Qué bueno. ¿De qué quieres hablar?", "Genial. Cuéntame más."])
+        );
+        break;
+
+      case "ask_opinion":
+        replies.push(
+          politeness === "formal"
+            ? pick(["Creo que es interesante. ¿Qué opina usted?", "Me parece razonable. ¿Cuál es su opinión?"])
+            : pick(["Yo creo que está bien. ¿Tú qué piensas?", "Pues yo lo veo bien. ¿Y tú?"])
+        );
+        break;
+
+      case "ask_plan":
+        replies.push(
+          politeness === "formal"
+            ? pick(["No tengo planes aún. ¿Y usted?", "Todavía no he decidido. ¿Qué hará usted?"])
+            : pick(["No sé todavía. ¿Y tú?", "Aún no decido. ¿Qué vas a hacer tú?"])
+        );
+        break;
+
+      case "plan_reply":
+        replies.push(
+          politeness === "formal"
+            ? pick(["Entiendo. Suena bien.", "Perfecto, espero que lo disfrute."])
+            : pick(["Genial, disfruta.", "Suena bien, pásala bien."])
+        );
+        break;
+
+      case "light_plan":
+        replies.push(
+          politeness === "formal"
+            ? pick(["Está considerando hacerlo, ¿verdad?", "Parece que aún no está seguro."])
+            : pick(["Estás dudando, ¿no?", "Todavía no decides, ¿verdad?"])
+        );
+        break;
+
+      case "desire_preference":
+        replies.push(
+          politeness === "formal"
+            ? pick(["Comprendo ese sentimiento.", "Es totalmente válido sentir eso."])
+            : pick(["Te entiendo.", "Sí, tiene sentido."])
+        );
+        break;
+
+      case "negative_plan":
+        replies.push(
+          politeness === "formal"
+            ? pick(["Lo comprendo. No se esfuerce demasiado.", "Entiendo. Tómese su tiempo."])
+            : pick(["Uf, te entiendo. No te fuerces.", "Sí, a veces pasa. Descansa un poco."])
+        );
+        break;
+
+      default:
+        replies.push(
+          politeness === "formal"
+            ? pick(["¿Podría contarme un poco más?", "Interesante. ¿Desea continuar?"])
+            : pick(["Cuéntame más.", "Interesante, sigue."])
+        );
+        break;
+    }
+  }
+
+  return replies.length > 0 ? pick(replies) : "Cuéntame más.";
+}
+
+/* ----------------------------------------------------------
+   MAIN HANDLER
+---------------------------------------------------------- */
+function handleL6UserReply() {
+  if (!l6Active) return;
+
+  const inputEl = document.getElementById("l6UserInput");
+  const raw = inputEl.value.trim();
+  if (!raw) return;
+
+  l6AppendUserMessage(raw);
+  inputEl.value = "";
+
+  const reply = l6GenerateReply(raw);
+  l6AppendSystemMessage(reply);
+}
+
+/* ----------------------------------------------------------
+   STARTUP
+---------------------------------------------------------- */
+let l6Active = false;
+
+function startLevel6() {
+  l6Active = true;
+  l6ClearConversation();
+
+  l6AppendSystemMessage("Hola. Puedes hablar libremente en español.");
+
+  const sendBtn = document.getElementById("l6SendBtn");
+  const inputEl = document.getElementById("l6UserInput");
+
+  if (sendBtn) {
+    sendBtn.onclick = handleL6UserReply;
+  }
+
+  if (inputEl) {
+    inputEl.onkeydown = (e) => {
+      if (e.key === "Enter" && !e.shiftKey) {
+        e.preventDefault();
+        handleL6UserReply();
+      }
+    };
+  }
+
+  const homeBtn = document.getElementById("l6HomeBtn");
+  if (homeBtn) {
+    homeBtn.onclick = () => {
+      l6Active = false;
+      l6ClearConversation();
+      showScreen("screen0");
+    };
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6035,6 +6465,26 @@ level5Btn.addEventListener("click", async () => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
 
   // ---------------------------------------------------------
@@ -6042,6 +6492,9 @@ level5Btn.addEventListener("click", async () => {
   // ---------------------------------------------------------
   // ---------------------------------------------------------
 // LEVEL 6 (GATED: BASIC OR PREMIUM, ISOLATED, CLEAN)
+// ---------------------------------------------------------
+// ---------------------------------------------------------
+// LEVEL 6 (GATED: BASIC OR LIFETIME, ISOLATED, CLEAN)
 // ---------------------------------------------------------
 const level6Btn = document.getElementById("level6Btn");
 
@@ -6051,33 +6504,34 @@ if (!level6Btn) {
   level6Btn.addEventListener("click", async () => {
     console.log("[Level 6] Gated handler fired");
 
-    const user = window.currentUser;
+    // ⭐ Prevent crash: sb must exist (same as L4/L5)
+    if (typeof sb === "undefined") {
+      console.error("Supabase client (sb) is not defined.");
+      alert("Internal error: membership system unavailable.");
+      return;
+    }
+
+    // ⭐ Require login (same pattern as L4/L5)
+    let user = window.currentUser;
+
     if (!user) {
-      alert("You must be logged in to access Level 6.");
-      window.location.href = "blog-podcast.html";
+      // Try restoring session (same fix used for Level 4 & 5)
+      const { data: authUser } = await sb.auth.getUser();
+      if (authUser?.user) user = authUser.user;
+    }
+
+    // If STILL no user → redirect
+    if (!user) {
+      window.location.href = "../../../blog-podcast.html";
       return;
     }
 
-    // Instant unlock if success.html already set the flag
-    if (
-      localStorage.getItem("basicUnlock") === "true" ||
-      localStorage.getItem("premiumUnlock") === "true"
-    ) {
-      console.log("Unlock flag detected — Level 6 unlocked.");
-      document.querySelectorAll(".screen").forEach(s => s.classList.add("hidden"));
-      document.getElementById("screen2L6")?.classList.remove("hidden");
-      L6.start();
-      return;
-    }
-
-    // Otherwise check real membership in Supabase
+    // ⭐ Check membership in Supabase (same as L4/L5)
     const { data, error } = await sb
       .from("profiles")
       .select("membership_status, membership_plan")
       .eq("email", user.email)
       .maybeSingle();
-
-    console.log("Membership result (L6):", { data, error });
 
     if (error) {
       console.error("Membership query error:", error);
@@ -6088,40 +6542,31 @@ if (!level6Btn) {
     const status = data?.membership_status;
     const plan = data?.membership_plan;
 
-    const allowed = [
-      "basic-monthly",
-      "basic-yearly",
-      "premium-monthly",
-      "premium-yearly"
-    ];
+    // ⭐ Allowed plans (mirror Level 4 & 5)
+    const allowed = ["basic-monthly", "basic-yearly", "lifetime"];
 
-    if (status === "active" && allowed.includes(plan)) {
-      console.log("User has Basic or Premium — unlocking Level 6.");
-
-      // Cache unlock for instant future access
-      if (plan.startsWith("basic")) {
-        localStorage.setItem("basicUnlock", "true");
-      } else {
-        localStorage.setItem("premiumUnlock", "true");
-      }
-
-      document.querySelectorAll(".screen").forEach(s => s.classList.add("hidden"));
-      document.getElementById("screen2L6")?.classList.remove("hidden");
-      L6.start();
+    if (!(status === "active" && allowed.includes(plan))) {
+      alert("Level 6 requires an active Basic or Lifetime subscription.");
+      window.location.href = "membership.html";
       return;
     }
 
-    alert("Level 6 is locked. Basic or Premium required.");
-    window.location.href = "membership.html";
+    // ⭐⭐⭐ UNGATED UX FLOW (same pattern as L4/L5)
+    console.log("[Level 6] Ungated handler fired");
+
+    // Hide all screens
+    document.querySelectorAll(".screen").forEach(s => s.classList.add("hidden"));
+
+    // Show Level 6 wrapper (same as L5)
+    document.getElementById("level6Wrapper")?.classList.remove("hidden");
+
+    // Show Level 6 screen (same as L5)
+    document.getElementById("level6Screen")?.classList.remove("hidden");
+
+    // Start Level 6 engine
+    L6.start();
   });
 }
-
-
-
-
-
-
-
 
 
 
@@ -6130,8 +6575,31 @@ if (!level6Btn) {
 
 
 
+// ---------------------------------------------------------
+// LEVEL 6 — UNGATED TEST HANDLER (NO MEMBERSHIP CHECKS)
+// ---------------------------------------------------------
+document.addEventListener("DOMContentLoaded", () => {
 
+  const level6Btn = document.getElementById("level6Btn");
 
+  if (!level6Btn) {
+    console.error("Level 6 button not found in DOM");
+  } else {
+    level6Btn.addEventListener("click", () => {
+      console.log("[Level 6] Ungated test handler fired");
+
+      document.querySelectorAll(".screen").forEach(s => s.classList.add("hidden"));
+
+      document.getElementById("level6Wrapper")?.classList.remove("hidden");
+      document.getElementById("level6Screen")?.classList.remove("hidden");
+
+      L6.start();
+    });
+  }
+
+});
+
+});
 
 
 
@@ -6139,5 +6607,5 @@ if (!level6Btn) {
 
   
 
-});
+
 

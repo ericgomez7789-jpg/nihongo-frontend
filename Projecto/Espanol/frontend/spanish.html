@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="spanish_level3.css">
   <link rel="stylesheet" href="spanish_level4.css">
   <link rel="stylesheet" href="spanish_level5.css">
+  <link rel="stylesheet" href="spanish_level6.css">
   <link rel="stylesheet" href="logo.css">
 
   <!-- ⭐ Supabase must load BEFORE spanish.js -->
@@ -189,8 +190,9 @@
       <button class="levelBtn" data-level="3">Nivel 3</button>
       <button id="level4Btn" class="levelBtn" data-level="4">Nivel 4</button>
       <button id="level5Btn" class="levelBtn" data-level="5">Nivel 5</button>
+    <button id="level6Btn" class="levelBtn" data-level="6">Nivel 6</button>
 
-      <button class="levelBtn" data-level="6">Nivel 6</button>
+
     </div>
   </div>
 
@@ -595,6 +597,44 @@
     </div>
 
   </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ⭐ LEVEL 6 — FREE-FLOW TEXTBOX CONVERSATION ⭐ -->
+<div id="level6Screen" class="screen level-block level6-screen hidden">
+
+  <!-- Header -->
+  <div class="level-header">
+    <h2 class="title">Level 6 — Conversación Libre</h2>
+    <button id="l6HomeBtn" class="iconBtn homeBtn">🏠</button>
+  </div>
+
+  <!-- Conversation Window -->
+  <div id="l6ConversationContainer" class="conversation-container">
+    <!-- System + user messages will be appended here -->
+  </div>
+
+  <!-- User Input Area -->
+  <div id="l6InputContainer" class="conversation-input">
+    <textarea id="l6UserInput"
+              class="conversation-textbox"
+              placeholder="Habla libremente en español…"></textarea>
+
+    <button id="l6SendBtn" class="iconBtn sendBtn">➡️</button>
+  </div>
+
 </div>
 
 
