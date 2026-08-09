@@ -1169,6 +1169,65 @@ me: "audio/spanish/silla.wav"
 
 
 
+{
+  id: "l1-es-23",
+  meaning: "walk on tiptoes",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "camine",
+      hiragana: "camine",
+      meaning: "walk (command, formal usted)",
+      audio: {
+        daughter: "audio/spanish/camine.wav",
+        me: "audio/spanish/camine.wav"
+      }
+    },
+    {
+      romaji: "de",
+      hiragana: "de",
+      meaning: "on / of",
+      audio: {
+        daughter: "audio/spanish/de.wav",
+        me: "audio/spanish/de.wav"
+      }
+    },
+    {
+      romaji: "puntillas",
+      hiragana: "puntillas",
+      meaning: "tiptoes",
+      audio: {
+        daughter: "audio/spanish/puntillas.wav",
+        me: "audio/spanish/puntillas.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6075,6 +6134,16 @@ function l6AnalyzeIntent(rawText) {
     let nuance = null;
 
     // --------------------------------------------------
+    // ASK INFORMATION / QUESTIONS (NEW)
+    // --------------------------------------------------
+    if (
+      /\b(cuantos|cuántos|cuantas|cuántas|como|cómo|cuando|cuándo|por qué|porque|para qué|para que)\b/.test(t) ||
+      /\?$/.test(t)
+    ) {
+      type = "ask_info";
+    }
+
+    // --------------------------------------------------
     // BASIC INTENTS (mirrored from Japanese)
     // --------------------------------------------------
     if (/hola|buenos dias|buenas tardes|buenas noches/.test(t)) {
@@ -6155,6 +6224,7 @@ function l6AnalyzeIntent(rawText) {
 
   return results;
 }
+
 
 
 /* ----------------------------------------------------------
@@ -6383,6 +6453,25 @@ function l6GenerateReply(rawText) {
         break;
 
       // --------------------------------------------------
+      // ASK INFORMATION (NEW)
+      // --------------------------------------------------
+      case "ask_info":
+        replies.push(
+          politeness === "formal"
+            ? pick([
+                "Depende de sus objetivos, pero muchas personas estudian entre una y tres horas al día.",
+                "Generalmente se recomienda estudiar al menos una hora diaria, aunque puede variar.",
+                "Una buena referencia es entre una y dos horas al día, según su disponibilidad."
+              ])
+            : pick([
+                "Depende de tus metas, pero mucha gente estudia entre una y tres horas al día.",
+                "Normalmente se recomienda al menos una hora diaria, aunque varía según la persona.",
+                "Una buena guía es estudiar entre una y dos horas al día, según tu ritmo."
+              ])
+        );
+        break;
+
+      // --------------------------------------------------
       // DEFAULT
       // --------------------------------------------------
       default:
@@ -6405,6 +6494,7 @@ function l6GenerateReply(rawText) {
 
   return replies.length > 0 ? pick(replies) : "Cuéntame más.";
 }
+
 
 
 /* ----------------------------------------------------------
