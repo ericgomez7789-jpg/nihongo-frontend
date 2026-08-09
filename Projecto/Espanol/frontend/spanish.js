@@ -5910,6 +5910,51 @@ function l6ClearConversation() {
   container.innerHTML = "";
 }
 
+// ---------------------------------------------------------
+// LEVEL 6 — INPUT HANDLER (matches Japanese freeflow)
+// ---------------------------------------------------------
+/* ==========================================================
+   ⭐ LEVEL 6 — INPUT HANDLER (mirrors Japanese freeflow)
+========================================================== */
+function l6AttachInputHandler() {
+  const input = document.getElementById("l6UserInput");
+  const sendBtn = document.getElementById("l6SendBtn");
+  const container = document.getElementById("l6ConversationContainer");
+
+  if (!input || !sendBtn || !container) {
+    console.error("Level 6 input elements missing");
+    return;
+  }
+
+  sendBtn.addEventListener("click", () => {
+    const rawText = input.value.trim();
+    if (!rawText) return;
+
+    // Append user bubble
+    container.insertAdjacentHTML(
+      "beforeend",
+      `<div class="user-message">${rawText}</div>`
+    );
+
+    // Generate reply
+    const reply = l6GenerateReply(rawText);
+
+    // Append system bubble
+    container.insertAdjacentHTML(
+      "beforeend",
+      `<div class="system-message">${reply}</div>`
+    );
+
+    // Clear input
+    input.value = "";
+
+    // Auto-scroll
+    container.scrollTop = container.scrollHeight;
+  });
+}
+
+
+
 /* ----------------------------------------------------------
    CONVERSATION STATE
 ---------------------------------------------------------- */
@@ -6016,21 +6061,108 @@ function l6AnalyzeIntentClause(t) {
 /* ----------------------------------------------------------
    MULTI-SENTENCE ANALYZER
 ---------------------------------------------------------- */
+/* ==========================================================
+   ⭐ MULTI-SENTENCE INTENT ANALYZER (SPANISH L6)
+========================================================== */
 function l6AnalyzeIntent(rawText) {
   const clauses = l6SplitClauses(rawText);
   const results = [];
 
   for (const clause of clauses) {
     const t = l6Normalize(clause);
-    results.push(l6AnalyzeIntentClause(t));
+
+    let type = "free";
+    let nuance = null;
+
+    // --------------------------------------------------
+    // BASIC INTENTS (mirrored from Japanese)
+    // --------------------------------------------------
+    if (/hola|buenos dias|buenas tardes|buenas noches/.test(t)) {
+      type = "greeting";
+
+    } else if (/hazlo|continua|sigue|puedes hacerlo|por favor/.test(t)) {
+      type = "request";
+
+    } else if (/como estas|que tal|como te encuentras/.test(t)) {
+      type = "ask_status";
+
+    } else if (/me alegra|que bueno|perfecto/.test(t)) {
+      type = "status_reply";
+
+    } else if (/que opinas|que piensas|opinion/.test(t)) {
+      type = "ask_opinion";
+
+    } else if (/que vas a hacer|planes|que haras|que haces hoy/.test(t)) {
+      type = "ask_plan";
+
+    } else if (/voy a|planeo|tengo pensado/.test(t)) {
+      type = "plan_reply";
+
+    } else if (/tal vez|quizas|no estoy seguro|no se/.test(t)) {
+      type = "light_plan";
+
+    } else if (/quiero|me gustaria|preferiria/.test(t)) {
+      type = "desire_preference";
+    }
+
+    // --------------------------------------------------
+    // DAY STATUS (mirrored)
+    // --------------------------------------------------
+    if (/dia|día/.test(t) && /como/.test(t)) {
+      type = "ask_day_status";
+    }
+
+    // --------------------------------------------------
+    // NEGATIVE / RELUCTANT PLAN (mirrored)
+    // --------------------------------------------------
+    if (
+      /no quiero|no puedo|me cuesta|es dificil|es duro|no tengo ganas/.test(t)
+    ) {
+      type = "negative_plan";
+    }
+
+    // --------------------------------------------------
+    // CAN'T-HELP EMOTIONAL NUANCES (mirrored)
+    // --------------------------------------------------
+    if (/no puedo evitar/.test(t)) {
+      type = "cant_help";
+      nuance = "evitar";
+
+    } else if (/me es imposible/.test(t)) {
+      type = "cant_help";
+      nuance = "imposible";
+
+    } else if (/no tengo opcion|no tengo opción/.test(t)) {
+      type = "cant_help";
+      nuance = "opcion";
+
+    } else if (/no queda mas remedio|no queda más remedio/.test(t)) {
+      type = "cant_help";
+      nuance = "remedio";
+    }
+
+    // --------------------------------------------------
+    // RESULT OBJECT (mirrored)
+    // --------------------------------------------------
+    results.push({
+      type,
+      nuance,
+      politeness: l6Context.politeness,
+      emotion: l6Context.emotion,
+      voice: l6Context.voice
+    });
   }
 
   return results;
 }
 
+
 /* ----------------------------------------------------------
    REPLY GENERATOR
 ---------------------------------------------------------- */
+/* ==========================================================
+   ⭐ REPLY GENERATOR (SPANISH L6)
+========================================================== */
 function l6GenerateReply(rawText) {
   const intents = l6AnalyzeIntent(rawText);
   const politeness = l6Context.politeness;
@@ -6040,91 +6172,232 @@ function l6GenerateReply(rawText) {
 
   for (const intent of intents) {
     switch (intent.type) {
+
+      // --------------------------------------------------
+      // GREETING
+      // --------------------------------------------------
       case "greeting":
         replies.push(
           politeness === "formal"
-            ? pick(["Buenos días. ¿En qué puedo ayudarle hoy?", "Hola, ¿cómo se encuentra usted hoy?"])
-            : pick(["Hola, ¿qué tal?", "Hey, ¿cómo va tu día?"])
+            ? pick([
+                "Buenos días. ¿Sobre qué le gustaría conversar hoy?",
+                "Hola. ¿Qué tema desea tratar hoy?",
+                "Hola. ¿Cómo está pasando su día?"
+              ])
+            : pick([
+                "¡Hola! ¿Qué quieres hablar hoy?",
+                "Hey, ¿qué tal tu día?",
+                "Hola, ¿cómo va todo?"
+              ])
         );
         break;
 
+      // --------------------------------------------------
+      // REQUEST
+      // --------------------------------------------------
       case "request":
         replies.push(
           politeness === "formal"
-            ? pick(["Claro, con gusto. Continuaré.", "Por supuesto, procederé."])
-            : pick(["Vale, sigo.", "Ok, continúo."])
+            ? pick([
+                "Claro, con gusto continuaré.",
+                "Por supuesto, seguiré adelante.",
+                "Entendido, procederé."
+              ])
+            : pick([
+                "Vale, sigo.",
+                "Ok, continúo.",
+                "Perfecto, voy."
+              ])
         );
         break;
 
+      // --------------------------------------------------
+      // ASK STATUS
+      // --------------------------------------------------
       case "ask_status":
         replies.push(
           politeness === "formal"
-            ? pick(["Estoy bien, gracias. ¿Y usted?", "Todo en orden. ¿Cómo se encuentra usted?"])
-            : pick(["Todo bien. ¿Y tú?", "Bien aquí. ¿Y tú cómo vas?"])
+            ? pick([
+                "Estoy bien, gracias. ¿Y usted?",
+                "Todo en orden. ¿Cómo se encuentra usted?",
+                "Me encuentro bien. ¿Y usted?"
+              ])
+            : pick([
+                "Todo bien. ¿Y tú?",
+                "Bien aquí. ¿Y tú cómo vas?",
+                "Estoy bien. ¿Y tú?"
+              ])
         );
         break;
 
+      // --------------------------------------------------
+      // ASK DAY STATUS
+      // --------------------------------------------------
+      case "ask_day_status":
+        replies.push(
+          politeness === "formal"
+            ? pick([
+                "Mi día va tranquilo. ¿Y el suyo?",
+                "Mi día va bastante bien. ¿Cómo va el suyo?",
+                "Mi día va sin problemas. ¿Y el suyo?"
+              ])
+            : pick([
+                "Mi día va normal. ¿Y el tuyo?",
+                "Va bien. ¿Y tú?",
+                "Mi día va bien. ¿Y el tuyo?"
+              ])
+        );
+        break;
+
+      // --------------------------------------------------
+      // STATUS REPLY
+      // --------------------------------------------------
       case "status_reply":
         replies.push(
           politeness === "formal"
-            ? pick(["Me alegra escuchar eso. ¿Qué le gustaría conversar?", "Perfecto. ¿Desea hablar de algo en particular?"])
-            : pick(["Qué bueno. ¿De qué quieres hablar?", "Genial. Cuéntame más."])
+            ? pick([
+                "Me alegra escuchar eso. ¿Sobre qué desea hablar?",
+                "Perfecto. ¿Qué tema le gustaría tratar?",
+                "Qué bueno. ¿Qué desea conversar?"
+              ])
+            : pick([
+                "¡Qué bien! ¿De qué quieres hablar?",
+                "Genial. Cuéntame más.",
+                "Perfecto. ¿Qué más quieres contar?"
+              ])
         );
         break;
 
+      // --------------------------------------------------
+      // ASK OPINION
+      // --------------------------------------------------
       case "ask_opinion":
         replies.push(
           politeness === "formal"
-            ? pick(["Creo que es interesante. ¿Qué opina usted?", "Me parece razonable. ¿Cuál es su opinión?"])
-            : pick(["Yo creo que está bien. ¿Tú qué piensas?", "Pues yo lo veo bien. ¿Y tú?"])
+            ? pick([
+                "Creo que es interesante. ¿Qué opina usted?",
+                "Me parece razonable. ¿Cuál es su opinión?",
+                "Es una buena pregunta. ¿Qué piensa usted?"
+              ])
+            : pick([
+                "Yo creo que está bien. ¿Tú qué piensas?",
+                "Pues yo lo veo bien. ¿Y tú?",
+                "Creo que está bien. ¿Qué opinas tú?"
+              ])
         );
         break;
 
+      // --------------------------------------------------
+      // ASK PLAN
+      // --------------------------------------------------
       case "ask_plan":
         replies.push(
           politeness === "formal"
-            ? pick(["No tengo planes aún. ¿Y usted?", "Todavía no he decidido. ¿Qué hará usted?"])
-            : pick(["No sé todavía. ¿Y tú?", "Aún no decido. ¿Qué vas a hacer tú?"])
+            ? pick([
+                "No tengo planes aún. ¿Y usted?",
+                "Todavía no he decidido. ¿Qué hará usted?",
+                "No tengo nada definido. ¿Y usted?"
+              ])
+            : pick([
+                "No sé todavía. ¿Y tú?",
+                "Aún no decido. ¿Qué vas a hacer tú?",
+                "No tengo planes. ¿Y tú?"
+              ])
         );
         break;
 
+      // --------------------------------------------------
+      // PLAN REPLY
+      // --------------------------------------------------
       case "plan_reply":
         replies.push(
           politeness === "formal"
-            ? pick(["Entiendo. Suena bien.", "Perfecto, espero que lo disfrute."])
-            : pick(["Genial, disfruta.", "Suena bien, pásala bien."])
+            ? pick([
+                "Entiendo. Suena bien.",
+                "Perfecto, espero que lo disfrute.",
+                "Comprendo. Que tenga un buen día."
+              ])
+            : pick([
+                "Genial, disfruta.",
+                "Suena bien, pásala bien.",
+                "Perfecto, dale."
+              ])
         );
         break;
 
+      // --------------------------------------------------
+      // LIGHT PLAN
+      // --------------------------------------------------
       case "light_plan":
         replies.push(
           politeness === "formal"
-            ? pick(["Está considerando hacerlo, ¿verdad?", "Parece que aún no está seguro."])
-            : pick(["Estás dudando, ¿no?", "Todavía no decides, ¿verdad?"])
+            ? pick([
+                "Parece que aún no está seguro.",
+                "Está considerando hacerlo, ¿verdad?",
+                "Todavía lo está pensando, ¿cierto?"
+              ])
+            : pick([
+                "Estás dudando, ¿no?",
+                "Todavía no decides, ¿verdad?",
+                "Parece que estás pensando."
+              ])
         );
         break;
 
+      // --------------------------------------------------
+      // DESIRE / PREFERENCE
+      // --------------------------------------------------
       case "desire_preference":
         replies.push(
           politeness === "formal"
-            ? pick(["Comprendo ese sentimiento.", "Es totalmente válido sentir eso."])
-            : pick(["Te entiendo.", "Sí, tiene sentido."])
+            ? pick([
+                "Comprendo ese sentimiento.",
+                "Es totalmente válido sentir eso.",
+                "Entiendo su perspectiva."
+              ])
+            : pick([
+                "Te entiendo.",
+                "Sí, tiene sentido.",
+                "Es válido sentir eso."
+              ])
         );
         break;
 
+      // --------------------------------------------------
+      // NEGATIVE PLAN
+      // --------------------------------------------------
       case "negative_plan":
         replies.push(
           politeness === "formal"
-            ? pick(["Lo comprendo. No se esfuerce demasiado.", "Entiendo. Tómese su tiempo."])
-            : pick(["Uf, te entiendo. No te fuerces.", "Sí, a veces pasa. Descansa un poco."])
+            ? pick([
+                "Lo comprendo. No se esfuerce demasiado.",
+                "Entiendo. Tómese su tiempo.",
+                "Es comprensible. Cuídese."
+              ])
+            : pick([
+                "Uf, te entiendo. No te fuerces.",
+                "Sí, a veces pasa. Descansa un poco.",
+                "Lo entiendo. Tómalo con calma."
+              ])
         );
         break;
 
+      // --------------------------------------------------
+      // DEFAULT
+      // --------------------------------------------------
       default:
         replies.push(
           politeness === "formal"
-            ? pick(["¿Podría contarme un poco más?", "Interesante. ¿Desea continuar?"])
-            : pick(["Cuéntame más.", "Interesante, sigue."])
+            ? pick([
+                "¿Podría contarme un poco más?",
+                "Interesante. ¿Desea continuar?",
+                "Comprendo. ¿Podría ampliar un poco más?"
+              ])
+            : pick([
+                "Cuéntame más.",
+                "Interesante, sigue.",
+                "Dime más."
+              ])
         );
         break;
     }
@@ -6132,6 +6405,7 @@ function l6GenerateReply(rawText) {
 
   return replies.length > 0 ? pick(replies) : "Cuéntame más.";
 }
+
 
 /* ----------------------------------------------------------
    MAIN HANDLER
@@ -6186,6 +6460,37 @@ function startLevel6() {
     };
   }
 }
+
+
+// ---------------------------------------------------------
+// LEVEL 6 ENGINE (Minimal Freeflow)
+// ---------------------------------------------------------
+const L6 = {
+  start() {
+    console.log("[Level 6] Engine start()");
+
+    const container = document.getElementById("l6ConversationContainer");
+    if (!container) return;
+
+    container.innerHTML = `
+      <div class="system-message">
+        ¡Bienvenido a la conversación libre! Escribe algo para comenzar.
+      </div>
+    `;
+
+    // ⭐ Attach input handler (critical)
+    l6AttachInputHandler();
+  }
+};
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6485,119 +6790,33 @@ level5Btn.addEventListener("click", async () => {
 
 
 
-/*
-
-  // ---------------------------------------------------------
-  // LEVEL 6
-  // ---------------------------------------------------------
-  // ---------------------------------------------------------
-// LEVEL 6 (GATED: BASIC OR PREMIUM, ISOLATED, CLEAN)
-// ---------------------------------------------------------
-// ---------------------------------------------------------
-// LEVEL 6 (GATED: BASIC OR LIFETIME, ISOLATED, CLEAN)
-// ---------------------------------------------------------
-const level6Btn = document.getElementById("level6Btn");
-
-if (!level6Btn) {
-  console.error("Level 6 button not found in DOM");
-} else {
-  level6Btn.addEventListener("click", async () => {
-    console.log("[Level 6] Gated handler fired");
-
-    // ⭐ Prevent crash: sb must exist (same as L4/L5)
-    if (typeof sb === "undefined") {
-      console.error("Supabase client (sb) is not defined.");
-      alert("Internal error: membership system unavailable.");
-      return;
-    }
-
-    // ⭐ Require login (same pattern as L4/L5)
-    let user = window.currentUser;
-
-    if (!user) {
-      // Try restoring session (same fix used for Level 4 & 5)
-      const { data: authUser } = await sb.auth.getUser();
-      if (authUser?.user) user = authUser.user;
-    }
-
-    // If STILL no user → redirect
-    if (!user) {
-      window.location.href = "../../../blog-podcast.html";
-      return;
-    }
-
-    // ⭐ Check membership in Supabase (same as L4/L5)
-    const { data, error } = await sb
-      .from("profiles")
-      .select("membership_status, membership_plan")
-      .eq("email", user.email)
-      .maybeSingle();
-
-    if (error) {
-      console.error("Membership query error:", error);
-      alert("Membership check failed. Please try again.");
-      return;
-    }
-
-    const status = data?.membership_status;
-    const plan = data?.membership_plan;
-
-    // ⭐ Allowed plans (mirror Level 4 & 5)
-    const allowed = ["basic-monthly", "basic-yearly", "lifetime"];
-
-    if (!(status === "active" && allowed.includes(plan))) {
-      alert("Level 6 requires an active Basic or Lifetime subscription.");
-      window.location.href = "membership.html";
-      return;
-    }
-
-    // ⭐⭐⭐ UNGATED UX FLOW (same pattern as L4/L5)
-    console.log("[Level 6] Ungated handler fired");
-
-    // Hide all screens
-    document.querySelectorAll(".screen").forEach(s => s.classList.add("hidden"));
-
-    // Show Level 6 wrapper (same as L5)
-    document.getElementById("level6Wrapper")?.classList.remove("hidden");
-
-    // Show Level 6 screen (same as L5)
-    document.getElementById("level6Screen")?.classList.remove("hidden");
-
-    // Start Level 6 engine
-    L6.start();
-  });
-}
-
-
-
-*/
-
-
 
 
 // ---------------------------------------------------------
 // LEVEL 6 — UNGATED TEST HANDLER (NO MEMBERSHIP CHECKS)
 // ---------------------------------------------------------
-document.addEventListener("DOMContentLoaded", () => {
+// ---------------------------------------------------------
+// LEVEL 6 — UNGATED TEST HANDLER (NO MEMBERSHIP CHECKS)
+// ---------------------------------------------------------
+// ---------------------------------------------------------
+// LEVEL 6 — UNGATED TEST HANDLER
+// ---------------------------------------------------------
+document.querySelector('.levelBtn[data-level="6"]')
+  ?.addEventListener("click", () => {
 
-  const level6Btn = document.getElementById("level6Btn");
+    console.log("[Level 6] Ungated test handler fired");
 
-  if (!level6Btn) {
-    console.error("Level 6 button not found in DOM");
-  } else {
-    level6Btn.addEventListener("click", () => {
-      console.log("[Level 6] Ungated test handler fired");
+    // Hide all screens
+    document.querySelectorAll(".screen").forEach(s => s.classList.add("hidden"));
 
-      document.querySelectorAll(".screen").forEach(s => s.classList.add("hidden"));
+    // Show Level 6 wrapper + screen
+    document.getElementById("level6Wrapper")?.classList.remove("hidden");
+    document.getElementById("level6Screen")?.classList.remove("hidden");
 
-      document.getElementById("level6Wrapper")?.classList.remove("hidden");
-      document.getElementById("level6Screen")?.classList.remove("hidden");
+    // Start Level 6 engine
+    L6.start();
+  });
 
-      L6.start();
-    });
-  }
-
-});
 
 });
 
