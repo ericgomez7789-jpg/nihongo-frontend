@@ -33639,6 +33639,18 @@ const level8 = [
 
   meaning: "When I went to the clothing store with my daughter, instead of looking at clothes, she exclaimed Wow! and started playing tag with me."
 },
+
+
+
+
+
+
+
+
+
+
+
+
 {
   id: "L8-013",
   level: 8,
@@ -33845,20 +33857,34 @@ const level8 = [
 
 
 
-
 {
   id: "L8-018",
   level: 8,
 
-  japanese: "ひこうちゅうにじぶんのまえのあかんぼうがうんちしていたところだったんだ。そしたらぼくは「うげ…」ってなって、めっちゃくさかったよ。",
+  japanese: "ひこうちゅうではじぶんのまえのあかんぼうがうんちしていたところだったんだ。そしてぼくは「うげ…」ってなって、めっちゃくさかったよ。",
   audio: "audio/sentences/paraphrase18.wav",
 
   paraphraseOptions: [
-    { text: "ひこうちゅうにまえのあかんぼうがうんちして、ぼくがうげってなるほどくさかったんだ。", correct: true },
-    { text: "ぼくがうんちして、まえのあかんぼうがうげっていったんだ。", correct: false },
-    { text: "ひこうちゅうにあかんぼうがねていて、ぼくがくさくておきちゃったんだ。", correct: false },
-    { text: "まえのあかんぼうがわらっていて、ぼくがうげっていったんだ。", correct: false },
-    { text: "ひこうちゅうにだれもなにもしていないのに、ぼくがくさいってさけんだんだ。", correct: false }
+    {
+      text: "ひこうちゅうにまえのあかんぼうがうんちして、ぼくがうげってなるほどくさかったんだ。",
+      correct: true
+    },
+    {
+      text: "ぼくがうんちして、まえのあかんぼうがうげっていったんだ。",
+      correct: false
+    },
+    {
+      text: "ひこうちゅうにあかんぼうがねていて、ぼくがくさくておきちゃったんだ。",
+      correct: false
+    },
+    {
+      text: "まえのあかんぼうがわらっていて、ぼくがうげっていったんだ。",
+      correct: false
+    },
+    {
+      text: "ひこうちゅうにだれもなにもしていないのに、ぼくがくさいってさけんだんだ。",
+      correct: false
+    }
   ],
 
   summaryChunks: [
@@ -33869,6 +33895,7 @@ const level8 = [
 
   meaning: "While on a flight, the baby in front of me pooped, and I gagged because it smelled so bad."
 },
+
 
 
 
