@@ -9956,7 +9956,6 @@ const level2Sentences = [
 
 
 
-
 {
   id: "l2-35",
   meaning: "A light breeze is gently blowing.",
@@ -9975,7 +9974,7 @@ const level2Sentences = [
     "karui",
     "kaze",
     "ga",
-    "soyosoyoto",
+    "soyosoyo_to",
     "fuite",
     "iru"
   ],
@@ -10039,17 +10038,15 @@ const level2Sentences = [
         me: "audio/sentences/ga.wav"
       }
     },
-
     {
-      romaji: "soyosoyo",
-      hiragana: "そよそよ",
+      romaji: "soyosoyo_to",
+      hiragana: "そよそよと",
       meaning: "gently blowing",
       audio: {
-        daughter: "",
-        me: ""
+        daughter: "audio/sentences/soyosoyo_to.wav",
+        me: "audio/sentences/soyosoyo_to.wav"
       }
     },
-
     {
       romaji: "fuite",
       hiragana: "ふいて",
@@ -10070,7 +10067,6 @@ const level2Sentences = [
     }
   ]
 },
-
 
 
 
