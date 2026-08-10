@@ -10085,7 +10085,6 @@ const level2Sentences = [
 
 
 
-
 {
   id: "l2-36",
   meaning: "A gentle breeze blows softly through the grass.",
@@ -16570,6 +16569,21 @@ const level3Sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
  id: "l3-23",
   meaning: "I think the waves of the sea make me feel refreshed. In contrast, the stillness of the lake feels somewhat lacking.",
@@ -16723,6 +16737,23 @@ const level3Sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
  id: "l3-24",
   meaning: "Because I was arguing with my mother, I ended up getting angry.",

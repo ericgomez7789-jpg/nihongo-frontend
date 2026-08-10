@@ -2442,6 +2442,124 @@ me: "audio/se_tacher.wav"
 
 
 
+
+
+
+{
+  id: "l1-fr-39",
+  meaning: "Nice to meet you",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "ravi",
+      hiragana: "ravi",
+      meaning: "delighted",
+      audio: {
+        daughter: "audio/ravi.wav",
+        me: "audio/ravi.wav"
+      }
+    },
+    {
+      romaji: "de",
+      hiragana: "de",
+      meaning: "to",
+      audio: {
+        daughter: "audio/de.wav",
+        me: "audio/de.wav"
+      }
+    },
+    {
+      romaji: "vous",
+      hiragana: "vous",
+      meaning: "you (polite)",
+      audio: {
+        daughter: "audio/vous.wav",
+        me: "audio/vous.wav"
+      }
+    },
+    {
+      romaji: "rencontrer",
+      hiragana: "rencontrer",
+      meaning: "meet",
+      audio: {
+        daughter: "audio/rencontrer.wav",
+        me: "audio/rencontrer.wav"
+      
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l1-fr-40",
+  meaning: "I am happy",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "je",
+      hiragana: "je",
+      meaning: "I",
+      audio: {
+        daughter: "audio/je.wav",
+        me: "audio/je.wav"
+      }
+    },
+    {
+      romaji: "suis",
+      hiragana: "suis",
+      meaning: "am",
+      audio: {
+        daughter: "audio/suis.wav",
+        me: "audio/suis.wav"
+      }
+    },
+    {
+      romaji: "heureux",
+      hiragana: "heureux",
+      meaning: "happy",
+      audio: {
+        daughter: "audio/heureux.wav",
+        me: "audio/heureux.wav"
+      }
+    },
+
+    {
+      romaji: "je-suis-heureux",
+      hiragana: "je-suis-heureux",
+      meaning: "I am happy (natural spoken unit)",
+      audio: {
+        daughter: "audio/je-suis-heureux.wav",
+        me: "audio/je-suis-heureux.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 // ⭐ ADD THIS PATCH RIGHT HERE

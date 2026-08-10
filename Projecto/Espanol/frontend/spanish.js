@@ -1102,6 +1102,11 @@ me: "audio/spanish/silla.wav"
 
 
 
+
+
+
+
+
 {
   id: "l1-es-22",
   meaning: "the shirt is inside out",
@@ -1207,6 +1212,68 @@ me: "audio/spanish/silla.wav"
 
 
 
+
+
+
+
+
+
+
+
+
+{
+  id: "l1-es-24",
+  meaning: "nice to meet you",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "mucho",
+      hiragana: "mucho",
+      meaning: "much / very",
+      audio: {
+        daughter: "audio/spanish/mucho.wav",
+        me: "audio/spanish/mucho.wav"
+      }
+    },
+    {
+      romaji: "gusto",
+      hiragana: "gusto",
+      meaning: "pleasure",
+      audio: {
+        daughter: "audio/spanish/gusto.wav",
+        me: "audio/spanish/gusto.wav"
+      }
+    },
+    {
+      romaji: "a",
+      hiragana: "a",
+      meaning: "to",
+      audio: {
+        daughter: "audio/spanish/a.wav",
+        me: "audio/spanish/a.wav"
+      }
+    },
+    {
+      romaji: "conocer",
+      hiragana: "conocer",
+      meaning: "to meet / to know",
+      audio: {
+        daughter: "audio/spanish/conocer.wav",
+        me: "audio/spanish/conocer.wav"
+      }
+    },
+    {
+      romaji: "te",
+      hiragana: "te",
+      meaning: "you — **reflexive pronoun** indicating the action is directed toward yourself",
+      audio: {
+        daughter: "audio/spanish/te.wav",
+        me: "audio/spanish/te.wav"
+      }
+    }
+  ]
+},
 
 
 
@@ -2675,6 +2742,35 @@ daughter: "audio/spanish/conjunction10.wav"
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l2_013",
+  sentence: "Creo que escuchar las olas del mar me hace sentir renovado. En cambio, escuchar la quietud del lago me hace sentir incompleta.",
+  conjunction: "en cambio",
+  meaning: "I think listening to the waves of the sea makes me feel renewed. Instead, listening to the stillness of the lake makes me feel incomplete.",
+
+  fullAudio: "audio/spanish/conjunction13.wav",
+
+  chunks: [
+    {
+      audio: {
+        me: "audio/spanish/conjunction13.wav",
+        daughter: "audio/spanish/conjunction13.wav"
+      }
+    }
+  ]
+}
 
 
 
