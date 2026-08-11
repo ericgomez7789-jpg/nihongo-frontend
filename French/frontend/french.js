@@ -2290,17 +2290,6 @@ me: "audio/se_tacher.wav"
         daughter: "audio/vas-tu.wav",
         me: "audio/vas-tu.wav"
       }
-    },
-
-    /* full merged unit: où vas-tu */
-    {
-      romaji: "où vas-tu",
-      hiragana: "ou-vas-tu",
-      meaning: "where are you going (full merged unit)",
-      audio: {
-        daughter: "audio/ou-vas-tu.wav",
-        me: "audio/ou-vas-tu.wav"
-      }
     }
   ]
 },
@@ -2358,17 +2347,6 @@ me: "audio/se_tacher.wav"
       audio: {
         daughter: "audio/allez-vous.wav",
         me: "audio/allez-vous.wav"
-      }
-    },
-
-    /* full merged unit: où allez-vous */
-    {
-      romaji: "où allez-vous",
-      hiragana: "ou-allez-vous",
-      meaning: "where are you going (full merged unit)",
-      audio: {
-        daughter: "audio/ou-allez-vous.wav",
-        me: "audio/ou-allez-vous.wav"
       }
     }
   ]
@@ -2555,6 +2533,118 @@ me: "audio/se_tacher.wav"
 
 
 
+
+
+
+
+
+
+
+
+
+{
+  id: "l1-fr-41",
+  meaning: "Are you happy?",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "tu",
+      hiragana: "tu",
+      meaning: "you (informal)",
+      audio: {
+        daughter: "audio/tu.wav",
+        me: "audio/tu.wav"
+      }
+    },
+    {
+      romaji: "es",
+      hiragana: "es",
+      meaning: "are",
+      audio: {
+        daughter: "audio/es.wav",
+        me: "audio/es.wav"
+      }
+    },
+
+    {
+      romaji: "es-tu",
+      hiragana: "es-tu",
+      meaning: "are you (inversion form)",
+      audio: {
+        daughter: "audio/es-tu.wav",
+        me: "audio/es-tu.wav"
+      }
+    },
+
+    {
+      romaji: "heureux",
+      hiragana: "heureux",
+      meaning: "happy (masculine)",
+      audio: {
+        daughter: "audio/heureux.wav",
+        me: "audio/heureux.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l1-fr-42",
+  meaning: "Are you sad?",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "vous",
+      hiragana: "vous",
+      meaning: "you (formal / plural)",
+      audio: {
+        daughter: "audio/vous.wav",
+        me: "audio/vous.wav"
+      }
+    },
+    {
+      romaji: "êtes",
+      hiragana: "êtes",
+      meaning: "are",
+      audio: {
+        daughter: "audio/etes.wav",
+        me: "audio/etes.wav"
+      }
+    },
+
+    {
+      romaji: "êtes-vous",
+      hiragana: "êtes-vous",
+      meaning: "are you (formal inversion)",
+      audio: {
+        daughter: "audio/etes-vous.wav",
+        me: "audio/etes-vous.wav"
+      }
+    },
+
+    {
+      romaji: "triste",
+      hiragana: "triste",
+      meaning: "sad",
+      audio: {
+        daughter: "audio/triste.wav",
+        me: "audio/triste.wav"
+      }
+    }
+  ]
+},
 
 
 

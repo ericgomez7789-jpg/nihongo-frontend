@@ -1289,6 +1289,54 @@ me: "audio/spanish/silla.wav"
 
 
 
+{
+  id: "l1-es-25",
+  meaning: "to mutter the words",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "murmurar",
+      hiragana: "murmurar",
+      meaning: "to mutter / to speak softly under your breath",
+      audio: {
+        daughter: "audio/spanish/murmurar.wav",
+        me: "audio/spanish/murmurar.wav"
+      }
+    },
+    {
+      romaji: "las",
+      hiragana: "las",
+      meaning: "the (feminine plural)",
+      audio: {
+        daughter: "audio/spanish/las.wav",
+        me: "audio/spanish/las.wav"
+      }
+    },
+    {
+      romaji: "palabras",
+      hiragana: "palabras",
+      meaning: "words",
+      audio: {
+        daughter: "audio/spanish/palabras.wav",
+        me: "audio/spanish/palabras.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2770,7 +2818,36 @@ daughter: "audio/spanish/conjunction10.wav"
       }
     }
   ]
-}
+},
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l2_014",
+  sentence: "Me enojé porque discutí con mi mamá.",
+  conjunction: "porque",
+  meaning: "I got angry because I argued with my mom.",
+
+  fullAudio: "audio/spanish/conjunction14.wav",
+
+  chunks: [
+    {
+      audio: {
+        me: "audio/spanish/conjunction14.wav",
+        daughter: "audio/spanish/conjunction14.wav"
+      }
+    }
+  ]
+},
 
 
 
