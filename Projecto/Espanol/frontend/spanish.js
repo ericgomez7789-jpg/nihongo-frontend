@@ -1338,6 +1338,53 @@ me: "audio/spanish/silla.wav"
 
 
 
+{
+  id: "l1-es-26",
+  meaning: "to drown in water",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "ahogar",
+      hiragana: "ahogar",
+      meaning: "to drown / to choke in water",
+      audio: {
+        daughter: "audio/spanish/ahogar.wav",
+        me: "audio/spanish/ahogar.wav"
+      }
+    },
+    {
+      romaji: "en",
+      hiragana: "en",
+      meaning: "in",
+      audio: {
+        daughter: "audio/spanish/en.wav",
+        me: "audio/spanish/en.wav"
+      }
+    },
+    {
+      romaji: "agua",
+      hiragana: "agua",
+      meaning: "water",
+      audio: {
+        daughter: "audio/spanish/agua.wav",
+        me: "audio/spanish/agua.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2849,6 +2896,35 @@ daughter: "audio/spanish/conjunction10.wav"
   ]
 },
 
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l2_015",
+  sentence: "Me fui a dormir porque me sentía cansada.",
+  conjunction: "porque",
+  meaning: "I went to sleep because I felt tired.",
+
+  fullAudio: "audio/spanish/conjunction15.wav",
+
+  chunks: [
+    {
+      audio: {
+        me: "audio/spanish/conjunction15.wav",
+        daughter: "audio/spanish/conjunction15.wav"
+      }
+    }
+  ]
+},
 
 
 
