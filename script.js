@@ -17295,6 +17295,18 @@ const level3Sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
 {
   meaning: "How should I say it like this?",
   level: 3,
@@ -17348,6 +17360,17 @@ const level3Sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
 {
  id: "l3-30",
   meaning: "Why do you do it that way?",
@@ -17473,6 +17496,17 @@ id: "l3-31",
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
 {
 id: "l3-32",
   meaning: "Why did you do it in that way?",
@@ -17687,6 +17721,17 @@ id: "l3-34",
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
 {
 id: "l3-35",
   meaning: "How should I say it to sound natural?",
@@ -18050,6 +18095,18 @@ id: "l3-39",
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
 {
 id: "l3-40",
   meaning: "How should I say it?",
@@ -18894,6 +18951,12 @@ id: "l3-42",
     }
   ]
 },
+
+
+
+
+
+
 
 
 

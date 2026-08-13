@@ -2650,6 +2650,79 @@ me: "audio/se_tacher.wav"
 
 
 
+
+
+
+
+
+{
+  id: "l1-fr-43",
+  meaning: "I am eating something",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "je",
+      hiragana: "je",
+      meaning: "I",
+      audio: {
+        daughter: "audio/je.wav",
+        me: "audio/je.wav"
+      }
+    },
+
+    {
+      romaji: "mange",
+      hiragana: "mange",
+      meaning: "eat / am eating",
+      audio: {
+        daughter: "audio/mange.wav",
+        me: "audio/mange.wav"
+      }
+    },
+
+    {
+      romaji: "quelque",
+      hiragana: "quelque",
+      meaning: "some / a bit of",
+      audio: {
+        daughter: "audio/quelque.wav",
+        me: "audio/quelque.wav"
+      }
+    },
+
+    {
+      romaji: "chose",
+      hiragana: "chose",
+      meaning: "thing",
+      audio: {
+        daughter: "audio/chose.wav",
+        me: "audio/chose.wav"
+      }
+    },
+
+    {
+      romaji: "je-mange-quelque-chose",
+      hiragana: "je-mange-quelque-chose",
+      meaning: "I am eating something",
+      audio: {
+        daughter: "audio/sentence1.wav",
+        me: "audio/sentence1.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 // ⭐ ADD THIS PATCH RIGHT HERE

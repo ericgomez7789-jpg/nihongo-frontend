@@ -1387,7 +1387,59 @@ me: "audio/spanish/silla.wav"
 
 
 
+{
+  id: "l1-es-27",
+  meaning: "I am going to eat something",
+  level: 1,
 
+  chunks: [
+    {
+      romaji: "yo",
+      hiragana: "yo",
+      meaning: "I",
+      audio: {
+        daughter: "audio/spanish/yo.wav",
+        me: "audio/spanish/yo.wav"
+      }
+    },
+    {
+      romaji: "voy",
+      hiragana: "voy",
+      meaning: "I go / I am going",
+      audio: {
+        daughter: "audio/spanish/voy.wav",
+        me: "audio/spanish/voy.wav"
+      }
+    },
+    {
+      romaji: "a",
+      hiragana: "a",
+      meaning: "to",
+      audio: {
+        daughter: "audio/spanish/a.wav",
+        me: "audio/spanish/a.wav"
+      }
+    },
+    {
+      romaji: "comer",
+      hiragana: "comer",
+      meaning: "to eat",
+      audio: {
+        daughter: "audio/spanish/comer.wav",
+        me: "audio/spanish/comer.wav"
+      }
+    },
+    {
+      romaji: "algo",
+      hiragana: "algo",
+      meaning: "something",
+      audio: {
+        daughter: "audio/spanish/algo.wav",
+        me: "audio/spanish/algo.wav"
+      }
+    }
+  ]
+},
 
 
 
@@ -2925,6 +2977,40 @@ daughter: "audio/spanish/conjunction10.wav"
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l2_016",
+  sentence: "El perro empezó a ladrar, entonces yo le dije que se callara.",
+  conjunction: "entonces",
+  meaning: "The dog started barking, so I told him to be quiet.",
+
+  fullAudio: "audio/spanish/conjunction16.wav",
+
+  chunks: [
+    {
+      audio: {
+        me: "audio/spanish/conjunction16.wav",
+        daughter: "audio/spanish/conjunction16.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
 
 
 
