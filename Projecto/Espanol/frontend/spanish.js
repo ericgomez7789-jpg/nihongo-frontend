@@ -6944,6 +6944,9 @@ const L6 = {
 LEVEL HANDLER (CLEAN, ISOLATED, ERROR‑FREE)
 -------------------------------------------------------------------*/
 
+
+/*
+
 document.addEventListener("DOMContentLoaded", () => {
 
   // ---------------------------------------------------------
@@ -7245,6 +7248,20 @@ document.querySelector('.levelBtn[data-level="6"]')
 
 });
 
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -7252,4 +7269,110 @@ document.querySelector('.levelBtn[data-level="6"]')
   
 
 
+document.addEventListener("DOMContentLoaded", () => {
+
+  // ---------------------------------------------------------
+  // TEST MODE FLAG
+  // ---------------------------------------------------------
+  const TESTING_MODE = true;
+
+
+  // ---------------------------------------------------------
+  // TEST MODE HANDLERS FOR SPANISH LEVELS 1–6
+  // ---------------------------------------------------------
+  if (TESTING_MODE) {
+
+    console.log("%cTEST MODE ENABLED — Spanish Levels 1–6 bypass gating",
+                "color: green; font-weight: bold;");
+
+    function launchSpanishLevel(levelNumber, startFn) {
+      console.log(`[TEST MODE] Launching Spanish Level ${levelNumber}`);
+
+      // Reset global state
+      window.currentLevel = levelNumber;
+      window.currentScreen = null;
+
+      // Hide all screens
+      document.querySelectorAll(".screen").forEach(s =>
+        s.classList.add("hidden")
+      );
+
+      // Special case: Spanish Level 6 uses wrapper + screen
+      if (levelNumber === 6) {
+        document.getElementById("level6Wrapper")?.classList.remove("hidden");
+        document.getElementById("level6Screen")?.classList.remove("hidden");
+        startFn();
+        return;
+      }
+
+      // Levels 1–5 use screen2L#
+      document.getElementById(`screen2L${levelNumber}`)?.classList.remove("hidden");
+
+      // Start engine
+      startFn();
+    }
+
+    // ---------------------------------------------------------
+    // LEVEL 1
+    // ---------------------------------------------------------
+    document.querySelector('.levelBtn[data-level="1"]')
+      ?.addEventListener("click", () => {
+        launchSpanishLevel(1, level1);
+      });
+
+    // ---------------------------------------------------------
+    // LEVEL 2
+    // ---------------------------------------------------------
+    document.querySelector('.levelBtn[data-level="2"]')
+      ?.addEventListener("click", () => {
+        launchSpanishLevel(2, L2.start);
+      });
+
+    // ---------------------------------------------------------
+    // LEVEL 3
+    // ---------------------------------------------------------
+    document.querySelector('.levelBtn[data-level="3"]')
+      ?.addEventListener("click", () => {
+        launchSpanishLevel(3, L3.start);
+      });
+
+    // ---------------------------------------------------------
+    // LEVEL 4
+    // ---------------------------------------------------------
+    document.getElementById("level4Btn")
+      ?.addEventListener("click", () => {
+        launchSpanishLevel(4, L4.start);
+      });
+
+    // ---------------------------------------------------------
+    // LEVEL 5
+    // ---------------------------------------------------------
+    // LEVEL 5 (SPANISH)
+document.getElementById("level5Btn")?.addEventListener("click", () => {
+  console.log("[TEST MODE] Launching Spanish Level 5");
+
+  window.currentLevel = 5;
+  window.currentScreen = null;
+
+  document.querySelectorAll(".screen").forEach(s => s.classList.add("hidden"));
+
+  // Correct Spanish DOM IDs
+  document.getElementById("level5Wrapper")?.classList.remove("hidden");
+  document.getElementById("level5Screen")?.classList.remove("hidden");
+
+  L5.start();
+});
+
+
+    // ---------------------------------------------------------
+    // LEVEL 6
+    // ---------------------------------------------------------
+    document.querySelector('.levelBtn[data-level="6"]')
+      ?.addEventListener("click", () => {
+        launchSpanishLevel(6, L6.start);
+      });
+
+  } // END TEST MODE
+
+}); // END DOMCONTENTLOADED
 

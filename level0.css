@@ -204,3 +204,25 @@
 .showKana .kana {
   opacity: 1;
 }
+
+/* -----------------------------------------
+   LEVEL 0 — RESET BUTTON (MOVE UNDER SCORE)
+----------------------------------------- */
+
+#L0resetBtn {
+  display: block;
+  margin: 12px auto 0;      /* center under score */
+  width: fit-content;
+  padding: 10px 22px;
+  font-size: 1.1rem;
+  background: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+#L0resetBtn:hover {
+  background: #c0392b;
+}

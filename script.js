@@ -44,46 +44,50 @@ window.GamepadControls = {
     document.body.appendChild(this.snapBox);
 
     /* ---------------------------------------------------------
-       iPHONE TAP-SELECT / TAP-DROP
+       AUTO-HIDE CURSOR IF LEVEL HAS NO TILES
     --------------------------------------------------------- */
+    if (this.tiles.length === 0) {
+      this.cursor.style.display = "none";
+      this.snapBox.style.display = "none";
+    }
+
     /* ---------------------------------------------------------
-   iPHONE TOUCH HANDLER (MERGED + CLEAN)
---------------------------------------------------------- */
-const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+       iPHONE TOUCH HANDLER
+    --------------------------------------------------------- */
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
 
-if (isIOS) {
-  const pickTile = (tile) => {
-    this.activeTile = tile;
-    tile.style.outline = "3px solid #ff9800";
-  };
+    if (isIOS) {
+      const pickTile = (tile) => {
+        this.activeTile = tile;
+        tile.style.outline = "3px solid #ff9800";
+      };
 
-  const dropTile = (zone) => {
-    if (!this.activeTile) return;
+      const dropTile = (zone) => {
+        if (!this.activeTile) return;
 
-    zone.textContent = this.activeTile.textContent;
-    zone.classList.add("correct");
+        zone.textContent = this.activeTile.textContent;
+        zone.classList.add("correct");
 
-    this.activeTile.style.outline = "";
-    this.activeTile = null;
+        this.activeTile.style.outline = "";
+        this.activeTile = null;
 
-    L0.checkCompletion();
-  };
+        L0.checkCompletion();
+      };
 
-  this.tiles.forEach(tile => {
-    tile.addEventListener("touchstart", (e) => {
-      e.preventDefault();
-      pickTile(tile);
-    });
-  });
+      this.tiles.forEach(tile => {
+        tile.addEventListener("touchstart", (e) => {
+          e.preventDefault();
+          pickTile(tile);
+        });
+      });
 
-  this.dropZones.forEach(zone => {
-    zone.addEventListener("touchend", (e) => {
-      e.preventDefault();
-      dropTile(zone);
-    });
-  });
-}
-
+      this.dropZones.forEach(zone => {
+        zone.addEventListener("touchend", (e) => {
+          e.preventDefault();
+          dropTile(zone);
+        });
+      });
+    }
 
     /* ---------------------------------------------------------
        START GAMEPAD LOOP
@@ -262,7 +266,6 @@ if (isIOS) {
 };
 
 window.GamepadControls.init();
-
 
 
 
@@ -609,9 +612,10 @@ L0.Reset = {
       btn.textContent = "Reset Level 0";
 
       btn.style.position = "absolute";
-      btn.style.top = "10px";
-      btn.style.right = "10px";
-      btn.style.zIndex = "9999";
+btn.style.top = "70px";      // lower it under the score
+btn.style.left = "10px";     // move to left side
+btn.style.right = "";        // remove right alignment
+
 
       screenEl.appendChild(btn);
     }
@@ -5922,9 +5926,9 @@ L1.Reset = {
       btn.textContent = "Reset Level";
 
       btn.style.position = "absolute";
-      btn.style.top = "10px";
-      btn.style.right = "10px";
-      btn.style.zIndex = "9999";
+btn.style.top = "60px";      // lower it under the score
+btn.style.left = "10px";     // move to left side
+btn.style.right = "";        // remove right alignment
 
       screenEl.appendChild(btn);
     }
@@ -13563,9 +13567,10 @@ L2.Reset = {
       btn.textContent = "Reset Level 2";
 
       btn.style.position = "absolute";
-      btn.style.top = "10px";
-      btn.style.right = "10px";
-      btn.style.zIndex = "9999";
+btn.style.top = "70px";      // lower it under the score
+btn.style.left = "10px";     // move to left side
+btn.style.right = "";        // remove right alignment
+
 
       screenEl.appendChild(btn);
     }
@@ -20101,9 +20106,10 @@ L3.Reset = {
       btn.textContent = "Reset Level 3";
 
       btn.style.position = "absolute";
-      btn.style.top = "10px";
-      btn.style.right = "10px";
-      btn.style.zIndex = "9999";
+btn.style.top = "70px";      // lower it under the score
+btn.style.left = "10px";     // move to left side
+btn.style.right = "";        // remove right alignment
+
 
       screenEl.appendChild(btn);
     }
@@ -24176,9 +24182,9 @@ L4.Reset = {
       btn.textContent = "Reset Level 4";
 
       btn.style.position = "absolute";
-      btn.style.top = "10px";
-      btn.style.right = "10px";
-      btn.style.zIndex = "9999";
+btn.style.top = "70px";      // lower it under the score
+btn.style.left = "10px";     // move to left side
+btn.style.right = "";        // remove right alignment
 
       screenEl.appendChild(btn);
     }
@@ -26604,9 +26610,10 @@ L5.Reset = {
       btn.textContent = "Reset Level 5";
 
       btn.style.position = "absolute";
-      btn.style.top = "10px";
-      btn.style.right = "10px";
-      btn.style.zIndex = "9999";
+btn.style.top = "70px";      // lower it under the score
+btn.style.left = "10px";     // move to left side
+btn.style.right = "";        // remove right alignment
+
 
       screenEl.appendChild(btn);
     }
@@ -30550,9 +30557,10 @@ L6.Reset = {
       btn.textContent = "Reset Level 6";
 
       btn.style.position = "absolute";
-      btn.style.top = "10px";
-      btn.style.right = "10px";
-      btn.style.zIndex = "9999";
+btn.style.top = "40px";      // lower it under the score
+btn.style.left = "10px";     // move to left side
+btn.style.right = "";        // remove right alignment
+
 
       screenEl.appendChild(btn);
     }
@@ -32526,9 +32534,10 @@ L7.Reset = {
       btn.textContent = "Reset Level 7";
 
       btn.style.position = "absolute";
-      btn.style.top = "10px";
-      btn.style.right = "10px";
-      btn.style.zIndex = "9999";
+btn.style.top = "60px";      // lower it under the score
+btn.style.left = "10px";     // move to left side
+btn.style.right = "";        // remove right alignment
+
 
       screenEl.appendChild(btn);
     }
@@ -34406,9 +34415,10 @@ L8.Reset = {
       btn.textContent = "Reset Level 8";
 
       btn.style.position = "absolute";
-      btn.style.top = "60px";
-      btn.style.right = "10px";
-      btn.style.zIndex = "9999";
+btn.style.top = "70px";      // lower it under the score
+btn.style.left = "10px";     // move to left side
+btn.style.right = "";        // remove right alignment
+
 
       screenEl.appendChild(btn);
     }
@@ -36073,9 +36083,10 @@ L9.Reset = {
       btn.textContent = "Reset Level 9";
 
       btn.style.position = "absolute";
-      btn.style.top = "60px";
-      btn.style.right = "10px";
-      btn.style.zIndex = "9999";
+btn.style.top = "70px";      // lower it under the score
+btn.style.left = "10px";     // move to left side
+btn.style.right = "";        // remove right alignment
+
 
       screenEl.appendChild(btn);
     }
@@ -38207,9 +38218,9 @@ L10.Reset = {
       btn.textContent = "Reset Level 10";
 
       btn.style.position = "absolute";
-      btn.style.top = "60px";
-      btn.style.right = "10px";
-      btn.style.zIndex = "9999";
+btn.style.top = "70px";      // lower it under the score
+btn.style.left = "10px";     // move to left side
+btn.style.right = "";        // remove right alignment
 
       screenEl.appendChild(btn);
     }
@@ -42087,7 +42098,11 @@ LEVEL HANDLER (CLEAN, ISOLATED, ERROR‑FREE)
 LEVEL HANDLER (CLEAN, ISOLATED, ERROR‑FREE)
 -------------------------------------------------------------------*/
 
+/*
+
 document.addEventListener("DOMContentLoaded", () => {
+
+  
 
   // ---------------------------------------------------------
   // UNIVERSAL LEVEL LAUNCHER (Levels 1–10 only)
@@ -42100,6 +42115,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById(`screen2L${levelNumber}`)?.classList.remove("hidden");
     startFn();
   }
+
 
 
 
@@ -42820,3 +42836,157 @@ document.querySelector('.levelBtn[data-level="0"]')
   }
 
 });
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  // ---------------------------------------------------------
+  // TEST MODE FLAG
+  // ---------------------------------------------------------
+  const TESTING_MODE = true;
+
+
+  // ---------------------------------------------------------
+  // TEST MODE HANDLERS FOR LEVELS 0–12
+  // ---------------------------------------------------------
+  if (TESTING_MODE) {
+
+    console.log("%cTEST MODE ENABLED — Levels 0–12 bypass gating",
+                "color: green; font-weight: bold;");
+
+    function launchTestLevel(levelNumber, startFn) {
+      console.log(`[TEST MODE] Launching Level ${levelNumber}`);
+
+      // Reset global state so Level 0 doesn't crash
+      window.currentLevel = levelNumber;
+      window.currentScreen = null;
+
+      // Hide all screens
+      document.querySelectorAll(".screen").forEach(s =>
+        s.classList.add("hidden")
+      );
+
+      // Special case: Level 0 uses different DOM structure
+      if (levelNumber === 0) {
+        document.getElementById("level0Wrapper")?.classList.remove("hidden");
+        document.getElementById("screen1L0")?.classList.remove("hidden");
+        startFn();
+        return;
+      }
+
+      // Show correct level screen
+      document.getElementById(`screen2L${levelNumber}`)?.classList.remove("hidden");
+
+      // Start engine
+      startFn();
+    }
+
+    // LEVEL 0
+    document.querySelector('.levelBtn[data-level="0"]')
+      ?.addEventListener("click", () => {
+        launchTestLevel(0, L0.start);
+      });
+
+    // LEVEL 1
+    document.querySelector('.levelBtn[data-level="1"]')
+      ?.addEventListener("click", () => {
+        launchTestLevel(1, level1);
+      });
+
+    // LEVEL 2
+    document.querySelector('.levelBtn[data-level="2"]')
+      ?.addEventListener("click", () => {
+        launchTestLevel(2, L2.start);
+      });
+
+    // LEVEL 3
+    document.querySelector('.levelBtn[data-level="3"]')
+      ?.addEventListener("click", () => {
+        launchTestLevel(3, L3.start);
+      });
+
+    // LEVEL 4
+    document.getElementById("level4Btn")?.addEventListener("click", () => {
+      launchTestLevel(4, L4.start);
+    });
+
+    // LEVEL 5
+    document.getElementById("level5Btn")?.addEventListener("click", () => {
+      launchTestLevel(5, L5.start);
+    });
+
+    // LEVEL 6
+    document.getElementById("level6Btn")?.addEventListener("click", () => {
+      launchTestLevel(6, L6.start);
+    });
+
+    // LEVEL 7
+    document.getElementById("level7Btn")?.addEventListener("click", () => {
+      launchTestLevel(7, L7.start);
+    });
+
+    // LEVEL 8
+    document.getElementById("level8Btn")?.addEventListener("click", () => {
+      launchTestLevel(8, L8.start);
+    });
+
+    // LEVEL 9
+    document.getElementById("level9Btn")?.addEventListener("click", () => {
+      launchTestLevel(9, L9.start);
+    });
+
+    // LEVEL 10
+    document.getElementById("level10Btn")?.addEventListener("click", () => {
+      launchTestLevel(10, L10.start);
+    });
+
+    // LEVEL 11
+    document.getElementById("level11Btn")?.addEventListener("click", () => {
+      console.log("[TEST MODE] Launching Level 11");
+
+      window.currentLevel = 11;
+      window.currentScreen = null;
+
+      document.querySelectorAll(".screen").forEach(s => s.classList.add("hidden"));
+
+      document.getElementById("level11Screen")?.classList.remove("hidden");
+
+      startLevel11(defaultScenario);
+    });
+
+    // LEVEL 12
+    document.getElementById("level12Btn")?.addEventListener("click", () => {
+      console.log("[TEST MODE] Launching Level 12");
+
+      window.currentLevel = 12;
+      window.currentScreen = null;
+
+      document.querySelectorAll(".screen").forEach(s => s.classList.add("hidden"));
+
+      document.getElementById("level12Screen")?.classList.remove("hidden");
+
+      startLevel12();
+    });
+
+  } // ← CLOSES if (TESTING_MODE)
+
+}); // ← CLOSES DOMContentLoaded
