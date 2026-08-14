@@ -2723,6 +2723,73 @@ me: "audio/se_tacher.wav"
 
 
 
+
+{
+  id: "l1-fr-44",
+  meaning: "who drinks the milk",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "qui",
+      hiragana: "qui",
+      meaning: "who",
+      audio: {
+        daughter: "audio/qui.wav",
+        me: "audio/qui.wav"
+      }
+    },
+
+    {
+      romaji: "boit",
+      hiragana: "boit",
+      meaning: "drinks / is drinking",
+      audio: {
+        daughter: "audio/boit.wav",
+        me: "audio/boit.wav"
+      }
+    },
+
+    {
+      romaji: "le",
+      hiragana: "le",
+      meaning: "the (masculine)",
+      audio: {
+        daughter: "audio/le.wav",
+        me: "audio/le.wav"
+      }
+    },
+
+    {
+      romaji: "lait",
+      hiragana: "lait",
+      meaning: "milk",
+      audio: {
+        daughter: "audio/lait.wav",
+        me: "audio/lait.wav"
+      }
+    },
+
+    {
+      romaji: "qui-boit-le-lait",
+      hiragana: "qui-boit-le-lait",
+      meaning: "who drinks the milk",
+      audio: {
+        daughter: "audio/sentence2.wav",
+        me: "audio/sentence2.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
 ];
 
 // ⭐ ADD THIS PATCH RIGHT HERE

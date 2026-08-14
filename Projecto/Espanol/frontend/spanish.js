@@ -1452,6 +1452,62 @@ me: "audio/spanish/silla.wav"
 
 
 
+{
+  id: "l1-es-28",
+  meaning: "who drinks the milk",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "quien",
+      hiragana: "quien",
+      meaning: "who",
+      audio: {
+        daughter: "audio/spanish/quien.wav",
+        me: "audio/spanish/quien.wav"
+      }
+    },
+
+    {
+      romaji: "toma",
+      hiragana: "toma",
+      meaning: "drinks / takes",
+      audio: {
+        daughter: "audio/spanish/toma.wav",
+        me: "audio/spanish/toma.wav"
+      }
+    },
+
+    {
+      romaji: "la",
+      hiragana: "la",
+      meaning: "the (feminine)",
+      audio: {
+        daughter: "audio/spanish/la.wav",
+        me: "audio/spanish/la.wav"
+      }
+    },
+
+    {
+      romaji: "leche",
+      hiragana: "leche",
+      meaning: "milk",
+      audio: {
+        daughter: "audio/spanish/leche.wav",
+        me: "audio/spanish/leche.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
 
 
 ];
@@ -3006,6 +3062,37 @@ daughter: "audio/spanish/conjunction10.wav"
   ]
 },
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l2_017",
+  sentence: "El día fue largo, pero logré superarlo.",
+  conjunction: "pero",
+  meaning: "The day was long, but I managed to overcome it.",
+
+  fullAudio: "audio/spanish/conjunction17.wav",
+
+  chunks: [
+    {
+      audio: {
+        me: "audio/spanish/conjunction17.wav",
+        daughter: "audio/spanish/conjunction17.wav"
+      }
+    }
+  ]
+},
 
 
 
