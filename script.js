@@ -2729,6 +2729,14 @@ const sentences = [
 },
 
 
+
+
+
+
+
+
+
+
 {
    id: "l1-31",
   meaning: "Commit a crime",
@@ -2763,6 +2771,17 @@ const sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
 {
    id: "l1-32",
   meaning: "The boat sinks.",
@@ -2797,6 +2816,14 @@ const sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
 {
    id: "l1-33",
   meaning: "The car crashes.",
@@ -2831,6 +2858,18 @@ const sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
 {
    id: "l1-34",
   meaning: "To get in a habit of.",
@@ -2865,6 +2904,16 @@ const sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
 {
    id: "l1-35",
   meaning: "Interrupt",
@@ -2899,6 +2948,17 @@ const sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
 {
    id: "l1-36",
   meaning: "answer the phone",
@@ -2922,6 +2982,18 @@ const sentences = [
         me: "audio/sentences/ni.wav"
       }
     },
+
+
+
+
+
+
+
+
+
+
+
+
     {
       romaji: "deru",
       hiragana: "でる",
@@ -2933,6 +3005,16 @@ const sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
 {
    id: "l1-37",
   meaning: "Call someone",
@@ -2967,6 +3049,18 @@ const sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
 {
    id: "l1-38",
   meaning: "Hang up the phone",

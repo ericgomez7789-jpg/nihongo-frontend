@@ -1510,6 +1510,66 @@ me: "audio/spanish/silla.wav"
 
 
 
+
+{
+  id: "l1-es-29",
+  meaning: "how do I say it",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "como",
+      hiragana: "como",
+      meaning: "how",
+      audio: {
+        daughter: "audio/spanish/como.wav",
+        me: "audio/spanish/como.wav"
+      }
+    },
+
+    {
+      romaji: "lo",
+      hiragana: "lo",
+      meaning: "it",
+      audio: {
+        daughter: "audio/spanish/lo.wav",
+        me: "audio/spanish/lo.wav"
+      }
+    },
+
+    {
+      romaji: "digo",
+      hiragana: "digo",
+      meaning: "I say",
+      audio: {
+        daughter: "audio/spanish/digo.wav",
+        me: "audio/spanish/digo.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 // ⭐ ADD THIS PATCH RIGHT HERE
@@ -2922,12 +2982,10 @@ daughter: "audio/spanish/conjunction10.wav"
 
 
 
-
-
 {
   id: "l2_012",
-  sentence: "Me gusta más la carne que el pescado.",
-  conjunction: "que",
+  sentence: "Me gusta la carne más que el pescado.",
+  conjunction: "más que",
   meaning: "I like meat more than fish.",
 
   fullAudio: "audio/spanish/conjunction12.wav",
@@ -2941,6 +2999,7 @@ daughter: "audio/spanish/conjunction10.wav"
     }
   ]
 },
+
 
 
 
@@ -3095,6 +3154,38 @@ daughter: "audio/spanish/conjunction10.wav"
 },
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l2_018",
+  sentence: "Me gusta el invierno más que el verano.",
+  conjunction: "más que",
+  meaning: "I like winter more than summer.",
+
+  fullAudio: "audio/spanish/conjunction18.wav",
+
+  chunks: [
+    {
+      audio: {
+        me: "audio/spanish/conjunction18.wav",
+        daughter: "audio/spanish/conjunction18.wav"
+      }
+    }
+  ]
+},
 
 
 
