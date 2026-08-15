@@ -2790,6 +2790,70 @@ me: "audio/se_tacher.wav"
 
 
 
+
+
+
+
+{
+  id: "l1-fr-45",
+  meaning: "how to say it",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "comment",
+      hiragana: "comment",
+      meaning: "how",
+      audio: {
+        daughter: "audio/comment.wav",
+        me: "audio/comment.wav"
+      }
+    },
+
+    {
+      romaji: "le",
+      hiragana: "le",
+      meaning: "it",
+      audio: {
+        daughter: "audio/le.wav",
+        me: "audio/le.wav"
+      }
+    },
+
+    {
+      romaji: "dire",
+      hiragana: "dire",
+      meaning: "to say",
+      audio: {
+        daughter: "audio/dire.wav",
+        me: "audio/dire.wav"
+      }
+    },
+
+    {
+      romaji: "comment-le-dire",
+      hiragana: "comment-le-dire",
+      meaning: "how to say it",
+      audio: {
+        daughter: "audio/sentence3.wav",
+        me: "audio/sentence3.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 // ⭐ ADD THIS PATCH RIGHT HERE

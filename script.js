@@ -2982,18 +2982,6 @@ const sentences = [
         me: "audio/sentences/ni.wav"
       }
     },
-
-
-
-
-
-
-
-
-
-
-
-
     {
       romaji: "deru",
       hiragana: "でる",
@@ -3017,7 +3005,7 @@ const sentences = [
 
 {
    id: "l1-37",
-  meaning: "Call someone",
+  meaning: "Make a call",
   level: 1,
   chunks: [
     {
