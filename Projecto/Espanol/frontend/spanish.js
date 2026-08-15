@@ -3213,13 +3213,13 @@ document.getElementById("l2HomeBtn")?.addEventListener("click", () => {
 });
 
 
-L2.playNaturalSentence = function (callback) {
+L2.playNaturalSentence = function () {
   const s = L2.getCurrentSentence();
   console.log("[Level2] playNaturalSentence() sentence:", s);
 
   if (!s || !s.fullAudio) {
-    console.log("[Level2] No fullAudio, calling callback immediately");
-    if (typeof callback === "function") callback();
+    console.log("[Level2] No fullAudio → going to screen2");
+    L2.screen2();
     return;
   }
 
@@ -3227,22 +3227,24 @@ L2.playNaturalSentence = function (callback) {
   L2.audio.current = audio;
 
   audio.onended = () => {
-    console.log("[Level2] audio ended");
-    if (typeof callback === "function") callback();
+    console.log("[Level2] audio ended → FORCE screen2");
+    L2.screen2();
   };
 
   audio.onerror = (e) => {
     console.log("[Level2] audio error", e);
-    if (typeof callback === "function") callback();
+    L2.screen2();
   };
 
-  audio.play().then(() => {
-    console.log("[Level2] audio playing:", s.fullAudio);
-  }).catch(err => {
-    console.log("[Level2] audio play() failed:", err);
-    if (typeof callback === "function") callback();
-  });
+  audio.play()
+    .then(() => console.log("[Level2] audio playing:", s.fullAudio))
+    .catch(err => {
+      console.log("[Level2] audio play() failed:", err);
+      L2.screen2();
+    });
 };
+
+
 
 
 
@@ -3317,23 +3319,20 @@ L2.startRound = function () {
 L2.screen1 = function () {
   console.log("[Level2] screen1()");
 
+  window.currentLevel = 2;
+  window.currentScreen = "level2Screen1";
+
   const replayBtn = document.getElementById("l2ReplaySentenceBtn");
   if (replayBtn) replayBtn.style.display = "none";
 
-  if (typeof L2.stopAllAudio === "function") {
-    L2.stopAllAudio();
-  }
+  L2.stopAllAudio();
+  L2.audio.cancelToken.cancel = false;
+  L2.audio.generation++;
+  L2.audio.current = null;
 
-  if (L2.audio && L2.audio.cancelToken) {
-    L2.audio.cancelToken.cancel = false;
-  }
-
-  if (L2.audio) {
-    L2.audio.generation++;
-    L2.audio.current = null;
-  }
-
-  const sentence = L2.dataset[Math.floor(Math.random() * L2.dataset.length)];
+  // IMPORTANT: use the sentence already chosen in startRound
+  // Do NOT re-randomize here
+  const sentence = L2.getCurrentSentence();
   L2.currentSentence = sentence;
 
   L2.show("level2Screen1");
@@ -3347,24 +3346,11 @@ L2.screen1 = function () {
     L2.renderProgress("level2Screen1");
   }
 
-  L2.playNaturalSentence(() => {
-
-    // Guards
-    if (window.currentScreen !== "level2Screen1") return;
-    if (window.currentLevel !== 2) return;
-
-    // ⭐ Give time to hear the audio
-    // Use a longer delay — 1500ms is a good starting point
-    setTimeout(() => {
-
-      if (window.currentScreen !== "level2Screen1") return;
-      if (window.currentLevel !== 2) return;
-
-      L2.screen2();
-
-    }, 1500); // ← increase this to give more time
-  });
+  L2.playNaturalSentence();
 };
+
+
+
 
 
 
@@ -7335,8 +7321,8 @@ document.querySelector('.levelBtn[data-level="6"]')
 
 });
 
-*/
 
+*/
 
 
 
@@ -7384,7 +7370,9 @@ document.addEventListener("DOMContentLoaded", () => {
         s.classList.add("hidden")
       );
 
-      // Special case: Spanish Level 6 uses wrapper + screen
+      // -----------------------------------------------------
+      // LEVEL 6 — special wrapper + screen
+      // -----------------------------------------------------
       if (levelNumber === 6) {
         document.getElementById("level6Wrapper")?.classList.remove("hidden");
         document.getElementById("level6Screen")?.classList.remove("hidden");
@@ -7392,8 +7380,17 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      // Levels 1–5 use screen2L#
+      // -----------------------------------------------------
+      // LEVELS 1–5 — use screen2L#
+      // -----------------------------------------------------
       document.getElementById(`screen2L${levelNumber}`)?.classList.remove("hidden");
+
+      // -----------------------------------------------------
+      // ⭐ LEVEL 2 FIX — unhide Level‑2 wrapper
+      // -----------------------------------------------------
+      if (levelNumber === 2) {
+        document.getElementById("level2Wrapper")?.classList.remove("hidden");
+      }
 
       // Start engine
       startFn();
@@ -7432,24 +7429,21 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
     // ---------------------------------------------------------
-    // LEVEL 5
-    // ---------------------------------------------------------
     // LEVEL 5 (SPANISH)
-document.getElementById("level5Btn")?.addEventListener("click", () => {
-  console.log("[TEST MODE] Launching Spanish Level 5");
+    // ---------------------------------------------------------
+    document.getElementById("level5Btn")?.addEventListener("click", () => {
+      console.log("[TEST MODE] Launching Spanish Level 5");
 
-  window.currentLevel = 5;
-  window.currentScreen = null;
+      window.currentLevel = 5;
+      window.currentScreen = null;
 
-  document.querySelectorAll(".screen").forEach(s => s.classList.add("hidden"));
+      document.querySelectorAll(".screen").forEach(s => s.classList.add("hidden"));
 
-  // Correct Spanish DOM IDs
-  document.getElementById("level5Wrapper")?.classList.remove("hidden");
-  document.getElementById("level5Screen")?.classList.remove("hidden");
+      document.getElementById("level5Wrapper")?.classList.remove("hidden");
+      document.getElementById("level5Screen")?.classList.remove("hidden");
 
-  L5.start();
-});
-
+      L5.start();
+    });
 
     // ---------------------------------------------------------
     // LEVEL 6
