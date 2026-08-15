@@ -1906,10 +1906,10 @@ L1.Reset = {
       btn.className = "resetBtn";
       btn.textContent = "Reset Level";
 
-      btn.style.position = "absolute";
-      btn.style.top = "10px";
-      btn.style.right = "10px";
-      btn.style.zIndex = "9999";
+       btn.style.position = "absolute";
+btn.style.top = "70px";      // lower it under the score
+btn.style.left = "10px";     // move to left side
+btn.style.right = "";        // remove right alignment
 
       screenEl.appendChild(btn);
     }
@@ -3597,9 +3597,9 @@ L2.Reset = {
       btn.textContent = "Reset Level 2";
 
       btn.style.position = "absolute";
-      btn.style.top = "10px";
-      btn.style.right = "10px";
-      btn.style.zIndex = "9999";
+btn.style.top = "70px";      // lower it under the score
+btn.style.left = "10px";     // move to left side
+btn.style.right = "";        // remove right alignment
 
       screenEl.appendChild(btn);
     }
@@ -3996,10 +3996,10 @@ L3.Reset = {
       btn.className = "resetBtn";
       btn.textContent = "Reset Level 3";
 
-      btn.style.position = "absolute";
-      btn.style.top = "10px";
-      btn.style.right = "10px";
-      btn.style.zIndex = "9999";
+       btn.style.position = "absolute";
+btn.style.top = "70px";      // lower it under the score
+btn.style.left = "10px";     // move to left side
+btn.style.right = "";        // remove right alignment
 
       screenEl.appendChild(btn);
     }
@@ -4605,10 +4605,10 @@ L4.Reset = {
       btn.className = "resetBtn";
       btn.textContent = "Reset Level 4";
 
-      btn.style.position = "absolute";
-      btn.style.top = "10px";
-      btn.style.right = "10px";
-      btn.style.zIndex = "9999";
+       btn.style.position = "absolute";
+btn.style.top = "70px";      // lower it under the score
+btn.style.left = "10px";     // move to left side
+btn.style.right = "";        // remove right alignment
 
       screenEl.appendChild(btn);
     }

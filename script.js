@@ -13566,7 +13566,7 @@ L2.Reset = {
       btn.className = "resetBtn";
       btn.textContent = "Reset Level 2";
 
-      btn.style.position = "absolute";
+       btn.style.position = "absolute";
 btn.style.top = "70px";      // lower it under the score
 btn.style.left = "10px";     // move to left side
 btn.style.right = "";        // remove right alignment
