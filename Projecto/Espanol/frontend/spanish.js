@@ -1570,6 +1570,17 @@ me: "audio/spanish/silla.wav"
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 // ⭐ ADD THIS PATCH RIGHT HERE
@@ -7103,11 +7114,9 @@ const L6 = {
 
 
 
-
 /*----------------------------------------------------------------
-LEVEL HANDLER (CLEAN, ISOLATED, ERROR‑FREE)
+LEVEL HANDLER (CLEAN, MERGED, ERROR‑FREE)
 -------------------------------------------------------------------*/
-
 
 /*
 
@@ -7117,11 +7126,27 @@ document.addEventListener("DOMContentLoaded", () => {
   // UNIVERSAL LEVEL LAUNCHER (Levels 1–10 only)
   // ---------------------------------------------------------
   function launchLevel(levelNumber, startFn) {
+
+    // Hide all screens
     document.querySelectorAll(".screen").forEach(s =>
       s.classList.add("hidden")
     );
 
-    document.getElementById(`screen2L${levelNumber}`)?.classList.remove("hidden");
+    // ⭐ LEVEL 2 WRAPPER LOGIC (merged cleanly)
+    const level2Wrapper = document.getElementById("level2Wrapper");
+    if (level2Wrapper) {
+      if (levelNumber === 2) {
+        level2Wrapper.classList.remove("hidden");
+      } else {
+        level2Wrapper.classList.add("hidden");
+      }
+    }
+
+    // Show correct screen for Level 1–10
+    document.getElementById(`screen2L${levelNumber}`)
+      ?.classList.remove("hidden");
+
+    // Start engine
     startFn();
   }
 
@@ -7129,47 +7154,35 @@ document.addEventListener("DOMContentLoaded", () => {
   // LEVEL 1
   // ---------------------------------------------------------
   document.querySelector('.levelBtn[data-level="1"]')
-  ?.addEventListener("click", () => {
- if (window.currentScreen && window.currentScreen !== "screen0") return;
+    ?.addEventListener("click", () => {
 
+      if (window.currentScreen && window.currentScreen !== "screen0") return;
+      if (window.currentLevel !== 0) return;
 
+      window.currentLevel = 1;
+      console.log("[Level 1] Isolated handler fired");
 
-
-    if (window.currentLevel !== 0) return;   // ⭐ Only allow Level 1 when selecting from screen0
-
-    window.currentLevel = 1;
-    console.log("[Level 1] Isolated handler fired");
-    launchLevel(1, level1);
-  });
-
-
-
+      launchLevel(1, level1);
+    });
 
   // ---------------------------------------------------------
-  // LEVEL 2
+  // LEVEL 2 (REWRITTEN + MERGED)
   // ---------------------------------------------------------
   document.querySelector('.levelBtn[data-level="2"]')
-  ?.addEventListener("click", () => {
+    ?.addEventListener("click", () => {
 
-    if (window.currentScreen && window.currentScreen !== "screen0") return;
-    if (window.currentLevel !== 0) return;
+      if (window.currentScreen && window.currentScreen !== "screen0") return;
+      if (window.currentLevel !== 0) return;
 
-    window.currentLevel = 2;
+      window.currentLevel = 2;
 
-    // ⭐ FIX: mark screen BEFORE launching Level‑2
-    window.currentScreen = "level2Screen1";
+      // ⭐ Mark screen BEFORE launching Level‑2
+      window.currentScreen = "level2Screen1";
 
-    console.log("[Level 2] Isolated handler fired");
-    launchLevel(2, L2.start);
-  });
+      console.log("[Level 2] Isolated handler fired");
 
-
-
-
-
-
-
-
+      launchLevel(2, L2.start);
+    });
 
   // ---------------------------------------------------------
   // LEVEL 3
@@ -7180,25 +7193,73 @@ document.addEventListener("DOMContentLoaded", () => {
       launchLevel(3, L3.start);
     });
 
+  // ---------------------------------------------------------
+  // LEVEL 4 (unchanged)
+  // ---------------------------------------------------------
+  const level4Btn = document.getElementById("level4Btn");
 
+  if (!level4Btn) {
+    console.error("Level 4 button not found in DOM");
+  } else {
+    level4Btn.addEventListener("click", async () => {
+      console.log("[Level 4] Gated handler fired");
 
+      if (typeof sb === "undefined") {
+        console.error("Supabase client (sb) is not defined.");
+        alert("Internal error: membership system unavailable.");
+        return;
+      }
 
+      let user = window.currentUser;
 
+      if (!user) {
+        const { data: authUser } = await sb.auth.getUser();
+        if (authUser?.user) user = authUser.user;
+      }
 
+      if (!user) {
+        window.location.href = "../../../blog-podcast.html";
+        return;
+      }
 
+      const { data, error } = await sb
+        .from("profiles")
+        .select("membership_status, membership_plan")
+        .eq("email", user.email)
+        .maybeSingle();
 
+      if (error) {
+        console.error("Membership query error:", error);
+        alert("Membership check failed. Please try again.");
+        return;
+      }
 
+      const status = data?.membership_status;
+      const plan = data?.membership_plan;
 
+      const allowed = ["basic-monthly", "basic-yearly", "lifetime"];
 
-const level4Btn = document.getElementById("level4Btn");
+      if (!(status === "active" && allowed.includes(plan))) {
+        alert("Level 4 requires an active Basic or Lifetime subscription.");
+        window.location.href = "membership.html";
+        return;
+      }
 
-if (!level4Btn) {
-  console.error("Level 4 button not found in DOM");
-} else {
-  level4Btn.addEventListener("click", async () => {
-    console.log("[Level 4] Gated handler fired");
+      document.querySelectorAll(".screen").forEach(s => s.classList.add("hidden"));
 
-    // ⭐ Prevent crash: sb must exist
+      const wrapper = document.getElementById("level4Wrapper");
+      if (wrapper) wrapper.classList.remove("hidden");
+
+      L4.start();
+    });
+  }
+
+  // ---------------------------------------------------------
+  // LEVEL 5 (unchanged)
+  // ---------------------------------------------------------
+  level5Btn.addEventListener("click", async () => {
+    console.log("[Level 5] Gated handler fired");
+
     if (typeof sb === "undefined") {
       console.error("Supabase client (sb) is not defined.");
       alert("Internal error: membership system unavailable.");
@@ -7207,19 +7268,16 @@ if (!level4Btn) {
 
     let user = window.currentUser;
 
-    // Recover user if window.currentUser is null
     if (!user) {
       const { data: authUser } = await sb.auth.getUser();
       if (authUser?.user) user = authUser.user;
     }
 
-    // If STILL no user → redirect
     if (!user) {
       window.location.href = "../../../blog-podcast.html";
       return;
     }
 
-    // Membership check
     const { data, error } = await sb
       .from("profiles")
       .select("membership_status, membership_plan")
@@ -7238,182 +7296,42 @@ if (!level4Btn) {
     const allowed = ["basic-monthly", "basic-yearly", "lifetime"];
 
     if (!(status === "active" && allowed.includes(plan))) {
-      alert("Level 4 requires an active Basic or Lifetime subscription.");
+      alert("Level 5 requires an active Basic or Lifetime subscription.");
       window.location.href = "membership.html";
       return;
     }
 
-    // ⭐ Your original ungated UX flow (unchanged)
+    console.log("[Level 5] Ungated handler fired");
+
     document.querySelectorAll(".screen").forEach(s => s.classList.add("hidden"));
 
-    const wrapper = document.getElementById("level4Wrapper");
-    if (wrapper) wrapper.classList.remove("hidden");
+    document.getElementById("level5Wrapper")?.classList.remove("hidden");
+    document.getElementById("level5Screen")?.classList.remove("hidden");
 
-    L4.start();
-  });
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  // ---------------------------------------------------------
-  // LEVEL 5
-  // ---------------------------------------------------------
-  // ---------------------------------------------------------
-// LEVEL 5 (GATED: BASIC OR PREMIUM, ISOLATED, CLEAN)
-// ---------------------------------------------------------
-// ---------------------------------------------------------
-// LEVEL 5 (GATED: BASIC OR PREMIUM)
-// ---------------------------------------------------------
-level5Btn.addEventListener("click", async () => {
-  console.log("[Level 5] Gated handler fired");
-
-  // ⭐ Prevent crash: sb must exist (same as Level 4)
-  if (typeof sb === "undefined") {
-    console.error("Supabase client (sb) is not defined.");
-    alert("Internal error: membership system unavailable.");
-    return;
-  }
-
-  // ⭐ Require login
-  let user = window.currentUser;
-
-  if (!user) {
-    // Try restoring session (same fix used for Level 4)
-    const { data: authUser } = await sb.auth.getUser();
-    if (authUser?.user) user = authUser.user;
-  }
-
-  if (!user) {
-    window.location.href = "../../../blog-podcast.html";
-    return;
-  }
-
-  // ⭐ Check membership in Supabase
-  const { data, error } = await sb
-    .from("profiles")
-    .select("membership_status, membership_plan")
-    .eq("email", user.email)
-    .maybeSingle();
-
-  if (error) {
-    console.error("Membership query error:", error);
-    alert("Membership check failed. Please try again.");
-    return;
-  }
-
-  const status = data?.membership_status;
-  const plan = data?.membership_plan;
-
-  // ⭐ Allowed plans (same as Level 4 Spanish)
-  const allowed = ["basic-monthly", "basic-yearly", "lifetime"];
-
-  if (!(status === "active" && allowed.includes(plan))) {
-    alert("Level 5 requires an active Basic or Lifetime subscription.");
-    window.location.href = "membership.html";
-    return;
-  }
-
-  // ⭐⭐⭐ YOUR ORIGINAL UNGATED LOGIC (unchanged)
-  console.log("[Level 5] Ungated handler fired");
-
-  // Hide all screens
-  document.querySelectorAll(".screen").forEach(s => s.classList.add("hidden"));
-
-  // Show Level 5 wrapper
-  document.getElementById("level5Wrapper")?.classList.remove("hidden");
-
-  // ⭐ Show Level 5 screen
-  document.getElementById("level5Screen")?.classList.remove("hidden");
-
-  // Start Level 5
-  L5.start();
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// ---------------------------------------------------------
-// LEVEL 6 — UNGATED TEST HANDLER (NO MEMBERSHIP CHECKS)
-// ---------------------------------------------------------
-// ---------------------------------------------------------
-// LEVEL 6 — UNGATED TEST HANDLER (NO MEMBERSHIP CHECKS)
-// ---------------------------------------------------------
-// ---------------------------------------------------------
-// LEVEL 6 — UNGATED TEST HANDLER
-// ---------------------------------------------------------
-document.querySelector('.levelBtn[data-level="6"]')
-  ?.addEventListener("click", () => {
-
-    console.log("[Level 6] Ungated test handler fired");
-
-    // Hide all screens
-    document.querySelectorAll(".screen").forEach(s => s.classList.add("hidden"));
-
-    // Show Level 6 wrapper + screen
-    document.getElementById("level6Wrapper")?.classList.remove("hidden");
-    document.getElementById("level6Screen")?.classList.remove("hidden");
-
-    // Start Level 6 engine
-    L6.start();
+    L5.start();
   });
 
+  // ---------------------------------------------------------
+  // LEVEL 6 (unchanged)
+  // ---------------------------------------------------------
+  document.querySelector('.levelBtn[data-level="6"]')
+    ?.addEventListener("click", () => {
+
+      console.log("[Level 6] Ungated test handler fired");
+
+      document.querySelectorAll(".screen").forEach(s => s.classList.add("hidden"));
+
+      document.getElementById("level6Wrapper")?.classList.remove("hidden");
+      document.getElementById("level6Screen")?.classList.remove("hidden");
+
+      L6.start();
+    });
 
 });
-
 
 */
+
+
 
 
 

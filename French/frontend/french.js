@@ -2852,6 +2852,62 @@ me: "audio/se_tacher.wav"
 
 
 
+{
+  id: "l1-fr-46",
+  meaning: "what is your name?",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "comment",
+      hiragana: "comment",
+      meaning: "how / what",
+      audio: {
+        daughter: "audio/comment.wav",
+        me: "audio/comment.wav"
+      }
+    },
+
+    {
+      romaji: "vous",
+      hiragana: "vous",
+      meaning: "you (formal)",
+      audio: {
+        daughter: "audio/vous.wav",
+        me: "audio/vous.wav"
+      }
+    },
+
+    {
+      romaji: "appelez",
+      hiragana: "appelez",
+      meaning: "call",
+      audio: {
+        daughter: "audio/appelez.wav",
+        me: "audio/appelez.wav"
+      }
+    },
+
+    {
+      romaji: "comment-vous-appelez",
+      hiragana: "comment-vous-appelez",
+      meaning: "what is your name?",
+      audio: {
+        daughter: "audio/sentence4.wav",
+        me: "audio/sentence4.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
 
 
 ];
