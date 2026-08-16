@@ -1561,6 +1561,54 @@ me: "audio/spanish/silla.wav"
 
 
 
+{
+  id: "l1-es-30",
+  meaning: "what is your name",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "como",
+      hiragana: "como",
+      meaning: "how",
+      audio: {
+        daughter: "audio/spanish/como.wav",
+        me: "audio/spanish/como.wav"
+      }
+    },
+
+    {
+      romaji: "te",
+      hiragana: "te",
+      meaning: "you (object pronoun)",
+      audio: {
+        daughter: "audio/spanish/te.wav",
+        me: "audio/spanish/te.wav"
+      }
+    },
+
+    {
+      romaji: "llamas",
+      hiragana: "llamas",
+      meaning: "are called",
+      audio: {
+        daughter: "audio/spanish/llamas.wav",
+        me: "audio/spanish/llamas.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3849,6 +3897,14 @@ L2.start = function () {
 
 
 const level3 = [
+
+
+
+
+
+
+
+
   {
     id: "es3-01",
     meaning: "Cuando escuchas un trueno y ves un rayo, ¿qué ocurre después?",
@@ -3912,7 +3968,94 @@ const level3 = [
       { spanish: "y ves un rayo", english: "and you see lightning" },
       { spanish: "¿qué ocurre después?", english: "what happens next?" }
     ]
-  }
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "es3-02",
+  meaning: "Cuando la niña estaba llorando y su mamá le pidió que se callara, ¿qué ocurre después?",
+  level: 3,
+
+  // ⭐ Spanish inference options
+  options: [
+    "La niña deja de llorar",
+    "La niña empieza a correr",
+    "La mamá se va de la casa",
+    "El perro empieza a ladrar"
+  ],
+
+  // ⭐ Underscore format
+  optionsRomaji: [
+    "la_nina_deja_de_llorar",
+    "la_nina_empieza_a_correr",
+    "la_mama_se_va_de_la_casa",
+    "el_perro_empieza_a_ladrar"
+  ],
+
+  // ⭐ English glosses
+  optionsEN: [
+    "the girl stops crying",
+    "the girl starts running",
+    "the mom leaves the house",
+    "the dog starts barking"
+  ],
+
+  // ⭐ Correct answer
+  correct: "La niña deja de llorar",
+
+  // ⭐ Full-sentence audio
+  fullAudio: {
+    daughter: "audio/spanish/inference2.wav",
+    me:       "audio/spanish/inference2.wav"
+  },
+
+  // ⭐ Choice audio
+  choiceAudio: {
+    options: [
+      ["spanish/audio/la_nina_deja_de_llorar.wav"],
+      ["spanish/audio/la_nina_empieza_a_correr.wav"],
+      ["spanish/audio/la_mama_se_va_de_la_casa.wav"],
+      ["spanish/audio/el_perro_empieza_a_ladrar.wav"]
+    ]
+  },
+
+  // ⭐ Meaning audio
+  meaningAudio: [
+    ["spanish/audio/la_nina_deja_de_llorar.wav"],
+    ["spanish/audio/la_nina_empieza_a_correr.wav"],
+    ["spanish/audio/la_mama_se_va_de_la_casa.wav"],
+    ["spanish/audio/el_perro_empieza_a_ladrar.wav"]
+  ],
+
+  // ⭐ Chunk breakdown
+  chunks: [
+    { spanish: "Cuando la niña estaba llorando", english: "When the girl was crying" },
+    { spanish: "y su mamá le pidió que se callara", english: "and her mom asked her to be quiet" },
+    { spanish: "¿qué ocurre después?", english: "what happens next?" }
+  ]
+},
+
+
+
+
+
+
+
+
+
 ];
 
 
