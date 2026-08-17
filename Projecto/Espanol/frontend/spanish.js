@@ -1612,6 +1612,76 @@ me: "audio/spanish/silla.wav"
 
 
 
+{
+  id: "l1-es-31",
+  meaning: "he has green pants",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "él",
+      hiragana: "él",
+      meaning: "he",
+      audio: {
+        daughter: "audio/spanish/el.wav",
+        me: "audio/spanish/el.wav"
+      }
+    },
+
+    {
+      romaji: "tiene",
+      hiragana: "tiene",
+      meaning: "has",
+      audio: {
+        daughter: "audio/spanish/tiene.wav",
+        me: "audio/spanish/tiene.wav"
+      }
+    },
+
+    {
+      romaji: "un",
+      hiragana: "un",
+      meaning: "a / one",
+      audio: {
+        daughter: "audio/spanish/un.wav",
+        me: "audio/spanish/un.wav"
+      }
+    },
+
+    {
+      romaji: "pantalón",
+      hiragana: "pantalón",
+      meaning: "pants",
+      audio: {
+        daughter: "audio/spanish/pantalon.wav",
+        me: "audio/spanish/pantalon.wav"
+      }
+    },
+
+    {
+      romaji: "verde",
+      hiragana: "verde",
+      meaning: "green",
+      audio: {
+        daughter: "audio/spanish/verde.wav",
+        me: "audio/spanish/verde.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4047,6 +4117,84 @@ const level3 = [
     { spanish: "¿qué ocurre después?", english: "what happens next?" }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "es3-03",
+  meaning: "Mi hermano tiró la leche en el piso y mi mamá se molestó. ¿Qué ocurre después?",
+  level: 3,
+
+  // ⭐ Spanish inference options
+  options: [
+    "Mi hermano limpia el piso",
+    "Mi hermano empieza a reír",
+    "La mamá se va de la casa",
+    "El gato bebe la leche del piso"
+  ],
+
+  // ⭐ Underscore format
+  optionsRomaji: [
+    "mi_hermano_limpia_el_piso",
+    "mi_hermano_empieza_a_reir",
+    "la_mama_se_va_de_la_casa",
+    "el_gato_bebe_la_leche_del_piso"
+  ],
+
+  // ⭐ English glosses
+  optionsEN: [
+    "my brother cleans the floor",
+    "my brother starts laughing",
+    "the mom leaves the house",
+    "the cat drinks the milk from the floor"
+  ],
+
+  // ⭐ Correct answer
+  correct: "Mi hermano limpia el piso",
+
+  // ⭐ Full-sentence audio
+  fullAudio: {
+    daughter: "audio/spanish/inference3.wav",
+    me:       "audio/spanish/inference3.wav"
+  },
+
+  // ⭐ Choice audio
+  choiceAudio: {
+    options: [
+      ["spanish/audio/mi_hermano_limpia_el_piso.wav"],
+      ["spanish/audio/mi_hermano_empieza_a_reir.wav"],
+      ["spanish/audio/la_mama_se_va_de_la_casa.wav"],
+      ["spanish/audio/el_gato_bebe_la_leche_del_piso.wav"]
+    ]
+  },
+
+  // ⭐ Meaning audio
+  meaningAudio: [
+    ["spanish/audio/mi_hermano_limpia_el_piso.wav"],
+    ["spanish/audio/mi_hermano_empieza_a_reir.wav"],
+    ["spanish/audio/la_mama_se_va_de_la_casa.wav"],
+    ["spanish/audio/el_gato_bebe_la_leche_del_piso.wav"]
+  ],
+
+  // ⭐ Chunk breakdown
+  chunks: [
+    { spanish: "Mi hermano tiró la leche en el piso", english: "My brother spilled the milk on the floor" },
+    { spanish: "y mi mamá se molestó", english: "and my mom got upset" },
+    { spanish: "¿qué ocurre después?", english: "what happens next?" }
+  ]
+},
+
+
+
+
 
 
 

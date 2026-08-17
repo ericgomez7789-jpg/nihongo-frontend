@@ -2910,6 +2910,87 @@ me: "audio/se_tacher.wav"
 
 
 
+
+
+
+{
+  id: "l1-fr-47",
+  meaning: "do you like to dance?",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "tu",
+      hiragana: "tu",
+      meaning: "you (informal)",
+      audio: {
+        daughter: "audio/tu.wav",
+        me: "audio/tu.wav"
+      }
+    },
+
+    {
+      romaji: "aimes",
+      hiragana: "aimes",
+      meaning: "like",
+      audio: {
+        daughter: "audio/aimes.wav",
+        me: "audio/aimes.wav"
+      }
+    },
+
+    {
+      romaji: "aimes-tu",
+      hiragana: "aimes-tu",
+      meaning: "do you like?",
+      audio: {
+        daughter: "audio/aimes-tu.wav",
+        me: "audio/aimes-tu.wav"
+      }
+    },
+
+    {
+      romaji: "danser",
+      hiragana: "danser",
+      meaning: "to dance",
+      audio: {
+        daughter: "audio/danser.wav",
+        me: "audio/danser.wav"
+      }
+    },
+
+    {
+      romaji: "aimes-tu-danser",
+      hiragana: "aimes-tu-danser",
+      meaning: "do you like to dance?",
+      audio: {
+        daughter: "audio/sentence5.wav",
+        me: "audio/sentence5.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 // ⭐ ADD THIS PATCH RIGHT HERE
