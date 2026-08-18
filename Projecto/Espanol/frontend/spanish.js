@@ -1679,6 +1679,71 @@ me: "audio/spanish/silla.wav"
 
 
 
+{
+  id: "l1-es-32",
+  meaning: "do you like the color blue?",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "te",
+      hiragana: "te",
+      meaning: "you (object pronoun)",
+      audio: {
+        daughter: "audio/spanish/te.wav",
+        me: "audio/spanish/te.wav"
+      }
+    },
+
+    {
+      romaji: "gusta",
+      hiragana: "gusta",
+      meaning: "like",
+      audio: {
+        daughter: "audio/spanish/gusta.wav",
+        me: "audio/spanish/gusta.wav"
+      }
+    },
+
+    {
+      romaji: "el",
+      hiragana: "el",
+      meaning: "the (masculine)",
+      audio: {
+        daughter: "audio/spanish/el.wav",
+        me: "audio/spanish/el.wav"
+      }
+    },
+
+    {
+      romaji: "color",
+      hiragana: "color",
+      meaning: "color",
+      audio: {
+        daughter: "audio/spanish/color.wav",
+        me: "audio/spanish/color.wav"
+      }
+    },
+
+    {
+      romaji: "azul",
+      hiragana: "azul",
+      meaning: "blue",
+      audio: {
+        daughter: "audio/spanish/azul.wav",
+        me: "audio/spanish/azul.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
 
 
 
@@ -4192,6 +4257,77 @@ const level3 = [
   ]
 },
 
+
+
+
+
+
+
+
+
+
+{
+  id: "es3-04",
+  meaning: "Si te caes de la escalera, ¿qué ocurre después?",
+  level: 3,
+
+  // ⭐ Spanish inference options
+  options: [
+    "Te levantas rápido",
+    "Empiezas a llorar",
+    "La escalera se rompe",
+    "Un amigo viene a ayudarte"
+  ],
+
+  // ⭐ Underscore format
+  optionsRomaji: [
+    "te_levantas_rapido",
+    "empiezas_a_llorar",
+    "la_escalera_se_rompe",
+    "un_amigo_viene_a_ayudarte"
+  ],
+
+  // ⭐ English glosses
+  optionsEN: [
+    "you get up quickly",
+    "you start crying",
+    "the ladder breaks",
+    "a friend comes to help you"
+  ],
+
+  // ⭐ Correct answer
+  correct: "Un amigo viene a ayudarte",
+
+  // ⭐ Full-sentence audio
+  fullAudio: {
+    daughter: "audio/spanish/inference4.wav",
+    me:       "audio/spanish/inference4.wav"
+  },
+
+  // ⭐ Choice audio
+  choiceAudio: {
+    options: [
+      ["spanish/audio/te_levantas_rapido.wav"],
+      ["spanish/audio/empiezas_a_llorar.wav"],
+      ["spanish/audio/la_escalera_se_rompe.wav"],
+      ["spanish/audio/un_amigo_viene_a_ayudarte.wav"]
+    ]
+  },
+
+  // ⭐ Meaning audio
+  meaningAudio: [
+    ["spanish/audio/te_levantas_rapido.wav"],
+    ["spanish/audio/empiezas_a_llorar.wav"],
+    ["spanish/audio/la_escalera_se_rompe.wav"],
+    ["spanish/audio/un_amigo_viene_a_ayudarte.wav"]
+  ],
+
+  // ⭐ Chunk breakdown
+  chunks: [
+    { spanish: "Si te caes de la escalera", english: "If you fall off the ladder" },
+    { spanish: "¿qué ocurre después?", english: "what happens next?" }
+  ]
+},
 
 
 

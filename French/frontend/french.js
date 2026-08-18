@@ -2980,6 +2980,86 @@ me: "audio/se_tacher.wav"
 
 
 
+{
+  id: "l1-fr-48",
+  meaning: "we like the color black",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "nous",
+      hiragana: "nous",
+      meaning: "we",
+      audio: {
+        daughter: "audio/nous.wav",
+        me: "audio/nous.wav"
+      }
+    },
+
+    {
+      romaji: "aimons",
+      hiragana: "aimons",
+      meaning: "like (we)",
+      audio: {
+        daughter: "audio/aimouns.wav",
+        me: "audio/aimouns.wav"
+      }
+    },
+
+    {
+      romaji: "nous-aimons",
+      hiragana: "nous-aimons",
+      meaning: "we like",
+      audio: {
+        daughter: "audio/nous-aimouns.wav",
+        me: "audio/nous-aimouns.wav"
+      }
+    },
+
+    {
+      romaji: "la",
+      hiragana: "la",
+      meaning: "the (feminine)",
+      audio: {
+        daughter: "audio/la.wav",
+        me: "audio/la.wav"
+      }
+    },
+
+    {
+      romaji: "couleur",
+      hiragana: "couleur",
+      meaning: "color",
+      audio: {
+        daughter: "audio/couleur.wav",
+        me: "audio/couleur.wav"
+      }
+    },
+
+    {
+      romaji: "noire",
+      hiragana: "noire",
+      meaning: "black (feminine)",
+      audio: {
+        daughter: "audio/noire.wav",
+        me: "audio/noire.wav"
+      }
+    },
+
+    {
+      romaji: "nous-aimons-la-couleur-noire",
+      hiragana: "nous-aimons-la-couleur-noire",
+      meaning: "we like the color black",
+      audio: {
+        daughter: "audio/sentence1.wav",
+        me: "audio/sentence1.wav"
+      }
+    }
+  ]
+},
+
+
+
 
 
 
