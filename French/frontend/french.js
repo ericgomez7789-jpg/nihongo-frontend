@@ -3051,13 +3051,95 @@ me: "audio/se_tacher.wav"
       hiragana: "nous-aimons-la-couleur-noire",
       meaning: "we like the color black",
       audio: {
-        daughter: "audio/sentence1.wav",
-        me: "audio/sentence1.wav"
+        daughter: "audio/sentence6.wav",
+        me: "audio/sentence6.wav"
       }
     }
   ]
 },
 
+
+
+
+
+
+
+
+
+
+{
+  id: "l1-fr-49",
+  meaning: "who is it?",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "qui",
+      hiragana: "qui",
+      meaning: "who",
+      audio: {
+        daughter: "audio/qui.wav",
+        me: "audio/qui.wav"
+      }
+    },
+
+    {
+      romaji: "est-ce",
+      hiragana: "est-ce",
+      meaning: "is it",
+      audio: {
+        daughter: "audio/est-ce.wav",
+        me: "audio/est-ce.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+{
+  id: "l1-fr-50",
+  meaning: "when is it?",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "quand",
+      hiragana: "quand",
+      meaning: "when",
+      audio: {
+        daughter: "audio/quand.wav",
+        me: "audio/quand.wav"
+      }
+    },
+
+    {
+      romaji: "est-ce",
+      hiragana: "est-ce",
+      meaning: "is it",
+      audio: {
+        daughter: "audio/est-ce.wav",
+        me: "audio/est-ce.wav"
+      }
+    },
+
+    {
+      romaji: "quand-est-ce",
+      hiragana: "quand-est-ce",
+      meaning: "when is it?",
+      audio: {
+        daughter: "audio/quand-est-ce.wav",
+        me: "audio/quand-est-ce.wav"
+      }
+    }
+  ]
+},
 
 
 
