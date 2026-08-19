@@ -5603,6 +5603,72 @@ const sentences = [
 
 
 
+{
+  id: "l1-96",
+  meaning: "Hair falls over my eyes.",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "kaminoke",
+      hiragana: "かみのけ",
+      meaning: "hair",
+      audio: {
+        daughter: "audio/sentences/kaminoke.wav",
+        me: "audio/sentences/kaminoke.wav"
+      }
+    },
+
+    {
+      romaji: "ga",
+      hiragana: "が",
+      meaning: "subject marker",
+      audio: {
+        daughter: "audio/sentences/ga.wav",
+        me: "audio/sentences/ga.wav"
+      }
+    },
+
+    {
+      romaji: "me",
+      hiragana: "め",
+      meaning: "eye",
+      audio: {
+        daughter: "audio/sentences/me.wav",
+        me: "audio/sentences/me.wav"
+      }
+    },
+
+    {
+      romaji: "ni",
+      hiragana: "に",
+      meaning: "to / onto",
+      audio: {
+        daughter: "audio/sentences/ni.wav",
+        me: "audio/sentences/ni.wav"
+      }
+    },
+
+    {
+      romaji: "kakaru",
+      hiragana: "かかる",
+      meaning: "to hang over / to fall over",
+      audio: {
+        daughter: "audio/sentences/kakaru.wav",
+        me: "audio/sentences/kakaru.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
 
 
 
