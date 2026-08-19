@@ -1748,7 +1748,83 @@ me: "audio/spanish/silla.wav"
 
 
 
+{
+  id: "l1-es-33",
+  meaning: "go straight to go to the store",
+  level: 1,
 
+  chunks: [
+    {
+      romaji: "ve",
+      hiragana: "ve",
+      meaning: "go (command)",
+      audio: {
+        daughter: "audio/spanish/ve.wav",
+        me: "audio/spanish/ve.wav"
+      }
+    },
+
+    {
+      romaji: "derecho",
+      hiragana: "derecho",
+      meaning: "straight",
+      audio: {
+        daughter: "audio/spanish/derecho.wav",
+        me: "audio/spanish/derecho.wav"
+      }
+    },
+
+    {
+      romaji: "para",
+      hiragana: "para",
+      meaning: "in order to / to",
+      audio: {
+        daughter: "audio/spanish/para.wav",
+        me: "audio/spanish/para.wav"
+      }
+    },
+
+    {
+      romaji: "ir",
+      hiragana: "ir",
+      meaning: "to go",
+      audio: {
+        daughter: "audio/spanish/ir.wav",
+        me: "audio/spanish/ir.wav"
+      }
+    },
+
+    {
+      romaji: "a",
+      hiragana: "a",
+      meaning: "to",
+      audio: {
+        daughter: "audio/spanish/a.wav",
+        me: "audio/spanish/a.wav"
+      }
+    },
+
+    {
+      romaji: "la",
+      hiragana: "la",
+      meaning: "the (feminine)",
+      audio: {
+        daughter: "audio/spanish/la.wav",
+        me: "audio/spanish/la.wav"
+      }
+    },
+
+    {
+      romaji: "tienda",
+      hiragana: "tienda",
+      meaning: "store",
+      audio: {
+        daughter: "audio/spanish/tienda.wav",
+        me: "audio/spanish/tienda.wav"
+      }
+    }
+  ]
+},
 
 
 
@@ -4339,6 +4415,78 @@ const level3 = [
 
 
 
+{
+  id: "es3-05",
+  meaning: "Cuando el viento es tan fuerte, ¿qué ocurre después?",
+  level: 3,
+
+  // ⭐ Spanish inference options
+  options: [
+    "Se te despeina el cabello",
+    "La puerta se cierra de golpe",
+    "Empiezas a volar como un papel",
+    "El viento se detiene de repente"
+  ],
+
+  // ⭐ Underscore format
+  optionsRomaji: [
+    "se_te_despeina_el_cabello",
+    "la_puerta_se_cierra_de_golpe",
+    "empiezas_a_volar_como_un_papel",
+    "el_viento_se_detiene_de_repente"
+  ],
+
+  // ⭐ English glosses
+  optionsEN: [
+    "your hair gets messy",
+    "the door slams shut",
+    "you start flying like a piece of paper",
+    "the wind suddenly stops"
+  ],
+
+  // ⭐ Correct answer
+  correct: "Se te despeina el cabello",
+
+  // ⭐ Full-sentence audio
+  fullAudio: {
+    daughter: "audio/spanish/inference5.wav",
+    me:       "audio/spanish/inference5.wav"
+  },
+
+  // ⭐ Choice audio
+  choiceAudio: {
+    options: [
+      ["spanish/audio/se_te_despeina_el_cabello.wav"],
+      ["spanish/audio/la_puerta_se_cierra_de_golpe.wav"],
+      ["spanish/audio/empiezas_a_volar_como_un_papel.wav"],
+      ["spanish/audio/el_viento_se_detiene_de_repente.wav"]
+    ]
+  },
+
+  // ⭐ Meaning audio
+  meaningAudio: [
+    ["spanish/audio/se_te_despeina_el_cabello.wav"],
+    ["spanish/audio/la_puerta_se_cierra_de_golpe.wav"],
+    ["spanish/audio/empiezas_a_volar_como_un_papel.wav"],
+    ["spanish/audio/el_viento_se_detiene_de_repente.wav"]
+  ],
+
+  // ⭐ Chunk breakdown
+  chunks: [
+    { spanish: "Cuando el viento es tan fuerte", english: "When the wind is so strong" },
+    { spanish: "¿qué ocurre después?", english: "what happens next?" }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
 
 ];
 
@@ -4353,7 +4501,7 @@ const level3 = [
 const L3 = {
   round: 0,
   score: 0,
-  TOTAL_ROUNDS: 1,
+  TOTAL_ROUNDS: 4,
 
   dataset: level3,   // your Spanish Level‑3 inference dataset array
   currentSentence: null,
