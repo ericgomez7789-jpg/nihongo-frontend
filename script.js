@@ -5672,6 +5672,73 @@ const sentences = [
 
 
 
+{
+  id: "l1-97",
+  meaning: "I like swimming.",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "oyogu",
+      hiragana: "およぐ",
+      meaning: "to swim",
+      audio: {
+        daughter: "audio/sentences/oyogu.wav",
+        me: "audio/sentences/oyogu.wav"
+      }
+    },
+
+    {
+      romaji: "koto",
+      hiragana: "こと",
+      meaning: "the act of / ~ing",
+      audio: {
+        daughter: "audio/sentences/koto.wav",
+        me: "audio/sentences/koto.wav"
+      }
+    },
+
+    {
+      romaji: "ga",
+      hiragana: "が",
+      meaning: "subject marker",
+      audio: {
+        daughter: "audio/sentences/ga.wav",
+        me: "audio/sentences/ga.wav"
+      }
+    },
+
+    {
+      romaji: "suki",
+      hiragana: "すき",
+      meaning: "like / fond of",
+      audio: {
+        daughter: "audio/sentences/suki.wav",
+        me: "audio/sentences/suki.wav"
+      }
+    },
+
+    {
+      romaji: "desu",
+      hiragana: "です",
+      meaning: "polite ending",
+      audio: {
+        daughter: "audio/sentences/desu.wav",
+        me: "audio/sentences/desu.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1838,6 +1838,104 @@ me: "audio/spanish/silla.wav"
 
 
 
+{
+  id: "l1-es-34",
+  meaning: "make a left to go to the beach",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "haz",
+      hiragana: "haz",
+      meaning: "make (command)",
+      audio: {
+        daughter: "audio/spanish/haz.wav",
+        me: "audio/spanish/haz.wav"
+      }
+    },
+
+    {
+      romaji: "una",
+      hiragana: "una",
+      meaning: "a (feminine)",
+      audio: {
+        daughter: "audio/spanish/una.wav",
+        me: "audio/spanish/una.wav"
+      }
+    },
+
+    {
+      romaji: "izquierda",
+      hiragana: "izquierda",
+      meaning: "left",
+      audio: {
+        daughter: "audio/spanish/izquierda.wav",
+        me: "audio/spanish/izquierda.wav"
+      }
+    },
+
+    {
+      romaji: "para",
+      hiragana: "para",
+      meaning: "in order to / to",
+      audio: {
+        daughter: "audio/spanish/para.wav",
+        me: "audio/spanish/para.wav"
+      }
+    },
+
+    {
+      romaji: "ir",
+      hiragana: "ir",
+      meaning: "to go",
+      audio: {
+        daughter: "audio/spanish/ir.wav",
+        me: "audio/spanish/ir.wav"
+      }
+    },
+
+    {
+      romaji: "a",
+      hiragana: "a",
+      meaning: "to",
+      audio: {
+        daughter: "audio/spanish/a.wav",
+        me: "audio/spanish/a.wav"
+      }
+    },
+
+    {
+      romaji: "la",
+      hiragana: "la",
+      meaning: "the (feminine)",
+      audio: {
+        daughter: "audio/spanish/la.wav",
+        me: "audio/spanish/la.wav"
+      }
+    },
+
+    {
+      romaji: "playa",
+      hiragana: "playa",
+      meaning: "beach",
+      audio: {
+        daughter: "audio/spanish/playa.wav",
+        me: "audio/spanish/playa.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
 
 
 ];
@@ -4478,6 +4576,77 @@ const level3 = [
   ]
 },
 
+
+
+
+
+
+
+
+
+
+{
+  id: "es3-06",
+  meaning: "El criminal cometió un crimen, ¿qué ocurre después?",
+  level: 3,
+
+  // ⭐ Spanish inference options
+  options: [
+    "La policía lo persigue",
+    "El criminal se va a dormir",
+    "La gente empieza a aplaudir",
+    "El criminal se convierte en héroe"
+  ],
+
+  // ⭐ Underscore format
+  optionsRomaji: [
+    "la_policia_lo_persigue",
+    "el_criminal_se_va_a_dormir",
+    "la_gente_empieza_a_aplaudir",
+    "el_criminal_se_convierte_en_heroe"
+  ],
+
+  // ⭐ English glosses
+  optionsEN: [
+    "the police chase him",
+    "the criminal goes to sleep",
+    "people start clapping",
+    "the criminal becomes a hero"
+  ],
+
+  // ⭐ Correct answer
+  correct: "La policía lo persigue",
+
+  // ⭐ Full-sentence audio
+  fullAudio: {
+    daughter: "audio/spanish/inference6.wav",
+    me:       "audio/spanish/inference6.wav"
+  },
+
+  // ⭐ Choice audio
+  choiceAudio: {
+    options: [
+      ["spanish/audio/la_policia_lo_persigue.wav"],
+      ["spanish/audio/el_criminal_se_va_a_dormir.wav"],
+      ["spanish/audio/la_gente_empieza_a_aplaudir.wav"],
+      ["spanish/audio/el_criminal_se_convierte_en_heroe.wav"]
+    ]
+  },
+
+  // ⭐ Meaning audio
+  meaningAudio: [
+    ["spanish/audio/la_policia_lo_persigue.wav"],
+    ["spanish/audio/el_criminal_se_va_a_dormir.wav"],
+    ["spanish/audio/la_gente_empieza_a_aplaudir.wav"],
+    ["spanish/audio/el_criminal_se_convierte_en_heroe.wav"]
+  ],
+
+  // ⭐ Chunk breakdown
+  chunks: [
+    { spanish: "El criminal cometió un crimen", english: "The criminal committed a crime" },
+    { spanish: "¿qué ocurre después?", english: "what happens next?" }
+  ]
+},
 
 
 
