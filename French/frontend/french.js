@@ -3151,6 +3151,52 @@ me: "audio/se_tacher.wav"
 
 
 
+{
+  id: "l1-fr-51",
+  meaning: "open the door",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "ouvrir",
+      hiragana: "ouvrir",
+      meaning: "to open",
+      audio: {
+        daughter: "audio/ouvrir.wav",
+        me: "audio/ouvrir.wav"
+      }
+    },
+
+    {
+      romaji: "la",
+      hiragana: "la",
+      meaning: "the (feminine)",
+      audio: {
+        daughter: "audio/la.wav",
+        me: "audio/la.wav"
+      }
+    },
+
+    {
+      romaji: "porte",
+      hiragana: "porte",
+      meaning: "door",
+      audio: {
+        daughter: "audio/porte.wav",
+        me: "audio/porte.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
 
 
 ];
