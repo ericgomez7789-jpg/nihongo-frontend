@@ -3199,6 +3199,53 @@ me: "audio/se_tacher.wav"
 
 
 
+
+{
+  id: "l1-fr-52",
+  meaning: "close the door",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "ferme",
+      hiragana: "ferme",
+      meaning: "close (command)",
+      audio: {
+        daughter: "audio/ferme.wav",
+        me: "audio/ferme.wav"
+      }
+    },
+
+    {
+      romaji: "la",
+      hiragana: "la",
+      meaning: "the (feminine)",
+      audio: {
+        daughter: "audio/la.wav",
+        me: "audio/la.wav"
+      }
+    },
+
+    {
+      romaji: "porte",
+      hiragana: "porte",
+      meaning: "door",
+      audio: {
+        daughter: "audio/porte.wav",
+        me: "audio/porte.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
 ];
 
 // ⭐ ADD THIS PATCH RIGHT HERE
