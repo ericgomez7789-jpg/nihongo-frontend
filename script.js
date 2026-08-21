@@ -5741,6 +5741,73 @@ const sentences = [
 
 
 
+{
+  id: "l1-98",
+  meaning: "to look beyond the window",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "mado",
+      hiragana: "まど",
+      meaning: "window",
+      audio: {
+        daughter: "audio/sentences/mado.wav",
+        me: "audio/sentences/mado.wav"
+      }
+    },
+
+    {
+      romaji: "no",
+      hiragana: "の",
+      meaning: "possessive / linking particle",
+      audio: {
+        daughter: "audio/sentences/no.wav",
+        me: "audio/sentences/no.wav"
+      }
+    },
+
+    {
+      romaji: "mukou",
+      hiragana: "むこう",
+      meaning: "beyond / the other side",
+      audio: {
+        daughter: "audio/sentences/mukou.wav",
+        me: "audio/sentences/mukou.wav"
+      }
+    },
+
+    {
+      romaji: "o",
+      hiragana: "を",
+      meaning: "object marker",
+      audio: {
+        daughter: "audio/sentences/wo.wav",
+        me: "audio/sentences/wo.wav"
+      }
+    },
+
+    {
+      romaji: "miru",
+      hiragana: "みる",
+      meaning: "to look / to see",
+      audio: {
+        daughter: "audio/sentences/miru.wav",
+        me: "audio/sentences/miru.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
 
 
 

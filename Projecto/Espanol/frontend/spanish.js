@@ -1937,6 +1937,104 @@ me: "audio/spanish/silla.wav"
 
 
 
+{
+  id: "l1-es-35",
+  meaning: "on the next street, make a right",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "en",
+      hiragana: "en",
+      meaning: "in / on",
+      audio: {
+        daughter: "audio/spanish/en.wav",
+        me: "audio/spanish/en.wav"
+      }
+    },
+
+    {
+      romaji: "la",
+      hiragana: "la",
+      meaning: "the (feminine)",
+      audio: {
+        daughter: "audio/spanish/la.wav",
+        me: "audio/spanish/la.wav"
+      }
+    },
+
+    {
+      romaji: "calle",
+      hiragana: "calle",
+      meaning: "street",
+      audio: {
+        daughter: "audio/spanish/calle.wav",
+        me: "audio/spanish/calle.wav"
+      }
+    },
+
+    {
+      romaji: "que",
+      hiragana: "que",
+      meaning: "that / which",
+      audio: {
+        daughter: "audio/spanish/que.wav",
+        me: "audio/spanish/que.wav"
+      }
+    },
+
+    {
+      romaji: "sigue",
+      hiragana: "sigue",
+      meaning: "follows / next",
+      audio: {
+        daughter: "audio/spanish/sigue.wav",
+        me: "audio/spanish/sigue.wav"
+      }
+    },
+
+    {
+      romaji: "haz",
+      hiragana: "haz",
+      meaning: "make (command)",
+      audio: {
+        daughter: "audio/spanish/haz.wav",
+        me: "audio/spanish/haz.wav"
+      }
+    },
+
+    {
+      romaji: "una",
+      hiragana: "una",
+      meaning: "a (feminine)",
+      audio: {
+        daughter: "audio/spanish/una.wav",
+        me: "audio/spanish/una.wav"
+      }
+    },
+
+    {
+      romaji: "derecha",
+      hiragana: "derecha",
+      meaning: "right",
+      audio: {
+        daughter: "audio/spanish/derecha.wav",
+        me: "audio/spanish/derecha.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
 
 ];
 
@@ -4649,6 +4747,77 @@ const level3 = [
 },
 
 
+
+
+
+
+
+
+
+
+{
+  id: "es3-07",
+  meaning: "Se me hizo tarde para ir a trabajo, ¿qué ocurre después?",
+  level: 3,
+
+  // ⭐ Spanish inference options
+  options: [
+    "Llego tarde al trabajo",
+    "Me voy de vacaciones",
+    "Me convierto en jefe",
+    "La oficina cierra para siempre"
+  ],
+
+  // ⭐ Underscore format
+  optionsRomaji: [
+    "llego_tarde_al_trabajo",
+    "me_voy_de_vacaciones",
+    "me_convierto_en_jefe",
+    "la_oficina_cierra_para_siempre"
+  ],
+
+  // ⭐ English glosses
+  optionsEN: [
+    "I arrive late to work",
+    "I go on vacation",
+    "I become the boss",
+    "the office closes forever"
+  ],
+
+  // ⭐ Correct answer
+  correct: "Llego tarde al trabajo",
+
+  // ⭐ Full-sentence audio
+  fullAudio: {
+    daughter: "audio/spanish/inference7.wav",
+    me:       "audio/spanish/inference7.wav"
+  },
+
+  // ⭐ Choice audio
+  choiceAudio: {
+    options: [
+      ["spanish/audio/llego_tarde_al_trabajo.wav"],
+      ["spanish/audio/me_voy_de_vacaciones.wav"],
+      ["spanish/audio/me_convierto_en_jefe.wav"],
+      ["spanish/audio/la_oficina_cierra_para_siempre.wav"]
+    ]
+  },
+
+  // ⭐ Meaning audio
+  meaningAudio: [
+    ["spanish/audio/llego_tarde_al_trabajo.wav"],
+    ["spanish/audio/me_voy_de_vacaciones.wav"],
+    ["spanish/audio/me_convierto_en_jefe.wav"],
+    ["spanish/audio/la_oficina_cierra_para_siempre.wav"]
+  ],
+
+  // ⭐ Chunk breakdown
+  chunks: [
+    { spanish: "Se me hizo tarde", english: "I ended up running late" },
+    { spanish: "para ir a trabajo", english: "to go to work" },
+    { spanish: "¿qué ocurre después?", english: "what happens next?" }
+  ]
+},
 
 
 
