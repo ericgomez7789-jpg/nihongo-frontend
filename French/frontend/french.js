@@ -3246,6 +3246,52 @@ me: "audio/se_tacher.wav"
 
 
 
+
+{
+  id: "l1-fr-53",
+  meaning: "water the plants",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "arrosez",
+      hiragana: "arrosez",
+      meaning: "water (command, vous form)",
+      audio: {
+        daughter: "audio/arrosez.wav",
+        me: "audio/arrosez.wav"
+      }
+    },
+
+    {
+      romaji: "les",
+      hiragana: "les",
+      meaning: "the (plural)",
+      audio: {
+        daughter: "audio/les.wav",
+        me: "audio/les.wav"
+      }
+    },
+
+    {
+      romaji: "plantes",
+      hiragana: "plantes",
+      meaning: "plants",
+      audio: {
+        daughter: "audio/plantes.wav",
+        me: "audio/plantes.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
 ];
 
 // ⭐ ADD THIS PATCH RIGHT HERE

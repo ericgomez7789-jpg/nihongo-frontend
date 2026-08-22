@@ -5743,7 +5743,7 @@ const sentences = [
 
 {
   id: "l1-98",
-  meaning: "to look beyond the window",
+  meaning: "to look out the window",
   level: 1,
 
   chunks: [
@@ -5799,6 +5799,74 @@ const sentences = [
   ]
 },
 
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l1-99",
+  meaning: "to water the plants",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "shokubutsu",
+      hiragana: "しょくぶつ",
+      meaning: "plant / plants",
+      audio: {
+        daughter: "audio/sentences/shokubutsu.wav",
+        me: "audio/sentences/shokubutsu.wav"
+      }
+    },
+
+    {
+      romaji: "ni",
+      hiragana: "に",
+      meaning: "to / toward (target of action)",
+      audio: {
+        daughter: "audio/sentences/ni.wav",
+        me: "audio/sentences/ni.wav"
+      }
+    },
+
+    {
+      romaji: "mizu",
+      hiragana: "みず",
+      meaning: "water",
+      audio: {
+        daughter: "audio/sentences/mizu.wav",
+        me: "audio/sentences/mizu.wav"
+      }
+    },
+
+    {
+      romaji: "wo",
+      hiragana: "を",
+      meaning: "object marker",
+      audio: {
+        daughter: "audio/sentences/wo.wav",
+        me: "audio/sentences/wo.wav"
+      }
+    },
+
+    {
+      romaji: "yaru",
+      hiragana: "やる",
+      meaning: "to give / to do (casual)",
+      audio: {
+        daughter: "audio/sentences/yaru.wav",
+        me: "audio/sentences/yaru.wav"
+      }
+    }
+  ]
+},
 
 
 

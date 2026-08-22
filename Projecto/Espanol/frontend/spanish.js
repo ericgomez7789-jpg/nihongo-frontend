@@ -2034,6 +2034,92 @@ me: "audio/spanish/silla.wav"
 
 
 
+{
+  id: "l1-es-36",
+  meaning: "the boat sinks in the sea",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "el",
+      hiragana: "el",
+      meaning: "the (masculine)",
+      audio: {
+        daughter: "audio/spanish/el.wav",
+        me: "audio/spanish/el.wav"
+      }
+    },
+
+    {
+      romaji: "barco",
+      hiragana: "barco",
+      meaning: "boat",
+      audio: {
+        daughter: "audio/spanish/barco.wav",
+        me: "audio/spanish/barco.wav"
+      }
+    },
+
+    {
+      romaji: "se",
+      hiragana: "se",
+      meaning: "reflexive marker",
+      audio: {
+        daughter: "audio/spanish/se.wav",
+        me: "audio/spanish/se.wav"
+      }
+    },
+
+    {
+      romaji: "hunde",
+      hiragana: "hunde",
+      meaning: "sinks",
+      audio: {
+        daughter: "audio/spanish/hunde.wav",
+        me: "audio/spanish/hunde.wav"
+      }
+    },
+
+    {
+      romaji: "en",
+      hiragana: "en",
+      meaning: "in / on",
+      audio: {
+        daughter: "audio/spanish/en.wav",
+        me: "audio/spanish/en.wav"
+      }
+    },
+
+    {
+      romaji: "el",
+      hiragana: "el",
+      meaning: "the (masculine)",
+      audio: {
+        daughter: "audio/spanish/el.wav",
+        me: "audio/spanish/el.wav"
+      }
+    },
+
+    {
+      romaji: "mar",
+      hiragana: "mar",
+      meaning: "sea",
+      audio: {
+        daughter: "audio/spanish/mar.wav",
+        me: "audio/spanish/mar.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
 
 
 ];
@@ -4815,6 +4901,78 @@ const level3 = [
   chunks: [
     { spanish: "Se me hizo tarde", english: "I ended up running late" },
     { spanish: "para ir a trabajo", english: "to go to work" },
+    { spanish: "¿qué ocurre después?", english: "what happens next?" }
+  ]
+},
+
+
+
+
+
+
+
+
+{
+  id: "es3-08",
+  meaning: "Me dormí en el tren sin darme cuenta de las paradas, ¿qué ocurre después?",
+  level: 3,
+
+  // ⭐ Spanish inference options
+  options: [
+    "Me paso de estación",
+    "Me bajo en la parada correcta",
+    "El tren se convierte en avión",
+    "Me encuentro a mi jefe en el vagón"
+  ],
+
+  // ⭐ Underscore format
+  optionsRomaji: [
+    "me_paso_de_estacion",
+    "me_bajo_en_la_parada_correcta",
+    "el_tren_se_convierte_en_avion",
+    "me_encuentro_a_mi_jefe_en_el_vagon"
+  ],
+
+  // ⭐ English glosses
+  optionsEN: [
+    "I miss my stop",
+    "I get off at the correct stop",
+    "the train turns into an airplane",
+    "I run into my boss in the train car"
+  ],
+
+  // ⭐ Correct answer
+  correct: "Me paso de estación",
+
+  // ⭐ Full-sentence audio
+  fullAudio: {
+    daughter: "audio/spanish/inference8.wav",
+    me:       "audio/spanish/inference8.wav"
+  },
+
+  // ⭐ Choice audio
+  choiceAudio: {
+    options: [
+      ["spanish/audio/me_paso_de_estacion.wav"],
+      ["spanish/audio/me_bajo_en_la_parada_correcta.wav"],
+      ["spanish/audio/el_tren_se_convierte_en_avion.wav"],
+      ["spanish/audio/me_encuentro_a_mi_jefe_en_el_vagon.wav"]
+    ]
+  },
+
+  // ⭐ Meaning audio
+  meaningAudio: [
+    ["spanish/audio/me_paso_de_estacion.wav"],
+    ["spanish/audio/me_bajo_en_la_parada_correcta.wav"],
+    ["spanish/audio/el_tren_se_convierte_en_avion.wav"],
+    ["spanish/audio/me_encuentro_a_mi_jefe_en_el_vagon.wav"]
+  ],
+
+  // ⭐ Chunk breakdown
+  chunks: [
+    { spanish: "Me dormí en el tren", english: "I overslept on the train" },
+    { spanish: "sin darme cuenta", english: "without realizing" },
+    { spanish: "de las paradas", english: "the stops" },
     { spanish: "¿qué ocurre después?", english: "what happens next?" }
   ]
 },
