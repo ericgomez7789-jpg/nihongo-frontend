@@ -5640,6 +5640,8 @@ const L4 = {
   hasMarked: false
 };
 
+// ⭐ FIX: Tell Progress4 how many items Level‑4 has
+Progress4.setTotal("level4", L4.dataset.length);
 
 /* ==========================================================
    ⭐ LEVEL 4 — CURRENT SENTENCE
