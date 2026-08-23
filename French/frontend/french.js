@@ -3292,6 +3292,52 @@ me: "audio/se_tacher.wav"
 
 
 
+
+
+
+
+{
+  id: "l1-fr-54",
+  meaning: "take out the trash",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "sortez",
+      hiragana: "sortez",
+      meaning: "take out / remove (command, vous form)",
+      audio: {
+        daughter: "audio/sortez.wav",
+        me: "audio/sortez.wav"
+      }
+    },
+
+    {
+      romaji: "les",
+      hiragana: "les",
+      meaning: "the (plural)",
+      audio: {
+        daughter: "audio/les.wav",
+        me: "audio/les.wav"
+      }
+    },
+
+    {
+      romaji: "poubelles",
+      hiragana: "poubelles",
+      meaning: "trash bins",
+      audio: {
+        daughter: "audio/poubelles.wav",
+        me: "audio/poubelles.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
 ];
 
 // ⭐ ADD THIS PATCH RIGHT HERE
