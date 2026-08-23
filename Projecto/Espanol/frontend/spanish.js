@@ -2119,6 +2119,52 @@ me: "audio/spanish/silla.wav"
 
 
 
+{
+  id: "l1-es-37",
+  meaning: "take out the trash",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "saque",
+      hiragana: "saque",
+      meaning: "take out (command)",
+      audio: {
+        daughter: "audio/spanish/saque.wav",
+        me: "audio/spanish/saque.wav"
+      }
+    },
+
+    {
+      romaji: "la",
+      hiragana: "la",
+      meaning: "the (feminine)",
+      audio: {
+        daughter: "audio/spanish/la.wav",
+        me: "audio/spanish/la.wav"
+      }
+    },
+
+    {
+      romaji: "basura",
+      hiragana: "basura",
+      meaning: "trash",
+      audio: {
+        daughter: "audio/spanish/basura.wav",
+        me: "audio/spanish/basura.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4976,6 +5022,83 @@ const level3 = [
     { spanish: "¿qué ocurre después?", english: "what happens next?" }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+{
+  id: "es3-09",
+  meaning: "El perro se escapó del patio, ¿qué va a hacer el dueño después?",
+  level: 3,
+
+  // ⭐ Spanish inference options
+  options: [
+    "Sale a buscarlo por la calle",
+    "Se va a dormir tranquilamente",
+    "Compra otro perro inmediatamente",
+    "El perro se convierte en superhéroe"
+  ],
+
+  // ⭐ Underscore format
+  optionsRomaji: [
+    "sale_a_buscarlo_por_la_calle",
+    "se_va_a_dormir_tranquilamente",
+    "compra_otro_perro_inmediatamente",
+    "el_perro_se_convierte_en_superheroe"
+  ],
+
+  // ⭐ English glosses
+  optionsEN: [
+    "He goes out to look for it on the street",
+    "He goes to sleep peacefully",
+    "He buys another dog immediately",
+    "the dog turns into a superhero"
+  ],
+
+  // ⭐ Correct answer
+  correct: "Sale a buscarlo por la calle",
+
+  // ⭐ Full-sentence audio
+  fullAudio: {
+    daughter: "audio/spanish/inference9.wav",
+    me:       "audio/spanish/inference9.wav"
+  },
+
+  // ⭐ Choice audio
+  choiceAudio: {
+    options: [
+      ["spanish/audio/sale_a_buscarlo_por_la_calle.wav"],
+      ["spanish/audio/se_va_a_dormir_tranquilamente.wav"],
+      ["spanish/audio/compra_otro_perro_inmediatamente.wav"],
+      ["spanish/audio/el_perro_se_convierte_en_superheroe.wav"]
+    ]
+  },
+
+  // ⭐ Meaning audio
+  meaningAudio: [
+    ["spanish/audio/sale_a_buscarlo_por_la_calle.wav"],
+    ["spanish/audio/se_va_a_dormir_tranquilamente.wav"],
+    ["spanish/audio/compra_otro_perro_inmediatamente.wav"],
+    ["spanish/audio/el_perro_se_convierte_en_superheroe.wav"]
+  ],
+
+  // ⭐ Chunk breakdown
+  chunks: [
+    { spanish: "Cuando el perro se escapó", english: "When the dog ran away" },
+    { spanish: "del patio", english: "from the yard" },
+    { spanish: "¿qué va a hacer el dueño después?", english: "what will the owner do next?" }
+  ]
+},
+
+
+
+
 
 
 

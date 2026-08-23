@@ -5879,6 +5879,102 @@ const sentences = [
 
 
 
+{
+  id: "l1-100",
+  meaning: "to wipe the surface",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "uwatsura",
+      hiragana: "うわつら",
+      meaning: "surface",
+      audio: {
+        daughter: "audio/sentences/uwatsura.wav",
+        me: "audio/sentences/uwatsura.wav"
+      }
+    },
+
+    {
+      romaji: "wo",
+      hiragana: "を",
+      meaning: "object marker",
+      audio: {
+        daughter: "audio/sentences/wo.wav",
+        me: "audio/sentences/wo.wav"
+      }
+    },
+
+    {
+      romaji: "fuku",
+      hiragana: "ふく",
+      meaning: "to wipe",
+      audio: {
+        daughter: "audio/sentences/fuku.wav",
+        me: "audio/sentences/fuku.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l1-101",
+  meaning: "to emit a bad smell",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "akushuu",
+      hiragana: "あくしゅう",
+      meaning: "bad smell / stench",
+      audio: {
+        daughter: "audio/sentences/akushuu.wav",
+        me: "audio/sentences/akushuu.wav"
+      }
+    },
+
+    {
+      romaji: "wo",
+      hiragana: "を",
+      meaning: "object marker",
+      audio: {
+        daughter: "audio/sentences/wo.wav",
+        me: "audio/sentences/wo.wav"
+      }
+    },
+
+    {
+      romaji: "hanatsu",
+      hiragana: "はなつ",
+      meaning: "to emit / to release",
+      audio: {
+        daughter: "audio/sentences/hanatsu.wav",
+        me: "audio/sentences/hanatsu.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 // ⭐ ADD THIS PATCH RIGHT HERE
