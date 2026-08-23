@@ -3338,6 +3338,115 @@ me: "audio/se_tacher.wav"
 
 
 
+
+
+
+
+
+{
+  id: "l1-fr-55",
+  meaning: "to take out the trash",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "sortir",
+      hiragana: "sortir",
+      meaning: "to take out / to remove",
+      audio: {
+        daughter: "audio/sortir.wav",
+        me: "audio/sortir.wav"
+      }
+    },
+
+    {
+      romaji: "les",
+      hiragana: "les",
+      meaning: "the (plural)",
+      audio: {
+        daughter: "audio/les.wav",
+        me: "audio/les.wav"
+      }
+    },
+
+    {
+      romaji: "poubelles",
+      hiragana: "poubelles",
+      meaning: "trash bins",
+      audio: {
+        daughter: "audio/poubelles.wav",
+        me: "audio/poubelles.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+{
+  id: "l1-fr-56",
+  meaning: "I take out the trash",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "je",
+      hiragana: "je",
+      meaning: "I",
+      audio: {
+        daughter: "audio/je.wav",
+        me: "audio/je.wav"
+      }
+    },
+
+    {
+      romaji: "sors",
+      hiragana: "sors",
+      meaning: "take out (I form)",
+      audio: {
+        daughter: "audio/sors.wav",
+        me: "audio/sors.wav"
+      }
+    },
+
+    {
+      romaji: "les",
+      hiragana: "les",
+      meaning: "the (plural)",
+      audio: {
+        daughter: "audio/les.wav",
+        me: "audio/les.wav"
+      }
+    },
+
+    {
+      romaji: "poubelles",
+      hiragana: "poubelles",
+      meaning: "trash bins",
+      audio: {
+        daughter: "audio/poubelles.wav",
+        me: "audio/poubelles.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 // ⭐ ADD THIS PATCH RIGHT HERE
