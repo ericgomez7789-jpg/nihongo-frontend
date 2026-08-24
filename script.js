@@ -3694,6 +3694,17 @@ const sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
 {
    id: "l1-51",
   meaning: "Listen to the sound",
@@ -3728,6 +3739,19 @@ const sentences = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
    id: "l1-52",
   meaning: "Speak out",
@@ -5965,6 +5989,54 @@ const sentences = [
   ]
 },
 
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l1-102",
+  meaning: "to ask your mom",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "okaasan",
+      hiragana: "おかあさん",
+      meaning: "mom / mother",
+      audio: {
+        daughter: "audio/sentences/okaasan.wav",
+        me: "audio/sentences/okaasan.wav"
+      }
+    },
+
+    {
+      romaji: "ni",
+      hiragana: "に",
+      meaning: "to (direction marker)",
+      audio: {
+        daughter: "audio/sentences/ni.wav",
+        me: "audio/sentences/ni.wav"
+      }
+    },
+
+    {
+      romaji: "kiku",
+      hiragana: "きく",
+      meaning: "to ask",
+      audio: {
+        daughter: "audio/sentences/kiku.wav",
+        me: "audio/sentences/kiku.wav"
+      }
+    }
+  ]
+},
 
 
 
