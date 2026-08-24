@@ -3246,7 +3246,6 @@ me: "audio/se_tacher.wav"
 
 
 
-
 {
   id: "l1-fr-53",
   meaning: "water the plants",
@@ -3282,9 +3281,13 @@ me: "audio/se_tacher.wav"
         me: "audio/plantes.wav"
       }
     }
-  ]
-},
+  ],
 
+  fullAudio: {
+    daughter: "audio/sentences/sentence7.wav",
+    me:       "audio/sentences/sentence7.wav"
+  }
+},
 
 
 
@@ -3389,9 +3392,10 @@ me: "audio/se_tacher.wav"
 
 
 
+
 {
-  id: "l1-fr-56",
-  meaning: "I take out the trash",
+  id: "l1-fr-57",
+  meaning: "I brush my teeth",
   level: 1,
 
   chunks: [
@@ -3406,12 +3410,22 @@ me: "audio/se_tacher.wav"
     },
 
     {
-      romaji: "sors",
-      hiragana: "sors",
-      meaning: "take out (I form)",
+      romaji: "me",
+      hiragana: "me",
+      meaning: "myself",
       audio: {
-        daughter: "audio/sors.wav",
-        me: "audio/sors.wav"
+        daughter: "audio/me.wav",
+        me: "audio/me.wav"
+      }
+    },
+
+    {
+      romaji: "brosse",
+      hiragana: "brosse",
+      meaning: "brush (I form)",
+      audio: {
+        daughter: "audio/brosse.wav",
+        me: "audio/brosse.wav"
       }
     },
 
@@ -3426,17 +3440,21 @@ me: "audio/se_tacher.wav"
     },
 
     {
-      romaji: "poubelles",
-      hiragana: "poubelles",
-      meaning: "trash bins",
+      romaji: "dents",
+      hiragana: "dents",
+      meaning: "teeth",
       audio: {
-        daughter: "audio/poubelles.wav",
-        me: "audio/poubelles.wav"
+        daughter: "audio/dents.wav",
+        me: "audio/dents.wav"
       }
     }
-  ]
-},
+  ],
 
+  fullAudio: {
+    daughter: "audio/sentences/sentence8.wav",
+    me:       "audio/sentences/sentence8.wav"
+  }
+},
 
 
 
