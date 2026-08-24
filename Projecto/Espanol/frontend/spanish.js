@@ -2119,6 +2119,12 @@ me: "audio/spanish/silla.wav"
 
 
 
+
+
+
+
+
+
 {
   id: "l1-es-37",
   meaning: "take out the trash",
@@ -2157,6 +2163,63 @@ me: "audio/spanish/silla.wav"
   ]
 },
 
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l1-es-38",
+  meaning: "walked around the neighborhood",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "camine",
+      hiragana: "camine",
+      meaning: "I walked",
+      audio: {
+        daughter: "audio/spanish/camine.wav",
+        me: "audio/spanish/camine.wav"
+      }
+    },
+
+    {
+      romaji: "alrededor",
+      hiragana: "alrededor",
+      meaning: "around",
+      audio: {
+        daughter: "audio/spanish/alrededor.wav",
+        me: "audio/spanish/alrededor.wav"
+      }
+    },
+
+    {
+      romaji: "del",
+      hiragana: "del",
+      meaning: "of the / from the",
+      audio: {
+        daughter: "audio/spanish/del.wav",
+        me: "audio/spanish/del.wav"
+      }
+    },
+
+    {
+      romaji: "vecindario",
+      hiragana: "vecindario",
+      meaning: "neighborhood",
+      audio: {
+        daughter: "audio/spanish/vecindario.wav",
+        me: "audio/spanish/vecindario.wav"
+      }
+    }
+  ]
+},
 
 
 
@@ -5096,6 +5159,81 @@ const level3 = [
   ]
 },
 
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "es3-10",
+  meaning: "Metí la comida en la microonda, ¿qué ocurre después?",
+  level: 3,
+
+  // ⭐ Spanish inference options
+  options: [
+    "La caliento presionando el botón",
+    "La saco sin calentarla",
+    "La microonda se convierte en un robot",
+    "La comida desaparece mágicamente"
+  ],
+
+  // ⭐ Underscore format
+  optionsRomaji: [
+    "la_caliento_presionando_el_boton",
+    "la_saco_sin_calentarla",
+    "la_microonda_se_convierte_en_un_robot",
+    "la_comida_desaparece_magicamente"
+  ],
+
+  // ⭐ English glosses
+  optionsEN: [
+    "I heat it by pressing the button",
+    "I take it out without heating it",
+    "the microwave turns into a robot",
+    "the food disappears magically"
+  ],
+
+  // ⭐ Correct answer
+  correct: "La caliento presionando el botón",
+
+  // ⭐ Full-sentence audio
+  fullAudio: {
+    daughter: "audio/spanish/inference10.wav",
+    me:       "audio/spanish/inference10.wav"
+  },
+
+  // ⭐ Choice audio
+  choiceAudio: {
+    options: [
+      ["spanish/audio/la_caliento_presionando_el_boton.wav"],
+      ["spanish/audio/la_saco_sin_calentarla.wav"],
+      ["spanish/audio/la_microonda_se_convierte_en_un_robot.wav"],
+      ["spanish/audio/la_comida_desaparece_magicamente.wav"]
+    ]
+  },
+
+  // ⭐ Meaning audio
+  meaningAudio: [
+    ["spanish/audio/la_caliento_presionando_el_boton.wav"],
+    ["spanish/audio/la_saco_sin_calentarla.wav"],
+    ["spanish/audio/la_microonda_se_convierte_en_un_robot.wav"],
+    ["spanish/audio/la_comida_desaparece_magicamente.wav"]
+  ],
+
+  // ⭐ Chunk breakdown
+  chunks: [
+    { spanish: "Metí la comida", english: "I put the food in" },
+    { spanish: "en la microonda", english: "in the microwave" },
+    { spanish: "¿qué ocurre después?", english: "what happens next?" }
+  ]
+},
 
 
 
