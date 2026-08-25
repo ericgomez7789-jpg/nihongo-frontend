@@ -2231,6 +2231,64 @@ me: "audio/spanish/silla.wav"
 
 
 
+
+
+{
+  id: "l1-es-39",
+  meaning: "I go outside the place",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "voy",
+      hiragana: "voy",
+      meaning: "I go",
+      audio: {
+        daughter: "audio/spanish/voy.wav",
+        me: "audio/spanish/voy.wav"
+      }
+    },
+
+    {
+      romaji: "afuera",
+      hiragana: "afuera",
+      meaning: "outside",
+      audio: {
+        daughter: "audio/spanish/afuera.wav",
+        me: "audio/spanish/afuera.wav"
+      }
+    },
+
+    {
+      romaji: "del",
+      hiragana: "del",
+      meaning: "of the / from the",
+      audio: {
+        daughter: "audio/spanish/del.wav",
+        me: "audio/spanish/del.wav"
+      }
+    },
+
+    {
+      romaji: "lugar",
+      hiragana: "lugar",
+      meaning: "place",
+      audio: {
+        daughter: "audio/spanish/lugar.wav",
+        me: "audio/spanish/lugar.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
 ];
 
 // ⭐ ADD THIS PATCH RIGHT HERE
@@ -5236,6 +5294,72 @@ const level3 = [
 },
 
 
+
+
+
+
+
+
+
+
+
+
+{
+  id: "es3-11",
+  meaning: "Entro al baño, abro la regadera, espero que se caliente el agua, ¿qué ocurre después?",
+  level: 3,
+
+  options: [
+    "Me meto a la regadera para bañarme",
+    "Cierro la regadera sin bañarme",
+    "La regadera empieza a cantar ópera",
+    "El agua se convierte en chocolate caliente"
+  ],
+
+  optionsRomaji: [
+    "me_meto_a_la_regadera_para_banarme",
+    "cierro_la_regadera_sin_banarme",
+    "la_regadera_empieza_a_cantar_opera",
+    "el_agua_se_convierte_en_chocolate_caliente"
+  ],
+
+  optionsEN: [
+    "I get into the shower to bathe",
+    "I turn off the shower without bathing",
+    "the shower starts singing opera",
+    "the water turns into hot chocolate"
+  ],
+
+  correct: "Me meto a la regadera para bañarme",
+
+  fullAudio: {
+    daughter: "audio/spanish/inference11.wav",
+    me:       "audio/spanish/inference11.wav"
+  },
+
+  choiceAudio: {
+    options: [
+      ["spanish/audio/me_meto_a_la_regadera_para_banarme.wav"],
+      ["spanish/audio/cierro_la_regadera_sin_banarme.wav"],
+      ["spanish/audio/la_regadera_empieza_a_cantar_opera.wav"],
+      ["spanish/audio/el_agua_se_convierte_en_chocolate_caliente.wav"]
+    ]
+  },
+
+  meaningAudio: [
+    ["spanish/audio/me_meto_a_la_regadera_para_banarme.wav"],
+    ["spanish/audio/cierro_la_regadera_sin_banarme.wav"],
+    ["spanish/audio/la_regadera_empieza_a_cantar_opera.wav"],
+    ["spanish/audio/el_agua_se_convierte_en_chocolate_caliente.wav"]
+  ],
+
+  chunks: [
+    { spanish: "Entro al baño", english: "I enter the bathroom" },
+    { spanish: "abro la regadera", english: "I turn on the shower" },
+    { spanish: "espero que se caliente el agua", english: "I wait for the water to heat up" },
+    { spanish: "¿qué ocurre después?", english: "what happens next?" }
+  ]
+},
 
 
 
