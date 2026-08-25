@@ -3393,8 +3393,13 @@ me: "audio/se_tacher.wav"
 
 
 
+
+
+
+
+
 {
-  id: "l1-fr-57",
+  id: "l1-fr-56",
   meaning: "I brush my teeth",
   level: 1,
 
@@ -3456,6 +3461,70 @@ me: "audio/se_tacher.wav"
   }
 },
 
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l1-fr-57",
+  meaning: "you pet the dog",
+  level: 1,
+
+  chunks: [
+    {
+      romaji: "tu",
+      hiragana: "tu",
+      meaning: "you (singular)",
+      audio: {
+        daughter: "audio/tu.wav",
+        me: "audio/tu.wav"
+      }
+    },
+
+    {
+      romaji: "caresses",
+      hiragana: "caresses",
+      meaning: "pet / caress (you form)",
+      audio: {
+        daughter: "audio/caresses.wav",
+        me: "audio/caresses.wav"
+      }
+    },
+
+    {
+      romaji: "le",
+      hiragana: "le",
+      meaning: "the (masculine)",
+      audio: {
+        daughter: "audio/le.wav",
+        me: "audio/le.wav"
+      }
+    },
+
+    {
+      romaji: "chien",
+      hiragana: "chien",
+      meaning: "dog",
+      audio: {
+        daughter: "audio/chien.wav",
+        me: "audio/chien.wav"
+      }
+    }
+  ],
+
+  fullAudio: {
+    daughter: "audio/sentences/sentence9.wav",
+    me:       "audio/sentences/sentence9.wav"
+  }
+},
 
 
 
