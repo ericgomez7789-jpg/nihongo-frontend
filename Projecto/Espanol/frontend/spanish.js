@@ -2289,6 +2289,63 @@ me: "audio/spanish/silla.wav"
 
 
 
+
+
+{
+  "id": "l1-es-40",
+  "meaning": "the fire spreads",
+  "level": 1,
+
+  "chunks": [
+    {
+      "romaji": "el",
+      "hiragana": "el",
+      "meaning": "the",
+      "audio": {
+        "daughter": "audio/spanish/el.wav",
+        "me": "audio/spanish/el.wav"
+      }
+    },
+
+    {
+      "romaji": "fuego",
+      "hiragana": "fuego",
+      "meaning": "fire",
+      "audio": {
+        "daughter": "audio/spanish/fuego.wav",
+        "me": "audio/spanish/fuego.wav"
+      }
+    },
+
+    {
+      "romaji": "se",
+      "hiragana": "se",
+      "meaning": "reflexive marker",
+      "audio": {
+        "daughter": "audio/spanish/se.wav",
+        "me": "audio/spanish/se.wav"
+      }
+    },
+
+    {
+      "romaji": "esparce",
+      "hiragana": "esparce",
+      "meaning": "spreads",
+      "audio": {
+        "daughter": "audio/spanish/esparce.wav",
+        "me": "audio/spanish/esparce.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
 ];
 
 // ⭐ ADD THIS PATCH RIGHT HERE
@@ -5361,6 +5418,74 @@ const level3 = [
   ]
 },
 
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  "id": "es3-12",
+  "meaning": "Me siento en la sala, agarro el control, y presiono el botón… ¿qué ocurre después?",
+  "level": 3,
+
+  "options": [
+    "La televisión se enciende",
+    "El control se rompe en dos",
+    "El botón empieza a gritar mi nombre",
+    "La sala se convierte en un cine"
+  ],
+
+  "optionsRomaji": [
+    "la_television_se_enciende",
+    "el_control_se_rompe_en_dos",
+    "el_boton_empieza_a_gritar_mi_nombre",
+    "la_sala_se_convierte_en_un_cine"
+  ],
+
+  "optionsEN": [
+    "the TV turns on",
+    "the remote breaks in two",
+    "the button starts shouting my name",
+    "the living room turns into a movie theater"
+  ],
+
+  "correct": "La televisión se enciende",
+
+  "fullAudio": {
+    "daughter": "audio/spanish/inference12.wav",
+    "me":       "audio/spanish/inference12.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["spanish/audio/la_television_se_enciende.wav"],
+      ["spanish/audio/el_control_se_rompe_en_dos.wav"],
+      ["spanish/audio/el_boton_empieza_a_gritar_mi_nombre.wav"],
+      ["spanish/audio/la_sala_se_convierte_en_un_cine.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["spanish/audio/la_television_se_enciende.wav"],
+    ["spanish/audio/el_control_se_rompe_en_dos.wav"],
+    ["spanish/audio/el_boton_empieza_a_gritar_mi_nombre.wav"],
+    ["spanish/audio/la_sala_se_convierte_en_un_cine.wav"]
+  ],
+
+  "chunks": [
+    { "spanish": "Me siento en la sala", "english": "I sit in the living room" },
+    { "spanish": "agarro el control", "english": "I grab the remote" },
+    { "spanish": "presiono el botón", "english": "I press the button" },
+    { "spanish": "¿qué ocurre después?", "english": "what happens next?" }
+  ]
+},
 
 
 

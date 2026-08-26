@@ -28706,6 +28706,16 @@ const level6 = [
 
 
 
+
+
+
+
+
+
+
+
+
+
 {
   id: "l6_012",
   meaning: "I sat comfortably, picked up the remote within reach, aimed it, and pressed the button. What happens next?",
