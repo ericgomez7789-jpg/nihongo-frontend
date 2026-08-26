@@ -6047,6 +6047,101 @@ const sentences = [
 
 
 
+
+
+{
+  "id": "l1-103",
+  "meaning": "the fire spreads",
+  "level": 1,
+
+  "chunks": [
+    {
+      "romaji": "kaji",
+      "hiragana": "かじ",
+      "meaning": "fire (a fire incident)",
+      "audio": {
+        "daughter": "audio/sentences/kaji.wav",
+        "me": "audio/sentences/kaji.wav"
+      }
+    },
+
+    {
+      "romaji": "ga",
+      "hiragana": "が",
+      "meaning": "subject marker",
+      "audio": {
+        "daughter": "audio/sentences/ga.wav",
+        "me": "audio/sentences/ga.wav"
+      }
+    },
+
+    {
+      "romaji": "hirogaru",
+      "hiragana": "ひろがる",
+      "meaning": "to spread",
+      "audio": {
+        "daughter": "audio/sentences/hirogaru.wav",
+        "me": "audio/sentences/hirogaru.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+{
+  "id": "l1-104",
+  "meaning": "sparks fly",
+  "level": 1,
+
+  "chunks": [
+    {
+      "romaji": "hibana",
+      "hiragana": "ひばな",
+      "meaning": "sparks",
+      "audio": {
+        "daughter": "audio/sentences/hibana.wav",
+        "me": "audio/sentences/hibana.wav"
+      }
+    },
+
+    {
+      "romaji": "ga",
+      "hiragana": "が",
+      "meaning": "subject marker",
+      "audio": {
+        "daughter": "audio/sentences/ga.wav",
+        "me": "audio/sentences/ga.wav"
+      }
+    },
+
+    {
+      "romaji": "chiru",
+      "hiragana": "ちる",
+      "meaning": "to scatter / to fly",
+      "audio": {
+        "daughter": "audio/sentences/chiru.wav",
+        "me": "audio/sentences/chiru.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
 ];
 
 // ⭐ ADD THIS PATCH RIGHT HERE
