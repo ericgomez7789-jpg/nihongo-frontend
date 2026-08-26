@@ -3534,6 +3534,82 @@ me: "audio/se_tacher.wav"
 
 
 
+
+
+{
+  "id": "l1-fr-58",
+  "meaning": "I am going to pet the dog",
+  "level": 1,
+
+  "chunks": [
+    {
+      "romaji": "je",
+      "hiragana": "je",
+      "meaning": "I",
+      "audio": {
+        "daughter": "audio/je.wav",
+        "me": "audio/je.wav"
+      }
+    },
+
+    {
+      "romaji": "vais",
+      "hiragana": "vais",
+      "meaning": "am going to",
+      "audio": {
+        "daughter": "audio/vais.wav",
+        "me": "audio/vais.wav"
+      }
+    },
+
+    {
+      "romaji": "caresser",
+      "hiragana": "caresser",
+      "meaning": "to pet / to caress",
+      "audio": {
+        "daughter": "audio/caresser.wav",
+        "me": "audio/caresser.wav"
+      }
+    },
+
+    {
+      "romaji": "le",
+      "hiragana": "le",
+      "meaning": "the (masculine)",
+      "audio": {
+        "daughter": "audio/le.wav",
+        "me": "audio/le.wav"
+      }
+    },
+
+    {
+      "romaji": "chien",
+      "hiragana": "chien",
+      "meaning": "dog",
+      "audio": {
+        "daughter": "audio/chien.wav",
+        "me": "audio/chien.wav"
+      }
+    }
+  ],
+
+  "fullAudio": {
+    "daughter": "audio/sentences/sentence10.wav",
+    "me":       "audio/sentences/sentence10.wav"
+  }
+},
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 // ⭐ ADD THIS PATCH RIGHT HERE
