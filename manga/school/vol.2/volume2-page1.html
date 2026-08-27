@@ -4,94 +4,106 @@
   <meta charset="UTF-8">
   <title>School Manga — Vol.2 Page 1</title>
 
-<style>
-  body {
-    margin: 0;
-    background: #fff;
-    font-family: sans-serif;
-    color: #000;
-  }
+  <style>
+    body {
+      margin: 0;
+      background-color: #0d0d0d;
+      color: #e6e6e6;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
 
-  .content-block {
-    max-width: 900px;
-    margin: 20px auto;
-    padding: 20px;
-  }
+    .panel {
+      max-width: 900px;
+      margin: 0 auto;
+    }
 
-  .audio-block {
-    text-align: center;
-    margin-bottom: 20px;
-  }
+    .bubble-text {
+      background-color: #1a1a1a;
+      padding: 16px;
+      border-radius: 10px;
+      margin-top: 20px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-  .bubble-text {
-    border: 2px solid #ccc;
-    padding: 20px;
-    border-radius: 10px;
-    background: #fafafa;
-  }
+    .jp, .romaji, .en, .es {
+      display: block;
+      margin-bottom: 8px;
+    }
 
-  .jp, .romaji {
-    font-weight: bold;
-    font-size: 1.2rem;
-  }
+    .jp { color: #ffffff; }
+    .romaji { color: #b3b3b3; }
+    .en { color: #7fd1ff; }
+    .es { color: #4ea3ff; }
 
-  .en, .es {
-    margin-top: 10px;
-    opacity: 0.9;
-  }
+    audio {
+      width: 100%;
+      margin-top: 20px;
+    }
 
-  .next-button {
-    text-align: center;
-    margin: 30px 0;
-  }
+    .button-row {
+      text-align: center;
+      margin: 40px 0;
+    }
 
-  .next-button a {
-    padding: 10px 20px;
-    background: #444;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 6px;
-  }
-</style>
+    .button-row a,
+    #repeatBtn {
+      padding: 10px 20px;
+      background: #444;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      margin: 0 10px;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .button-row a:hover,
+    #repeatBtn:hover {
+      background: #666;
+    }
+  </style>
 </head>
 
 <body>
 
-  <div class="content-block">
+  <!-- Audio -->
+  <div class="panel">
+    <audio controls>
+      <source src="audio/page1.wav" type="audio/wav">
+      Your browser does not support audio playback.
+    </audio>
+  </div>
 
-    <div class="audio-block">
-      <p>Listen to the voice‑acted line:</p>
-      <audio controls>
-        <source src="audio/page1.wav" type="audio/wav">
-      </audio>
-    </div>
+  <!-- Text -->
+  <div class="bubble-text">
+    <span class="jp">
+      みなさん、こんにちは。<br>
+      だれか、２ × ７ は いくつか教えてくれますか。
+    </span>
 
-    <div class="bubble-text">
-      <span class="jp">
-        みなさん、こんにちは。<br>
-        だれか、２ × ７ は いくつか教えてくれますか。
-      </span>
+    <span class="romaji">
+      Minasan, konnichiwa.<br>
+      Dareka, ni kakeru nana wa ikutsu ka oshiete kuremasu ka.
+    </span>
 
-      <span class="romaji">
-        Minasan, konnichiwa.<br>
-        Dareka, ni kakeru nana wa ikutsu ka oshiete kuremasu ka.
-      </span>
+    <span class="en">
+      Hello class, good morning.<br>
+      Can someone tell me how much two times seven is.
+    </span>
 
-      <span class="en">
-        Hello class, good morning.<br>
-        Can someone tell me how much two times seven is.
-      </span>
+    <span class="es">
+      Hola clase, buenos días.<br>
+      ¿Alguien me puede decir cuánto es dos por siete?
+    </span>
+  </div>
 
-      <span class="es">
-        Hola clase, buenos días.<br>
-        ¿Alguien me puede decir cuánto es dos por siete?
-      </span>
-    </div>
-
-    <div class="next-button">
-      <a href="volume2-page2.html">Next ▶</a>
-    </div>
-
+  <!-- Next Button -->
+  <div class="button-row">
+    <a href="volume2-page2.html">Next ▶</a>
   </div>
 
 </body>
