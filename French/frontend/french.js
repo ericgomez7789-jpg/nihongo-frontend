@@ -2913,6 +2913,11 @@ me: "audio/se_tacher.wav"
 
 
 
+
+
+
+
+
 {
   id: "l1-fr-47",
   meaning: "do you like to dance?",
@@ -2970,6 +2975,11 @@ me: "audio/se_tacher.wav"
     }
   ]
 },
+
+
+
+
+
 
 
 
@@ -3599,6 +3609,77 @@ me: "audio/se_tacher.wav"
   }
 },
 
+
+
+
+
+
+
+
+
+
+{
+  "id": "l1-fr-59",
+  "meaning": "I do the exercise",
+  "level": 1,
+
+  "chunks": [
+    {
+      "romaji": "je",
+      "hiragana": "je",
+      "meaning": "I",
+      "audio": {
+        "daughter": "audio/je.wav",
+        "me": "audio/je.wav"
+      }
+    },
+
+    {
+      "romaji": "fais",
+      "hiragana": "fais",
+      "meaning": "do",
+      "audio": {
+        "daughter": "audio/fais.wav",
+        "me": "audio/fais.wav"
+      }
+    },
+
+    {
+      "romaji": "de",
+      "hiragana": "de",
+      "meaning": "of",
+      "audio": {
+        "daughter": "audio/de.wav",
+        "me": "audio/de.wav"
+      }
+    },
+
+    {
+      "romaji": "exercice",
+      "hiragana": "exercice",
+      "meaning": "exercise",
+      "audio": {
+        "daughter": "audio/exercice.wav",
+        "me": "audio/exercice.wav"
+      }
+    },
+
+    {
+      "romaji": "de l'exercice",
+      "hiragana": "de l'exercice",
+      "meaning": "of the exercise",
+      "audio": {
+        "daughter": "audio/de-l-exercice.wav",
+        "me": "audio/de-l-exercice.wav"
+      }
+    }
+  ],
+
+  "fullAudio": {
+    "daughter": "audio/sentences/sentence11.wav",
+    "me":       "audio/sentences/sentence11.wav"
+  }
+},
 
 
 
