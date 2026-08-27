@@ -2346,6 +2346,53 @@ me: "audio/spanish/silla.wav"
 
 
 
+
+
+
+{
+  "id": "l1-es-41",
+  "meaning": "the sparks crackle",
+  "level": 1,
+
+  "chunks": [
+    {
+      "romaji": "las",
+      "hiragana": "las",
+      "meaning": "the (plural, feminine)",
+      "audio": {
+        "daughter": "audio/spanish/las.wav",
+        "me": "audio/spanish/las.wav"
+      }
+    },
+
+    {
+      "romaji": "chispas",
+      "hiragana": "chispas",
+      "meaning": "sparks",
+      "audio": {
+        "daughter": "audio/spanish/chispas.wav",
+        "me": "audio/spanish/chispas.wav"
+      }
+    },
+
+    {
+      "romaji": "chisporrotean",
+      "hiragana": "chisporrotean",
+      "meaning": "crackle / sizzle",
+      "audio": {
+        "daughter": "audio/spanish/chisporrotean.wav",
+        "me": "audio/spanish/chisporrotean.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
 ];
 
 // ⭐ ADD THIS PATCH RIGHT HERE
@@ -5489,6 +5536,72 @@ const level3 = [
 
 
 
+
+
+
+
+
+
+
+
+
+
+{
+  "id": "es3-13",
+  "meaning": "Tenía calor, abrí la ventana, respiré el aire fresco… ¿qué ocurre después?",
+  "level": 3,
+
+  "options": [
+    "Me siento mucho mejor",
+    "Un pájaro entra volando a la casa",
+    "La ventana empieza a reírse",
+    "El aire fresco se convierte en helado de vainilla"
+  ],
+
+  "optionsRomaji": [
+    "me_siento_mucho_mejor",
+    "un_pajaro_entra_volando_a_la_casa",
+    "la_ventana_empieza_a_reirse",
+    "el_aire_fresco_se_convierte_en_helado_de_vainilla"
+  ],
+
+  "optionsEN": [
+    "I feel much better",
+    "a bird flies into the house",
+    "the window starts laughing",
+    "the fresh air turns into vanilla ice cream"
+  ],
+
+  "correct": "Me siento mucho mejor",
+
+  "fullAudio": {
+    "daughter": "audio/spanish/inference13.wav",
+    "me":       "audio/spanish/inference13.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["spanish/audio/me_siento_mucho_mejor.wav"],
+      ["spanish/audio/un_pajaro_entra_volando_a_la_casa.wav"],
+      ["spanish/audio/la_ventana_empieza_a_reirse.wav"],
+      ["spanish/audio/el_aire_fresco_se_convierte_en_helado_de_vainilla.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["spanish/audio/me_siento_mucho_mejor.wav"],
+    ["spanish/audio/un_pajaro_entra_volando_a_la_casa.wav"],
+    ["spanish/audio/la_ventana_empieza_a_reirse.wav"],
+    ["spanish/audio/el_aire_fresco_se_convierte_en_helado_de_vainilla.wav"]
+  ],
+
+  "chunks": [
+    { "spanish": "Tenía calor", "english": "I was hot" },
+    { "spanish": "abrí la ventana", "english": "I opened the window" },
+    { "spanish": "respiré el aire fresco", "english": "I breathed the fresh air" },
+    { "spanish": "¿qué ocurre después?", "english": "what happens next?" }
+  ]
+},
 
 
 
