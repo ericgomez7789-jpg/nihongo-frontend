@@ -6258,6 +6258,93 @@ const sentences = [
 
 
 
+
+
+
+
+{
+  "id": "l1-106",
+  "meaning": "pick a booger from inside the nose",
+  "level": 1,
+
+  "chunks": [
+    {
+      "romaji": "hana",
+      "hiragana": "はな",
+      "meaning": "nose",
+      "audio": {
+        "daughter": "audio/sentences/hana.wav",
+        "me": "audio/sentences/hana.wav"
+      }
+    },
+
+    {
+      "romaji": "no",
+      "hiragana": "の",
+      "meaning": "possessive marker",
+      "audio": {
+        "daughter": "audio/sentences/no.wav",
+        "me": "audio/sentences/no.wav"
+      }
+    },
+
+    {
+      "romaji": "naka",
+      "hiragana": "なか",
+      "meaning": "inside",
+      "audio": {
+        "daughter": "audio/sentences/naka.wav",
+        "me": "audio/sentences/naka.wav"
+      }
+    },
+
+    {
+      "romaji": "kara",
+      "hiragana": "から",
+      "meaning": "from",
+      "audio": {
+        "daughter": "audio/sentences/kara.wav",
+        "me": "audio/sentences/kara.wav"
+      }
+    },
+
+    {
+      "romaji": "hanakuso",
+      "hiragana": "はなくそ",
+      "meaning": "booger",
+      "audio": {
+        "daughter": "audio/sentences/hanakuso.wav",
+        "me": "audio/sentences/hanakuso.wav"
+      }
+    },
+
+    {
+      "romaji": "wo",
+      "hiragana": "を",
+      "meaning": "object marker",
+      "audio": {
+        "daughter": "audio/sentences/wo.wav",
+        "me": "audio/sentences/wo.wav"
+      }
+    },
+
+    {
+      "romaji": "hojiru",
+      "hiragana": "ほじる",
+      "meaning": "to pick / dig out",
+      "audio": {
+        "daughter": "audio/sentences/hojiru.wav",
+        "me": "audio/sentences/hojiru.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
 ];
 
 // ⭐ ADD THIS PATCH RIGHT HERE
