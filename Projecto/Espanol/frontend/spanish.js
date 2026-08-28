@@ -2393,6 +2393,52 @@ me: "audio/spanish/silla.wav"
 
 
 
+
+
+
+
+{
+  "id": "l1-es-42",
+  "meaning": "I grab the towel",
+  "level": 1,
+
+  "chunks": [
+    {
+      "romaji": "agarro",
+      "hiragana": "agarro",
+      "meaning": "I grab",
+      "audio": {
+        "daughter": "audio/spanish/agarro.wav",
+        "me": "audio/spanish/agarro.wav"
+      }
+    },
+
+    {
+      "romaji": "la",
+      "hiragana": "la",
+      "meaning": "the (feminine)",
+      "audio": {
+        "daughter": "audio/spanish/la.wav",
+        "me": "audio/spanish/la.wav"
+      }
+    },
+
+    {
+      "romaji": "toalla",
+      "hiragana": "toalla",
+      "meaning": "towel",
+      "audio": {
+        "daughter": "audio/spanish/toalla.wav",
+        "me": "audio/spanish/toalla.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
 ];
 
 // ⭐ ADD THIS PATCH RIGHT HERE
@@ -5602,6 +5648,78 @@ const level3 = [
     { "spanish": "¿qué ocurre después?", "english": "what happens next?" }
   ]
 },
+
+
+
+
+
+
+
+
+
+{
+  "id": "es3-14",
+  "meaning": "De repente me acordé de algo vergonzoso, cubrí mi cara, y lloriqueé… ¿qué ocurre después?",
+  "level": 3,
+
+  "options": [
+    "Me tranquilizo poco a poco",
+    "Mi cara se pone roja como un tomate",
+    "La vergüenza se convierte en una nube que flota en la sala",
+    "Un duende aparece para burlarse de mí"
+  ],
+
+  "optionsRomaji": [
+    "me_tranquilizo_poco_a_poco",
+    "mi_cara_se_pone_roja_como_un_tomate",
+    "la_verguenza_se_convierte_en_una_nube_que_flota_en_la_sala",
+    "un_duende_aparece_para_burlarse_de_mi"
+  ],
+
+  "optionsEN": [
+    "I calm down little by little",
+    "my face turns red like a tomato",
+    "the embarrassment turns into a cloud floating in the room",
+    "a goblin appears to make fun of me"
+  ],
+
+  "correct": "Me tranquilizo poco a poco",
+
+  "fullAudio": {
+    "daughter": "audio/spanish/inference14.wav",
+    "me":       "audio/spanish/inference14.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["spanish/audio/me_tranquilizo_poco_a_poco.wav"],
+      ["spanish/audio/mi_cara_se_pone_roja_como_un_tomate.wav"],
+      ["spanish/audio/la_verguenza_se_convierte_en_una_nube_que_flota_en_la_sala.wav"],
+      ["spanish/audio/un_duende_aparece_para_burlarse_de_mi.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["spanish/audio/me_tranquilizo_poco_a_poco.wav"],
+    ["spanish/audio/mi_cara_se_pone_roja_como_un_tomate.wav"],
+    ["spanish/audio/la_verguenza_se_convierte_en_una_nube_que_flota_en_la_sala.wav"],
+    ["spanish/audio/un_duende_aparece_para_burlarse_de_mi.wav"]
+  ],
+
+  "chunks": [
+    { "spanish": "De repente me acordé de algo vergonzoso", "english": "Suddenly I remembered something embarrassing" },
+    { "spanish": "cubrí mi cara", "english": "I covered my face" },
+    { "spanish": "y lloriqueé", "english": "and I whimpered" },
+    { "spanish": "¿qué ocurre después?", "english": "what happens next?" }
+  ]
+},
+
+
+
+
+
+
+
 
 
 
