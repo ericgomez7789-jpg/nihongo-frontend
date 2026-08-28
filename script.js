@@ -6142,6 +6142,122 @@ const sentences = [
 
 
 
+
+
+
+{
+  "id": "l1-105",
+  "meaning": "remove the food stuck between the teeth with floss",
+  "level": 1,
+
+  "chunks": [
+    {
+      "romaji": "furosu",
+      "hiragana": "フロス",
+      "meaning": "floss",
+      "audio": {
+        "daughter": "audio/sentences/furosu.wav",
+        "me": "audio/sentences/furosu.wav"
+      }
+    },
+
+    {
+      "romaji": "de",
+      "hiragana": "で",
+      "meaning": "with / using",
+      "audio": {
+        "daughter": "audio/sentences/de.wav",
+        "me": "audio/sentences/de.wav"
+      }
+    },
+
+    {
+      "romaji": "ha",
+      "hiragana": "は",
+      "meaning": "tooth / teeth",
+      "audio": {
+        "daughter": "audio/sentences/ha.wav",
+        "me": "audio/sentences/ha.wav"
+      }
+    },
+
+    {
+      "romaji": "no",
+      "hiragana": "の",
+      "meaning": "possessive marker",
+      "audio": {
+        "daughter": "audio/sentences/no.wav",
+        "me": "audio/sentences/no.wav"
+      }
+    },
+
+    {
+      "romaji": "aida",
+      "hiragana": "あいだ",
+      "meaning": "between",
+      "audio": {
+        "daughter": "audio/sentences/aida.wav",
+        "me": "audio/sentences/aida.wav"
+      }
+    },
+
+    {
+      "romaji": "ni",
+      "hiragana": "に",
+      "meaning": "location marker",
+      "audio": {
+        "daughter": "audio/sentences/ni.wav",
+        "me": "audio/sentences/ni.wav"
+      }
+    },
+
+    {
+      "romaji": "hasamatta",
+      "hiragana": "はさまった",
+      "meaning": "stuck",
+      "audio": {
+        "daughter": "audio/sentences/hasamatta.wav",
+        "me": "audio/sentences/hasamatta.wav"
+      }
+    },
+
+    {
+      "romaji": "tabekasu",
+      "hiragana": "たべかす",
+      "meaning": "food debris",
+      "audio": {
+        "daughter": "audio/sentences/tabekasu.wav",
+        "me": "audio/sentences/tabekasu.wav"
+      }
+    },
+
+    {
+      "romaji": "wo",
+      "hiragana": "を",
+      "meaning": "object marker",
+      "audio": {
+        "daughter": "audio/sentences/wo.wav",
+        "me": "audio/sentences/wo.wav"
+      }
+    },
+
+    {
+      "romaji": "toru",
+      "hiragana": "とる",
+      "meaning": "to remove / to take",
+      "audio": {
+        "daughter": "audio/sentences/toru.wav",
+        "me": "audio/sentences/toru.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
 ];
 
 // ⭐ ADD THIS PATCH RIGHT HERE
