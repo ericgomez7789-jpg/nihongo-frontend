@@ -3690,6 +3690,78 @@ me: "audio/se_tacher.wav"
 
 
 
+{
+  "id": "l1-fr-60",
+  "meaning": "I go get the towel",
+  "level": 1,
+
+  "chunks": [
+    {
+      "romaji": "je",
+      "hiragana": "je",
+      "meaning": "I",
+      "audio": {
+        "daughter": "audio/je.wav",
+        "me": "audio/je.wav"
+      }
+    },
+
+    {
+      "romaji": "vais",
+      "hiragana": "vais",
+      "meaning": "am going to / go",
+      "audio": {
+        "daughter": "audio/vais.wav",
+        "me": "audio/vais.wav"
+      }
+    },
+
+    {
+      "romaji": "chercher",
+      "hiragana": "chercher",
+      "meaning": "to get / to look for",
+      "audio": {
+        "daughter": "audio/chercher.wav",
+        "me": "audio/chercher.wav"
+      }
+    },
+
+    {
+      "romaji": "la",
+      "hiragana": "la",
+      "meaning": "the (feminine)",
+      "audio": {
+        "daughter": "audio/la.wav",
+        "me": "audio/la.wav"
+      }
+    },
+
+    {
+      "romaji": "serviette",
+      "hiragana": "serviette",
+      "meaning": "towel",
+      "audio": {
+        "daughter": "audio/serviette.wav",
+        "me": "audio/serviette.wav"
+      }
+    }
+  ],
+
+  "fullAudio": {
+    "daughter": "audio/sentences/sentence12.wav",
+    "me":       "audio/sentences/sentence12.wav"
+  }
+},
+
+
+
+
+
+
+
+
+
+
 
 ];
 
