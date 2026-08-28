@@ -43679,7 +43679,7 @@ document.querySelector('.levelBtn[data-level="0"]')
 
 
 
-
+/*
 
 
 
@@ -43816,3 +43816,298 @@ document.addEventListener("DOMContentLoaded", () => {
   } // ← CLOSES if (TESTING_MODE)
 
 }); // ← CLOSES DOMContentLoaded
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  // ---------------------------------------------------------
+  // TEST MODE FLAG
+  // ---------------------------------------------------------
+  const TESTING_MODE = false; // set to false for production
+
+
+  // ---------------------------------------------------------
+  // UNIVERSAL LEVEL LAUNCHER (non-test)
+  // ---------------------------------------------------------
+  function launchLevel(levelNumber, screenId, startFn) {
+    window.currentLevel = levelNumber;
+    window.currentScreen = null;
+
+    document.querySelectorAll(".screen").forEach(s =>
+      s.classList.add("hidden")
+    );
+
+    document.getElementById(screenId)?.classList.remove("hidden");
+    startFn();
+  }
+
+
+  // ---------------------------------------------------------
+  // CENTRALIZED GATING LOGIC (Levels 4–12)
+  // ---------------------------------------------------------
+  async function gateLevel(levelNumber, screenId, startFn, tier = "basic") {
+    console.log(`[Level ${levelNumber}] Gated handler fired`);
+
+    const user = window.currentUser;
+    if (!user) {
+      alert("You must be logged in and have a subscription for Levels 4–12.");
+      window.location.href = "blog-podcast.html";
+      return;
+    }
+
+    const basicUnlocked  = localStorage.getItem("basicUnlock")  === "true";
+    const premiumUnlocked = localStorage.getItem("premiumUnlock") === "true";
+
+    if (tier === "basic" && (basicUnlocked || premiumUnlocked)) {
+      launchLevel(levelNumber, screenId, startFn);
+      return;
+    }
+
+    if (tier === "premium" && premiumUnlocked) {
+      launchLevel(levelNumber, screenId, startFn);
+      return;
+    }
+
+    const { data, error } = await sb
+      .from("profiles")
+      .select("membership_status, membership_plan")
+      .eq("id", user.id)
+      .maybeSingle();
+
+    console.log(`Membership result (L${levelNumber}):`, { data, error });
+
+    if (error) {
+      console.error("Membership query error:", error);
+      alert("You must be logged in and have a subscription for Levels 4–12.");
+      return;
+    }
+
+    const status = data?.membership_status;
+    const plan   = data?.membership_plan;
+
+    const basicPlans = [
+      "basic-monthly",
+      "basic-yearly",
+      "premium-monthly",
+      "premium-yearly",
+      "tester"
+    ];
+
+    const premiumPlans = [
+      "premium-monthly",
+      "premium-yearly",
+      "lifetime",
+      "tester"
+    ];
+
+    if (tier === "basic" && status === "active" && basicPlans.includes(plan)) {
+      if (plan.startsWith("basic")) {
+        localStorage.setItem("basicUnlock", "true");
+      } else {
+        localStorage.setItem("premiumUnlock", "true");
+      }
+      launchLevel(levelNumber, screenId, startFn);
+      return;
+    }
+
+    if (tier === "premium" && status === "active" && premiumPlans.includes(plan)) {
+      localStorage.setItem("premiumUnlock", "true");
+      launchLevel(levelNumber, screenId, startFn);
+      return;
+    }
+
+    alert("You must be logged in and have a subscription for Levels 4–12.");
+    window.location.href = "membership.html";
+  }
+
+
+  // ---------------------------------------------------------
+  // TEST MODE HANDLERS FOR LEVELS 0–12
+  // ---------------------------------------------------------
+  if (TESTING_MODE) {
+
+    console.log("%cTEST MODE ENABLED — Levels 0–12 bypass gating",
+                "color: green; font-weight: bold;");
+
+    function launchTestLevel(levelNumber, startFn) {
+      console.log(`[TEST MODE] Launching Level ${levelNumber}`);
+
+      window.currentLevel = levelNumber;
+      window.currentScreen = null;
+
+      document.querySelectorAll(".screen").forEach(s =>
+        s.classList.add("hidden")
+      );
+
+      if (levelNumber === 0) {
+        document.getElementById("level0Wrapper")?.classList.remove("hidden");
+        document.getElementById("screen1L0")?.classList.remove("hidden");
+        startFn();
+        return;
+      }
+
+      document.getElementById(`screen2L${levelNumber}`)?.classList.remove("hidden");
+      startFn();
+    }
+
+    // LEVEL 0–3
+    document.querySelector('.levelBtn[data-level="0"]')
+      ?.addEventListener("click", () => launchTestLevel(0, L0.start));
+
+    document.querySelector('.levelBtn[data-level="1"]')
+      ?.addEventListener("click", () => launchTestLevel(1, level1));
+
+    document.querySelector('.levelBtn[data-level="2"]')
+      ?.addEventListener("click", () => launchTestLevel(2, L2.start));
+
+    document.querySelector('.levelBtn[data-level="3"]')
+      ?.addEventListener("click", () => launchTestLevel(3, L3.start));
+
+    // LEVEL 4–10
+    document.getElementById("level4Btn")?.addEventListener("click", () => launchTestLevel(4, L4.start));
+    document.getElementById("level5Btn")?.addEventListener("click", () => launchTestLevel(5, L5.start));
+    document.getElementById("level6Btn")?.addEventListener("click", () => launchTestLevel(6, L6.start));
+    document.getElementById("level7Btn")?.addEventListener("click", () => launchTestLevel(7, L7.start));
+    document.getElementById("level8Btn")?.addEventListener("click", () => launchTestLevel(8, L8.start));
+    document.getElementById("level9Btn")?.addEventListener("click", () => launchTestLevel(9, L9.start));
+    document.getElementById("level10Btn")?.addEventListener("click", () => launchTestLevel(10, L10.start));
+
+    // LEVEL 11
+    document.getElementById("level11Btn")?.addEventListener("click", () => {
+      console.log("[TEST MODE] Launching Level 11");
+      window.currentLevel = 11;
+      window.currentScreen = null;
+      document.querySelectorAll(".screen").forEach(s => s.classList.add("hidden"));
+      document.getElementById("level11Screen")?.classList.remove("hidden");
+      startLevel11(defaultScenario);
+    });
+
+    // LEVEL 12
+    document.getElementById("level12Btn")?.addEventListener("click", () => {
+      console.log("[TEST MODE] Launching Level 12");
+      window.currentLevel = 12;
+      window.currentScreen = null;
+      document.querySelectorAll(".screen").forEach(s => s.classList.add("hidden"));
+      document.getElementById("level12Screen")?.classList.remove("hidden");
+      startLevel12();
+    });
+
+    return; // don’t attach normal handlers when in test mode
+  }
+
+
+  // ---------------------------------------------------------
+  // NORMAL HANDLERS (NON-TEST MODE)
+  // ---------------------------------------------------------
+
+  // LEVEL 0
+  document.querySelector('.levelBtn[data-level="0"]')
+    ?.addEventListener("click", () => {
+      console.log("[Level 0] Isolated handler fired");
+
+      if (window.currentScreen && window.currentScreen !== "screen0") return;
+      if (window.currentLevel !== 0) return;
+
+      window.currentLevel = 0;
+      window.currentScreen = "screen1L0";
+
+      document.querySelectorAll(".screen").forEach(s =>
+        s.classList.add("hidden")
+      );
+
+      document.getElementById("level0Wrapper")?.classList.remove("hidden");
+      document.getElementById("screen1L0")?.classList.remove("hidden");
+
+      L0.start();
+    });
+
+  // LEVEL 1
+  document.querySelector('.levelBtn[data-level="1"]')
+    ?.addEventListener("click", () => {
+      if (window.currentScreen && window.currentScreen !== "screen0") return;
+      if (window.currentLevel !== 0) return;
+
+      console.log("[Level 1] Isolated handler fired");
+      launchLevel(1, "screen2L1", level1);
+    });
+
+  // LEVEL 2
+  document.querySelector('.levelBtn[data-level="2"]')
+    ?.addEventListener("click", () => {
+      if (window.currentScreen && window.currentScreen !== "screen0") return;
+      if (window.currentLevel !== 0) return;
+
+      window.currentScreen = "level2Screen1";
+      console.log("[Level 2] Isolated handler fired");
+      launchLevel(2, "screen2L2", L2.start);
+    });
+
+  // LEVEL 3
+  document.querySelector('.levelBtn[data-level="3"]')
+    ?.addEventListener("click", () => {
+      console.log("[Level 3] Isolated handler fired");
+      launchLevel(3, "screen2L3", L3.start);
+    });
+
+  // LEVEL 4–8 (BASIC TIER)
+  const basicLevels = [
+    { btn: "level4Btn", screen: "screen2L4", start: L4.start, num: 4 },
+    { btn: "level5Btn", screen: "screen2L5", start: L5.start, num: 5 },
+    { btn: "level6Btn", screen: "screen2L6", start: L6.start, num: 6 },
+    { btn: "level7Btn", screen: "screen2L7", start: L7.start, num: 7 },
+    { btn: "level8Btn", screen: "screen2L8", start: L8.start, num: 8 }
+  ];
+
+  basicLevels.forEach(({ btn, screen, start, num }) => {
+    const el = document.getElementById(btn);
+    if (!el) {
+      console.error(`${btn} not found in DOM`);
+      return;
+    }
+    el.addEventListener("click", () => gateLevel(num, screen, start, "basic"));
+  });
+
+  // LEVEL 9–12 (PREMIUM TIER)
+  const premiumLevels = [
+    { btn: "level9Btn",  screen: "screen2L9",   start: L9.start,                      num: 9  },
+    { btn: "level10Btn", screen: "screen2L10",  start: L10.start,                     num: 10 },
+    { btn: "level11Btn", screen: "level11Screen", start: () => startLevel11(defaultScenario), num: 11 },
+    { btn: "level12Btn", screen: "level12Screen", start: startLevel12,                num: 12 }
+  ];
+
+  premiumLevels.forEach(({ btn, screen, start, num }) => {
+    const el = document.getElementById(btn);
+    if (!el) {
+      console.error(`${btn} not found in DOM`);
+      return;
+    }
+    el.addEventListener("click", () => gateLevel(num, screen, start, "premium"));
+  });
+
+});
