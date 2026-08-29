@@ -9163,7 +9163,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   
-
+/*
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -9280,3 +9280,179 @@ document.addEventListener("DOMContentLoaded", () => {
 
 }); // END DOMCONTENTLOADED
 
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  // ---------------------------------------------------------
+  // UNIVERSAL LEVEL LAUNCHER (Levels 1–10)
+  // ---------------------------------------------------------
+  function launchLevel(levelNumber, startFn) {
+
+    // Hide all screens
+    document.querySelectorAll(".screen").forEach(s =>
+      s.classList.add("hidden")
+    );
+
+    // ⭐ Level‑2 wrapper logic
+    const level2Wrapper = document.getElementById("level2Wrapper");
+    if (level2Wrapper) {
+      if (levelNumber === 2) {
+        level2Wrapper.classList.remove("hidden");
+      } else {
+        level2Wrapper.classList.add("hidden");
+      }
+    }
+
+    // Show correct screen
+    document.getElementById(`screen2L${levelNumber}`)
+      ?.classList.remove("hidden");
+
+    // Start engine
+    startFn();
+  }
+
+  // ---------------------------------------------------------
+  // ⭐ UNIVERSAL GATING FUNCTION (Levels 4–6 only)
+  // ---------------------------------------------------------
+  async function gateLevelAccess(levelNumber, startFn) {
+
+    // Levels 1–3 are free
+    if (levelNumber <= 3) {
+      console.log(`[Level ${levelNumber}] Free level — launching`);
+      launchLevel(levelNumber, startFn);
+      return;
+    }
+
+    // Levels 4–6 require membership OR tester
+    console.log(`[Level ${levelNumber}] Gated level — checking membership`);
+
+    if (typeof sb === "undefined") {
+      console.error("Supabase client (sb) is not defined.");
+      alert("Internal error: membership system unavailable.");
+      return;
+    }
+
+    let user = window.currentUser;
+
+    if (!user) {
+      const { data: authUser } = await sb.auth.getUser();
+      if (authUser?.user) user = authUser.user;
+    }
+
+    if (!user) {
+      window.location.href = "../../../blog-podcast.html";
+      return;
+    }
+
+    const { data, error } = await sb
+      .from("profiles")
+      .select("membership_status, membership_plan")
+      .eq("email", user.email)
+      .maybeSingle();
+
+    if (error) {
+      console.error("Membership query error:", error);
+      alert("Membership check failed. Please try again.");
+      return;
+    }
+
+    const status = data?.membership_status;
+    const plan = data?.membership_plan;
+
+    // ⭐ testers bypass gating
+    const allowed = ["basic-monthly", "basic-yearly", "lifetime", "tester"];
+
+    if (!(status === "active" && allowed.includes(plan))) {
+      alert(`Level ${levelNumber} requires an active Basic or Lifetime subscription.`);
+      window.location.href = "membership.html";
+      return;
+    }
+
+    // Passed gating → launch level
+    console.log(`[Level ${levelNumber}] Access granted`);
+    launchLevel(levelNumber, startFn);
+  }
+
+  // ---------------------------------------------------------
+  // LEVEL 1
+  // ---------------------------------------------------------
+  document.querySelector('.levelBtn[data-level="1"]')
+    ?.addEventListener("click", () => {
+
+      if (window.currentScreen && window.currentScreen !== "screen0") return;
+      if (window.currentLevel !== 0) return;
+
+      window.currentLevel = 1;
+      console.log("[Level 1] Handler fired");
+
+      gateLevelAccess(1, level1);
+    });
+
+  // ---------------------------------------------------------
+  // LEVEL 2
+  // ---------------------------------------------------------
+  document.querySelector('.levelBtn[data-level="2"]')
+    ?.addEventListener("click", () => {
+
+      if (window.currentScreen && window.currentScreen !== "screen0") return;
+      if (window.currentLevel !== 0) return;
+
+      window.currentLevel = 2;
+      window.currentScreen = "level2Screen1";
+
+      console.log("[Level 2] Handler fired");
+
+      gateLevelAccess(2, L2.start);
+    });
+
+  // ---------------------------------------------------------
+  // LEVEL 3
+  // ---------------------------------------------------------
+  document.querySelector('.levelBtn[data-level="3"]')
+    ?.addEventListener("click", () => {
+      console.log("[Level 3] Handler fired");
+      gateLevelAccess(3, L3.start);
+    });
+
+  // ---------------------------------------------------------
+  // LEVEL 4
+  // ---------------------------------------------------------
+  const level4Btn = document.getElementById("level4Btn");
+  if (level4Btn) {
+    level4Btn.addEventListener("click", () => {
+      console.log("[Level 4] Handler fired");
+      gateLevelAccess(4, L4.start);
+    });
+  }
+
+  // ---------------------------------------------------------
+  // LEVEL 5
+  // ---------------------------------------------------------
+  document.getElementById("level5Btn")
+    ?.addEventListener("click", () => {
+      console.log("[Level 5] Handler fired");
+      gateLevelAccess(5, L5.start);
+    });
+
+  // ---------------------------------------------------------
+  // LEVEL 6
+  // ---------------------------------------------------------
+  document.querySelector('.levelBtn[data-level="6"]')
+    ?.addEventListener("click", () => {
+      console.log("[Level 6] Handler fired");
+      gateLevelAccess(6, L6.start);
+    });
+
+});
