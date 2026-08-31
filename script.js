@@ -31313,10 +31313,9 @@ const level6 = [
 
 
 
-
 {
   "id": "l6-51",
-  "meaning": "When you scatter flickering sparks, what happens to the smoke next?",
+  "meaning": "When sparks flicker and scatter, what happens to the smoke next?",
   "level": 6,
 
   "options": [
@@ -31364,14 +31363,13 @@ const level6 = [
   ],
 
   "chunks": [
-    { "romaji": "hibana wo", "hiragana": "ひばな を", "english": "sparks" },
-    { "romaji": "chirachira chirasu to", "hiragana": "ちらちら ちらす と", "english": "if you scatter them flickering" },
-    { "romaji": "kemuri ni", "hiragana": "けむり に", "english": "to the smoke" },
+    { "romaji": "hibana ga", "hiragana": "ひばな が", "english": "sparks" },
+    { "romaji": "chirachira chiru to", "hiragana": "ちらちら ちる と", "english": "if they flicker and scatter" },
+    { "romaji": "kemuri wa", "hiragana": "けむり は", "english": "as for the smoke" },
     { "romaji": "tsugi ni", "hiragana": "つぎに", "english": "next" },
     { "romaji": "dou naru no", "hiragana": "どうなるの", "english": "what happens" }
   ]
 },
-
 
 
 
