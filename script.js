@@ -31314,6 +31314,74 @@ const level6 = [
 
 
 
+{
+  "id": "l6-51",
+  "meaning": "When you scatter flickering sparks, what happens to the smoke next?",
+  "level": 6,
+
+  "options": [
+    "けむり が ふえる",
+    "ひ が きえる",
+    "そら が あかるくなる",
+    "なにも おこらない"
+  ],
+
+  "optionsRomaji": [
+    "kemuri_ga_fueru",
+    "hi_ga_kieru",
+    "sora_ga_akaruku_naru",
+    "nanimo_okoranai"
+  ],
+
+  "optionsEN": [
+    "the smoke increases",
+    "the fire goes out",
+    "the sky becomes bright",
+    "nothing happens"
+  ],
+
+  "correct": "けむり が ふえる",
+
+  "fullAudio": {
+    "daughter": "audio/sentences/inference51.wav",
+    "me":       "audio/sentences/inference51.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["audio/sentences/kemuri_ga_fueru.wav"],
+      ["audio/sentences/hi_ga_kieru.wav"],
+      ["audio/sentences/sora_ga_akaruku_naru.wav"],
+      ["audio/sentences/nanimo_okoranai.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["audio/sentences/kemuri_ga_fueru.wav"],
+    ["audio/sentences/hi_ga_kieru.wav"],
+    ["audio/sentences/sora_ga_akaruku_naru.wav"],
+    ["audio/sentences/nanimo_okoranai.wav"]
+  ],
+
+  "chunks": [
+    { "romaji": "hibana wo", "hiragana": "ひばな を", "english": "sparks" },
+    { "romaji": "chirachira chirasu to", "hiragana": "ちらちら ちらす と", "english": "if you scatter them flickering" },
+    { "romaji": "kemuri ni", "hiragana": "けむり に", "english": "to the smoke" },
+    { "romaji": "tsugi ni", "hiragana": "つぎに", "english": "next" },
+    { "romaji": "dou naru no", "hiragana": "どうなるの", "english": "what happens" }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 
