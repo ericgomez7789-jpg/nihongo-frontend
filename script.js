@@ -31380,6 +31380,75 @@ const level6 = [
 
 
 
+
+{
+  "id": "l6-52",
+  "meaning": "When thick smoke billows up from the campfire, what happens to the mosquitoes next?",
+  "level": 6,
+
+  "options": [
+    "か が にげる",
+    "か が あつまる",
+    "そら が あかるくなる",
+    "なにも おこらない"
+  ],
+
+  "optionsRomaji": [
+    "ka_ga_nigeru",
+    "ka_ga_atsumaru",
+    "sora_ga_akaruku_naru",
+    "nanimo_okoranai"
+  ],
+
+  "optionsEN": [
+    "the mosquitoes flee",
+    "the mosquitoes gather",
+    "the sky becomes bright",
+    "nothing happens"
+  ],
+
+  "correct": "か が にげる",
+
+  "fullAudio": {
+    "daughter": "audio/sentences/inference52.wav",
+    "me":       "audio/sentences/inference52.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["audio/sentences/ka_ga_nigeru.wav"],
+      ["audio/sentences/ka_ga_atsumaru.wav"],
+      ["audio/sentences/sora_ga_akaruku_naru.wav"],
+      ["audio/sentences/nanimo_okoranai.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["audio/sentences/ka_ga_nigeru.wav"],
+    ["audio/sentences/ka_ga_atsumaru.wav"],
+    ["audio/sentences/sora_ga_akaruku_naru.wav"],
+    ["audio/sentences/nanimo_okoranai.wav"]
+  ],
+
+  "chunks": [
+    { "romaji": "takibi no", "hiragana": "たきび の", "english": "from the campfire" },
+    { "romaji": "kemuri ga", "hiragana": "けむり が", "english": "smoke" },
+    { "romaji": "moumou to", "hiragana": "もうもう と", "english": "thickly, billowing" },
+    { "romaji": "wakiagaru to", "hiragana": "わきあがる と", "english": "if it rises up" },
+    { "romaji": "ka wa", "hiragana": "か は", "english": "as for the mosquitoes" },
+    { "romaji": "dou naru no", "hiragana": "どうなるの", "english": "what happens" }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
 ];
 
 
