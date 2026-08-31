@@ -3762,6 +3762,78 @@ me: "audio/se_tacher.wav"
 
 
 
+{
+  "id": "l1-fr-61",
+  "meaning": "What does that mean?",
+  "level": 1,
+
+  "chunks": [
+    {
+      "romaji": "qu’est-ce",
+      "hiragana": "qu’est-ce",
+      "meaning": "what is",
+      "audio": {
+        "daughter": "audio/questce.wav",
+        "me": "audio/questce.wav"
+      }
+    },
+
+    {
+      "romaji": "que",
+      "hiragana": "que",
+      "meaning": "that",
+      "audio": {
+        "daughter": "audio/que.wav",
+        "me": "audio/que.wav"
+      }
+    },
+
+    {
+      "romaji": "qu’est-ce-que",
+      "hiragana": "qu’est-ce-que",
+      "meaning": "what is it that",
+      "audio": {
+        "daughter": "audio/quest-ce-que.wav",
+        "me": "audio/quest-ce-que.wav"
+      }
+    },
+
+    {
+      "romaji": "cela",
+      "hiragana": "cela",
+      "meaning": "that",
+      "audio": {
+        "daughter": "audio/cela.wav",
+        "me": "audio/cela.wav"
+      }
+    },
+
+    {
+      "romaji": "signifie",
+      "hiragana": "signifie",
+      "meaning": "means",
+      "audio": {
+        "daughter": "audio/signifie.wav",
+        "me": "audio/signifie.wav"
+      }
+    }
+  ],
+
+  "fullAudio": {
+    "daughter": "audio/sentence13.wav",
+    "me":       "audio/sentence13.wav"
+  }
+},
+
+
+
+
+
+
+
+
+
+
 
 ];
 
