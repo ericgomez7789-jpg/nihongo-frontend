@@ -31246,6 +31246,73 @@ const level6 = [
 
 
 
+{
+  "id": "l6-50",
+  "meaning": "When you add fuel oil to the campfire, what happens next?",
+  "level": 6,
+
+  "options": [
+    "ひ が おおきく なる",
+    "あめ が ふる",
+    "たきび が きえる",
+    "なにも おこらない"
+  ],
+
+  "optionsRomaji": [
+    "hi_ga_ookiku_naru",
+    "ame_ga_furu",
+    "takibi_ga_kieru",
+    "nanimo_okoranai"
+  ],
+
+  "optionsEN": [
+    "the fire grows larger",
+    "it rains",
+    "the campfire goes out",
+    "nothing happens"
+  ],
+
+  "correct": "ひ が おおきく なる",
+
+  "fullAudio": {
+    "daughter": "audio/sentences/inference50.wav",
+    "me":       "audio/sentences/inference50.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["audio/sentences/hi_ga_ookiku_naru.wav"],
+      ["audio/sentences/ame_ga_furu.wav"],
+      ["audio/sentences/takibi_ga_kieru.wav"],
+      ["audio/sentences/nanimo_okoranai.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["audio/sentences/hi_ga_ookiku_naru.wav"],
+    ["audio/sentences/ame_ga_furu.wav"],
+    ["audio/sentences/takibi_ga_kieru.wav"],
+    ["audio/sentences/nanimo_okoranai.wav"]
+  ],
+
+  "chunks": [
+    { "romaji": "takibi ni", "hiragana": "たきび に", "english": "to the campfire" },
+    { "romaji": "nenyuu wo", "hiragana": "ねんゆ を", "english": "fuel oil" },
+    { "romaji": "kuberu to", "hiragana": "くべる と", "english": "if you add" },
+    { "romaji": "tsugi ni", "hiragana": "つぎに", "english": "next" },
+    { "romaji": "dou naru no", "hiragana": "どうなるの", "english": "what happens" }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
 
 ];
 
