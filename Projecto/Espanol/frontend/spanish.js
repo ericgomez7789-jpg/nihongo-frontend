@@ -5792,10 +5792,9 @@ const level3 = [
 
 
 
-
 {
-  "id": "es3-15",
-  "meaning": "Escuché un ruido atrás de mí, no pude moverme y grité… ¿qué ocurre después?",
+  "id": "es3-15b",
+  "meaning": "Escuché un ruido detrás de mí, no pude moverme, eché un grito… ¿qué ocurre después?",
   "level": 3,
 
   "options": [
@@ -5822,8 +5821,8 @@ const level3 = [
   "correct": "Me doy la vuelta temblando",
 
   "fullAudio": {
-    "daughter": "audio/spanish/inference15.wav",
-    "me":       "audio/spanish/inference15.wav"
+    "daughter": "audio/spanish/inference15b.wav",
+    "me":       "audio/spanish/inference15b.wav"
   },
 
   "choiceAudio": {
@@ -5843,9 +5842,9 @@ const level3 = [
   ],
 
   "chunks": [
-    { "spanish": "Escuché un ruido atrás de mí", "english": "I heard a noise behind me" },
+    { "spanish": "Escuché un ruido detrás de mí", "english": "I heard a noise behind me" },
     { "spanish": "no pude moverme", "english": "I couldn't move" },
-    { "spanish": "y grité", "english": "and I screamed" },
+    { "spanish": "eché un grito", "english": "I let out a shout" },
     { "spanish": "¿qué ocurre después?", "english": "what happens next?" }
   ]
 },
