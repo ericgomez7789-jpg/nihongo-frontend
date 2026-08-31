@@ -31173,6 +31173,80 @@ const level6 = [
 
 
 
+
+{
+  "id": "l6-49",
+  "meaning": "After gathering the firewood, tinder, and kindling, what happens next?",
+  "level": 6,
+
+  "options": [
+    "ひ を つける",
+    "かぜ が とまる",
+    "まき が とんでいく",
+    "なにも おこらない"
+  ],
+
+  "optionsRomaji": [
+    "hi_wo_tsukeru",
+    "kaze_ga_tomaru",
+    "maki_ga_tonde_iku",
+    "nanimo_okoranai"
+  ],
+
+  "optionsEN": [
+    "you start the fire",
+    "the wind stops",
+    "the firewood flies away",
+    "nothing happens"
+  ],
+
+  "correct": "ひ を つける",
+
+  "fullAudio": {
+    "daughter": "audio/sentences/inference49.wav",
+    "me":       "audio/sentences/inference49.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["audio/sentences/hi_wo_tsukeru.wav"],
+      ["audio/sentences/kaze_ga_tomaru.wav"],
+      ["audio/sentences/maki_ga_tonde_iku.wav"],
+      ["audio/sentences/nanimo_okoranai.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["audio/sentences/hi_wo_tsukeru.wav"],
+    ["audio/sentences/kaze_ga_tomaru.wav"],
+    ["audio/sentences/maki_ga_tonde_iku.wav"],
+    ["audio/sentences/nanimo_okoranai.wav"]
+  ],
+
+  "chunks": [
+    { "romaji": "maki", "hiragana": "まき", "english": "firewood" },
+    { "romaji": "to", "hiragana": "と", "english": "and" },
+    { "romaji": "hinokuchi", "hiragana": "ひのくち", "english": "tinder" },
+    { "romaji": "to", "hiragana": "と", "english": "and" },
+    { "romaji": "takitsuke", "hiragana": "たきつけ", "english": "kindling" },
+    { "romaji": "wo atsumete", "hiragana": "を あつめて", "english": "after gathering" },
+    { "romaji": "tsugi ni", "hiragana": "つぎに", "english": "next" },
+    { "romaji": "dou naru no", "hiragana": "どうなるの", "english": "what happens" }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 
