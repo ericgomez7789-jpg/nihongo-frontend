@@ -2439,6 +2439,74 @@ me: "audio/spanish/silla.wav"
 
 
 
+
+
+
+{
+  "id": "l1-es-43",
+  "meaning": "it is eight thirty",
+  "level": 1,
+
+  "chunks": [
+    {
+      "romaji": "son",
+      "hiragana": "son",
+      "meaning": "they are / it is (time)",
+      "audio": {
+        "daughter": "audio/spanish/son.wav",
+        "me": "audio/spanish/son.wav"
+      }
+    },
+
+    {
+      "romaji": "las",
+      "hiragana": "las",
+      "meaning": "the (feminine plural)",
+      "audio": {
+        "daughter": "audio/spanish/las.wav",
+        "me": "audio/spanish/las.wav"
+      }
+    },
+
+    {
+      "romaji": "ocho",
+      "hiragana": "ocho",
+      "meaning": "eight",
+      "audio": {
+        "daughter": "audio/spanish/ocho.wav",
+        "me": "audio/spanish/ocho.wav"
+      }
+    },
+
+    {
+      "romaji": "y",
+      "hiragana": "y",
+      "meaning": "and",
+      "audio": {
+        "daughter": "audio/spanish/y.wav",
+        "me": "audio/spanish/y.wav"
+      }
+    },
+
+    {
+      "romaji": "media",
+      "hiragana": "media",
+      "meaning": "half / thirty",
+      "audio": {
+        "daughter": "audio/spanish/media.wav",
+        "me": "audio/spanish/media.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
 ];
 
 // ⭐ ADD THIS PATCH RIGHT HERE
@@ -5714,6 +5782,73 @@ const level3 = [
   ]
 },
 
+
+
+
+
+
+
+
+
+
+
+
+{
+  "id": "es3-15",
+  "meaning": "Escuché un ruido atrás de mí, no pude moverme y grité… ¿qué ocurre después?",
+  "level": 3,
+
+  "options": [
+    "Me doy la vuelta temblando",
+    "Un gato sale corriendo como si nada",
+    "El ruido se convierte en un eco que me imita",
+    "Un espíritu me pide que baje el volumen"
+  ],
+
+  "optionsRomaji": [
+    "me_doy_la_vuelta_temblando",
+    "un_gato_sale_corriendo_como_si_nada",
+    "el_ruido_se_convierte_en_un_eco_que_me_imita",
+    "un_espiritu_me_pide_que_baje_el_volumen"
+  ],
+
+  "optionsEN": [
+    "I turn around trembling",
+    "a cat runs away as if nothing happened",
+    "the noise becomes an echo that imitates me",
+    "a spirit asks me to lower the volume"
+  ],
+
+  "correct": "Me doy la vuelta temblando",
+
+  "fullAudio": {
+    "daughter": "audio/spanish/inference15.wav",
+    "me":       "audio/spanish/inference15.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["spanish/audio/me_doy_la_vuelta_temblando.wav"],
+      ["spanish/audio/un_gato_sale_corriendo_como_si_nada.wav"],
+      ["spanish/audio/el_ruido_se_convierte_en_un_eco_que_me_imita.wav"],
+      ["spanish/audio/un_espiritu_me_pide_que_baje_el_volumen.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["spanish/audio/me_doy_la_vuelta_temblando.wav"],
+    ["spanish/audio/un_gato_sale_corriendo_como_si_nada.wav"],
+    ["spanish/audio/el_ruido_se_convierte_en_un_eco_que_me_imita.wav"],
+    ["spanish/audio/un_espiritu_me_pide_que_baje_el_volumen.wav"]
+  ],
+
+  "chunks": [
+    { "spanish": "Escuché un ruido atrás de mí", "english": "I heard a noise behind me" },
+    { "spanish": "no pude moverme", "english": "I couldn't move" },
+    { "spanish": "y grité", "english": "and I screamed" },
+    { "spanish": "¿qué ocurre después?", "english": "what happens next?" }
+  ]
+},
 
 
 
