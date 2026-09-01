@@ -31675,6 +31675,73 @@ const level6 = [
 
 
 
+
+{
+  "id": "l6-54",
+  "meaning": "When a gentle breeze blows and the hair softly drifts in the wind, what happens next?",
+  "level": 6,
+
+  "options": [
+    "かみ が もっと ゆれる",
+    "かみ が ぬれる",
+    "そら が あかるくなる",
+    "なにも おこらない"
+  ],
+
+  "optionsRomaji": [
+    "kami_ga_motto_yureru",
+    "kami_ga_nureru",
+    "sora_ga_akaruku_naru",
+    "nanimo_okoranai"
+  ],
+
+  "optionsEN": [
+    "the hair sways even more",
+    "the hair gets wet",
+    "the sky becomes bright",
+    "nothing happens"
+  ],
+
+  "correct": "かみ が もっと ゆれる",
+
+  "fullAudio": {
+    "daughter": "audio/sentences/inference54.wav",
+    "me":       "audio/sentences/inference54.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["audio/sentences/kami_ga_motto_yureru.wav"],
+      ["audio/sentences/kami_ga_nureru.wav"],
+      ["audio/sentences/sora_ga_akaruku_naru.wav"],
+      ["audio/sentences/nanimo_okoranai.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["audio/sentences/kami_ga_motto_yureru.wav"],
+    ["audio/sentences/kami_ga_nureru.wav"],
+    ["audio/sentences/sora_ga_akaruku_naru.wav"],
+    ["audio/sentences/nanimo_okoranai.wav"]
+  ],
+
+  "chunks": [
+    { "romaji": "kaze ga soyosoyo to fuite", "hiragana": "風 が そよそよ と 吹いて", "english": "a gentle breeze blows" },
+    { "romaji": "kami ga fuwatto", "hiragana": "髪 が ふわっと", "english": "the hair softly" },
+    { "romaji": "tanabiku to", "hiragana": "たなびく と", "english": "drifts in the wind" },
+    { "romaji": "tsugi ni", "hiragana": "次 に", "english": "next" },
+    { "romaji": "dou naru no", "hiragana": "どうなるの", "english": "what happens" }
+  ]
+},
+
+
+
+
+
+
+
+
+
 ];
 
 
