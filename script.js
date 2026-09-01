@@ -32014,6 +32014,145 @@ const level6 = [
 
 
 
+
+
+
+{
+  "id": "l6-59",
+  "meaning": "If you bring a book to the campsite and someone makes fun of you, what happens next?",
+  "level": 6,
+
+  "options": [
+    "かなしくなる",
+    "すぐ に わらいかえす",
+    "そら が あかるくなる",
+    "なにも おこらない"
+  ],
+
+  "optionsRomaji": [
+    "kanashiku_naru",
+    "sugu_ni_waraikaesu",
+    "sora_ga_akaruku_naru",
+    "nanimo_okoranai"
+  ],
+
+  "optionsEN": [
+    "you feel sad",
+    "you laugh back immediately",
+    "the sky becomes bright",
+    "nothing happens"
+  ],
+
+  "correct": "かなしくなる",
+
+  "fullAudio": {
+    "daughter": "audio/sentences/inference59.wav",
+    "me":       "audio/sentences/inference59.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["audio/sentences/kanashiku_naru.wav"],
+      ["audio/sentences/sugu_ni_waraikaesu.wav"],
+      ["audio/sentences/sora_ga_akaruku_naru.wav"],
+      ["audio/sentences/nanimo_okoranai.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["audio/sentences/kanashiku_naru.wav"],
+    ["audio/sentences/sugu_ni_waraikaesu.wav"],
+    ["audio/sentences/sora_ga_akaruku_naru.wav"],
+    ["audio/sentences/nanimo_okoranai.wav"]
+  ],
+
+  "chunks": [
+    { "romaji": "nojuku ni", "hiragana": "野宿 に", "english": "at the campsite" },
+    { "romaji": "hon wo mottekitarra", "hiragana": "本 を 持ってきたら", "english": "if you bring a book" },
+    { "romaji": "dareka ga baka ni shite", "hiragana": "だれか が ばか に して", "english": "someone makes fun of you" },
+    { "romaji": "tsugi ni", "hiragana": "次 に", "english": "next" },
+    { "romaji": "dou naru no", "hiragana": "どうなるの", "english": "what happens" }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  "id": "l6-60",
+  "meaning": "If someone is sleeping at the campsite and you absent‑mindedly spill a cup of water above them, what happens next?",
+  "level": 6,
+
+  "options": [
+    "びっくりして おきる",
+    "そら が あかるくなる",
+    "みち が きえる",
+    "なにも おこらない"
+  ],
+
+  "optionsRomaji": [
+    "bikkuri_shite_okiru",
+    "sora_ga_akaruku_naru",
+    "michi_ga_kieru",
+    "nanimo_okoranai"
+  ],
+
+  "optionsEN": [
+    "they wake up in surprise",
+    "the sky becomes bright",
+    "the path disappears",
+    "nothing happens"
+  ],
+
+  "correct": "びっくりして おきる",
+
+  "fullAudio": {
+    "daughter": "audio/sentences/inference60.wav",
+    "me":       "audio/sentences/inference60.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["audio/sentences/bikkuri_shite_okiru.wav"],
+      ["audio/sentences/sora_ga_akaruku_naru.wav"],
+      ["audio/sentences/michi_ga_kieru.wav"],
+      ["audio/sentences/nanimo_okoranai.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["audio/sentences/bikkuri_shite_okiru.wav"],
+    ["audio/sentences/sora_ga_akaruku_naru.wav"],
+    ["audio/sentences/michi_ga_kieru.wav"],
+    ["audio/sentences/nanimo_okoranai.wav"]
+  ],
+
+  "chunks": [
+    { "romaji": "nojuku dewa", "hiragana": "野宿 では", "english": "at the campsite" },
+    { "romaji": "dareka ga nete iru toki", "hiragana": "だれか が ねて いる とき", "english": "when someone is sleeping" },
+    { "romaji": "mizu-ire no koppu wo", "hiragana": "水いれ の コップ を", "english": "a cup filled with water" },
+    { "romaji": "nanno ki nashi ni ue de koboshite shimatte", "hiragana": "なんの気なしに 上 で こぼして しまって", "english": "spill it above them without thinking" },
+    { "romaji": "tsugi ni dou naru no", "hiragana": "次 に どうなるの", "english": "what happens next" }
+  ]
+},
+
+
+
+
+
+
+
+
+
 ];
 
 
