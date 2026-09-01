@@ -31948,6 +31948,72 @@ const level6 = [
 
 
 
+
+{
+  "id": "l6-58",
+  "meaning": "If you see footprints on the path people use at the campsite and trace the trail of those footprints, what happens next?",
+  "level": 6,
+
+  "options": [
+    "だれか が まえ に とおった と わかる",
+    "みち が とつぜん きえる",
+    "そら が あかるくなる",
+    "なにも おこらない"
+  ],
+
+  "optionsRomaji": [
+    "dareka_ga_mae_ni_tootta_to_wakaru",
+    "michi_ga_totsuzen_kieru",
+    "sora_ga_akaruku_naru",
+    "nanimo_okoranai"
+  ],
+
+  "optionsEN": [
+    "you realize someone passed through earlier",
+    "the path suddenly disappears",
+    "the sky becomes bright",
+    "nothing happens"
+  ],
+
+  "correct": "だれか が まえ に とおった と わかる",
+
+  "fullAudio": {
+    "daughter": "audio/sentences/inference58.wav",
+    "me":       "audio/sentences/inference58.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["audio/sentences/dareka_ga_mae_ni_tootta_to_wakaru.wav"],
+      ["audio/sentences/michi_ga_totsuzen_kieru.wav"],
+      ["audio/sentences/sora_ga_akaruku_naru.wav"],
+      ["audio/sentences/nanimo_okoranai.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["audio/sentences/dareka_ga_mae_ni_tootta_to_wakaru.wav"],
+    ["audio/sentences/michi_ga_totsuzen_kieru.wav"],
+    ["audio/sentences/sora_ga_akaruku_naru.wav"],
+    ["audio/sentences/nanimo_okoranai.wav"]
+  ],
+
+  "chunks": [
+    { "romaji": "nojuku no tooru michi", "hiragana": "野宿 の とおる みち", "english": "the path people use at the campsite" },
+    { "romaji": "ni ashiato ga mietara", "hiragana": "に あしあと が みえたら", "english": "if footprints are visible" },
+    { "romaji": "atoashi no michi wo tadoru to", "hiragana": "あとあし の みち を たどる と", "english": "if you trace the trail of those footprints" },
+    { "romaji": "tsugi ni", "hiragana": "次 に", "english": "next" },
+    { "romaji": "dou naru no", "hiragana": "どうなるの", "english": "what happens" }
+  ]
+},
+
+
+
+
+
+
+
+
 ];
 
 
