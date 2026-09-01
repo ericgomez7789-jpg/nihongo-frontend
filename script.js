@@ -31813,6 +31813,74 @@ const level6 = [
 
 
 
+
+{
+  "id": "l6-56",
+  "meaning": "If your attention gets distracted by your smartphone while camping, what happens to nature’s beauty next?",
+  "level": 6,
+
+  "options": [
+    "しぜん の うつくしさ が みえなくなる",
+    "しぜん が もっと きれい に みえる",
+    "そら が あかるくなる",
+    "なにも おこらない"
+  ],
+
+  "optionsRomaji": [
+    "shizen_no_utsukushisa_ga_mienakunaru",
+    "shizen_ga_motto_kirei_ni_mieru",
+    "sora_ga_akaruku_naru",
+    "nanimo_okoranai"
+  ],
+
+  "optionsEN": [
+    "you stop noticing nature’s beauty",
+    "nature looks even more beautiful",
+    "the sky becomes bright",
+    "nothing happens"
+  ],
+
+  "correct": "しぜん の うつくしさ が みえなくなる",
+
+  "fullAudio": {
+    "daughter": "audio/sentences/inference56.wav",
+    "me":       "audio/sentences/inference56.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["audio/sentences/shizen_no_utsukushisa_ga_mienakunaru.wav"],
+      ["audio/sentences/shizen_ga_motto_kirei_ni_mieru.wav"],
+      ["audio/sentences/sora_ga_akaruku_naru.wav"],
+      ["audio/sentences/nanimo_okoranai.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["audio/sentences/shizen_no_utsukushisa_ga_mienakunaru.wav"],
+    ["audio/sentences/shizen_ga_motto_kirei_ni_mieru.wav"],
+    ["audio/sentences/sora_ga_akaruku_naru.wav"],
+    ["audio/sentences/nanimo_okoranai.wav"]
+  ],
+
+  "chunks": [
+    { "romaji": "nojuku dewa", "hiragana": "野宿 では", "english": "while camping outdoors" },
+    { "romaji": "sumaho ni ki ga magireba", "hiragana": "スマホ に 気 が まぎれれば", "english": "if your attention gets distracted by your smartphone" },
+    { "romaji": "shizen no utsukushisa wa", "hiragana": "自然 の うつくしさ は", "english": "nature’s beauty" },
+    { "romaji": "tsugi ni", "hiragana": "次 に", "english": "next" },
+    { "romaji": "dou naru no", "hiragana": "どうなるの", "english": "what happens" }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
 ];
 
 
