@@ -31742,6 +31742,77 @@ const level6 = [
 
 
 
+
+
+{
+  "id": "l6-55",
+  "meaning": "If they stop following the path that leads to the campsite, what happens next?",
+  "level": 6,
+
+  "options": [
+    "みち に まよう",
+    "すぐ に つく",
+    "そら が あかるくなる",
+    "なにも おこらない"
+  ],
+
+  "optionsRomaji": [
+    "michi_ni_mayou",
+    "sugu_ni_tsuku",
+    "sora_ga_akaruku_naru",
+    "nanimo_okoranai"
+  ],
+
+  "optionsEN": [
+    "they get lost",
+    "they arrive quickly",
+    "the sky becomes bright",
+    "nothing happens"
+  ],
+
+  "correct": "みち に まよう",
+
+  "fullAudio": {
+    "daughter": "audio/sentences/inference55.wav",
+    "me":       "audio/sentences/inference55.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["audio/sentences/michi_ni_mayou.wav"],
+      ["audio/sentences/sugu_ni_tsuku.wav"],
+      ["audio/sentences/sora_ga_akaruku_naru.wav"],
+      ["audio/sentences/nanimo_okoranai.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["audio/sentences/michi_ni_mayou.wav"],
+    ["audio/sentences/sugu_ni_tsuku.wav"],
+    ["audio/sentences/sora_ga_akaruku_naru.wav"],
+    ["audio/sentences/nanimo_okoranai.wav"]
+  ],
+
+  "chunks": [
+    { "romaji": "nojuku ni iku tokoro", "hiragana": "野宿 に 行く ところ", "english": "the place you’re going to camp" },
+    { "romaji": "no michi", "hiragana": "の みち", "english": "the path" },
+    { "romaji": "wo tadoranaku naru to", "hiragana": "を たどらなく なる と", "english": "if they stop following" },
+    { "romaji": "tsugi ni", "hiragana": "次 に", "english": "next" },
+    { "romaji": "dou naru no", "hiragana": "どうなるの", "english": "what happens" }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 
