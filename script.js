@@ -6345,6 +6345,159 @@ const sentences = [
 
 
 
+
+
+
+
+{
+  "id": "l1-107",
+  "meaning": "stop it / cut it out",
+  "level": 1,
+
+  "chunks": [
+    {
+      "romaji": "iikagen",
+      "hiragana": "いいかげん",
+      "meaning": "enough / irresponsible / stop it already",
+      "audio": {
+        "daughter": "audio/sentences/iikagen.wav",
+        "me": "audio/sentences/iikagen.wav"
+      }
+    },
+
+    {
+      "romaji": "ni",
+      "hiragana": "に",
+      "meaning": "to (adverbial marker)",
+      "audio": {
+        "daughter": "audio/sentences/ni.wav",
+        "me": "audio/sentences/ni.wav"
+      }
+    },
+
+    {
+      "romaji": "shinasai",
+      "hiragana": "しなさい",
+      "meaning": "do it (polite command)",
+      "audio": {
+        "daughter": "audio/sentences/shinasai.wav",
+        "me": "audio/sentences/shinasai.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  "id": "l1-108",
+  "meaning": "be firm / get it together",
+  "level": 1,
+
+  "chunks": [
+    {
+      "romaji": "shikkari",
+      "hiragana": "しっかり",
+      "meaning": "firmly / properly / steadily",
+      "audio": {
+        "daughter": "audio/sentences/shikkari.wav",
+        "me": "audio/sentences/shikkari.wav"
+      }
+    },
+
+    {
+      "romaji": "shinasai",
+      "hiragana": "しなさい",
+      "meaning": "do it (polite command)",
+      "audio": {
+        "daughter": "audio/sentences/shinasai.wav",
+        "me": "audio/sentences/shinasai.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+{
+  "id": "l1-109",
+  "meaning": "follow behind me",
+  "level": 1,
+
+  "chunks": [
+    {
+      "romaji": "boku",
+      "hiragana": "ぼく",
+      "meaning": "I / me (casual male)",
+      "audio": {
+        "daughter": "audio/sentences/boku.wav",
+        "me": "audio/sentences/boku.wav"
+      }
+    },
+
+    {
+      "romaji": "no",
+      "hiragana": "の",
+      "meaning": "possessive marker",
+      "audio": {
+        "daughter": "audio/sentences/no.wav",
+        "me": "audio/sentences/no.wav"
+      }
+    },
+
+    {
+      "romaji": "ushiro",
+      "hiragana": "うしろ",
+      "meaning": "behind / back",
+      "audio": {
+        "daughter": "audio/sentences/ushiro.wav",
+        "me": "audio/sentences/ushiro.wav"
+      }
+    },
+
+    {
+      "romaji": "ni",
+      "hiragana": "に",
+      "meaning": "location marker (to / toward)",
+      "audio": {
+        "daughter": "audio/sentences/ni.wav",
+        "me": "audio/sentences/ni.wav"
+      }
+    },
+
+    {
+      "romaji": "tsuiteiku",
+      "hiragana": "ついていく",
+      "meaning": "to follow (a person)",
+      "audio": {
+        "daughter": "audio/sentences/tsuiteiku.wav",
+        "me": "audio/sentences/tsuiteiku.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
 ];
 
 // ⭐ ADD THIS PATCH RIGHT HERE
@@ -31439,6 +31592,79 @@ const level6 = [
     { "romaji": "dou naru no", "hiragana": "どうなるの", "english": "what happens" }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  "id": "l6-53",
+  "meaning": "If at the campsite you leave bread crumbs scattered everywhere, what happens to the ants and the bread crumb trail next?",
+  "level": 6,
+
+  "options": [
+    "あり が パンくず の みち を たどる",
+    "あり が にげる",
+    "そら が あかるくなる",
+    "なにも おこらない"
+  ],
+
+  "optionsRomaji": [
+    "ari_ga_pankuzu_no_michi_wo_tadoru",
+    "ari_ga_nigeru",
+    "sora_ga_akaruku_naru",
+    "nanimo_okoranai"
+  ],
+
+  "optionsEN": [
+    "the ants follow the breadcrumb trail",
+    "the ants flee",
+    "the sky becomes bright",
+    "nothing happens"
+  ],
+
+  "correct": "あり が パンくず の みち を たどる",
+
+  "fullAudio": {
+    "daughter": "audio/sentences/inference53.wav",
+    "me":       "audio/sentences/inference53.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["audio/sentences/ari_ga_pankuzu_no_michi_wo_tadoru.wav"],
+      ["audio/sentences/ari_ga_nigeru.wav"],
+      ["audio/sentences/sora_ga_akaruku_naru.wav"],
+      ["audio/sentences/nanimo_okoranai.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["audio/sentences/ari_ga_pankuzu_no_michi_wo_tadoru.wav"],
+    ["audio/sentences/ari_ga_nigeru.wav"],
+    ["audio/sentences/sora_ga_akaruku_naru.wav"],
+    ["audio/sentences/nanimo_okoranai.wav"]
+  ],
+
+  "chunks": [
+    { "romaji": "moshi", "hiragana": "もし", "english": "if" },
+    { "romaji": "nojuku no tokoro dewa", "hiragana": "野宿 の ところ では", "english": "at the campsite" },
+    { "romaji": "pankuzu nante", "hiragana": "パンくず なんて", "english": "things like bread crumbs" },
+    { "romaji": "barabara to", "hiragana": "ばらばら と", "english": "scattered" },
+    { "romaji": "dashippanashi ni shiteoku to", "hiragana": "出しっぱなし に しておく と", "english": "if you leave them out" },
+    { "romaji": "ari wa", "hiragana": "あり は", "english": "as for the ants" },
+    { "romaji": "pankuzu no michi ni", "hiragana": "パンくず の みち に", "english": "the breadcrumb trail" },
+    { "romaji": "dou naru no", "hiragana": "どうなるの", "english": "what happens" }
+  ]
+},
+
 
 
 
