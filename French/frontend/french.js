@@ -3834,6 +3834,55 @@ me: "audio/se_tacher.wav"
 
 
 
+{
+  "id": "l1-fr-62",
+  "meaning": "come here",
+  "level": 1,
+
+  "chunks": [
+    {
+      "romaji": "venez",
+      "hiragana": "venez",
+      "meaning": "come (formal / plural)",
+      "audio": {
+        "daughter": "audio/venez.wav",
+        "me": "audio/venez.wav"
+      }
+    },
+
+    {
+      "romaji": "ici",
+      "hiragana": "ici",
+      "meaning": "here",
+      "audio": {
+        "daughter": "audio/ici.wav",
+        "me": "audio/ici.wav"
+      }
+    },
+
+    {
+      "romaji": "venez-ici",
+      "hiragana": "venez-ici",
+      "meaning": "come here",
+      "audio": {
+        "daughter": "audio/venez-ici.wav",
+        "me": "audio/venez-ici.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
 
 ];
 
