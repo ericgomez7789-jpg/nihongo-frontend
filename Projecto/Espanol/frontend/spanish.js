@@ -2507,6 +2507,84 @@ me: "audio/spanish/silla.wav"
 
 
 
+
+
+
+
+
+{
+  "id": "l1-es-44",
+  "meaning": "the school starts at seven",
+  "level": 1,
+
+  "chunks": [
+    {
+      "romaji": "la",
+      "hiragana": "la",
+      "meaning": "the (feminine)",
+      "audio": {
+        "daughter": "audio/spanish/la.wav",
+        "me": "audio/spanish/la.wav"
+      }
+    },
+
+    {
+      "romaji": "escuela",
+      "hiragana": "escuela",
+      "meaning": "school",
+      "audio": {
+        "daughter": "audio/spanish/escuela.wav",
+        "me": "audio/spanish/escuela.wav"
+      }
+    },
+
+    {
+      "romaji": "empieza",
+      "hiragana": "empieza",
+      "meaning": "starts / begins",
+      "audio": {
+        "daughter": "audio/spanish/empieza.wav",
+        "me": "audio/spanish/empieza.wav"
+      }
+    },
+
+    {
+      "romaji": "a",
+      "hiragana": "a",
+      "meaning": "at",
+      "audio": {
+        "daughter": "audio/spanish/a.wav",
+        "me": "audio/spanish/a.wav"
+      }
+    },
+
+    {
+      "romaji": "las",
+      "hiragana": "las",
+      "meaning": "the (feminine plural, used for time)",
+      "audio": {
+        "daughter": "audio/spanish/las.wav",
+        "me": "audio/spanish/las.wav"
+      }
+    },
+
+    {
+      "romaji": "siete",
+      "hiragana": "siete",
+      "meaning": "seven",
+      "audio": {
+        "daughter": "audio/spanish/siete.wav",
+        "me": "audio/spanish/siete.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
 ];
 
 // ⭐ ADD THIS PATCH RIGHT HERE
@@ -5792,6 +5870,12 @@ const level3 = [
 
 
 
+
+
+
+
+
+
 {
   "id": "es3-15",
   "meaning": "Escuché un ruido detrás de mí, no pude moverme, eché un grito… ¿qué ocurre después?",
@@ -5821,8 +5905,8 @@ const level3 = [
   "correct": "Me doy la vuelta temblando",
 
   "fullAudio": {
-    "daughter": "audio/spanish/inference15b.wav",
-    "me":       "audio/spanish/inference15b.wav"
+    "daughter": "audio/spanish/inference15.wav",
+    "me":       "audio/spanish/inference15.wav"
   },
 
   "choiceAudio": {
@@ -5849,6 +5933,72 @@ const level3 = [
   ]
 },
 
+
+
+
+
+
+
+
+
+
+{
+  "id": "es3-16",
+  "meaning": "Después de revisar mi teléfono, me di cuenta de que no era una mala noticia para nada. Mis hombros se relajaron y solté un respiro largo… ¿qué pasa después?",
+  "level": 3,
+
+  "options": [
+    "Me siento en silencio para calmarme",
+    "Me pongo a reír sin querer",
+    "El teléfono empieza a sonar otra vez",
+    "Un viento frío apaga la luz de la habitación"
+  ],
+
+  "optionsRomaji": [
+    "me_siento_en_silencio_para_calmarme",
+    "me_pongo_a_reir_sin_querer",
+    "el_telefono_empieza_a_sonar_otra_vez",
+    "un_viento_frio_apaga_la_luz_de_la_habitacion"
+  ],
+
+  "optionsEN": [
+    "I sit quietly to calm myself",
+    "I start laughing without meaning to",
+    "the phone starts ringing again",
+    "a cold wind turns off the room’s light"
+  ],
+
+  "correct": "Me siento en silencio para calmarme",
+
+  "fullAudio": {
+    "daughter": "audio/spanish/inference16.wav",
+    "me":       "audio/spanish/inference16.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["spanish/audio/me_siento_en_silencio_para_calmarme.wav"],
+      ["spanish/audio/me_pongo_a_reir_sin_querer.wav"],
+      ["spanish/audio/el_telefono_empieza_a_sonar_otra_vez.wav"],
+      ["spanish/audio/un_viento_frio_apaga_la_luz_de_la_habitacion.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["spanish/audio/me_siento_en_silencio_para_calmarme.wav"],
+    ["spanish/audio/me_pongo_a_reir_sin_querer.wav"],
+    ["spanish/audio/el_telefono_empieza_a_sonar_otra_vez.wav"],
+    ["spanish/audio/un_viento_frio_apaga_la_luz_de_la_habitacion.wav"]
+  ],
+
+  "chunks": [
+    { "spanish": "Después de revisar mi teléfono", "english": "After checking my phone" },
+    { "spanish": "me di cuenta de que no era una mala noticia para nada", "english": "I realized it wasn’t bad news at all" },
+    { "spanish": "mis hombros se relajaron", "english": "my shoulders relaxed" },
+    { "spanish": "y solté un respiro largo", "english": "and I let out a long breath" },
+    { "spanish": "¿qué pasa después?", "english": "what happens next?" }
+  ]
+},
 
 
 
