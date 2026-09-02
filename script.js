@@ -6498,6 +6498,55 @@ const sentences = [
 
 
 
+
+
+
+
+
+{
+  "id": "l1-110",
+  "meaning": "follow the path",
+  "level": 1,
+
+  "chunks": [
+    {
+      "romaji": "michi",
+      "hiragana": "みち",
+      "meaning": "path / road",
+      "audio": {
+        "daughter": "audio/sentences/michi.wav",
+        "me": "audio/sentences/michi.wav"
+      }
+    },
+
+    {
+      "romaji": "wo",
+      "hiragana": "を",
+      "meaning": "object marker",
+      "audio": {
+        "daughter": "audio/sentences/wo.wav",
+        "me": "audio/sentences/wo.wav"
+      }
+    },
+
+    {
+      "romaji": "tadoru",
+      "hiragana": "たどる",
+      "meaning": "to follow / trace (a path, trail, sequence)",
+      "audio": {
+        "daughter": "audio/sentences/tadoru.wav",
+        "me": "audio/sentences/tadoru.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
 ];
 
 // ⭐ ADD THIS PATCH RIGHT HERE
