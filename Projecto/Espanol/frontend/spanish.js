@@ -2585,6 +2585,21 @@ me: "audio/spanish/silla.wav"
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 // ⭐ ADD THIS PATCH RIGHT HERE

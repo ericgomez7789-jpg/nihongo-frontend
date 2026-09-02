@@ -3882,6 +3882,43 @@ me: "audio/se_tacher.wav"
 
 
 
+{
+  "id": "l1-fr-63",
+  "meaning": "go over there",
+  "level": 1,
+
+  "chunks": [
+    {
+      "romaji": "aller",
+      "hiragana": "aller",
+      "meaning": "to go",
+      "audio": {
+        "daughter": "audio/aller.wav",
+        "me": "audio/aller.wav"
+      }
+    },
+
+    {
+      "romaji": "là-bas",
+      "hiragana": "là-bas",
+      "meaning": "over there",
+      "audio": {
+        "daughter": "audio/la-bas.wav",
+        "me": "audio/la-bas.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
 
 
 ];
