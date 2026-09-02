@@ -2592,6 +2592,65 @@ me: "audio/spanish/silla.wav"
 
 
 
+{
+  "id": "l1-es-45",
+  "meaning": "follow the path",
+  "level": 1,
+
+  "chunks": [
+    {
+      "romaji": "sigue",
+      "hiragana": "sigue",
+      "meaning": "follow (command)",
+      "audio": {
+        "daughter": "audio/spanish/sigue.wav",
+        "me": "audio/spanish/sigue.wav"
+      }
+    },
+
+    {
+      "romaji": "el",
+      "hiragana": "el",
+      "meaning": "the (masculine)",
+      "audio": {
+        "daughter": "audio/spanish/el.wav",
+        "me": "audio/spanish/el.wav"
+      }
+    },
+
+    {
+      "romaji": "camino",
+      "hiragana": "camino",
+      "meaning": "path / road",
+      "audio": {
+        "daughter": "audio/spanish/camino.wav",
+        "me": "audio/spanish/camino.wav"
+      }
+    },
+
+    {
+      "romaji": "sigue-el-camino",
+      "hiragana": "sigue-el-camino",
+      "meaning": "follow the path",
+      "audio": {
+        "daughter": "audio/spanish/sigue-el-camino.wav",
+        "me": "audio/spanish/sigue-el-camino.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6016,6 +6075,73 @@ const level3 = [
 },
 
 
+
+
+
+
+
+
+
+
+
+
+
+{
+  "id": "es3-17",
+  "meaning": "Abrí la puerta, algo se cayó de los estantes, salté de susto… ¿qué ocurre después?",
+  "level": 3,
+
+  "options": [
+    "Me quedo quieto tratando de entender el ruido",
+    "Un libro abierto cae justo a mis pies",
+    "La luz parpadea como si algo estuviera fallando",
+    "Una voz suave dice mi nombre desde la habitación"
+  ],
+
+  "optionsRomaji": [
+    "me_quedo_quieto_tratando_de_entender_el_ruido",
+    "un_libro_abierto_cae_justo_a_mis_pies",
+    "la_luz_parpadea_como_si_algo_estuviera_fallando",
+    "una_voz_suave_dice_mi_nombre_desde_la_habitacion"
+  ],
+
+  "optionsEN": [
+    "I freeze, trying to understand the noise",
+    "an open book falls right at my feet",
+    "the light flickers as if something is failing",
+    "a soft voice says my name from inside the room"
+  ],
+
+  "correct": "Me quedo quieto tratando de entender el ruido",
+
+  "fullAudio": {
+    "daughter": "audio/spanish/inference17.wav",
+    "me":       "audio/spanish/inference17.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["spanish/audio/me_quedo_quieto_tratando_de_entender_el_ruido.wav"],
+      ["spanish/audio/un_libro_abierto_cae_justo_a_mis_pies.wav"],
+      ["spanish/audio/la_luz_parpadea_como_si_algo_estuviera_fallando.wav"],
+      ["spanish/audio/una_voz_suave_dice_mi_nombre_desde_la_habitacion.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["spanish/audio/me_quedo_quieto_tratando_de_entender_el_ruido.wav"],
+    ["spanish/audio/un_libro_abierto_cae_justo_a_mis_pies.wav"],
+    ["spanish/audio/la_luz_parpadea_como_si_algo_estuviera_fallando.wav"],
+    ["spanish/audio/una_voz_suave_dice_mi_nombre_desde_la_habitacion.wav"]
+  ],
+
+  "chunks": [
+    { "spanish": "Abrí la puerta", "english": "I opened the door" },
+    { "spanish": "algo se cayó de los estantes", "english": "something fell from the shelves" },
+    { "spanish": "salté de susto", "english": "I jumped in fright" },
+    { "spanish": "¿qué ocurre después?", "english": "what happens next?" }
+  ]
+},
 
 
 
