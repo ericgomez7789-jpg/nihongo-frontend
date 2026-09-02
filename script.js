@@ -6547,6 +6547,75 @@ const sentences = [
 
 
 
+
+
+{
+  "id": "l1-111",
+  "meaning": "pick a berry from the tree",
+  "level": 1,
+
+  "chunks": [
+    {
+      "romaji": "ki",
+      "hiragana": "き",
+      "meaning": "tree",
+      "audio": {
+        "daughter": "audio/sentences/ki.wav",
+        "me": "audio/sentences/ki.wav"
+      }
+    },
+
+    {
+      "romaji": "kara",
+      "hiragana": "から",
+      "meaning": "from",
+      "audio": {
+        "daughter": "audio/sentences/kara.wav",
+        "me": "audio/sentences/kara.wav"
+      }
+    },
+
+    {
+      "romaji": "mi",
+      "hiragana": "み",
+      "meaning": "fruit / berry",
+      "audio": {
+        "daughter": "audio/sentences/mi.wav",
+        "me": "audio/sentences/mi.wav"
+      }
+    },
+
+    {
+      "romaji": "wo",
+      "hiragana": "を",
+      "meaning": "object marker",
+      "audio": {
+        "daughter": "audio/sentences/wo.wav",
+        "me": "audio/sentences/wo.wav"
+      }
+    },
+
+    {
+      "romaji": "mogu",
+      "hiragana": "もぐ",
+      "meaning": "to pluck / twist off (fruit)",
+      "audio": {
+        "daughter": "audio/sentences/mogu.wav",
+        "me": "audio/sentences/mogu.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
 ];
 
 // ⭐ ADD THIS PATCH RIGHT HERE
