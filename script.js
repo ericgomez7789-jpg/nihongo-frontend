@@ -6616,6 +6616,96 @@ const sentences = [
 
 
 
+
+
+
+
+{
+  "id": "l1-112",
+  "meaning": "pluck a feather from the bird's wing",
+  "level": 1,
+
+  "chunks": [
+    {
+      "romaji": "tori",
+      "hiragana": "とり",
+      "meaning": "bird",
+      "audio": {
+        "daughter": "audio/sentences/tori.wav",
+        "me": "audio/sentences/tori.wav"
+      }
+    },
+
+    {
+      "romaji": "no",
+      "hiragana": "の",
+      "meaning": "possessive marker",
+      "audio": {
+        "daughter": "audio/sentences/no.wav",
+        "me": "audio/sentences/no.wav"
+      }
+    },
+
+    {
+      "romaji": "tsubasa",
+      "hiragana": "つばさ",
+      "meaning": "wing",
+      "audio": {
+        "daughter": "audio/sentences/tsubasa.wav",
+        "me": "audio/sentences/tsubasa.wav"
+      }
+    },
+
+    {
+      "romaji": "kara",
+      "hiragana": "から",
+      "meaning": "from",
+      "audio": {
+        "daughter": "audio/sentences/kara.wav",
+        "me": "audio/sentences/kara.wav"
+      }
+    },
+
+    {
+      "romaji": "hane",
+      "hiragana": "はね",
+      "meaning": "feather",
+      "audio": {
+        "daughter": "audio/sentences/hane.wav",
+        "me": "audio/sentences/hane.wav"
+      }
+    },
+
+    {
+      "romaji": "wo",
+      "hiragana": "を",
+      "meaning": "object marker",
+      "audio": {
+        "daughter": "audio/sentences/wo.wav",
+        "me": "audio/sentences/wo.wav"
+      }
+    },
+
+    {
+      "romaji": "tsumu",
+      "hiragana": "つむ",
+      "meaning": "to pluck (delicate removal)",
+      "audio": {
+        "daughter": "audio/sentences/tsumu.wav",
+        "me": "audio/sentences/tsumu.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
 ];
 
 // ⭐ ADD THIS PATCH RIGHT HERE
