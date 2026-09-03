@@ -6706,6 +6706,77 @@ const sentences = [
 
 
 
+
+
+
+
+
+{
+  "id": "l1-113",
+  "meaning": "tear off a piece from the bread",
+  "level": 1,
+
+  "chunks": [
+    {
+      "romaji": "pan",
+      "hiragana": "ぱん",
+      "meaning": "bread",
+      "audio": {
+        "daughter": "audio/sentences/pan.wav",
+        "me": "audio/sentences/pan.wav"
+      }
+    },
+
+    {
+      "romaji": "kara",
+      "hiragana": "から",
+      "meaning": "from",
+      "audio": {
+        "daughter": "audio/sentences/kara.wav",
+        "me": "audio/sentences/kara.wav"
+      }
+    },
+
+    {
+      "romaji": "kakera",
+      "hiragana": "かけら",
+      "meaning": "piece / fragment",
+      "audio": {
+        "daughter": "audio/sentences/kakera.wav",
+        "me": "audio/sentences/kakera.wav"
+      }
+    },
+
+    {
+      "romaji": "wo",
+      "hiragana": "を",
+      "meaning": "object marker",
+      "audio": {
+        "daughter": "audio/sentences/wo.wav",
+        "me": "audio/sentences/wo.wav"
+      }
+    },
+
+    {
+      "romaji": "chigiru",
+      "hiragana": "ちぎる",
+      "meaning": "to tear off (with fingers)",
+      "audio": {
+        "daughter": "audio/sentences/chigiru.wav",
+        "me": "audio/sentences/chigiru.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
 ];
 
 // ⭐ ADD THIS PATCH RIGHT HERE
