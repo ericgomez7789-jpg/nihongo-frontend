@@ -6150,6 +6150,77 @@ const level3 = [
 
 
 
+
+
+
+
+{
+  "id": "es3-18",
+  "meaning": "Escuché a alguien culparme por algo que no hice. Fruncí mis cejas y solté un ruido irritado… ¿qué ocurre después?",
+  "level": 3,
+
+  "options": [
+    "Me quedo mirando a la persona esperando una explicación",
+    "Un silencio incómodo llena el aire por unos segundos",
+    "Mi corazón late más rápido como si fuera a discutir",
+    "Una sombra pasa detrás de nosotros sin que nadie la note"
+  ],
+
+  "optionsRomaji": [
+    "me_quedo_mirando_a_la_persona_esperando_una_explicacion",
+    "un_silencio_incomodo_llena_el_aire_por_unos_segundos",
+    "mi_corazon_late_mas_rapido_como_si_fuera_a_discutir",
+    "una_sombra_pasa_detras_de_nosotros_sin_que_nadie_la_note"
+  ],
+
+  "optionsEN": [
+    "I stare at the person waiting for an explanation",
+    "an awkward silence fills the air for a few seconds",
+    "my heart beats faster as if I were about to argue",
+    "a shadow passes behind us without anyone noticing"
+  ],
+
+  "correct": "Me quedo mirando a la persona esperando una explicación",
+
+  "fullAudio": {
+    "daughter": "audio/spanish/inference18.wav",
+    "me":       "audio/spanish/inference18.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["spanish/audio/me_quedo_mirando_a_la_persona_esperando_una_explicacion.wav"],
+      ["spanish/audio/un_silencio_incomodo_llena_el_aire_por_unos_segundos.wav"],
+      ["spanish/audio/mi_corazon_late_mas_rapido_como_si_fuera_a_discutir.wav"],
+      ["spanish/audio/una_sombra_pasa_detras_de_nosotros_sin_que_nadie_la_note.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["spanish/audio/me_quedo_mirando_a_la_persona_esperando_una_explicacion.wav"],
+    ["spanish/audio/un_silencio_incomodo_llena_el_aire_por_unos_segundos.wav"],
+    ["spanish/audio/mi_corazon_late_mas_rapido_como_si_fuera_a_discutir.wav"],
+    ["spanish/audio/una_sombra_pasa_detras_de_nosotros_sin_que_nadie_la_note.wav"]
+  ],
+
+  "chunks": [
+    { "spanish": "Escuché a alguien culparme por algo que no hice", "english": "I heard someone blame me for something I didn’t do" },
+    { "spanish": "fruncí mis cejas", "english": "my eyebrows tightened" },
+    { "spanish": "y solté un ruido irritado", "english": "and I let out an irritated sound" },
+    { "spanish": "¿qué ocurre después?", "english": "what happens next?" }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 
