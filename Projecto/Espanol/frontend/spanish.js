@@ -2626,20 +2626,88 @@ me: "audio/spanish/silla.wav"
         "daughter": "audio/spanish/camino.wav",
         "me": "audio/spanish/camino.wav"
       }
-    },
-
-    {
-      "romaji": "sigue-el-camino",
-      "hiragana": "sigue-el-camino",
-      "meaning": "follow the path",
-      "audio": {
-        "daughter": "audio/spanish/sigue-el-camino.wav",
-        "me": "audio/spanish/sigue-el-camino.wav"
-      }
     }
   ]
 },
 
+
+
+
+
+
+
+
+
+
+
+
+{
+  "id": "l1-es-46",
+  "meaning": "I pull the weeds from the ground",
+  "level": 1,
+
+  "chunks": [
+    {
+      "romaji": "arranco",
+      "hiragana": "arranco",
+      "meaning": "I pull / I tear out",
+      "audio": {
+        "daughter": "audio/spanish/arranco.wav",
+        "me": "audio/spanish/arranco.wav"
+      }
+    },
+
+    {
+      "romaji": "la",
+      "hiragana": "la",
+      "meaning": "the (feminine)",
+      "audio": {
+        "daughter": "audio/spanish/la.wav",
+        "me": "audio/spanish/la.wav"
+      }
+    },
+
+    {
+      "romaji": "hierba",
+      "hiragana": "hierba",
+      "meaning": "weeds (Mexico)",
+      "audio": {
+        "daughter": "audio/spanish/hierba.wav",
+        "me": "audio/spanish/hierba.wav"
+      }
+    },
+
+    {
+      "romaji": "de",
+      "hiragana": "de",
+      "meaning": "from",
+      "audio": {
+        "daughter": "audio/spanish/de.wav",
+        "me": "audio/spanish/de.wav"
+      }
+    },
+
+    {
+      "romaji": "la",
+      "hiragana": "la",
+      "meaning": "the (feminine)",
+      "audio": {
+        "daughter": "audio/spanish/la.wav",
+        "me": "audio/spanish/la.wav"
+      }
+    },
+
+    {
+      "romaji": "tierra",
+      "hiragana": "tierra",
+      "meaning": "earth / ground",
+      "audio": {
+        "daughter": "audio/spanish/tierra.wav",
+        "me": "audio/spanish/tierra.wav"
+      }
+    }
+  ]
+},
 
 
 
