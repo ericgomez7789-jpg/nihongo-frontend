@@ -2718,7 +2718,53 @@ me: "audio/spanish/silla.wav"
 
 
 
+{
+  "id": "l1-es-47",
+  "meaning": "You can speak in Spanish",
+  "level": 1,
 
+  "chunks": [
+    {
+      "romaji": "puedes",
+      "hiragana": "puedes",
+      "meaning": "you can",
+      "audio": {
+        "daughter": "audio/spanish/puedes.wav",
+        "me": "audio/spanish/puedes.wav"
+      }
+    },
+
+    {
+      "romaji": "hablar",
+      "hiragana": "hablar",
+      "meaning": "to speak",
+      "audio": {
+        "daughter": "audio/spanish/hablar.wav",
+        "me": "audio/spanish/hablar.wav"
+      }
+    },
+
+    {
+      "romaji": "en",
+      "hiragana": "en",
+      "meaning": "in",
+      "audio": {
+        "daughter": "audio/spanish/en.wav",
+        "me": "audio/spanish/en.wav"
+      }
+    },
+
+    {
+      "romaji": "español",
+      "hiragana": "español",
+      "meaning": "Spanish",
+      "audio": {
+        "daughter": "audio/spanish/espanol.wav",
+        "me": "audio/spanish/espanol.wav"
+      }
+    }
+  ]
+},
 
 
 
@@ -6278,6 +6324,75 @@ const level3 = [
     { "spanish": "¿qué ocurre después?", "english": "what happens next?" }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+{
+  "id": "es3-19",
+  "meaning": "Escuché a alguien decir mi nombre de una manera completamente inesperada. Fruncí mis cejas y solté un ruido incómodo… ¿qué ocurre después?",
+  "level": 3,
+
+  "options": [
+    "Me quedo mirando a la persona tratando de entender por qué me llamó así",
+    "Un silencio extraño aparece como si todos esperaran mi reacción",
+    "Mi estómago se tensa como si algo raro estuviera por pasar",
+    "Una puerta cercana se mueve ligeramente sin que nadie la toque"
+  ],
+
+  "optionsRomaji": [
+    "me_quedo_mirando_a_la_persona_tratando_de_entender_por_que_me_llamo_asi",
+    "un_silencio_extrano_aparece_como_si_todos_esperaran_mi_reaccion",
+    "mi_estomago_se_tensa_como_si_algo_raro_estuviera_por_pasar",
+    "una_puerta_cercana_se_mueve_ligeramente_sin_que_nadie_la_toque"
+  ],
+
+  "optionsEN": [
+    "I stare at the person trying to understand why they called me that",
+    "a strange silence appears as if everyone were waiting for my reaction",
+    "my stomach tightens as if something odd were about to happen",
+    "a nearby door moves slightly without anyone touching it"
+  ],
+
+  "correct": "Me quedo mirando a la persona tratando de entender por qué me llamó así",
+
+  "fullAudio": {
+    "daughter": "audio/spanish/inference19.wav",
+    "me":       "audio/spanish/inference19.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["spanish/audio/me_quedo_mirando_a_la_persona_tratando_de_entender_por_que_me_llamo_asi.wav"],
+      ["spanish/audio/un_silencio_extrano_aparece_como_si_todos_esperaran_mi_reaccion.wav"],
+      ["spanish/audio/mi_estomago_se_tensa_como_si_algo_raro_estuviera_por_pasar.wav"],
+      ["spanish/audio/una_puerta_cercana_se_mueve_ligeramente_sin_que_nadie_la_toque.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["spanish/audio/me_quedo_mirando_a_la_persona_tratando_de_entender_por_que_me_llamo_asi.wav"],
+    ["spanish/audio/un_silencio_extrano_aparece_como_si_todos_esperaran_mi_reaccion.wav"],
+    ["spanish/audio/mi_estomago_se_tensa_como_si_algo_raro_estuviera_por_pasar.wav"],
+    ["spanish/audio/una_puerta_cercana_se_mueve_ligeramente_sin_que_nadie_la_toque.wav"]
+  ],
+
+  "chunks": [
+    { "spanish": "Escuché a alguien decir mi nombre", "english": "I heard someone say my name" },
+    { "spanish": "de una manera completamente inesperada", "english": "in a completely unexpected way" },
+    { "spanish": "fruncí mis cejas", "english": "I furrowed my eyebrows" },
+    { "spanish": "y solté un ruido incómodo", "english": "and I let out an uncomfortable sound" },
+    { "spanish": "¿qué ocurre después?", "english": "what happens next?" }
+  ]
+},
+
 
 
 
