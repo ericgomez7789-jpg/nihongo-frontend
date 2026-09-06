@@ -3921,6 +3921,69 @@ me: "audio/se_tacher.wav"
 
 
 
+
+{
+  "id": "l1-fr-64",
+  "meaning": "I go to the store",
+  "level": 1,
+
+  "chunks": [
+    {
+      "romaji": "je",
+      "hiragana": "je",
+      "meaning": "I",
+      "audio": {
+        "daughter": "audio/je.wav",
+        "me": "audio/je.wav"
+      }
+    },
+
+    {
+      "romaji": "vais",
+      "hiragana": "vais",
+      "meaning": "go / am going",
+      "audio": {
+        "daughter": "audio/vais.wav",
+        "me": "audio/vais.wav"
+      }
+    },
+
+    {
+      "romaji": "au",
+      "hiragana": "au",
+      "meaning": "to the",
+      "audio": {
+        "daughter": "audio/au.wav",
+        "me": "audio/au.wav"
+      }
+    },
+
+    {
+      "romaji": "magasin",
+      "hiragana": "magasin",
+      "meaning": "store / shop",
+      "audio": {
+        "daughter": "audio/magasin.wav",
+        "me": "audio/magasin.wav"
+      }
+    }
+  ],
+
+  "fullAudio": {
+    "daughter": "audio/sentence14.wav",
+    "me":       "audio/sentence14.wav"
+  }
+},
+
+
+
+
+
+
+
+
+
+
 ];
 
 // ⭐ ADD THIS PATCH RIGHT HERE

@@ -29845,6 +29845,12 @@ const level6 = [
 
 
 
+
+
+
+
+
+
 {
   id: "l6_020",
   meaning: "I heard a loud crash behind me while I was alone in the room. My shoulders jumped, and I let out a frightened 'ひっ…！'. What happens next?",
