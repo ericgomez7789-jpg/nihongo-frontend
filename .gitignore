@@ -1,26 +1,81 @@
-# Node
+###############################################
+# NODE / NPM / YARN
+###############################################
 node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Build output
+###############################################
+# BUILD OUTPUT
+###############################################
 dist/
 build/
 www/
 
-# Capacitor / Android
+###############################################
+# CAPACITOR / ANDROID
+###############################################
 android/.gradle/
 android/.idea/
 android/app/build/
 android/capacitor-cordova-android-plugins/
 android/capacitor-cordova-ios-plugins/
 
-# Gradle
+###############################################
+# GRADLE
+###############################################
 *.iml
 .gradle/
 local.properties
 
-# System
+###############################################
+# SYSTEM FILES
+###############################################
 .DS_Store
 Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+###############################################
+# ONEDRIVE SYNC JUNK
+###############################################
+*.tmp
+~$*
+*.lnk
+
+###############################################
+# VS CODE
+###############################################
+.vscode/
+*.code-workspace
+
+###############################################
+# MACHINE-SPECIFIC DUPLICATES (MSI / DESKTOP)
+###############################################
+*-MSI.*
+*-DESKTOP-*.*
+*-AG8JFQ0.*
+
+###############################################
+# AUDIO DUPLICATE PROTECTION
+###############################################
+audio/sentences/*-MSI.wav
+audio/sentences/*-DESKTOP-*.wav
+audio/sentences/*-AG8JFQ0.wav
+
+###############################################
+# IMAGE DUPLICATE PROTECTION
+###############################################
+*.png-DESKTOP-*
+*.png-MSI
+
+###############################################
+# HTML/CSS/JS DUPLICATE PROTECTION
+###############################################
+*-MSI.html
+*-DESKTOP-*.html
+*-MSI.css
+*-DESKTOP-*.css
+*-MSI.js
+*-DESKTOP-*.js
