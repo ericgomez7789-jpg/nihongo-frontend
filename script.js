@@ -31182,7 +31182,6 @@ const level6 = [
 
 
 
-
 {
   id: "l6-42",
   meaning: "When someone says you are short, what happens next?",
@@ -31232,11 +31231,9 @@ const level6 = [
   chunks: [
     { romaji: "dareka wa", hiragana: "だれかは", english: "someone" },
     { romaji: "kimi ga se ga hikui to iu to", hiragana: "きみが せが ひくい と いう と", english: "says you are short" },
-    { romaji: "tsugi ni dou naru no", hiragana: "つぎに どうなるの", english: "what happens next" },
-    { romaji: "hazukashiku naru", hiragana: "はずかしくなる", english: "you become embarrassed" }
+    { romaji: "tsugi ni dou naru no", hiragana: "つぎに どうなるの", english: "what happens next" }
   ]
 },
-
 
 
 
