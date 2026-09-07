@@ -6404,6 +6404,79 @@ const level3 = [
 
 
 
+
+{
+  "id": "es3-20",
+  "meaning": "Escuché un ruido fuerte detrás de mí mientras estaba solo en la habitación. Mis hombros saltaron y solté un ruido de miedo… ¿qué ocurre después?",
+  "level": 3,
+
+  "options": [
+    "Me doy la vuelta de inmediato tratando de entender qué causó el ruido",
+    "Un silencio pesado llena la habitación como si algo estuviera esperando",
+    "Mi respiración se acelera como si el peligro estuviera muy cerca",
+    "La ventana vibra ligeramente aunque no haya viento afuera"
+  ],
+
+  "optionsRomaji": [
+    "me_doy_la_vuelta_de_inmediato_tratando_de_entender_que_causo_el_ruido",
+    "un_silencio_pesado_llena_la_habitacion_como_si_algo_estuviera_esperando",
+    "mi_respiracion_se_acelera_como_si_el_peligro_estuviera_muy_cerca",
+    "la_ventana_vibra_ligeramente_aunque_no_haya_viento_afuera"
+  ],
+
+  "optionsEN": [
+    "I turn around immediately trying to understand what caused the noise",
+    "a heavy silence fills the room as if something were waiting",
+    "my breathing speeds up as if danger were very close",
+    "the window vibrates slightly even though there is no wind outside"
+  ],
+
+  "correct": "Me doy la vuelta de inmediato tratando de entender qué causó el ruido",
+
+  "fullAudio": {
+    "daughter": "audio/spanish/inference20.wav",
+    "me":       "audio/spanish/inference20.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["spanish/audio/me_doy_la_vuelta_de_inmediato_tratando_de_entender_que_causo_el_ruido.wav"],
+      ["spanish/audio/un_silencio_pesado_llena_la_habitacion_como_si_algo_estuviera_esperando.wav"],
+      ["spanish/audio/mi_respiracion_se_acelera_como_si_el_peligro_estuviera_muy_cerca.wav"],
+      ["spanish/audio/la_ventana_vibra_ligeramente_aunque_no_haya_viento_afuera.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["spanish/audio/me_doy_la_vuelta_de_inmediato_tratando_de_entender_que_causo_el_ruido.wav"],
+    ["spanish/audio/un_silencio_pesado_llena_la_habitacion_como_si_algo_estuviera_esperando.wav"],
+    ["spanish/audio/mi_respiracion_se_acelera_como_si_el_peligro_estuviera_muy_cerca.wav"],
+    ["spanish/audio/la_ventana_vibra_ligeramente_aunque_no_haya_viento_afuera.wav"]
+  ],
+
+  "chunks": [
+    { "spanish": "Escuché un estruendo fuerte detrás de mí", "english": "I heard a loud crash behind me" },
+    { "spanish": "mientras estaba solo en la habitación", "english": "while I was alone in the room" },
+    { "spanish": "mis hombros saltaron", "english": "my shoulders jumped" },
+    { "spanish": "y solté un ruido de miedo", "english": "and I let out a frightened sound" },
+    { "spanish": "¿qué ocurre después?", "english": "what happens next?" }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 
