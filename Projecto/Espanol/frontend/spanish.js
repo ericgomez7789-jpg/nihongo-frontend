@@ -2773,6 +2773,70 @@ me: "audio/spanish/silla.wav"
 
 
 
+
+
+
+
+
+{
+  "id": "l1-es-48",
+  "meaning": "tie your shoelaces",
+  "level": 1,
+
+  "chunks": [
+    {
+      "romaji": "amarra",
+      "hiragana": "amarra",
+      "meaning": "tie",
+      "audio": {
+        "daughter": "audio/spanish/amarra.wav",
+        "me": "audio/spanish/amarra.wav"
+      }
+    },
+
+    {
+      "romaji": "te",
+      "hiragana": "te",
+      "meaning": "yourself",
+      "audio": {
+        "daughter": "audio/spanish/te.wav",
+        "me": "audio/spanish/te.wav"
+      }
+    },
+
+    {
+      "romaji": "las",
+      "hiragana": "las",
+      "meaning": "the (feminine plural)",
+      "audio": {
+        "daughter": "audio/spanish/las.wav",
+        "me": "audio/spanish/las.wav"
+      }
+    },
+
+    {
+      "romaji": "agujetas",
+      "hiragana": "agujetas",
+      "meaning": "shoelaces",
+      "audio": {
+        "daughter": "audio/spanish/agujetas.wav",
+        "me": "audio/spanish/agujetas.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 // ⭐ ADD THIS PATCH RIGHT HERE
@@ -6462,6 +6526,84 @@ const level3 = [
     { "spanish": "¿qué ocurre después?", "english": "what happens next?" }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  "id": "es3-21",
+  "meaning": "La hermana mayor dejó caer todos los crayolas al suelo, y el padre soltó un ruido de cansancio… ¿qué ocurre después?",
+  "level": 3,
+
+  "options": [
+    "La hermana mayor empieza a recoger los crayolas rápidamente",
+    "El padre respira hondo como si necesitara más paciencia",
+    "Los crayolas ruedan por el piso haciendo un pequeño caos de colores",
+    "La hermana menor observa en silencio sin saber qué hacer"
+  ],
+
+  "optionsRomaji": [
+    "la_hermana_mayor_empieza_a_recoger_los_crayolas_rapidamente",
+    "el_padre_respira_hondo_como_si_necesitara_mas_paciencia",
+    "los_crayolas_ruedan_por_el_piso_haciendo_un_pequeno_caos_de_colores",
+    "la_hermana_menor_observa_en_silencio_sin_saber_que_hacer"
+  ],
+
+  "optionsEN": [
+    "the older sister starts picking up the crayons quickly",
+    "the father takes a deep breath as if he needed more patience",
+    "the crayons roll across the floor creating a small chaos of colors",
+    "the younger sister watches silently not knowing what to do"
+  ],
+
+  "correct": "La hermana mayor empieza a recoger los crayolas rápidamente",
+
+  "fullAudio": {
+    "daughter": "audio/spanish/inference21.wav",
+    "me":       "audio/spanish/inference21.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["spanish/audio/la_hermana_mayor_empieza_a_recoger_los_crayolas_rapidamente.wav"],
+      ["spanish/audio/el_padre_respira_hondo_como_si_necesitara_mas_paciencia.wav"],
+      ["spanish/audio/los_crayolas_ruedan_por_el_piso_haciendo_un_pequeno_caos_de_colores.wav"],
+      ["spanish/audio/la_hermana_menor_observa_en_silencio_sin_saber_que_hacer.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["spanish/audio/la_hermana_mayor_empieza_a_recoger_los_crayolas_rapidamente.wav"],
+    ["spanish/audio/el_padre_respira_hondo_como_si_necesitara_mas_paciencia.wav"],
+    ["spanish/audio/los_crayolas_ruedan_por_el_piso_haciendo_un_pequeno_caos_de_colores.wav"],
+    ["spanish/audio/la_hermana_menor_observa_en_silencio_sin_saber_que_hacer.wav"]
+  ],
+
+  "chunks": [
+    { "spanish": "La hermana mayor dejó caer los crayolas", "english": "The older sister dropped the crayons" },
+    { "spanish": "al suelo", "english": "on the floor" },
+    { "spanish": "y el padre soltó un ruido de cansancio", "english": "and the father let out a tired sound" },
+    { "spanish": "como resignándose", "english": "as if resigning himself" },
+    { "spanish": "¿qué ocurre después?", "english": "what happens next?" }
+  ]
+},
+
+
+
+
 
 
 
