@@ -32435,6 +32435,84 @@ const level6 = [
 
 
 
+
+
+
+
+
+
+
+
+{
+  "id": "l6-61",
+  "meaning": "Because of the earthquake the ground shakes violently and the window rattles wildly and breaks. What happens to their feelings next?",
+  "level": 6,
+
+  "options": [
+    "こわくて うごけなくなる",
+    "そら が あかるくなる",
+    "みち が きえる",
+    "なにも おこらない"
+  ],
+
+  "optionsRomaji": [
+    "kowakute_ugokenaku_naru",
+    "sora_ga_akaruku_naru",
+    "michi_ga_kieru",
+    "nanimo_okoranai"
+  ],
+
+  "optionsEN": [
+    "they freeze in fear",
+    "the sky becomes bright",
+    "the path disappears",
+    "nothing happens"
+  ],
+
+  "correct": "こわくて うごけなくなる",
+
+  "fullAudio": {
+    "daughter": "audio/sentences/inference61.wav",
+    "me":       "audio/sentences/inference61.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["audio/sentences/kowakute_ugokenaku_naru.wav"],
+      ["audio/sentences/sora_ga_akaruku_naru.wav"],
+      ["audio/sentences/michi_ga_kieru.wav"],
+      ["audio/sentences/nanimo_okoranai.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["audio/sentences/kowakute_ugokenaku_naru.wav"],
+    ["audio/sentences/sora_ga_akaruku_naru.wav"],
+    ["audio/sentences/michi_ga_kieru.wav"],
+    ["audio/sentences/nanimo_okoranai.wav"]
+  ],
+
+  "chunks": [
+    { "romaji": "jishin no sei de", "hiragana": "じしん の せいで", "english": "because of the earthquake" },
+    { "romaji": "jimen ga gura-gura to yurete", "hiragana": "じめん が ぐらぐら と ゆれて", "english": "the ground shakes violently" },
+    { "romaji": "mado ga gatagata to narikurutte", "hiragana": "まど が がたがた と なりくるって", "english": "the window rattles wildly" },
+    { "romaji": "wareta", "hiragana": "われた", "english": "and breaks" },
+    { "romaji": "tsugi ni kimochi wa dou naru no", "hiragana": "つぎ に きもち は どうなるの", "english": "what happens to their feelings next" }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 
