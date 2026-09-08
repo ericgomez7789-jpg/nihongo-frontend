@@ -3984,6 +3984,98 @@ me: "audio/se_tacher.wav"
 
 
 
+
+
+
+
+
+{
+  "id": "l1-fr-65",
+  "meaning": "the cat is under the chair",
+  "level": 1,
+
+  "chunks": [
+    {
+      "romaji": "le",
+      "hiragana": "le",
+      "meaning": "the (masculine)",
+      "audio": {
+        "daughter": "audio/le.wav",
+        "me": "audio/le.wav"
+      }
+    },
+
+    {
+      "romaji": "chat",
+      "hiragana": "chat",
+      "meaning": "cat",
+      "audio": {
+        "daughter": "audio/chat.wav",
+        "me": "audio/chat.wav"
+      }
+    },
+
+    {
+      "romaji": "est",
+      "hiragana": "est",
+      "meaning": "is",
+      "audio": {
+        "daughter": "audio/est.wav",
+        "me": "audio/est.wav"
+      }
+    },
+
+    {
+      "romaji": "sous",
+      "hiragana": "sous",
+      "meaning": "under",
+      "audio": {
+        "daughter": "audio/sous.wav",
+        "me": "audio/sous.wav"
+      }
+    },
+
+    {
+      "romaji": "la",
+      "hiragana": "la",
+      "meaning": "the (feminine)",
+      "audio": {
+        "daughter": "audio/la.wav",
+        "me": "audio/la.wav"
+      }
+    },
+
+    {
+      "romaji": "chaise",
+      "hiragana": "chaise",
+      "meaning": "chair",
+      "audio": {
+        "daughter": "audio/chaise.wav",
+        "me": "audio/chaise.wav"
+      }
+    },
+
+    {
+      "romaji": "le-chat-est-sous-la-chaise",
+      "hiragana": "le-chat-est-sous-la-chaise",
+      "meaning": "the cat is under the chair (natural spoken unit)",
+      "audio": {
+        "daughter": "audio/sentence15.wav",
+        "me": "audio/sentence15.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
 ];
 
 // ⭐ ADD THIS PATCH RIGHT HERE
