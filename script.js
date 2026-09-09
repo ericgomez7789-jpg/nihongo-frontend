@@ -32513,6 +32513,80 @@ const level6 = [
 
 
 
+
+{
+  "id": "l6-62",
+  "meaning": "If you saw a tsunami surging in with a rushing sound, what feeling would you have?",
+  "level": 6,
+
+  "options": [
+    "こわくて にげたくなる",
+    "そら が しずかになる",
+    "いし が とける",
+    "なにも かんじない"
+  ],
+
+  "optionsRomaji": [
+    "kowakute_nigetaku_naru",
+    "sora_ga_shizuka_naru",
+    "ishi_ga_tokeru",
+    "nanimo_kanjinai"
+  ],
+
+  "optionsEN": [
+    "they want to run away in fear",
+    "the sky becomes quiet",
+    "the stones melt",
+    "they feel nothing"
+  ],
+
+  "correct": "こわくて にげたくなる",
+
+  "fullAudio": {
+    "daughter": "audio/sentences/inference62.wav",
+    "me":       "audio/sentences/inference62.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["audio/sentences/kowakute_nigetaku_naru.wav"],
+      ["audio/sentences/sora_ga_shizuka_naru.wav"],
+      ["audio/sentences/ishi_ga_tokeru.wav"],
+      ["audio/sentences/nanimo_kanjinai.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["audio/sentences/kowakute_nigetaku_naru.wav"],
+    ["audio/sentences/sora_ga_shizuka_naru.wav"],
+    ["audio/sentences/ishi_ga_tokeru.wav"],
+    ["audio/sentences/nanimo_kanjinai.wav"]
+  ],
+
+  "chunks": [
+    { "romaji": "zazaa-tto", "hiragana": "ざざーっと", "english": "with a rushing wave sound" },
+    { "romaji": "oshiyoseta tsunami wo", "hiragana": "おしよせた つなみ を", "english": "the tsunami that surged in" },
+    { "romaji": "mitara", "hiragana": "みたら", "english": "if you saw it" },
+    { "romaji": "donna kimochi ni naru no", "hiragana": "どんな きもち に なるの", "english": "what feeling would you have" }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 
