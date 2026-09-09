@@ -2837,6 +2837,47 @@ me: "audio/spanish/silla.wav"
 
 
 
+
+
+
+{
+  "id": "l1-es-49",
+  "meaning": "I am thirsty",
+  "level": 1,
+
+  "chunks": [
+    {
+      "romaji": "tengo",
+      "hiragana": "tengo",
+      "meaning": "I have",
+      "audio": {
+        "daughter": "audio/spanish/tengo.wav",
+        "me": "audio/spanish/tengo.wav"
+      }
+    },
+
+    {
+      "romaji": "sed",
+      "hiragana": "sed",
+      "meaning": "thirst",
+      "audio": {
+        "daughter": "audio/spanish/sed.wav",
+        "me": "audio/spanish/sed.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 // ⭐ ADD THIS PATCH RIGHT HERE
