@@ -32586,6 +32586,77 @@ const level6 = [
 
 
 
+{
+  "id": "l6-63",
+  "meaning": "The blazing bright sun keeps shining nonstop on the bald head, I sigh 'haa...', so what feeling happens next?",
+  "level": 6,
+
+  "options": [
+    "つかれて ひかげ に はいりたくなる",
+    "そら が まっさお になる",
+    "かみ が いきなり はえてくる",
+    "なにも かんじない"
+  ],
+
+  "optionsRomaji": [
+    "tsukarete_hikage_ni_hairitaku_naru",
+    "sora_ga_massao_ninaru",
+    "kami_ga_ikinari_haetekuru",
+    "nanimo_kanjinai"
+  ],
+
+  "optionsEN": [
+    "they get tired and want to go into the shade",
+    "the sky suddenly turns deep blue",
+    "their hair suddenly grows back",
+    "they feel nothing"
+  ],
+
+  "correct": "つかれて ひかげ に はいりたくなる",
+
+  "fullAudio": {
+    "daughter": "audio/sentences/inference63.wav",
+    "me":       "audio/sentences/inference63.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["audio/sentences/tsukarete_hikage_ni_hairitaku_naru.wav"],
+      ["audio/sentences/sora_ga_massao_ninaru.wav"],
+      ["audio/sentences/kami_ga_ikinari_haetekuru.wav"],
+      ["audio/sentences/nanimo_kanjinai.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["audio/sentences/tsukarete_hikage_ni_hairitaku_naru.wav"],
+    ["audio/sentences/sora_ga_massao_ninaru.wav"],
+    ["audio/sentences/kami_ga_ikinari_haetekuru.wav"],
+    ["audio/sentences/nanimo_kanjinai.wav"]
+  ],
+
+  "chunks": [
+    { "romaji": "kankan to shita akarui taiyou wa", "hiragana": "かんかん と した あかるい たいよう は", "english": "the blazing bright sun" },
+    { "romaji": "hageatama wo hikkiri nashi ni terashi tsuzukete ite", "hiragana": "はげあたま を ひっきりなし に てらし つづけて いて", "english": "keeps shining nonstop on the bald head" },
+    { "romaji": "boku wa haa tte nari", "hiragana": "ぼく は はぁ って なり", "english": "I go 'haa…' in frustration" },
+    { "romaji": "tsugi ni donna kimochi ni dou naru no", "hiragana": "つぎ に どんな きもち に どう なるの", "english": "what feeling happens next" }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ];
 
