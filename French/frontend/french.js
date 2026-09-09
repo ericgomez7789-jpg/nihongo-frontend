@@ -5281,6 +5281,505 @@ document.getElementById("backToLevelsBtn").onclick = () => {
 ========================================================== */
 
 
+/****************************************************
+ * LEVEL 2 DATASET — FRENCH
+ ****************************************************/
+
+const level2SentencesFR = [
+  {
+    id: "l2_fr_001",
+    sentence: "Nous pouvons rester dans le parc mais il va pleuvoir.",
+    conjunction: "mais",
+    meaning: "We can stay in the park, but it's going to rain.",
+    fullAudio: "audio/conjunction1.wav",
+    chunks: [
+      {
+        audio: {
+          me: "audio/conjunction1.wav",
+          daughter: "audio/conjunction1.wav"
+        }
+      }
+    ]
+  }
+];
+
+
+/****************************************************
+ * LEVEL 2 ENGINE — FRENCH ONLY
+ ****************************************************/
+
+const L2 = {
+  round: 0,
+  score: 0,
+  TOTAL_ROUNDS: 4,
+
+  dataset: level2SentencesFR,
+  currentSentence: null,
+  activeScreen: null,
+
+  mcqLocked: false,
+
+  audio: {
+    cancelToken: { cancel: false },
+    generation: 0,
+    current: null
+  }
+};
+
+
+L2.stopAllAudio = function () {
+  L2.audio.cancelToken.cancel = true;
+  L2.audio.generation++;
+
+  if (L2.audio.current) {
+    try {
+      L2.audio.current.pause();
+      L2.audio.current.currentTime = 0;
+    } catch (e) {}
+    L2.audio.current = null;
+  }
+};
+
+
+L2.setCurrentSentence = function (sentenceObj) {
+  if (!sentenceObj) return;
+  L2.currentSentence = sentenceObj;
+};
+
+L2.getCurrentSentence = function () {
+  return L2.currentSentence || null;
+};
+
+
+L2.updateScoreKeeper = function () {
+  const roundsEl = document.getElementById("l2SessionRounds");
+  const scoreEl = document.getElementById("l2SessionScore");
+  const correctEl = document.getElementById("l2SessionCorrect");
+
+  if (roundsEl) roundsEl.textContent = L2.round;
+  if (scoreEl) scoreEl.textContent = L2.score;
+  if (correctEl) correctEl.textContent = L2.score;
+};
+
+
+L2.startRound = function () {
+  L2.stopAllAudio();
+  L2.audio.cancelToken.cancel = false;
+  L2.audio.generation++;
+
+  L2.mcqLocked = false;
+
+  const sentence = L2.dataset[Math.floor(Math.random() * L2.dataset.length)];
+  L2.setCurrentSentence(sentence);
+
+  L2.screen1();
+
+  L2.round++;
+  if (L2.round >= L2.dataset.length) {
+    L2.round = 0;
+  }
+};
+
+
+L2.screen1 = function () {
+  window.currentLevel = 2;
+  window.currentScreen = "level2Screen1";
+
+  const replayBtn = document.getElementById("l2ReplaySentenceBtn");
+  if (replayBtn) replayBtn.style.display = "none";
+
+  L2.stopAllAudio();
+  L2.audio.cancelToken.cancel = false;
+  L2.audio.generation++;
+  L2.audio.current = null;
+
+  const sentence = L2.getCurrentSentence();
+  L2.currentSentence = sentence;
+
+  L2.show("level2Screen1");
+
+  if (typeof L2.renderProgress === "function") {
+    L2.renderProgress("level2Screen1");
+  }
+
+  L2.playNaturalSentence();
+};
+
+
+L2.playNaturalSentence = function () {
+  const s = L2.getCurrentSentence();
+  if (!s || !s.fullAudio) {
+    L2.screen2();
+    return;
+  }
+
+  const audio = new Audio(s.fullAudio);
+  L2.audio.current = audio;
+
+  audio.onended = () => L2.screen2();
+  audio.onerror = () => L2.screen2();
+
+  audio.play().catch(() => L2.screen2());
+};
+
+
+L2.show = function (id) {
+  document.querySelectorAll(".level2-screen")
+    .forEach(el => el.classList.add("hidden"));
+
+  if (id.startsWith("level2")) {
+    document.getElementById("level2Wrapper")?.classList.remove("hidden");
+    document.getElementById(id)?.classList.remove("hidden");
+    return;
+  }
+
+  if (id === "screen3") {
+    document.getElementById("level2Wrapper")?.classList.add("hidden");
+    document.querySelectorAll(".screen").forEach(s => s.classList.add("hidden"));
+    document.getElementById("screen3")?.classList.remove("hidden");
+    return;
+  }
+};
+
+
+/****************************************************
+ * FRENCH CONJUNCTION CATEGORIES
+ ****************************************************/
+
+L2.conjunctionCategories = {
+  contrast: ["mais", "cependant", "pourtant"],
+  cause: ["parce que", "puisque", "car"],
+  sequence: ["ensuite", "puis", "après"],
+  addition: ["et", "en plus"],
+  condition: ["si"]
+};
+
+
+L2.generateDistractors = function (correct) {
+  const distractors = new Set();
+
+  let categoryKey = null;
+  for (const key in L2.conjunctionCategories) {
+    if (L2.conjunctionCategories[key].includes(correct)) {
+      categoryKey = key;
+      break;
+    }
+  }
+
+  const pool = [];
+  for (const key in L2.conjunctionCategories) {
+    if (key !== categoryKey) {
+      pool.push(...L2.conjunctionCategories[key]);
+    }
+  }
+
+  while (distractors.size < 3 && pool.length > 0) {
+    const pick = pool[Math.floor(Math.random() * pool.length)];
+    if (pick !== correct) distractors.add(pick);
+  }
+
+  return Array.from(distractors).slice(0, 3);
+};
+
+
+L2.screen2 = function () {
+  L2.activeScreen = "screen2";
+  L2.show("level2Screen2");
+
+  requestAnimationFrame(() => {
+    const replayBtn = document.getElementById("l2ReplaySentenceBtn");
+    if (replayBtn) replayBtn.style.display = "inline-block";
+
+    L2.mcqLocked = false;
+
+    const s = L2.currentSentence;
+    const mcqBox = document.getElementById("level2McqContainer");
+    const sentenceLine = document.getElementById("level2SentenceLine");
+
+    const blank = "___________";
+
+    sentenceLine.textContent = s.sentence
+      .replace(new RegExp("\\b" + s.conjunction + "\\b", "gi"), blank)
+      .replace(/\s{2,}/g, " ")
+      .trim();
+
+    const distractors = L2.generateDistractors(s.conjunction);
+    const allOptions = [s.conjunction, ...distractors];
+
+    for (let i = allOptions.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [allOptions[i], allOptions[j]] = [allOptions[j], allOptions[i]];
+    }
+
+    mcqBox.innerHTML = "";
+    allOptions.forEach(opt => {
+      const btn = document.createElement("button");
+      btn.className = "mcqBtn";
+      btn.textContent = opt;
+      btn.onclick = () => L2.handleMCQ(opt);
+      mcqBox.appendChild(btn);
+    });
+
+    if (replayBtn) {
+      replayBtn.onclick = () => {
+        if (L2.mcqLocked) return;
+        L2.stopAllAudio();
+        L2.audio.cancelToken.cancel = false;
+        L2.audio.generation++;
+        L2.playNaturalSentence();
+      };
+    }
+  });
+};
+
+
+L2.handleMCQ = function (choice) {
+  if (L2.mcqLocked) return;
+  L2.mcqLocked = true;
+
+  const s = L2.currentSentence;
+  const correct = s.conjunction;
+
+  const normalize = str => str.trim().normalize("NFC");
+  const isCorrect = normalize(choice) === normalize(correct);
+
+  const buttons = document.querySelectorAll("#level2McqContainer .mcqBtn");
+
+  buttons.forEach(btn => {
+    btn.disabled = true;
+    const val = normalize(btn.textContent.trim());
+    if (val === normalize(correct)) {
+      btn.classList.add("correct");
+    } else {
+      btn.classList.add("wrong");
+    }
+  });
+
+  if (isCorrect) {
+    L2.score++;
+    Progress2.markSentenceComplete("level2", s.id);
+  }
+
+  L2.updateScoreKeeper();
+
+  setTimeout(() => {
+    if (L2.activeScreen !== "screen2") return;
+    L2.showRoundSummary();
+  }, 900);
+};
+
+
+L2.showRoundSummary = function () {
+  L2.activeScreen = "screen3";
+
+  const s = L2.currentSentence;
+
+  L2.stopAllAudio();
+  L2.show("screen3");
+
+  document.getElementById("meaningBox").textContent = s.meaning;
+  document.getElementById("summaryCorrectDrops").textContent =
+    `Correct Answer: ${s.conjunction}`;
+
+  const cont = document.getElementById("summaryContainer");
+  cont.innerHTML = "";
+
+  const row = document.createElement("div");
+  row.className = "summary-row";
+  row.innerHTML = `
+    <div class="summary-hiragana">${s.sentence}</div>
+    <div class="summary-romaji">${s.conjunction}</div>
+    <div class="summary-english">${s.meaning}</div>
+  `;
+  cont.appendChild(row);
+
+  document.getElementById("screen3ReplayBtn").onclick = () => {
+    L2.stopAllAudio();
+    L2.audio.cancelToken.cancel = false;
+    L2.audio.generation++;
+    L2.audio.current = null;
+    L2.playNaturalSentence();
+  };
+
+  document.getElementById("screen3NextBtn").onclick = () => {
+    L2.mcqLocked = true;
+    L2.stopAllAudio();
+
+    document.getElementById("screen3")?.classList.add("hidden");
+    document.getElementById("level2Screen2")?.classList.remove("hidden");
+    document.getElementById("level2Wrapper")?.classList.remove("hidden");
+
+    if (L2.round >= L2.TOTAL_ROUNDS) {
+      showLevel2FinalSummary();
+      return;
+    }
+
+    L2.currentSentence = null;
+    L2.startRound();
+  };
+};
+
+
+function showLevel2FinalSummary() {
+  L2.mcqLocked = true;
+
+  if (L2.audio && L2.audio.cancelToken) {
+    L2.audio.cancelToken.cancel = true;
+  }
+
+  if (L2.audio) {
+    L2.audio.generation++;
+    L2.audio.current = null;
+  }
+
+  L2.stopAllAudio();
+  L2.show("level2Screen4");
+
+  document.getElementById("l2SessionRounds").textContent = L2.TOTAL_ROUNDS;
+  document.getElementById("l2SessionScore").textContent = L2.score;
+  document.getElementById("l2SessionCorrect").textContent = L2.score;
+}
+
+
+window.L2 = window.L2 || {};
+
+L2.Reset = {
+  attach(screenEl, screenName) {
+    if (!screenEl) return;
+    if (screenName !== "screen1") return;
+
+    let btn = screenEl.querySelector(".resetBtn");
+
+    if (!btn) {
+      btn = document.createElement("button");
+      btn.className = "resetBtn";
+      btn.textContent = "Reset Level 2";
+
+      btn.style.position = "absolute";
+      btn.style.top = "70px";
+      btn.style.left = "10px";
+
+      screenEl.appendChild(btn);
+    }
+
+    btn.style.display = "block";
+
+    if (!btn.dataset.wired) {
+      btn.dataset.wired = "true";
+
+      btn.onclick = () => {
+        L2.stopAllAudio();
+        L2.audio.cancelToken.cancel = true;
+        L2.audio.generation++;
+        L2.audio.current = null;
+
+        Progress3.resetLevel("level2");
+
+        setTimeout(() => {
+          L2.start();
+        }, 0);
+      };
+    }
+  }
+};
+
+
+L2.renderProgress = function (screenId) {
+  const screen = document.getElementById(screenId);
+  if (!screen) return;
+
+  const p = Progress2.getLevelProgress("level2");
+  const total = p.total;
+  const current = p.completed;
+  const pct = p.percent;
+
+  let wrapper = document.getElementById("l2ProgressWrapper");
+  if (!wrapper) {
+    wrapper = document.createElement("div");
+    wrapper.id = "l2ProgressWrapper";
+    wrapper.style.marginBottom = "20px";
+
+    wrapper.innerHTML = `
+      <div id="l2ProgressLabel" style="
+        font-size: 18px;
+        margin-bottom: 6px;
+        color: #fff;
+        text-align: center;
+      "></div>
+
+      <div id="l2ProgressOuter" style="
+        width: 100%;
+        height: 10px;
+        background: #333;
+        border-radius: 6px;
+        overflow: hidden;
+      ">
+        <div id="l2ProgressBar" style="
+          height: 100%;
+          width: 0%;
+          background: #4caf50;
+          transition: width 0.3s ease;
+        "></div>
+      </div>
+    `;
+  }
+
+  const title = screen.querySelector(".title");
+  if (title && !wrapper.parentNode) {
+    title.insertAdjacentElement("afterend", wrapper);
+  } else if (!wrapper.parentNode) {
+    screen.prepend(wrapper);
+  }
+
+  document.getElementById("l2ProgressBar").style.width = pct + "%";
+  document.getElementById("l2ProgressLabel").textContent =
+    `Progress: ${current} / ${total}`;
+};
+
+
+L2.start = function () {
+  L2.round = 0;
+  L2.score = 0;
+  L2.mcqLocked = false;
+  L2.currentSentence = null;
+
+  if (Array.isArray(L2.dataset)) {
+    Progress2.setTotal("level2", L2.dataset.length);
+  }
+
+  L2.stopAllAudio();
+
+  if (L2.audio && L2.audio.cancelToken) {
+    L2.audio.cancelToken.cancel = false;
+  }
+
+  L2.startRound();
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5299,6 +5798,11 @@ document.getElementById("backToLevelsBtn").onclick = () => {
 /*----------------------------------------------------------------
 LEVEL HANDLER (CLEAN, ISOLATED, ERROR‑FREE)
 -------------------------------------------------------------------*/
+
+
+
+
+/*
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -5346,7 +5850,7 @@ btn?.addEventListener("click", window.level1IsolatedHandler);
 
 
 
-/*
+
 
   // ---------------------------------------------------------
   // LEVEL 2
@@ -5683,511 +6187,63 @@ if (!level6Btn) {
 
 
 
-  // ---------------------------------------------------------
-  // LEVEL 7
-  // ---------------------------------------------------------
-  // ---------------------------------------------------------
-// LEVEL 7 (GATED: BASIC OR PREMIUM, ISOLATED, CLEAN)
-// ---------------------------------------------------------
-const level7Btn = document.getElementById("level7Btn");
-
-if (!level7Btn) {
-  console.error("Level 7 button not found in DOM");
-} else {
-  level7Btn.addEventListener("click", async () => {
-    console.log("[Level 7] Gated handler fired");
-
-    const user = window.currentUser;
-    if (!user) {
-      alert("You must be logged in to access Level 7.");
-      window.location.href = "blog-podcast.html";
-      return;
-    }
-
-    // Instant unlock if success.html already set the flag
-    if (
-      localStorage.getItem("basicUnlock") === "true" ||
-      localStorage.getItem("premiumUnlock") === "true"
-    ) {
-      console.log("Unlock flag detected — Level 7 unlocked.");
-      document.querySelectorAll(".screen").forEach(s => s.classList.add("hidden"));
-      document.getElementById("screen2L7")?.classList.remove("hidden");
-      L7.start();
-      return;
-    }
-
-    // Otherwise check real membership in Supabase
-    const { data, error } = await sb
-      .from("profiles")
-      .select("membership_status, membership_plan")
-      .eq("email", user.email)
-      .maybeSingle();
-
-    console.log("Membership result (L7):", { data, error });
-
-    if (error) {
-      console.error("Membership query error:", error);
-      alert("Membership check failed. Please try again.");
-      return;
-    }
-
-    const status = data?.membership_status;
-    const plan = data?.membership_plan;
-
-    const allowed = [
-      "basic-monthly",
-      "basic-yearly",
-      "premium-monthly",
-      "premium-yearly"
-    ];
-
-    if (status === "active" && allowed.includes(plan)) {
-      console.log("User has Basic or Premium — unlocking Level 7.");
-
-      // Cache unlock for instant future access
-      if (plan.startsWith("basic")) {
-        localStorage.setItem("basicUnlock", "true");
-      } else {
-        localStorage.setItem("premiumUnlock", "true");
-      }
-
-      document.querySelectorAll(".screen").forEach(s => s.classList.add("hidden"));
-      document.getElementById("screen2L7")?.classList.remove("hidden");
-      L7.start();
-      return;
-    }
-
-    alert("Level 7 is locked. Basic or Premium required.");
-    window.location.href = "membership.html";
-  });
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-  // ---------------------------------------------------------
-  // LEVEL 8
-  // ---------------------------------------------------------
-  // ---------------------------------------------------------
-// LEVEL 8 (GATED: BASIC OR PREMIUM, ISOLATED, CLEAN)
-// ---------------------------------------------------------
-const level8Btn = document.getElementById("level8Btn");
-
-if (!level8Btn) {
-  console.error("Level 8 button not found in DOM");
-} else {
-  level8Btn.addEventListener("click", async () => {
-    console.log("[Level 8] Gated handler fired");
-
-    const user = window.currentUser;
-    if (!user) {
-      alert("You must be logged in to access Level 8.");
-      window.location.href = "blog-podcast.html";
-      return;
-    }
-
-    // Instant unlock if success.html already set the flag
-    if (
-      localStorage.getItem("basicUnlock") === "true" ||
-      localStorage.getItem("premiumUnlock") === "true"
-    ) {
-      console.log("Unlock flag detected — Level 8 unlocked.");
-      document.querySelectorAll(".screen").forEach(s => s.classList.add("hidden"));
-      document.getElementById("screen2L8")?.classList.remove("hidden");
-      L8.start();
-      return;
-    }
-
-    // Otherwise check real membership in Supabase
-    const { data, error } = await sb
-      .from("profiles")
-      .select("membership_status, membership_plan")
-      .eq("email", user.email)
-      .maybeSingle();
-
-    console.log("Membership result (L8):", { data, error });
-
-    if (error) {
-      console.error("Membership query error:", error);
-      alert("Membership check failed. Please try again.");
-      return;
-    }
-
-    const status = data?.membership_status;
-    const plan = data?.membership_plan;
-
-    const allowed = [
-      "basic-monthly",
-      "basic-yearly",
-      "premium-monthly",
-      "premium-yearly"
-    ];
-
-    if (status === "active" && allowed.includes(plan)) {
-      console.log("User has Basic or Premium — unlocking Level 8.");
-
-      // Cache unlock for instant future access
-      if (plan.startsWith("basic")) {
-        localStorage.setItem("basicUnlock", "true");
-      } else {
-        localStorage.setItem("premiumUnlock", "true");
-      }
-
-      document.querySelectorAll(".screen").forEach(s => s.classList.add("hidden"));
-      document.getElementById("screen2L8")?.classList.remove("hidden");
-      L8.start();
-      return;
-    }
-
-    alert("Level 8 is locked. Basic or Premium required.");
-    window.location.href = "membership.html";
-  });
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  // ---------------------------------------------------------
-  // LEVEL 9
-  // ---------------------------------------------------------
-  // ---------------------------------------------------------
-// LEVEL 9 (GATED, ISOLATED, CLEAN)
-// ---------------------------------------------------------
-const level9Btn = document.getElementById("level9Btn");
-
-if (!level9Btn) {
-  console.error("Level 9 button not found in DOM");
-} else {
-  level9Btn.addEventListener("click", async () => {
-    console.log("[Level 9] Gated handler fired");
-
-    const user = window.currentUser;
-    if (!user) {
-      alert("You must be logged in to access Level 9.");
-      window.location.href = "blog-podcast.html";
-      return;
-    }
-
-    // Instant unlock if success.html already set the flag
-    if (localStorage.getItem("premiumUnlock") === "true") {
-      console.log("premiumUnlock flag detected — Level 9 unlocked.");
-      document.querySelectorAll(".screen").forEach(s => s.classList.add("hidden"));
-      document.getElementById("screen2L9")?.classList.remove("hidden");
-      L9.start();
-      return;
-    }
-
-    // Otherwise check real membership in Supabase
-    const { data, error } = await sb
-      .from("profiles")
-      .select("membership_status, membership_plan")
-      .eq("email", user.email)
-      .maybeSingle();
-
-    console.log("Membership result (L9):", { data, error });
-
-    if (error) {
-      console.error("Membership query error:", error);
-      alert("Membership check failed. Please try again.");
-      return;
-    }
-
-    const status = data?.membership_status;
-    const plan = data?.membership_plan;
-    const allowed = ["premium-monthly", "premium-yearly", "lifetime"];
-
-    if (status === "active" && allowed.includes(plan)) {
-      console.log("User already has premium — unlocking Level 9.");
-
-      localStorage.setItem("premiumUnlock", "true");
-
-      document.querySelectorAll(".screen").forEach(s => s.classList.add("hidden"));
-      document.getElementById("screen2L9")?.classList.remove("hidden");
-      L9.start();
-      return;
-    }
-
-    alert("Level 9 is locked. Premium required.");
-    window.location.href = "membership.html";
-  });
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  // ---------------------------------------------------------
-  // LEVEL 10
-  // ---------------------------------------------------------
-  // ---------------------------------------------------------
-// LEVEL 10 (GATED, ISOLATED, CLEAN)
-// ---------------------------------------------------------
-const level10Btn = document.getElementById("level10Btn");
-
-if (!level10Btn) {
-  console.error("Level 10 button not found in DOM");
-} else {
-  level10Btn.addEventListener("click", async () => {
-    console.log("[Level 10] Gated handler fired");
-
-    const user = window.currentUser;
-    if (!user) {
-      alert("You must be logged in to access Level 10.");
-      window.location.href = "blog-podcast.html";
-      return;
-    }
-
-    // Instant unlock if success.html already set the flag
-    if (localStorage.getItem("premiumUnlock") === "true") {
-      console.log("premiumUnlock flag detected — Level 10 unlocked.");
-      document.querySelectorAll(".screen").forEach(s => s.classList.add("hidden"));
-      document.getElementById("screen2L10")?.classList.remove("hidden");
-      L10.start();
-      return;
-    }
-
-    // Otherwise check real membership in Supabase
-    const { data, error } = await sb
-      .from("profiles")
-      .select("membership_status, membership_plan")
-      .eq("email", user.email)
-      .maybeSingle();
-
-    console.log("Membership result (L10):", { data, error });
-
-    if (error) {
-      console.error("Membership query error:", error);
-      alert("Membership check failed. Please try again.");
-      return;
-    }
-
-    const status = data?.membership_status;
-    const plan = data?.membership_plan;
-    const allowed = ["premium-monthly", "premium-yearly", "lifetime"];
-
-    if (status === "active" && allowed.includes(plan)) {
-      console.log("User already has premium — unlocking Level 10.");
-
-      localStorage.setItem("premiumUnlock", "true");
-
-      document.querySelectorAll(".screen").forEach(s => s.classList.add("hidden"));
-      document.getElementById("screen2L10")?.classList.remove("hidden");
-      L10.start();
-      return;
-    }
-
-    alert("Level 10 is locked. Premium required.");
-    window.location.href = "membership.html";
-  });
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  // ---------------------------------------------------------
-  // LEVEL 11 (custom)
-  // ---------------------------------------------------------
-  // ---------------------------------------------------------
-// LEVEL 11 (GATED, ISOLATED, CLEAN)
-// ---------------------------------------------------------
-const level11Btn = document.getElementById("level11Btn");
-
-if (!level11Btn) {
-  console.error("Level 11 button not found in DOM");
-} else {
-  level11Btn.addEventListener("click", async () => {
-    console.log("[Level 11] Gated handler fired");
-
-    const user = window.currentUser;
-    if (!user) {
-      alert("You must be logged in to access Level 11.");
-      window.location.href = "blog-podcast.html";
-      return;
-    }
-
-    // Instant unlock if success.html already set the flag
-    if (localStorage.getItem("premiumUnlock") === "true") {
-      console.log("premiumUnlock flag detected — Level 11 unlocked.");
-      document.querySelectorAll(".screen").forEach(s => s.classList.add("hidden"));
-      document.getElementById("level11Screen")?.classList.remove("hidden");
-      startLevel11(defaultScenario);
-      return;
-    }
-
-    // Otherwise check real membership in Supabase
-    const { data, error } = await sb
-      .from("profiles")
-      .select("membership_status, membership_plan")
-      .eq("email", user.email)
-      .maybeSingle();
-
-    console.log("Membership result (L11):", { data, error });
-
-    if (error) {
-      console.error("Membership query error:", error);
-      alert("Membership check failed. Please try again.");
-      return;
-    }
-
-    const status = data?.membership_status;
-    const plan = data?.membership_plan;
-    const allowed = ["premium-monthly", "premium-yearly", "lifetime"];
-
-    if (status === "active" && allowed.includes(plan)) {
-      console.log("User already has premium — unlocking Level 11.");
-
-      localStorage.setItem("premiumUnlock", "true");
-
-      document.querySelectorAll(".screen").forEach(s => s.classList.add("hidden"));
-      document.getElementById("level11Screen")?.classList.remove("hidden");
-      startLevel11(defaultScenario);
-      return;
-    }
-
-    alert("Level 11 is locked. Premium required.");
-    window.location.href = "membership.html";
-  });
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  // ---------------------------------------------------------
-  // LEVEL 12 (GATED, ISOLATED, CLEAN)
-  // ---------------------------------------------------------
-  const level12Btn = document.getElementById("level12Btn");
-
-  if (!level12Btn) {
-    console.error("Level 12 button not found in DOM");
-  } else {
-    level12Btn.addEventListener("click", async () => {
-      console.log("[Level 12] Gated handler fired");
-
-      const user = window.currentUser;
-      if (!user) {
-        alert("You must be logged in to access Level 12.");
-        window.location.href = "blog-podcast.html";
-        return;
-      }
-
-      // Instant unlock if success.html already set the flag
-      if (localStorage.getItem("premiumUnlock") === "true") {
-        console.log("premiumUnlock flag detected — Level 12 unlocked.");
-        document.querySelectorAll(".screen").forEach(s => s.classList.add("hidden"));
-        document.getElementById("level12Screen")?.classList.remove("hidden");
-        startLevel12();
-        return;
-      }
-
-      // Otherwise check real membership in Supabase
-      const { data, error } = await sb
-        .from("profiles")
-        .select("membership_status, membership_plan")
-        .eq("email", user.email)
-        .maybeSingle();
-
-      console.log("Membership result:", { data, error });
-
-      if (error) {
-        console.error("Membership query error:", error);
-        alert("Membership check failed. Please try again.");
-        return;
-      }
-
-      const status = data?.membership_status;
-      const plan = data?.membership_plan;
-      const allowed = ["premium-monthly", "premium-yearly", "lifetime"];
-
-      if (status === "active" && allowed.includes(plan)) {
-        console.log("User already has premium — unlocking Level 12.");
-
-        localStorage.setItem("premiumUnlock", "true");
-
-        document.querySelectorAll(".screen").forEach(s => s.classList.add("hidden"));
-        document.getElementById("level12Screen")?.classList.remove("hidden");
-        startLevel12();
-        return;
-      }
-
-      alert("Level 12 is locked. Premium required.");
-      window.location.href = "membership.html";
-    });
-
-
-
-
-
-  }
-
-  */
 
 });
 
+*/
+
+
+
+
+
+function launchLevel(levelNumber, startFn) {
+    document.querySelectorAll(".screen").forEach(s =>
+      s.classList.add("hidden")
+    );
+
+    document.getElementById(`screen2L${levelNumber}`)?.classList.remove("hidden");
+    startFn();
+  }
+
+
+
+
+  // ---------------------------------------------------------
+// LEVEL 1 — CLEAN DOM HANDLER
+// ---------------------------------------------------------
+document.querySelector('.levelBtn[data-level="1"]')
+  ?.addEventListener("click", () => {
+
+    // Prevent launching if already inside another level
+    if (window.currentScreen && window.currentScreen !== "screen0") return;
+    if (window.currentLevel !== 0) return;
+
+    window.currentLevel = 1;
+    window.currentScreen = "screen2L1";
+
+    console.log("[Level 1] Handler fired");
+
+    // Level 1 is free → no gating needed
+    launchLevel(1, level1);
+  });
+
+
+
+// ---------------------------------------------------------
+// LEVEL 2 — CLEAN DOM HANDLER (SPANISH + FRENCH COMPATIBLE)
+// ---------------------------------------------------------
+document.querySelector('.levelBtn[data-level="2"]')
+  ?.addEventListener("click", () => {
+
+    // Prevent launching if already inside another level
+    if (window.currentScreen && window.currentScreen !== "screen0") return;
+    if (window.currentLevel !== 0) return;
+
+    window.currentLevel = 2;
+    window.currentScreen = "level2Screen1";
+
+    console.log("[Level 2] Handler fired");
+
+    // Level 2 is free → no gating needed
+    launchLevel(2, L2.start);
+  });

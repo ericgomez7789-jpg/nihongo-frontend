@@ -20,8 +20,8 @@
 
 
 <iframe 
-  src="musicplayer.html" 
-  id="musicFrame" 
+  src="../../musicplayer.html"
+  id="musicFrame"
   style="position:fixed; bottom:0; right:0; width:0; height:0; border:none;">
 </iframe>
 
@@ -278,6 +278,94 @@
     <button id="backToLevelsBtn" class="iconBtn">Niveaux</button>
   </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ⭐⭐⭐ LEVEL 2 WRAPPER ⭐⭐⭐ -->
+<div id="level2Wrapper" class="hidden">
+
+  <!-- ⭐⭐⭐ LEVEL 2 — SCREEN 1 (LISTENING) ⭐⭐⭐ -->
+  <div id="level2Screen1" class="level2-screen hidden">
+    <h2 class="title">Écoute attentivement</h2>
+    <div class="instruction-line">Écoute seulement — ne réponds pas encore.</div>
+    <div class="instruction-line">Certaines phrases se répéteront pour renforcer l’apprentissage.</div>
+
+    <button id="l2ReplaySentenceBtn" class="iconBtn replay-top hidden">🔁 Répéter</button>
+  </div>
+
+
+  <!-- ⭐⭐⭐ LEVEL 2 — SCREEN 2 (MCQ PUZZLE) ⭐⭐⭐ -->
+  <div id="level2Screen2" class="level2-screen hidden">
+
+    <div id="level2SentenceLine" class="sentence-line"></div>
+
+    <div id="level2McqContainer" class="mcq-container"></div>
+
+    <button id="l2ReplaySentenceBtn" class="iconBtn replay-top">🔁 Répéter</button>
+  </div>
+
+
+  <!-- ⭐⭐⭐ LEVEL 2 — SCREEN 3 (MEANING + SUMMARY) ⭐⭐⭐ -->
+  <div id="level2Screen3" class="level2-screen hidden">
+    <h1 class="title">Signification</h1>
+
+    <div class="meaning-box" id="meaningBox"></div>
+    <div id="summaryContainer" class="summary-container"></div>
+    <div id="summaryCorrectDrops" class="summary-correct-drops"></div>
+
+    <div class="summary-controls">
+      <button id="screen3ReplayBtn" class="iconBtn">Répéter</button>
+      <button id="screen3NextBtn" class="iconBtn">Suivant</button>
+    </div>
+  </div>
+
+
+  <!-- ⭐⭐⭐ LEVEL 2 — SCREEN 4 (SESSION SUMMARY) ⭐⭐⭐ -->
+  <div id="level2Screen4" class="level2-screen hidden">
+    <h1 class="title">Résumé</h1>
+
+    <div class="session-summary-box">
+      <div class="session-line">
+        Tours : <span id="l2SessionRounds"></span>
+      </div>
+
+      <div class="session-line">
+        Score : <span id="l2SessionScore"></span>
+      </div>
+
+      <div class="session-line">
+        Réponses correctes : <span id="l2SessionCorrect"></span>
+      </div>
+    </div>
+
+    <div class="session-controls">
+      <button id="restartBtn" class="iconBtn">Recommencer</button>
+      <button id="backToLevelsBtn" class="iconBtn">Niveaux</button>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
 
 </body>
 </html>
