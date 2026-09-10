@@ -2878,6 +2878,57 @@ me: "audio/spanish/silla.wav"
 
 
 
+
+
+
+
+
+
+
+{
+  "id": "l1-es-50",
+  "meaning": "I am hungry",
+  "level": 1,
+
+  "chunks": [
+    {
+      "romaji": "tengo",
+      "hiragana": "tengo",
+      "meaning": "I have",
+      "audio": {
+        "daughter": "audio/spanish/tengo.wav",
+        "me": "audio/spanish/tengo.wav"
+      }
+    },
+
+    {
+      "romaji": "hambre",
+      "hiragana": "hambre",
+      "meaning": "hunger",
+      "audio": {
+        "daughter": "audio/spanish/hambre.wav",
+        "me": "audio/spanish/hambre.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 // ⭐ ADD THIS PATCH RIGHT HERE
@@ -6643,6 +6694,77 @@ const level3 = [
 },
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  "id": "es3-22",
+  "meaning": "El hermanito derramó un vaso de jugo, y la madre exclamó sorprendida '¡¿Qué...?!'. ¿Qué sucede después?",
+  "level": 3,
+
+  "options": [
+    "La madre corre a buscar una toalla para limpiar el jugo",
+    "El hermanito se queda congelado sin saber qué decir",
+    "El jugo se esparce por la mesa y empieza a gotear al suelo",
+    "La madre respira hondo tratando de calmarse"
+  ],
+
+  "optionsRomaji": [
+    "la_madre_corre_a_buscar_una_toalla_para_limpiar_el_jugo",
+    "el_hermanito_se_queda_congelado_sin_saber_que_decir",
+    "el_jugo_se_esparce_por_la_mesa_y_empieza_a_gotear_al_suelo",
+    "la_madre_respira_hondo_tratando_de_calmarse"
+  ],
+
+  "optionsEN": [
+    "the mother rushes to get a towel to clean the juice",
+    "the little brother freezes not knowing what to say",
+    "the juice spreads across the table and begins dripping to the floor",
+    "the mother takes a deep breath trying to calm herself"
+  ],
+
+  "correct": "La madre corre a buscar una toalla para limpiar el jugo",
+
+  "fullAudio": {
+    "daughter": "audio/spanish/inference22.wav",
+    "me":       "audio/spanish/inference22.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["spanish/audio/la_madre_corre_a_buscar_una_toalla_para_limpiar_el_jugo.wav"],
+      ["spanish/audio/el_hermanito_se_queda_congelado_sin_saber_que_decir.wav"],
+      ["spanish/audio/el_jugo_se_esparce_por_la_mesa_y_empieza_a_gotear_al_suelo.wav"],
+      ["spanish/audio/la_madre_respira_hondo_tratando_de_calmarse.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["spanish/audio/la_madre_corre_a_buscar_una_toalla_para_limpiar_el_jugo.wav"],
+    ["spanish/audio/el_hermanito_se_queda_congelado_sin_saber_que_decir.wav"],
+    ["spanish/audio/el_jugo_se_esparce_por_la_mesa_y_empieza_a_gotear_al_suelo.wav"],
+    ["spanish/audio/la_madre_respira_hondo_tratando_de_calmarse.wav"]
+  ],
+
+  "chunks": [
+    { "spanish": "El hermanito derramó un vaso de jugo", "english": "The little brother spilled a glass of juice" },
+    { "spanish": "y la madre exclamó sorprendida", "english": "and the mother exclaimed in surprise" },
+    { "spanish": "¡¿Qué...?!", "english": "What...?!" },
+    { "spanish": "¿Qué sucede después?", "english": "What happens next?" }
+  ]
+},
 
 
 

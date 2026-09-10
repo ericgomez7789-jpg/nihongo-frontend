@@ -32792,7 +32792,7 @@ const level6 = [
     { "romaji": "nojuku de wa", "hiragana": "のじゅく では", "english": "while camping out" },
     { "romaji": "musume ga keitai ni kodawatte iru kara", "hiragana": "むすめ が けいたい に こだわって いる から", "english": "because the daughter is fixated on her phone" },
     { "romaji": "tsukatte wa ikenai to okaasan ga iimashita", "hiragana": "つかって は いけない と おかあさん が いいました", "english": "the mother says she cannot use it" },
-    { "romaji": "sorede musume ga gakkari shite tameiki wo tsuite", "hiragana": "それで むすめ が がっかり して ためいき を ついて", "english": "so the daughter gets disappointed and sighs" },
+    { "romaji": "sorede musume ga genari shite tameiki wo tsuite", "hiragana": "それで むすめ が げんなり して ためいき を ついて", "english": "so the daughter gets disappointed and sighs" },
     { "romaji": "haa tte nari", "hiragana": "はあ って なり", "english": "going 'haa…'" },
     { "romaji": "tsugi wa donna kimochi ni dou naru no", "hiragana": "つぎ は どんな きもち に どう なるの", "english": "what feeling happens next" }
   ]
