@@ -32730,6 +32730,86 @@ const level6 = [
 
 
 
+
+
+
+
+
+
+
+
+
+{
+  "id": "l6-65",
+  "meaning": "While camping out, the mother says her daughter cannot use her phone, the daughter gets disappointed, sighs 'haa...', so what feeling happens next?",
+  "level": 6,
+
+  "options": [
+    "むすっと して くち を とがらせる",
+    "けいたい が じぶん に はなしかける",
+    "あし が ふわふわ に なる",
+    "そら が わらいだす"
+  ],
+
+  "optionsRomaji": [
+    "musutto_shite_kuchi_wo_togaraseru",
+    "keitai_ga_jibun_ni_hanashikakeru",
+    "ashi_ga_fuwafuwa_ni_naru",
+    "sora_ga_waraidasu"
+  ],
+
+  "optionsEN": [
+    "they sulk and pout",
+    "the phone starts talking to them",
+    "their legs turn fluffy",
+    "the sky starts laughing"
+  ],
+
+  "correct": "むすっと して くち を とがらせる",
+
+  "fullAudio": {
+    "daughter": "audio/sentences/inference65.wav",
+    "me":       "audio/sentences/inference65.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["audio/sentences/musutto_shite_kuchi_wo_togaraseru.wav"],
+      ["audio/sentences/keitai_ga_jibun_ni_hanashikakeru.wav"],
+      ["audio/sentences/ashi_ga_fuwafuwa_ni_naru.wav"],
+      ["audio/sentences/sora_ga_waraidasu.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["audio/sentences/musutto_shite_kuchi_wo_togaraseru.wav"],
+    ["audio/sentences/keitai_ga_jibun_ni_hanashikakeru.wav"],
+    ["audio/sentences/ashi_ga_fuwafuwa_ni_naru.wav"],
+    ["audio/sentences/sora_ga_waraidasu.wav"]
+  ],
+
+  "chunks": [
+    { "romaji": "nojuku de wa", "hiragana": "のじゅく では", "english": "while camping out" },
+    { "romaji": "musume ga keitai ni kodawatte iru kara", "hiragana": "むすめ が けいたい に こだわって いる から", "english": "because the daughter is fixated on her phone" },
+    { "romaji": "tsukatte wa ikenai to okaasan ga iimashita", "hiragana": "つかって は いけない と おかあさん が いいました", "english": "the mother says she cannot use it" },
+    { "romaji": "sorede musume ga gakkari shite tameiki wo tsuite", "hiragana": "それで むすめ が がっかり して ためいき を ついて", "english": "so the daughter gets disappointed and sighs" },
+    { "romaji": "haa tte nari", "hiragana": "はあ って なり", "english": "going 'haa…'" },
+    { "romaji": "tsugi wa donna kimochi ni dou naru no", "hiragana": "つぎ は どんな きもち に どう なるの", "english": "what feeling happens next" }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 
