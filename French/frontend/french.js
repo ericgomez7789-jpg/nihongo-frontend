@@ -5300,7 +5300,48 @@ const level2SentencesFR = [
         }
       }
     ]
-  }
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l3_fr_002",
+  sentence: "J'ai un examen demain, alors je vais étudier maintenant.",
+  conjunction: "alors",
+  meaning: "I have an exam tomorrow, so I'm going to study now.",
+  fullAudio: "audio/conjunction2.wav",
+  chunks: [
+    {
+      audio: {
+        me: "audio/conjunction2.wav",
+        daughter: "audio/conjunction2.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 
