@@ -32658,6 +32658,78 @@ const level6 = [
 
 
 
+
+{
+  "id": "l6-64",
+  "meaning": "While camping out, I wander along the water’s edge, accidentally step on a big rock, say 'itai' and cry, so what feeling happens next?",
+  "level": 6,
+
+  "options": [
+    "いたみ が おさまる まで まって ホッと する",
+    "いわ が しゃべりだす",
+    "あし が ふわふわ に なる",
+    "なみ が ぼく に わらいかける"
+  ],
+
+  "optionsRomaji": [
+    "itami_ga_osamaru_made_matte_hotto_suru",
+    "iwa_ga_shaberidasu",
+    "ashi_ga_fuwafuwa_ni_naru",
+    "nami_ga_boku_ni_waraikakeru"
+  ],
+
+  "optionsEN": [
+    "they wait until the pain settles and feel relieved",
+    "the rock starts talking",
+    "their legs turn fluffy",
+    "the waves smile at them"
+  ],
+
+  "correct": "いたみ が おさまる まで まって ホッと する",
+
+  "fullAudio": {
+    "daughter": "audio/sentences/inference64.wav",
+    "me":       "audio/sentences/inference64.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["audio/sentences/itami_ga_osamaru_made_matte_hotto_suru.wav"],
+      ["audio/sentences/iwa_ga_shaberidasu.wav"],
+      ["audio/sentences/ashi_ga_fuwafuwa_ni_naru.wav"],
+      ["audio/sentences/nami_ga_boku_ni_waraikakeru.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["audio/sentences/itami_ga_osamaru_made_matte_hotto_suru.wav"],
+    ["audio/sentences/iwa_ga_shaberidasu.wav"],
+    ["audio/sentences/ashi_ga_fuwafuwa_ni_naru.wav"],
+    ["audio/sentences/nami_ga_boku_ni_waraikakeru.wav"]
+  ],
+
+  "chunks": [
+    { "romaji": "nojuku de wa", "hiragana": "野宿 では", "english": "while camping out" },
+    { "romaji": "boku ga namiuchigiwa wo urouro aruite itara", "hiragana": "ぼく が なみうちぎわ を うろうろ あるいて いたら", "english": "as I wander along the water’s edge" },
+    { "romaji": "ooki na iwa wo omowazu funde shimatte", "hiragana": "おおきな いわ を おもわず ふんで しまって", "english": "I accidentally step on a big rock" },
+    { "romaji": "itai to iinagara shikushiku naite", "hiragana": "「いたい」 と いいながら しくしく ないて", "english": "saying 'itai' and crying" },
+    { "romaji": "tsugi wa donna kimochi ni naru no", "hiragana": "つぎ は どんな きもち に なるの", "english": "what feeling happens next" }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 
