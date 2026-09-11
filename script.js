@@ -33103,6 +33103,155 @@ const level6 = [
 
 
 
+{
+  "id": "l6-69",
+  "meaning": "While camping out, as I walk barefoot along the coast, my feet sink into the sand, I let out a soft 'haa~', so what feeling happens next?",
+  "level": 6,
+
+  "options": [
+    "すな の あたたかさ に ほっと する",
+    "すな が ぼく に はなしかける",
+    "あし が ふわふわ に なる",
+    "うみかぜ が ぼく を だきしめる"
+  ],
+
+  "optionsRomaji": [
+    "suna_no_atatakasa_ni_hotto_suru",
+    "suna_ga_boku_ni_hanashikakeru",
+    "ashi_ga_fuwafuwa_ni_naru",
+    "umikaze_ga_boku_wo_dakishimeru"
+  ],
+
+  "optionsEN": [
+    "they feel relieved by the warmth of the sand",
+    "the sand starts talking to me",
+    "my legs turn fluffy",
+    "the sea breeze hugs me"
+  ],
+
+  "correct": "すな の あたたかさ に ほっと する",
+
+  "fullAudio": {
+    "daughter": "audio/sentences/inference69.wav",
+    "me":       "audio/sentences/inference69.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["audio/sentences/suna_no_atatakasa_ni_hotto_suru.wav"],
+      ["audio/sentences/suna_ga_boku_ni_hanashikakeru.wav"],
+      ["audio/sentences/ashi_ga_fuwafuwa_ni_naru.wav"],
+      ["audio/sentences/umikaze_ga_boku_wo_dakishimeru.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["audio/sentences/suna_no_atatakasa_ni_hotto_suru.wav"],
+    ["audio/sentences/suna_ga_boku_ni_hanashikakeru.wav"],
+    ["audio/sentences/ashi_ga_fuwafuwa_ni_naru.wav"],
+    ["audio/sentences/umikaze_ga_boku_wo_dakishimeru.wav"]
+  ],
+
+  "chunks": [
+    { "romaji": "nojuku dewa", "hiragana": "野宿 では", "english": "while camping out" },
+    { "romaji": "boku ga hadashi de kaigan wo aruku to", "hiragana": "ぼく が はだし で かいがん を あるく と", "english": "as I walk barefoot along the coast" },
+    { "romaji": "ashi ga suna ni zubuzubu to shizunde", "hiragana": "あし が すな に ずぶずぶ と しずんで", "english": "my feet sink into the sand" },
+    { "romaji": "haa tte natte", "hiragana": "はぁ〜って なって", "english": "I let out a soft 'haa~'" },
+    { "romaji": "tsugi wa donna kimochi ni naru ndarou", "hiragana": "つぎ は どんな きもち に なる んだろう", "english": "what feeling happens next" }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  "id": "l6-70",
+  "meaning": "While camping out, when I enter the hot spring, I think it will feel warm, but I realize it's boiling hot, say 'hee~' in surprise, so what feeling happens next?",
+  "level": 6,
+
+  "options": [
+    "あつさ に なれて ほっと する",
+    "おんせん が ぼく に はなしかける",
+    "ぼく が ゆげ に へんしん する",
+    "かぜ が おんせん の みず を まぜる"
+  ],
+
+  "optionsRomaji": [
+    "atsusa_ni_narete_hotto_suru",
+    "onsen_ga_boku_ni_hanashikakeru",
+    "boku_ga_yuge_ni_henshin_suru",
+    "kaze_ga_onsen_no_mizu_wo_mazeru"
+  ],
+
+  "optionsEN": [
+    "they get used to the heat and feel relieved",
+    "the hot spring starts talking to me",
+    "I transform into steam",
+    "the wind stirs the hot spring water"
+  ],
+
+  "correct": "あつさ に なれて ほっと する",
+
+  "fullAudio": {
+    "daughter": "audio/sentences/inference70.wav",
+    "me":       "audio/sentences/inference70.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["audio/sentences/atsusa_ni_narete_hotto_suru.wav"],
+      ["audio/sentences/onsen_ga_boku_ni_hanashikakeru.wav"],
+      ["audio/sentences/boku_ga_yuge_ni_henshin_suru.wav"],
+      ["audio/sentences/kaze_ga_onsen_no_mizu_wo_mazeru.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["audio/sentences/atsusa_ni_narete_hotto_suru.wav"],
+    ["audio/sentences/onsen_ga_boku_ni_hanashikakeru.wav"],
+    ["audio/sentences/boku_ga_yuge_ni_henshin_suru.wav"],
+    ["audio/sentences/kaze_ga_onsen_no_mizu_wo_mazeru.wav"]
+  ],
+
+  "chunks": [
+    { "romaji": "nojuku dewa", "hiragana": "野宿 では", "english": "while camping out" },
+    { "romaji": "boku ga onsen ni haittara", "hiragana": "ぼく が おんせん に はいったら", "english": "when I enter the hot spring" },
+    { "romaji": "hokahoka ni naru ka to omou to", "hiragana": "ほかほか に なる か と おもう と", "english": "I think it will feel warm" },
+    { "romaji": "waku you ni atsui to wakatte", "hiragana": "わく よう に あつい と わかって", "english": "I realize it's boiling hot" },
+    { "romaji": "hee tte nari", "hiragana": "へぇ〜って なり", "english": "I say 'hee~' in surprise" },
+    { "romaji": "tsugi wa donna kimochi ni naru ndarou", "hiragana": "つぎ は どんな きもち に なる んだろう", "english": "what feeling happens next" }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
