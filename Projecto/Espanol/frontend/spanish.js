@@ -2929,6 +2929,75 @@ me: "audio/spanish/silla.wav"
 
 
 
+
+
+
+{
+  "id": "l1-es-51",
+  "meaning": "I want to swim at the beach",
+  "level": 1,
+
+  "chunks": [
+    {
+      "romaji": "quiero",
+      "hiragana": "quiero",
+      "meaning": "I want",
+      "audio": {
+        "daughter": "audio/spanish/quiero.wav",
+        "me": "audio/spanish/quiero.wav"
+      }
+    },
+
+    {
+      "romaji": "nadar",
+      "hiragana": "nadar",
+      "meaning": "to swim",
+      "audio": {
+        "daughter": "audio/spanish/nadar.wav",
+        "me": "audio/spanish/nadar.wav"
+      }
+    },
+
+    {
+      "romaji": "en",
+      "hiragana": "en",
+      "meaning": "in / at",
+      "audio": {
+        "daughter": "audio/spanish/en.wav",
+        "me": "audio/spanish/en.wav"
+      }
+    },
+
+    {
+      "romaji": "la playa",
+      "hiragana": "la playa",
+      "meaning": "the beach",
+      "audio": {
+        "daughter": "audio/spanish/la_playa.wav",
+        "me": "audio/spanish/la_playa.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 // ⭐ ADD THIS PATCH RIGHT HERE
@@ -6765,6 +6834,80 @@ const level3 = [
     { "spanish": "¿Qué sucede después?", "english": "What happens next?" }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  "id": "es3-23",
+  "meaning": "La olla en la estufa empezó a hervir. ¿Qué sucede después?",
+  "level": 3,
+
+  "options": [
+    "La madre apaga la estufa",
+    "El agua burbujea y sube aún más",
+    "La olla empieza a moverse por la vibración",
+    "El vapor sale y llena la cocina"
+  ],
+
+  "optionsRomaji": [
+    "la_madre_apaga_la_estufa",
+    "el_agua_burbujea_y_sube_aun_mas",
+    "la_olla_empieza_a_moverse_por_la_vibracion",
+    "el_vapor_sale_y_llena_la_cocina"
+  ],
+
+  "optionsEN": [
+    "the mother turns off the stove",
+    "the water bubbles and rises even more",
+    "the pot starts moving from the vibration",
+    "steam comes out and fills the kitchen"
+  ],
+
+  "correct": "La madre apaga la estufa",
+
+  "fullAudio": {
+    "daughter": "audio/spanish/inference23.wav",
+    "me":       "audio/spanish/inference23.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["spanish/audio/la_madre_apaga_la_estufa.wav"],
+      ["spanish/audio/el_agua_burbujea_y_sube_aun_mas.wav"],
+      ["spanish/audio/la_olla_empieza_a_moverse_por_la_vibracion.wav"],
+      ["spanish/audio/el_vapor_sale_y_llena_la_cocina.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["spanish/audio/la_madre_apaga_la_estufa.wav"],
+    ["spanish/audio/el_agua_burbujea_y_sube_aun_mas.wav"],
+    ["spanish/audio/la_olla_empieza_a_moverse_por_la_vibracion.wav"],
+    ["spanish/audio/el_vapor_sale_y_llena_la_cocina.wav"]
+  ],
+
+  "chunks": [
+    { "spanish": "La olla en la estufa", "english": "The pot on the stove" },
+    { "spanish": "empezó a hervir", "english": "started boiling" },
+    { "spanish": "¿Qué ocurre después?", "english": "What happens next?" }
+  ]
+},
+
 
 
 
