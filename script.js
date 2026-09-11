@@ -33003,12 +33003,13 @@ const level6 = [
     ["audio/sentences/kaze_ga_boku_ni_koe_wo_kakeru.wav"]
   ],
 
-  "chunks": [
-    { "romaji": "のじゅく では", "hiragana": "のじゅく では", "english": "while camping out" },
-    { "romaji": "ぼく が おだやか な みずうみ に はいる と", "hiragana": "ぼく が おだやか な みずうみ に はいる と", "english": "when I enter the calm lake" },
-    { "romaji": "むすめ が みず を じゃぶじゃぶ と たたきはじめて", "hiragana": "むすめ が みず を じゃぶじゃぶ と たたきはじめて", "english": "my daughter starts splashing the water loudly" },
-    { "romaji": "つぎ は どんな きもち に なる だろう", "hiragana": "つぎ は どんな きもち に なる だろう", "english": "what feeling happens next" }
-  ]
+ "chunks": [
+  { "romaji": "nojuku de wa", "hiragana": "のじゅく では", "english": "while camping out" },
+  { "romaji": "boku ga odayaka na mizuumi ni hairu to", "hiragana": "ぼく が おだやか な みずうみ に はいる と", "english": "when I enter the calm lake" },
+  { "romaji": "musume ga mizu wo jabujabu to tatakihajimete", "hiragana": "むすめ が みず を じゃぶじゃぶ と たたきはじめて", "english": "my daughter starts splashing the water loudly" },
+  { "romaji": "tsugi ni donna kimochi ni naru no darou", "hiragana": "つぎ に どんな きもち に なる の だろう", "english": "what feeling happens next" }
+]
+
 },
 
 
