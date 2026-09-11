@@ -32810,6 +32810,301 @@ const level6 = [
 
 
 
+
+{
+  "id": "l6-65",
+  "meaning": "While camping out, my daughter is told by her mom not to use her phone because she’s too fixated on it. She deflates, sighs 'haa…', so what feeling happens next?",
+  "level": 6,
+
+  "options": [
+    "しかたない と あきらめて すこし おちつく",
+    "けいたい が ひとりで に とびはねる",
+    "むすめ が くも に なって そら へ きえる",
+    "なみ が ぼく に わらいかける"
+  ],
+
+  "optionsRomaji": [
+    "shikatanai_to_akirame_te_sukoshi_ochitsuku",
+    "keitai_ga_hitoride_ni_tobihaneru",
+    "musume_ga_kumo_ni_natte_sora_e_kieru",
+    "nami_ga_boku_ni_waraikakeru"
+  ],
+
+  "optionsEN": [
+    "she gives up with a ‘well… nothing I can do’ feeling and calms down a bit",
+    "the phone starts hopping on its own",
+    "the daughter turns into a cloud and disappears into the sky",
+    "the waves smile at them"
+  ],
+
+  "correct": "しかたない と あきらめて すこし おちつく",
+
+  "fullAudio": {
+    "daughter": "audio/sentences/inference65.wav",
+    "me":       "audio/sentences/inference65.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["audio/sentences/shikatanai_to_akirame_te_sukoshi_ochitsuku.wav"],
+      ["audio/sentences/keitai_ga_hitoride_ni_tobihaneru.wav"],
+      ["audio/sentences/musume_ga_kumo_ni_natte_sora_e_kieru.wav"],
+      ["audio/sentences/nami_ga_boku_ni_waraikakeru.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["audio/sentences/shikatanai_to_akirame_te_sukoshi_ochitsuku.wav"],
+    ["audio/sentences/keitai_ga_hitoride_ni_tobihaneru.wav"],
+    ["audio/sentences/musume_ga_kumo_ni_natte_sora_e_kieru.wav"],
+    ["audio/sentences/nami_ga_boku_ni_waraikakeru.wav"]
+  ],
+
+  "chunks": [
+    { "romaji": "nojuku de wa", "hiragana": "野宿 では", "english": "while camping out" },
+    { "romaji": "musume ga keitai ni kodawatte iru kara", "hiragana": "むすめ が けいたい に こだわって いる から", "english": "because my daughter is fixated on her phone" },
+    { "romaji": "tsukatte wa ikenai to okaasan ga iimashita", "hiragana": "つかって は いけない と おかあさん が いいました", "english": "her mom said she must not use it" },
+    { "romaji": "sorede musume ga genari shite tameiki wo tsuite haa tte nari", "hiragana": "それで むすめ が げなり して ためいき を ついて 「はあ」って なり", "english": "so she deflates, sighs, and goes 'haa…'" },
+    { "romaji": "tsugi wa donna kimochi ni naru no darou", "hiragana": "つぎ は どんな きもち に なる の だろう", "english": "what feeling happens next" }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  "id": "l6-66",
+  "meaning": "A gentle breeze passes through the leaves, making a soft rustling sound. I relax, sigh softly, so what feeling happens next?",
+  "level": 6,
+
+  "options": [
+    "おだやか な きもち に なって にっこり する",
+    "き が いきなり しゃべりだす",
+    "かぜ が あし を ふわふわ に する",
+    "もり の かげ から だれか が わらいかける"
+  ],
+
+  "optionsRomaji": [
+    "odayaka_na_kimochi_ni_natte_nikkori_suru",
+    "ki_ga_ikinari_shaberidasu",
+    "kaze_ga_ashi_wo_fuwafuwa_ni_suru",
+    "mori_no_kage_kara_dareka_ga_waraikakeru"
+  ],
+
+  "optionsEN": [
+    "they become calm and smile gently",
+    "the tree suddenly starts talking",
+    "the wind makes their legs turn fluffy",
+    "someone smiles at them from the forest shadows"
+  ],
+
+  "correct": "おだやか な きもち に なって にっこり する",
+
+  "fullAudio": {
+    "daughter": "audio/sentences/inference66.wav",
+    "me":       "audio/sentences/inference66.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["audio/sentences/odayaka_na_kimochi_ni_natte_nikkori_suru.wav"],
+      ["audio/sentences/ki_ga_ikinari_shaberidasu.wav"],
+      ["audio/sentences/kaze_ga_ashi_wo_fuwafuwa_ni_suru.wav"],
+      ["audio/sentences/mori_no_kage_kara_dareka_ga_waraikakeru.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["audio/sentences/odayaka_na_kimochi_ni_natte_nikkori_suru.wav"],
+    ["audio/sentences/ki_ga_ikinari_shaberidasu.wav"],
+    ["audio/sentences/kaze_ga_ashi_wo_fuwafuwa_ni_suru.wav"],
+    ["audio/sentences/mori_no_kage_kara_dareka_ga_waraikakeru.wav"]
+  ],
+
+  "chunks": [
+    { "romaji": "soyoso yo to fuku kaze wa", "hiragana": "そよそよ と ふく かぜ は", "english": "a gentle breeze blows" },
+    { "romaji": "konoha wo toorinuke", "hiragana": "このは を とおりぬけ", "english": "passing through the leaves" },
+    { "romaji": "sawasawa to iu oto ga kikoete kuru", "hiragana": "さわさわ と いう おと が きこえて くる", "english": "a soft rustling sound can be heard" },
+    { "romaji": "tsugi ni donna kimochi ni naru no darou", "hiragana": "つぎ に どんな きもち に なる の だろう", "english": "what feeling happens next" }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  "id": "l6-67",
+  "meaning": "While camping out, I enter a calm lake and my daughter suddenly splashes the water loudly. What feeling happens next?",
+  "level": 6,
+
+  "options": [
+    "びっくり しながら も うれしく なって わらう",
+    "みず が ひとりで に そら へ とびたつ",
+    "むすめ が みずうみ の さかな に なる",
+    "かぜ が ぼく に こえ を かける"
+  ],
+
+  "optionsRomaji": [
+    "bikkuri_shinagara_mo_ureshiku_natte_warau",
+    "mizu_ga_hitoride_ni_sora_e_tobitatsu",
+    "musume_ga_mizuumi_no_sakana_ni_naru",
+    "kaze_ga_boku_ni_koe_wo_kakeru"
+  ],
+
+  "optionsEN": [
+    "they get startled but become happy and laugh",
+    "the water flies up into the sky on its own",
+    "the daughter turns into a fish in the lake",
+    "the wind speaks to them"
+  ],
+
+  "correct": "びっくり しながら も うれしく なって わらう",
+
+  "fullAudio": {
+    "daughter": "audio/sentences/inference67.wav",
+    "me":       "audio/sentences/inference67.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["audio/sentences/bikkuri_shinagara_mo_ureshiku_natte_warau.wav"],
+      ["audio/sentences/mizu_ga_hitoride_ni_sora_e_tobitatsu.wav"],
+      ["audio/sentences/musume_ga_mizuumi_no_sakana_ni_naru.wav"],
+      ["audio/sentences/kaze_ga_boku_ni_koe_wo_kakeru.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["audio/sentences/bikkuri_shinagara_mo_ureshiku_natte_warau.wav"],
+    ["audio/sentences/mizu_ga_hitoride_ni_sora_e_tobitatsu.wav"],
+    ["audio/sentences/musume_ga_mizuumi_no_sakana_ni_naru.wav"],
+    ["audio/sentences/kaze_ga_boku_ni_koe_wo_kakeru.wav"]
+  ],
+
+  "chunks": [
+    { "romaji": "のじゅく では", "hiragana": "のじゅく では", "english": "while camping out" },
+    { "romaji": "ぼく が おだやか な みずうみ に はいる と", "hiragana": "ぼく が おだやか な みずうみ に はいる と", "english": "when I enter the calm lake" },
+    { "romaji": "むすめ が みず を じゃぶじゃぶ と たたきはじめて", "hiragana": "むすめ が みず を じゃぶじゃぶ と たたきはじめて", "english": "my daughter starts splashing the water loudly" },
+    { "romaji": "つぎ は どんな きもち に なる だろう", "hiragana": "つぎ は どんな きもち に なる だろう", "english": "what feeling happens next" }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  "id": "l6-68",
+  "meaning": "I wanted to stay two nights at the inn, but I could only stay one night. I felt disappointed and sighed. What feeling happens next?",
+  "level": 6,
+
+  "options": [
+    "あきらめて すこし おちつく",
+    "やど が そら に とびたつ",
+    "ぼく が まくら に へんしん する",
+    "かぜ が やど の ドア を たたく"
+  ],
+
+  "optionsRomaji": [
+    "akirame_te_sukoshi_ochitsuku",
+    "yado_ga_sora_ni_tobitatsu",
+    "boku_ga_makura_ni_henshin_suru",
+    "kaze_ga_yado_no_doa_wo_tataku"
+  ],
+
+  "optionsEN": [
+    "they give up and calm down a little",
+    "the inn flies up into the sky",
+    "I transform into a pillow",
+    "the wind knocks on the inn’s door"
+  ],
+
+  "correct": "あきらめて すこし おちつく",
+
+  "fullAudio": {
+    "daughter": "audio/sentences/inference68.wav",
+    "me":       "audio/sentences/inference68.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["audio/sentences/akirame_te_sukoshi_ochitsuku.wav"],
+      ["audio/sentences/yado_ga_sora_ni_tobitatsu.wav"],
+      ["audio/sentences/boku_ga_makura_ni_henshin_suru.wav"],
+      ["audio/sentences/kaze_ga_yado_no_doa_wo_tataku.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["audio/sentences/akirame_te_sukoshi_ochitsuku.wav"],
+    ["audio/sentences/yado_ga_sora_ni_tobitatsu.wav"],
+    ["audio/sentences/boku_ga_makura_ni_henshin_suru.wav"],
+    ["audio/sentences/kaze_ga_yado_no_doa_wo_tataku.wav"]
+  ],
+
+  "chunks": [
+    { "romaji": "yado ni nihaku tomaritakatta kedo", "hiragana": "やど に にはく とまりたかった けど", "english": "I wanted to stay two nights at the inn, but" },
+    { "romaji": "shika ippaku tomarenakute", "hiragana": "しか いっぱく とまれなくて", "english": "I could only stay one night" },
+    { "romaji": "gakkari shite tameiki tsuita", "hiragana": "がっかり して ためいき ついた", "english": "I felt disappointed and sighed" },
+    { "romaji": "tsugi ni kimochi ni naru no darou", "hiragana": "つぎ に きもち に なる の だろう", "english": "what feeling happens next" }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 
