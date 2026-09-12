@@ -880,7 +880,7 @@ const sentences = [
     },
     {
       romaji: "ventana",
-      hiragana: "ventana",
+      hiragana: "",
       meaning: "window",
       audio: {
         daughter: "audio/spanish/ventana.wav",
@@ -2979,6 +2979,50 @@ me: "audio/spanish/silla.wav"
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  "id": "l1-es-52",
+  "meaning": "I need water",
+  "level": 1,
+
+  "chunks": [
+    {
+      "romaji": "ocupo",
+      "hiragana": "ocupo",
+      "meaning": "I need",
+      "audio": {
+        "daughter": "audio/spanish/ocupo.wav",
+        "me": "audio/spanish/ocupo.wav"
+      }
+    },
+
+    {
+      "romaji": "agua",
+      "hiragana": "agua",
+      "meaning": "water",
+      "audio": {
+        "daughter": "audio/spanish/agua.wav",
+        "me": "audio/spanish/agua.wav"
+      }
+    }
+  ]
+},
+
+
+
 
 
 

@@ -33248,6 +33248,81 @@ const level6 = [
 
 
 
+{
+  "id": "l6-71",
+  "meaning": "While camping out, the ground is slimy and slippery, I lose my footing, slip, and fall, say 'ittai' in shock, so what feeling happens next?",
+  "level": 6,
+
+  "options": [
+    "いたさ に たえて ほっと する",
+    "じめん が ぼく に はなしかける",
+    "ぼく が すな に しずむ",
+    "かぜ が ころんだ ぼく を おこす"
+  ],
+
+  "optionsRomaji": [
+    "itasa_ni_taete_hotto_suru",
+    "jimen_ga_boku_ni_hanashikakeru",
+    "boku_ga_suna_ni_shizumu",
+    "kaze_ga_koronda_boku_wo_okosu"
+  ],
+
+  "optionsEN": [
+    "they endure the pain and feel relieved",
+    "the ground starts talking to me",
+    "I sink into the sand",
+    "the wind lifts me back up"
+  ],
+
+  "correct": "いたさ に たえて ほっと する",
+
+  "fullAudio": {
+    "daughter": "audio/sentences/inference71.wav",
+    "me":       "audio/sentences/inference71.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["audio/sentences/itasa_ni_taete_hotto_suru.wav"],
+      ["audio/sentences/jimen_ga_boku_ni_hanashikakeru.wav"],
+      ["audio/sentences/boku_ga_suna_ni_shizumu.wav"],
+      ["audio/sentences/kaze_ga_koronda_boku_wo_okosu.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["audio/sentences/itasa_ni_taete_hotto_suru.wav"],
+    ["audio/sentences/jimen_ga_boku_ni_hanashikakeru.wav"],
+    ["audio/sentences/boku_ga_suna_ni_shizumu.wav"],
+    ["audio/sentences/kaze_ga_koronda_boku_wo_okosu.wav"]
+  ],
+
+  "chunks": [
+    { "romaji": "nojuku dewa", "hiragana": "のじゅく では", "english": "while camping out" },
+    { "romaji": "jimen ga nuranura to suberiyasui kara", "hiragana": "じめん が ヌラヌラ と すべりやすい から", "english": "because the ground is slimy and slippery" },
+    { "romaji": "ashi wo fumihazushite", "hiragana": "あし を ふみはずして", "english": "I lose my footing" },
+    { "romaji": "subette koronda", "hiragana": "すべって ころんだ", "english": "I slip and fall" },
+    { "romaji": "ittai tte nari", "hiragana": "いったい って なり", "english": "I say 'ittai' in shock" },
+    { "romaji": "tsugi wa donna kimochi ni naru nodarou", "hiragana": "つぎ は どんな きもち に なる の だろう", "english": "what feeling happens next" }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
