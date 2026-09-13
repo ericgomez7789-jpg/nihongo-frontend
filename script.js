@@ -32805,7 +32805,7 @@ const level6 = [
     { "romaji": "tsukatte wa ikenai to okaasan ga iimashita", "hiragana": "つかって は いけない と おかあさん が いいました", "english": "the mother says she cannot use it" },
     { "romaji": "sorede musume ga genari shite tameiki wo tsuite", "hiragana": "それで むすめ が げんなり して ためいき を ついて", "english": "so the daughter gets disappointed and sighs" },
     { "romaji": "haa tte nari", "hiragana": "はあ って なり", "english": "going 'haa…'" },
-    { "romaji": "tsugi wa donna kimochi ni dou naru no", "hiragana": "つぎ は どんな きもち に どう なるの", "english": "what feeling happens next" }
+    { "romaji": "tsugi wa donna kimochi ni naru no darou", "hiragana": "つぎ は どんな きもち に どう なるの", "english": "what feeling happens next" }
   ]
 },
 
@@ -32820,65 +32820,6 @@ const level6 = [
 
 
 
-
-
-{
-  "id": "l6-65",
-  "meaning": "While camping out, my daughter is told by her mom not to use her phone because she’s too fixated on it. She deflates, sighs 'haa…', so what feeling happens next?",
-  "level": 6,
-
-  "options": [
-    "しかたない と あきらめて すこし おちつく",
-    "けいたい が ひとりで に とびはねる",
-    "むすめ が くも に なって そら へ きえる",
-    "なみ が ぼく に わらいかける"
-  ],
-
-  "optionsRomaji": [
-    "shikatanai_to_akirame_te_sukoshi_ochitsuku",
-    "keitai_ga_hitoride_ni_tobihaneru",
-    "musume_ga_kumo_ni_natte_sora_e_kieru",
-    "nami_ga_boku_ni_waraikakeru"
-  ],
-
-  "optionsEN": [
-    "she gives up with a ‘well… nothing I can do’ feeling and calms down a bit",
-    "the phone starts hopping on its own",
-    "the daughter turns into a cloud and disappears into the sky",
-    "the waves smile at them"
-  ],
-
-  "correct": "しかたない と あきらめて すこし おちつく",
-
-  "fullAudio": {
-    "daughter": "audio/sentences/inference65.wav",
-    "me":       "audio/sentences/inference65.wav"
-  },
-
-  "choiceAudio": {
-    "options": [
-      ["audio/sentences/shikatanai_to_akirame_te_sukoshi_ochitsuku.wav"],
-      ["audio/sentences/keitai_ga_hitoride_ni_tobihaneru.wav"],
-      ["audio/sentences/musume_ga_kumo_ni_natte_sora_e_kieru.wav"],
-      ["audio/sentences/nami_ga_boku_ni_waraikakeru.wav"]
-    ]
-  },
-
-  "meaningAudio": [
-    ["audio/sentences/shikatanai_to_akirame_te_sukoshi_ochitsuku.wav"],
-    ["audio/sentences/keitai_ga_hitoride_ni_tobihaneru.wav"],
-    ["audio/sentences/musume_ga_kumo_ni_natte_sora_e_kieru.wav"],
-    ["audio/sentences/nami_ga_boku_ni_waraikakeru.wav"]
-  ],
-
-  "chunks": [
-    { "romaji": "nojuku de wa", "hiragana": "野宿 では", "english": "while camping out" },
-    { "romaji": "musume ga keitai ni kodawatte iru kara", "hiragana": "むすめ が けいたい に こだわって いる から", "english": "because my daughter is fixated on her phone" },
-    { "romaji": "tsukatte wa ikenai to okaasan ga iimashita", "hiragana": "つかって は いけない と おかあさん が いいました", "english": "her mom said she must not use it" },
-    { "romaji": "sorede musume ga genari shite tameiki wo tsuite haa tte nari", "hiragana": "それで むすめ が げなり して ためいき を ついて 「はあ」って なり", "english": "so she deflates, sighs, and goes 'haa…'" },
-    { "romaji": "tsugi wa donna kimochi ni naru no darou", "hiragana": "つぎ は どんな きもち に なる の だろう", "english": "what feeling happens next" }
-  ]
-},
 
 
 
@@ -33612,9 +33553,9 @@ const level6 = [
 
   "chunks": [
     { "romaji": "nojuku chuu dewa", "hiragana": "のじゅく ちゅう では", "english": "while camping out" },
-    { "romaji": "boku ga takai gake no ue ni tatte shitamuki ni miru to", "hiragana": "ぼく が たかい がけ の うえ に たって したむき に みる と", "english": "I stand on a high cliff and look down" },
-    { "romaji": "sora kara ochiru you ni dokidoki shite torihada ga tatte", "hiragana": "そら から おちる よう に どきどき して とりはだ が たって", "english": "I feel as if falling from the sky and get goosebumps" },
-    { "romaji": "tameiki majiri ni uwaa tte nari", "hiragana": "ためいき まじり に うわぁ〜って なり", "english": "I sigh and say 'uwaa…'" },
+    { "romaji": "boku ga takai gake no ue ni tatte shita wo miru to", "hiragana": "ぼく が たかい がけ の うえ に たって した を みる と", "english": "I stand on a high cliff and look down" },
+    { "romaji": "sora kara ochiru you ni dokidoki shite torihada ga tatta", "hiragana": "そら から おちる よう に どきどき して とりはだ が たった", "english": "I feel as if falling from the sky and get goosebumps" },
+    { "romaji": "sonoato tameiki majiri ni uwaa tte natte", "hiragana": "そのあと ためいき まじり に うわぁ〜って なり", "english": "I sigh and say 'uwaa…'" },
     { "romaji": "tsugi wa donna kimochi ni naru nodarou", "hiragana": "つぎ は どんな きもち に なる の だろう", "english": "what feeling happens next" }
   ]
 },
@@ -33697,6 +33638,25 @@ const level6 = [
     { "romaji": "tsugi wa donna kimochi ni naru nodarou", "hiragana": "つぎ は どんな きもち に なる の だろう", "english": "what feeling happens next" }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
