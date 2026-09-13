@@ -30398,16 +30398,15 @@ const level6 = [
 
 
 
-
 {
   id: "l6-29",
   meaning: "While sleeping outdoors all night, sweating until drenched, then diving into water the next morning—what happens next?",
   level: 6,
 
-  options: ["ひやっとする", "ねむくなる", "はしゃぐ", "おどる"],
+  options: ["ひやっとする", "ねむくなる", "はしゃぐ", "ほっとする"],
   optionsRomaji: ["hiyatto_suru", "nemuku_naru", "hashagu", "odoru"],
   optionsEN: ["feel a cold shock", "get sleepy", "get excited", "dance"],
-  correct: "ひやっとする",
+  correct: "ほっとする",   // ← updated
 
   fullAudio: {
     daughter: "audio/sentences/inference29.wav",
@@ -30438,7 +30437,7 @@ const level6 = [
     { romaji: "mizu ni moguru to", hiragana: "みずに もぐると", english: "if I dive into water" },
     { romaji: "tsugi ni dou naru no", hiragana: "つぎに どうなるの", english: "what happens next" }
   ]
-},
+}
 
 
 
