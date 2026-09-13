@@ -33394,10 +33394,9 @@ const level6 = [
 
 
 
-
 {
   "id": "l6-73",
-  "meaning": "While camping out, I'm half asleep, my daughter splashes water on me, I wake up surprised, feel like scolding her, sigh 'haa~' and let out a deep breath, so what feeling happens next?",
+  "meaning": "While camping out, I'm sleeping deeply, my daughter splashes water on me, I wake up shocked, feel like scolding her, sigh 'haa~' and let out a deep breath, so what feeling happens next?",
   "level": 6,
 
   "options": [
@@ -33446,16 +33445,15 @@ const level6 = [
 
   "chunks": [
     { "romaji": "nojuku chuu dewa", "hiragana": "のじゅく ちゅう では", "english": "while camping out" },
-    { "romaji": "boku ga nemurinagara", "hiragana": "ぼく が ねむりながら", "english": "while I'm half asleep" },
+    { "romaji": "boku ga gussuri to nemutte ite", "hiragana": "ぼく が ぐっすり と ねむって いて", "english": "while I'm sleeping deeply" },
     { "romaji": "musume ga mizuire no koppu de", "hiragana": "むすめ が みずいれ の こっぷ で", "english": "my daughter with a water cup" },
     { "romaji": "boku ni mizu wo bukkakete", "hiragana": "ぼく に みず を ぶっかけて", "english": "splashes water on me" },
-    { "romaji": "boku ga bikkuri shite okite", "hiragana": "ぼく が びっくり して おきて", "english": "I wake up surprised" },
+    { "romaji": "boku ga bikkuri shite okite", "hiragana": "ぼく が びっくり して おきて", "english": "I wake up shocked" },
     { "romaji": "musume wo shikaru youna kanji ni nari", "hiragana": "むすめ を しかる ような かんじ に なり", "english": "I feel like scolding her" },
     { "romaji": "haa tte natte tameiki wo tsuite", "hiragana": "はぁ〜って なって ためいき を ついて", "english": "I sigh 'haa~' and let out a deep breath" },
     { "romaji": "tsugi wa donna kimochi ni naru nodarou", "hiragana": "つぎ は どんな きもち に なる の だろう", "english": "what feeling happens next" }
   ]
 },
-
 
 
 
