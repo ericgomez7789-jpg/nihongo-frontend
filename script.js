@@ -31182,6 +31182,17 @@ const level6 = [
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 {
   id: "l6-42",
   meaning: "When someone says you are short, what happens next?",
