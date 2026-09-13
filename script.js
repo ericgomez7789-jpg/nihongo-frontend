@@ -33320,6 +33320,83 @@ const level6 = [
 
 
 
+{
+  "id": "l6-72",
+  "meaning": "While camping out, the tent is damp and muggy, I'm drenched in sweat, can't sleep, stay awake all night, sigh 'haa~' and exhale deeply, so what feeling happens next?",
+  "level": 6,
+
+  "options": [
+    "ぐったり して つかれきる",
+    "てんまく が ぼく に ささやく",
+    "ぼく が あせ に しずむ",
+    "かぜ が ねむれない ぼく を だく"
+  ],
+
+  "optionsRomaji": [
+    "guttari_shite_tsukarekiru",
+    "tenmaku_ga_boku_ni_sasayaku",
+    "boku_ga_ase_ni_shizumu",
+    "kaze_ga_nemurenai_boku_wo_daku"
+  ],
+
+  "optionsEN": [
+    "they feel completely worn out",
+    "the tent whispers to me",
+    "I sink into my sweat",
+    "the wind embraces my sleepless body"
+  ],
+
+  "correct": "ぐったり して つかれきる",
+
+  "fullAudio": {
+    "daughter": "audio/sentences/inference72.wav",
+    "me":       "audio/sentences/inference72.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["audio/sentences/guttari_shite_tsukarekiru.wav"],
+      ["audio/sentences/tenmaku_ga_boku_ni_sasayaku.wav"],
+      ["audio/sentences/boku_ga_ase_ni_shizumu.wav"],
+      ["audio/sentences/kaze_ga_nemurenai_boku_wo_daku.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["audio/sentences/guttari_shite_tsukarekiru.wav"],
+    ["audio/sentences/tenmaku_ga_boku_ni_sasayaku.wav"],
+    ["audio/sentences/boku_ga_ase_ni_shizumu.wav"],
+    ["audio/sentences/kaze_ga_nemurenai_boku_wo_daku.wav"]
+  ],
+
+  "chunks": [
+    { "romaji": "nojuku chuu dewa", "hiragana": "のじゅく ちゅう では", "english": "while camping out" },
+    { "romaji": "tenmaku ga jimejime to mushiatsukute", "hiragana": "てんまく が じめじめ と むしあつくて", "english": "the tent is damp and muggy" },
+    { "romaji": "bishobisho ase wo kaite ita kara", "hiragana": "びしょびしょ あせ を かいて いた から", "english": "because I'm drenched in sweat" },
+    { "romaji": "amari nemurenakute", "hiragana": "あまり ねむれなくて", "english": "I can't really sleep" },
+    { "romaji": "ichiya wo akashite", "hiragana": "いちや を あかして", "english": "I stay awake all night" },
+    { "romaji": "haa tte natte tameiki wo tsuite", "hiragana": "はぁ〜って なって ためいき を ついて", "english": "I sigh 'haa~' and exhale deeply" },
+    { "romaji": "tsugi wa donna kimochi ni naru nodarou", "hiragana": "つぎ は どんな きもち に なる の だろう", "english": "what feeling happens next" }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
