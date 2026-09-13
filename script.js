@@ -33657,6 +33657,107 @@ const level6 = [
 
 
 
+{
+  "id": "l6-77",
+  "meaning": "While camping out, no matter how much I really want to eat something as I walk along the roadside, knowing I must wait until I reach the top, I sigh as if trying to push through the hardship, say 'haa...', so what feeling happens next?",
+  "level": 6,
+
+  "options": [
+    "がまん が かぜ に とけて らく に なる",
+    "そら が ぼく を ひきあげる",
+    "ぼく が くうき の なか に きえて しまう",
+    "みち が ぼく の おなか を うずまかせる"
+  ],
+
+  "optionsRomaji": [
+    "gaman_ga_kaze_ni_tokete_raku_ni_naru",
+    "sora_ga_boku_wo_hikiageru",
+    "boku_ga_kuuki_no_naka_ni_kiete_shimau",
+    "michi_ga_boku_no_onaka_wo_uzumakaseru"
+  ],
+
+  "optionsEN": [
+    "my struggle melts into the wind and I feel relieved",
+    "the sky lifts me upward",
+    "I fade away into the air",
+    "the path makes my stomach swirl"
+  ],
+
+  "correct": "がまん が かぜ に とけて らく に なる",
+
+  "fullAudio": {
+    "daughter": "audio/sentences/inference77.wav",
+    "me":       "audio/sentences/inference77.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["audio/sentences/gaman_ga_kaze_ni_tokete_raku_ni_naru.wav"],
+      ["audio/sentences/sora_ga_boku_wo_hikiageru.wav"],
+      ["audio/sentences/boku_ga_kuuki_no_naka_ni_kiete_shimau.wav"],
+      ["audio/sentences/michi_ga_boku_no_onaka_wo_uzumakaseru.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["audio/sentences/gaman_ga_kaze_ni_tokete_raku_ni_naru.wav"],
+    ["audio/sentences/sora_ga_boku_wo_hikiageru.wav"],
+    ["audio/sentences/boku_ga_kuuki_no_naka_ni_kiete_shimau.wav"],
+    ["audio/sentences/michi_ga_boku_no_onaka_wo_uzumakaseru.wav"]
+  ],
+
+  "chunks": [
+    {
+      "romaji": "nojuku chuu dewa",
+      "hiragana": "のじゅく ちゅう では",
+      "english": "while camping out"
+    },
+    {
+      "romaji": "boku ga michi no sotte ni donnani nanika wo tabetakutemo",
+      "hiragana": "ぼく が みち の そって に どんなに なにか を たべたくても",
+      "english": "even if I really want to eat something as I walk along the roadside"
+    },
+    {
+      "romaji": "ue ni tsuku made matsu to wakatte ite",
+      "hiragana": "うえ に つく まで まつ と わかって いて",
+      "english": "knowing I must wait until I reach the top"
+    },
+    {
+      "romaji": "kurushisa wo norikiru youni tameiki wo tsuite",
+      "hiragana": "くるしさ を のりきる よう に ためいき を ついて",
+      "english": "I sigh as if trying to push through the hardship"
+    },
+    {
+      "romaji": "haa tte nari",
+      "hiragana": "はぁ〜って なり",
+      "english": "I say 'haa...'"
+    },
+    {
+      "romaji": "tsugi ni donna kimochi ni naru nodarou",
+      "hiragana": "つぎ に どんな きもち に なる の だろう",
+      "english": "what feeling happens next"
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
