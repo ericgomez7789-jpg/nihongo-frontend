@@ -33395,6 +33395,85 @@ const level6 = [
 
 
 
+{
+  "id": "l6-73",
+  "meaning": "While camping out, I'm half asleep, my daughter splashes water on me, I wake up surprised, feel like scolding her, sigh 'haa~' and let out a deep breath, so what feeling happens next?",
+  "level": 6,
+
+  "options": [
+    "いらいら して くる",
+    "むすめ が ぼく に わらいかける",
+    "ぼく が みず に しずむ",
+    "かぜ が びっくり した ぼく を なぐさめる"
+  ],
+
+  "optionsRomaji": [
+    "iraira_shite_kuru",
+    "musume_ga_boku_ni_waraikakeru",
+    "boku_ga_mizu_ni_shizumu",
+    "kaze_ga_bikkuri_shita_boku_wo_nagusameru"
+  ],
+
+  "optionsEN": [
+    "they start feeling irritated",
+    "my daughter smiles at me",
+    "I sink into the water",
+    "the wind comforts my surprised body"
+  ],
+
+  "correct": "いらいら して くる",
+
+  "fullAudio": {
+    "daughter": "audio/sentences/inference73.wav",
+    "me":       "audio/sentences/inference73.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["audio/sentences/iraira_shite_kuru.wav"],
+      ["audio/sentences/musume_ga_boku_ni_waraikakeru.wav"],
+      ["audio/sentences/boku_ga_mizu_ni_shizumu.wav"],
+      ["audio/sentences/kaze_ga_bikkuri_shita_boku_wo_nagusameru.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["audio/sentences/iraira_shite_kuru.wav"],
+    ["audio/sentences/musume_ga_boku_ni_waraikakeru.wav"],
+    ["audio/sentences/boku_ga_mizu_ni_shizumu.wav"],
+    ["audio/sentences/kaze_ga_bikkuri_shita_boku_wo_nagusameru.wav"]
+  ],
+
+  "chunks": [
+    { "romaji": "nojuku chuu dewa", "hiragana": "のじゅく ちゅう では", "english": "while camping out" },
+    { "romaji": "boku ga nemurinagara", "hiragana": "ぼく が ねむりながら", "english": "while I'm half asleep" },
+    { "romaji": "musume ga mizuire no koppu de", "hiragana": "むすめ が みずいれ の こっぷ で", "english": "my daughter with a water cup" },
+    { "romaji": "boku ni mizu wo bukkakete", "hiragana": "ぼく に みず を ぶっかけて", "english": "splashes water on me" },
+    { "romaji": "boku ga bikkuri shite okite", "hiragana": "ぼく が びっくり して おきて", "english": "I wake up surprised" },
+    { "romaji": "musume wo shikaru youna kanji ni nari", "hiragana": "むすめ を しかる ような かんじ に なり", "english": "I feel like scolding her" },
+    { "romaji": "haa tte natte tameiki wo tsuite", "hiragana": "はぁ〜って なって ためいき を ついて", "english": "I sigh 'haa~' and let out a deep breath" },
+    { "romaji": "tsugi wa donna kimochi ni naru nodarou", "hiragana": "つぎ は どんな きもち に なる の だろう", "english": "what feeling happens next" }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
