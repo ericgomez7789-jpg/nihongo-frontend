@@ -33756,6 +33756,114 @@ const level6 = [
 
 
 
+{
+  "id": "l6-78",
+  "meaning": "While camping out, as we walk along the path, the wind begins softly, grows stronger, whistles through, swirls like a passing tornado, we say 'hee...', so what feeling happens next?",
+  "level": 6,
+
+  "options": [
+    "こわさ が すーっと ひいて ほっと しはじめる",
+    "かぜ が ぼく を そら に もちあげる",
+    "ぼく が たつまき の なか に すいこまれる",
+    "みち が ぐにゃぐにゃ と ゆれだす"
+  ],
+
+  "optionsRomaji": [
+    "kowasa_ga_suuto_hiite_hotto_shihajimeru",
+    "kaze_ga_boku_wo_sora_ni_mochiageru",
+    "boku_ga_tatsumaki_no_naka_ni_suikomareru",
+    "michi_ga_gunyagunya_to_yuredasu"
+  ],
+
+  "optionsEN": [
+    "the fear fades away and I begin to feel relieved",
+    "the wind lifts me into the sky",
+    "I get sucked into the tornado",
+    "the path starts wobbling and twisting"
+  ],
+
+  "correct": "こわさ が すーっと ひいて ほっと しはじめる",
+
+  "fullAudio": {
+    "daughter": "audio/sentences/inference78.wav",
+    "me":       "audio/sentences/inference78.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["audio/sentences/kowasa_ga_suuto_hiite_hotto_shihajimeru.wav"],
+      ["audio/sentences/kaze_ga_boku_wo_sora_ni_mochiageru.wav"],
+      ["audio/sentences/boku_ga_tatsumaki_no_naka_ni_suikomareru.wav"],
+      ["audio/sentences/michi_ga_gunyagunya_to_yuredasu.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["audio/sentences/kowasa_ga_suuto_hiite_hotto_shihajimeru.wav"],
+    ["audio/sentences/kaze_ga_boku_wo_sora_ni_mochiageru.wav"],
+    ["audio/sentences/boku_ga_tatsumaki_no_naka_ni_suikomareru.wav"],
+    ["audio/sentences/michi_ga_gunyagunya_to_yuredasu.wav"]
+  ],
+
+  "chunks": [
+    {
+      "romaji": "nojuku chuu dewa",
+      "hiragana": "のじゅく ちゅう では",
+      "english": "while camping out"
+    },
+    {
+      "romaji": "watashitachi ga sampo no michi no sotte ni tokotoko to aruite itara",
+      "hiragana": "わたしたち が さんぽ の みち の そって に とことこ と あるいて いたら",
+      "english": "as we walk along the path"
+    },
+    {
+      "romaji": "kaze no oto ga sawasawa to kikoete",
+      "hiragana": "かぜ の おと が さわさわ と きこえて",
+      "english": "the sound of the wind rustles softly"
+    },
+    {
+      "romaji": "dandan tsuyoku natte",
+      "hiragana": "だんだん つよく なって",
+      "english": "it grows stronger"
+    },
+    {
+      "romaji": "hyuuhyuu to fuite toorinukete",
+      "hiragana": "ひゅうひゅう と ふいて とおりぬけて",
+      "english": "it whistles and passes through"
+    },
+    {
+      "romaji": "guruguru to maku tatsumaki ga toorikakaru you na kanji ni nari",
+      "hiragana": "ぐるぐる と まく たつまき が とおりかかる よう な かんじ に なり",
+      "english": "it feels like a swirling tornado is passing by"
+    },
+    {
+      "romaji": "hee tte nari",
+      "hiragana": "へぇ〜って なり",
+      "english": "we say 'hee...'"
+    },
+    {
+      "romaji": "tsugi wa donna kimochi ni naru nodarou",
+      "hiragana": "つぎ は どんな きもち に なる の だろう",
+      "english": "what feeling happens next"
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
