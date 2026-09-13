@@ -3037,6 +3037,51 @@ me: "audio/spanish/silla.wav"
 
 
 
+{
+  "id": "l1-es-53",
+  "meaning": "you can hear",
+  "level": 1,
+
+  "chunks": [
+    {
+      "romaji": "puedes",
+      "hiragana": "puedes",
+      "meaning": "you can",
+      "audio": {
+        "daughter": "audio/spanish/puedes.wav",
+        "me": "audio/spanish/puedes.wav"
+      }
+    },
+
+    {
+      "romaji": "oir",
+      "hiragana": "oír",
+      "meaning": "to hear",
+      "audio": {
+        "daughter": "audio/spanish/oir.wav",
+        "me": "audio/spanish/oir.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6951,6 +6996,79 @@ const level3 = [
     { "spanish": "¿Qué ocurre después?", "english": "What happens next?" }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  "id": "es3-24",
+  "meaning": "La entrega de los documentos se retrasa. ¿Qué hará el jefe? que ocurre despues?",
+  "level": 3,
+
+  "options": [
+    "El jefe llama al equipo",
+    "El jefe se enoja",
+    "El jefe decide esperar",
+    "El jefe revisa el calendario"
+  ],
+
+  "optionsRomaji": [
+    "el_jefe_llama_al_equipo",
+    "el_jefe_se_enoja",
+    "el_jefe_decide_esperar",
+    "el_jefe_revisa_el_calendario"
+  ],
+
+  "optionsEN": [
+    "the boss calls the team",
+    "the boss gets angry",
+    "the boss decides to wait",
+    "the boss checks the calendar"
+  ],
+
+  "correct": "El jefe llama al equipo",
+
+  "fullAudio": {
+    "daughter": "audio/spanish/inference24.wav",
+    "me":       "audio/spanish/inference24.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["spanish/audio/el_jefe_llama_al_equipo.wav"],
+      ["spanish/audio/el_jefe_se_enoja.wav"],
+      ["spanish/audio/el_jefe_decide_esperar.wav"],
+      ["spanish/audio/el_jefe_revisa_el_calendario.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["spanish/audio/el_jefe_llama_al_equipo.wav"],
+    ["spanish/audio/el_jefe_se_enoja.wav"],
+    ["spanish/audio/el_jefe_decide_esperar.wav"],
+    ["spanish/audio/el_jefe_revisa_el_calendario.wav"]
+  ],
+
+  "chunks": [
+    { "spanish": "La entrega de los documentos", "english": "The delivery of the documents" },
+    { "spanish": "se retrasa", "english": "is delayed" },
+    { "spanish": "¿Qué hará el jefe?", "english": "What will the boss do?" },
+        { "spanish": "¿Qué ocurre después?", "english": "What happens next?" }
+  ]
+},
+
 
 
 
