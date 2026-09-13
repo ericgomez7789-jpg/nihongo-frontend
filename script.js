@@ -33863,6 +33863,112 @@ const level6 = [
 
 
 
+{
+  "id": "l6-79",
+  "meaning": "While camping out, the bonfire flares up, smoke rises thickly, the flame tips flicker, it feels dreamlike, I say 'aaah...', so what feeling happens next?",
+  "level": 6,
+
+  "options": [
+    "あたたかさ に つつまれて ほっと して くる",
+    "ひ の て が ぼく を のみこむ",
+    "けむり の なか に すいこまれる",
+    "ほのお が ぐにゃぐにゃ と ゆれだす"
+  ],
+
+  "optionsRomaji": [
+    "atatakasa_ni_tsutsumarete_hotto_shite_kuru",
+    "hi_no_te_ga_boku_wo_nomikomu",
+    "kemuri_no_naka_ni_suikomareru",
+    "honoo_ga_gunyagunya_to_yuredasu"
+  ],
+
+  "optionsEN": [
+    "I feel wrapped in warmth and begin to relax",
+    "the flame tips swallow me whole",
+    "I get sucked into the smoke",
+    "the flames wobble and twist strangely"
+  ],
+
+  "correct": "あたたかさ に つつまれて ほっと して くる",
+
+  "fullAudio": {
+    "daughter": "audio/sentences/inference79.wav",
+    "me":       "audio/sentences/inference79.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["audio/sentences/atatakasa_ni_tsutsumarete_hotto_shite_kuru.wav"],
+      ["audio/sentences/hi_no_te_ga_boku_wo_nomikomu.wav"],
+      ["audio/sentences/kemuri_no_naka_ni_suikomareru.wav"],
+      ["audio/sentences/honoo_ga_gunyagunya_to_yuredasu.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["audio/sentences/atatakasa_ni_tsutsumarete_hotto_shite_kuru.wav"],
+    ["audio/sentences/hi_no_te_ga_boku_wo_nomikomu.wav"],
+    ["audio/sentences/kemuri_no_naka_ni_suikomareru.wav"],
+    ["audio/sentences/honoo_ga_gunyagunya_to_yuredasu.wav"]
+  ],
+
+  "chunks": [
+    {
+      "romaji": "nojuku chuu dewa",
+      "hiragana": "のじゅく ちゅう では",
+      "english": "while camping out"
+    },
+    {
+      "romaji": "takibi ga meramera to moeagatte",
+      "hiragana": "たきび が メラメラ と もえあがって",
+      "english": "the bonfire flares up"
+    },
+    {
+      "romaji": "kemuri ga mokumoku to wakiagatte",
+      "hiragana": "けむり が モクモク と わきあがって",
+      "english": "smoke rises thickly"
+    },
+    {
+      "romaji": "hi no te ga chirachira to yurameite",
+      "hiragana": "ひ の て が チラチラ と ゆらめいて",
+      "english": "the flame tips flicker"
+    },
+    {
+      "romaji": "marude yume wo mite ita you ni",
+      "hiragana": "まるで ゆめ を みて いた よう に",
+      "english": "it feels dreamlike"
+    },
+    {
+      "romaji": "aaah tte nari",
+      "hiragana": "あぁ〜って なり",
+      "english": "I say 'aaah...'"
+    },
+    {
+      "romaji": "tsugi wa donna kimochi ni naru nodarou",
+      "hiragana": "つぎ は どんな きもち に なる の だろう",
+      "english": "what feeling happens next"
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
