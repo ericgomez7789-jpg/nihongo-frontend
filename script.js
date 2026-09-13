@@ -33472,6 +33472,74 @@ const level6 = [
 
 
 
+{
+  "id": "l6-74",
+  "meaning": "While camping out, someone leaves footprints leading to the tent, inside everything is scattered everywhere, I react with 'hee~' and sigh deeply, so what feeling happens next?",
+  "level": 6,
+
+  "options": [
+    "がっかり して くる",
+    "てんまく が ぼく に はなしかける",
+    "ぼく が あしあと に すいこまれる",
+    "かぜ が ちらかった なか を なおす"
+  ],
+
+  "optionsRomaji": [
+    "gakkari_shite_kuru",
+    "tenmaku_ga_boku_ni_hanashikakeru",
+    "boku_ga_ashiato_ni_suikomareru",
+    "kaze_ga_chirakatta_naka_wo_naosu"
+  ],
+
+  "optionsEN": [
+    "they start feeling disappointed",
+    "the tent speaks to me",
+    "I get sucked into the footprints",
+    "the wind cleans up the messy interior"
+  ],
+
+  "correct": "がっかり して くる",
+
+  "fullAudio": {
+    "daughter": "audio/sentences/inference74.wav",
+    "me":       "audio/sentences/inference74.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["audio/sentences/gakkari_shite_kuru.wav"],
+      ["audio/sentences/tenmaku_ga_boku_ni_hanashikakeru.wav"],
+      ["audio/sentences/boku_ga_ashiato_ni_suikomareru.wav"],
+      ["audio/sentences/kaze_ga_chirakatta_naka_wo_naosu.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["audio/sentences/gakkari_shite_kuru.wav"],
+    ["audio/sentences/tenmaku_ga_boku_ni_hanashikakeru.wav"],
+    ["audio/sentences/boku_ga_ashiato_ni_suikomareru.wav"],
+    ["audio/sentences/kaze_ga_chirakatta_naka_wo_naosu.wav"]
+  ],
+
+  "chunks": [
+    { "romaji": "nojuku chuu dewa", "hiragana": "のじゅく ちゅう では", "english": "while camping out" },
+    { "romaji": "dareka ga tenmaku ni iku michi no ashiato wo nokoshite", "hiragana": "だれか が てんまく に いく みち の あしあと を のこして", "english": "someone leaves footprints leading to the tent" },
+    { "romaji": "naka ga issai ga itaru tokoro mechakucha to chirakatte ite", "hiragana": "なか が いっさい が いたるところ めちゃくちゃ と ちらかって いて", "english": "inside absolutely everything is scattered everywhere" },
+    { "romaji": "hee tte nari", "hiragana": "へぇ〜って なり", "english": "I react with 'hee~'" },
+    { "romaji": "tameiki wo tsuite", "hiragana": "ためいき を ついて", "english": "I let out a deep sigh" },
+    { "romaji": "tsugi wa donna kimochi ni naru nodarou", "hiragana": "つぎ は どんな きもち に なる の だろう", "english": "what feeling happens next" }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
 
 
 
