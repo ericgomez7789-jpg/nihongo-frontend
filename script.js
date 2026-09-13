@@ -33561,6 +33561,160 @@ const level6 = [
 
 
 
+{
+  "id": "l6-75",
+  "meaning": "While camping out, I stand on a high cliff and look down, feel as if falling from the sky, get goosebumps, sigh and say 'uwaa...', so what feeling happens next?",
+  "level": 6,
+
+  "options": [
+    "こわく なりすぎて うごけなく なる",
+    "そら が ぼく を だきしめる",
+    "ぼく が くうちゅう に まいあがる",
+    "かぜ が ぼく の こころ を おちつかせる"
+  ],
+
+  "optionsRomaji": [
+    "kowaku_narisugite_ugokenaku_naru",
+    "sora_ga_boku_wo_dakishimeru",
+    "boku_ga_kuuchuu_ni_maiagaru",
+    "kaze_ga_boku_no_kokoro_wo_ochitsukaseru"
+  ],
+
+  "optionsEN": [
+    "they become so scared they can't move",
+    "the sky embraces me",
+    "I float up into the air",
+    "the wind calms my heart"
+  ],
+
+  "correct": "こわく なりすぎて うごけなく なる",
+
+  "fullAudio": {
+    "daughter": "audio/sentences/inference75.wav",
+    "me":       "audio/sentences/inference75.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["audio/sentences/kowaku_narisugite_ugokenaku_naru.wav"],
+      ["audio/sentences/sora_ga_boku_wo_dakishimeru.wav"],
+      ["audio/sentences/boku_ga_kuuchuu_ni_maiagaru.wav"],
+      ["audio/sentences/kaze_ga_boku_no_kokoro_wo_ochitsukaseru.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["audio/sentences/kowaku_narisugite_ugokenaku_naru.wav"],
+    ["audio/sentences/sora_ga_boku_wo_dakishimeru.wav"],
+    ["audio/sentences/boku_ga_kuuchuu_ni_maiagaru.wav"],
+    ["audio/sentences/kaze_ga_boku_no_kokoro_wo_ochitsukaseru.wav"]
+  ],
+
+  "chunks": [
+    { "romaji": "nojuku chuu dewa", "hiragana": "のじゅく ちゅう では", "english": "while camping out" },
+    { "romaji": "boku ga takai gake no ue ni tatte shitamuki ni miru to", "hiragana": "ぼく が たかい がけ の うえ に たって したむき に みる と", "english": "I stand on a high cliff and look down" },
+    { "romaji": "sora kara ochiru you ni dokidoki shite torihada ga tatte", "hiragana": "そら から おちる よう に どきどき して とりはだ が たって", "english": "I feel as if falling from the sky and get goosebumps" },
+    { "romaji": "tameiki majiri ni uwaa tte nari", "hiragana": "ためいき まじり に うわぁ〜って なり", "english": "I sigh and say 'uwaa…'" },
+    { "romaji": "tsugi wa donna kimochi ni naru nodarou", "hiragana": "つぎ は どんな きもち に なる の だろう", "english": "what feeling happens next" }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  "id": "l6-76",
+  "meaning": "While camping out, we walk along a path, see wandering deer, pass by chatting people, feel enchanted by the scent of sakura as if in a movie, say 'aaah...', so what feeling happens next?",
+  "level": 6,
+
+  "options": [
+    "しあわせ に ひたりはじめる",
+    "さくら が ぼく を つつみこむ",
+    "ぼく が えいが の なか に すいこまれる",
+    "かぜ が みち を きらきら と かえる"
+  ],
+
+  "optionsRomaji": [
+    "shiawase_ni_hitarihajimeru",
+    "sakura_ga_boku_wo_tsutsumikomu",
+    "boku_ga_eiga_no_naka_ni_suikomareru",
+    "kaze_ga_michi_wo_kirakira_to_kaeru"
+  ],
+
+  "optionsEN": [
+    "they begin to feel deeply happy",
+    "the sakura wraps around me",
+    "I get pulled into the movie world",
+    "the wind turns the path sparkly"
+  ],
+
+  "correct": "しあわせ に ひたりはじめる",
+
+  "fullAudio": {
+    "daughter": "audio/sentences/inference76.wav",
+    "me":       "audio/sentences/inference76.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["audio/sentences/shiawase_ni_hitarihajimeru.wav"],
+      ["audio/sentences/sakura_ga_boku_wo_tsutsumikomu.wav"],
+      ["audio/sentences/boku_ga_eiga_no_naka_ni_suikomareru.wav"],
+      ["audio/sentences/kaze_ga_michi_wo_kirakira_to_kaeru.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["audio/sentences/shiawase_ni_hitarihajimeru.wav"],
+    ["audio/sentences/sakura_ga_boku_wo_tsutsumikomu.wav"],
+    ["audio/sentences/boku_ga_eiga_no_naka_ni_suikomareru.wav"],
+    ["audio/sentences/kaze_ga_michi_wo_kirakira_to_kaeru.wav"]
+  ],
+
+  "chunks": [
+    { "romaji": "nojuku chuu dewa", "hiragana": "のじゅく ちゅう では", "english": "while camping out" },
+    { "romaji": "watashitachi ga sampo no michi wo tekoteko to aruite itara", "hiragana": "わたしたち が さんぽ の みち を てこてこ と あるいて いたら", "english": "as we walk along the path" },
+    { "romaji": "uroouro shiteiru takusan no shika wo mitari", "hiragana": "うろうろ している たくさん の しか を みたり", "english": "we see many deer wandering around" },
+    { "romaji": "gayagaya to hanasu hitobito ga toorikakattari", "hiragana": "がやがや と はなす ひとびと が とおりかかったり", "english": "chatting people pass by" },
+    { "romaji": "marude eiga no you ni sakura no nioi ni uttori shitari shite", "hiragana": "まるで えいが の よう に さくら の におい に うっとり したり して", "english": "as if in a movie, we feel enchanted by the scent of sakura" },
+    { "romaji": "aaah tte nari", "hiragana": "あぁ〜って なり", "english": "we say 'aaah…'" },
+    { "romaji": "tsugi wa donna kimochi ni naru nodarou", "hiragana": "つぎ は どんな きもち に なる の だろう", "english": "what feeling happens next" }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ];
 
