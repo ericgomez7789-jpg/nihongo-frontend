@@ -30437,7 +30437,7 @@ const level6 = [
     { romaji: "mizu ni moguru to", hiragana: "みずに もぐると", english: "if I dive into water" },
     { romaji: "tsugi ni dou naru no", hiragana: "つぎに どうなるの", english: "what happens next" }
   ]
-}
+},
 
 
 
