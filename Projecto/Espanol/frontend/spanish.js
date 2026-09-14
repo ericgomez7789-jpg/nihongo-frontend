@@ -3082,6 +3082,60 @@ me: "audio/spanish/silla.wav"
 
 
 
+{
+  "id": "l1-es-54",
+  "meaning": "open the door",
+  "level": 1,
+
+  "chunks": [
+    {
+      "romaji": "abra",
+      "hiragana": "abra",
+      "meaning": "open",
+      "audio": {
+        "daughter": "audio/spanish/abra.wav",
+        "me": "audio/spanish/abra.wav"
+      }
+    },
+
+    {
+      "romaji": "la",
+      "hiragana": "la",
+      "meaning": "the",
+      "audio": {
+        "daughter": "audio/spanish/la.wav",
+        "me": "audio/spanish/la.wav"
+      }
+    },
+
+    {
+      "romaji": "puerta",
+      "hiragana": "puerta",
+      "meaning": "door",
+      "audio": {
+        "daughter": "audio/spanish/puerta.wav",
+        "me": "audio/spanish/puerta.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
