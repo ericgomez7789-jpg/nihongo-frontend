@@ -34243,32 +34243,125 @@ const level6 = [
     },
     {
       "romaji": "tsugi wa dou naru no",
-      "hiragana": "つぎ は どう なる の",
+      "hiragana": "つぎ は どう なる の だろう",
       "english": "what feeling happens next"
     }
   ]
-}
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  "id": "l6-83",
+  "meaning": "In a survival situation, to make a fire-starting pump drill, I gather a 4‑foot stick, a flywheel, string, and a tinder bundle. I shave the upper half of the 6‑foot spindle, then at the lower tip I drill a hole to insert the wooden drill bit… so what happens next?",
+  "level": 6,
+
+  "options": [
+    "ひも を うえ と した に くるくる と まきつける",
+    "とびら の よう に ぼう が ひらく",
+    "かぜ が ぼう を ふきとばす",
+    "いし の おもみ が ふわっと かるく なる"
+  ],
+
+  "optionsRomaji": [
+    "himo_wo_ue_to_shita_ni_kurukuru_to_makitsukeru",
+    "tobira_no_you_ni_bou_ga_hiraku",
+    "kaze_ga_bou_wo_fukitobasu",
+    "ishi_no_omomi_ga_fuwatto_karuku_naru"
+  ],
+
+  "optionsEN": [
+    "wrap the string around the upper and lower parts in a spinning motion",
+    "the stick opens like a door",
+    "the wind blows the stick away",
+    "the stone weights suddenly feel lighter"
+  ],
+
+  "correct": "ひも を うえ と した に くるくる と まきつける",
+
+  "fullAudio": {
+    "daughter": "audio/sentences/inference83.wav",
+    "me":       "audio/sentences/inference83.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["audio/sentences/himo_wo_ue_to_shita_ni_kurukuru_to_makitsukeru.wav"],
+      ["audio/sentences/tobira_no_you_ni_bou_ga_hiraku.wav"],
+      ["audio/sentences/kaze_ga_bou_wo_fukitobasu.wav"],
+      ["audio/sentences/ishi_no_omomi_ga_fuwatto_karuku_naru.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["audio/sentences/himo_wo_ue_to_shita_ni_kurukuru_to_makitsukeru.wav"],
+    ["audio/sentences/tobira_no_you_ni_bou_ga_hiraku.wav"],
+    ["audio/sentences/kaze_ga_bou_wo_fukitobasu.wav"],
+    ["audio/sentences/ishi_no_omomi_ga_fuwatto_karuku_naru.wav"]
+  ],
+
+  "chunks": [
+    {
+      "romaji": "sabairu no joukyou dewa",
+      "hiragana": "さばいばる の じょうきょう では",
+      "english": "in a survival situation"
+    },
+    {
+      "romaji": "hikiri-bou wo tsukuru tame ni",
+      "hiragana": "火きり棒 を つくる ため に",
+      "english": "to make a fire-starting pump drill"
+    },
+    {
+      "romaji": "yon fiito no bou ya",
+      "hiragana": "4フィート の ぼう や",
+      "english": "I gather a 4‑foot stick"
+    },
+    {
+      "romaji": "fuwairu to himo to tinder-bundle wo atsumete",
+      "hiragana": "フライウィール と ひも と ティンダー バンドル を あつめて",
+      "english": "a flywheel, string, and a tinder bundle"
+    },
+    {
+      "romaji": "roku fiito no bou no uehanbun wo kezutte",
+      "hiragana": "6フィート の ぼう の うえはんぶん を けずって",
+      "english": "I shave the upper half of the 6‑foot spindle"
+    },
+    {
+      "romaji": "shita no saki de ana wo akete",
+      "hiragana": "した の さき で あな を あけて",
+      "english": "I drill a hole at the lower tip"
+    },
+    {
+      "romaji": "ki no dorirubitto wo ireru",
+      "hiragana": "木 の ドリルビット を いれる",
+      "english": "and insert the wooden drill bit"
+    },
+    {
+      "romaji": "tsugi wa dou naru no darou",
+      "hiragana": "つぎ は どう なる の",
+      "english": "so what happens next"
+    }
+  ]
+},
+
+
+
+
 
 
   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
