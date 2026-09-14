@@ -34166,6 +34166,112 @@ const level6 = [
 
 
 
+{
+  "id": "l6-82",
+  "meaning": "In a survival situation, after a hunt, I avoid contamination, I carefully remove the organs without puncturing the stomach or intestines… so what is the next step?",
+  "level": 6,
+
+  "options": [
+    "にく を あらう",
+    "ほね を ひろいあつめる",
+    "かわ を はがす",
+    "たきび を もっと ちかづける"
+  ],
+
+  "optionsRomaji": [
+    "niku_wo_arau",
+    "hone_wo_hiroiatsumeru",
+    "kawa_wo_hagasu",
+    "takibi_wo_motto_chikazukeru"
+  ],
+
+  "optionsEN": [
+    "wash the meat",
+    "gather the bones",
+    "remove the hide",
+    "move the campfire closer"
+  ],
+
+  "correct": "にく を あらう",
+
+  "fullAudio": {
+    "daughter": "audio/sentences/inference82.wav",
+    "me":       "audio/sentences/inference82.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["audio/sentences/niku_wo_arau.wav"],
+      ["audio/sentences/hone_wo_hiroiatsumeru.wav"],
+      ["audio/sentences/kawa_wo_hagasu.wav"],
+      ["audio/sentences/takibi_wo_motto_chikazukeru.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["audio/sentences/niku_wo_arau.wav"],
+    ["audio/sentences/hone_wo_hiroiatsumeru.wav"],
+    ["audio/sentences/kawa_wo_hagasu.wav"],
+    ["audio/sentences/takibi_wo_motto_chikazukeru.wav"]
+  ],
+
+  "chunks": [
+    {
+      "romaji": "sabairu no joukyou dewa",
+      "hiragana": "さばいばる の じょうきょう では",
+      "english": "in a survival situation"
+    },
+    {
+      "romaji": "osen wo sakeru",
+      "hiragana": "おせん を さける",
+      "english": "I avoid contamination"
+    },
+    {
+      "romaji": "kari wo shita ato de",
+      "hiragana": "かり を した あと で",
+      "english": "after the hunt"
+    },
+    {
+      "romaji": "i ya chou nado no naizou wo tsukisasanai you ni",
+      "hiragana": "い や ちょう など の ないぞう を つきささない よう に",
+      "english": "without puncturing organs such as the stomach and intestines"
+    },
+    {
+      "romaji": "naizou wo toridasu",
+      "hiragana": "ないぞう を とりだす",
+      "english": "I remove the organs"
+    },
+    {
+      "romaji": "tsugi wa dou naru no",
+      "hiragana": "つぎ は どう なる の",
+      "english": "what feeling happens next"
+    }
+  ]
+}
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
