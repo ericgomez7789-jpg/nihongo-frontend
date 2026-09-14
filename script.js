@@ -30493,7 +30493,7 @@ const level6 = [
     { romaji: "sara wo", hiragana: "さらを", english: "the dishes" },
     { romaji: "barabara to", hiragana: "ばらばらと", english: "scattered" },
     { romaji: "chirakatte", hiragana: "ちらかって", english: "messily spread around" },
-    { romaji: "mechakucha no mama desu", hiragana: "めちゃくちゃの ままです", english: "left totally messy" },
+    { romaji: " no mama desu", hiragana: "めちゃくちゃの ままです", english: "left totally messy" },
     { romaji: "e tte", hiragana: "えって", english: "I react with 'eh!'" },
     { romaji: "tsugi ni dou naru no", hiragana: "つぎに どうなるの", english: "what happens next" }
   ]
@@ -33950,6 +33950,111 @@ const level6 = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  "id": "l6-80",
+  "meaning": "While camping out, my daughter is restless, plays absent‑mindedly with bugs as if she has never seen them before, gets stung by a bee, says 'itaa~', so what feeling happens next?",
+  "level": 6,
+
+  "options": [
+    "びっくり しすぎて なみだ が でて くる",
+    "はち が ぼく に はなしかける",
+    "ぼく が むし の せかい に すいこまれる",
+    "かぜ が ぼく の ほっぺ を つんつん と する"
+  ],
+
+  "optionsRomaji": [
+    "bikkuri_shisugite_namida_ga_dete_kuru",
+    "hachi_ga_boku_ni_hanashikakeru",
+    "boku_ga_mushi_no_sekai_ni_suikomareru",
+    "kaze_ga_boku_no_hoppe_wo_tsuntsun_to_suru"
+  ],
+
+  "optionsEN": [
+    "they get so startled that tears begin to form",
+    "the bee starts talking to me",
+    "I get pulled into the world of insects",
+    "the wind pokes my cheek playfully"
+  ],
+
+  "correct": "びっくり しすぎて なみだ が でて くる",
+
+  "fullAudio": {
+    "daughter": "audio/sentences/inference80.wav",
+    "me":       "audio/sentences/inference80.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["audio/sentences/bikkuri_shisugite_namida_ga_dete_kuru.wav"],
+      ["audio/sentences/hachi_ga_boku_ni_hanashikakeru.wav"],
+      ["audio/sentences/boku_ga_mushi_no_sekai_ni_suikomareru.wav"],
+      ["audio/sentences/kaze_ga_boku_no_hoppe_wo_tsuntsun_to_suru.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["audio/sentences/bikkuri_shisugite_namida_ga_dete_kuru.wav"],
+    ["audio/sentences/hachi_ga_boku_ni_hanashikakeru.wav"],
+    ["audio/sentences/boku_ga_mushi_no_sekai_ni_suikomareru.wav"],
+    ["audio/sentences/kaze_ga_boku_no_hoppe_wo_tsuntsun_to_suru.wav"]
+  ],
+
+  "chunks": [
+    {
+      "romaji": "nojuku chuu dewa",
+      "hiragana": "のじゅく ちゅう では",
+      "english": "while camping out"
+    },
+    {
+      "romaji": "musume ga sowasowa shite",
+      "hiragana": "むすめ が そわそわ して",
+      "english": "my daughter is restless"
+    },
+    {
+      "romaji": "mushi wo mita koto ga nai you ni",
+      "hiragana": "虫 を みた こと が ない よう に",
+      "english": "as if she has never seen bugs before"
+    },
+    {
+      "romaji": "uwanosoa de mushi to asonde ite",
+      "hiragana": "うわのそら で 虫 と あそんで いて",
+      "english": "she plays absent‑mindedly with bugs"
+    },
+    {
+      "romaji": "hachi ni kamarete",
+      "hiragana": "はち に かまれて",
+      "english": "she gets stung by a bee"
+    },
+    {
+      "romaji": "itaa tte nari",
+      "hiragana": "いたぁ〜って なり",
+      "english": "she says 'itaa~'"
+    },
+    {
+      "romaji": "tsugi wa donna kimochi ni naru nodarou",
+      "hiragana": "つぎ は どんな きもち に なる の だろう",
+      "english": "what feeling happens next"
+    }
+  ]
+},
+
+
 
 
 
