@@ -34032,7 +34032,7 @@ const level6 = [
       "english": "as if she has never seen bugs before"
     },
     {
-      "romaji": "uwanosoa de mushi to asonde ite",
+      "romaji": "uwanosora de mushi to asonde ite",
       "hiragana": "うわのそら で 虫 と あそんで いて",
       "english": "she plays absent‑mindedly with bugs"
     },
@@ -34059,6 +34059,95 @@ const level6 = [
 
 
 
+
+
+
+
+
+
+
+{
+  "id": "l6-81",
+  "meaning": "In a survival situation, I rub two wooden sticks together, smoke begins to rise softly, a tiny chip falls onto the tinder, I say 'hoo...', so what feeling happens next?",
+  "level": 6,
+
+  "options": [
+    "じわじわ と あたたかさ が ひろがって ほっと して くる",
+    "ひだね が ぼく に はなしかける",
+    "ぼく が たきび の なか に すいこまれる",
+    "かぜ が ひだね を きらきら と てらす"
+  ],
+
+  "optionsRomaji": [
+    "jiwajiwa_to_atatakasa_ga_hirogatte_hotto_shite_kuru",
+    "hidane_ga_boku_ni_hanashikakeru",
+    "boku_ga_takibi_no_naka_ni_suikomareru",
+    "kaze_ga_hidane_wo_kirakira_to_terasu"
+  ],
+
+  "optionsEN": [
+    "warmth spreads slowly and I begin to feel relieved",
+    "the ember starts talking to me",
+    "I get pulled into the bonfire",
+    "the wind makes the ember sparkle"
+  ],
+
+  "correct": "じわじわ と あたたかさ が ひろがって ほっと して くる",
+
+  "fullAudio": {
+    "daughter": "audio/sentences/inference81.wav",
+    "me":       "audio/sentences/inference81.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["audio/sentences/jiwajiwa_to_atatakasa_ga_hirogatte_hotto_shite_kuru.wav"],
+      ["audio/sentences/hidane_ga_boku_ni_hanashikakeru.wav"],
+      ["audio/sentences/boku_ga_takibi_no_naka_ni_suikomareru.wav"],
+      ["audio/sentences/kaze_ga_hidane_wo_kirakira_to_terasu.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["audio/sentences/jiwajiwa_to_atatakasa_ga_hirogatte_hotto_shite_kuru.wav"],
+    ["audio/sentences/hidane_ga_boku_ni_hanashikakeru.wav"],
+    ["audio/sentences/boku_ga_takibi_no_naka_ni_suikomareru.wav"],
+    ["audio/sentences/kaze_ga_hidane_wo_kirakira_to_terasu.wav"]
+  ],
+
+  "chunks": [
+    {
+      "romaji": "sabairu no joukyou dewa",
+      "hiragana": "サバイバル の じょうきょう では",
+      "english": "in a survival situation"
+    },
+    {
+      "romaji": "ki no bou wo nihon gikogiko kosutte",
+      "hiragana": "木 の ぼう を 2本 ギコギコ こすって",
+      "english": "I rub two wooden sticks together"
+    },
+    {
+      "romaji": "kemuri ga fuwatto tachiagari hajimetara",
+      "hiragana": "けむり が ふわっと たちあがり はじめたら",
+      "english": "smoke begins to rise softly"
+    },
+    {
+      "romaji": "kosutta kakera ga porotto hidane ni ochiru to",
+      "hiragana": "こすった かけら が ポロッと 火種 に おちる と",
+      "english": "a tiny chip falls lightly onto the tinder"
+    },
+    {
+      "romaji": "hoo tte nari",
+      "hiragana": "ほぉ〜って なり",
+      "english": "I say 'hoo...'"
+    },
+    {
+      "romaji": "tsugi wa dou naru nodarou",
+      "hiragana": "つぎ は どう なる の だろう",
+      "english": "what feeling happens next"
+    }
+  ]
+},
 
 
 
