@@ -34262,34 +34262,33 @@ const level6 = [
 
 
 
-
 {
   "id": "l6-83",
   "meaning": "In a survival situation, to make a fire-starting pump drill, I gather a 4‑foot stick, a flywheel, string, and a tinder bundle. I shave the upper half of the 6‑foot spindle, then at the lower tip I drill a hole to insert the wooden drill bit… so what happens next?",
   "level": 6,
 
   "options": [
-    "ひも を うえ と した に くるくる と まきつける",
+    "手ぼう の まんなか と フライウィール に あな を あける",
     "とびら の よう に ぼう が ひらく",
     "かぜ が ぼう を ふきとばす",
     "いし の おもみ が ふわっと かるく なる"
   ],
 
   "optionsRomaji": [
-    "himo_wo_ue_to_shita_ni_kurukuru_to_makitsukeru",
+    "tebou_no_mannaka_to_fuwairu_ni_ana_wo_akeru",
     "tobira_no_you_ni_bou_ga_hiraku",
     "kaze_ga_bou_wo_fukitobasu",
     "ishi_no_omomi_ga_fuwatto_karuku_naru"
   ],
 
   "optionsEN": [
-    "wrap the string around the upper and lower parts in a spinning motion",
+    "drill a hole in the middle of the handle stick and flywheel",
     "the stick opens like a door",
     "the wind blows the stick away",
     "the stone weights suddenly feel lighter"
   ],
 
-  "correct": "ひも を うえ と した に くるくる と まきつける",
+  "correct": "手ぼう の まんなか と フライウィール に あな を あける",
 
   "fullAudio": {
     "daughter": "audio/sentences/inference83.wav",
@@ -34298,7 +34297,7 @@ const level6 = [
 
   "choiceAudio": {
     "options": [
-      ["audio/sentences/himo_wo_ue_to_shita_ni_kurukuru_to_makitsukeru.wav"],
+      ["audio/sentences/tebou_no_mannaka_to_fuwairu_ni_ana_wo_akeru.wav"],
       ["audio/sentences/tobira_no_you_ni_bou_ga_hiraku.wav"],
       ["audio/sentences/kaze_ga_bou_wo_fukitobasu.wav"],
       ["audio/sentences/ishi_no_omomi_ga_fuwatto_karuku_naru.wav"]
@@ -34306,7 +34305,7 @@ const level6 = [
   },
 
   "meaningAudio": [
-    ["audio/sentences/himo_wo_ue_to_shita_ni_kurukuru_to_makitsukeru.wav"],
+    ["audio/sentences/tebou_no_mannaka_to_fuwairu_ni_ana_wo_akeru.wav"],
     ["audio/sentences/tobira_no_you_ni_bou_ga_hiraku.wav"],
     ["audio/sentences/kaze_ga_bou_wo_fukitobasu.wav"],
     ["audio/sentences/ishi_no_omomi_ga_fuwatto_karuku_naru.wav"]
@@ -34350,7 +34349,7 @@ const level6 = [
     },
     {
       "romaji": "tsugi wa dou naru no darou",
-      "hiragana": "つぎ は どう なる の",
+      "hiragana": "つぎ は どう なる の だろう",
       "english": "so what happens next"
     }
   ]
