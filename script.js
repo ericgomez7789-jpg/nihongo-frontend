@@ -34412,7 +34412,7 @@ const level6 = [
   },
 
   "meaningAudio": [
-    ["audio/sentences/5_fiito_no_bou_wo_furaiuru_no_ana_ni_ireru.wav"],
+    ["audio/sentences/5_fiito_no_bou_wo_furaiwiiru_no_ana_ni_ireru.wav"],
     ["audio/sentences/iwa_ga_pon_to_tobikau.wav"],
     ["audio/sentences/himo_ga_jibun_de_hodokeru.wav"],
     ["audio/sentences/bou_ga_marude_iki_wo_suru_you_ni_ugoku.wav"]
@@ -34421,7 +34421,7 @@ const level6 = [
   "chunks": [
     {
       "romaji": "furaiwiiru wo tsukuru tame ni",
-      "hiragana": "ふらいうぃいる を つくる ため に",
+      "hiragana": "フライウィール を つくる ため に",
       "english": "to make the flywheel"
     },
     {
@@ -34446,6 +34446,95 @@ const level6 = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  "id": "l6-85",
+  "meaning": "At the place where the 5‑foot spindle meets the fireboard, I cut a notch and place the tinder underneath… so what happens next?",
+  "level": 6,
+
+  "options": [
+    "hikiri-bou wo jumbi suru",
+    "hidane ga fuwatto kiechau",
+    "himo ga gyun to nobiru",
+    "bou ga sotto katamuku"
+  ],
+
+  "optionsRomaji": [
+    "hikiri_bou_wo_jumbi_suru",
+    "hidane_ga_fuwatto_kiechau",
+    "himo_ga_gyun_to_nobiru",
+    "bou_ga_sotto_katamuku"
+  ],
+
+  "optionsEN": [
+    "prepare the fire-starting spindle",
+    "the tinder suddenly disappears in a puff",
+    "the string stretches tight",
+    "the stick tilts gently"
+  ],
+
+  "correct": "hikiri-bou wo jumbi suru",
+
+  "fullAudio": {
+    "daughter": "audio/sentences/inference85.wav",
+    "me":       "audio/sentences/inference85.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["audio/sentences/hikiri_bou_wo_jumbi_suru.wav"],
+      ["audio/sentences/hidane_ga_fuwatto_kiechau.wav"],
+      ["audio/sentences/himo_ga_gyun_to_nobiru.wav"],
+      ["audio/sentences/bou_ga_sotto_katamuku.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["audio/sentences/hikiri_bou_wo_jumbi_suru.wav"],
+    ["audio/sentences/hidane_ga_fuwatto_kiechau.wav"],
+    ["audio/sentences/himo_ga_gyun_to_nobiru.wav"],
+    ["audio/sentences/bou_ga_sotto_katamuku.wav"]
+  ],
+
+  "chunks": [
+    {
+      "romaji": "5 fiito no bou wo awaseru tokoro",
+      "hiragana": "5 ふぃいと の ぼう を あわせる ところ",
+      "english": "the place where the 5‑foot stick meets"
+    },
+    {
+      "romaji": "no hiokoshi ita ni kirikomi wo irete",
+      "hiragana": "の ひおこし いた に きりこみ を いれて",
+      "english": "cut a notch in the fireboard"
+    },
+    {
+      "romaji": "sono shita ni hidane wo oku",
+      "hiragana": "その した に ひだね を おく",
+      "english": "place the tinder underneath"
+    },
+    {
+      "romaji": "tsugi wa dou naru no darou",
+      "hiragana": "つぎ は どう なる の だろう",
+      "english": "so what happens next"
+    }
+  ]
+},
+
 
 
 
