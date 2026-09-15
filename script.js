@@ -34544,6 +34544,102 @@ const level6 = [
 
 
 
+
+
+
+
+
+
+{
+  "id": "l6-86",
+  "meaning": "To purify the water, I collect water from the river, pour it into a pot, and boil it for at least three minutes… so what happens next?",
+  "level": 6,
+
+  "options": [
+    "mizu wo ko-su",
+    "mizu ga pon to hazuneru",
+    "nabe ga gyun to naru",
+    "kawa no nioi ga moumou to noboru"
+  ],
+
+  "optionsRomaji": [
+    "mizu_wo_kosu",
+    "mizu_ga_pon_to_hazuneru",
+    "nabe_ga_gyun_to_naru",
+    "kawa_no_nioi_ga_moumou_to_noboru"
+  ],
+
+  "optionsEN": [
+    "strain the water",
+    "the water suddenly pops upward",
+    "the pot makes a tight creaking sound",
+    "the river smell rises in a thick cloud"
+  ],
+
+  "correct": "mizu wo ko-su",
+
+  "fullAudio": {
+    "daughter": "audio/sentences/inference86.wav",
+    "me":       "audio/sentences/inference86.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["audio/sentences/mizu_wo_kosu.wav"],
+      ["audio/sentences/mizu_ga_pon_to_hazuneru.wav"],
+      ["audio/sentences/nabe_ga_gyun_to_naru.wav"],
+      ["audio/sentences/kawa_no_nioi_ga_moumou_to_noboru.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["audio/sentences/mizu_wo_kosu.wav"],
+    ["audio/sentences/mizu_ga_pon_to_hazuneru.wav"],
+    ["audio/sentences/nabe_ga_gyun_to_naru.wav"],
+    ["audio/sentences/kawa_no_nioi_ga_moumou_to_noboru.wav"]
+  ],
+
+  "chunks": [
+    {
+      "romaji": "mizu wo kiyomeru tame ni",
+      "hiragana": "みず を きよめる ため に",
+      "english": "to purify the water"
+    },
+    {
+      "romaji": "kawa kara mizu wo atsumete",
+      "hiragana": "かわ から みず を あつめて",
+      "english": "collect water from the river"
+    },
+    {
+      "romaji": "nabe ni ire",
+      "hiragana": "なべ に いれ",
+      "english": "put it into a pot"
+    },
+    {
+      "romaji": "sanpun ijou ni wakasu",
+      "hiragana": "さんぷん いじょう に わかす",
+      "english": "boil it for at least three minutes"
+    },
+    {
+      "romaji": "tsugi ni dou naru no darou",
+      "hiragana": "つぎ に どう なる の だろう",
+      "english": "so what happens next"
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
   
 
 
