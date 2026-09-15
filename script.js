@@ -34360,6 +34360,101 @@ const level6 = [
 
 
 
+
+
+
+
+
+
+
+
+
+{
+  "id": "l6-84",
+  "meaning": "To make the flywheel, I drill a hole in the middle of two wooden sticks, place a heavy stone between them, and wrap a string around to tie them together… so what happens next?",
+  "level": 6,
+
+  "options": [
+    "5 fiito no bou wo furaiuru no ana ni ireru",
+    "iwa ga pon to tobikau",
+    "himo ga jibun de hodokeru",
+    "bou ga marude iki wo suru you ni ugoku"
+  ],
+
+  "optionsRomaji": [
+    "5_fiito_no_bou_wo_furaiuru_no_ana_ni_ireru",
+    "iwa_ga_pon_to_tobikau",
+    "himo_ga_jibun_de_hodokeru",
+    "bou_ga_marude_iki_wo_suru_you_ni_ugoku"
+  ],
+
+  "optionsEN": [
+    "insert the 5‑foot stick into the flywheel hole",
+    "the stone suddenly pops and jumps",
+    "the string unties itself",
+    "the stick moves as if it were breathing"
+  ],
+
+  "correct": "5 fiito no bou wo furaiuru no ana ni ireru",
+
+  "fullAudio": {
+    "daughter": "audio/sentences/inference84.wav",
+    "me":       "audio/sentences/inference84.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["audio/sentences/5_fiito_no_bou_wo_furaiuru_no_ana_ni_ireru.wav"],
+      ["audio/sentences/iwa_ga_pon_to_tobikau.wav"],
+      ["audio/sentences/himo_ga_jibun_de_hodokeru.wav"],
+      ["audio/sentences/bou_ga_marude_iki_wo_suru_you_ni_ugoku.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["audio/sentences/5_fiito_no_bou_wo_furaiuru_no_ana_ni_ireru.wav"],
+    ["audio/sentences/iwa_ga_pon_to_tobikau.wav"],
+    ["audio/sentences/himo_ga_jibun_de_hodokeru.wav"],
+    ["audio/sentences/bou_ga_marude_iki_wo_suru_you_ni_ugoku.wav"]
+  ],
+
+  "chunks": [
+    {
+      "romaji": "furaiwiiru wo tsukuru tame ni",
+      "hiragana": "ふらいうぃいる を つくる ため に",
+      "english": "to make the flywheel"
+    },
+    {
+      "romaji": "nihon no kinobou no mannaka ni ana wo akete",
+      "hiragana": "にほん の きのぼう の まんなか に あな を あけて",
+      "english": "I drill a hole in the middle of two wooden sticks"
+    },
+    {
+      "romaji": "aida ni omoi ishi wo oki",
+      "hiragana": "あいだ に おもい いし を おき",
+      "english": "place a heavy stone between them"
+    },
+    {
+      "romaji": "himo de makitsukeru",
+      "hiragana": "ひも で まきつける",
+      "english": "wrap a string around to tie them"
+    },
+    {
+      "romaji": "tsugi wa dou naru no darou",
+      "hiragana": "つぎ は どう なる の だろう",
+      "english": "so what happens next"
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
   
 
 
