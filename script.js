@@ -34168,7 +34168,7 @@ const level6 = [
 
 {
   "id": "l6-82",
-  "meaning": "In a survival situation, after a hunt, I avoid contamination, I carefully remove the organs without puncturing the stomach or intestines… so what is the next step?",
+  "meaning": "In a survival situation, after a hunt, to avoid contamination, I carefully remove the organs without puncturing the stomach or intestines… so what is the next step?",
   "level": 6,
 
   "options": [
@@ -34328,7 +34328,7 @@ const level6 = [
       "english": "I gather a 3‑foot stick"
     },
     {
-      "romaji": "fuwairu to himo to tinder-bundle wo atsumete",
+      "romaji": "fuwaiwiiru to himo to tinder-bundle wo atsumete",
       "hiragana": "フライウィール と ひも と ティンダー バンドル を あつめて",
       "english": "a flywheel, string, and a tinder bundle"
     },

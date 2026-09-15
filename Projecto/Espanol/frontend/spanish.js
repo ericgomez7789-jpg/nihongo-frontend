@@ -3135,6 +3135,62 @@ me: "audio/spanish/silla.wav"
 
 
 
+{
+  "id": "l1-es-55",
+  "meaning": "close the faucet",
+  "level": 1,
+
+  "chunks": [
+    {
+      "romaji": "cierra",
+      "hiragana": "cierra",
+      "meaning": "close (command)",
+      "audio": {
+        "daughter": "audio/spanish/cierra.wav",
+        "me": "audio/spanish/cierra.wav"
+      }
+    },
+
+    {
+      "romaji": "la",
+      "hiragana": "la",
+      "meaning": "the",
+      "audio": {
+        "daughter": "audio/spanish/la.wav",
+        "me": "audio/spanish/la.wav"
+      }
+    },
+
+    {
+      "romaji": "llave",
+      "hiragana": "llave",
+      "meaning": "faucet / valve",
+      "audio": {
+        "daughter": "audio/spanish/llave.wav",
+        "me": "audio/spanish/llave.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
