@@ -34323,9 +34323,9 @@ const level6 = [
       "english": "to make a fire-starting pump drill"
     },
     {
-      "romaji": "yon fiito no bou ya",
-      "hiragana": "4フィート の ぼう や",
-      "english": "I gather a 4‑foot stick"
+      "romaji": "san fiito no bou ya",
+      "hiragana": "3 フィート の ぼう や",
+      "english": "I gather a 3‑foot stick"
     },
     {
       "romaji": "fuwairu to himo to tinder-bundle wo atsumete",
@@ -34333,9 +34333,9 @@ const level6 = [
       "english": "a flywheel, string, and a tinder bundle"
     },
     {
-      "romaji": "roku fiito no bou no uehanbun wo kezutte",
-      "hiragana": "6フィート の ぼう の うえはんぶん を けずって",
-      "english": "I shave the upper half of the 6‑foot spindle"
+      "romaji": "go fiito no bou no uehanbun wo kezutte",
+      "hiragana": "5 フィート の ぼう の うえはんぶん を けずって",
+      "english": "I shave the upper half of the 5‑foot spindle"
     },
     {
       "romaji": "shita no saki de ana wo akete",
