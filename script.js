@@ -34640,6 +34640,95 @@ const level6 = [
 
 
 
+
+
+{
+  "id": "l6-87",
+  "meaning": "In a survival situation, to make tinder, I gather dry leaves, cotton, and dried grass… so what happens next?",
+  "level": 6,
+
+  "options": [
+    "ていねい に ほぐして ふわふわ に する",
+    "かぜ が ひだね を ふきとばす",
+    "あつめた くさ が じぶん で うごきだす",
+    "もり の におい が もわっと たちのぼる"
+  ],
+
+  "optionsRomaji": [
+    "teinei_ni_hogushite_fuwafuwa_ni_suru",
+    "kaze_ga_hidane_wo_fukitobasu",
+    "atsumeta_kusa_ga_jibun_de_ugokidasu",
+    "mori_no_nioi_ga_mowatto_tachinoboru"
+  ],
+
+  "optionsEN": [
+    "gently loosen it and make it fluffy",
+    "the wind blows the tinder away",
+    "the gathered grass starts moving on its own",
+    "the forest smell rises in a thick wave"
+  ],
+
+  "correct": "ていねい に ほぐして ふわふわ に する",
+
+  "fullAudio": {
+    "daughter": "audio/sentences/inference87.wav",
+    "me":       "audio/sentences/inference87.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["audio/sentences/teinei_ni_hogushite_fuwafuwa_ni_suru.wav"],
+      ["audio/sentences/kaze_ga_hidane_wo_fukitobasu.wav"],
+      ["audio/sentences/atsumeta_kusa_ga_jibun_de_ugokidasu.wav"],
+      ["audio/sentences/mori_no_nioi_ga_mowatto_tachinoboru.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["audio/sentences/teinei_ni_hogushite_fuwafuwa_ni_suru.wav"],
+    ["audio/sentences/kaze_ga_hidane_wo_fukitobasu.wav"],
+    ["audio/sentences/atsumeta_kusa_ga_jibun_de_ugokidasu.wav"],
+    ["audio/sentences/mori_no_nioi_ga_mowatto_tachinoboru.wav"]
+  ],
+
+  "chunks": [
+    {
+      "romaji": "sabairu no joukyou dewa",
+      "hiragana": "サバイバル の じょうきょう では",
+      "english": "in a survival situation"
+    },
+    {
+      "romaji": "hidane wo tsukuru tame ni",
+      "hiragana": "火種 を つくる ため に",
+      "english": "to make tinder"
+    },
+    {
+      "romaji": "kareha ya wata ya karekusa nado atsumete",
+      "hiragana": "枯葉 や わた や かれくさ など あつめて",
+      "english": "I gather dry leaves, cotton, and dried grass"
+    },
+    {
+      "romaji": "tsugi wa dou naru no darou",
+      "hiragana": "つぎ は どう なる の だろう",
+      "english": "so what happens next"
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
 
 
