@@ -3187,6 +3187,65 @@ me: "audio/spanish/silla.wav"
 
 
 
+{
+  "id": "l1-es-56",
+  "meaning": "my daughter is tall",
+  "level": 1,
+
+  "chunks": [
+    {
+      "romaji": "mi",
+      "hiragana": "mi",
+      "meaning": "my",
+      "audio": {
+        "daughter": "audio/spanish/mi.wav",
+        "me": "audio/spanish/mi.wav"
+      }
+    },
+
+    {
+      "romaji": "hija",
+      "hiragana": "hija",
+      "meaning": "daughter",
+      "audio": {
+        "daughter": "audio/spanish/hija.wav",
+        "me": "audio/spanish/hija.wav"
+      }
+    },
+
+    {
+      "romaji": "es",
+      "hiragana": "es",
+      "meaning": "is",
+      "audio": {
+        "daughter": "audio/spanish/es.wav",
+        "me": "audio/spanish/es.wav"
+      }
+    },
+
+    {
+      "romaji": "alta",
+      "hiragana": "alta",
+      "meaning": "tall (feminine)",
+      "audio": {
+        "daughter": "audio/spanish/alta.wav",
+        "me": "audio/spanish/alta.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
