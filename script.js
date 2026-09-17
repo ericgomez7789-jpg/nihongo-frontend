@@ -34690,7 +34690,7 @@ const level6 = [
 
   "chunks": [
     {
-      "romaji": "sabairu no joukyou dewa",
+      "romaji": "sabaibaru no joukyou dewa",
       "hiragana": "サバイバル の じょうきょう では",
       "english": "in a survival situation"
     },

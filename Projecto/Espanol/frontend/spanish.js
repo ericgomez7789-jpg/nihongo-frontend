@@ -3255,6 +3255,84 @@ me: "audio/spanish/silla.wav"
 
 
 
+{
+  "id": "l1-es-57",
+  "meaning": "my husband is very strong.",
+  "level": 1,
+
+  "chunks": [
+    {
+      "romaji": "mi",
+      "hiragana": "mi",
+      "meaning": "my",
+      "audio": {
+        "daughter": "audio/spanish/mi.wav",
+        "me": "audio/spanish/mi.wav"
+      }
+    },
+
+    {
+      "romaji": "marido",
+      "hiragana": "marido",
+      "meaning": "husband",
+      "audio": {
+        "daughter": "audio/spanish/marido.wav",
+        "me": "audio/spanish/marido.wav"
+      }
+    },
+
+    {
+      "romaji": "es",
+      "hiragana": "es",
+      "meaning": "is",
+      "audio": {
+        "daughter": "audio/spanish/es.wav",
+        "me": "audio/spanish/es.wav"
+      }
+    },
+
+    {
+      "romaji": "muy",
+      "hiragana": "muy",
+      "meaning": "very",
+      "audio": {
+        "daughter": "audio/spanish/muy.wav",
+        "me": "audio/spanish/muy.wav"
+      }
+    },
+    {
+      "romaji": "fuerte",
+      "hiragana": "fuerte",
+      "meaning": "strong",
+      "audio": {
+        "daughter": "audio/spanish/fuerte.wav",
+        "me": "audio/spanish/fuerte.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ];
 
@@ -7237,6 +7315,99 @@ const level3 = [
         { "spanish": "¿Qué ocurre después?", "english": "What happens next?" }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  "id": "es3-25",
+  "meaning": "Mi hija me pidió que la llevara al parque. Si le digo que estoy ocupada, ¿qué ocurre después?",
+  "level": 3,
+
+  "options": [
+    "Ella decide esperar",
+    "Ella va sola al parque",
+    "Ella se pone a cocinar",
+    "Ella llama a su maestra"
+  ],
+
+  "optionsRomaji": [
+    "ella_decide_esperar",
+    "ella_va_sola_al_parque",
+    "ella_se_pone_a_cocinar",
+    "ella_llama_a_su_maestra"
+  ],
+
+  "optionsEN": [
+    "she decides to wait",
+    "she goes to the park alone",
+    "she starts cooking",
+    "she calls her teacher"
+  ],
+
+  "correct": "Ella decide esperar",
+
+  "fullAudio": {
+    "daughter": "audio/spanish/inference25.wav",
+    "me": "audio/spanish/inference25.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["spanish/audio/ella_decide_esperar.wav"],
+      ["spanish/audio/ella_va_sola_al_parque.wav"],
+      ["spanish/audio/ella_se_pone_a_cocinar.wav"],
+      ["spanish/audio/ella_llama_a_su_maestra.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["spanish/audio/ella_decide_esperar.wav"],
+    ["spanish/audio/ella_va_sola_al_parque.wav"],
+    ["spanish/audio/ella_se_pone_a_cocinar.wav"],
+    ["spanish/audio/ella_llama_a_su_maestra.wav"]
+  ],
+
+  "chunks": [
+    {
+      "spanish": "Mi hija me pidió",
+      "english": "My daughter asked me"
+    },
+    {
+      "spanish": "que la llevara al parque",
+      "english": "to take her to the park"
+    },
+    {
+      "spanish": "Si le digo que estoy ocupada",
+      "english": "If I tell her that I am busy"
+    },
+    {
+      "spanish": "¿qué ocurre después?",
+      "english": "what happens next?"
+    }
+  ]
+},
+
+
+
+
+
+
+
+
 
 
 
