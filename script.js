@@ -34261,21 +34261,20 @@ const level6 = [
 
 
 
-
 {
   "id": "l6-83",
-  "meaning": "In a survival situation, to make a fire-starting pump drill, I gather a 4‑foot stick, a flywheel, string, and a tinder bundle. I shave the upper half of the 6‑foot spindle, then at the lower tip I drill a hole to insert the wooden drill bit… so what happens next?",
+  "meaning": "In a survival situation, to make a fire-starting pump drill, I gather a 2‑foot stick, a flywheel, string, and a tinder bundle. I shave the upper half of the 4‑foot spindle, then at the lower tip I drill a hole to insert the wooden drill bit… so what happens next?",
   "level": 6,
 
   "options": [
-    "手ぼう の まんなか と フライウィール に あな を あける",
+    "てぼう の まんなか と ふらいうぃーる に あな を あける",
     "とびら の よう に ぼう が ひらく",
     "かぜ が ぼう を ふきとばす",
     "いし の おもみ が ふわっと かるく なる"
   ],
 
   "optionsRomaji": [
-    "tebou_no_mannaka_to_fuwairu_ni_ana_wo_akeru",
+    "tebou_no_mannaka_to_furaiwiiru_ni_ana_wo_akeru",
     "tobira_no_you_ni_bou_ga_hiraku",
     "kaze_ga_bou_wo_fukitobasu",
     "ishi_no_omomi_ga_fuwatto_karuku_naru"
@@ -34288,7 +34287,7 @@ const level6 = [
     "the stone weights suddenly feel lighter"
   ],
 
-  "correct": "手ぼう の まんなか と フライウィール に あな を あける",
+  "correct": "てぼう の まんなか と ふらいうぃーる に あな を あける",
 
   "fullAudio": {
     "daughter": "audio/sentences/inference83.wav",
@@ -34297,7 +34296,7 @@ const level6 = [
 
   "choiceAudio": {
     "options": [
-      ["audio/sentences/tebou_no_mannaka_to_fuwairu_ni_ana_wo_akeru.wav"],
+      ["audio/sentences/tebou_no_mannaka_to_furaiwiiru_ni_ana_wo_akeru.wav"],
       ["audio/sentences/tobira_no_you_ni_bou_ga_hiraku.wav"],
       ["audio/sentences/kaze_ga_bou_wo_fukitobasu.wav"],
       ["audio/sentences/ishi_no_omomi_ga_fuwatto_karuku_naru.wav"]
@@ -34305,7 +34304,7 @@ const level6 = [
   },
 
   "meaningAudio": [
-    ["audio/sentences/tebou_no_mannaka_to_fuwairu_ni_ana_wo_akeru.wav"],
+    ["audio/sentences/tebou_no_mannaka_to_furaiwiiru_ni_ana_wo_akeru.wav"],
     ["audio/sentences/tobira_no_you_ni_bou_ga_hiraku.wav"],
     ["audio/sentences/kaze_ga_bou_wo_fukitobasu.wav"],
     ["audio/sentences/ishi_no_omomi_ga_fuwatto_karuku_naru.wav"]
@@ -34318,34 +34317,34 @@ const level6 = [
       "english": "in a survival situation"
     },
     {
-      "romaji": "hikiri-bou wo tsukuru tame ni",
-      "hiragana": "火きり棒 を つくる ため に",
+      "romaji": "hikiri bou wo tsukuru tame ni",
+      "hiragana": "ひきりぼう を つくる ため に",
       "english": "to make a fire-starting pump drill"
     },
     {
-      "romaji": "san fiito no bou ya",
-      "hiragana": "3 フィート の ぼう や",
-      "english": "I gather a 3‑foot stick"
+      "romaji": "ni fiito no bou ya",
+      "hiragana": "2 ふぃーと の ぼう や",
+      "english": "I gather a 2‑foot stick"
     },
     {
-      "romaji": "fuwaiwiiru to himo to tinder-bundle wo atsumete",
-      "hiragana": "フライウィール と ひも と ティンダー バンドル を あつめて",
-      "english": "a flywheel, string, and a tinder bundle"
-    },
-    {
-      "romaji": "go fiito no bou no uehanbun wo kezutte",
-      "hiragana": "5 フィート の ぼう の うえはんぶん を けずって",
-      "english": "I shave the upper half of the 5‑foot spindle"
-    },
-    {
-      "romaji": "shita no saki de ana wo akete",
-      "hiragana": "した の さき で あな を あけて",
-      "english": "I drill a hole at the lower tip"
-    },
-    {
-      "romaji": "ki no dorirubitto wo ireru",
-      "hiragana": "木 の ドリルビット を いれる",
-      "english": "and insert the wooden drill bit"
+  "romaji": "furaiwiiru to himo to tindaa bandoru wo atsumete",
+  "hiragana": "ふらいうぃーる と ひも と てぃんだー ばんどる を あつめて",
+  "english": "a flywheel, string, and a tinder bundle"
+},
+{
+  "romaji": "yon fiito no bou no uehanbun wo kezutte",
+  "hiragana": "4 ふぃーと の ぼう の うえはんぶん を けずって",
+  "english": "I shave the upper half of the 4‑foot spindle"
+},
+{
+  "romaji": "shita no saki de ana wo akete",
+  "hiragana": "した の さき で あな を あけて",
+  "english": "I drill a hole at the lower tip"
+},
+{
+  "romaji": "ki no dorirubitto wo ireru",
+  "hiragana": "き の どりるびっと を いれる",
+  "english": "and insert the wooden drill bit"
     },
     {
       "romaji": "tsugi wa dou naru no darou",
@@ -34640,8 +34639,6 @@ const level6 = [
 
 
 
-
-
 {
   "id": "l6-87",
   "meaning": "In a survival situation, to make tinder, I gather dry leaves, cotton, and dried grass… so what happens next?",
@@ -34699,12 +34696,12 @@ const level6 = [
     },
     {
       "romaji": "hidane wo tsukuru tame ni",
-      "hiragana": "火種 を つくる ため に",
+      "hiragana": "ひだね を つくる ため に",
       "english": "to make tinder"
     },
     {
-      "romaji": "kareha ya wata ya karekusa nado atsumete",
-      "hiragana": "枯葉 や わた や かれくさ など あつめて",
+      "romaji": "kareha ya wata ya kareta kusa nado atsumete",
+      "hiragana": "かれは や わた や かれた くさ など あつめて",
       "english": "I gather dry leaves, cotton, and dried grass"
     },
     {
@@ -34729,22 +34726,25 @@ const level6 = [
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
