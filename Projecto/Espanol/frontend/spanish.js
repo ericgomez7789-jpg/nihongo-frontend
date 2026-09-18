@@ -3332,6 +3332,62 @@ me: "audio/spanish/silla.wav"
 
 
 
+{
+  "id": "l1-es-58",
+  "meaning": "he seems weak",
+  "level": 1,
+
+  "chunks": [
+    {
+      "romaji": "él",
+      "hiragana": "él",
+      "meaning": "he",
+      "audio": {
+        "daughter": "audio/spanish/el.wav",
+        "me": "audio/spanish/el.wav"
+      }
+    },
+
+    {
+      "romaji": "parece",
+      "hiragana": "parece",
+      "meaning": "seems",
+      "audio": {
+        "daughter": "audio/spanish/parece.wav",
+        "me": "audio/spanish/parece.wav"
+      }
+    },
+
+    {
+      "romaji": "débil",
+      "hiragana": "débil",
+      "meaning": "weak",
+      "audio": {
+        "daughter": "audio/spanish/debil.wav",
+        "me": "audio/spanish/debil.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ];
@@ -7403,6 +7459,90 @@ const level3 = [
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  "id": "es3-26",
+  "meaning": "Expuse mi cuerpo al sol abrasador durante mucho tiempo. ¿Qué ocurre después?",
+  "level": 3,
+
+  "options": [
+    "Me quemo la piel",
+    "Me pongo a correr",
+    "Me siento congelado",
+    "Me vuelvo invisible"
+  ],
+
+  "optionsRomaji": [
+    "me_quemo_la_piel",
+    "me_pongo_a_correr",
+    "me_siento_congelado",
+    "me_vuelvo_invisible"
+  ],
+
+  "optionsEN": [
+    "my skin gets burned",
+    "I start running",
+    "I feel frozen",
+    "I become invisible"
+  ],
+
+  "correct": "Me quemo la piel",
+
+  "fullAudio": {
+    "daughter": "audio/spanish/inference26.wav",
+    "me": "audio/spanish/inference26.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["spanish/audio/me_quemo_la_piel.wav"],
+      ["spanish/audio/me_pongo_a_correr.wav"],
+      ["spanish/audio/me_siento_congelado.wav"],
+      ["spanish/audio/me_vuelvo_invisible.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["spanish/audio/me_quemo_la_piel.wav"],
+    ["spanish/audio/me_pongo_a_correr.wav"],
+    ["spanish/audio/me_siento_congelado.wav"],
+    ["spanish/audio/me_vuelvo_invisible.wav"]
+  ],
+
+  "chunks": [
+    {
+      "spanish": "Expuse mi cuerpo",
+      "english": "I exposed my body"
+    },
+    {
+      "spanish": "al sol abrasador",
+      "english": "to the scorching sun"
+    },
+    {
+      "spanish": "durante mucho tiempo",
+      "english": "for a long time"
+    },
+    {
+      "spanish": "¿Qué ocurre después?",
+      "english": "What happens next?"
+    }
+  ]
+},
 
 
 
