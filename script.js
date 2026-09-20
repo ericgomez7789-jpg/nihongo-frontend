@@ -34463,7 +34463,7 @@ const level6 = [
 
 {
   "id": "l6-85",
-  "meaning": "At the place where the 5‑foot spindle meets the fireboard, I cut a notch and place the tinder underneath… so what happens next?",
+  "meaning": "In a survival situation, to make a fireboard, I cut a notch in the fireboard where the 4-foot stick meets it and place the tinder underneath... so what happens next?",
   "level": 6,
 
   "options": [
@@ -34491,7 +34491,7 @@ const level6 = [
 
   "fullAudio": {
     "daughter": "audio/sentences/inference85.wav",
-    "me":       "audio/sentences/inference85.wav"
+    "me": "audio/sentences/inference85.wav"
   },
 
   "choiceAudio": {
@@ -34512,14 +34512,19 @@ const level6 = [
 
   "chunks": [
     {
-      "romaji": "5 fiito no bou wo awaseru tokoro",
-      "hiragana": "5 ふぃいと の ぼう を あわせる ところ",
-      "english": "the place where the 5‑foot stick meets"
+      "romaji": "sabaibaru no joukyou dewa",
+      "hiragana": "さばいばる の じょうきょう では",
+      "english": "in a survival situation"
     },
     {
-      "romaji": "no hiokoshi ita ni kirikomi wo irete",
-      "hiragana": "の ひおこし いた に きりこみ を いれて",
-      "english": "cut a notch in the fireboard"
+      "romaji": "hiokoshi ita wo tsukuru tame ni",
+      "hiragana": "ひおこし いた を つくる ため に",
+      "english": "to make a fireboard"
+    },
+    {
+      "romaji": "4 fiito no bou wo awaseru tokoro no hiokoshi ita ni kirikomi wo irete",
+      "hiragana": "4 ふぃいと の ぼう を あわせる ところ の ひおこし いた に きりこみ を いれて",
+      "english": "cut a notch in the fireboard where the 4-foot stick meets it"
     },
     {
       "romaji": "sono shita ni hidane wo oku",
@@ -34533,7 +34538,6 @@ const level6 = [
     }
   ]
 },
-
 
 
 
