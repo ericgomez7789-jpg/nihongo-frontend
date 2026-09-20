@@ -7566,6 +7566,95 @@ const level3 = [
 
 
 
+{
+  "id": "es3-27",
+  "meaning": "Mientras duermes en una casita de campaña húmeda con casi nada de ventilación, ¿qué ocurre después?",
+  "level": 3,
+
+  "options": [
+    "Me despierto sudando",
+    "Me convierto en piedra",
+    "Me salen alas",
+    "Empiezo a brillar"
+  ],
+
+  "optionsRomaji": [
+    "me_despierto_sudando",
+    "me_convierto_en_piedra",
+    "me_salen_alas",
+    "empiezo_a_brillar"
+  ],
+
+  "optionsEN": [
+    "I wake up sweating",
+    "I turn into stone",
+    "I grow wings",
+    "I start glowing"
+  ],
+
+  "correct": "Me despierto sudando",
+
+  "fullAudio": {
+    "daughter": "audio/spanish/inference27.wav",
+    "me": "audio/spanish/inference27.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["spanish/audio/me_despierto_sudando.wav"],
+      ["spanish/audio/me_convierto_en_piedra.wav"],
+      ["spanish/audio/me_salen_alas.wav"],
+      ["spanish/audio/empiezo_a_brillar.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["spanish/audio/me_despierto_sudando.wav"],
+    ["spanish/audio/me_convierto_en_piedra.wav"],
+    ["spanish/audio/me_salen_alas.wav"],
+    ["spanish/audio/empiezo_a_brillar.wav"]
+  ],
+
+  "chunks": [
+    {
+      "spanish": "Mientras duermes",
+      "english": "While you sleep"
+    },
+    {
+      "spanish": "en una casita de campaña húmeda",
+      "english": "in a damp tent"
+    },
+    {
+      "spanish": "con casi nada de ventilación",
+      "english": "with almost no ventilation"
+    },
+    {
+      "spanish": "¿qué ocurre después?",
+      "english": "what happens next?"
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ];
 
