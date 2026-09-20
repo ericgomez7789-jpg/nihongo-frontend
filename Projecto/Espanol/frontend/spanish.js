@@ -3388,6 +3388,80 @@ me: "audio/spanish/silla.wav"
 
 
 
+{
+  "id": "l1-es-59",
+  "meaning": "my dad washes the dishes",
+  "level": 1,
+
+  "chunks": [
+    {
+      "romaji": "mi",
+      "hiragana": "mi",
+      "meaning": "my",
+      "audio": {
+        "daughter": "audio/spanish/mi.wav",
+        "me": "audio/spanish/mi.wav"
+      }
+    },
+
+    {
+      "romaji": "papá",
+      "hiragana": "papá",
+      "meaning": "dad",
+      "audio": {
+        "daughter": "audio/spanish/papa.wav",
+        "me": "audio/spanish/papa.wav"
+      }
+    },
+
+    {
+      "romaji": "lava",
+      "hiragana": "lava",
+      "meaning": "washes",
+      "audio": {
+        "daughter": "audio/spanish/lava.wav",
+        "me": "audio/spanish/lava.wav"
+      }
+    },
+
+    {
+      "romaji": "los",
+      "hiragana": "los",
+      "meaning": "the",
+      "audio": {
+        "daughter": "audio/spanish/los.wav",
+        "me": "audio/spanish/los.wav"
+      }
+    },
+
+    {
+      "romaji": "platos",
+      "hiragana": "platos",
+      "meaning": "dishes",
+      "audio": {
+        "daughter": "audio/spanish/platos.wav",
+        "me": "audio/spanish/platos.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ];
