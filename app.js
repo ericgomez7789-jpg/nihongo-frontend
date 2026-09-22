@@ -36,6 +36,9 @@ supabase.auth.onAuthStateChange((_event, session) => {
 async function incrementView() {
   const { data, error } = await supabase.rpc("increment_views");
 
+  console.log("RPC DATA:", data);
+  console.log("RPC ERROR:", error);
+
   if (error) {
     console.error(error);
     return;
