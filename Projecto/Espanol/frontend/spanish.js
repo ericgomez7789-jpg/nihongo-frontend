@@ -3464,6 +3464,62 @@ me: "audio/spanish/silla.wav"
 
 
 
+
+
+
+{
+  "id": "l1-es-60",
+  "meaning": "to climb the stairs",
+  "level": 1,
+
+  "chunks": [
+    {
+      "romaji": "subir",
+      "hiragana": "subir",
+      "meaning": "to climb",
+      "audio": {
+        "daughter": "audio/spanish/subir.wav",
+        "me": "audio/spanish/subir.wav"
+      }
+    },
+
+    {
+      "romaji": "la",
+      "hiragana": "la",
+      "meaning": "the",
+      "audio": {
+        "daughter": "audio/spanish/la.wav",
+        "me": "audio/spanish/la.wav"
+      }
+    },
+
+    {
+      "romaji": "escalera",
+      "hiragana": "escalera",
+      "meaning": "stairs",
+      "audio": {
+        "daughter": "audio/spanish/escalera.wav",
+        "me": "audio/spanish/escalera.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 // ⭐ ADD THIS PATCH RIGHT HERE
@@ -7710,6 +7766,90 @@ const level3 = [
 },
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  "id": "es3-28",
+  "meaning": "Como no pude dormir bien acampando al aire libre, ¿qué ocurre después?",
+  "level": 3,
+
+  "options": [
+    "Estoy muy cansado al día siguiente",
+    "Me convierto en un árbol",
+    "Puedo volar sin ayuda",
+    "Empiezo a cambiar de color"
+  ],
+
+  "optionsRomaji": [
+    "estoy_muy_cansado_al_dia_siguiente",
+    "me_convierto_en_un_arbol",
+    "puedo_volar_sin_ayuda",
+    "empiezo_a_cambiar_de_color"
+  ],
+
+  "optionsEN": [
+    "I am very tired the next day",
+    "I turn into a tree",
+    "I can fly without help",
+    "I start changing color"
+  ],
+
+  "correct": "Estoy muy cansado al día siguiente",
+
+  "fullAudio": {
+    "daughter": "audio/spanish/inference28.wav",
+    "me": "audio/spanish/inference28.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["spanish/audio/estoy_muy_cansado_al_dia_siguiente.wav"],
+      ["spanish/audio/me_convierto_en_un_arbol.wav"],
+      ["spanish/audio/puedo_volar_sin_ayuda.wav"],
+      ["spanish/audio/empiezo_a_cambiar_de_color.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["spanish/audio/estoy_muy_cansado_al_dia_siguiente.wav"],
+    ["spanish/audio/me_convierto_en_un_arbol.wav"],
+    ["spanish/audio/puedo_volar_sin_ayuda.wav"],
+    ["spanish/audio/empiezo_a_cambiar_de_color.wav"]
+  ],
+
+  "chunks": [
+    {
+      "spanish": "Como no pude dormir bien",
+      "english": "Since I couldn't sleep well"
+    },
+    {
+      "spanish": "acampando al aire libre",
+      "english": "while camping outdoors"
+    },
+    {
+      "spanish": "¿qué ocurre después?",
+      "english": "what happens next?"
+    }
+  ]
+},
 
 
 
