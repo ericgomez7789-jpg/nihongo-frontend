@@ -47463,6 +47463,47 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
+
+
+
+
+
+
+
+  // ---------------------------------------------------------
+  // ADMIN / OWNER OVERRIDE
+  // ---------------------------------------------------------
+  const ownerEmails = [
+    "ericgomez89@yahoo.com"
+  ];
+
+  const userEmail = user.email?.toLowerCase();
+
+  if (ownerEmails.includes(userEmail)) {
+    console.log("[ADMIN OVERRIDE] Full access granted");
+
+    localStorage.setItem("basicUnlock", "true");
+    localStorage.setItem("premiumUnlock", "true");
+
+    launchLevel(levelNumber, screenId, startFn);
+    return;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     const basicUnlocked  = localStorage.getItem("basicUnlock")  === "true";
     const premiumUnlocked = localStorage.getItem("premiumUnlock") === "true";
 
