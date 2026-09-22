@@ -34,17 +34,14 @@ supabase.auth.onAuthStateChange((_event, session) => {
 //  ⭐ VIEW COUNTER (Offline Only — No Supabase)
 // ============================================================
 async function incrementView() {
-  try {
-    const raw = localStorage.getItem("views_counter");
-    const obj = raw ? JSON.parse(raw) : { total_views: 0 };
+  const { data, error } = await supabase.rpc("increment_views");
 
-    obj.total_views += 1;
-
-    localStorage.setItem("views_counter", JSON.stringify(obj));
-    console.log("[ViewCounter] total_views =", obj.total_views);
-  } catch (e) {
-    console.error("[ViewCounter] Failed to increment:", e);
+  if (error) {
+    console.error(error);
+    return;
   }
+
+  console.log("[ViewCounter] total_views =", data);
 }
 
-incrementView();   // ⭐ Safe now — no Supabase calls
+incrementView();
