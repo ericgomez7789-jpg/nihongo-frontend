@@ -5314,7 +5314,7 @@ const level2SentencesFR = [
 
 
 {
-  id: "l3_fr_002",
+  id: "l2_fr_002",
   sentence: "J'ai un examen demain, alors je vais étudier maintenant.",
   conjunction: "alors",
   meaning: "I have an exam tomorrow, so I'm going to study now.",
@@ -5329,6 +5329,41 @@ const level2SentencesFR = [
   ]
 },
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+id: "l2_fr_003",
+sentence: "J'ai oublié mon portefeuille, alors je rentre chez moi.",
+conjunction: "alors",
+meaning: "I forgot my wallet, so I'm going home.",
+fullAudio: "audio/conjunction3.wav",
+chunks: [
+{
+audio: {
+me: "audio/conjunction3.wav",
+daughter: "audio/conjunction3.wav"
+}
+}
+]
+},
 
 
 
