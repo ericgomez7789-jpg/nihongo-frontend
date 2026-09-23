@@ -3520,6 +3520,75 @@ me: "audio/spanish/silla.wav"
 
 
 
+
+
+
+
+
+{
+"id": "l1-es-61",
+"meaning": "I like watching television",
+"level": 1,
+
+"chunks": [
+{
+"romaji": "me",
+"hiragana": "me",
+"meaning": "to me",
+"audio": {
+"daughter": "audio/spanish/me.wav",
+"me": "audio/spanish/me.wav"
+}
+},
+
+
+
+{
+  "romaji": "gusta",
+  "hiragana": "gusta",
+  "meaning": "is pleasing",
+  "audio": {
+    "daughter": "audio/spanish/gusta.wav",
+    "me": "audio/spanish/gusta.wav"
+  }
+},
+
+{
+  "romaji": "ver",
+  "hiragana": "ver",
+  "meaning": "to watch",
+  "audio": {
+    "daughter": "audio/spanish/ver.wav",
+    "me": "audio/spanish/ver.wav"
+  }
+},
+
+{
+  "romaji": "television",
+  "hiragana": "television",
+  "meaning": "television",
+  "audio": {
+    "daughter": "audio/spanish/television.wav",
+    "me": "audio/spanish/television.wav"
+  }
+}
+]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 // ⭐ ADD THIS PATCH RIGHT HERE
@@ -7853,6 +7922,94 @@ const level3 = [
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+"id": "es3-29",
+"meaning": "Durmiendo al aire libre toda la noche, sudé hasta quedar empapado y después me zambullí en el agua por la mañana. ¿Qué ocurre después?",
+"level": 3,
+
+"options": [
+"Me enfermo por el cambio brusco de temperatura",
+"Me convierto en un pez",
+"Empiezo a flotar en el aire",
+"Dejo de necesitar dormir"
+],
+
+"optionsRomaji": [
+"me_enfermo_por_el_cambio_brusco_de_temperatura",
+"me_convierto_en_un_pez",
+"empiezo_a_flotar_en_el_aire",
+"dejo_de_necesitar_dormir"
+],
+
+"optionsEN": [
+"I get sick from the sudden change in temperature",
+"I turn into a fish",
+"I start floating in the air",
+"I no longer need to sleep"
+],
+
+"correct": "Me enfermo por el cambio brusco de temperatura",
+
+"fullAudio": {
+"daughter": "audio/spanish/inference29.wav",
+"me": "audio/spanish/inference29.wav"
+},
+
+"choiceAudio": {
+"options": [
+["spanish/audio/me_enfermo_por_el_cambio_brusco_de_temperatura.wav"],
+["spanish/audio/me_convierto_en_un_pez.wav"],
+["spanish/audio/empiezo_a_flotar_en_el_aire.wav"],
+["spanish/audio/dejo_de_necesitar_dormir.wav"]
+]
+},
+
+"meaningAudio": [
+["spanish/audio/me_enfermo_por_el_cambio_brusco_de_temperatura.wav"],
+["spanish/audio/me_convierto_en_un_pez.wav"],
+["spanish/audio/empiezo_a_flotar_en_el_aire.wav"],
+["spanish/audio/dejo_de_necesitar_dormir.wav"]
+],
+
+"chunks": [
+{
+"spanish": "Durmiendo al aire libre toda la noche",
+"english": "Sleeping outdoors all night"
+},
+{
+"spanish": "sudé hasta quedar empapado",
+"english": "I sweated until I was soaking wet"
+},
+{
+"spanish": "y después me zambullí en el agua por la mañana",
+"english": "and then I plunged into the water in the morning"
+},
+{
+"spanish": "¿qué ocurre después?",
+"english": "what happens next?"
+}
+]
+},
 
 
 

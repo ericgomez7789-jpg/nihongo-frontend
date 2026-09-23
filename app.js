@@ -34,17 +34,15 @@ supabase.auth.onAuthStateChange((_event, session) => {
 //  ⭐ VIEW COUNTER (Offline Only — No Supabase)
 // ============================================================
 async function incrementView() {
-  const { data, error } = await supabase.rpc("increment_views");
-
-  console.log("RPC DATA:", data);
-  console.log("RPC ERROR:", error);
+  const { data, error } =
+    await supabase.rpc("increment_page_views");
 
   if (error) {
-    console.error(error);
+    console.error("[ViewCounter] Error:", error);
     return;
   }
 
-  console.log("[ViewCounter] total_views =", data);
+  console.log("[ViewCounter] Total Views:", data);
 }
 
 incrementView();
