@@ -5377,6 +5377,43 @@ daughter: "audio/conjunction3.wav"
 
 
 
+
+
+
+
+
+
+
+
+
+
+{
+  id: "l2_fr_004",
+  sentence: "Il n'y a pas de signal, c'est pour ça que le téléphone ne fonctionne pas.",
+  conjunction: "c'est pour ça que",
+  meaning: "There is no signal, that's why the phone is not working.",
+  fullAudio: "audio/conjunction4.wav",
+  chunks: [
+    {
+      audio: {
+        me: "audio/conjunction4.wav",
+        daughter: "audio/conjunction4.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 
