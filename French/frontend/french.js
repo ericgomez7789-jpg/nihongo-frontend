@@ -5414,6 +5414,39 @@ daughter: "audio/conjunction3.wav"
 
 
 
+
+
+
+
+
+
+
+
+{
+  "id": "l2_fr_005",
+  "sentence": "Je veux améliorer mon japonais, c'est pourquoi je pratique quotidiennement.",
+  "conjunction": "c'est pourquoi",
+  "meaning": "I want to improve my Japanese, that's why I practice daily.",
+  "fullAudio": "audio/conjunction5.wav",
+  "chunks": [
+    {
+      "audio": {
+        "me": "audio/conjunction5.wav",
+        "daughter": "audio/conjunction5.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
 ];
 
 
