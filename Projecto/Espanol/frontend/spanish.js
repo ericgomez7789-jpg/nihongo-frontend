@@ -3589,6 +3589,72 @@ me: "audio/spanish/silla.wav"
 
 
 
+
+
+
+
+
+
+{
+  "id": "l1-es-62",
+  "meaning": "I am going to eat food",
+  "level": 1,
+
+  "chunks": [
+    {
+      "romaji": "voy",
+      "hiragana": "voy",
+      "meaning": "I am going",
+      "audio": {
+        "daughter": "audio/spanish/voy.wav",
+        "me": "audio/spanish/voy.wav"
+      }
+    },
+
+    {
+      "romaji": "a",
+      "hiragana": "a",
+      "meaning": "to",
+      "audio": {
+        "daughter": "audio/spanish/a.wav",
+        "me": "audio/spanish/a.wav"
+      }
+    },
+
+    {
+      "romaji": "comer",
+      "hiragana": "comer",
+      "meaning": "to eat",
+      "audio": {
+        "daughter": "audio/spanish/comer.wav",
+        "me": "audio/spanish/comer.wav"
+      }
+    },
+
+    {
+      "romaji": "comida",
+      "hiragana": "comida",
+      "meaning": "food",
+      "audio": {
+        "daughter": "audio/spanish/comida.wav",
+        "me": "audio/spanish/comida.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 // ⭐ ADD THIS PATCH RIGHT HERE
@@ -8011,6 +8077,98 @@ const level3 = [
 ]
 },
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  "id": "es3-30",
+  "meaning": "Mi hija dejó muchos trastes en la cocina y hizo un cochinero, me enfadé. ¿Qué ocurre después?",
+  "level": 3,
+
+  "options": [
+    "Le pido que los lave y hablamos para evitar que vuelva a pasar",
+    "La cocina empieza a levitar mágicamente",
+    "Los trastes se limpian solos como por arte de magia",
+    "Me convierto en un gigante furioso"
+  ],
+
+  "optionsRomaji": [
+    "le_pido_que_los_lave_y_hablamos_para_evitar_que_vuelva_a_pasar",
+    "la_cocina_empieza_a_levitar_magicamente",
+    "los_trastes_se_limpian_solos_como_por_arte_de_magia",
+    "me_convierto_en_un_gigante_furioso"
+  ],
+
+  "optionsEN": [
+    "I ask her to wash them and we talk to prevent it from happening again",
+    "The kitchen begins to levitate magically",
+    "The dishes clean themselves as if by magic",
+    "I turn into an angry giant"
+  ],
+
+  "correct": "Le pido que los lave y hablamos para evitar que vuelva a pasar",
+
+  "fullAudio": {
+    "daughter": "audio/spanish/inference30.wav",
+    "me": "audio/spanish/inference30.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["spanish/audio/le_pido_que_los_lave_y_hablamos_para_evitar_que_vuelva_a_pasar.wav"],
+      ["spanish/audio/la_cocina_empieza_a_levitar_magicamente.wav"],
+      ["spanish/audio/los_trastes_se_limpian_solos_como_por_arte_de_magia.wav"],
+      ["spanish/audio/me_convierto_en_un_gigante_furioso.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["spanish/audio/le_pido_que_los_lave_y_hablamos_para_evitar_que_vuelva_a_pasar.wav"],
+    ["spanish/audio/la_cocina_empieza_a_levitar_magicamente.wav"],
+    ["spanish/audio/los_trastes_se_limpian_solos_como_por_arte_de_magia.wav"],
+    ["spanish/audio/me_convierto_en_un_gigante_furioso.wav"]
+  ],
+
+  "chunks": [
+    {
+      "spanish": "Mi hija dejó muchos trastes en la cocina",
+      "english": "My daughter left many dishes in the kitchen"
+    },
+    {
+      "spanish": "y hizo un cochinero",
+      "english": "and made a mess"
+    },
+    {
+      "spanish": "me enfadé",
+      "english": "I got upset"
+    },
+    {
+      "spanish": "¿qué ocurre después?",
+      "english": "what happens next?"
+    }
+  ]
+},
 
 
 
