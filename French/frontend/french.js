@@ -5447,6 +5447,39 @@ daughter: "audio/conjunction3.wav"
 
 
 
+
+
+
+
+
+
+
+
+
+
+{
+  "id": "l2_fr_006",
+  "sentence": "Même s'il pleuvait, il est sorti se promener.",
+  "conjunction": "Même si",
+  "meaning": "Even though it was raining, he went out for a walk.",
+  "fullAudio": "audio/conjunction6.wav",
+  "chunks": [
+    {
+      "audio": {
+        "me": "audio/conjunction6.wav",
+        "daughter": "audio/conjunction6.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
 ];
 
 
