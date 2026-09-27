@@ -37895,13 +37895,13 @@ const level8 = [
   level: 8,
 
   japanese: {
-    text: "ほら、だれかがおそったら、だげきをうけながすとか、うけとめるとか、首をちぢこめるとかして身をまもればいいんだよ。",
+    text: "ほら、だれかがおそったら、だげきをうけながすとか、うけとめるとか、首をちぢこめるとか、後ろに下がるとかして身をまもればいいんだよ。",
     audio: "audio/sentences/paraphrase5.wav"
   },
 
   paraphraseOptions: [
     {
-      text: "だれかにおそわれたら、こうげきをうけながしたり、うけとめたり、首をちぢこめたりして身をまもればいいんだよ。",
+      text: "だれかにおそわれたら、こうげきをうけながしたり、うけとめたり、首をちぢこめたり、後ろに下がったりして身をまもればいいんだよ。",
       correct: true
     },
     {
@@ -37926,10 +37926,11 @@ const level8 = [
     { hiragana: "だれかがおそったら", romaji: "dareka ga osottara", english: "if someone attacks you" },
     { hiragana: "だげきをうけながす", romaji: "dageki o ukenagasu", english: "deflect the blows" },
     { hiragana: "うけとめる", romaji: "uketomeru", english: "block them" },
-    { hiragana: "首をちぢこめる", romaji: "kubi o chijikomeru", english: "duck your head" }
+    { hiragana: "首をちぢこめる", romaji: "kubi o chijikomeru", english: "duck your head" },
+    { hiragana: "後ろに下がる", romaji: "ushiro ni sagaru", english: "step back" }
   ],
 
-  meaning: "See, if someone attacks you, you'd deflect, block, or duck your head to protect yourself."
+  meaning: "See, if someone attacks you, you'd deflect, block, duck your head, or step back to protect yourself."
 },
 
 
