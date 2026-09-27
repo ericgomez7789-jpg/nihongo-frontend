@@ -37895,13 +37895,13 @@ const level8 = [
   level: 8,
 
   japanese: {
-    text: "ほら、だれかがおそったら、だげきをうけながすとか、うけとめるとか、首をちぢこめるとか、後ろに下がるとかして身をまもればいいんだよ。",
+    text: "ほら、だれかがおそったら、さっとよけるとか、ひょいっとみをかわすとか、ぐっとくびをちぢこめるとか、ぱっとうしろにさがるとかしてみをまもればいいんだよ。",
     audio: "audio/sentences/paraphrase5.wav"
   },
 
   paraphraseOptions: [
     {
-      text: "だれかにおそわれたら、こうげきをうけながしたり、うけとめたり、首をちぢこめたり、後ろに下がったりして身をまもればいいんだよ。",
+      text: "だれかにおそわれたら、さっとよけたり、ひょいっとみをかわしたり、ぐっとくびをちぢこめたり、ぱっとうしろにさがったりしてみをまもればいいんだよ。",
       correct: true
     },
     {
@@ -37909,7 +37909,7 @@ const level8 = [
       correct: false
     },
     {
-      text: "こうげきじゃなくて、プレゼントをもらったらおれいをいうべきだよね。",
+      text: "こうげきじゃなくて、ぷれぜんとをもらったらおれいをいうべきだよね。",
       correct: false
     },
     {
@@ -37924,13 +37924,13 @@ const level8 = [
 
   summaryChunks: [
     { hiragana: "だれかがおそったら", romaji: "dareka ga osottara", english: "if someone attacks you" },
-    { hiragana: "だげきをうけながす", romaji: "dageki o ukenagasu", english: "deflect the blows" },
-    { hiragana: "うけとめる", romaji: "uketomeru", english: "block them" },
-    { hiragana: "首をちぢこめる", romaji: "kubi o chijikomeru", english: "duck your head" },
-    { hiragana: "後ろに下がる", romaji: "ushiro ni sagaru", english: "step back" }
+    { hiragana: "さっとよける", romaji: "satto yokeru", english: "quickly dodge" },
+    { hiragana: "ひょいっとみをかわす", romaji: "hyoitto mi o kawasu", english: "lightly avoid" },
+    { hiragana: "ぐっとくびをちぢこめる", romaji: "gutto kubi o chijikomeru", english: "duck your head sharply" },
+    { hiragana: "ぱっとうしろにさがる", romaji: "patto ushiro ni sagaru", english: "step back quickly" }
   ],
 
-  meaning: "See, if someone attacks you, you'd deflect, block, duck your head, or step back to protect yourself."
+  meaning: "See, if someone attacks you, you'd quickly dodge, lightly avoid, duck sharply, or step back fast to protect yourself."
 },
 
 
