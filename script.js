@@ -37888,19 +37888,18 @@ const level8 = [
 
 
 
-
 {
   id: "L8-005",
   level: 8,
 
   japanese: {
-    text: "ほら、だれかがおそったら、ひらりとうけながすとか、がっとうけとめるとか、さっとよけるとか、ひょいっとみをかわすとか、ぐっとくびをちぢこめるとか、ぱっとうしろにさがるとかしてみをまもればいいんだよ。",
+    text: "ほら、だれかがおそったら、かかとをあげて、くさむらをはうへびのようにぜんごさゆうにすべるようにして、けいかいなあしどりをたもってひらりとうけながすとか、がっとうけとめるとか、さっとよけるとか、ひょいっとみをかわすとか、ぐっとくびをちぢこめるとか、ぱっとうしろにさがるとかしてみをまもればいいんだよ。",
     audio: "audio/sentences/paraphrase5.wav"
   },
 
   paraphraseOptions: [
     {
-      text: "だれかにおそわれたら、ひらりとうけながしたり、がっとうけとめたり、さっとよけたり、ひょいっとみをかわしたり、ぐっとくびをちぢこめたり、ぱっとうしろにさがったりしてみをまもればいいんだよ。",
+      text: "だれかにおそわれたら、かかとをあげて、くさむらをはうへびのようにすばやくうごきながら、けいかいなあしどりをたもちつつ、ひらりとうけながしたり、がっとうけとめたり、さっとよけたり、ひょいっとみをかわしたり、ぐっとくびをちぢこめたり、ぱっとうしろにさがったりしてみをまもればいいんだよ。",
       correct: true
     },
     {
@@ -37922,16 +37921,19 @@ const level8 = [
   ],
 
   summaryChunks: [
-    { hiragana: "だれかがおそったら", romaji: "dareka ga osottara", english: "if someone attacks you" },
+    { hiragana: "かかとをあげて", romaji: "kakato o agete", english: "raise your heel" },
+    { hiragana: "くさむらをはうへびのように", romaji: "kusamura o hau hebi no you ni", english: "like a snake slithering through grass" },
+    { hiragana: "ぜんごさゆうにすべるようにして", romaji: "zengo sayuu ni suberu you ni shite", english: "sliding in all directions" },
+    { hiragana: "けいかいなあしどりをたもって", romaji: "keikai na ashidori o tamotte", english: "keeping light footwork" },
     { hiragana: "ひらりとうけながす", romaji: "hirari to ukenagasu", english: "parry lightly" },
     { hiragana: "がっとうけとめる", romaji: "gatto uketomeru", english: "block firmly" },
     { hiragana: "さっとよける", romaji: "satto yokeru", english: "quickly dodge" },
-    { hiragana: "ひょいっとみをかわす", romaji: "hyoitto mi o kawasu", english: "lightly slip aside" },
+    { hiragana: "ひょいっとみをかわす", romaji: "hyoitto mi o kawasu", english: "slip aside lightly" },
     { hiragana: "ぐっとくびをちぢこめる", romaji: "gutto kubi o chijikomeru", english: "duck sharply" },
     { hiragana: "ぱっとうしろにさがる", romaji: "patto ushiro ni sagaru", english: "step back quickly" }
   ],
 
-  meaning: "See, if someone attacks you, you'd parry lightly, block firmly, dodge fast, slip aside lightly, duck sharply, or step back quickly to protect yourself."
+  meaning: "See, if someone attacks you, you'd raise your heel, move like a snake sliding through grass, keep light footwork, and then parry lightly, block firmly, dodge fast, slip aside lightly, duck sharply, or step back quickly to protect yourself."
 },
 
 
