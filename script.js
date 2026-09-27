@@ -37877,30 +37877,75 @@ const level8 = [
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
   id: "L8-005",
   level: 8,
 
-  japanese: "ほら、だれかがおそったら、だげきをうけながしたり、よけたり、うけとめたりしたらいいなあ。",
-  audio: "audio/sentences/paraphrase5.wav",
+  japanese: {
+    text: "ほら、だれかがおそったら、だげきをうけながすとか、うけとめるとか、首をちぢこめるとかして身をまもればいいんだよ。",
+    audio: "audio/sentences/paraphrase5.wav"
+  },
 
   paraphraseOptions: [
-    { text: "だれかにおそわれたら、こうげきをうけながしたりよけたりしてみればいいんだよ。", correct: true },
-    { text: "だれかにあったら、まずあいさつをしてからはなしかけるといいよ。", correct: false },
-    { text: "こうげきじゃなくて、プレゼントをもらったらおれいをいうべきだよね。", correct: false },
-    { text: "だれかがおこっていても、なにもしないでそのままにしておけばいいよ。", correct: false },
-    { text: "こうげきされたら、にげずにじっとしているほうがあんぜんだよ。", correct: false }
+    {
+      text: "だれかにおそわれたら、こうげきをうけながしたり、うけとめたり、首をちぢこめたりして身をまもればいいんだよ。",
+      correct: true
+    },
+    {
+      text: "だれかにあったら、まずあいさつをしてからはなしかけるといいよ。",
+      correct: false
+    },
+    {
+      text: "こうげきじゃなくて、プレゼントをもらったらおれいをいうべきだよね。",
+      correct: false
+    },
+    {
+      text: "だれかがおこっていても、なにもしないでそのままにしておけばいいよ。",
+      correct: false
+    },
+    {
+      text: "こうげきされたら、にげずにじっとしているほうがあんぜんだよ。",
+      correct: false
+    }
   ],
 
   summaryChunks: [
     { hiragana: "だれかがおそったら", romaji: "dareka ga osottara", english: "if someone attacks you" },
-    { hiragana: "だげきをうけながしたり", romaji: "dageki o ukenagashitari", english: "deflect the blows" },
-    { hiragana: "よけたり", romaji: "yoketari", english: "dodge" },
-    { hiragana: "うけとめたり", romaji: "uketometari", english: "block them" }
+    { hiragana: "だげきをうけながす", romaji: "dageki o ukenagasu", english: "deflect the blows" },
+    { hiragana: "うけとめる", romaji: "uketomeru", english: "block them" },
+    { hiragana: "首をちぢこめる", romaji: "kubi o chijikomeru", english: "duck your head" }
   ],
 
-  meaning: "See, if someone attacks you, you'd deflect, dodge, or block the blows, right."
+  meaning: "See, if someone attacks you, you'd deflect, block, or duck your head to protect yourself."
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
