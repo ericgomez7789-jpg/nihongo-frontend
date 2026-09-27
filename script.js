@@ -37889,19 +37889,18 @@ const level8 = [
 
 
 
-
 {
   id: "L8-005",
   level: 8,
 
   japanese: {
-    text: "ほら、だれかがおそったら、さっとよけるとか、ひょいっとみをかわすとか、ぐっとくびをちぢこめるとか、ぱっとうしろにさがるとかしてみをまもればいいんだよ。",
+    text: "ほら、だれかがおそったら、ひらりとうけながすとか、がっとうけとめるとか、さっとよけるとか、ひょいっとみをかわすとか、ぐっとくびをちぢこめるとか、ぱっとうしろにさがるとかしてみをまもればいいんだよ。",
     audio: "audio/sentences/paraphrase5.wav"
   },
 
   paraphraseOptions: [
     {
-      text: "だれかにおそわれたら、さっとよけたり、ひょいっとみをかわしたり、ぐっとくびをちぢこめたり、ぱっとうしろにさがったりしてみをまもればいいんだよ。",
+      text: "だれかにおそわれたら、ひらりとうけながしたり、がっとうけとめたり、さっとよけたり、ひょいっとみをかわしたり、ぐっとくびをちぢこめたり、ぱっとうしろにさがったりしてみをまもればいいんだよ。",
       correct: true
     },
     {
@@ -37924,15 +37923,16 @@ const level8 = [
 
   summaryChunks: [
     { hiragana: "だれかがおそったら", romaji: "dareka ga osottara", english: "if someone attacks you" },
+    { hiragana: "ひらりとうけながす", romaji: "hirari to ukenagasu", english: "parry lightly" },
+    { hiragana: "がっとうけとめる", romaji: "gatto uketomeru", english: "block firmly" },
     { hiragana: "さっとよける", romaji: "satto yokeru", english: "quickly dodge" },
-    { hiragana: "ひょいっとみをかわす", romaji: "hyoitto mi o kawasu", english: "lightly avoid" },
-    { hiragana: "ぐっとくびをちぢこめる", romaji: "gutto kubi o chijikomeru", english: "duck your head sharply" },
+    { hiragana: "ひょいっとみをかわす", romaji: "hyoitto mi o kawasu", english: "lightly slip aside" },
+    { hiragana: "ぐっとくびをちぢこめる", romaji: "gutto kubi o chijikomeru", english: "duck sharply" },
     { hiragana: "ぱっとうしろにさがる", romaji: "patto ushiro ni sagaru", english: "step back quickly" }
   ],
 
-  meaning: "See, if someone attacks you, you'd quickly dodge, lightly avoid, duck sharply, or step back fast to protect yourself."
+  meaning: "See, if someone attacks you, you'd parry lightly, block firmly, dodge fast, slip aside lightly, duck sharply, or step back quickly to protect yourself."
 },
-
 
 
 
