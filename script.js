@@ -6777,6 +6777,92 @@ const sentences = [
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+{
+  "id": "l1-114",
+  "meaning": "the clouds completely cover the sun",
+  "level": 1,
+
+  "chunks": [
+    {
+      "romaji": "kumo",
+      "hiragana": "くも",
+      "meaning": "clouds",
+      "audio": {
+        "daughter": "audio/sentences/kumo.wav",
+        "me": "audio/sentences/kumo.wav"
+      }
+    },
+
+    {
+      "romaji": "ga",
+      "hiragana": "が",
+      "meaning": "subject marker",
+      "audio": {
+        "daughter": "audio/sentences/ga.wav",
+        "me": "audio/sentences/ga.wav"
+      }
+    },
+
+    {
+      "romaji": "taiyou",
+      "hiragana": "たいよう",
+      "meaning": "sun",
+      "audio": {
+        "daughter": "audio/sentences/taiyou.wav",
+        "me": "audio/sentences/taiyou.wav"
+      }
+    },
+
+    {
+      "romaji": "wo",
+      "hiragana": "を",
+      "meaning": "object marker",
+      "audio": {
+        "daughter": "audio/sentences/wo.wav",
+        "me": "audio/sentences/wo.wav"
+      }
+    },
+
+    {
+      "romaji": "suppori",
+      "hiragana": "すっぽり",
+      "meaning": "completely / snugly (adverb)",
+      "audio": {
+        "daughter": "audio/sentences/suppori.wav",
+        "me": "audio/sentences/suppori.wav"
+      }
+    },
+
+    {
+      "romaji": "oou",
+      "hiragana": "おおう",
+      "meaning": "to cover",
+      "audio": {
+        "daughter": "audio/sentences/oou.wav",
+        "me": "audio/sentences/oou.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
 ];
 
 // ⭐ ADD THIS PATCH RIGHT HERE
