@@ -3655,6 +3655,61 @@ me: "audio/spanish/silla.wav"
 
 
 
+
+
+
+
+
+
+{
+  "id": "l1-es-63",
+  "meaning": "to clean the kitchen",
+  "level": 1,
+
+  "chunks": [
+    {
+      "romaji": "limpiar",
+      "hiragana": "limpiar",
+      "meaning": "to clean",
+      "audio": {
+        "daughter": "audio/spanish/limpiar.wav",
+        "me": "audio/spanish/limpiar.wav"
+      }
+    },
+
+    {
+      "romaji": "la",
+      "hiragana": "la",
+      "meaning": "the (feminine)",
+      "audio": {
+        "daughter": "audio/spanish/la.wav",
+        "me": "audio/spanish/la.wav"
+      }
+    },
+
+    {
+      "romaji": "cocina",
+      "hiragana": "cocina",
+      "meaning": "kitchen",
+      "audio": {
+        "daughter": "audio/spanish/cocina.wav",
+        "me": "audio/spanish/cocina.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 // ⭐ ADD THIS PATCH RIGHT HERE
@@ -8162,6 +8217,94 @@ const level3 = [
     {
       "spanish": "me enfadé",
       "english": "I got upset"
+    },
+    {
+      "spanish": "¿qué ocurre después?",
+      "english": "what happens next?"
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  "id": "es3-31",
+  "meaning": "Durante una acampada, mientras yo entraba lentamente en el agua, mis dos hijas empezaron de repente a salpicarme con fuerza. ¿Qué ocurre después?",
+  "level": 3,
+
+  "options": [
+    "Me río, les sigo el juego y terminamos todos salpicándonos",
+    "El lago se convierte en una piscina de chocolate",
+    "Aparece un pez gigante que empieza a cantar",
+    "Me transformo en un monstruo marino enfadado"
+  ],
+
+  "optionsRomaji": [
+    "me_rio_les_sigo_el_juego_y_terminamos_todos_salpicanonos",
+    "el_lago_se_convierte_en_una_piscina_de_chocolate",
+    "aparece_un_pez_gigante_que_empieza_a_cantar",
+    "me_transformo_en_un_monstruo_marino_enfadado"
+  ],
+
+  "optionsEN": [
+    "I laugh, play along, and we all end up splashing each other",
+    "The lake turns into a chocolate pool",
+    "A giant fish appears and starts singing",
+    "I transform into an angry sea monster"
+  ],
+
+  "correct": "Me río, les sigo el juego y terminamos todos salpicándonos",
+
+  "fullAudio": {
+    "daughter": "audio/spanish/inference31.wav",
+    "me": "audio/spanish/inference31.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["spanish/audio/me_rio_les_sigo_el_juego_y_terminamos_todos_salpicanonos.wav"],
+      ["spanish/audio/el_lago_se_convierte_en_una_piscina_de_chocolate.wav"],
+      ["spanish/audio/aparece_un_pez_gigante_que_empieza_a_cantar.wav"],
+      ["spanish/audio/me_transformo_en_un_monstruo_marino_enfadado.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["spanish/audio/me_rio_les_sigo_el_juego_y_terminamos_todos_salpicanonos.wav"],
+    ["spanish/audio/el_lago_se_convierte_en_una_piscina_de_chocolate.wav"],
+    ["spanish/audio/aparece_un_pez_gigante_que_empieza_a_cantar.wav"],
+    ["spanish/audio/me_transformo_en_un_monstruo_marino_enfadado.wav"]
+  ],
+
+  "chunks": [
+    {
+      "spanish": "Durante una acampada",
+      "english": "During a camping trip"
+    },
+    {
+      "spanish": "mientras yo entraba lentamente en el agua",
+      "english": "while I was slowly entering the water"
+    },
+    {
+      "spanish": "mis dos hijas empezaron de repente a salpicarme con fuerza",
+      "english": "my two daughters suddenly started splashing me hard"
     },
     {
       "spanish": "¿qué ocurre después?",
