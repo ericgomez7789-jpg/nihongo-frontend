@@ -5480,6 +5480,46 @@ daughter: "audio/conjunction3.wav"
 
 
 
+
+
+
+
+
+
+
+{
+  "id": "l2_fr_007",
+  "sentence": "Bien qu'il fût fatigué, il continua à travailler.",
+  "conjunction": "Bien que",
+  "meaning": "Although he was tired, he continued working.",
+  "fullAudio": "audio/conjunction7.wav",
+  "chunks": [
+    {
+      "audio": {
+        "me": "audio/conjunction7.wav",
+        "daughter": "audio/conjunction7.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 
