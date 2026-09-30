@@ -3710,6 +3710,71 @@ me: "audio/spanish/silla.wav"
 
 
 
+
+
+
+
+
+
+
+{
+  "id": "l1-es-64",
+  "meaning": "to sweep the floor",
+  "level": 1,
+
+  "chunks": [
+    {
+      "romaji": "barrer",
+      "hiragana": "barrer",
+      "meaning": "to sweep",
+      "audio": {
+        "daughter": "audio/spanish/barrer.wav",
+        "me": "audio/spanish/barrer.wav"
+      }
+    },
+
+    {
+      "romaji": "el",
+      "hiragana": "el",
+      "meaning": "the (masculine)",
+      "audio": {
+        "daughter": "audio/spanish/el.wav",
+        "me": "audio/spanish/el.wav"
+      }
+    },
+
+    {
+      "romaji": "piso",
+      "hiragana": "piso",
+      "meaning": "floor",
+      "audio": {
+        "daughter": "audio/spanish/piso.wav",
+        "me": "audio/spanish/piso.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 // ⭐ ADD THIS PATCH RIGHT HERE
