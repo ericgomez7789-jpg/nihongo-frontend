@@ -6863,6 +6863,72 @@ const sentences = [
 
 
 
+
+
+
+
+
+
+
+
+
+
+{
+  "id": "l1-115",
+  "meaning": "to scoop with a ladle",
+  "level": 1,
+
+  "chunks": [
+    {
+      "romaji": "otama",
+      "hiragana": "おたま",
+      "meaning": "ladle",
+      "audio": {
+        "daughter": "audio/sentences/otama.wav",
+        "me": "audio/sentences/otama.wav"
+      }
+    },
+
+    {
+      "romaji": "de",
+      "hiragana": "で",
+      "meaning": "with / by means of",
+      "audio": {
+        "daughter": "audio/sentences/de.wav",
+        "me": "audio/sentences/de.wav"
+      }
+    },
+
+    {
+      "romaji": "sukuu",
+      "hiragana": "すくう",
+      "meaning": "to scoop",
+      "audio": {
+        "daughter": "audio/sentences/sukuu.wav",
+        "me": "audio/sentences/sukuu.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 // ⭐ ADD THIS PATCH RIGHT HERE

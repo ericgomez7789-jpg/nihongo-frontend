@@ -3775,6 +3775,63 @@ me: "audio/spanish/silla.wav"
 
 
 
+
+{
+  "id": "l1-es-65",
+  "meaning": "to water the plants",
+  "level": 1,
+
+  "chunks": [
+    {
+      "romaji": "regar",
+      "hiragana": "regar",
+      "meaning": "to water",
+      "audio": {
+        "daughter": "audio/spanish/regar.wav",
+        "me": "audio/spanish/regar.wav"
+      }
+    },
+
+    {
+      "romaji": "las",
+      "hiragana": "las",
+      "meaning": "the (feminine plural)",
+      "audio": {
+        "daughter": "audio/spanish/las.wav",
+        "me": "audio/spanish/las.wav"
+      }
+    },
+
+    {
+      "romaji": "plantas",
+      "hiragana": "plantas",
+      "meaning": "plants",
+      "audio": {
+        "daughter": "audio/spanish/plantas.wav",
+        "me": "audio/spanish/plantas.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 // ⭐ ADD THIS PATCH RIGHT HERE
