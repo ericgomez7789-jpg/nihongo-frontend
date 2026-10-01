@@ -6929,6 +6929,148 @@ const sentences = [
 
 
 
+{
+  "id": "l1-116",
+  "meaning": "please be careful of your surroundings",
+  "level": 1,
+
+  "chunks": [
+    {
+      "romaji": "shuui",
+      "hiragana": "しゅうい",
+      "meaning": "surroundings",
+      "audio": {
+        "daughter": "audio/sentences/shuui.wav",
+        "me": "audio/sentences/shuui.wav"
+      }
+    },
+
+    {
+      "romaji": "ni",
+      "hiragana": "に",
+      "meaning": "toward / about",
+      "audio": {
+        "daughter": "audio/sentences/ni.wav",
+        "me": "audio/sentences/ni.wav"
+      }
+    },
+
+    {
+      "romaji": "kiotsukete",
+      "hiragana": "きをつけて",
+      "meaning": "be careful",
+      "audio": {
+        "daughter": "audio/sentences/kiotsukete.wav",
+        "me": "audio/sentences/kiotsukete.wav"
+      }
+    },
+
+    {
+      "romaji": "kudasai",
+      "hiragana": "ください",
+      "meaning": "please",
+      "audio": {
+        "daughter": "audio/sentences/kudasai.wav",
+        "me": "audio/sentences/kudasai.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  "id": "l1-117",
+  "meaning": "to be considerate of the people around you",
+  "level": 1,
+
+  "chunks": [
+    {
+      "romaji": "shuui",
+      "hiragana": "しゅうい",
+      "meaning": "surroundings",
+      "audio": {
+        "daughter": "audio/sentences/shuui.wav",
+        "me": "audio/sentences/shuui.wav"
+      }
+    },
+
+    {
+      "romaji": "no",
+      "hiragana": "の",
+      "meaning": "of",
+      "audio": {
+        "daughter": "audio/sentences/no.wav",
+        "me": "audio/sentences/no.wav"
+      }
+    },
+
+    {
+      "romaji": "hito",
+      "hiragana": "ひと",
+      "meaning": "people",
+      "audio": {
+        "daughter": "audio/sentences/hito.wav",
+        "me": "audio/sentences/hito.wav"
+      }
+    },
+
+    {
+      "romaji": "wo",
+      "hiragana": "を",
+      "meaning": "object marker",
+      "audio": {
+        "daughter": "audio/sentences/wo.wav",
+        "me": "audio/sentences/wo.wav"
+      }
+    },
+
+    {
+      "romaji": "omoiyaru",
+      "hiragana": "おもいやる",
+      "meaning": "to be considerate / to care about",
+      "audio": {
+        "daughter": "audio/sentences/omoiyaru.wav",
+        "me": "audio/sentences/omoiyaru.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 // ⭐ ADD THIS PATCH RIGHT HERE
