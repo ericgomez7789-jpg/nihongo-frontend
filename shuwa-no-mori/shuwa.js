@@ -23,6 +23,18 @@ const shuwaAisatsu = [
 
 
 
+{
+  id: "konnichiwa",
+  audio: "audio/konnichiwa.wav",
+  choices: ["おはよう", "こんにちは", "こんばんは"],
+  answer: "こんにちは",
+
+  summary_hiragana:
+    "みぎての ひとさしゆび と なかゆび を め と め の あいだ に あてて、かお を とけい の ばん の よう に みたてます。そのあと、りょうほう の ひとさしゆび を むね の まえ で すこし はなして むかいあわせ、かるく まげて あいさつ の うごきを あらわします。これは どういう いみ に なりますか。",
+
+  summary_english:
+    "Place your right index and middle finger between your eyes to represent your face as a clock. Then hold both index fingers in front of your chest, slightly apart and facing each other, and curl them gently to show a greeting motion. What does this mean?"
+},
 
 
 
@@ -30,7 +42,25 @@ const shuwaAisatsu = [
 
 
 
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 
