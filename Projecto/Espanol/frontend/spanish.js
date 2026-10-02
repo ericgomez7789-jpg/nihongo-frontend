@@ -3832,6 +3832,82 @@ me: "audio/spanish/silla.wav"
 
 
 
+
+{
+  "id": "l1-es-66",
+  "meaning": "my daughter does her homework",
+  "level": 1,
+
+  "chunks": [
+    {
+      "romaji": "mi",
+      "hiragana": "mi",
+      "meaning": "my",
+      "audio": {
+        "daughter": "audio/spanish/mi.wav",
+        "me": "audio/spanish/mi.wav"
+      }
+    },
+
+    {
+      "romaji": "hija",
+      "hiragana": "hija",
+      "meaning": "daughter",
+      "audio": {
+        "daughter": "audio/spanish/hija.wav",
+        "me": "audio/spanish/hija.wav"
+      }
+    },
+
+    {
+      "romaji": "hace",
+      "hiragana": "hace",
+      "meaning": "does / makes",
+      "audio": {
+        "daughter": "audio/spanish/hace.wav",
+        "me": "audio/spanish/hace.wav"
+      }
+    },
+
+    {
+      "romaji": "su",
+      "hiragana": "su",
+      "meaning": "her",
+      "audio": {
+        "daughter": "audio/spanish/su.wav",
+        "me": "audio/spanish/su.wav"
+      }
+    },
+
+    {
+      "romaji": "tarea",
+      "hiragana": "tarea",
+      "meaning": "homework",
+      "audio": {
+        "daughter": "audio/spanish/tarea.wav",
+        "me": "audio/spanish/tarea.wav"
+      }
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 // ⭐ ADD THIS PATCH RIGHT HERE
@@ -8434,6 +8510,101 @@ const level3 = [
     }
   ]
 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  "id": "es3-32",
+  "meaning": "Mientras dormía al aire libre, la persona que estaba a mi lado se quedó despierta hasta tarde y dejó la música puesta, y me desesperé. ¿Qué ocurre después?",
+  "level": 3,
+
+  "options": [
+    "Le pido amablemente que apague la música y logro volver a dormir",
+    "La música empieza a controlar el clima y cae una lluvia de colores",
+    "Un búho gigante aparece y empieza a cantar ópera",
+    "Me convierto en un robot que necesita silencio absoluto"
+  ],
+
+  "optionsRomaji": [
+    "le_pido_amablemente_que_apague_la_musica_y_logro_volver_a_dormir",
+    "la_musica_empieza_a_controlar_el_clima_y_cae_una_lluvia_de_colores",
+    "un_buho_gigante_aparece_y_empieza_a_cantar_opera",
+    "me_convierto_en_un_robot_que_necesita_silencio_absoluto"
+  ],
+
+  "optionsEN": [
+    "I kindly ask them to turn off the music and manage to fall asleep again",
+    "The music starts controlling the weather and a rain of colors falls",
+    "A giant owl appears and starts singing opera",
+    "I turn into a robot that needs absolute silence"
+  ],
+
+  "correct": "Le pido amablemente que apague la música y logro volver a dormir",
+
+  "fullAudio": {
+    "daughter": "audio/spanish/inference32.wav",
+    "me": "audio/spanish/inference32.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["spanish/audio/le_pido_amablemente_que_apague_la_musica_y_logro_volver_a_dormir.wav"],
+      ["spanish/audio/la_musica_empieza_a_controlar_el_clima_y_cae_una_lluvia_de_colores.wav"],
+      ["spanish/audio/un_buho_gigante_aparece_y_empieza_a_cantar_opera.wav"],
+      ["spanish/audio/me_convierto_en_un_robot_que_necesita_silencio_absoluto.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["spanish/audio/le_pido_amablemente_que_apague_la_musica_y_logro_volver_a_dormir.wav"],
+    ["spanish/audio/la_musica_empieza_a_controlar_el_clima_y_cae_una_lluvia_de_colores.wav"],
+    ["spanish/audio/un_buho_gigante_aparece_y_empieza_a_cantar_opera.wav"],
+    ["spanish/audio/me_convierto_en_un_robot_que_necesita_silencio_absoluto.wav"]
+  ],
+
+  "chunks": [
+    {
+      "spanish": "Mientras dormía al aire libre",
+      "english": "While I was sleeping outdoors"
+    },
+    {
+      "spanish": "la persona que estaba a mi lado se quedó despierta hasta tarde",
+      "english": "the person next to me stayed awake until late"
+    },
+    {
+      "spanish": "y dejó la música puesta",
+      "english": "and left the music on"
+    },
+    {
+      "spanish": "y me desesperé",
+      "english": "and I became frustrated"
+    },
+    {
+      "spanish": "¿qué ocurre después?",
+      "english": "what happens next?"
+    }
+  ]
+},
+
+
+
+
 
 
 

@@ -6,12 +6,33 @@ const shuwaAisatsu = [
     answer: "おはよう",
 
     summary_hiragana:
-      "てをぎゅっとにぎってちいさなまくらをつくり、こめかみのよこからすとんとさげます。あさにめがさめるかんじをあらわしていて、「おはよう」といういみになります。",
+      "てをぎゅっとにぎってちいさなまくらをつくり、こめかみのよこからすとんとさげます。あさにめがさめるかんじをあらわしています。これはどういういみになりますか。",
 
     summary_english:
-      "Make a small 'pillow' with your fist and lower it from the temple. This gesture represents morning or waking up, meaning 'good morning.'"
-  }
+      "Make a small 'pillow' with your fist and lower it from the temple. This gesture represents waking up in the morning. What does this mean?"
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 ];
+
 
 
 
