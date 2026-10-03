@@ -54,6 +54,36 @@ const shuwaAisatsu = [
 
 
 
+{
+  id: "konbanwa",
+  audio: "audio/konbanwa.wav",
+  choices: ["おはよう", "こんにちは", "こんばんは"],
+  answer: "こんばんは",
+
+  summary_hiragana:
+    "よるの ふんいき を あらわす よう に、て で そっと カーテン を しめる イメージ を みたてます。その あと、むね の まえ で て を かすか に はなして むかいあわせ、りょうほう の ひとさしゆび を かるく まげて、やわらかい あいさつ の きもち を しめします。この いちれん の しぐさ が、どういう いみ に なりますか。",
+
+  summary_english:
+    "You imagine gently closing a curtain to express the feeling of evening. Then you slightly separate your hands in front of your chest, facing each other, bend both index fingers softly, and show a gentle sense of greeting. What does this sequence of movements mean?"
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

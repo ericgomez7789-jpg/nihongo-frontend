@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>手話の山 — こんばんは</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      background-color: #0d0d0d;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+
+    .shuwa-screen {
+      display: none;
+      padding: 40px 0;
+      text-align: center;
+    }
+
+    .shuwa-screen:not(.hidden) {
+      display: block;
+    }
+
+    audio {
+      width: 90%;
+      max-width: 600px;
+      margin-bottom: 40px;
+    }
+
+    .next-btn, .mcqBtn, #shuwaReplayBtn, #shuwaNextBtn {
+      padding: 12px 24px;
+      background: #4ea3ff;
+      color: #fff;
+      border-radius: 6px;
+      border: none;
+      font-size: 18px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    .next-btn:hover,
+    .mcqBtn:hover,
+    #shuwaReplayBtn:hover,
+    #shuwaNextBtn:hover {
+      background: #7fd1ff;
+    }
+
+    #shuwaMcqContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      width: 90%;
+      max-width: 500px;
+      margin: 40px auto;
+    }
+
+    .mcqBtn.correct {
+      background: #4caf50;
+    }
+
+    .mcqBtn.wrong {
+      background: #b71c1c;
+    }
+
+    #shuwaSummaryTextHiragana,
+    #shuwaSummaryTextEnglish {
+      width: 90%;
+      max-width: 600px;
+      background: #1a1a1a;
+      padding: 20px;
+      border-radius: 10px;
+      line-height: 1.6;
+      font-size: 18px;
+      margin: 0 auto 20px auto;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ⭐ SCREEN 1 — AUDIO ONLY -->
+  <div class="shuwa-screen" id="shuwaScreen1">
+    <audio controls id="shuwaAudioPlayer">
+      <source src="audio/konbanwa.wav" type="audio/wav">
+    </audio>
+
+    <button class="next-btn" onclick="SHUWA.screen2()">Next ▶</button>
+  </div>
+
+  <!-- ⭐ SCREEN 2 — MCQ -->
+  <div class="shuwa-screen hidden" id="shuwaScreen2">
+    <button id="shuwaReplayBtn">▶ Replay Audio</button>
+    <div id="shuwaMcqContainer"></div>
+  </div>
+
+  <!-- ⭐ SCREEN 3 — SUMMARY -->
+  <div class="shuwa-screen hidden" id="shuwaScreen3">
+    <div id="shuwaSummaryTextHiragana">
+      よるのふんいきをあらわすように、てでそっとカーテンをしめるイメージをみたてます。  
+      そのあと、むねのまえでてをかすかにはなしてむかいあわせ、  
+      りょうほうのひとさしゆびをかるくまげて、やわらかいあいさつのきもちをしめします。  
+      このいちれんのしぐさが、どういういみになりますか。
+    </div>
+
+    <div id="shuwaSummaryTextEnglish">
+      You imagine gently closing a curtain to express the feeling of evening.  
+      Then you slightly separate your hands in front of your chest, facing each other,  
+      bend both index fingers softly, and show a gentle sense of greeting.  
+      What meaning does this sequence of movements express?
+    </div>
+
+    <button id="shuwaNextBtn">Next ▶</button>
+  </div>
+
+  <!-- ⭐ SHUWA ENGINE -->
+  <script src="shuwa.js"></script>
+  <script>
+    SHUWA.start();
+  </script>
+
+</body>
+</html>
