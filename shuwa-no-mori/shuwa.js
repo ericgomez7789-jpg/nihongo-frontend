@@ -86,6 +86,35 @@ const shuwaAisatsu = [
 
 
 
+{
+  id: "oyasuminasai",
+  audio: "audio/oyasuminasai.wav",
+  choices: ["おはよう", "こんにちは", "おやすみなさい"],
+  answer: "おやすみなさい",
+
+  summary_hiragana:
+    "こぶしで まくら の イメージ を みたてて、こめかみ の あたり に かるく そえます。ねむり に つく まえ の しずかな ようす を しめす うごき で、この いちれん の しぐさ が、どういう いみ に なりますか。",
+
+  summary_english:
+    "You form the image of a pillow with your fist and gently place it near your temple. This movement shows the quiet feeling before falling asleep. What does this sequence of gestures mean?"
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
