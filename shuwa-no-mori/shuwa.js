@@ -128,9 +128,37 @@ const shuwaAisatsu = [
 
   summary_english:
     "As if troubled, you pinch your nose lightly with the right index and middle finger, then gently extend your right hand forward as if making a hand‑blade motion, and finally bend your waist slightly to show a sincere apology. What does this sequence of gestures mean?"
-}
+},
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "arigatou",
+  audio: "audio/arigatou.wav",
+  choices: ["ありがとう", "ごめんなさい", "こんばんは"],
+  answer: "ありがとう",
+
+  summary_hiragana:
+    "まるで しゅとう で そっと うつ ような きどう に みぎて を みたて、みぎて で かるく ひだりて の こう に ふれ、そのまま じょうたい を ほんの すこし まえ へ かたむけて かんしゃ の きもち を しめします。この いちれん の しぐさ が、どういう いみ に なりますか。",
+
+  summary_english:
+    "You treat your right hand as if it were moving along a gentle hand‑blade path, touch the back of your left hand lightly with your right hand, and then lean your upper body forward just a little to express gratitude. What does this sequence of gestures mean?"
+},
 
 
 
