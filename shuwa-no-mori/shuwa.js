@@ -117,6 +117,33 @@ const shuwaAisatsu = [
 
 
 
+{
+  id: "gomennasai",
+  audio: "audio/gomennasai.wav",
+  choices: ["ごめんなさい", "ありがとう", "こんにちは"],
+  answer: "ごめんなさい",
+
+  summary_hiragana:
+    "なやんで シワ が よる ように みぎ の ひとさしゆび と なかゆび で はな を つまみ、まるで しゅとう で うつ ように みぎて を まえ に そっと さしだし、さらに かすか に こし を かがめて あやまる きもち を しめします。この いちれん の しぐさ が、どういう いみ に なりますか。",
+
+  summary_english:
+    "As if troubled, you pinch your nose lightly with the right index and middle finger, then gently extend your right hand forward as if making a hand‑blade motion, and finally bend your waist slightly to show a sincere apology. What does this sequence of gestures mean?"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
