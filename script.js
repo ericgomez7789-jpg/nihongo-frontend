@@ -287,6 +287,7 @@ window.GamepadControls.init();
 
 
 
+
 // -----------------------------------------
 // LEVEL 0 ROOT OBJECT (must come first)
 // -----------------------------------------
@@ -48035,6 +48036,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // TEST MODE FLAG
   // ---------------------------------------------------------
   const TESTING_MODE = false; // set to false for production
+window.currentLevel = 0;
+window.currentScreen = "screen0";
 
 
   // ---------------------------------------------------------
