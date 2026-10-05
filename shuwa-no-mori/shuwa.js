@@ -78,7 +78,42 @@ const shuwaAisatsu = [
       "まるであいてのかたをてのひらでたたくしぐさをなぞるように、みぎてでこぶしをつくり、ぎゅっとにぎったひだりてのこうをぽんぽんとたたきます。このいちれんのしぐさが、どういういみになりますか。",
     summary_english:
       "As if tracing the gesture of patting the other person's shoulder with your palm, you form a fist with your right hand and tap the back of your tightly closed left hand in a soft pon‑pon rhythm. What does this sequence of gestures mean?"
-  }
+  },
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "sayounara",
+  audio: "audio/sayounara.wav",
+  choices: ["さようなら", "ありがとう", "こんにちは"],
+  answer: "さようなら",
+
+  summary_hiragana:
+    "みぎてのひらをあいてにむけてみせ、かるくさゆうにふることで、あいてにわかれをつげるしぐさをあらわします。このいちれんのしぐさが、どういういみになりますか。",
+
+  summary_english:
+    "You show your right palm toward the other person and gently move it side to side, expressing a friendly parting gesture. What does this sequence of movements mean?"
+},
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 /* ==========================================================
