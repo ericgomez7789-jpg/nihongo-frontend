@@ -114,6 +114,36 @@ const shuwaAisatsu = [
 
 
 
+
+
+
+{
+  id: "matane",
+  audio: "audio/matane.wav",
+  choices: ["またね", "ありがとう", "ごめんなさい"],
+  answer: "またね",
+
+  summary_hiragana:
+    "みぎて の ひとさしゆび と なかゆび を さしだす ことで、ゆび で ちいさく「また」らしい かたち を つくり、そのまま むね の まえ で、はじめ に ひだりて が みぎて の まえ に おかれ、りょうて の ひとさしゆび を はなして むかいあわせ に し、くいっ と まえ に つなげる ことで、あいて に「また あおう」 という きもち を つたえる しぐさ を あらわします。この いちれん の しぐさ が、どういう いみ に なりますか。",
+
+  summary_english:
+    "By extending the right index and middle finger to form a small shape that suggests 'again,' then placing the left hand before the right in front of the chest, opening both index fingers and bringing them to face each other, you give a small kui‑t forward linking motion. This expresses the feeling of 'let’s meet again.' What does this sequence of gestures represent?"
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 /* ==========================================================
