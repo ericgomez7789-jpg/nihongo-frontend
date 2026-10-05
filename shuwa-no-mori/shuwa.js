@@ -1,221 +1,89 @@
+/* ==========================================================
+   SHUWA — DATASET (Aisatsu)
+   ========================================================== */
+
 const shuwaAisatsu = [
   {
     id: "ohayou",
     audio: "audio/ohayou.wav",
     choices: ["おはよう", "こんにちは", "こんばんは"],
     answer: "おはよう",
-
     summary_hiragana:
       "てをぎゅっとにぎってちいさなまくらをつくり、こめかみのよこからすとんとさげます。あさにめがさめるかんじをあらわしています。これはどういういみになりますか。",
-
     summary_english:
       "Make a small 'pillow' with your fist and lower it from the temple. This gesture represents waking up in the morning. What does this mean?"
   },
 
-
-
-
-
-
-
-
-
-
-
-
-{
-  id: "konnichiwa",
-  audio: "audio/konnichiwa.wav",
-  choices: ["おはよう", "こんにちは", "こんばんは"],
-  answer: "こんにちは",
-
-  summary_hiragana:
-    "みぎての ひとさしゆび と なかゆび を め と め の あいだ に あてて、かお を とけい の ばん の よう に みたてます。そのあと、りょうほう の ひとさしゆび を むね の まえ で すこし はなして むかいあわせ、かるく まげて あいさつ の うごきを あらわします。これは どういう いみ に なりますか。",
-
-  summary_english:
-    "Place your right index and middle finger between your eyes to represent your face as a clock. Then hold both index fingers in front of your chest, slightly apart and facing each other, and curl them gently to show a greeting motion. What does this mean?"
-},
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{
-  id: "konbanwa",
-  audio: "audio/konbanwa.wav",
-  choices: ["おはよう", "こんにちは", "こんばんは"],
-  answer: "こんばんは",
-
-  summary_hiragana:
-    "よるの ふんいき を あらわす よう に、て で そっと カーテン を しめる イメージ を みたてます。その あと、むね の まえ で て を かすか に はなして むかいあわせ、りょうほう の ひとさしゆび を かるく まげて、やわらかい あいさつ の きもち を しめします。この いちれん の しぐさ が、どういう いみ に なりますか。",
-
-  summary_english:
-    "You imagine gently closing a curtain to express the feeling of evening. Then you slightly separate your hands in front of your chest, facing each other, bend both index fingers softly, and show a gentle sense of greeting. What does this sequence of movements mean?"
-},
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{
-  id: "oyasuminasai",
-  audio: "audio/oyasuminasai.wav",
-  choices: ["おはよう", "こんにちは", "おやすみなさい"],
-  answer: "おやすみなさい",
-
-  summary_hiragana:
-    "こぶしで まくら の イメージ を みたてて、こめかみ の あたり に かるく そえます。ねむり に つく まえ の しずかな ようす を しめす うごき で、この いちれん の しぐさ が、どういう いみ に なりますか。",
-
-  summary_english:
-    "You form the image of a pillow with your fist and gently place it near your temple. This movement shows the quiet feeling before falling asleep. What does this sequence of gestures mean?"
-},
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{
-  id: "gomennasai",
-  audio: "audio/gomennasai.wav",
-  choices: ["ごめんなさい", "ありがとう", "こんにちは"],
-  answer: "ごめんなさい",
-
-  summary_hiragana:
-    "なやんで シワ が よる ように みぎ の ひとさしゆび と なかゆび で はな を つまみ、まるで しゅとう で うつ ように みぎて を まえ に そっと さしだし、さらに かすか に こし を かがめて あやまる きもち を しめします。この いちれん の しぐさ が、どういう いみ に なりますか。",
-
-  summary_english:
-    "As if troubled, you pinch your nose lightly with the right index and middle finger, then gently extend your right hand forward as if making a hand‑blade motion, and finally bend your waist slightly to show a sincere apology. What does this sequence of gestures mean?"
-},
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{
-  id: "arigatou",
-  audio: "audio/arigatou.wav",
-  choices: ["ありがとう", "ごめんなさい", "こんばんは"],
-  answer: "ありがとう",
-
-  summary_hiragana:
-    "まるで しゅとう で そっと うつ ような きどう に みぎて を みたて、みぎて で かるく ひだりて の こう に ふれ、そのまま じょうたい を ほんの すこし まえ へ かたむけて かんしゃ の きもち を しめします。この いちれん の しぐさ が、どういう いみ に なりますか。",
-
-  summary_english:
-    "You treat your right hand as if it were moving along a gentle hand‑blade path, touch the back of your left hand lightly with your right hand, and then lean your upper body forward just a little to express gratitude. What does this sequence of gestures mean?"
-},
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{
-  id: "otsukaresama",
-  audio: "audio/otsukaresama.wav",
-  choices: ["おつかれさま", "ありがとう", "こんにちは"],
-  answer: "おつかれさま",
-
-  summary_hiragana:
-    "まるで あいて の かた を てのひら で たたく しぐさ を なぞる ように、みぎて で こぶし を つくり、ぎゅっと にぎった ひだりて の こう を ぽんぽん と たたきます。この いちれん の しぐさ が、どういう いみ に なりますか。",
-
-  summary_english:
-    "As if tracing the gesture of patting the other person's shoulder with your palm, you form a fist with your right hand and tap the back of your tightly closed left hand in a soft pon‑pon rhythm. What does this sequence of gestures mean?"
-},
-
-
-
-
-
-
-
-
-
-
+  {
+    id: "konnichiwa",
+    audio: "audio/konnichiwa.wav",
+    choices: ["おはよう", "こんにちは", "こんばんは"],
+    answer: "こんにちは",
+    summary_hiragana:
+      "みぎてのひとさしゆびとなかゆびをめとめのあいだにあてて、かおをとけいのばんのようにみたてます。そのあと、りょうほうのひとさしゆびをむねのまえですこしはなしてむかいあわせ、かるくまげてあいさつのうごきをあらわします。これはどういういみになりますか。",
+    summary_english:
+      "Place your right index and middle finger between your eyes to represent your face as a clock. Then hold both index fingers in front of your chest, slightly apart and facing each other, and curl them gently to show a greeting motion. What does this mean?"
+  },
+
+  {
+    id: "konbanwa",
+    audio: "audio/konbanwa.wav",
+    choices: ["おはよう", "こんにちは", "こんばんは"],
+    answer: "こんばんは",
+    summary_hiragana:
+      "よるのふんいきをあらわすように、てでそっとカーテンをしめるイメージをみたてます。そのあと、むねのまえでてをかすかにはなしてむかいあわせ、りょうほうのひとさしゆびをかるくまげて、やわらかいあいさつのきもちをしめします。このいちれんのしぐさが、どういういみになりますか。",
+    summary_english:
+      "You imagine gently closing a curtain to express the feeling of evening. Then you slightly separate your hands in front of your chest, facing each other, bend both index fingers softly, and show a gentle sense of greeting. What does this sequence of movements mean?"
+  },
+
+  {
+    id: "oyasuminasai",
+    audio: "audio/oyasuminasai.wav",
+    choices: ["おはよう", "こんにちは", "おやすみなさい"],
+    answer: "おやすみなさい",
+    summary_hiragana:
+      "こぶしでまくらのイメージをみたてて、こめかみのあたりにかるくそえます。ねむりにつくまえのしずかなようすをしめすうごきで、このいちれんのしぐさが、どういういみになりますか。",
+    summary_english:
+      "You form the image of a pillow with your fist and gently place it near your temple. This movement shows the quiet feeling before falling asleep. What does this sequence of gestures mean?"
+  },
+
+  {
+    id: "gomennasai",
+    audio: "audio/gomennasai.wav",
+    choices: ["ごめんなさい", "ありがとう", "こんにちは"],
+    answer: "ごめんなさい",
+    summary_hiragana:
+      "なやんでシワがよるようにみぎのひとさしゆびとなかゆびではなをつまみ、まるでしゅとうでうつようにみぎてをまえにそっとさしだし、さらにかすかにこしをかがめてあやまるきもちをしめします。このいちれんのしぐさが、どういういみになりますか。",
+    summary_english:
+      "As if troubled, you pinch your nose lightly with the right index and middle finger, then gently extend your right hand forward as if making a hand‑blade motion, and finally bend your waist slightly to show a sincere apology. What does this sequence of gestures mean?"
+  },
+
+  {
+    id: "arigatou",
+    audio: "audio/arigatou.wav",
+    choices: ["ありがとう", "ごめんなさい", "こんばんは"],
+    answer: "ありがとう",
+    summary_hiragana:
+      "まるでしゅとうでそっとうつようなきどうにみぎてをみたて、みぎてでかるくひだりてのこうにふれ、そのままじょうたいをほんのすこしまえへかたむけてかんしゃのきもちをしめします。このいちれんのしぐさが、どういういみになりますか。",
+    summary_english:
+      "You treat your right hand as if it were moving along a gentle hand‑blade path, touch the back of your left hand lightly with your right hand, and then lean your upper body forward just a little to express gratitude. What does this sequence of gestures mean?"
+  },
+
+  {
+    id: "otsukaresama",
+    audio: "audio/otsukaresama.wav",
+    choices: ["おつかれさま", "ありがとう", "こんにちは"],
+    answer: "おつかれさま",
+    summary_hiragana:
+      "まるであいてのかたをてのひらでたたくしぐさをなぞるように、みぎてでこぶしをつくり、ぎゅっとにぎったひだりてのこうをぽんぽんとたたきます。このいちれんのしぐさが、どういういみになりますか。",
+    summary_english:
+      "As if tracing the gesture of patting the other person's shoulder with your palm, you form a fist with your right hand and tap the back of your tightly closed left hand in a soft pon‑pon rhythm. What does this sequence of gestures mean?"
+  }
 ];
 
-
-
-
-
-
-
-
-
-
-// ==========================================================
-//  SHUWA — CORE STATE
-// ==========================================================
+/* ==========================================================
+   SHUWA — CORE ENGINE (mobile‑safe, no auto‑advance)
+   ========================================================== */
 
 const SHUWA = {
   round: 0,
@@ -223,7 +91,7 @@ const SHUWA = {
   mcqLocked: false,
   activeScreen: null,
 
-  dataset: shuwaAisatsu,   // your aisatsu dataset
+  dataset: shuwaAisatsu,
   currentItem: null,
 
   audio: {
@@ -233,9 +101,9 @@ const SHUWA = {
   }
 };
 
-// ==========================================================
-//  AUDIO GUARDS + STOP
-// ==========================================================
+/* ==========================================================
+   AUDIO CONTROL
+   ========================================================== */
 
 SHUWA.stopAllAudio = function () {
   SHUWA.audio.cancelToken.cancel = true;
@@ -255,7 +123,7 @@ SHUWA.generationGuards = function () {
   SHUWA.audio.current = null;
 };
 
-SHUWA.playAudio = function (file, callback) {
+SHUWA.playAudio = function (file) {
   if (!file) return;
 
   SHUWA.stopAllAudio();
@@ -265,34 +133,16 @@ SHUWA.playAudio = function (file, callback) {
   SHUWA.audio.current = audio;
   audio.src = file;
 
-  audio.onended = () => {
-    if (typeof callback === "function") callback();
-  };
-
-  audio.onerror = () => {
-    if (typeof callback === "function") callback();
-  };
-
   audio.play().catch(() => {
-    if (typeof callback === "function") callback();
+    // Mobile autoplay blocked — do nothing
   });
 };
 
-// ==========================================================
-//  MCQ RAILGUARDS
-// ==========================================================
+/* ==========================================================
+   SCREEN SWITCHER
+   ========================================================== */
 
-SHUWA.mcqRailguards = function () {
-  if (SHUWA.mcqLocked) return true;
-  SHUWA.mcqLocked = true;
-  return false;
-};
-
-// ==========================================================
-//  SCREEN SWITCHER
-// ==========================================================
-
-SHUWA.show = function(id) {
+SHUWA.show = function (id) {
   document.querySelectorAll(".shuwa-screen")
     .forEach(el => el.classList.remove("show"));
 
@@ -300,10 +150,9 @@ SHUWA.show = function(id) {
   SHUWA.activeScreen = id;
 };
 
-
-// ==========================================================
-//  RANDOM PICK
-// ==========================================================
+/* ==========================================================
+   RANDOM PICK
+   ========================================================== */
 
 SHUWA.pickRandom = function () {
   const arr = SHUWA.dataset;
@@ -312,9 +161,9 @@ SHUWA.pickRandom = function () {
   return item;
 };
 
-// ==========================================================
-//  START + ROUND
-// ==========================================================
+/* ==========================================================
+   START + ROUND
+   ========================================================== */
 
 SHUWA.start = function () {
   SHUWA.round = 0;
@@ -338,27 +187,23 @@ SHUWA.startRound = function () {
   SHUWA.screen1();
 };
 
-// ==========================================================
-//  SCREEN 1 — AUDIO ONLY
-// ==========================================================
+/* ==========================================================
+   SCREEN 1 — AUDIO ONLY (NO AUTO‑ADVANCE)
+   ========================================================== */
 
 SHUWA.screen1 = function () {
   SHUWA.show("shuwaScreen1");
 
   const item = SHUWA.pickRandom();
-  if (!item.audio) {
-    SHUWA.screen2();
-    return;
-  }
+  if (!item.audio) return;
 
-  SHUWA.playAudio(item.audio, () => {
-    SHUWA.screen2();
-  });
+  // Play audio but DO NOT auto‑advance
+  SHUWA.playAudio(item.audio);
 };
 
-// ==========================================================
-//  SCREEN 2 — MCQ
-// ==========================================================
+/* ==========================================================
+   SCREEN 2 — MCQ
+   ========================================================== */
 
 SHUWA.screen2 = function () {
   SHUWA.show("shuwaScreen2");
@@ -392,12 +237,14 @@ SHUWA.screen2 = function () {
   }
 };
 
-// ==========================================================
-//  HANDLE MCQ
-// ==========================================================
+/* ==========================================================
+   HANDLE MCQ
+   ========================================================== */
 
 SHUWA.handleMCQ = function (choice) {
-  if (SHUWA.mcqRailguards()) return;
+  if (SHUWA.mcqLocked) return;
+SHUWA.mcqLocked = true;
+
 
   const item = SHUWA.currentItem;
   const correct = item.answer;
@@ -414,14 +261,13 @@ SHUWA.handleMCQ = function (choice) {
   SHUWA.round++;
 
   setTimeout(() => {
-    if (SHUWA.activeScreen !== "shuwaScreen2") return;
     SHUWA.screen3();
   }, 900);
 };
 
-// ==========================================================
-//  SCREEN 3 — SUMMARY
-// ==========================================================
+/* ==========================================================
+   SCREEN 3 — SUMMARY
+   ========================================================== */
 
 SHUWA.screen3 = function () {
   SHUWA.show("shuwaScreen3");
@@ -430,11 +276,9 @@ SHUWA.screen3 = function () {
 
   const hiraBox = document.getElementById("shuwaSummaryTextHiragana");
   const engBox = document.getElementById("shuwaSummaryTextEnglish");
-  const imgBox = document.getElementById("shuwaSummaryImg");
 
   if (hiraBox) hiraBox.textContent = item.summary_hiragana;
   if (engBox) engBox.textContent = item.summary_english;
-  if (imgBox) imgBox.src = item.image;
 
   const nextBtn = document.getElementById("shuwaNextBtn");
   if (nextBtn) {
@@ -443,4 +287,3 @@ SHUWA.screen3 = function () {
     };
   }
 };
-
