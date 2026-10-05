@@ -144,6 +144,37 @@ const shuwaAisatsu = [
 
 
 
+
+
+
+
+
+
+{
+  id: "hajimemashite",
+  audio: "audio/hajimemashite.wav",
+  choices: ["はじめまして", "こんにちは", "ありがとう"],
+  answer: "はじめまして",
+
+  summary_hiragana:
+    "ふせた まま の みぎて の ひら で すべて の ゆび を のばして、みぎて を あげながら ひとさしゆび いがい の ゆび を ぎゅっと にぎり、さらに むね の まえ に ひだりて を みぎて の まえ に おいて、りょうほう の ひとさしゆび を はなして むかいあわせ に し、そのうえ ひとさしゆび を つなげます。この いちれん の しぐさ は どういう いみ に なりますか。",
+
+  summary_english:
+    "With the right hand held palm‑down and all fingers extended, you raise the hand and then close every finger except the index finger to show 'first time.' Placing the left hand in front of the right at chest level, you open both index fingers so they face each other, then connect them. What does this sequence of gestures represent?"
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 /* ==========================================================
