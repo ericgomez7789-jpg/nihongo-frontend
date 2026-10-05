@@ -8621,6 +8621,93 @@ const level3 = [
 
 
 
+
+{
+  "id": "es3-33",
+  "meaning": "Mientras dormía al aire libre, mucha gente a mi alrededor mantenía sus fogatas encendidas, y me sentí a gusto — ¿qué ocurre después?",
+  "level": 3,
+
+  "options": [
+    "Me acerco a una de las fogatas y compartimos historias tranquilamente",
+    "Las fogatas empiezan a flotar y forman figuras luminosas en el cielo",
+    "Un espíritu del bosque surge del fuego y me ofrece un viaje mágico",
+    "Las llamas se convierten en pequeños dragones que dan vueltas alrededor"
+  ],
+
+  "optionsRomaji": [
+    "me_acerco_a_una_de_las_fogatas_y_compartimos_historias_tranquilamente",
+    "las_fogatas_empiezan_a_flotar_y_forman_figuras_luminosas_en_el_cielo",
+    "un_espiritu_del_bosque_surge_del_fuego_y_me_ofrece_un_viaje_magico",
+    "las_llamas_se_convierten_en_pequenos_dragones_que_dan_vueltas_alrededor"
+  ],
+
+  "optionsEN": [
+    "I approach one of the campfires and we calmly share stories",
+    "The campfires begin to float and form luminous shapes in the sky",
+    "A forest spirit emerges from the fire and offers me a magical journey",
+    "The flames turn into small dragons that circle around"
+  ],
+
+  "correct": "Me acerco a una de las fogatas y compartimos historias tranquilamente",
+
+  "fullAudio": {
+    "daughter": "audio/spanish/inference33.wav",
+    "me": "audio/spanish/inference33.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["spanish/audio/me_acerco_a_una_de_las_fogatas_y_compartimos_historias_tranquilamente.wav"],
+      ["spanish/audio/las_fogatas_empiezan_a_flotar_y_forman_figuras_luminosas_en_el_cielo.wav"],
+      ["spanish/audio/un_espiritu_del_bosque_surge_del_fuego_y_me_ofrece_un_viaje_magico.wav"],
+      ["spanish/audio/las_llamas_se_convierten_en_pequenos_dragones_que_dan_vueltas_alrededor.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["spanish/audio/me_acerco_a_una_de_las_fogatas_y_compartimos_historias_tranquilamente.wav"],
+    ["spanish/audio/las_fogatas_empiezan_a_flotar_y_forman_figuras_luminosas_en_el_cielo.wav"],
+    ["spanish/audio/un_espiritu_del_bosque_surge_del_fuego_y_me_ofrece_un_viaje_magico.wav"],
+    ["spanish/audio/las_llamas_se_convierten_en_pequenos_dragones_que_dan_vueltas_alrededor.wav"]
+  ],
+
+  "chunks": [
+    {
+      "spanish": "Mientras dormía al aire libre",
+      "english": "While I was sleeping outdoors"
+    },
+    {
+      "spanish": "mucha gente a mi alrededor mantenía sus fogatas encendidas",
+      "english": "many people around me kept their campfires lit"
+    },
+    {
+      "spanish": "y me sentí a gusto",
+      "english": "and I felt comfortable"
+    },
+    {
+      "spanish": "¿qué ocurre después?",
+      "english": "what happens next?"
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 
