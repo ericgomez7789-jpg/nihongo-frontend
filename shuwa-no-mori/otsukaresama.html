@@ -13,14 +13,15 @@
       font-family: Arial, sans-serif;
     }
 
+    /* ⭐ NEW VISIBILITY SYSTEM */
     .shuwa-screen {
       display: none;
       padding: 40px 0;
       text-align: center;
     }
 
-    .shuwa-screen:not(.hidden) {
-      display: block;
+    .shuwa-screen.show {
+      display: block !important;
     }
 
     audio {
@@ -90,13 +91,13 @@
   </div>
 
   <!-- ⭐ SCREEN 2 — MCQ -->
-  <div class="shuwa-screen hidden" id="shuwaScreen2">
+  <div class="shuwa-screen" id="shuwaScreen2">
     <button id="shuwaReplayBtn">▶ Replay Audio</button>
     <div id="shuwaMcqContainer"></div>
   </div>
 
   <!-- ⭐ SCREEN 3 — SUMMARY -->
-  <div class="shuwa-screen hidden" id="shuwaScreen3">
+  <div class="shuwa-screen" id="shuwaScreen3">
     <div id="shuwaSummaryTextHiragana">
       まるで あいて の かた を てのひら で たたく しぐさ を なぞる ように、  
       みぎて で こぶし を つくり、  
@@ -117,7 +118,9 @@
   <!-- ⭐ SHUWA ENGINE -->
   <script src="shuwa.js"></script>
   <script>
-    SHUWA.start();
+    document.addEventListener("DOMContentLoaded", () => {
+      SHUWA.start();
+    });
   </script>
 
 </body>

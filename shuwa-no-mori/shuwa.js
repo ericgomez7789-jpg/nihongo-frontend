@@ -292,13 +292,14 @@ SHUWA.mcqRailguards = function () {
 //  SCREEN SWITCHER
 // ==========================================================
 
-SHUWA.show = function (id) {
+SHUWA.show = function(id) {
   document.querySelectorAll(".shuwa-screen")
-    .forEach(el => el.classList.add("hidden"));
+    .forEach(el => el.classList.remove("show"));
 
-  document.getElementById(id)?.classList.remove("hidden");
+  document.getElementById(id)?.classList.add("show");
   SHUWA.activeScreen = id;
 };
+
 
 // ==========================================================
 //  RANDOM PICK
