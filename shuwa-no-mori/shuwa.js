@@ -197,7 +197,6 @@ SHUWA.screen1 = function () {
   const item = SHUWA.pickRandom();
   if (!item.audio) return;
 
-  // Play audio but DO NOT auto‑advance
   SHUWA.playAudio(item.audio);
 };
 
@@ -243,8 +242,7 @@ SHUWA.screen2 = function () {
 
 SHUWA.handleMCQ = function (choice) {
   if (SHUWA.mcqLocked) return;
-SHUWA.mcqLocked = true;
-
+  SHUWA.mcqLocked = true;
 
   const item = SHUWA.currentItem;
   const correct = item.answer;
@@ -287,3 +285,17 @@ SHUWA.screen3 = function () {
     };
   }
 };
+
+/* ==========================================================
+   GLOBAL FIX — REMOVE INLINE onclick FROM SCREEN1 BUTTON
+   ========================================================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+  const btn = document.querySelector("#shuwaScreen1 .next-btn");
+  if (btn) {
+    btn.onclick = null; // remove inline handler
+    btn.addEventListener("click", () => SHUWA.screen2());
+  }
+
+  SHUWA.start();
+});
