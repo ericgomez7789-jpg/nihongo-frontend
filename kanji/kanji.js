@@ -78,6 +78,147 @@ KANJI.allKanji = {
 
 
 
+nomu: {
+  id: "nomu",
+  audio: "audio/nomu.wav",
+  kanji: "飲む",
+  kanjiBase: "飲",
+  okurigana: "む",
+  furigana: "の",
+  romaji: "nomu",
+  kun: "のむ",
+  on: "イン",
+  meaning: "to drink",
+  answer: "飲む"
+},
+
+
+tsukeru: {
+  id: "tsukeru",
+  audio: "audio/tsukeru.wav",
+  kanji: "付ける",
+  kanjiBase: "付け",
+  okurigana: "る",
+  furigana: "つ",
+  romaji: "tsukeru",
+  kun: "つける",
+  on: "フ",
+  meaning: "to attach; to apply; to turn on",
+  answer: "付ける"
+},
+
+
+kesu: {
+  id: "kesu",
+  audio: "audio/kesu.wav",
+  kanji: "消す",
+  kanjiBase: "消",
+  okurigana: "す",
+  furigana: "け",
+  romaji: "kesu",
+  kun: "けす",
+  on: "ショウ",
+  meaning: "to erase; to turn off; to extinguish",
+  answer: "消す"
+},
+
+ireru: {
+  id: "ireru",
+  audio: "audio/ireru.wav",
+  kanji: "入れる",
+  kanjiBase: "入れ",
+  okurigana: "る",
+  furigana: "い",
+  romaji: "ireru",
+  kun: "いれる",
+  on: "ニュウ",
+  meaning: "to put in; to insert; to add",
+  answer: "入れる"
+},
+
+neru: {
+  id: "neru",
+  audio: "audio/neru.wav",
+  kanji: "寝る",
+  kanjiBase: "寝",
+  okurigana: "る",
+  furigana: "ね",
+  romaji: "neru",
+  kun: "ねる",
+  on: "シン",
+  meaning: "to sleep; to lie down",
+  answer: "寝る"
+},
+
+hairu: {
+  id: "hairu",
+  audio: "audio/hairu.wav",
+  kanji: "入る",
+  kanjiBase: "入",
+  okurigana: "る",
+  furigana: "はい",
+  romaji: "hairu",
+  kun: "はいる",
+  on: "ニュウ",
+  meaning: "to enter; to go in",
+  answer: "入る"
+},
+
+oku: {
+  id: "oku",
+  audio: "audio/oku.wav",
+  kanji: "置く",
+  kanjiBase: "置",
+  okurigana: "く",
+  furigana: "お",
+  romaji: "oku",
+  kun: "おく",
+  on: "チ",
+  meaning: "to place; to put; to set down",
+  answer: "置く"
+},
+
+ochiru: {
+  id: "ochiru",
+  audio: "audio/ochiru.wav",
+  kanji: "落ちる",
+  kanjiBase: "落ち",
+  okurigana: "る",
+  furigana: "お",
+  romaji: "ochiru",
+  kun: "おちる",
+  on: "ラク",
+  meaning: "to fall; to drop; to come off",
+  answer: "落ちる"
+},
+
+okuru: {
+  id: "okuru",
+  audio: "audio/okuru.wav",
+  kanji: "送る",
+  kanjiBase: "送",
+  okurigana: "る",
+  furigana: "おく",
+  romaji: "okuru",
+  kun: "おくる",
+  on: "ソウ",
+  meaning: "to send; to dispatch; to escort",
+  answer: "送る"
+},
+
+tsukuru: {
+  id: "tsukuru",
+  audio: "audio/tsukuru.wav",
+  kanji: "作る",
+  kanjiBase: "作",
+  okurigana: "る",
+  furigana: "つく",
+  romaji: "tsukuru",
+  kun: "つくる",
+  on: "サク",
+  meaning: "to make; to create; to build",
+  answer: "作る"
+},
 
 
 
@@ -190,8 +331,37 @@ const kanjiPool = [
   { kanjiBase: "食べ", okurigana: "る" },
   { kanjiBase: "歩", okurigana: "く" },
   { kanjiBase: "入", okurigana: "る" },
-  { kanjiBase: "出", okurigana: "る" }
+  { kanjiBase: "出", okurigana: "る" },
+
+  // New additions
+  { kanjiBase: "飲", okurigana: "む" },
+  { kanjiBase: "付け", okurigana: "る" },
+  { kanjiBase: "消", okurigana: "す" },
+  { kanjiBase: "入れ", okurigana: "る" },
+  { kanjiBase: "寝", okurigana: "る" },
+  { kanjiBase: "入", okurigana: "る" }, // hairu
+  { kanjiBase: "置", okurigana: "く" },
+  { kanjiBase: "落ち", okurigana: "る" },
+  { kanjiBase: "送", okurigana: "る" },
+
+  // More N5/N4 verbs
+  { kanjiBase: "書", okurigana: "く" },
+  { kanjiBase: "読", okurigana: "む" },
+  { kanjiBase: "作", okurigana: "る" },
+  { kanjiBase: "笑", okurigana: "う" },
+  { kanjiBase: "買", okurigana: "う" },
+  { kanjiBase: "売", okurigana: "る" },
+  { kanjiBase: "使", okurigana: "う" },
+  { kanjiBase: "待", okurigana: "つ" },
+  { kanjiBase: "立", okurigana: "つ" },
+  { kanjiBase: "座", okurigana: "る" },
+  { kanjiBase: "開", okurigana: "ける" },
+  { kanjiBase: "閉", okurigana: "める" },
+  { kanjiBase: "帰", okurigana: "る" },
+  { kanjiBase: "走", okurigana: "る" },
+  { kanjiBase: "泳", okurigana: "ぐ" }
 ];
+
 
 /* ==========================================================
    BUILD MCQ CHOICES
