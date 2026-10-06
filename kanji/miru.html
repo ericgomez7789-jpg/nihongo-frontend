@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>漢字の山 — 見る</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      background-color: #0d0d0d;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+
+    .kanji-screen {
+      display: none;
+      padding: 40px 0;
+      text-align: center;
+    }
+
+    .kanji-screen.show {
+      display: block !important;
+    }
+
+    .next-btn, .mcqBtn, #kanjiReplayBtn, #kanjiNextBtn {
+      padding: 12px 24px;
+      background: #4ea3ff;
+      color: #fff;
+      border-radius: 6px;
+      border: none;
+      font-size: 18px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    .next-btn:hover,
+    .mcqBtn:hover,
+    #kanjiReplayBtn:hover,
+    #kanjiNextBtn:hover {
+      background: #7fd1ff;
+    }
+
+    #kanjiMcqContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      width: 90%;
+      max-width: 500px;
+      margin: 40px auto;
+    }
+
+    .mcqBtn.correct {
+      background: #4caf50;
+    }
+
+    .mcqBtn.wrong {
+      background: #b71c1c;
+    }
+
+    .summary-block {
+      width: 90%;
+      max-width: 600px;
+      background: #1a1a1a;
+      padding: 20px;
+      border-radius: 10px;
+      margin: 0 auto 20px auto;
+      line-height: 1.6;
+      font-size: 18px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ⭐ SCREEN 1 — AUDIO ONLY -->
+  <div class="kanji-screen" id="kanjiScreen1">
+    <p style="margin-top: 20px; font-size: 20px; opacity: 0.8;">
+      まずは、きくだけ。
+    </p>
+    <button class="next-btn">Next ▶</button>
+  </div>
+
+  <!-- ⭐ SCREEN 2 — MCQ -->
+  <div class="kanji-screen" id="kanjiScreen2">
+    <button id="kanjiReplayBtn">▶ Replay Audio</button>
+    <div id="kanjiMcqContainer"></div>
+  </div>
+
+  <!-- ⭐ SCREEN 3 — SUMMARY -->
+  <div class="kanji-screen" id="kanjiScreen3">
+
+    <div class="summary-block">
+
+      <!-- Big Kanji -->
+      <div id="kanjiSummaryKanji" style="font-size: 64px; margin-bottom: 10px;"></div>
+
+      <!-- Hiragana -->
+      <div id="kanjiSummaryFurigana" style="font-size: 24px; opacity: 0.8; margin-bottom: 10px;"></div>
+
+      <!-- Romaji -->
+      <div id="kanjiSummaryRomaji" style="font-size: 22px; opacity: 0.9; margin-bottom: 20px;"></div>
+
+      <!-- Kun-yomi -->
+      <div id="kanjiSummaryKun" style="font-size: 20px; margin-bottom: 10px;"></div>
+
+      <!-- On-yomi -->
+      <div id="kanjiSummaryOn" style="font-size: 20px; margin-bottom: 10px;"></div>
+
+      <!-- English meaning -->
+      <div id="kanjiSummaryMeaning" style="font-size: 22px; margin-top: 20px; color: #7fd1ff;"></div>
+
+    </div>
+
+    <button id="kanjiNextBtn">Next ▶</button>
+  </div>
+
+  <script src="kanji.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      KANJI.dataset = kanjiBasic;
+      KANJI.start();
+    });
+  </script>
+
+</body>
+</html>
