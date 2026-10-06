@@ -220,6 +220,271 @@ tsukuru: {
   answer: "作る"
 },
 
+kaeru: {
+  id: "kaeru",
+  audio: "audio/kaeru.wav",
+  kanji: "帰る",
+  kanjiBase: "帰",
+  okurigana: "る",
+  furigana: "かえ",
+  romaji: "kaeru",
+  kun: "かえる",
+  on: "キ",
+  meaning: "to return; to go back; to come home",
+  answer: "帰る"
+},
+
+kaeru2: {
+  id: "kaeru2",
+  audio: "audio/kaeru.wav",
+  kanji: "変える",
+  kanjiBase: "変え",
+  okurigana: "る",
+  furigana: "かえ",
+  romaji: "kaeru",
+  kun: "かえる",
+  on: "ヘン",
+  meaning: "to change; to alter; to modify",
+  answer: "変える"
+},
+
+hikaru: {
+  id: "hikaru",
+  audio: "audio/hikaru.wav",
+  kanji: "光る",
+  kanjiBase: "光",
+  okurigana: "る",
+  furigana: "ひか",
+  romaji: "hikaru",
+  kun: "ひかる",
+  on: "コウ",
+  meaning: "to shine; to glitter; to glow",
+  answer: "光る"
+},
+
+manabu: {
+  id: "manabu",
+  audio: "audio/manabu.wav",
+  kanji: "学ぶ",
+  kanjiBase: "学",
+  okurigana: "ぶ",
+  furigana: "まな",
+  romaji: "manabu",
+  kun: "まなぶ",
+  on: "ガク",
+  meaning: "to learn; to study; to take lessons",
+  answer: "学ぶ"
+},
+
+iru: {
+  id: "iru",
+  audio: "audio/iru.wav",
+  kanji: "いる",
+  kanjiBase: "い",
+  okurigana: "る",
+  furigana: "い",
+  romaji: "iru",
+  kun: "いる",
+  on: "",
+  meaning: "to exist; to be (living things)",
+  answer: "いる"
+},
+
+hirogaru: {
+  id: "hirogaru",
+  audio: "audio/hirogaru.wav",
+  kanji: "広がる",
+  kanjiBase: "広が",
+  okurigana: "る",
+  furigana: "ひろ",
+  romaji: "hirogaru",
+  kun: "ひろがる",
+  on: "コウ",
+  meaning: "to spread; to expand; to widen; to extend",
+  answer: "広がる"
+},
+
+nemuru: {
+  id: "nemuru",
+  audio: "audio/nemuru.wav",
+  kanji: "眠る",
+  kanjiBase: "眠",
+  okurigana: "る",
+  furigana: "ねむ",
+  romaji: "nemuru",
+  kun: "ねむる",
+  on: "ミン",
+  meaning: "to sleep; to slumber; to rest",
+  answer: "眠る"
+},
+
+hashiru: {
+  id: "hashiru",
+  audio: "audio/hashiru.wav",
+  kanji: "走る",
+  kanjiBase: "走",
+  okurigana: "る",
+  furigana: "はし",
+  romaji: "hashiru",
+  kun: "はしる",
+  on: "ソウ",
+  meaning: "to run",
+  answer: "走る"
+},
+
+iku: {
+  id: "iku",
+  audio: "audio/iku.wav",
+  kanji: "行く",
+  kanjiBase: "行",
+  okurigana: "く",
+  furigana: "い",
+  romaji: "iku",
+  kun: "いく",
+  on: "コウ",
+  meaning: "to go",
+  answer: "行く"
+},
+
+kiru: {
+  id: "kiru",
+  audio: "audio/kiru.wav",
+  kanji: "切る",
+  kanjiBase: "切",
+  okurigana: "る",
+  furigana: "き",
+  romaji: "kiru",
+  kun: "きる",
+  on: "セツ",
+  meaning: "to cut; to slice",
+  answer: "切る"
+},
+
+kiru2: {
+  id: "kiru2",
+  audio: "audio/kiru.wav",
+  kanji: "着る",
+  kanjiBase: "着",
+  okurigana: "る",
+  furigana: "き",
+  romaji: "kiru",
+  kun: "きる",
+  on: "チャク",
+  meaning: "to wear; to put on (upper-body clothing)",
+  answer: "着る"
+},
+
+tsuku: {
+  id: "tsuku",
+  audio: "audio/tsuku.wav",
+  kanji: "付く",
+  kanjiBase: "付",
+  okurigana: "く",
+  furigana: "つ",
+  romaji: "tsuku",
+  kun: "つく",
+  on: "フ",
+  meaning: "to stick; to be attached; to be added; to be included",
+  answer: "付く"
+},
+
+tsuku2: {
+  id: "tsuku2",
+  audio: "audio/tsuku.wav",
+  kanji: "就く",
+  kanjiBase: "就",
+  okurigana: "く",
+  furigana: "つ",
+  romaji: "tsuku",
+  kun: "つく",
+  on: "シュウ",
+  meaning: "to take a position; to assume a role; to start (a job); to engage in",
+  answer: "就く"
+},
+
+tsuku3: {
+  id: "tsuku3",
+  audio: "audio/tsuku.wav",
+  kanji: "着く",
+  kanjiBase: "着",
+  okurigana: "く",
+  furigana: "つ",
+  romaji: "tsuku",
+  kun: "つく",
+  on: "チャク",
+  meaning: "to arrive; to reach; to get to (a place)",
+  answer: "着く"
+},
+
+sagaru: {
+  id: "sagaru",
+  audio: "audio/sagaru.wav",
+  kanji: "下がる",
+  kanjiBase: "下が",
+  okurigana: "る",
+  furigana: "さが",
+  romaji: "sagaru",
+  kun: "さがる",
+  on: "カ",
+  meaning: "to go down; to drop; to fall; to hang down; to step back",
+  answer: "下がる"
+},
+
+orosu: {
+  id: "orosu",
+  audio: "audio/orosu.wav",
+  kanji: "下ろす",
+  kanjiBase: "下ろ",
+  okurigana: "す",
+  furigana: "おろ",
+  romaji: "orosu",
+  kun: "おろす",
+  on: "ゲ",
+  meaning: "to lower; to bring down; to take down; to withdraw; to unload",
+  answer: "下ろす"
+},
+
+naru: {
+  id: "naru",
+  audio: "audio/naru.wav",
+  kanji: "なる",
+  kanjiBase: "な",
+  okurigana: "る",
+  furigana: "な",
+  romaji: "naru",
+  kun: "なる",
+  on: "",
+  meaning: "to become; to turn into; to reach (a state)",
+  answer: "なる"
+},
+
+naru2: {
+  id: "naru2",
+  audio: "audio/naru.wav",
+  kanji: "鳴る",
+  kanjiBase: "鳴",
+  okurigana: "る",
+  furigana: "な",
+  romaji: "naru",
+  kun: "なる",
+  on: "メイ",
+  meaning: "to ring; to sound; to make a noise",
+  answer: "鳴る"
+},
+
+noboru: {
+  id: "noboru",
+  audio: "audio/noboru.wav",
+  kanji: "登る",
+  kanjiBase: "登",
+  okurigana: "る",
+  furigana: "のぼ",
+  romaji: "noboru",
+  kun: "のぼる",
+  on: "ト",
+  meaning: "to climb; to go up; to ascend; to rise",
+  answer: "登る"
+},
 
 
 
@@ -392,11 +657,35 @@ KANJI.buildChoices = function (item) {
 
 KANJI.screen2 = function () {
   KANJI.show("kanjiScreen2");
+  KANJI.mcqLocked = false;
 
+  const item = KANJI.currentItem;
   const mcqBox = document.getElementById("kanjiMcqContainer");
   mcqBox.innerHTML = "";
 
-  const options = KANJI.buildChoices(KANJI.currentItem);
+  // --- REPLAY BUTTON EMBEDDED ---
+  const replayBtn = document.createElement("button");
+  replayBtn.className = "kanji-replay-btn";
+  replayBtn.textContent = "🔊 Replay";
+  replayBtn.style.cssText = `
+    font-size: 20px;
+    padding: 10px 18px;
+    margin-bottom: 18px;
+    border-radius: 8px;
+    background: #444;
+    color: white;
+    border: none;
+    cursor: pointer;
+  `;
+  replayBtn.onclick = () => {
+    if (!KANJI.mcqLocked) {
+      KANJI.playAudio(item.audio);
+    }
+  };
+  mcqBox.appendChild(replayBtn);
+  // --------------------------------
+
+  const options = KANJI.buildChoices(item);
 
   options.forEach(opt => {
     const div = document.createElement("div");
@@ -413,6 +702,7 @@ KANJI.screen2 = function () {
     mcqBox.appendChild(div);
   });
 };
+
 
 /* ==========================================================
    HANDLE MCQ
@@ -440,7 +730,14 @@ KANJI.screen3 = function () {
 
   const item = KANJI.currentItem;
 
-  document.getElementById("kanjiSummaryKanji").textContent = item.kanji;
+  // ⭐ ENLARGE THE KANJI CHARACTER
+  const kanjiBox = document.getElementById("kanjiSummaryKanji");
+  kanjiBox.textContent = item.kanji;
+  kanjiBox.style.fontSize = "96px";       // ← BIG, readable, DS-style
+  kanjiBox.style.fontWeight = "bold";
+  kanjiBox.style.marginBottom = "20px";
+  kanjiBox.style.textAlign = "center";
+
   document.getElementById("kanjiSummaryFurigana").textContent = item.furigana;
   document.getElementById("kanjiSummaryRomaji").textContent = item.romaji;
   document.getElementById("kanjiSummaryKun").textContent = "Kun: " + item.kun;
