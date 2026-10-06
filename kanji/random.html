@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>有る · aru</title>
+  <title>Random Kanji Practice</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
@@ -14,12 +14,14 @@
       text-align: center;
       padding-top: 40px;
     }
+
     .kanji-screen {
       display: none;
     }
     .active {
       display: block;
     }
+
     button {
       padding: 14px 28px;
       font-size: 18px;
@@ -28,6 +30,7 @@
       cursor: pointer;
       margin-top: 20px;
     }
+
     #kanjiReplayBtn {
       background: #4ea3ff;
       color: #fff;
@@ -36,6 +39,7 @@
       background: #7fd1ff;
       color: #000;
     }
+
     .mcq-option {
       background: #1a1a1a;
       padding: 12px;
@@ -80,10 +84,9 @@
   <!-- Engine -->
   <script src="kanji.js"></script>
 
-  <!-- Start -->
+  <!-- Start randomized mode -->
   <script>
-    // Load ONLY 有る
-    KANJI.start("aru");
+    KANJI.start("random");
   </script>
 
 </body>

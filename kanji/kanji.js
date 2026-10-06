@@ -1,371 +1,159 @@
 /* ==========================================================
-   KANJI — DATASET (Basic Verbs)
-   ========================================================== */
-
-const kanjiBasic = [
-  {
-    id: "miru",
-    audio: "audio/miru.wav",
-
-    kanji: "見る",
-    furigana: "みる",
-    romaji: "miru",
-
-    kun: "みる",
-    on: "けん",
-
-    meaning: "to see; to look",
-
-    answer: "見る"
-  },
-
-
-
-
-
-
-
-
-
-
-
-{
-  id: "aruku",
-  audio: "audio/aruku.wav",
-
-  kanji: "歩く",
-  furigana: "あるく",
-  romaji: "aruku",
-
-  kun: "あるく",
-  on: "ホ",
-
-  meaning: "to walk",
-
-  answer: "歩く"
-},
-
-
-
-
-
-
-
-
-
-
-
-{
-  id: "aru",
-  audio: "audio/aru.wav",
-
-  kanji: "有る",
-  furigana: "ある",
-  romaji: "aru",
-
-  kun: "ある",
-  on: "ユウ",
-
-  meaning: "to exist; to have",
-
-  answer: "有る"
-},
-
-
-
-
-
-
-
-
-
-
-{
-  id: "asobu",
-  audio: "audio/asobu.wav",
-
-  kanji: "遊ぶ",
-  furigana: "あそぶ",
-  romaji: "asobu",
-
-  kun: "あそぶ",
-  on: "ユウ",
-
-  meaning: "to play; to hang out",
-
-  answer: "遊ぶ"
-},
-
-
-
-
-
-
-
-
-
-
-{
-  id: "ateru",
-  audio: "audio/ateru.wav",
-
-  kanji: "当てる",
-  furigana: "あてる",
-  romaji: "ateru",
-
-  kun: "あてる",
-  on: "トウ",
-
-  meaning: "to hit; to guess; to apply; to touch; to place",
-
-  answer: "当てる"
-},
-
-
-
-
-
-
-
-
-
-
-
-{
-  id: "au",
-  audio: "audio/au.wav",
-
-  kanji: "会う",
-  furigana: "あう",
-  romaji: "au",
-
-  kun: "あう",
-  on: "カイ",
-
-  meaning: "to meet; to see someone",
-
-  answer: "会う"
-},
-
-
-
-
-
-
-
-
-
-
-{
-  id: "awateru",
-  audio: "audio/awateru.wav",
-
-  kanji: "慌てる",
-  furigana: "あわてる",
-  romaji: "awateru",
-
-  kun: "あわてる",
-  on: "コウ",
-
-  meaning: "to panic; to become flustered; to become confused; to rush; to hurry",
-
-  answer: "慌てる"
-},
-
-
-
-
-
-
-
-
-
-{
-  id: "ayamaru",
-  audio: "audio/ayamaru.wav",
-
-  kanji: "謝る",
-  furigana: "あやまる",
-  romaji: "ayamaru",
-
-  kun: "あやまる",
-  on: "シャ",
-
-  meaning: "to apologize",
-
-  answer: "謝る"
-},
-
-
-
-
-
-
-
-
-
-
-
-{
-  id: "chigiru",
-  audio: "audio/chigiru.wav",
-
-  kanji: "千切る",
-  furigana: "ちぎる",
-  romaji: "chigiru",
-
-  kun: "ちぎる",
-  on: "セン",
-
-  meaning: "to tear to pieces; to tear up; to pluck; to tear off; to do vigorously",
-
-  answer: "千切る"
-},
-
-
-
-
-
-
-
-
-
-
-
-{
-  id: "chiru",
-  audio: "audio/chiru.wav",
-
-  kanji: "散る",
-  furigana: "ちる",
-  romaji: "chiru",
-
-  kun: "ちる",
-  on: "サン",
-
-  meaning: "to scatter; to fall (flowers, leaves, petals); to disperse; to break up; to fade",
-
-  answer: "散る"
-},
-
-
-
-
-
-
-
-
-];
-
-/* ==========================================================
-   GLOBAL DECOY POOL (used for MCQ generation)
-   ========================================================== */
-
-const kanjiDecoys = [
-  { kanji: "食べる", furigana: "たべる", romaji: "taberu" },
-  { kanji: "行く", furigana: "いく", romaji: "iku" },
-  { kanji: "書く", furigana: "かく", romaji: "kaku" },
-  { kanji: "読む", furigana: "よむ", romaji: "yomu" },
-  { kanji: "出る", furigana: "でる", romaji: "deru" },
-  { kanji: "入る", furigana: "はいる", romaji: "hairu" },
-  { kanji: "飲む", furigana: "のむ", romaji: "nomu" },
-  { kanji: "買う", furigana: "かう", romaji: "kau" },
-  { kanji: "売る", furigana: "うる", romaji: "uru" },
-  { kanji: "立つ", furigana: "たつ", romaji: "tatsu" },
-  { kanji: "座る", furigana: "すわる", romaji: "suwaru" },
-  { kanji: "歩く", furigana: "あるく", romaji: "aruku" },
-  { kanji: "走る", furigana: "はしる", romaji: "hashiru" },
-  { kanji: "泳ぐ", furigana: "およぐ", romaji: "oyogu" },
-  { kanji: "開ける", furigana: "あける", romaji: "akeru" },
-  { kanji: "閉める", furigana: "しめる", romaji: "shimeru" },
-  { kanji: "使う", furigana: "つかう", romaji: "tsukau" },
-  { kanji: "作る", furigana: "つくる", romaji: "tsukuru" },
-  { kanji: "始める", furigana: "はじめる", romaji: "hajimeru" },
-  { kanji: "終わる", furigana: "おわる", romaji: "owaru" },
-  { kanji: "見る", furigana: "みる", romaji: "miru" },
-  { kanji: "聞く", furigana: "きく", romaji: "kiku" },
-  { kanji: "話す", furigana: "はなす", romaji: "hanasu" },
-  { kanji: "待つ", furigana: "まつ", romaji: "matsu" },
-  { kanji: "呼ぶ", furigana: "よぶ", romaji: "yobu" },
-  { kanji: "乗る", furigana: "のる", romaji: "noru" },
-  { kanji: "降りる", furigana: "おりる", romaji: "oriru" },
-  { kanji: "返す", furigana: "かえす", romaji: "kaesu" },
-  { kanji: "借りる", furigana: "かりる", romaji: "kariru" },
-  { kanji: "貸す", furigana: "かす", romaji: "kasu" },
-  { kanji: "教える", furigana: "おしえる", romaji: "oshieru" },
-  { kanji: "習う", furigana: "ならう", romaji: "narau" },
-  { kanji: "分かる", furigana: "わかる", romaji: "wakaru" },
-  { kanji: "考える", furigana: "かんがえる", romaji: "kangaeru" },
-  { kanji: "決める", furigana: "きめる", romaji: "kimeru" },
-  { kanji: "選ぶ", furigana: "えらぶ", romaji: "erabu" },
-  { kanji: "送る", furigana: "おくる", romaji: "okuru" },
-  { kanji: "止まる", furigana: "とまる", romaji: "tomaru" },
-  { kanji: "始まる", furigana: "はじまる", romaji: "hajimaru" },
-  { kanji: "笑う", furigana: "わらう", romaji: "warau" },
-  { kanji: "泣く", furigana: "なく", romaji: "naku" },
-  { kanji: "歌う", furigana: "うたう", romaji: "utau" },
-  { kanji: "遊ぶ", furigana: "あそぶ", romaji: "asobu" },
-  { kanji: "洗う", furigana: "あらう", romaji: "arau" },
-  { kanji: "切る", furigana: "きる", romaji: "kiru" },
-  { kanji: "着る", furigana: "きる", romaji: "kiru" },
-  { kanji: "持つ", furigana: "もつ", romaji: "motsu" },
-  { kanji: "探す", furigana: "さがす", romaji: "sagasu" },
-  { kanji: "見つける", furigana: "みつける", romaji: "mitsukeru" }
-];
-
-
-/* ==========================================================
-   KANJI — CORE ENGINE
+   GLOBAL OBJECT
    ========================================================== */
 
 const KANJI = {
-  round: 0,
-  TOTAL_ROUNDS: 3,
+  dataset: [],
+  currentItem: null,
   mcqLocked: false,
   activeScreen: null,
 
-  dataset: kanjiBasic,
-  currentItem: null,
-
   audio: {
+    current: null,
     cancelToken: { cancel: false },
-    generation: 0,
-    current: null
+    generation: 0
   }
+};
+
+/* ==========================================================
+   INTERNAL DATASET STORAGE
+   ========================================================== */
+
+KANJI.allKanji = {
+  aru: {
+    id: "aru",
+    audio: "audio/aru.wav",
+    kanji: "有る",
+    kanjiBase: "有",
+    okurigana: "る",
+    furigana: "あ",
+    romaji: "aru",
+    kun: "ある",
+    on: "ユウ",
+    meaning: "to exist; to have",
+    answer: "有る"
+  },
+
+  aruku: {
+    id: "aruku",
+    audio: "audio/aruku.wav",
+    kanji: "歩く",
+    kanjiBase: "歩",
+    okurigana: "く",
+    furigana: "ある",
+    romaji: "aruku",
+    kun: "あるく",
+    on: "ホ",
+    meaning: "to walk",
+    answer: "歩く"
+  },
+
+  miru: {
+    id: "miru",
+    audio: "audio/miru.wav",
+    kanji: "見る",
+    kanjiBase: "見",
+    okurigana: "る",
+    furigana: "み",
+    romaji: "miru",
+    kun: "みる",
+    on: "ケン",
+    meaning: "to see",
+    answer: "見る"
+  },
+
+  taberu: {
+  id: "taberu",
+  audio: "audio/taberu.wav",
+  kanji: "食べる",
+  kanjiBase: "食べ",
+  okurigana: "る",
+  furigana: "た",
+  romaji: "taberu",
+  kun: "たべる",
+  on: "ショク",
+  meaning: "to eat",
+  answer: "食べる"
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+};
+
+/* ==========================================================
+   LOAD SINGLE KANJI
+   ========================================================== */
+
+KANJI.loadSingle = function (id) {
+  const item = KANJI.allKanji[id];
+  if (!item) {
+    console.error("Unknown kanji id:", id);
+    return null;
+  }
+  KANJI.dataset = [item];
+  return item;
+};
+
+/* ==========================================================
+   LOAD ALL KANJI (RANDOM MODE)
+   ========================================================== */
+
+KANJI.loadAll = function () {
+  KANJI.dataset = Object.values(KANJI.allKanji);
+};
+
+/* ==========================================================
+   RANDOM PICK
+   ========================================================== */
+
+KANJI.pickRandom = function () {
+  const item = KANJI.dataset[Math.floor(Math.random() * KANJI.dataset.length)];
+  KANJI.currentItem = item;
+  return item;
+};
+
+/* ==========================================================
+   START
+   ========================================================== */
+
+KANJI.start = function (id) {
+
+  if (id === "random") {
+    KANJI.loadAll();     // load ALL verbs
+  } else {
+    KANJI.loadSingle(id); // load ONE verb
+  }
+
+  KANJI.startRound();
+};
+
+/* ==========================================================
+   START ROUND
+   ========================================================== */
+
+KANJI.startRound = function () {
+  KANJI.mcqLocked = false;
+  KANJI.screen1();
 };
 
 /* ==========================================================
    AUDIO CONTROL
    ========================================================== */
 
-KANJI.stopAllAudio = function () {
-  KANJI.audio.cancelToken.cancel = true;
-  KANJI.audio.generation++;
-
-  if (KANJI.audio.current) {
-    try {
-      KANJI.audio.current.pause();
-      KANJI.audio.current.currentTime = 0;
-    } catch (e) {}
-  }
-};
-
-KANJI.generationGuards = function () {
-  KANJI.audio.cancelToken.cancel = false;
-  KANJI.audio.generation++;
-  KANJI.audio.current = null;
-};
-
 KANJI.playAudio = function (file) {
-  if (!file) return;
-
-  KANJI.stopAllAudio();
-  KANJI.generationGuards();
-
-  const audio = KANJI.audio.current || new Audio();
-  KANJI.audio.current = audio;
-  audio.src = file;
-
+  const audio = new Audio(file);
   audio.play().catch(() => {});
 };
 
@@ -374,48 +162,8 @@ KANJI.playAudio = function (file) {
    ========================================================== */
 
 KANJI.show = function (id) {
-  document.querySelectorAll(".kanji-screen")
-    .forEach(el => el.classList.remove("show"));
-
-  document.getElementById(id)?.classList.add("show");
-  KANJI.activeScreen = id;
-};
-
-/* ==========================================================
-   RANDOM PICK
-   ========================================================== */
-
-KANJI.pickRandom = function () {
-  const arr = KANJI.dataset;
-  const item = arr[Math.floor(Math.random() * arr.length)];
-  KANJI.currentItem = item;
-  return item;
-};
-
-/* ==========================================================
-   START + ROUND
-   ========================================================== */
-
-KANJI.start = function () {
-  KANJI.round = 0;
-  KANJI.mcqLocked = false;
-  KANJI.currentItem = null;
-
-  KANJI.stopAllAudio();
-  KANJI.audio.cancelToken.cancel = false;
-  KANJI.audio.generation++;
-
-  KANJI.startRound();
-};
-
-KANJI.startRound = function () {
-  KANJI.stopAllAudio();
-  KANJI.audio.cancelToken.cancel = false;
-  KANJI.audio.generation++;
-
-  KANJI.mcqLocked = false;
-
-  KANJI.screen1();
+  document.querySelectorAll(".kanji-screen").forEach(el => el.classList.remove("active"));
+  document.getElementById(id).classList.add("active");
 };
 
 /* ==========================================================
@@ -426,28 +174,40 @@ KANJI.screen1 = function () {
   KANJI.show("kanjiScreen1");
 
   const item = KANJI.pickRandom();
-  if (!item.audio) return;
-
   KANJI.playAudio(item.audio);
+
+  document.getElementById("kanjiReplayBtn").onclick = () => KANJI.playAudio(item.audio);
+  document.getElementById("kanjiNextBtn").onclick = () => KANJI.screen2();
 };
 
 /* ==========================================================
-   BUILD MCQ CHOICES (correct + random decoys)
+   DECOY POOL
+   ========================================================== */
+
+const kanjiPool = [
+  { kanjiBase: "行", okurigana: "く" },
+  { kanjiBase: "見", okurigana: "る" },
+  { kanjiBase: "食べ", okurigana: "る" },
+  { kanjiBase: "歩", okurigana: "く" },
+  { kanjiBase: "入", okurigana: "る" },
+  { kanjiBase: "出", okurigana: "る" }
+];
+
+/* ==========================================================
+   BUILD MCQ CHOICES
    ========================================================== */
 
 KANJI.buildChoices = function (item) {
-  const decoys = [...kanjiDecoys]
-    .sort(() => Math.random() - 0.5)
-    .slice(0, 3);
+  const decoys = [...kanjiPool].sort(() => Math.random() - 0.5).slice(0, 3);
 
-  const correctObj = {
-    kanji: item.kanji,
-    furigana: item.furigana,
-    romaji: item.romaji
+  const correct = {
+    kanjiBase: item.kanjiBase,
+    okurigana: item.okurigana
   };
 
-  const choices = [correctObj, ...decoys];
+  const choices = [correct, ...decoys];
 
+  // Shuffle
   for (let i = choices.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [choices[i], choices[j]] = [choices[j], choices[i]];
@@ -457,74 +217,52 @@ KANJI.buildChoices = function (item) {
 };
 
 /* ==========================================================
-   SCREEN 2 — MCQ (kanji + furigana)
+   SCREEN 2 — KANJI + OKURIGANA ONLY
    ========================================================== */
 
 KANJI.screen2 = function () {
   KANJI.show("kanjiScreen2");
-  KANJI.mcqLocked = false;
 
-  const item = KANJI.currentItem;
   const mcqBox = document.getElementById("kanjiMcqContainer");
   mcqBox.innerHTML = "";
 
-  // Build randomized choices (correct + decoys)
-  const options = KANJI.buildChoices(item);
+  const options = KANJI.buildChoices(KANJI.currentItem);
 
   options.forEach(opt => {
-    const btn = document.createElement("button");
-    btn.className = "mcqBtn";
+    const div = document.createElement("div");
+    div.className = "mcq-option";
 
-    // ⭐ Kanji only (no furigana, no romaji)
-    btn.innerHTML = `
-      <div style="font-size: 32px;">${opt.kanji}</div>
+    div.innerHTML = `
+      <span style="font-size: 32px;">${opt.kanjiBase}</span>
+      <span style="font-size: 22px; color:#bbbbbb; margin-left: 12px;">
+        ${opt.okurigana}
+      </span>
     `;
 
-    btn.onclick = () => KANJI.handleMCQ(opt.kanji);
-    mcqBox.appendChild(btn);
+    div.onclick = () => KANJI.handleMCQ(opt.kanjiBase + opt.okurigana);
+    mcqBox.appendChild(div);
   });
-
-  const replayBtn = document.getElementById("kanjiReplayBtn");
-  if (replayBtn) {
-    replayBtn.onclick = () => {
-      if (KANJI.mcqLocked) return;
-      KANJI.playAudio(item.audio);
-    };
-  }
 };
-
 
 /* ==========================================================
    HANDLE MCQ
    ========================================================== */
 
 KANJI.handleMCQ = function (choiceKanji) {
-  if (KANJI.mcqLocked) return;
-  KANJI.mcqLocked = true;
-
-  const item = KANJI.currentItem;
-  const correct = item.answer;
-
-  const buttons = document.querySelectorAll("#kanjiMcqContainer .mcqBtn");
+  const correct = KANJI.currentItem.answer;
+  const buttons = document.querySelectorAll(".mcq-option");
 
   buttons.forEach(btn => {
-    btn.disabled = true;
-
-    const btnKanji = btn.querySelector("div").textContent.trim();
-
-    if (btnKanji === correct) btn.classList.add("correct");
-    else btn.classList.add("wrong");
+    btn.style.pointerEvents = "none";
+    const isCorrect = btn.textContent.includes(correct);
+    btn.style.background = isCorrect ? "#1e5128" : "#512828";
   });
 
-  KANJI.round++;
-
-  setTimeout(() => {
-    KANJI.screen3();
-  }, 900);
+  setTimeout(() => KANJI.screen3(), 900);
 };
 
 /* ==========================================================
-   SCREEN 3 — SUMMARY
+   SCREEN 3 — SUMMARY + NEXT BUTTON
    ========================================================== */
 
 KANJI.screen3 = function () {
@@ -532,40 +270,33 @@ KANJI.screen3 = function () {
 
   const item = KANJI.currentItem;
 
-  const kanjiBox   = document.getElementById("kanjiSummaryKanji");
-  const furiBox    = document.getElementById("kanjiSummaryFurigana");
-  const romajiBox  = document.getElementById("kanjiSummaryRomaji");
-  const kunBox     = document.getElementById("kanjiSummaryKun");
-  const onBox      = document.getElementById("kanjiSummaryOn");
-  const meaningBox = document.getElementById("kanjiSummaryMeaning");
+  document.getElementById("kanjiSummaryKanji").textContent = item.kanji;
+  document.getElementById("kanjiSummaryFurigana").textContent = item.furigana;
+  document.getElementById("kanjiSummaryRomaji").textContent = item.romaji;
+  document.getElementById("kanjiSummaryKun").textContent = "Kun: " + item.kun;
+  document.getElementById("kanjiSummaryOn").textContent = "On: " + item.on;
+  document.getElementById("kanjiSummaryMeaning").textContent = "Meaning: " + item.meaning;
 
-  if (kanjiBox) kanjiBox.textContent = item.kanji;
-  if (furiBox)  furiBox.textContent  = item.furigana;
-  if (romajiBox) romajiBox.textContent = item.romaji;
+  // Remove old button
+  const oldBtn = document.getElementById("kanjiNextRoundBtn");
+  if (oldBtn) oldBtn.remove();
 
-  if (kunBox) kunBox.textContent = `Kun-yomi (Japanese reading): ${item.kun}`;
-  if (onBox)  onBox.textContent  = `On-yomi (Chinese reading): ${item.on}`;
+  // Create Next button
+  const nextBtn = document.createElement("button");
+  nextBtn.id = "kanjiNextRoundBtn";
+  nextBtn.textContent = "Next";
+  nextBtn.style.marginTop = "20px";
+  nextBtn.style.padding = "14px 28px";
+  nextBtn.style.fontSize = "18px";
+  nextBtn.style.borderRadius = "8px";
+  nextBtn.style.border = "none";
+  nextBtn.style.cursor = "pointer";
+  nextBtn.style.background = "#7fd1ff";
+  nextBtn.style.color = "#000";
 
-  if (meaningBox) meaningBox.textContent = `Meaning: ${item.meaning}`;
+  nextBtn.onclick = () => {
+    KANJI.startRound();
+  };
 
-  const nextBtn = document.getElementById("kanjiNextBtn");
-  if (nextBtn) {
-    nextBtn.onclick = () => {
-      KANJI.startRound();
-    };
-  }
+  document.getElementById("kanjiScreen3").appendChild(nextBtn);
 };
-
-/* ==========================================================
-   GLOBAL FIX — REMOVE INLINE onclick FROM SCREEN1 BUTTON
-   ========================================================== */
-
-document.addEventListener("DOMContentLoaded", () => {
-  const btn = document.querySelector("#kanjiScreen1 .next-btn");
-  if (btn) {
-    btn.onclick = null;
-    btn.addEventListener("click", () => KANJI.screen2());
-  }
-
-  KANJI.start();
-});

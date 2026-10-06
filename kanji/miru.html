@@ -2,126 +2,89 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>漢字の山 — 見る</title>
+  <title>見る · miru</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
     body {
       margin: 0;
-      background-color: #0d0d0d;
-      color: #fff;
+      background: #0d0d0d;
+      color: #ffffff;
       font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 40px;
     }
-
     .kanji-screen {
       display: none;
-      padding: 40px 0;
-      text-align: center;
     }
-
-    .kanji-screen.show {
-      display: block !important;
+    .active {
+      display: block;
     }
-
-    .next-btn, .mcqBtn, #kanjiReplayBtn, #kanjiNextBtn {
-      padding: 12px 24px;
-      background: #4ea3ff;
-      color: #fff;
-      border-radius: 6px;
-      border: none;
+    button {
+      padding: 14px 28px;
       font-size: 18px;
+      border-radius: 8px;
+      border: none;
       cursor: pointer;
       margin-top: 20px;
     }
-
-    .next-btn:hover,
-    .mcqBtn:hover,
-    #kanjiReplayBtn:hover,
-    #kanjiNextBtn:hover {
+    #kanjiReplayBtn {
+      background: #4ea3ff;
+      color: #fff;
+    }
+    #kanjiNextBtn {
       background: #7fd1ff;
+      color: #000;
     }
-
-    #kanjiMcqContainer {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      width: 90%;
-      max-width: 500px;
-      margin: 40px auto;
-    }
-
-    .mcqBtn.correct {
-      background: #4caf50;
-    }
-
-    .mcqBtn.wrong {
-      background: #b71c1c;
-    }
-
-    .summary-block {
-      width: 90%;
-      max-width: 600px;
+    .mcq-option {
       background: #1a1a1a;
-      padding: 20px;
-      border-radius: 10px;
-      margin: 0 auto 20px auto;
-      line-height: 1.6;
+      padding: 12px;
+      margin: 10px auto;
+      width: 80%;
+      border-radius: 6px;
+      cursor: pointer;
       font-size: 18px;
+    }
+    .mcq-option:hover {
+      background: #333;
     }
   </style>
 </head>
 
 <body>
 
-  <!-- ⭐ SCREEN 1 — AUDIO ONLY -->
-  <div class="kanji-screen" id="kanjiScreen1">
-    <p style="margin-top: 20px; font-size: 20px; opacity: 0.8;">
-      まずは、きくだけ。
-    </p>
-    <button class="next-btn">Next ▶</button>
+  <!-- Screen 1: Audio -->
+  <div id="kanjiScreen1" class="kanji-screen active">
+    <p>Listen to the pronunciation</p>
+    <button id="kanjiReplayBtn">▶ Replay Audio</button>
+    <button id="kanjiNextBtn">Next</button>
   </div>
 
-  <!-- ⭐ SCREEN 2 — MCQ -->
-  <div class="kanji-screen" id="kanjiScreen2">
-    <button id="kanjiReplayBtn">▶ Replay Audio</button>
+  <!-- Screen 2: MCQ -->
+  <div id="kanjiScreen2" class="kanji-screen">
+    <h2>Select the correct kanji</h2>
     <div id="kanjiMcqContainer"></div>
   </div>
 
-  <!-- ⭐ SCREEN 3 — SUMMARY -->
-  <div class="kanji-screen" id="kanjiScreen3">
+  <!-- Screen 3: Summary -->
+  <div id="kanjiScreen3" class="kanji-screen">
+    <h2>Summary</h2>
+    <p id="kanjiSummaryKanji"></p>
+    <p id="kanjiSummaryFurigana"></p>
+    <p id="kanjiSummaryRomaji"></p>
+    <p id="kanjiSummaryKun"></p>
+    <p id="kanjiSummaryOn"></p>
+    <p id="kanjiSummaryMeaning"></p>
 
-    <div class="summary-block">
-
-      <!-- Big Kanji -->
-      <div id="kanjiSummaryKanji" style="font-size: 64px; margin-bottom: 10px;"></div>
-
-      <!-- Hiragana -->
-      <div id="kanjiSummaryFurigana" style="font-size: 24px; opacity: 0.8; margin-bottom: 10px;"></div>
-
-      <!-- Romaji -->
-      <div id="kanjiSummaryRomaji" style="font-size: 22px; opacity: 0.9; margin-bottom: 20px;"></div>
-
-      <!-- Kun-yomi -->
-      <div id="kanjiSummaryKun" style="font-size: 20px; margin-bottom: 10px;"></div>
-
-      <!-- On-yomi -->
-      <div id="kanjiSummaryOn" style="font-size: 20px; margin-bottom: 10px;"></div>
-
-      <!-- English meaning -->
-      <div id="kanjiSummaryMeaning" style="font-size: 22px; margin-top: 20px; color: #7fd1ff;"></div>
-
-    </div>
-
-    <button id="kanjiNextBtn">Next ▶</button>
+    <button id="kanjiNextRoundBtn">Next</button>
   </div>
 
+  <!-- Engine -->
   <script src="kanji.js"></script>
 
+  <!-- Start -->
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      KANJI.dataset = kanjiBasic;
-      KANJI.start();
-    });
+    KANJI.start("miru");
   </script>
 
 </body>
