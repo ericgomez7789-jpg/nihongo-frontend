@@ -122,7 +122,26 @@ const shuwaAisatsu = [
       "まるで ぼくしんぐ の かまえ を とる ように、みぎて を ぎゅっと にぎり、そっと はな の まえ に つけて 「こん」 と かすか に ふれる。そのあと まるで すうっと はな から みぎて を はなれて、ぱたっと こぶし を あけて、かすか に あたま を さげて、ていねい な あいさつ の きもち を あらわします。この いちれん の しぐさ は どういう いみ に なりますか。",
     summary_english:
       "As if taking a boxing stance, you clench your right hand tightly, place it softly in front of your nose, and let it touch with a faint little “kon.” After that, you smoothly move your right hand away from your nose, open your fist with a light “pata,” and lower your head just a little, expressing a polite, sincere greeting. What does this sequence of gestures mean?"
-  }
+  },
+
+  {
+  id: "omedetou",
+  audio: "audio/omedetou.wav",
+  choices: ["おめでとう", "ありがとう", "ごめんなさい"],
+  answer: "おめでとう",
+
+  summary_hiragana:
+    "はじめに ぱつぱつ と りょうて の ゆびさき を つなげながら、はじけさせる よう に うごかし、さらに からだ の まえ で はなび が はじける みたい に ふわっと あげて、よろこび や いわい の きもち を あらわします。この いちれん の しぐさ は どういう いみ に なりますか。",
+
+  summary_english:
+    "First, with a lively *patsu‑patsu* motion, you connect the fingertips of both hands and move them as if making tiny sparks burst. Then, in front of your body, you lift your hands in a soft upward motion like a firework bursting open, expressing joy and celebration. What does this sequence of gestures mean?"
+},
+
+
+
+
+
+
 ];
 
 
