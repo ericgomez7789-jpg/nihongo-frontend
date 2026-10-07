@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>手話の山 — ごめんなさい</title>
+  <title>手話の山 — ランダム</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
@@ -13,7 +13,6 @@
       font-family: Arial, sans-serif;
     }
 
-    /* ⭐ NEW VISIBILITY SYSTEM */
     .shuwa-screen {
       display: none;
       padding: 40px 0;
@@ -22,12 +21,6 @@
 
     .shuwa-screen.show {
       display: block !important;
-    }
-
-    audio {
-      width: 90%;
-      max-width: 600px;
-      margin-bottom: 40px;
     }
 
     .next-btn, .mcqBtn, #shuwaReplayBtn, #shuwaNextBtn {
@@ -41,11 +34,23 @@
       margin-top: 20px;
     }
 
-    .next-btn:hover,
-    .mcqBtn:hover,
-    #shuwaReplayBtn:hover,
-    #shuwaNextBtn:hover {
-      background: #7fd1ff;
+    /* ⭐ MCQ BUTTON COLORS */
+    .mcqBtn.correct {
+      background-color: #4caf50 !important;
+      color: #fff !important;
+    }
+
+    .mcqBtn.wrong {
+      background-color: #b71c1c !important;
+      color: #fff !important;
+    }
+
+    .mcqBtn.correct:hover {
+      background-color: #4caf50 !important;
+    }
+
+    .mcqBtn.wrong:hover {
+      background-color: #b71c1c !important;
     }
 
     #shuwaMcqContainer {
@@ -57,12 +62,17 @@
       margin: 40px auto;
     }
 
-    .mcqBtn.correct {
-      background: #4caf50;
-    }
-
-    .mcqBtn.wrong {
-      background: #b71c1c;
+    /* ⭐ Correct Answer Box */
+    #shuwaCorrectAnswer {
+      width: 90%;
+      max-width: 600px;
+      background: #333;
+      padding: 16px;
+      border-radius: 10px;
+      font-size: 22px;
+      margin: 0 auto 20px auto;
+      text-align: center;
+      font-weight: bold;
     }
 
     #shuwaSummaryTextHiragana,
@@ -81,44 +91,35 @@
 
 <body>
 
-  <!-- ⭐ SCREEN 1 — AUDIO ONLY -->
+  <!-- ⭐ SCREEN 1 -->
   <div class="shuwa-screen" id="shuwaScreen1">
     <p style="margin-top: 20px; font-size: 20px; opacity: 0.8;">
-    まずは、きくだけ。
-  </p>
-
-    <button class="next-btn" onclick="SHUWA.screen2()">Next ▶</button>
+      まずは、きくだけ。
+    </p>
+    <button class="next-btn">Next ▶</button>
   </div>
 
-  <!-- ⭐ SCREEN 2 — MCQ -->
+  <!-- ⭐ SCREEN 2 -->
   <div class="shuwa-screen" id="shuwaScreen2">
     <button id="shuwaReplayBtn">▶ Replay Audio</button>
     <div id="shuwaMcqContainer"></div>
   </div>
 
-  <!-- ⭐ SCREEN 3 — SUMMARY -->
+  <!-- ⭐ SCREEN 3 -->
   <div class="shuwa-screen" id="shuwaScreen3">
-    <div id="shuwaSummaryTextHiragana">
-      なやんでシワがよるようにみぎのひとさしゆびとなかゆびではなをつまみ、  
-      まるでしゅとうでうつようにみぎてをまえにそっとさしだし、  
-      さらにかすかにこしをかがめてあやまるきもちをしめします。  
-      このいちれんのしぐさが、どういういみになりますか。
-    </div>
-
-    <div id="shuwaSummaryTextEnglish">
-      As if troubled, you pinch your nose lightly with the right index and middle finger,  
-      then gently extend your right hand forward as if making a hand‑blade motion,  
-      and finally bend your waist slightly to show a sincere apology.  
-      What does this sequence of gestures represent?
-    </div>
-
+    <div id="shuwaCorrectAnswer"></div>
+    <div id="shuwaSummaryTextHiragana"></div>
+    <div id="shuwaSummaryTextEnglish"></div>
     <button id="shuwaNextBtn">Next ▶</button>
   </div>
 
-  <!-- ⭐ SHUWA ENGINE -->
+  <!-- ⭐ SHUWA ENGINE + DATASET -->
   <script src="shuwa.js"></script>
+  <script src="shuwa-aisatsu-dataset.js"></script>
+
   <script>
     document.addEventListener("DOMContentLoaded", () => {
+      SHUWA.dataset = shuwaAisatsu;   // Load your dataset
       SHUWA.start();
     });
   </script>

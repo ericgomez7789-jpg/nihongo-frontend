@@ -80,102 +80,51 @@ const shuwaAisatsu = [
       "As if tracing the gesture of patting the other person's shoulder with your palm, you form a fist with your right hand and tap the back of your tightly closed left hand in a soft pon‑pon rhythm. What does this sequence of gestures mean?"
   },
 
-
-
-
-
-
-
-
-
-
-
-{
-  id: "sayounara",
-  audio: "audio/sayounara.wav",
-  choices: ["さようなら", "ありがとう", "こんにちは"],
-  answer: "さようなら",
-
-  summary_hiragana:
-    "みぎてのひらをあいてにむけてみせ、かるくさゆうにふることで、あいてにわかれをつげるしぐさをあらわします。このいちれんのしぐさが、どういういみになりますか。",
-
-  summary_english:
-    "You show your right palm toward the other person and gently move it side to side, expressing a friendly parting gesture. What does this sequence of movements mean?"
-},
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{
-  id: "matane",
-  audio: "audio/matane.wav",
-  choices: ["またね", "ありがとう", "ごめんなさい"],
-  answer: "またね",
-
-  summary_hiragana:
-    "みぎて の ひとさしゆび と なかゆび を さしだす ことで、ゆび で ちいさく「また」らしい かたち を つくり、そのまま むね の まえ で、はじめ に ひだりて が みぎて の まえ に おかれ、りょうて の ひとさしゆび を はなして むかいあわせ に し、くいっ と まえ に つなげる ことで、あいて に「また あおう」 という きもち を つたえる しぐさ を あらわします。この いちれん の しぐさ が、どういう いみ に なりますか。",
-
-  summary_english:
-    "By extending the right index and middle finger to form a small shape that suggests 'again,' then placing the left hand before the right in front of the chest, opening both index fingers and bringing them to face each other, you give a small kui‑t forward linking motion. This expresses the feeling of 'let’s meet again.' What does this sequence of gestures represent?"
-},
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{
-  id: "hajimemashite",
-  audio: "audio/hajimemashite.wav",
-  choices: ["はじめまして", "こんにちは", "ありがとう"],
-  answer: "はじめまして",
-
-  summary_hiragana:
-    "ふせた まま の みぎて の ひら で すべて の ゆび を のばして、みぎて を あげながら ひとさしゆび いがい の ゆび を ぎゅっと にぎり、さらに むね の まえ に ひだりて を みぎて の まえ に おいて、りょうほう の ひとさしゆび を はなして むかいあわせ に し、そのうえ ひとさしゆび を つなげます。この いちれん の しぐさ は どういう いみ に なりますか。",
-
-  summary_english:
-    "With the right hand held palm‑down and all fingers extended, you raise the hand and then close every finger except the index finger to show 'first time.' Placing the left hand in front of the right at chest level, you open both index fingers so they face each other, then connect them. What does this sequence of gestures represent?"
-},
-
-
-
-
-
-
-
-
-
-
-
-
-
+  {
+    id: "sayounara",
+    audio: "audio/sayounara.wav",
+    choices: ["さようなら", "ありがとう", "こんにちは"],
+    answer: "さようなら",
+    summary_hiragana:
+      "みぎてのひらをあいてにむけてみせ、かるくさゆうにふることで、あいてにわかれをつげるしぐさをあらわします。このいちれんのしぐさが、どういういみになりますか。",
+    summary_english:
+      "You show your right palm toward the other person and gently move it side to side, expressing a friendly parting gesture. What does this sequence of movements mean?"
+  },
+
+  {
+    id: "matane",
+    audio: "audio/matane.wav",
+    choices: ["またね", "ありがとう", "ごめんなさい"],
+    answer: "またね",
+    summary_hiragana:
+      "みぎて の ひとさしゆび と なかゆび を さしだす ことで、ゆび で ちいさく「また」らしい かたち を つくり、そのまま むね の まえ で、はじめ に ひだりて が みぎて の まえ に おかれ、りょうて の ひとさしゆび を はなして むかいあわせ に し、くいっ と まえ に つなげる ことで、あいて に「また あおう」 という きもち を つたえる しぐさ を あらわします。この いちれん の しぐさ が、どういう いみ に なりますか。",
+    summary_english:
+      "By extending the right index and middle finger to form a small shape that suggests 'again,' then placing the left hand before the right in front of the chest, opening both index fingers and bringing them to face each other, you give a small kui‑t forward linking motion. This expresses the feeling of 'let’s meet again.' What does this sequence of gestures represent?"
+  },
+
+  {
+    id: "hajimemashite",
+    audio: "audio/hajimemashite.wav",
+    choices: ["はじめまして", "こんにちは", "ありがとう"],
+    answer: "はじめまして",
+    summary_hiragana:
+      "ふせた まま の みぎて の ひら で すべて の ゆび を のばして、みぎて を あげながら ひとさしゆび いがい の ゆび を ぎゅっと にぎり、さらに むね の まえ に ひだりて を みぎて の まえ に おいて、りょうほう の ひとさしゆび を はなして むかいあわせ に し、そのうえ ひとさしゆび を つなげます。この いちれん の しぐさ は どういう いみ に なりますか。",
+    summary_english:
+      "With the right hand held palm‑down and all fingers extended, you raise the hand and then close every finger except the index finger to show 'first time.' Placing the left hand in front of the right at chest level, you open both index fingers so they face each other, then connect them. What does this sequence of gestures represent?"
+  },
+
+  {
+    id: "yoroshiku_onegaishimasu",
+    audio: "audio/yoroshiku-onegaishimasu.wav",
+    choices: ["よろしくおねがいします", "ありがとう", "ごめんなさい"],
+    answer: "よろしくおねがいします",
+    summary_hiragana:
+      "まるで ぼくしんぐ の かまえ を とる ように、みぎて を ぎゅっと にぎり、そっと はな の まえ に つけて 「こん」 と かすか に ふれる。そのあと まるで すうっと はな から みぎて を はなれて、ぱたっと こぶし を あけて、かすか に あたま を さげて、ていねい な あいさつ の きもち を あらわします。この いちれん の しぐさ は どういう いみ に なりますか。",
+    summary_english:
+      "As if taking a boxing stance, you clench your right hand tightly, place it softly in front of your nose, and let it touch with a faint little “kon.” After that, you smoothly move your right hand away from your nose, open your fist with a light “pata,” and lower your head just a little, expressing a polite, sincere greeting. What does this sequence of gestures mean?"
+  }
 ];
+
 
 /* ==========================================================
    SHUWA — CORE ENGINE (mobile‑safe, no auto‑advance)
@@ -368,8 +317,13 @@ SHUWA.screen3 = function () {
 
   const item = SHUWA.currentItem;
 
+  const correctBox = document.getElementById("shuwaCorrectAnswer");
   const hiraBox = document.getElementById("shuwaSummaryTextHiragana");
   const engBox = document.getElementById("shuwaSummaryTextEnglish");
+
+  if (correctBox) {
+    correctBox.textContent = "正解： " + item.answer;
+  }
 
   if (hiraBox) hiraBox.textContent = item.summary_hiragana;
   if (engBox) engBox.textContent = item.summary_english;
@@ -381,6 +335,7 @@ SHUWA.screen3 = function () {
     };
   }
 };
+
 
 /* ==========================================================
    GLOBAL FIX — REMOVE INLINE onclick FROM SCREEN1 BUTTON
