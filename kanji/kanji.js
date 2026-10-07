@@ -486,11 +486,442 @@ noboru: {
   answer: "登る"
 },
 
+ageru: {
+  id: "ageru",
+  audio: "audio/ageru.wav",
+  kanji: "上げる",
+  kanjiBase: "上げ",
+  okurigana: "る",
+  furigana: "あ",
+  romaji: "ageru",
+  kun: "あげる",
+  on: "ジョウ",
+  meaning: "to raise; to lift; to increase, to give",
+  answer: "上げる"
+},
+
+akeru: {
+  id: "akeru",
+  audio: "audio/akeru.wav",
+  kanji: "開ける",
+  kanjiBase: "開け",
+  okurigana: "る",
+  furigana: "あ",
+  romaji: "akeru",
+  kun: "あける",
+  on: "カイ",
+  meaning: "to open",
+  answer: "開ける"
+},
+
+shimeru: {
+  id: "shimeru",
+  audio: "audio/shimeru.wav",
+  kanji: "閉める",
+  kanjiBase: "閉め",
+  okurigana: "る",
+  furigana: "し",
+  romaji: "shimeru",
+  kun: "しめる",
+  on: "ヘイ",
+  meaning: "to close; to shut",
+  answer: "閉める"
+},
+
+utsu: {
+  id: "utsu",
+  audio: "audio/utsu.wav",
+  kanji: "打つ",
+  kanjiBase: "打",
+  okurigana: "つ",
+  furigana: "う",
+  romaji: "utsu",
+  kun: "うつ",
+  on: "ダ",
+  meaning: "to hit; to strike; to type",
+  answer: "打つ"
+},
+
+osu: {
+  id: "osu",
+  audio: "audio/osu.wav",
+  kanji: "押す",
+  kanjiBase: "押",
+  okurigana: "す",
+  furigana: "お",
+  romaji: "osu",
+  kun: "おす",
+  on: "オウ",
+  meaning: "to push; to press",
+  answer: "押す"
+},
+
+deru: {
+  id: "deru",
+  audio: "audio/deru.wav",
+  kanji: "出る",
+  kanjiBase: "出",
+  okurigana: "る",
+  furigana: "で",
+  romaji: "deru",
+  kun: "でる",
+  on: "シュツ",
+  meaning: "to exit; to leave; to come out",
+  answer: "出る"
+},
+
+tobu: {
+  id: "tobu",
+  audio: "audio/tobu.wav",
+  kanji: "飛ぶ",
+  kanjiBase: "飛",
+  okurigana: "ぶ",
+  furigana: "と",
+  romaji: "tobu",
+  kun: "とぶ",
+  on: "ヒ",
+  meaning: "to fly; to jump",
+  answer: "飛ぶ"
+},
+
+kureru: {
+  id: "kureru",
+  audio: "audio/kureru.wav",
+  kanji: "呉れる",
+  kanjiBase: "呉れ",
+  okurigana: "る",
+  furigana: "くれ",
+  romaji: "kureru",
+  kun: "くれる; くれ",
+  on: "ゴ",
+  meaning: "to give (to me/us)",
+  answer: "呉れる"
+},
 
 
+yaru: {
+  id: "yaru",
+  audio: "audio/yaru.wav",
+  kanji: "遣る",
+  kanjiBase: "遣",
+  okurigana: "る",
+  furigana: "や",
+  romaji: "yaru",
+  kun: "やる; つかう; つかい; づかい; つかわす",
+  on: "ケン",
+  meaning: "to do; to give; to send; to dispatch",
+  answer: "遣る"
+},
 
 
+morau: {
+  id: "morau",
+  audio: "audio/morau.wav",
+  kanji: "貰う",
+  kanjiBase: "貰",
+  okurigana: "う",
+  furigana: "もら",
+  romaji: "morau",
+  kun: "もらう",
+  on: "セイ, シャ",
+  meaning: "to receive",
+  answer: "貰う"
+},
 
+
+tsukau: {
+  id: "tsukau",
+  audio: "audio/tsukau.wav",
+  kanji: "使う",
+  kanjiBase: "使",
+  okurigana: "う",
+  furigana: "つか",
+  romaji: "tsukau",
+  kun: "つかう",
+  on: "シ",
+  meaning: "to use",
+  answer: "使う"
+},
+
+kureru2: {
+  id: "kureru2",
+  audio: "audio/kureru.wav",
+  kanji: "暮れる",
+  kanjiBase: "暮れ",
+  okurigana: "る",
+  furigana: "くれ",
+  romaji: "kureru",
+  kun: "くれる; くれ",
+  on: "ボ",
+  meaning: "to get dark; to end; to come to an end (day, year, season)",
+  answer: "暮れる"
+},
+
+shimeru2: {
+  id: "shimeru2",
+  audio: "audio/shimeru.wav",
+  kanji: "締める",
+  kanjiBase: "締め",
+  okurigana: "る",
+  furigana: "しめ",
+  romaji: "shimeru",
+  kun: "しめる; しめ",
+  on: "テイ",
+  meaning: "to tighten; to fasten; to tie; to secure; to press firmly",
+  answer: "締める"
+},
+
+shimeru3: {
+  id: "shimeru3",
+  audio: "audio/shimeru.wav",
+  kanji: "絞める",
+  kanjiBase: "絞め",
+  okurigana: "る",
+  furigana: "しめ",
+  romaji: "shimeru",
+  kun: "しめる; しめ",
+  on: "コウ",
+  meaning: "to strangle; to squeeze; to wring; to tighten firmly",
+  answer: "絞める"
+},
+
+komaru: {
+  id: "komaru",
+  audio: "audio/komaru.wav",
+  kanji: "困る",
+  kanjiBase: "困",
+  okurigana: "る",
+  furigana: "こま",
+  romaji: "komaru",
+  kun: "こまる",
+  on: "コン",
+  meaning: "to be troubled; to be bothered; to be in difficulty",
+  answer: "困る"
+},
+
+kuru: {
+  id: "kuru",
+  audio: "audio/kuru.wav",
+  kanji: "来る",
+  kanjiBase: "来",
+  okurigana: "る",
+  furigana: "く",
+  romaji: "kuru",
+  kun: "くる",
+  on: "ライ",
+  meaning: "to come",
+  answer: "来る"
+},
+
+wakaru: {
+  id: "wakaru",
+  audio: "audio/wakaru.wav",
+  kanji: "分かる",
+  kanjiBase: "分か",
+  okurigana: "る",
+  furigana: "わか",
+  romaji: "wakaru",
+  kun: "わかる",
+  on: "ブン",
+  meaning: "to understand; to know; to comprehend",
+  answer: "分かる"
+},
+
+shiru: {
+  id: "shiru",
+  audio: "audio/shiru.wav",
+  kanji: "知る",
+  kanjiBase: "知",
+  okurigana: "る",
+  furigana: "し",
+  romaji: "shiru",
+  kun: "しる",
+  on: "チ",
+  meaning: "to know; to learn; to find out",
+  answer: "知る"
+},
+
+detekuru: {
+  id: "detekuru",
+  audio: "audio/detekuru.wav",
+  kanji: "出て来る",
+  kanjiBase: "出て来",
+  okurigana: "る",
+  furigana: "でてく",
+  romaji: "detekuru",
+  kun: "でてくる",
+  on: "シュツ, ライ",
+  meaning: "to come out; to appear; to emerge",
+  answer: "出て来る"
+},
+
+fumu: {
+  id: "fumu",
+  audio: "audio/fumu.wav",
+  kanji: "踏む",
+  kanjiBase: "踏",
+  okurigana: "む",
+  furigana: "ふ",
+  romaji: "fumu",
+  kun: "ふむ",
+  on: "トウ",
+  meaning: "to step on; to tread; to stomp",
+  answer: "踏む"
+},
+
+suru: {
+  id: "suru",
+  audio: "audio/suru.wav",
+  kanji: "する",
+  kanjiBase: "す",
+  okurigana: "る",
+  furigana: "す",
+  romaji: "suru",
+  kun: "する",
+  on: "",
+  meaning: "to do; to perform",
+  answer: "する"
+},
+
+utsuru: {
+  id: "utsuru",
+  audio: "audio/utsuru.wav",
+  kanji: "移る",
+  kanjiBase: "移",
+  okurigana: "る",
+  furigana: "うつ",
+  romaji: "utsuru",
+  kun: "うつる",
+  on: "イ",
+  meaning: "to move; to shift; to transfer; to change location",
+  answer: "移る"
+},
+
+fureru: {
+  id: "fureru",
+  audio: "audio/fureru.wav",
+  kanji: "触れる",
+  kanjiBase: "触れ",
+  okurigana: "る",
+  furigana: "ふれ",
+  romaji: "fureru",
+  kun: "ふれる",
+  on: "ショク",
+  meaning: "to touch; to feel; to come into contact",
+  answer: "触れる"
+},
+
+tsunagu: {
+  id: "tsunagu",
+  audio: "audio/tsunagu.wav",
+  kanji: "繋ぐ",
+  kanjiBase: "繋",
+  okurigana: "ぐ",
+  furigana: "つな",
+  romaji: "tsunagu",
+  kun: "つなぐ",
+  on: "",
+  meaning: "to connect; to link; to tie together",
+  answer: "繋ぐ"
+},
+
+tsunageru: {
+  id: "tsunageru",
+  audio: "audio/tsunageru.wav",
+  kanji: "繋げる",
+  kanjiBase: "繋げ",
+  okurigana: "る",
+  furigana: "つな",
+  romaji: "tsunageru",
+  kun: "つなげる",
+  on: "",
+  meaning: "to connect; to attach; to fasten; to link",
+  answer: "繋げる"
+},
+
+shibaru: {
+  id: "shibaru",
+  audio: "audio/shibaru.wav",
+  kanji: "縛る",
+  kanjiBase: "縛",
+  okurigana: "る",
+  furigana: "しば",
+  romaji: "shibaru",
+  kun: "しばる",
+  on: "バク",
+  meaning: "to tie; to bind; to restrain",
+  answer: "縛る"
+},
+
+tanoshimu: {
+  id: "tanoshimu",
+  audio: "audio/tanoshimu.wav",
+  kanji: "楽しむ",
+  kanjiBase: "楽し",
+  okurigana: "む",
+  furigana: "たのし",
+  romaji: "tanoshimu",
+  kun: "たのしむ",
+  on: "ラク",
+  meaning: "to enjoy; to have fun; to take pleasure in",
+  answer: "楽しむ"
+},
+
+utsuru2: {
+  id: "utsuru2",
+  audio: "audio/utsuru.wav",
+  kanji: "映る",
+  kanjiBase: "映",
+  okurigana: "る",
+  furigana: "うつ",
+  romaji: "utsuru",
+  kun: "うつる",
+  on: "エイ",
+  meaning: "to be reflected; to be projected; to appear (in a mirror, on a screen)",
+  answer: "映る"
+},
+
+utsuru3: {
+  id: "utsuru3",
+  audio: "audio/utsuru.wav",
+  kanji: "伝染る",
+  kanjiBase: "伝染",
+  okurigana: "る",
+  furigana: "うつ",
+  romaji: "utsuru",
+  kun: "うつる",
+  on: "デン, セン",
+  meaning: "to be infected; to catch an illness; to spread contagiously",
+  answer: "伝染る"
+},
+
+utsuru4: {
+  id: "utsuru4",
+  audio: "audio/utsuru.wav",
+  kanji: "感染る",
+  kanjiBase: "感染",
+  okurigana: "る",
+  furigana: "うつ",
+  romaji: "utsuru",
+  kun: "うつる",
+  on: "カン, セン",
+  meaning: "to be infected (medical/clinical); to contract an illness",
+  answer: "感染る"
+},
+
+utsuru5: {
+  id: "utsuru5",
+  audio: "audio/utsuru.wav",
+  kanji: "写る",
+  kanjiBase: "写",
+  okurigana: "る",
+  furigana: "うつ",
+  romaji: "utsuru",
+  kun: "うつる",
+  on: "シャ",
+  meaning: "to be photographed; to come out (in a photo); to be copied",
+  answer: "写る"
+},
 
 
 
