@@ -8701,6 +8701,87 @@ const level3 = [
 
 
 
+{
+  "id": "es3-34",
+  "meaning": "Mientras dormía al aire libre, prendí una lámpara impresionante de acampar que había traído antes y todos dijeron 'ahhhh!' con los ojos muy abiertos y contuvieron la respiración — ¿qué ocurre después?",
+  "level": 3,
+
+  "options": [
+    "La gente se acerca curiosa y me pide ver cómo funciona la lámpara",
+    "La lámpara empieza a proyectar constelaciones que se mueven solas en el cielo",
+    "Un guardián de la luz aparece y declara que soy el elegido del campamento",
+    "La lámpara se transforma en un pequeño sol que flota sobre nuestras cabezas"
+  ],
+
+  "optionsRomaji": [
+    "la_gente_se_acerca_curiosa_y_me_pide_ver_como_funciona_la_lampara",
+    "la_lampara_empieza_a_proyectar_constelaciones_que_se_mueven_solas_en_el_cielo",
+    "un_guardián_de_la_luz_aparece_y_declara_que_soy_el_elegido_del_campamento",
+    "la_lampara_se_transforma_en_un_pequeno_sol_que_flota_sobre_nuestras_cabezas"
+  ],
+
+  "optionsEN": [
+    "People come closer, curious, and ask me to show how the lamp works",
+    "The lamp begins projecting constellations that move on their own in the sky",
+    "A guardian of light appears and declares that I am the chosen one of the campsite",
+    "The lamp transforms into a small sun that floats above our heads"
+  ],
+
+  "correct": "La gente se acerca curiosa y me pide ver cómo funciona la lámpara",
+
+  "fullAudio": {
+    "daughter": "audio/spanish/inference34.wav",
+    "me": "audio/spanish/inference34.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["spanish/audio/la_gente_se_acerca_curiosa_y_me_pide_ver_como_funciona_la_lampara.wav"],
+      ["spanish/audio/la_lampara_empieza_a_proyectar_constelaciones_que_se_mueven_solas_en_el_cielo.wav"],
+      ["spanish/audio/un_guardián_de_la_luz_aparece_y_declara_que_soy_el_elegido_del_campamento.wav"],
+      ["spanish/audio/la_lampara_se_transforma_en_un_pequeno_sol_que_flota_sobre_nuestras_cabezas.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["spanish/audio/la_gente_se_acerca_curiosa_y_me_pide_ver_como_funciona_la_lampara.wav"],
+    ["spanish/audio/la_lampara_empieza_a_proyectar_constelaciones_que_se_mueven_solas_en_el_cielo.wav"],
+    ["spanish/audio/un_guardián_de_la_luz_aparece_y_declara_que_soy_el_elegido_del_campamento.wav"],
+    ["spanish/audio/la_lampara_se_transforma_en_un_pequeno_sol_que_flota_sobre_nuestras_cabezas.wav"]
+  ],
+
+  "chunks": [
+    {
+      "spanish": "Mientras dormía al aire libre",
+      "english": "While I was sleeping outdoors"
+    },
+    {
+      "spanish": "prendí una lámpara impresionante de acampar que había traído antes",
+      "english": "I turned on an impressive camping lamp I had brought earlier"
+    },
+    {
+      "spanish": "y todos dijeron 'ahhhh!' con los ojos muy abiertos",
+      "english": "and everyone said 'ahhhh!' with their eyes wide open"
+    },
+    {
+      "spanish": "y contuvieron la respiración",
+      "english": "and they held their breath"
+    },
+    {
+      "spanish": "¿qué ocurre después?",
+      "english": "what happens next?"
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
 
 
 
