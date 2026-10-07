@@ -34,7 +34,6 @@
       margin-top: 20px;
     }
 
-    /* ⭐ MCQ BUTTON COLORS */
     .mcqBtn.correct {
       background-color: #4caf50 !important;
       color: #fff !important;
@@ -62,7 +61,6 @@
       margin: 40px auto;
     }
 
-    /* ⭐ Correct Answer Box */
     #shuwaCorrectAnswer {
       width: 90%;
       max-width: 600px;
@@ -113,16 +111,27 @@
     <button id="shuwaNextBtn">Next ▶</button>
   </div>
 
-  <!-- ⭐ SHUWA ENGINE + DATASET -->
+  <!-- ⭐ SHUWA ENGINE + DATASETS -->
   <script src="shuwa.js"></script>
-  <script src="shuwa-aisatsu-dataset.js"></script>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      SHUWA.dataset = shuwaAisatsu;   // Load your dataset
-      SHUWA.start();
-    });
-  </script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const params = new URLSearchParams(window.location.search);
+    const category = params.get("category");
+
+    if (category === "aisatsu") {
+      SHUWA.dataset = shuwaAisatsu;
+    } else if (category === "nichijou") {
+      SHUWA.dataset = shuwaWeekdaysMonths;
+    } else {
+      alert("カテゴリーが選ばれていません。ホームにもどってください。");
+      return;
+    }
+
+    SHUWA.start();
+  });
+</script>
+
 
 </body>
 </html>
