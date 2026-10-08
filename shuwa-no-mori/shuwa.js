@@ -138,7 +138,24 @@ const shuwaAisatsu = [
 },
 
 
+];
 
+
+
+
+const shuwaWeekdaysMonths = [
+  {
+  id: "getsuyoubi",
+  audio: "audio/getsuyoubi.wav",
+  choices: ["げつようび", "かようび", "すいようび"],
+  answer: "げつようび",
+
+  summary_hiragana:
+    "まず みぎて を そっと ひらいて、まるで ちいさな つき を てのひら に のせる よう に、ゆっくり と うえ に かかげます。そのあと、てのひら を かすか に かたむけて、つきあかり が すうっと ひろがる みたい に、やわらかく まえ に すべらせます。さいご に、て を しずか に おろして、しずかな よる の はじまり を あらわします。この いちれん の しぐさ は どういう いみ に なりますか。",
+
+  summary_english:
+    "First, you gently open your right hand and lift it upward as if placing a small moon onto your palm. Then you tilt your hand slightly, letting it glide forward softly like moonlight spreading across the night. Finally, you lower your hand quietly, expressing the calm beginning of the evening. What does this sequence of gestures mean?"
+},
 
 
 
@@ -160,24 +177,15 @@ const shuwaAisatsu = [
 
 
 
-];
 
 
 
 
-const shuwaWeekdaysMonths = [
-  {
-  id: "getsuyoubi",
-  audio: "audio/getsuyoubi.wav",
-  choices: ["げつようび", "かようび", "すいようび"],
-  answer: "げつようび",
 
-  summary_hiragana:
-    "まず みぎて を そっと ひらいて、まるで ちいさな つき を てのひら に のせる よう に、ゆっくり と うえ に かかげます。そのあと、てのひら を かすか に かたむけて、つきあかり が すうっと ひろがる みたい に、やわらかく まえ に すべらせます。さいご に、て を しずか に おろして、しずかな よる の はじまり を あらわします。この いちれん の しぐさ は どういう いみ に なりますか。",
 
-  summary_english:
-    "First, you gently open your right hand and lift it upward as if placing a small moon onto your palm. Then you tilt your hand slightly, letting it glide forward softly like moonlight spreading across the night. Finally, you lower your hand quietly, expressing the calm beginning of the evening. What does this sequence of gestures mean?"
-},
+
+
+
 ];
 
 
