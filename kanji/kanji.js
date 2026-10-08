@@ -1769,9 +1769,10 @@ KANJI.screen2 = function () {
   options.forEach(opt => {
     const div = document.createElement("div");
 
-    // Mode-specific class
-    div.className = "mcq-option";
-
+    // Mode-specific class (correct)
+    div.className = (KANJI.mode === "nouns")
+      ? "mcq-option mcq-noun"
+      : "mcq-option mcq-verb";
 
     // Nouns → kanji only
     if (KANJI.mode === "nouns") {
@@ -1785,13 +1786,12 @@ KANJI.screen2 = function () {
       div.innerHTML = `
         <span style="font-size: 32px;">${opt.kanjiBase}</span>
         <span class="okurigana">${opt.okurigana}</span>
-
       `;
     }
 
     div.onclick = () => KANJI.handleMCQ(opt.kanjiBase + (opt.okurigana || ""));
     mcqBox.appendChild(div);
-  }); // closes forEach
+  });
 
 }; // closes KANJI.screen2
 
@@ -1809,13 +1809,13 @@ KANJI.handleMCQ = function (choiceKanji) {
     btn.style.pointerEvents = "none";
     const isCorrect = btn.textContent.includes(correct);
 
-    // unified colors for verbs + nouns
-    btn.style.background = isCorrect ? "#1e5128" : "#512828";
-
+    btn.classList.remove("correct", "wrong");
+    btn.classList.add(isCorrect ? "correct" : "wrong");
   });
 
   setTimeout(() => KANJI.screen3(), 900);
 };
+
 
 
 /* ==========================================================

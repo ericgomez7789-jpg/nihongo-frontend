@@ -5,8 +5,23 @@
   <title>Kanji Practice</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <style>
-   body {
+body {
   margin: 0;
   background: #0d0d0d;
   color: #ffffff;
@@ -41,90 +56,78 @@ button {
 }
 
 /* ==========================================================
-   NOUN MCQ STYLE (simple, dark, minimal)
+   BASE MCQ BLOCK — unified for nouns + verbs
    ========================================================== */
-.mcq-noun {
-  background: #1a1a1a;
-  padding: 14px;
-  margin: 10px auto;
-  width: 80%;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 32px;
-  transition: background 0.15s ease;
-}
-.mcq-noun:hover {
-  background: #333;
-}
-
-/* ==========================================================
-   VERB MCQ STYLE (kanji + okurigana, needs spacing + contrast)
-   ========================================================== */
-/* ==========================================================
-   VERB MCQ STYLE (same colors as nouns)
-   ========================================================== */
-.mcq-verb {
-  background: #1a1a1a;          /* SAME as nouns */
-  padding: 16px 20px;
-  margin: 10px auto;
-  width: 80%;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 18px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 14px;
-
-  transition: background 0.15s ease;
-}
 .mcq-option {
-  background: #1a1a1a;
-  padding: 16px 20px;
+  background: #1a1a1a;        /* identical base color */
+  padding: 14px;              /* identical padding */
   margin: 10px auto;
   width: 80%;
   border-radius: 6px;
   cursor: pointer;
   transition: background 0.15s ease;
 
-  display: flex;
+  display: flex;              /* unified layout */
   justify-content: center;
   align-items: center;
-  gap: 14px;
+  gap: 12px;                  /* okurigana spacing */
 }
 
 .mcq-option:hover {
   background: #333;
 }
 
-
+/* ==========================================================
+   NOUNS — only difference is font size
+   ========================================================== */
+.mcq-noun {
+  font-size: 32px;
+}
 
 /* ==========================================================
-   CORRECT / WRONG COLORS (verbs need brighter tones)
+   VERBS — same block, okurigana included
    ========================================================== */
-.mcq-option.correct-verb {
-  background: #1e5128 !important;   /* brighter green */
-}
-.mcq-option.wrong-verb {
-  background: #512828 !important;   /* brighter red */
+.mcq-verb {
+  font-size: 32px;            /* SAME as nouns */
 }
 
-.mcq-option.correct-noun {
-  background: #1e5128 !important;   /* deep green */
-}
-.mcq-option.wrong-noun {
-  background: #512828 !important;   /* deep red */
-}
-
+/* Okurigana stays smaller */
 .okurigana {
   font-size: 22px;
-  margin-left: 12px;
-  color: #ffffff;   /* SAME color as nouns */
+  color: #ffffff;
 }
 
+/* ==========================================================
+   CORRECT / WRONG COLORS — unified
+   ========================================================== */
+.mcq-option.correct {
+  background: #1e5128 !important;   /* unified green */
+}
 
-  </style>
+.mcq-option.wrong {
+  background: #512828 !important;   /* unified red */
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </head>
 
 <body>
