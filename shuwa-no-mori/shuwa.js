@@ -138,6 +138,28 @@ const shuwaAisatsu = [
 },
 
 
+
+
+
+
+{
+  id: "kayoubi",
+  audio: "audio/kayoubi.wav",
+  choices: ["かようび", "すいようび", "もくようび"],
+  answer: "かようび",
+
+  summary_hiragana:
+    "はじめに くちびる の ひだりがわ に みぎて の ひとさしゆび を そっと あて、みぎて の ひとさしゆび で あか の いみ を あらわす よう に くちびる を なぞり、さらに ひ の いみ を あらわす よう に みぎ の てくび を ひらひら して ひらり と ひねりながら あげます。この いちれん の しぐさ は なん の いみ に なりますか。",
+
+  summary_english:
+    "First, you gently touch the left side of your lips with your right index finger. Then, using the same finger, you trace your lips to express the idea of red. After that, you twist your right wrist upward with a fluttering, light *hirahira–hirari* motion to represent fire rising. What does this sequence of gestures mean?"
+},
+
+
+
+
+
+
 ];
 
 
