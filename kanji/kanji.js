@@ -925,9 +925,220 @@ utsuru5: {
   answer: "写る"
 },
 
+  tsumu: {
+    id: "tsumu",
+    audio: "audio/tsumu.wav",
+    kanji: "摘む",
+    kanjiBase: "摘",
+    okurigana: "む",
+    furigana: "つ",
+    romaji: "tsumu",
+    kun: "つむ",
+    on: "テキ",
+    meaning: "to pick; to pluck (flowers, buds, fruit). A gentle, careful picking motion with fingers, without ripping or tearing.",
+    answer: "摘む"
+  },
+
+  mushiru: {
+    id: "mushiru",
+    audio: "audio/mushiru.wav",
+    kanji: "毟る",
+    kanjiBase: "毟",
+    okurigana: "る",
+    furigana: "むし",
+    romaji: "mushiru",
+    kun: "むしる",
+    on: "",
+    meaning: "to pluck; to pull out forcefully (hair, feathers, grass). A repeated small pulling motion that removes something attached, often sharply.",
+    answer: "毟る"
+  },
+
+  chigiru: {
+    id: "chigiru",
+    audio: "audio/chigiru.wav",
+    kanji: "千切る",
+    kanjiBase: "千切",
+    okurigana: "る",
+    furigana: "ちぎ",
+    romaji: "chigiru",
+    kun: "ちぎる",
+    on: "",
+    meaning: "to tear to pieces; to rip off; to shred. A messy, irregular tearing motion that breaks something into small chunks.",
+    answer: "千切る"
+  },
+
+  yaburu: {
+    id: "yaburu",
+    audio: "audio/yaburu.wav",
+    kanji: "破る",
+    kanjiBase: "破",
+    okurigana: "る",
+    furigana: "やぶ",
+    romaji: "yaburu",
+    kun: "やぶる",
+    on: "ハ",
+    meaning: "to tear; to break; to rip (paper, cloth, rules). A general-purpose tearing motion, intentional and direct.",
+    answer: "破る"
+  },
+
+    mogiru: {
+    id: "mogiru",
+    audio: "audio/mogiru.wav",
+    kanji: "捥る",
+    kanjiBase: "捥",
+    okurigana: "る",
+    furigana: "もぎ",
+    romaji: "mogiru",
+    kun: "もぎる",
+    on: "",
+    meaning: "to pluck; to twist off; to yank off (fruit, leaves). A twisting + pulling motion that detaches something at its base.",
+    answer: "捥る"
+  },
+
+  mogu: {
+    id: "mogu",
+    audio: "audio/mogu.wav",
+    kanji: "捥ぐ",
+    kanjiBase: "捥",
+    okurigana: "ぐ",
+    furigana: "も",
+    romaji: "mogu",
+    kun: "もぐ",
+    on: "",
+    meaning: "to tear off; to rip off (with hands or teeth). A direct ripping motion, often rough, removing something completely.",
+    answer: "捥ぐ"
+  },
+
+  mogitoru: {
+    id: "mogitoru",
+    audio: "audio/mogitoru.wav",
+    kanji: "捥り取る",
+    kanjiBase: "捥り取",
+    okurigana: "る",
+    furigana: "もぎと",
+    romaji: "mogitoru",
+    kun: "もぎとる",
+    on: "",
+    meaning: "to pluck off; to tear off completely; to snatch away. A strong twist-and-pull motion that removes something fully.",
+    answer: "捥り取る"
+  },
+
+
+  yabureru: {
+    id: "yabureru",
+    audio: "audio/yabureru.wav",
+    kanji: "破れる",
+    kanjiBase: "破",
+    okurigana: "れる",
+    furigana: "やぶ",
+    romaji: "yabureru",
+    kun: "やぶれる",
+    on: "ハ",
+    meaning: "to be torn; to rip; to break (intransitive). Something becomes torn on its own, without an agent.",
+    answer: "破れる"
+  },
+
+  mushiritoru: {
+    id: "mushiritoru",
+    audio: "audio/mushiritoru.wav",
+    kanji: "毟り取る",
+    kanjiBase: "毟り取",
+    okurigana: "る",
+    furigana: "むしりと",
+    romaji: "mushiritoru",
+    kun: "むしりとる",
+    on: "",
+    meaning: "to pluck out; to tear off by pulling repeatedly. A sharper, repeated pulling motion that removes something attached.",
+    answer: "毟り取る"
+  },
+
+  toru: {
+    id: "toru",
+    audio: "audio/toru.wav",
+    kanji: "取る",
+    kanjiBase: "取",
+    okurigana: "る",
+    furigana: "と",
+    romaji: "toru",
+    kun: "とる",
+    on: "シュ",
+    meaning: "to take; to pick up; to grab. A basic taking or grabbing motion, without tearing.",
+    answer: "取る"
+  },
+
+  tsumitoru: {
+    id: "tsumitoru",
+    audio: "audio/tsumitoru.wav",
+    kanji: "摘み取る",
+    kanjiBase: "摘み取",
+    okurigana: "る",
+    furigana: "つみと",
+    romaji: "tsumitoru",
+    kun: "つみとる",
+    on: "テキ",
+    meaning: "to pick and remove; to pluck off (flowers, buds). A gentle picking motion that removes something cleanly without ripping.",
+    answer: "摘み取る"
+  },
+
+  hikisaku: {
+    id: "hikisaku",
+    audio: "audio/hikisaku.wav",
+    kanji: "引き裂く",
+    kanjiBase: "引き裂",
+    okurigana: "く",
+    furigana: "ひきさ",
+    romaji: "hikisaku",
+    kun: "ひきさく",
+    on: "",
+    meaning: "to tear apart; to rip violently; to split by pulling. A strong motion pulling in opposite directions to tear something open.",
+    answer: "引き裂く"
+  },
+
+  hiku: {
+    id: "hiku",
+    audio: "audio/hiku.wav",
+    kanji: "引く",
+    kanjiBase: "引",
+    okurigana: "く",
+    furigana: "ひ",
+    romaji: "hiku",
+    kun: "ひく",
+    on: "イン",
+    meaning: "to pull; to tug; to draw. A basic pulling motion, used as the root for stronger tearing verbs like 引き裂く.",
+    answer: "引く"
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 };
+
+/*-------------------------------------------------------------------------------------
+Nouns
+---------------------------------------------------------------------------------------*/
+
+
+
 
 
 KANJI.allNouns = {
