@@ -1,12 +1,12 @@
 /* ==========================================================
    GLOBAL OBJECT
    ========================================================== */
-
+// 1. Create the KANJI object FIRST
 const KANJI = {
   dataset: [],
   currentItem: null,
   mcqLocked: false,
-  activeScreen: null,
+  mode: null,
 
   audio: {
     current: null,
@@ -14,6 +14,8 @@ const KANJI = {
     generation: 0
   }
 };
+
+
 
 /* ==========================================================
    INTERNAL DATASET STORAGE
@@ -925,31 +927,213 @@ utsuru5: {
 
 
 
-
-
 };
 
+
+KANJI.allNouns = {
+
+  kuruma: {
+    id: "kuruma",
+    audio: "audio/kuruma.wav",
+    kanji: "車",
+    kanjiBase: "車",
+    okurigana: "",
+    furigana: "くるま",
+    romaji: "kuruma",
+    kun: "くるま",
+    on: "シャ",
+    meaning: "car; vehicle",
+    answer: "車"
+  },
+
+  neko: {
+    id: "neko",
+    audio: "audio/neko.wav",
+    kanji: "猫",
+    kanjiBase: "猫",
+    okurigana: "",
+    furigana: "ねこ",
+    romaji: "neko",
+    kun: "ねこ",
+    on: "",
+    meaning: "cat",
+    answer: "猫"
+  },
+
+  inu: {
+    id: "inu",
+    audio: "audio/inu.wav",
+    kanji: "犬",
+    kanjiBase: "犬",
+    okurigana: "",
+    furigana: "いぬ",
+    romaji: "inu",
+    kun: "いぬ",
+    on: "ケン",
+    meaning: "dog",
+    answer: "犬"
+  },
+
+  hon: {
+    id: "hon",
+    audio: "audio/hon.wav",
+    kanji: "本",
+    kanjiBase: "本",
+    okurigana: "",
+    furigana: "ほん",
+    romaji: "hon",
+    kun: "もと",
+    on: "ホン",
+    meaning: "book",
+    answer: "本"
+  },
+
+  mizu: {
+    id: "mizu",
+    audio: "audio/mizu.wav",
+    kanji: "水",
+    kanjiBase: "水",
+    okurigana: "",
+    furigana: "みず",
+    romaji: "mizu",
+    kun: "みず",
+    on: "スイ",
+    meaning: "water",
+    answer: "水"
+  },
+
+  ki: {
+    id: "ki",
+    audio: "audio/ki.wav",
+    kanji: "木",
+    kanjiBase: "木",
+    okurigana: "",
+    furigana: "き",
+    romaji: "ki",
+    kun: "き",
+    on: "モク",
+    meaning: "tree; wood",
+    answer: "木"
+  },
+
+  yama: {
+    id: "yama",
+    audio: "audio/yama.wav",
+    kanji: "山",
+    kanjiBase: "山",
+    okurigana: "",
+    furigana: "やま",
+    romaji: "yama",
+    kun: "やま",
+    on: "サン",
+    meaning: "mountain",
+    answer: "山"
+  },
+
+  kawa: {
+    id: "kawa",
+    audio: "audio/kawa.wav",
+    kanji: "川",
+    kanjiBase: "川",
+    okurigana: "",
+    furigana: "かわ",
+    romaji: "kawa",
+    kun: "かわ",
+    on: "セン",
+    meaning: "river",
+    answer: "川"
+  },
+
+  sora: {
+    id: "sora",
+    audio: "audio/sora.wav",
+    kanji: "空",
+    kanjiBase: "空",
+    okurigana: "",
+    furigana: "そら",
+    romaji: "sora",
+    kun: "そら",
+    on: "クウ",
+    meaning: "sky",
+    answer: "空"
+  },
+
+  hito: {
+    id: "hito",
+    audio: "audio/hito.wav",
+    kanji: "人",
+    kanjiBase: "人",
+    okurigana: "",
+    furigana: "ひと",
+    romaji: "hito",
+    kun: "ひと",
+    on: "ジン",
+    meaning: "person",
+    answer: "人"
+  }
+};
+
+
+
+
+
+
+
+
 /* ==========================================================
-   LOAD SINGLE KANJI
+   DATASET SETUP (VERBS + NOUNS)
+   ========================================================== */
+
+/* ==========================================================
+   DATASET SETUP (VERBS + NOUNS)
+   ========================================================== */
+
+/* ==========================================================
+   DATASET SETUP (VERBS + NOUNS)
+   ========================================================== */
+
+if (typeof KANJI.allKanji === "undefined") {
+  KANJI.allKanji = {};
+}
+
+if (typeof KANJI.allNouns === "undefined") {
+  KANJI.allNouns = {};
+}
+
+KANJI.allVerbs = { ...KANJI.allKanji };
+
+
+/* ==========================================================
+   LOADERS
    ========================================================== */
 
 KANJI.loadSingle = function (id) {
-  const item = KANJI.allKanji[id];
+  const item =
+    KANJI.allVerbs[id] ||
+    KANJI.allNouns[id];
+
   if (!item) {
     console.error("Unknown kanji id:", id);
     return null;
   }
+
   KANJI.dataset = [item];
   return item;
 };
 
-/* ==========================================================
-   LOAD ALL KANJI (RANDOM MODE)
-   ========================================================== */
-
-KANJI.loadAll = function () {
-  KANJI.dataset = Object.values(KANJI.allKanji);
+KANJI.loadVerbs = function () {
+  KANJI.dataset = Object.values(KANJI.allVerbs);
 };
+
+KANJI.loadNouns = function () {
+  if (Object.keys(KANJI.allNouns).length === 0) {
+    console.warn("No noun dataset yet — falling back to verbs.");
+    KANJI.dataset = Object.values(KANJI.allVerbs);
+    return;
+  }
+  KANJI.dataset = Object.values(KANJI.allNouns);
+};
+
 
 /* ==========================================================
    RANDOM PICK
@@ -961,20 +1145,27 @@ KANJI.pickRandom = function () {
   return item;
 };
 
+
 /* ==========================================================
-   START
+   START ENGINE
    ========================================================== */
 
-KANJI.start = function (id) {
+KANJI.start = function (mode) {
+  KANJI.mode = mode;
 
-  if (id === "random") {
-    KANJI.loadAll();     // load ALL verbs
+  if (mode === "verbs") {
+    KANJI.loadVerbs();
+
+  } else if (mode === "nouns") {
+    KANJI.loadNouns();
+
   } else {
-    KANJI.loadSingle(id); // load ONE verb
+    KANJI.loadSingle(mode);
   }
 
   KANJI.startRound();
 };
+
 
 /* ==========================================================
    START ROUND
@@ -985,23 +1176,32 @@ KANJI.startRound = function () {
   KANJI.screen1();
 };
 
+
 /* ==========================================================
    AUDIO CONTROL
    ========================================================== */
 
 KANJI.playAudio = function (file) {
-  const audio = new Audio(file);
-  audio.play().catch(() => {});
+  try {
+    const audio = new Audio(file);
+    audio.play().catch(() => {});
+  } catch (e) {
+    console.error("Audio error:", e);
+  }
 };
+
 
 /* ==========================================================
    SCREEN SWITCHER
    ========================================================== */
 
 KANJI.show = function (id) {
-  document.querySelectorAll(".kanji-screen").forEach(el => el.classList.remove("active"));
+  document.querySelectorAll(".kanji-screen").forEach(el =>
+    el.classList.remove("active")
+  );
   document.getElementById(id).classList.add("active");
 };
+
 
 /* ==========================================================
    SCREEN 1 — AUDIO ONLY
@@ -1013,12 +1213,16 @@ KANJI.screen1 = function () {
   const item = KANJI.pickRandom();
   KANJI.playAudio(item.audio);
 
-  document.getElementById("kanjiReplayBtn").onclick = () => KANJI.playAudio(item.audio);
-  document.getElementById("kanjiNextBtn").onclick = () => KANJI.screen2();
+  document.getElementById("kanjiReplayBtn").onclick = () =>
+    KANJI.playAudio(item.audio);
+
+  document.getElementById("kanjiNextBtn").onclick = () =>
+    KANJI.screen2();
 };
 
+
 /* ==========================================================
-   DECOY POOL
+   DECOY POOL (VERBS)
    ========================================================== */
 
 const kanjiPool = [
@@ -1029,18 +1233,15 @@ const kanjiPool = [
   { kanjiBase: "入", okurigana: "る" },
   { kanjiBase: "出", okurigana: "る" },
 
-  // New additions
   { kanjiBase: "飲", okurigana: "む" },
   { kanjiBase: "付け", okurigana: "る" },
   { kanjiBase: "消", okurigana: "す" },
   { kanjiBase: "入れ", okurigana: "る" },
   { kanjiBase: "寝", okurigana: "る" },
-  { kanjiBase: "入", okurigana: "る" }, // hairu
   { kanjiBase: "置", okurigana: "く" },
   { kanjiBase: "落ち", okurigana: "る" },
   { kanjiBase: "送", okurigana: "る" },
 
-  // More N5/N4 verbs
   { kanjiBase: "書", okurigana: "く" },
   { kanjiBase: "読", okurigana: "む" },
   { kanjiBase: "作", okurigana: "る" },
@@ -1060,30 +1261,105 @@ const kanjiPool = [
 
 
 /* ==========================================================
+   DECOY POOL (NOUNS)
+   ========================================================== */
+
+const nounPool = [
+  { kanjiBase: "車" },
+  { kanjiBase: "猫" },
+  { kanjiBase: "犬" },
+  { kanjiBase: "本" },
+  { kanjiBase: "水" },
+  { kanjiBase: "木" },
+  { kanjiBase: "山" },
+  { kanjiBase: "川" },
+  { kanjiBase: "空" },
+  { kanjiBase: "人" },
+
+  // Add more N5 nouns
+  { kanjiBase: "雨" },
+  { kanjiBase: "火" },
+  { kanjiBase: "金" },
+  { kanjiBase: "手" },
+  { kanjiBase: "目" },
+  { kanjiBase: "口" },
+  { kanjiBase: "耳" },
+  { kanjiBase: "家" },
+  { kanjiBase: "町" },
+  { kanjiBase: "道" }
+];
+
+
+/* ==========================================================
    BUILD MCQ CHOICES
    ========================================================== */
 
+/* ==========================================================
+   BUILD MCQ CHOICES (VERBS + NOUNS)
+   ========================================================== */
+
 KANJI.buildChoices = function (item) {
-  const decoys = [...kanjiPool].sort(() => Math.random() - 0.5).slice(0, 3);
 
-  const correct = {
-    kanjiBase: item.kanjiBase,
-    okurigana: item.okurigana
-  };
+  let decoys;
 
-  const choices = [correct, ...decoys];
+  // VERBS → use verb pool (kanji + okurigana)
+  if (KANJI.mode === "verbs") {
+    decoys = [...kanjiPool]
+      .sort(() => Math.random() - 0.5)
+      .slice(0, 3);
 
-  // Shuffle
-  for (let i = choices.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [choices[i], choices[j]] = [choices[j], choices[i]];
+    const correct = {
+      kanjiBase: item.kanjiBase,
+      okurigana: item.okurigana
+    };
+
+    const choices = [correct, ...decoys];
+
+    // shuffle
+    for (let i = choices.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [choices[i], choices[j]] = [choices[j], choices[i]];
+    }
+
+    return choices;
   }
 
-  return choices;
+  // NOUNS → use noun pool (kanji only)
+  if (KANJI.mode === "nouns") {
+    decoys = [...nounPool]
+      .sort(() => Math.random() - 0.5)
+      .slice(0, 3);
+
+    const correct = {
+      kanjiBase: item.kanjiBase,
+      okurigana: ""   // nouns have no okurigana
+    };
+
+    const choices = [correct, ...decoys];
+
+    // shuffle
+    for (let i = choices.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [choices[i], choices[j]] = [choices[j], choices[i]];
+    }
+
+    return choices;
+  }
+
 };
 
+
+
 /* ==========================================================
-   SCREEN 2 — KANJI + OKURIGANA ONLY
+   SCREEN 2 — MCQ
+   ========================================================== */
+
+/* ==========================================================
+   SCREEN 2 — MCQ
+   ========================================================== */
+
+/* ==========================================================
+   SCREEN 2 — MCQ
    ========================================================== */
 
 KANJI.screen2 = function () {
@@ -1094,9 +1370,8 @@ KANJI.screen2 = function () {
   const mcqBox = document.getElementById("kanjiMcqContainer");
   mcqBox.innerHTML = "";
 
-  // --- REPLAY BUTTON EMBEDDED ---
+  // replay button
   const replayBtn = document.createElement("button");
-  replayBtn.className = "kanji-replay-btn";
   replayBtn.textContent = "🔊 Replay";
   replayBtn.style.cssText = `
     font-size: 20px;
@@ -1109,30 +1384,41 @@ KANJI.screen2 = function () {
     cursor: pointer;
   `;
   replayBtn.onclick = () => {
-    if (!KANJI.mcqLocked) {
-      KANJI.playAudio(item.audio);
-    }
+    if (!KANJI.mcqLocked) KANJI.playAudio(item.audio);
   };
   mcqBox.appendChild(replayBtn);
-  // --------------------------------
 
   const options = KANJI.buildChoices(item);
 
   options.forEach(opt => {
     const div = document.createElement("div");
+
+    // Mode-specific class
     div.className = "mcq-option";
 
-    div.innerHTML = `
-      <span style="font-size: 32px;">${opt.kanjiBase}</span>
-      <span style="font-size: 22px; color:#bbbbbb; margin-left: 12px;">
-        ${opt.okurigana}
-      </span>
-    `;
 
-    div.onclick = () => KANJI.handleMCQ(opt.kanjiBase + opt.okurigana);
+    // Nouns → kanji only
+    if (KANJI.mode === "nouns") {
+      div.innerHTML = `
+        <span style="font-size: 32px;">${opt.kanjiBase}</span>
+      `;
+    }
+
+    // Verbs → kanji + okurigana
+    else {
+      div.innerHTML = `
+        <span style="font-size: 32px;">${opt.kanjiBase}</span>
+        <span class="okurigana">${opt.okurigana}</span>
+
+      `;
+    }
+
+    div.onclick = () => KANJI.handleMCQ(opt.kanjiBase + (opt.okurigana || ""));
     mcqBox.appendChild(div);
-  });
-};
+  }); // closes forEach
+
+}; // closes KANJI.screen2
+
 
 
 /* ==========================================================
@@ -1146,14 +1432,18 @@ KANJI.handleMCQ = function (choiceKanji) {
   buttons.forEach(btn => {
     btn.style.pointerEvents = "none";
     const isCorrect = btn.textContent.includes(correct);
+
+    // unified colors for verbs + nouns
     btn.style.background = isCorrect ? "#1e5128" : "#512828";
+
   });
 
   setTimeout(() => KANJI.screen3(), 900);
 };
 
+
 /* ==========================================================
-   SCREEN 3 — SUMMARY + NEXT BUTTON
+   SCREEN 3 — SUMMARY
    ========================================================== */
 
 KANJI.screen3 = function () {
@@ -1161,10 +1451,9 @@ KANJI.screen3 = function () {
 
   const item = KANJI.currentItem;
 
-  // ⭐ ENLARGE THE KANJI CHARACTER
   const kanjiBox = document.getElementById("kanjiSummaryKanji");
   kanjiBox.textContent = item.kanji;
-  kanjiBox.style.fontSize = "96px";       // ← BIG, readable, DS-style
+  kanjiBox.style.fontSize = "96px";
   kanjiBox.style.fontWeight = "bold";
   kanjiBox.style.marginBottom = "20px";
   kanjiBox.style.textAlign = "center";
@@ -1175,26 +1464,23 @@ KANJI.screen3 = function () {
   document.getElementById("kanjiSummaryOn").textContent = "On: " + item.on;
   document.getElementById("kanjiSummaryMeaning").textContent = "Meaning: " + item.meaning;
 
-  // Remove old button
   const oldBtn = document.getElementById("kanjiNextRoundBtn");
   if (oldBtn) oldBtn.remove();
 
-  // Create Next button
   const nextBtn = document.createElement("button");
   nextBtn.id = "kanjiNextRoundBtn";
   nextBtn.textContent = "Next";
-  nextBtn.style.marginTop = "20px";
-  nextBtn.style.padding = "14px 28px";
-  nextBtn.style.fontSize = "18px";
-  nextBtn.style.borderRadius = "8px";
-  nextBtn.style.border = "none";
-  nextBtn.style.cursor = "pointer";
-  nextBtn.style.background = "#7fd1ff";
-  nextBtn.style.color = "#000";
-
-  nextBtn.onclick = () => {
-    KANJI.startRound();
-  };
+  nextBtn.style.cssText = `
+    margin-top: 20px;
+    padding: 14px 28px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background: #7fd1ff;
+    color: #000;
+  `;
+  nextBtn.onclick = () => KANJI.startRound();
 
   document.getElementById("kanjiScreen3").appendChild(nextBtn);
 };
