@@ -1070,7 +1070,172 @@ KANJI.allNouns = {
     on: "ジン",
     meaning: "person",
     answer: "人"
-  }
+  },
+
+  hi: {
+    id: "hi",
+    audio: "audio/hi.wav",
+    kanji: "火",
+    kanjiBase: "火",
+    okurigana: "",
+    furigana: "ひ",
+    romaji: "hi",
+    kun: "ひ",
+    on: "カ",
+    meaning: "fire",
+    answer: "火"
+  },
+
+  taiyou: {
+    id: "taiyou",
+    audio: "audio/taiyou.wav",
+    kanji: "太陽",
+    kanjiBase: "太陽",
+    okurigana: "",
+    furigana: "たいよう",
+    romaji: "taiyou",
+    kun: "",
+    on: "タイヨウ",
+    meaning: "sun",
+    answer: "太陽"
+  },
+
+  mizuumi: {
+    id: "mizuumi",
+    audio: "audio/mizuumi.wav",
+    kanji: "湖",
+    kanjiBase: "湖",
+    okurigana: "",
+    furigana: "みずうみ",
+    romaji: "mizuumi",
+    kun: "みずうみ",
+    on: "コ",
+    meaning: "lake",
+    answer: "湖"
+  },
+
+  umi: {
+    id: "umi",
+    audio: "audio/umi.wav",
+    kanji: "海",
+    kanjiBase: "海",
+    okurigana: "",
+    furigana: "うみ",
+    romaji: "umi",
+    kun: "うみ",
+    on: "カイ",
+    meaning: "sea; ocean",
+    answer: "海"
+  },
+
+  hayashi: {
+    id: "hayashi",
+    audio: "audio/hayashi.wav",
+    kanji: "林",
+    kanjiBase: "林",
+    okurigana: "",
+    furigana: "はやし",
+    romaji: "hayashi",
+    kun: "はやし",
+    on: "リン",
+    meaning: "woods; grove",
+    answer: "林"
+  },
+
+  ichi: {
+    id: "ichi",
+    audio: "audio/ichi.wav",
+    kanji: "一",
+    kanjiBase: "一",
+    okurigana: "",
+    furigana: "いち",
+    romaji: "ichi",
+    kun: "ひと",
+    on: "イチ",
+    meaning: "one",
+    answer: "一"
+  },
+
+  ni: {
+    id: "ni",
+    audio: "audio/ni.wav",
+    kanji: "二",
+    kanjiBase: "二",
+    okurigana: "",
+    furigana: "に",
+    romaji: "ni",
+    kun: "ふた",
+    on: "ニ",
+    meaning: "two",
+    answer: "二"
+  },
+
+  san: {
+    id: "san",
+    audio: "audio/san.wav",
+    kanji: "三",
+    kanjiBase: "三",
+    okurigana: "",
+    furigana: "さん",
+    romaji: "san",
+    kun: "み",
+    on: "サン",
+    meaning: "three",
+    answer: "三"
+  },
+
+  yon: {
+    id: "yon",
+    audio: "audio/yon.wav",
+    kanji: "四",
+    kanjiBase: "四",
+    okurigana: "",
+    furigana: "よん",
+    romaji: "yon",
+    kun: "よ",
+    on: "シ",
+    meaning: "four",
+    answer: "四"
+  },
+
+  go: {
+    id: "go",
+    audio: "audio/go.wav",
+    kanji: "五",
+    kanjiBase: "五",
+    okurigana: "",
+    furigana: "ご",
+    romaji: "go",
+    kun: "いつ",
+    on: "ゴ",
+    meaning: "five",
+    answer: "五"
+  },
+
+  mori: {
+    id: "mori",
+    audio: "audio/mori.wav",
+    kanji: "森",
+    kanjiBase: "森",
+    okurigana: "",
+    furigana: "もり",
+    romaji: "mori",
+    kun: "もり",
+    on: "シン",
+    meaning: "forest",
+    answer: "森"
+  },
+
+
+
+
+
+
+
+
+
+
+
 };
 
 
