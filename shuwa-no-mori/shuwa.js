@@ -155,7 +155,7 @@ const shuwaWeekdaysMonths = [
 
   summary_english:
     "You softly open your thumb and index finger, tracing a small circular motion as if drawing a tiny moon. The movement spreads gently in a rounded shape, expressing the image of the moon. What does this sequence of gestures represent?"
-}
+},
 
 
 
