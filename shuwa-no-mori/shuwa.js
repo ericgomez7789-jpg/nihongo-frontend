@@ -205,7 +205,18 @@ const shuwaWeekdaysMonths = [
 },
 
 
+{
+  id: "kinyoubi",
+  audio: "audio/kinyoubi.wav",
+  choices: ["きんようび", "もくようび", "すいようび"],
+  answer: "きんようび",
 
+  summary_hiragana:
+    "みぎて の ひとさしゆび と おやゆび を つなげ まる を つくり、まるで ゆき が ひらひら と まいおちる よう に みぎて を ぐるぐる と かわりがわり さゆう に まわします。この いちれん の しぐさ は なん の いみ に なる の でしょう。",
+
+  summary_english:
+    "You connect your right index finger and thumb to form a small circle. Then, as if snow were fluttering softly downward, you rotate your right hand in alternating left‑right motions. What does this sequence of gestures represent?"
+},
 
 
 
