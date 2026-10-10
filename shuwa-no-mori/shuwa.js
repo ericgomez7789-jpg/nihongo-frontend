@@ -218,7 +218,18 @@ const shuwaWeekdaysMonths = [
     "You connect your right index finger and thumb to form a small circle. Then, as if snow were fluttering softly downward, you rotate your right hand in alternating left‑right motions. What does this sequence of gestures represent?"
 },
 
+{
+  id: "doyoubi",
+  audio: "audio/doyoubi.wav",
+  choices: ["どようび", "きんようび", "にちようび"],
+  answer: "どようび",
 
+  summary_hiragana:
+    "まるで みぎて で しお を ぱらぱら と ふりまく よう に、みぎて の すべて の ゆびさき を そっと こすりあわせて つち を あらわします。この いちれん の しぐさ は なん の いみ に なる の でしょう。",
+
+  summary_english:
+    "As if lightly sprinkling salt with your right hand, you gently rub all the fingertips of your right hand together to represent soil. What does this sequence of gestures mean?"
+},
 
 
 
