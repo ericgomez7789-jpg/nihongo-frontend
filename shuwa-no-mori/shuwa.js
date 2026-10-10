@@ -175,6 +175,36 @@ const shuwaWeekdaysMonths = [
 
 
 
+{
+  id: "suiyoubi",
+  audio: "audio/suiyoubi.wav",
+  choices: ["すいようび", "げつようび", "かようび"],
+  answer: "すいようび",
+
+  summary_hiragana:
+    "みぎてのひら を あおむけ に して、からだ の むかいがわ から、まるで ふね が でこぼこ な なみ に とおりかかる よう に、あおむけ な みぎて の まま で みぎがわ に もどします。この いちれん の しぐさ は なん の いみ に なる のでしょう。",
+
+  summary_english:
+    "With your right palm turned upward, you begin from the opposite side of your body. Then, keeping your palm facing upward, you move your hand back toward the right as if a small boat were passing over uneven, bumpy waves. What does this sequence of gestures represent?"
+},
+
+
+
+
+{
+  id: "mokuyoubi",
+  audio: "audio/mokuyoubi.wav",
+  choices: ["もくようび", "すいようび", "かようび"],
+  answer: "もくようび",
+
+  summary_hiragana:
+    "レンチ の よう に りょうて の おやゆびさき と ひとさしゆびさき を はなれて むかいあわせ に し、レンチ の かたち を たもった まま で りょうて を ひねりながら うえ に むかいます。この いちれん の しぐさ は なん の いみ に なる の でしょう。",
+
+  summary_english:
+    "Like forming the shape of a wrench, you separate the tips of both thumbs and index fingers so they face each other. Then, keeping that wrench‑like shape, you twist both hands upward. What does this sequence of gestures represent?"
+},
+
+
 
 
 
