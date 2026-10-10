@@ -1109,6 +1109,257 @@ utsuru5: {
   },
 
 
+  katazukeru: {
+    id: "katazukeru",
+    audio: "audio/katazukeru.wav",
+    kanji: "片付ける",
+    kanjiBase: "片付け",
+    okurigana: "る",
+    furigana: "かたづけ",
+    romaji: "katazukeru",
+    kun: "かたづける",
+    on: "",
+    meaning: "to tidy up; to put things in order; to settle or finish a task.",
+    answer: "片付ける"
+  },
+
+  soroeru: {
+    id: "soroeru",
+    audio: "audio/soroeru.wav",
+    kanji: "揃える",
+    kanjiBase: "揃え",
+    okurigana: "る",
+    furigana: "そろえ",
+    romaji: "soroeru",
+    kun: "そろえる",
+    on: "",
+    meaning: "to align; to match; to make uniform.",
+    answer: "揃える"
+  },
+
+  kirisoroeru: {
+    id: "kirisoroeru",
+    audio: "audio/kirisoroeru.wav",
+    kanji: "切り揃える",
+    kanjiBase: "切り揃え",
+    okurigana: "る",
+    furigana: "きりそろえ",
+    romaji: "kirisoroeru",
+    kun: "きりそろえる",
+    on: "",
+    meaning: "to trim evenly; to cut things to matching lengths.",
+    answer: "切り揃える"
+  },
+
+  torisoroeru: {
+    id: "torisoroeru",
+    audio: "audio/torisoroeru.wav",
+    kanji: "取り揃える",
+    kanjiBase: "取り揃え",
+    okurigana: "る",
+    furigana: "とりそろえ",
+    romaji: "torisoroeru",
+    kun: "とりそろえる",
+    on: "",
+    meaning: "to gather a complete set; to assemble various items.",
+    answer: "取り揃える"
+  },
+
+  naraberu: {
+    id: "naraberu",
+    audio: "audio/naraberu.wav",
+    kanji: "並べる",
+    kanjiBase: "並べ",
+    okurigana: "る",
+    furigana: "ならべ",
+    romaji: "naraberu",
+    kun: "ならべる",
+    on: "",
+    meaning: "to line up; to arrange; to place things in order.",
+    answer: "並べる"
+  },
+
+  totonoeru: {
+    id: "totonoeru",
+    audio: "audio/totonoeru.wav",
+    kanji: "整える",
+    kanjiBase: "整え",
+    okurigana: "る",
+    furigana: "ととのえ",
+    romaji: "totonoeru",
+    kun: "ととのえる",
+    on: "",
+    meaning: "to prepare; to adjust; to put into proper condition.",
+    answer: "整える"
+  },
+
+  todokeru: {
+    id: "todokeru",
+    audio: "audio/todokeru.wav",
+    kanji: "届ける",
+    kanjiBase: "届け",
+    okurigana: "る",
+    furigana: "とどけ",
+    romaji: "todokeru",
+    kun: "とどける",
+    on: "",
+    meaning: "to deliver; to send; to submit.",
+    answer: "届ける"
+  },
+
+  kikitodokeru: {
+    id: "kikitodokeru",
+    audio: "audio/kikitodokeru.wav",
+    kanji: "聞き届ける",
+    kanjiBase: "聞き届け",
+    okurigana: "る",
+    furigana: "ききとどけ",
+    romaji: "kikitodokeru",
+    kun: "ききとどける",
+    on: "",
+    meaning: "to grant a request; to listen and accept; to comply.",
+    answer: "聞き届ける"
+  },
+
+  motenasu: {
+    id: "motenasu",
+    audio: "audio/motenasu.wav",
+    kanji: "もてなす",
+    kanjiBase: "もてな",
+    okurigana: "す",
+    furigana: "もてな",
+    romaji: "motenasu",
+    kun: "もてなす",
+    on: "",
+    meaning: "to entertain; to treat hospitably; to welcome warmly.",
+    answer: "もてなす"
+  },
+
+  itawaru: {
+    id: "itawaru",
+    audio: "audio/itawaru.wav",
+    kanji: "労わる",
+    kanjiBase: "労わ",
+    okurigana: "る",
+    furigana: "いたわ",
+    romaji: "itawaru",
+    kun: "いたわる",
+    on: "",
+    meaning: "to care for; to be gentle with; to show compassion.",
+    answer: "労わる"
+  },
+
+  naoru: {
+    id: "naoru",
+    audio: "audio/naoru.wav",
+    kanji: "治る",
+    kanjiBase: "治",
+    okurigana: "る",
+    furigana: "なお",
+    romaji: "naoru",
+    kun: "なおる",
+    on: "",
+    meaning: "to heal; to get better; to be cured; to be repaired.",
+    answer: "治る"
+  },
+
+  naosu: {
+    id: "naosu",
+    audio: "audio/naosu.wav",
+    kanji: "治す",
+    kanjiBase: "治",
+    okurigana: "す",
+    furigana: "なお",
+    romaji: "naosu",
+    kun: "なおす",
+    on: "",
+    meaning: "to cure; to heal; to fix; to repair.",
+    answer: "治す"
+  },
+
+  makaseru: {
+    id: "makaseru",
+    audio: "audio/makaseru.wav",
+    kanji: "任せる",
+    kanjiBase: "任せ",
+    okurigana: "る",
+    furigana: "まかせ",
+    romaji: "makaseru",
+    kun: "まかせる",
+    on: "",
+    meaning: "to entrust someone with a task; to leave something in another’s hands.",
+    answer: "任せる"
+  },
+
+  azukeru: {
+    id: "azukeru",
+    audio: "audio/azukeru.wav",
+    kanji: "預ける",
+    kanjiBase: "預け",
+    okurigana: "る",
+    furigana: "あずけ",
+    romaji: "azukeru",
+    kun: "あずける",
+    on: "",
+    meaning: "to deposit; to leave something with someone for safekeeping.",
+    answer: "預ける"
+  },
+
+  noru: {
+    id: "noru",
+    audio: "audio/noru.wav",
+    kanji: "乗る",
+    kanjiBase: "乗",
+    okurigana: "る",
+    furigana: "の",
+    romaji: "noru",
+    kun: "のる",
+    on: "ジョウ",
+    meaning: "to ride; to board; to get on a vehicle or platform.",
+    answer: "乗る"
+  },
+
+  kubaru: {
+    id: "kubaru",
+    audio: "audio/kubaru.wav",
+    kanji: "配る",
+    kanjiBase: "配",
+    okurigana: "る",
+    furigana: "くば",
+    romaji: "kubaru",
+    kun: "くばる",
+    on: "ハイ",
+    meaning: "to distribute; to hand out; to deliver items to multiple people.",
+    answer: "配る"
+  },
+
+  mamoru: {
+    id: "mamoru",
+    audio: "audio/mamoru.wav",
+    kanji: "守る",
+    kanjiBase: "守",
+    okurigana: "る",
+    furigana: "まも",
+    romaji: "mamoru",
+    kun: "まもる",
+    on: "シュ",
+    meaning: "to protect; to guard; to keep; to obey rules or promises.",
+    answer: "守る"
+  },
+
+  sonaeru: {
+    id: "sonaeru",
+    audio: "audio/sonaeru.wav",
+    kanji: "備える",
+    kanjiBase: "備え",
+    okurigana: "る",
+    furigana: "そなえ",
+    romaji: "sonaeru",
+    kun: "そなえる",
+    on: "ビ",
+    meaning: "to prepare for; to equip; to provide. Most commonly: advance preparation for future events.",
+    answer: "備える"
+  },
 
 
 
