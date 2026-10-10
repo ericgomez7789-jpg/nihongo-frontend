@@ -449,16 +449,26 @@ orosu: {
 naru: {
   id: "naru",
   audio: "audio/naru.wav",
-  kanji: "なる",
-  kanjiBase: "な",
+
+  // Both common spellings
+  kanji: "なる / 成る",
+
+  // Base kanji for the 成る form
+  kanjiBase: "成",
   okurigana: "る",
+
+  // Furigana stem
   furigana: "な",
+
   romaji: "naru",
   kun: "なる",
   on: "",
-  meaning: "to become; to turn into; to reach (a state)",
+
+  meaning: "to become; to turn into; to reach a state. Usually written in hiragana (なる), but also appears as 成る in more formal or literary contexts.",
+
   answer: "なる"
 },
+
 
 naru2: {
   id: "naru2",
