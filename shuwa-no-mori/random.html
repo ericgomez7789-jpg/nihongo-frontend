@@ -121,8 +121,13 @@
 
     if (category === "aisatsu") {
       SHUWA.dataset = shuwaAisatsu;
-    } else if (category === "nichijou") {
-      SHUWA.dataset = shuwaWeekdaysMonths;
+
+    } else if (category === "weekdays") {
+      SHUWA.dataset = shuwaWeekdays;
+
+    } else if (category === "months") {
+      SHUWA.dataset = shuwaMonths;
+
     } else {
       alert("カテゴリーが選ばれていません。ホームにもどってください。");
       return;
@@ -131,6 +136,7 @@
     SHUWA.start();
   });
 </script>
+
 
 
 </body>

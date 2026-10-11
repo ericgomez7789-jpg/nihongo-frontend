@@ -143,7 +143,7 @@ const shuwaAisatsu = [
 
 
 
-const shuwaWeekdaysMonths = [
+const shuwaWeekdays = [
  {
   id: "getsuyoubi",
   audio: "audio/getsuyoubi.wav",
@@ -253,12 +253,16 @@ const shuwaWeekdaysMonths = [
 },
 
 
-
-
-
-
-
 ];
+
+
+
+
+/*----------------------------------------------------------------------------------
+Months
+-------------------------------------------------------------------------------------*/
+
+const shuwaMonths = [ ];
 
 
 
