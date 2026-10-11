@@ -262,7 +262,36 @@ const shuwaWeekdays = [
 Months
 -------------------------------------------------------------------------------------*/
 
-const shuwaMonths = [ ];
+const shuwaMonths = [
+{
+  id: "natsu",
+  audio: "audio/natsu.wav",
+  choices: ["なつ", "あき", "はる"],
+  answer: "なつ",
+
+  summary_hiragana:
+    "まず むね の まえ に りょうて が かすか に はなれて いて りょうて の ひら が あおむき に して、\
+それから りょうて の ひら が あおむき に した ままで、\
+まるで あたたかい くうき が ふわっと わきあがったり じゅうりょうあげ を したり する よう に、\
+かた に むかって にど そっと りょうて が ちかづく。\
+この いちれん の しぐさ は なん の いみ に なる の でしょう。",
+
+  summary_english:
+    "First, your hands rest slightly apart in front of your chest with both palms facing upward.\
+Then, keeping your palms facing upward, you move your hands as if warm air is rising softly or as if gently lifting a bit of weight.\
+With that warm, floating motion, your hands approach your shoulders twice.\
+What does this sequence of gestures represent?"
+},
+
+
+
+
+
+
+
+
+
+ ];
 
 
 
