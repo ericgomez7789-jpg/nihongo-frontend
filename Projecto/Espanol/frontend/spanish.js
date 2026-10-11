@@ -12360,28 +12360,60 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
 
   // ---------------------------------------------------------
-  // UNIVERSAL LEVEL LAUNCHER (Levels 1–10)
+  // UNIVERSAL LEVEL LAUNCHER (Levels 1–6)
   // ---------------------------------------------------------
   function launchLevel(levelNumber, startFn) {
 
-    // Hide all screens
+    // Hide all .screen elements
     document.querySelectorAll(".screen").forEach(s =>
       s.classList.add("hidden")
     );
 
-    // ⭐ Level‑2 wrapper logic
-    const level2Wrapper = document.getElementById("level2Wrapper");
-    if (level2Wrapper) {
-      if (levelNumber === 2) {
-        level2Wrapper.classList.remove("hidden");
-      } else {
-        level2Wrapper.classList.add("hidden");
-      }
+    // Hide all wrappers
+    const wrappers = [
+      "level2Wrapper",
+      "level3Wrapper",
+      "level4Wrapper",
+      "level5Wrapper",
+      "level6Wrapper"
+    ];
+
+    wrappers.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.classList.add("hidden");
+    });
+
+    // ⭐ LEVEL 2 WRAPPER
+    if (levelNumber === 2) {
+      document.getElementById("level2Wrapper")?.classList.remove("hidden");
+      document.getElementById("screen2L2")?.classList.remove("hidden");
     }
 
-    // Show correct screen
-    document.getElementById(`screen2L${levelNumber}`)
-      ?.classList.remove("hidden");
+    // ⭐ LEVEL 3 WRAPPER
+    if (levelNumber === 3) {
+      document.getElementById("screen2L3")?.classList.remove("hidden");
+      document.getElementById("level3Wrapper")?.classList.remove("hidden");
+    }
+
+    // ⭐ LEVEL 4 WRAPPER
+    if (levelNumber === 4) {
+      document.getElementById("level4Wrapper")?.classList.remove("hidden");
+    }
+
+    // ⭐ LEVEL 5 WRAPPER
+    if (levelNumber === 5) {
+      document.getElementById("level5Wrapper")?.classList.remove("hidden");
+    }
+
+    // ⭐ LEVEL 6 WRAPPER
+    if (levelNumber === 6) {
+      document.getElementById("level6Wrapper")?.classList.remove("hidden");
+    }
+
+    // ⭐ LEVELS 1, 2, 3 use screen1/screen2
+    if (levelNumber === 1) {
+      document.getElementById("screen1")?.classList.remove("hidden");
+    }
 
     // Start engine
     startFn();
@@ -12399,7 +12431,6 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    // Levels 4–6 require membership OR tester
     console.log(`[Level ${levelNumber}] Gated level — checking membership`);
 
     if (typeof sb === "undefined") {
@@ -12435,7 +12466,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const status = data?.membership_status;
     const plan = data?.membership_plan;
 
-    // ⭐ testers bypass gating
     const allowed = ["basic-monthly", "basic-yearly", "lifetime", "tester"];
 
     if (!(status === "active" && allowed.includes(plan))) {
@@ -12444,7 +12474,6 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    // Passed gating → launch level
     console.log(`[Level ${levelNumber}] Access granted`);
     launchLevel(levelNumber, startFn);
   }
@@ -12454,13 +12483,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // ---------------------------------------------------------
   document.querySelector('.levelBtn[data-level="1"]')
     ?.addEventListener("click", () => {
-
-      if (window.currentScreen && window.currentScreen !== "screen0") return;
-      if (window.currentLevel !== 0) return;
-
       window.currentLevel = 1;
       console.log("[Level 1] Handler fired");
-
       gateLevelAccess(1, level1);
     });
 
@@ -12469,15 +12493,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // ---------------------------------------------------------
   document.querySelector('.levelBtn[data-level="2"]')
     ?.addEventListener("click", () => {
-
-      if (window.currentScreen && window.currentScreen !== "screen0") return;
-      if (window.currentLevel !== 0) return;
-
       window.currentLevel = 2;
-      window.currentScreen = "level2Screen1";
-
       console.log("[Level 2] Handler fired");
-
       gateLevelAccess(2, L2.start);
     });
 
@@ -12486,6 +12503,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // ---------------------------------------------------------
   document.querySelector('.levelBtn[data-level="3"]')
     ?.addEventListener("click", () => {
+      window.currentLevel = 3;
       console.log("[Level 3] Handler fired");
       gateLevelAccess(3, L3.start);
     });
@@ -12493,19 +12511,19 @@ document.addEventListener("DOMContentLoaded", () => {
   // ---------------------------------------------------------
   // LEVEL 4
   // ---------------------------------------------------------
-  const level4Btn = document.getElementById("level4Btn");
-  if (level4Btn) {
-    level4Btn.addEventListener("click", () => {
+  document.getElementById("level4Btn")
+    ?.addEventListener("click", () => {
+      window.currentLevel = 4;
       console.log("[Level 4] Handler fired");
       gateLevelAccess(4, L4.start);
     });
-  }
 
   // ---------------------------------------------------------
   // LEVEL 5
   // ---------------------------------------------------------
   document.getElementById("level5Btn")
     ?.addEventListener("click", () => {
+      window.currentLevel = 5;
       console.log("[Level 5] Handler fired");
       gateLevelAccess(5, L5.start);
     });
@@ -12513,8 +12531,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // ---------------------------------------------------------
   // LEVEL 6
   // ---------------------------------------------------------
-  document.querySelector('.levelBtn[data-level="6"]')
+  document.getElementById("level6Btn")
     ?.addEventListener("click", () => {
+      window.currentLevel = 6;
       console.log("[Level 6] Handler fired");
       gateLevelAccess(6, L6.start);
     });
