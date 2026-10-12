@@ -274,7 +274,7 @@ const shuwaMonths = [
 りょうて の ひら が あおむき に して、\
 それから りょうて の ひら が あおむき に した ままで、\
 まるで あたたかい くうき が ふわっと わきあがったり \
-じゅうりょうあげ を する よう に、\
+じゅうりょうあげ を したり する よう に、\
 かた に むかって にど そっと りょうて が ちかづく。\
 この いちれん の しぐさ が なん の いみ に なる の でしょうか。",
 
@@ -307,6 +307,30 @@ This soft, airy motion expresses the feeling of summer heat.\
 What does this sequence of gestures represent?"
 },
 
+
+
+
+
+{
+  id: "aki",
+  audio: "audio/aki.wav",
+  choices: ["あき", "はる", "ふゆ"],
+  answer: "あき",
+
+  summary_hiragana:
+    "まず かお の まえ に りょうて を あげて、\
+それから りょうて を ひらいて さしだして、\
+りょうて の ひら を みて、\
+まるで だれか を はいる と さそう よう に\
+りょうて を ぜんこう そっと うごかす。\
+この いちれん の しぐさ が なん の いみ に なる んだろうか。",
+
+  summary_english:
+    "First, you raise both hands in front of your face.\
+Then you open your hands, extend them forward, and look at your palms.\
+After that, you gently move your hands forward as if inviting someone to come in.\
+What does this sequence of gestures represent?"
+},
 
 
 
