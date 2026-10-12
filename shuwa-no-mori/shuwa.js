@@ -337,6 +337,50 @@ What does this sequence of gestures represent?"
 
 
 
+{
+  id: "fuyu",
+  audio: "audio/fuyu.wav",
+  choices: ["ふゆ", "あき", "なつ"],
+  answer: "ふゆ",
+
+  summary_hiragana:
+    "まるで こがらし では からだ が ぶるぶる と ふるえる よう に、\
+りょうこぶし を わきした の まえ に おいて、\
+りょうて を さゆう に ゆらゆら と ゆらす。\
+この いちれん の しぐさ が なん の いみ に なる んだろうか。",
+
+  summary_english:
+    "As if your body shivers in a cold winter wind, you place both fists in front of your underarms.\
+Then you gently sway your hands side to side.\
+What does this sequence of gestures represent?"
+},
+
+
+
+
+{
+  id: "ichigatsu",
+  audio: "audio/ichigatsu.wav",
+  choices: ["いちがつ", "しがつ", "みかづき"],
+  answer: "いちがつ",
+
+  summary_hiragana:
+    "はじめに、まるで みぎがわ を ゆびさししめす よう に ひだりて を ぎゅっと にぎり、\
+ひだりて の ひとさしゆび を のばして「１」 を つくった まま で、\
+みぎて の おやゆび と ひとさしゆび を つないだ まま かるく ひらき、\
+それから くうちゅう で みかづき の かたち を つくって から、\
+ふたたび おやゆび と ひとさしゆび を つなげる。\
+この いちれん の しぐさ は なん の いみ に なる の だろう か。",
+
+  summary_english:
+    "First, as if pointing toward the right side, you tightly close your left hand and extend the index finger to form “1.”\
+Then, keeping your right thumb and index finger connected, you gently open them and shape a crescent moon in the air.\
+Finally, you connect the thumb and index finger again.\
+What does this sequence of gestures represent?"
+},
+
+
+
 
 
 
