@@ -270,18 +270,55 @@ const shuwaMonths = [
   answer: "はる",
 
   summary_hiragana:
-    "まず むね の まえ で りょうて の ひら を そっと ひらいて、\
-まるで あたらしい きせつ が めぶき はじめる よう に、\
-やわらかく うえ に むかって すうっと りょうて を もちあげます。\
-さいご に、かるく て を ひらひら と ゆらして、はる の かぜ が ふいた みたい に あらわします。\
-この いちれん の しぐさ は なん の いみ に なる の でしょう。",
+    "まず むね の まえ に りょうて が かすか に はなれて いて \
+りょうて の ひら が あおむき に して、\
+それから りょうて の ひら が あおむき に した ままで、\
+まるで あたたかい くうき が ふわっと わきあがったり \
+じゅうりょうあげ を する よう に、\
+かた に むかって にど そっと りょうて が ちかづく。\
+この いちれん の しぐさ が なん の いみ に なる の でしょうか。",
 
   summary_english:
-    "First, you gently open both palms in front of your chest, as if a new season is beginning to sprout.\
-Then you softly lift your hands upward, like fresh growth rising toward the light.\
-Finally, you lightly flutter your hands, expressing the gentle breeze of spring.\
+    "First, your hands rest slightly apart in front of your chest with both palms facing upward.\
+Then, keeping your palms facing upward, you move your hands as if warm air is rising softly or as if gently lifting a bit of weight.\
+With that soft, floating motion, your hands approach your shoulders twice.\
 What does this sequence of gestures represent?"
 },
+
+
+
+{
+  id: "natsu",
+  audio: "audio/natsu.wav",
+  choices: ["なつ", "あき", "ふゆ"],
+  answer: "なつ",
+
+  summary_hiragana:
+    "まず みぎて を かるく まえ に だし、\
+まるで おうぎ を つかって あおぐ よう に、\
+みぎて を さゆう に ゆらゆら と うごかします。\
+その やわらかい うごき で、あつさ を あらわします。\
+この いちれん の しぐさ は なん の いみ に なる の でしょうか。",
+
+  summary_english:
+    "First, you extend your right hand gently forward.\
+Then you sway your right hand side to side, as if fanning yourself with a folding fan.\
+This soft, airy motion expresses the feeling of summer heat.\
+What does this sequence of gestures represent?"
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 
@@ -293,7 +330,7 @@ What does this sequence of gestures represent?"
 
 
 
- ];
+
 
 
 
