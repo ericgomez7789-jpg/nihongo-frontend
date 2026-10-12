@@ -365,7 +365,7 @@ What does this sequence of gestures represent?"
   answer: "いちがつ",
 
   summary_hiragana:
-    "はじめに、まるで みぎがわ を ゆびさししめす よう に ひだりて を ぎゅっと にぎり、\
+    "はじめに、まるで みぎがわ を さししめす よう に ひだりて を ぎゅっと にぎり、\
 ひだりて の ひとさしゆび を のばして「１」 を つくった まま で、\
 みぎて の おやゆび と ひとさしゆび を つないだ まま かるく ひらき、\
 それから くうき で みかづき の かたち を つくって から、\
@@ -380,6 +380,30 @@ What does this sequence of gestures represent?"
 },
 
 
+
+
+
+
+{
+  id: "nigatsu",
+  audio: "audio/nigatsu.wav",
+  choices: ["にがつ", "さんがつ", "みかづき"],
+  answer: "にがつ",
+
+  summary_hiragana:
+    "みぎがわ を さししめす よう に、はじめに ひだりて を ぎゅっと にぎり、\
+ひだりて の ひとさしゆび と なかゆび を のばして「2」 の かたち を つくった まま で、\
+みぎて の おやゆび と ひとさしゆび を つないだ まま かるく ひらき、\
+それから くうき に みかづき の かたち を えがく よう に うごかし、\
+さいご に ふたたび おやゆび と ひとさしゆび を つなげる。\
+この いちれん の しぐさ は、なん の いみ に なる の だろう か。",
+
+  summary_english:
+    "As if indicating the right side, you first close your left hand tightly and extend the index and middle fingers to form the number “2.”\
+Keeping your right thumb and index finger connected, you gently open them and trace the shape of a crescent moon in the air.\
+Finally, the thumb and index finger connect once again.\
+What does this sequence of gestures represent?"
+},
 
 
 
