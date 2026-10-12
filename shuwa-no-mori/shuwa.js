@@ -264,24 +264,26 @@ Months
 
 const shuwaMonths = [
 {
-  id: "natsu",
-  audio: "audio/natsu.wav",
-  choices: ["なつ", "あき", "はる"],
-  answer: "なつ",
+  id: "haru",
+  audio: "audio/haru.wav",
+  choices: ["はる", "あき", "なつ"],
+  answer: "はる",
 
   summary_hiragana:
-    "まず むね の まえ に りょうて が かすか に はなれて いて りょうて の ひら が あおむき に して、\
-それから りょうて の ひら が あおむき に した ままで、\
-まるで あたたかい くうき が ふわっと わきあがったり じゅうりょうあげ を したり する よう に、\
-かた に むかって にど そっと りょうて が ちかづく。\
+    "まず むね の まえ で りょうて の ひら を そっと ひらいて、\
+まるで あたらしい きせつ が めぶき はじめる よう に、\
+やわらかく うえ に むかって すうっと りょうて を もちあげます。\
+さいご に、かるく て を ひらひら と ゆらして、はる の かぜ が ふいた みたい に あらわします。\
 この いちれん の しぐさ は なん の いみ に なる の でしょう。",
 
   summary_english:
-    "First, your hands rest slightly apart in front of your chest with both palms facing upward.\
-Then, keeping your palms facing upward, you move your hands as if warm air is rising softly or as if gently lifting a bit of weight.\
-With that warm, floating motion, your hands approach your shoulders twice.\
+    "First, you gently open both palms in front of your chest, as if a new season is beginning to sprout.\
+Then you softly lift your hands upward, like fresh growth rising toward the light.\
+Finally, you lightly flutter your hands, expressing the gentle breeze of spring.\
 What does this sequence of gestures represent?"
 },
+];
+
 
 
 
