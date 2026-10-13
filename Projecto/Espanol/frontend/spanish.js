@@ -8873,6 +8873,88 @@ const level3 = [
 
 
 
+{
+  "id": "es3-36",
+  "meaning": "Mientras acampaba al aire libre, el carro se metió en la tierra y la arena, se atascó, y solté un ruido de desesperación. Luego activé el cuatro por cuatro y sentí alivio — ¿qué ocurre después?",
+  "level": 3,
+
+  "options": [
+    "El carro avanza lentamente y logro salir del atasco mientras respiro aliviado",
+    "El carro empieza a hundirse como si la tierra fuera arena movediza",
+    "Un espíritu del desierto aparece y me ofrece una cuerda hecha de luz para jalar el carro",
+    "El carro se eleva unos centímetros y flota suavemente sobre la arena como si fuera magia"
+  ],
+
+  "optionsRomaji": [
+    "el_carro_avanza_lentamente_y_logro_salir_del_atasco_mientras_respiro_aliviado",
+    "el_carro_empieza_a_hundirse_como_si_la_tierra_fuera_arena_movediza",
+    "un_espiritu_del_desierto_aparece_y_me_ofrece_una_cuerda_hecha_de_luz_para_jalar_el_carro",
+    "el_carro_se_eleva_unos_centimetros_y_flota_suavemente_sobre_la_arena_como_si_fuera_magia"
+  ],
+
+  "optionsEN": [
+    "The car moves forward slowly and I manage to get out of the jam while breathing in relief",
+    "The car begins sinking as if the ground were quicksand",
+    "A desert spirit appears and offers me a rope made of light to pull the car",
+    "The car rises a few inches and floats gently over the sand as if by magic"
+  ],
+
+  "correct": "El carro avanza lentamente y logro salir del atasco mientras respiro aliviado",
+
+  "fullAudio": {
+    "daughter": "audio/spanish/inference36.wav",
+    "me": "audio/spanish/inference36.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["spanish/audio/el_carro_avanza_lentamente_y_logro_salir_del_atasco_mientras_respiro_aliviado.wav"],
+      ["spanish/audio/el_carro_empieza_a_hundirse_como_si_la_tierra_fuera_arena_movediza.wav"],
+      ["spanish/audio/un_espiritu_del_desierto_aparece_y_me_ofrece_una_cuerda_hecha_de_luz_para_jalar_el_carro.wav"],
+      ["spanish/audio/el_carro_se_eleva_unos_centimetros_y_flota_suavemente_sobre_la_arena_como_si_fuera_magia.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["spanish/audio/el_carro_avanza_lentamente_y_logro_salir_del_atasco_mientras_respiro_aliviado.wav"],
+    ["spanish/audio/el_carro_empieza_a_hundirse_como_si_la_tierra_fuera_arena_movediza.wav"],
+    ["spanish/audio/un_espiritu_del_desierto_aparece_y_me_ofrece_una_cuerda_hecha_de_luz_para_jalar_el_carro.wav"],
+    ["spanish/audio/el_carro_se_eleva_unos_centimetros_y_flota_suavemente_sobre_la_arena_como_si_fuera_magia.wav"]
+  ],
+
+  "chunks": [
+    {
+      "spanish": "Mientras acampaba al aire libre",
+      "english": "While I was camping outdoors"
+    },
+    {
+      "spanish": "el carro se metió en la tierra y la arena",
+      "english": "the car sank into the dirt and sand"
+    },
+    {
+      "spanish": "se atascó",
+      "english": "it got stuck"
+    },
+    {
+      "spanish": "y solté un ruido de desesperación",
+      "english": "and I let out a noise of desperation"
+    },
+    {
+      "spanish": "luego activé el cuatro por cuatro y sentí alivio",
+      "english": "then I activated four‑wheel drive and felt relief"
+    },
+    {
+      "spanish": "¿qué ocurre después?",
+      "english": "what happens next?"
+    }
+  ]
+},
+
+
+
+
+
+
 
 
 
