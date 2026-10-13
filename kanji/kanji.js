@@ -2080,6 +2080,20 @@ hashi2: {
   answer: "橋"
 },
 
+hashi3: {
+  id: "hashi3",
+  audio: "audio/hashi.wav",
+  kanji: "端",
+  kanjiBase: "端",
+  okurigana: "",
+  furigana: "はし",
+  romaji: "hashi",
+  kun: "はし",
+  on: "タン",
+  meaning: "edge; end; tip",
+  answer: "端"
+},
+
 
 
 
