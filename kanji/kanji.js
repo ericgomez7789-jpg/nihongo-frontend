@@ -1699,6 +1699,386 @@ KANJI.allNouns = {
   },
 
 
+// PEOPLE & FAMILY
+haha: {
+  id: "haha",
+  audio: "audio/haha.wav",
+  kanji: "母",
+  kanjiBase: "母",
+  okurigana: "",
+  furigana: "はは",
+  romaji: "haha",
+  kun: "はは",
+  on: "ボ",
+  meaning: "mother",
+  answer: "母"
+},
+
+chichi: {
+  id: "chichi",
+  audio: "audio/chichi.wav",
+  kanji: "父",
+  kanjiBase: "父",
+  okurigana: "",
+  furigana: "ちち",
+  romaji: "chichi",
+  kun: "ちち",
+  on: "フ",
+  meaning: "father",
+  answer: "父"
+},
+
+ko: {
+  id: "ko",
+  audio: "audio/ko.wav",
+  kanji: "子",
+  kanjiBase: "子",
+  okurigana: "",
+  furigana: "こ",
+  romaji: "ko",
+  kun: "こ",
+  on: "シ",
+  meaning: "child",
+  answer: "子"
+},
+
+otoko: {
+  id: "otoko",
+  audio: "audio/otoko.wav",
+  kanji: "男",
+  kanjiBase: "男",
+  okurigana: "",
+  furigana: "おとこ",
+  romaji: "otoko",
+  kun: "おとこ",
+  on: "ダン",
+  meaning: "man",
+  answer: "男"
+},
+
+onna: {
+  id: "onna",
+  audio: "audio/onna.wav",
+  kanji: "女",
+  kanjiBase: "女",
+  okurigana: "",
+  furigana: "おんな",
+  romaji: "onna",
+  kun: "おんな",
+  on: "ジョ",
+  meaning: "woman",
+  answer: "女"
+},
+
+tomodachi: {
+  id: "tomodachi",
+  audio: "audio/tomodachi.wav",
+  kanji: "友達",
+  kanjiBase: "友",
+  okurigana: "達",
+  furigana: "ともだち",
+  romaji: "tomodachi",
+  kun: "とも",
+  on: "ユウ",
+  meaning: "friend",
+  answer: "友達"
+},
+
+sensei: {
+  id: "sensei",
+  audio: "audio/sensei.wav",
+  kanji: "先生",
+  kanjiBase: "先",
+  okurigana: "生",
+  furigana: "せんせい",
+  romaji: "sensei",
+  kun: "さき",
+  on: "セン",
+  meaning: "teacher",
+  answer: "先生"
+},
+
+gakusei: {
+  id: "gakusei",
+  audio: "audio/gakusei.wav",
+  kanji: "学生",
+  kanjiBase: "学",
+  okurigana: "生",
+  furigana: "がくせい",
+  romaji: "gakusei",
+  kun: "",
+  on: "ガク",
+  meaning: "student",
+  answer: "学生"
+},
+
+// HOME & DAILY LIFE
+ie: {
+  id: "ie",
+  audio: "audio/ie.wav",
+  kanji: "家",
+  kanjiBase: "家",
+  okurigana: "",
+  furigana: "いえ",
+  romaji: "ie",
+  kun: "いえ",
+  on: "カ",
+  meaning: "house",
+  answer: "家"
+},
+
+heya: {
+  id: "heya",
+  audio: "audio/heya.wav",
+  kanji: "部屋",
+  kanjiBase: "部",
+  okurigana: "屋",
+  furigana: "へや",
+  romaji: "heya",
+  kun: "",
+  on: "ブ",
+  meaning: "room",
+  answer: "部屋"
+},
+
+tsukue: {
+  id: "tsukue",
+  audio: "audio/tsukue.wav",
+  kanji: "机",
+  kanjiBase: "机",
+  okurigana: "",
+  furigana: "つくえ",
+  romaji: "tsukue",
+  kun: "つくえ",
+  on: "キ",
+  meaning: "desk",
+  answer: "机"
+},
+
+isu: {
+  id: "isu",
+  audio: "audio/isu.wav",
+  kanji: "椅子",
+  kanjiBase: "椅",
+  okurigana: "子",
+  furigana: "いす",
+  romaji: "isu",
+  kun: "",
+  on: "イ",
+  meaning: "chair",
+  answer: "椅子"
+},
+
+to: {
+  id: "to",
+  audio: "audio/to.wav",
+  kanji: "戸",
+  kanjiBase: "戸",
+  okurigana: "",
+  furigana: "と",
+  romaji: "to",
+  kun: "と",
+  on: "コ",
+  meaning: "door",
+  answer: "戸"
+},
+
+mado: {
+  id: "mado",
+  audio: "audio/mado.wav",
+  kanji: "窓",
+  kanjiBase: "窓",
+  okurigana: "",
+  furigana: "まど",
+  romaji: "mado",
+  kun: "まど",
+  on: "ソウ",
+  meaning: "window",
+  answer: "窓"
+},
+
+denki: {
+  id: "denki",
+  audio: "audio/denki.wav",
+  kanji: "電気",
+  kanjiBase: "電",
+  okurigana: "気",
+  furigana: "でんき",
+  romaji: "denki",
+  kun: "",
+  on: "デン",
+  meaning: "light; electricity",
+  answer: "電気"
+},
+
+tokei: {
+  id: "tokei",
+  audio: "audio/tokei.wav",
+  kanji: "時計",
+  kanjiBase: "時",
+  okurigana: "計",
+  furigana: "とけい",
+  romaji: "tokei",
+  kun: "",
+  on: "ジ",
+  meaning: "clock",
+  answer: "時計"
+},
+
+// FOOD & OBJECTS
+tabemono: {
+  id: "tabemono",
+  audio: "audio/tabemono.wav",
+  kanji: "食べ物",
+  kanjiBase: "食",
+  okurigana: "べ物",
+  furigana: "たべもの",
+  romaji: "tabemono",
+  kun: "たべ",
+  on: "ショク",
+  meaning: "food",
+  answer: "食べ物"
+},
+
+nomimono: {
+  id: "nomimono",
+  audio: "audio/nomimono.wav",
+  kanji: "飲み物",
+  kanjiBase: "飲",
+  okurigana: "み物",
+  furigana: "のみもの",
+  romaji: "nomimono",
+  kun: "の",
+  on: "イン",
+  meaning: "drink",
+  answer: "飲み物"
+},
+
+gohan: {
+  id: "gohan",
+  audio: "audio/gohan.wav",
+  kanji: "ご飯",
+  kanjiBase: "飯",
+  okurigana: "",
+  furigana: "ごはん",
+  romaji: "gohan",
+  kun: "めし",
+  on: "ハン",
+  meaning: "rice; meal",
+  answer: "ご飯"
+},
+
+pan: {
+  id: "pan",
+  audio: "audio/pan.wav",
+  kanji: "パン",
+  kanjiBase: "パン",
+  okurigana: "",
+  furigana: "ぱん",
+  romaji: "pan",
+  kun: "",
+  on: "",
+  meaning: "bread",
+  answer: "パン"
+},
+
+sara: {
+  id: "sara",
+  audio: "audio/sara.wav",
+  kanji: "皿",
+  kanjiBase: "皿",
+  okurigana: "",
+  furigana: "さら",
+  romaji: "sara",
+  kun: "さら",
+  on: "ベイ",
+  meaning: "plate",
+  answer: "皿"
+},
+
+hashi: {
+  id: "hashi",
+  audio: "audio/hashi.wav",
+  kanji: "箸",
+  kanjiBase: "箸",
+  okurigana: "",
+  furigana: "はし",
+  romaji: "hashi",
+  kun: "はし",
+  on: "チョウ",
+  meaning: "chopsticks",
+  answer: "箸"
+},
+
+kaban: {
+  id: "kaban",
+  audio: "audio/kaban.wav",
+  kanji: "鞄",
+  kanjiBase: "鞄",
+  okurigana: "",
+  furigana: "かばん",
+  romaji: "kaban",
+  kun: "",
+  on: "",
+  meaning: "bag",
+  answer: "鞄"
+},
+
+kagi: {
+  id: "kagi",
+  audio: "audio/kagi.wav",
+  kanji: "鍵",
+  kanjiBase: "鍵",
+  okurigana: "",
+  furigana: "かぎ",
+  romaji: "kagi",
+  kun: "かぎ",
+  on: "ケン",
+  meaning: "key",
+  answer: "鍵"
+},
+
+tobira: {
+  id: "tobira",
+  audio: "audio/tobira.wav",
+  kanji: "扉",
+  kanjiBase: "扉",
+  okurigana: "",
+  furigana: "とびら",
+  romaji: "tobira",
+  kun: "とびら",
+  on: "ヒ",
+  meaning: "door",
+  answer: "扉"
+},
+
+kodomo: {
+  id: "kodomo",
+  audio: "audio/kodomo.wav",
+  kanji: "子供",
+  kanjiBase: "子",
+  okurigana: "供",
+  furigana: "こども",
+  romaji: "kodomo",
+  kun: "こ",
+  on: "ドウ",
+  meaning: "child",
+  answer: "子供"
+},
+
+hashi2: {
+  id: "hashi2",
+  audio: "audio/hashi.wav",
+  kanji: "橋",
+  kanjiBase: "橋",
+  okurigana: "",
+  furigana: "はし",
+  romaji: "hashi",
+  kun: "はし",
+  on: "キョウ",
+  meaning: "bridge",
+  answer: "橋"
+},
 
 
 
