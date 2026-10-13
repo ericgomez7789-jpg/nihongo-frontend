@@ -30992,7 +30992,7 @@ const level6 = [
 
 {
   id: "l6-34",
-  meaning: "While sleeping outside, I lit the impressive flame I had brought beforehand, and everyone went 'haaaaa…' with widened eyes and held their breath — what happens next?",
+  meaning: "While sleeping outside, I turned on the impressive lamp I had brought beforehand, and everyone went 'haaaaa…' with widened eyes and held their breath — what happens next?",
   level: 6,
 
   options: ["むしが ちかづく", "むしが にげる", "むしが とまる", "むしが みえなくなる"],

@@ -8789,6 +8789,97 @@ const level3 = [
 
 
 
+
+
+
+
+{
+  "id": "es3-35",
+  "meaning": "Mientras acampaba al aire libre, desempaqué mis maletas y me di cuenta de que se me había olvidado traer repelente de insectos, y solté un ruido de desesperación — ¿qué pasa después?",
+  "level": 3,
+
+  "options": [
+    "Un compañero de campamento me ofrece un poco de su repelente y nos reímos de mi despiste",
+    "Los insectos forman una nube perfectamente organizada que se mueve como si tuviera coreografía",
+    "Un espíritu del bosque aparece y me entrega un frasco brillante de repelente mágico",
+    "Los insectos se transforman en pequeñas luces que flotan alrededor como luciérnagas gigantes"
+  ],
+
+  "optionsRomaji": [
+    "un_companero_de_campamento_me_ofrece_un_poco_de_su_repelente_y_nos_reimos_de_mi_despiste",
+    "los_insectos_forman_una_nube_perfectamente_organizada_que_se_mueve_como_si_tuviera_coreografia",
+    "un_espiritu_del_bosque_aparece_y_me_entrega_un_frasco_brillante_de_repelente_magico",
+    "los_insectos_se_transforman_en_pequenas_luces_que_flotan_alrededor_como_luciernagas_gigantes"
+  ],
+
+  "optionsEN": [
+    "A fellow camper offers me some of their repellent and we laugh about my forgetfulness",
+    "The insects form a perfectly organized cloud that moves as if it had choreography",
+    "A forest spirit appears and hands me a glowing bottle of magical repellent",
+    "The insects transform into small lights that float around like giant fireflies"
+  ],
+
+  "correct": "Un compañero de campamento me ofrece un poco de su repelente y nos reímos de mi despiste",
+
+  "fullAudio": {
+    "daughter": "audio/spanish/inference35.wav",
+    "me": "audio/spanish/inference35.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["spanish/audio/un_companero_de_campamento_me_ofrece_un_poco_de_su_repelente_y_nos_reimos_de_mi_despiste.wav"],
+      ["spanish/audio/los_insectos_forman_una_nube_perfectamente_organizada_que_se_mueve_como_si_tuviera_coreografia.wav"],
+      ["spanish/audio/un_espiritu_del_bosque_aparece_y_me_entrega_un_frasco_brillante_de_repelente_magico.wav"],
+      ["spanish/audio/los_insectos_se_transforman_en_pequenas_luces_que_flotan_alrededor_como_luciernagas_gigantes.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["spanish/audio/un_companero_de_campamento_me_ofrece_un_poco_de_su_repelente_y_nos_reimos_de_mi_despiste.wav"],
+    ["spanish/audio/los_insectos_forman_una_nube_perfectamente_organizada_que_se_mueve_como_si_tuviera_coreografia.wav"],
+    ["spanish/audio/un_espiritu_del_bosque_aparece_y_me_entrega_un_frasco_brillante_de_repelente_magico.wav"],
+    ["spanish/audio/los_insectos_se_transforman_en_pequenas_luces_que_flotan_alrededor_como_luciernagas_gigantes.wav"]
+  ],
+
+  "chunks": [
+    {
+      "spanish": "Mientras acampaba al aire libre",
+      "english": "While I was camping outdoors"
+    },
+    {
+      "spanish": "desempaqué mis maletas",
+      "english": "I unpacked my bags"
+    },
+    {
+      "spanish": "y me di cuenta de que se me había olvidado traer repelente de insectos",
+      "english": "and realized I had forgotten to bring insect repellent"
+    },
+    {
+      "spanish": "y solté un ruido de desesperación",
+      "english": "and I let out a noise of desperation"
+    },
+    {
+      "spanish": "¿qué pasa después?",
+      "english": "what happens next?"
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 
