@@ -433,6 +433,30 @@ What does this sequence of gestures represent?"
 
 
 
+{
+  id: "shigatsu",
+  audio: "audio/shigatsu.wav",
+  choices: ["しがつ", "さんがつ", "みかづき"],
+  answer: "しがつ",
+
+  summary_hiragana:
+    "みぎがわ を さししめす よう に、はじめに ひだりて を ぎゅっと にぎり、\
+ひだりて の ひとさしゆび と なかゆび と くすりゆび と こゆび を のばして「4」 の かたち を つくった まま で、\
+みぎて の おやゆび と ひとさしゆび を つないだ まま かるく ひらき、\
+それから くうき に みかづき の かたち を えがく よう に うごかし、\
+さいご に ふたたび おやゆび と ひとさしゆび を つなげる。\
+この いちれん の しぐさ は、なん の いみ に なる の だろう か。",
+
+  summary_english:
+    "As if indicating the right side, you first close your left hand tightly and extend the index, middle, ring, and little fingers to form the number “4.”\
+Keeping your right thumb and index finger connected, you gently open them and trace the shape of a crescent moon in the air.\
+Finally, the thumb and index finger connect once again.\
+What does this sequence of gestures represent?"
+},
+
+
+
+
 
 
 ];
