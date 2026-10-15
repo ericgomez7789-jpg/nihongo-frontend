@@ -8954,6 +8954,82 @@ const level3 = [
 
 
 
+{
+  "id": "es3-37",
+  "meaning": "Mientras dormía al aire libre, una abeja se metió en mi bebida y la espanté, pero volvió y me picó. Exclamé '¡ouch!' — ¿qué ocurre después?",
+  "level": 3,
+
+  "options": [
+    "Me levanto rápido, reviso la picadura y decido mover mi bebida lejos para evitar otra sorpresa",
+    "La abeja se transforma en una diminuta criatura parlante que exige una disculpa",
+    "Un enjambre aparece formando una figura perfectamente simétrica en el aire",
+    "La bebida empieza a brillar y flotar como si la picadura hubiera activado un hechizo"
+  ],
+
+  "optionsRomaji": [
+    "me_levanto_rapido_reviso_la_picadura_y_decido_mover_mi_bebida_lejos_para_evitar_otra_sorpresa",
+    "la_abeja_se_transforma_en_una_diminuta_criatura_parlante_que_exige_una_disculpa",
+    "un_enjambre_aparece_formando_una_figura_perfectamente_simetrica_en_el_aire",
+    "la_bebida_empieza_a_brillar_y_flotar_como_si_la_picadura_hubiera_activado_un_hechizo"
+  ],
+
+  "optionsEN": [
+    "I get up quickly, check the sting, and decide to move my drink away to avoid another surprise",
+    "The bee transforms into a tiny talking creature demanding an apology",
+    "A swarm appears forming a perfectly symmetrical shape in the air",
+    "The drink begins to glow and float as if the sting had activated a spell"
+  ],
+
+  "correct": "Me levanto rápido, reviso la picadura y decido mover mi bebida lejos para evitar otra sorpresa",
+
+  "fullAudio": {
+    "daughter": "audio/spanish/inference37.wav",
+    "me": "audio/spanish/inference37.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["spanish/audio/me_levanto_rapido_reviso_la_picadura_y_decido_mover_mi_bebida_lejos_para_evitar_otra_sorpresa.wav"],
+      ["spanish/audio/la_abeja_se_transforma_en_una_diminuta_criatura_parlante_que_exige_una_disculpa.wav"],
+      ["spanish/audio/un_enjambre_aparece_formando_una_figura_perfectamente_simetrica_en_el_aire.wav"],
+      ["spanish/audio/la_bebida_empieza_a_brillar_y_flotar_como_si_la_picadura_hubiera_activado_un_hechizo.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["spanish/audio/me_levanto_rapido_reviso_la_picadura_y_decido_mover_mi_bebida_lejos_para_evitar_otra_sorpresa.wav"],
+    ["spanish/audio/la_abeja_se_transforma_en_una_diminuta_criatura_parlante_que_exige_una_disculpa.wav"],
+    ["spanish/audio/un_enjambre_aparece_formando_una_figura_perfectamente_simetrica_en_el_aire.wav"],
+    ["spanish/audio/la_bebida_empieza_a_brillar_y_flotar_como_si_la_picadura_hubiera_activado_un_hechizo.wav"]
+  ],
+
+  "chunks": [
+    {
+      "spanish": "Mientras dormía al aire libre",
+      "english": "While I was sleeping outdoors"
+    },
+    {
+      "spanish": "una abeja se metió en mi bebida",
+      "english": "a bee got into my drink"
+    },
+    {
+      "spanish": "la espanté, pero volvió y me picó",
+      "english": "I shooed it away, but it came back and stung me"
+    },
+    {
+      "spanish": "y exclamé '¡ouch!'",
+      "english": "and I exclaimed 'ouch!'"
+    },
+    {
+      "spanish": "¿qué ocurre después?",
+      "english": "what happens next?"
+    }
+  ]
+},
+
+
+
+
 
 
 
