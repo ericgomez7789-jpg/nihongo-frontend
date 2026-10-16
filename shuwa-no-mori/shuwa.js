@@ -458,6 +458,33 @@ What does this sequence of gestures represent?"
 
 
 
+{
+  id: "gogatsu",
+  audio: "audio/gogatsu.wav",
+  choices: ["ごがつ", "しがつ", "みかづき"],
+  answer: "ごがつ",
+
+  summary_hiragana:
+    "みぎがわ を さししめす よう に、\
+はじめに ひだりて を ぎゅっと にぎり、\
+あいて に てのひら を むけた まま、\
+おやゆび だけ を のばして「5」 の かたち を つくった まま で、\
+みぎて の おやゆび と ひとさしゆび を つないだ まま かるく ひらき、\
+それから くうき に みかづき の かたち を えがく よう に うごかし、\
+さいご に ふたたび おやゆび と ひとさしゆび を つなげる。\
+この いちれん の しぐさ は、なん の いみ に なる の だろう か。",
+
+  summary_english:
+    "As if indicating the right side, you first close your left hand tightly.\
+With your palm facing the other person, you extend only the thumb to form the number “5.”\
+Keeping your right thumb and index finger connected, you gently open them and trace the shape of a crescent moon in the air.\
+Finally, the thumb and index finger connect once again.\
+What does this sequence of gestures represent?"
+},
+
+
+
+
 
 ];
 
