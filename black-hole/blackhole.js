@@ -204,15 +204,40 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const blackHoleDataset = [
   {
-    id: "blackhole1",
-    audio: "audio/blackhole1.wav",
-    choices: [
-      "I greeted my boss politely in the morning.",
-      "I casually said good morning to a friend.",
-      "I greeted my boss at night with good evening."
-    ],
-    answer: "I greeted my boss politely in the morning."
-  }
+  id: "blackhole1",
+  audio: "audio/blackhole1.wav",
+  choices: [
+    "I greeted my boss politely in the morning.",
+    "I casually said good morning to a friend.",
+    "I greeted my boss at night with good evening."
+  ],
+  answer: "I greeted my boss politely in the morning.",
+  japanese: "朝上司に会った時「おはようございます」と申しました。"
+},
+
+
+
+{
+  id: "blackhole2",
+  audio: "audio/blackhole2.wav",
+  choices: [
+    "I introduced myself politely to the department chief for the first time.",
+    "I casually greeted a coworker I already knew.",
+    "I apologized to my boss for being late."
+  ],
+  answer: "I introduced myself politely to the department chief for the first time.",
+  japanese: "はじめて部長に会ったとき、「はじめまして、ゴメズ・エリックと申します。よろしくお願いいたします」と言いました。"
+},
+
+
+
+
+
+
+
+
+
+
 ];
 
 BlackHole.dataset = blackHoleDataset;
