@@ -9033,6 +9033,85 @@ const level3 = [
 
 
 
+{
+  "id": "es3-38",
+  "meaning": "Mientras acampaba al aire libre, mi esposa se dio cuenta de que había llevado mi Nintendo Switch y dijo: '¿Qué te pasa?' — ¿qué ocurre después?",
+  "level": 3,
+
+  "options": [
+    "Guardo rápidamente la consola y le propongo disfrutar del paisaje juntos para evitar una discusión",
+    "Mi esposa me quita el Nintendo Switch y empieza a jugar mejor que yo",
+    "La consola se conecta misteriosamente a una red Wi-Fi desconocida en medio del bosque",
+    "Un grupo de animales se acerca y observa la pantalla como si estuvieran esperando su turno para jugar"
+  ],
+
+  "optionsRomaji": [
+    "guardo_rapidamente_la_consola_y_le_propongo_disfrutar_del_paisaje_juntos_para_evitar_una_discusion",
+    "mi_esposa_me_quita_el_nintendo_switch_y_empieza_a_jugar_mejor_que_yo",
+    "la_consola_se_conecta_misteriosamente_a_una_red_wifi_desconocida_en_medio_del_bosque",
+    "un_grupo_de_animales_se_acerca_y_observa_la_pantalla_como_si_estuvieran_esperando_su_turno_para_jugar"
+  ],
+
+  "optionsEN": [
+    "I quickly put away the console and suggest enjoying the scenery together to avoid an argument",
+    "My wife takes the Nintendo Switch from me and starts playing better than I do",
+    "The console mysteriously connects to an unknown Wi-Fi network in the middle of the forest",
+    "A group of animals approaches and watches the screen as if they were waiting for their turn to play"
+  ],
+
+  "correct": "Guardo rápidamente la consola y le propongo disfrutar del paisaje juntos para evitar una discusión",
+
+  "fullAudio": {
+    "daughter": "audio/spanish/inference38.wav",
+    "me": "audio/spanish/inference38.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["spanish/audio/guardo_rapidamente_la_consola_y_le_propongo_disfrutar_del_paisaje_juntos_para_evitar_una_discusion.wav"],
+      ["spanish/audio/mi_esposa_me_quita_el_nintendo_switch_y_empieza_a_jugar_mejor_que_yo.wav"],
+      ["spanish/audio/la_consola_se_conecta_misteriosamente_a_una_red_wifi_desconocida_en_medio_del_bosque.wav"],
+      ["spanish/audio/un_grupo_de_animales_se_acerca_y_observa_la_pantalla_como_si_estuvieran_esperando_su_turno_para_jugar.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["spanish/audio/guardo_rapidamente_la_consola_y_le_propongo_disfrutar_del_paisaje_juntos_para_evitar_una_discusion.wav"],
+    ["spanish/audio/mi_esposa_me_quita_el_nintendo_switch_y_empieza_a_jugar_mejor_que_yo.wav"],
+    ["spanish/audio/la_consola_se_conecta_misteriosamente_a_una_red_wifi_desconocida_en_medio_del_bosque.wav"],
+    ["spanish/audio/un_grupo_de_animales_se_acerca_y_observa_la_pantalla_como_si_estuvieran_esperando_su_turno_para_jugar.wav"]
+  ],
+
+  "chunks": [
+    {
+      "spanish": "Mientras acampaba afuera",
+      "english": "While I was camping outdoors"
+    },
+    {
+      "spanish": "mi esposa se dio cuenta de que me traje el Nintendo Switch",
+      "english": "my wife realized that I had brought my Nintendo Switch"
+    },
+    {
+      "spanish": "y dijo: '¿Qué te pasa?'",
+      "english": "and said, 'What's wrong with you?'"
+    },
+    {
+      "spanish": "¿qué ocurre después?",
+      "english": "what happens next?"
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
 
 
 

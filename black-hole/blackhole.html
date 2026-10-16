@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Black Hole</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+
+
+
+
+
+  <style>
+  body {
+    margin: 0;
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+
+  .blackhole-screen {
+    display: none;
+    padding: 40px 20px;
+  }
+
+  .blackhole-screen.show {
+    display: block;
+  }
+
+  button {
+    padding: 12px 24px;
+    background: #4ea3ff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 30px;
+  }
+
+  /* MCQ buttons */
+  .mcqBtn {
+    padding: 14px 20px;
+    background: #222;
+    color: #fff;
+    border-radius: 6px;
+    border: 1px solid #555;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 12px auto;
+    width: 80%;
+    max-width: 400px;
+    display: block;
+  }
+
+  .mcqBtn.correct { background-color: #4caf50 !important; }
+  .mcqBtn.wrong { background-color: #b71c1c !important; }
+
+  /* Black hole container — moved WAY lower */
+  #blackHoleContainer {
+    width: 100%;
+    height: 480px;              /* more vertical space */
+    position: relative;
+    margin: 200px auto 0 auto;  /* LOWERED significantly */
+    overflow: visible;
+  }
+
+  /* Strong, visible spinning vortex */
+  #blackHole {
+    width: 240px;               /* larger for visibility */
+    height: 240px;
+    border-radius: 50%;
+
+    background:
+      radial-gradient(circle at center,
+        #000 30%,
+        #00111f 45%,
+        #003366 60%,
+        #4ea3ff 75%,
+        #000 90%
+      ),
+      conic-gradient(
+        from 0deg,
+        #000 0%,
+        #4ea3ff 20%,
+        #000 40%,
+        #4ea3ff 60%,
+        #000 80%,
+        #4ea3ff 100%
+      );
+
+    margin: 0 auto;
+    animation: spinHole 1.4s linear infinite; /* faster spin */
+    filter: blur(1px);
+  }
+
+  @keyframes spinHole {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+  }
+
+  /* SVG silhouette */
+  #fallingPerson {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -140px; /* starts higher */
+    animation: fallIntoHole 2.8s ease-in forwards;
+  }
+
+  @keyframes fallIntoHole {
+    0%   { top: -140px; transform: translateX(-50%) scale(1); opacity: 1; }
+    70%  { top: 240px;  transform: translateX(-50%) scale(0.7); opacity: 0.9; }
+    100% { top: 380px;  transform: translateX(-50%) scale(0.1); opacity: 0; }
+  }
+</style>
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+  <!-- SCREEN 1 -->
+  <div class="blackhole-screen" id="blackHoleScreen1">
+    <h2>Listen carefully.</h2>
+    <button id="blackHoleNext1">Next ▶</button>
+  </div>
+
+  <!-- SCREEN 2 -->
+  <div class="blackhole-screen" id="blackHoleScreen2">
+    <div id="blackHoleMcqContainer"></div>
+  </div>
+
+  <!-- SCREEN 3 -->
+  <div class="blackhole-screen" id="blackHoleScreen3">
+
+    <!-- Correct -->
+    <div id="blackHoleLive" style="display:none;">
+      <h2>You survived.</h2>
+      <button id="blackHoleRestartLive">Restart</button>
+    </div>
+
+    <!-- Wrong -->
+    <div id="blackHoleHole" style="display:none;">
+      <div id="blackHoleContainer">
+
+        <!-- Inline SVG silhouette -->
+        <svg id="fallingPerson" viewBox="0 0 64 64">
+          <circle cx="32" cy="12" r="8" fill="#fff"/>
+          <rect x="26" y="20" width="12" height="24" fill="#fff"/>
+          <rect x="14" y="24" width="10" height="8" fill="#fff"/>
+          <rect x="40" y="24" width="10" height="8" fill="#fff"/>
+          <rect x="26" y="44" width="8" height="14" fill="#fff"/>
+          <rect x="34" y="44" width="8" height="14" fill="#fff"/>
+        </svg>
+
+        <div id="blackHole"></div>
+      </div>
+      <button id="blackHoleRestartHole">Restart</button>
+    </div>
+
+  </div>
+
+  <!-- ENGINE -->
+  <script src="blackhole.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      BlackHole.start();
+    });
+  </script>
+
+</body>
+</html>
