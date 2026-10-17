@@ -344,6 +344,21 @@ const blackHoleDataset = [
 
 
 
+{
+  id: "blackhole10",
+  audio: "audio/blackhole10.wav",
+  choices: [
+    "I expressed formal gratitude after someone kindly lent me money when I was in need.",
+    "I casually borrowed money from a friend without thanking them.",
+    "I demanded financial help from a colleague in a rude manner."
+  ],
+  answer: "I expressed formal gratitude after someone kindly lent me money when I was in need.",
+  japanese: "小遣いがなく困っていたところ、ある方が私にご親切でお金を貸してくださり、そのご厚意に対して御礼を申し上げました。"
+},
+
+
+
+
 
 
 
