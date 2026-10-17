@@ -360,6 +360,22 @@ const blackHoleDataset = [
 
 
 
+{
+  id: "blackhole11",
+  audio: "audio/blackhole11.wav",
+  choices: [
+    "I expressed gratitude to a nurse for kindly taking care of my mother.",
+    "I ignored the nurse who was caring for my mother.",
+    "I complained to the nurse about my mother's treatment."
+  ],
+  answer: "I expressed gratitude to a nurse for kindly taking care of my mother.",
+  japanese: "病院で看護師の方が母にいろいろとお世話くださり、「いろいろとお世話になりました」と申し上げました。"
+},
+
+
+
+
+
 
 
 
