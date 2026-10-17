@@ -230,6 +230,117 @@ const blackHoleDataset = [
 },
 
 
+{
+  id: "blackhole3",
+  audio: "audio/blackhole3.wav",
+  choices: [
+    "At the end of the formal event, I politely took my leave.",
+    "I interrupted the speaker in the middle of the presentation.",
+    "I asked everyone to stay longer for an additional discussion."
+  ],
+  answer: "At the end of the formal event, I politely took my leave.",
+  japanese: "大会の別れ際では、私が「失礼いたしました」と申し上げました。"
+},
+
+
+
+
+
+{
+  id: "blackhole4",
+  audio: "audio/blackhole4.wav",
+  choices: [
+    "I expressed appreciation to a coworker for their hard work.",
+    "I casually joked with a friend after the event.",
+    "I asked my team to work overtime without warning."
+  ],
+  answer: "I expressed appreciation to a coworker for their hard work.",
+  japanese: "同僚をねぎらうために、「お疲れさまでございました」と申し上げました。"
+},
+
+
+
+
+
+{
+  id: "blackhole5",
+  audio: "audio/blackhole5.wav",
+  choices: [
+    "I greeted my department chief politely after not seeing him for a long time.",
+    "I casually chatted with a coworker I see every day.",
+    "I complained to my boss about recent workload issues."
+  ],
+  answer: "I greeted my department chief politely after not seeing him for a long time.",
+  japanese: "久しぶりに部長にお会いした時、「ご無沙汰しております」と申し上げました。"
+},
+
+
+
+
+
+{
+  id: "blackhole6",
+  audio: "audio/blackhole6.wav",
+  choices: [
+    "I introduced myself politely to someone connected to my husband.",
+    "I casually greeted a neighbor I see every day.",
+    "I asked a stranger for directions in an informal way."
+  ],
+  answer: "I introduced myself politely to someone connected to my husband.",
+  japanese: "夫の関係者に名乗る場合は、ワタクシは夫の妻でございますと申しました。"
+},
+
+
+
+
+{
+  id: "blackhole7",
+  audio: "audio/blackhole7.wav",
+  choices: [
+    "I politely thanked a stranger at my company for opening the door for me.",
+    "I casually greeted a coworker I already knew well.",
+    "I asked a visitor to wait outside in an informal tone."
+  ],
+  answer: "I politely thanked a stranger at my company for opening the door for me.",
+  japanese: "会社で面識のない方に戸を開けていただいたので、私が「恐れ入ります」と申し上げました。"
+},
+
+
+
+
+
+
+{
+  id: "blackhole8",
+  audio: "audio/blackhole8.wav",
+  choices: [
+    "I apologized formally after accidentally stepping on someone's foot at the company.",
+    "I casually bumped into a friend and laughed it off.",
+    "I ignored someone after accidentally stepping on their foot."
+  ],
+  answer: "I apologized formally after accidentally stepping on someone's foot at the company.",
+  japanese: "会社で誰かの足を踏んでしまった時、ワタクシが「申し訳ございません」と申し上げました。"
+},
+
+
+
+
+
+{
+  id: "blackhole9",
+  audio: "audio/blackhole9.wav",
+  choices: [
+    "I politely directed someone to the end of the line after they cut in.",
+    "I ignored someone who stepped ahead of me in line.",
+    "I scolded a coworker harshly for cutting in line."
+  ],
+  answer: "I politely directed someone to the end of the line after they cut in.",
+  japanese: "会社で誰かが列を割り込んだ時、ワタシが「あちらが列の最後尾でございます」と申し上げました。"
+},
+
+
+
+
 
 
 
