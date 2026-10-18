@@ -1372,6 +1372,377 @@ utsuru5: {
   },
 
 
+  
+  osaeru: {
+    id: "osaeru",
+    audio: "audio/osaeru.wav",
+    kanji: "押さえる",
+    kanjiBase: "押さえ",
+    okurigana: "る",
+    furigana: "おさえ",
+    romaji: "osaeru",
+    kun: "おさえる",
+    on: "オウ",
+    meaning: "to hold down; to restrain; to suppress; to grasp firmly.",
+    answer: "押さえる"
+  },
+
+  osaeru2: {
+    id: "osaeru2",
+    audio: "audio/osaeru.wav",
+    kanji: "抑える",
+    kanjiBase: "抑え",
+    okurigana: "る",
+    furigana: "おさえ",
+    romaji: "osaeru",
+    kun: "おさえる",
+    on: "ヨク",
+    meaning: "to control; to curb; to restrain (emotions, impulses, costs).",
+    answer: "抑える"
+  },
+
+  hakaru: {
+    id: "hakaru",
+    audio: "audio/hakaru.wav",
+    kanji: "測る",
+    kanjiBase: "測",
+    okurigana: "る",
+    furigana: "はか",
+    romaji: "hakaru",
+    kun: "はかる",
+    on: "ソク",
+    meaning: "to measure (length, size, depth).",
+    answer: "測る"
+  },
+
+  hakaru2: {
+    id: "hakaru2",
+    audio: "audio/hakaru.wav",
+    kanji: "計る",
+    kanjiBase: "計",
+    okurigana: "る",
+    furigana: "はか",
+    romaji: "hakaru",
+    kun: "はかる",
+    on: "ケイ",
+    meaning: "to calculate; to time; to estimate.",
+    answer: "計る"
+  },
+
+  hakaru3: {
+    id: "hakaru3",
+    audio: "audio/hakaru.wav",
+    kanji: "量る",
+    kanjiBase: "量",
+    okurigana: "る",
+    furigana: "はか",
+    romaji: "hakaru",
+    kun: "はかる",
+    on: "リョウ",
+    meaning: "to weigh; to measure quantity or volume.",
+    answer: "量る"
+  },
+
+  eru: {
+    id: "eru",
+    audio: "audio/eru.wav",
+    kanji: "得る",
+    kanjiBase: "得",
+    okurigana: "る",
+    furigana: "え",
+    romaji: "eru",
+    kun: "える",
+    on: "トク",
+    meaning: "to obtain; to acquire; to gain.",
+    answer: "得る"
+  },
+
+  uzumaku: {
+    id: "uzumaku",
+    audio: "audio/uzumaku.wav",
+    kanji: "渦巻く",
+    kanjiBase: "渦巻",
+    okurigana: "く",
+    furigana: "うずま",
+    romaji: "uzumaku",
+    kun: "うずまく",
+    on: "",
+    meaning: "to swirl; to spiral; to whirl.",
+    answer: "渦巻く"
+  },
+
+  tsumazuku: {
+    id: "tsumazuku",
+    audio: "audio/tsumazuku.wav",
+    kanji: "躓く",
+    kanjiBase: "躓",
+    okurigana: "く",
+    furigana: "つまず",
+    romaji: "tsumazuku",
+    kun: "つまずく",
+    on: "",
+    meaning: "to stumble; to trip; to falter.",
+    answer: "躓く"
+  },
+
+  uzukumaru: {
+    id: "uzukumaru",
+    audio: "audio/uzukumaru.wav",
+    kanji: "蹲る",
+    kanjiBase: "蹲",
+    okurigana: "る",
+    furigana: "うずくま",
+    romaji: "uzukumaru",
+    kun: "うずくまる",
+    on: "",
+    meaning: "to crouch; to huddle; to squat down.",
+    answer: "蹲る"
+  },
+
+  tsukunamu: {
+    id: "tsukunamu",
+    audio: "audio/tsukunamu.wav",
+    kanji: "俯く",
+    kanjiBase: "俯",
+    okurigana: "く",
+    furigana: "つくなむ",
+    romaji: "tsukunamu",
+    kun: "つくなむ",
+    on: "",
+    meaning: "to lower one’s head; to look down (classical/rare reading).",
+    answer: "俯く"
+  },
+
+  kagamu: {
+    id: "kagamu",
+    audio: "audio/kagamu.wav",
+    kanji: "屈む",
+    kanjiBase: "屈",
+    okurigana: "む",
+    furigana: "かが",
+    romaji: "kagamu",
+    kun: "かがむ",
+    on: "",
+    meaning: "to bend down; to stoop; to crouch.",
+    answer: "屈む"
+  },
+
+  ubau: {
+    id: "ubau",
+    audio: "audio/ubau.wav",
+    kanji: "奪う",
+    kanjiBase: "奪",
+    okurigana: "う",
+    furigana: "うば",
+    romaji: "ubau",
+    kun: "うばう",
+    on: "ダツ",
+    meaning: "to steal; to snatch; to take away by force.",
+    answer: "奪う"
+  },
+
+  nakusu: {
+    id: "nakusu",
+    audio: "audio/nakusu.wav",
+    kanji: "失くす",
+    kanjiBase: "失く",
+    okurigana: "す",
+    furigana: "なく",
+    romaji: "nakusu",
+    kun: "なくす",
+    on: "",
+    meaning: "to lose (an item); to misplace.",
+    answer: "失くす"
+  },
+
+  nakusu2: {
+    id: "nakusu2",
+    audio: "audio/nakusu.wav",
+    kanji: "亡くす",
+    kanjiBase: "亡く",
+    okurigana: "す",
+    furigana: "なく",
+    romaji: "nakusu",
+    kun: "なくす",
+    on: "ボウ",
+    meaning: "to lose someone (death); to be bereaved.",
+    answer: "亡くす"
+  },
+
+  nakusu3: {
+  id: "nakusu3",
+  audio: "audio/nakusu.wav",
+  kanji: "無くす",
+  kanjiBase: "無く",
+  okurigana: "す",
+  furigana: "なく",
+  romaji: "nakusu",
+  kun: "なくす",
+  on: "",
+  meaning: "to get rid of; to remove; to eliminate; to make something no longer exist.",
+  answer: "無くす"
+},
+
+
+  nusumu: {
+    id: "nusumu",
+    audio: "audio/nusumu.wav",
+    kanji: "盗む",
+    kanjiBase: "盗",
+    okurigana: "む",
+    furigana: "ぬす",
+    romaji: "nusumu",
+    kun: "ぬすむ",
+    on: "トウ",
+    meaning: "to steal; to rob; to take secretly.",
+    answer: "盗む"
+  },
+
+  ushinau: {
+    id: "ushinau",
+    audio: "audio/ushinau.wav",
+    kanji: "失う",
+    kanjiBase: "失",
+    okurigana: "う",
+    furigana: "うしな",
+    romaji: "ushinau",
+    kun: "うしなう",
+    on: "シツ",
+    meaning: "to lose (abstract things: hope, balance, opportunity).",
+    answer: "失う"
+  },
+
+  waku: {
+    id: "waku",
+    audio: "audio/waku.wav",
+    kanji: "湧く",
+    kanjiBase: "湧",
+    okurigana: "く",
+    furigana: "わ",
+    romaji: "waku",
+    kun: "わく",
+    on: "",
+    meaning: "to well up; to gush forth; to arise (feelings, crowds).",
+    answer: "湧く"
+  },
+
+  wakasu: {
+    id: "wakasu",
+    audio: "audio/wakasu.wav",
+    kanji: "沸かす",
+    kanjiBase: "沸か",
+    okurigana: "す",
+    furigana: "わか",
+    romaji: "wakasu",
+    kun: "わかす",
+    on: "フツ",
+    meaning: "to boil; to heat; to excite.",
+    answer: "沸かす"
+  },
+
+  taku: {
+    id: "taku",
+    audio: "audio/taku.wav",
+    kanji: "焚く",
+    kanjiBase: "焚",
+    okurigana: "く",
+    furigana: "た",
+    romaji: "taku",
+    kun: "たく",
+    on: "",
+    meaning: "to burn; to kindle; to light (a fire).",
+    answer: "焚く"
+  },
+
+  tomosu: {
+    id: "tomosu",
+    audio: "audio/tomosu.wav",
+    kanji: "灯す",
+    kanjiBase: "灯",
+    okurigana: "す",
+    furigana: "とも",
+    romaji: "tomosu",
+    kun: "ともす",
+    on: "トウ",
+    meaning: "to light; to illuminate; to turn on a light.",
+    answer: "灯す"
+  },
+
+  takuwaeru: {
+    id: "takuwaeru",
+    audio: "audio/takuwaeru.wav",
+    kanji: "蓄える",
+    kanjiBase: "蓄え",
+    okurigana: "る",
+    furigana: "たくわえ",
+    romaji: "takuwaeru",
+    kun: "たくわえる",
+    on: "チク",
+    meaning: "to store; to save; to accumulate.",
+    answer: "蓄える"
+  },
+
+  tamaru: {
+    id: "tamaru",
+    audio: "audio/tamaru.wav",
+    kanji: "溜まる",
+    kanjiBase: "溜ま",
+    okurigana: "る",
+    furigana: "たま",
+    romaji: "tamaru",
+    kun: "たまる",
+    on: "",
+    meaning: "to pile up; to accumulate; to collect.",
+    answer: "溜まる"
+  },
+
+
+  tamaru2: {
+  id: "tamaru2",
+  audio: "audio/tamaru.wav",
+  kanji: "堪る",
+  kanjiBase: "堪",
+  okurigana: "る",
+  furigana: "たま",
+  romaji: "tamaru",
+  kun: "たまる",
+  on: "",
+  meaning: "to endure; to bear; to tolerate (often emphatic).",
+  answer: "堪る"
+},
+
+tamaru3: {
+  id: "tamaru3",
+  audio: "audio/tamaru.wav",
+  kanji: "貯まる",
+  kanjiBase: "貯ま",
+  okurigana: "る",
+  furigana: "たま",
+  romaji: "tamaru",
+  kun: "たまる",
+  on: "チョ",
+  meaning: "to be saved up (money, points, resources).",
+  answer: "貯まる"
+},
+
+
+
+
+
+  takuramu: {
+    id: "takuramu",
+    audio: "audio/takuramu.wav",
+    kanji: "企む",
+    kanjiBase: "企",
+    okurigana: "む",
+    furigana: "たくら",
+    romaji: "takuramu",
+    kun: "たくらむ",
+    on: "キ",
+    meaning: "to scheme; to plot; to plan secretly.",
+    answer: "企む"
+  },
+
 
 
 
