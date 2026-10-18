@@ -418,9 +418,39 @@ const blackHoleDataset = [
   ],
   answer: "I politely explained that the new clothes did not fit me when someone asked me to try them on.",
   japanese: "だれかに新しい服の試着をお願いされたら、「大きさが合わなかったのでございます」と申します。"
-}
+},
 
 
+
+
+
+{
+  id: "blackhole15",
+  audio: "audio/blackhole15.wav",
+  choices: [
+    "I politely asked a person who looked unwell if something was wrong.",
+    "I walked past a person who looked unwell without saying anything.",
+    "I scolded a person who looked unwell for sitting on the ground."
+  ],
+  answer: "I politely asked a person who looked unwell if something was wrong.",
+  japanese: "具合の悪そうな人に声をかけると「どうかなさいましたか」とお声がけします。"
+},
+
+
+
+
+
+{
+  id: "blackhole16",
+  audio: "audio/blackhole16.wav",
+  choices: [
+    "I politely explained the directions while mentioning that it takes about fifteen minutes from here.",
+    "I refused to give directions and walked away without helping.",
+    "I told the person that I had no idea how long it would take."
+  ],
+  answer: "I politely explained the directions while mentioning that it takes about fifteen minutes from here.",
+  japanese: "あるところに行く道をお教えしながら、「こちらから約十五分ほどでございます」と申しました。"
+},
 
 
 
