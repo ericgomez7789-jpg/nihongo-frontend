@@ -1654,6 +1654,27 @@ utsuru5: {
     answer: "焚く"
   },
 
+
+taku2: {
+  id: "taku2",
+  audio: "audio/taku.wav",
+  kanji: "炊く",
+  kanjiBase: "炊",
+  okurigana: "く",
+  furigana: "た",
+  romaji: "taku",
+  kun: "たく",
+  on: "",
+  meaning: "to cook (rice); to boil (grain).",
+  answer: "炊く"
+},
+
+
+
+
+
+
+
   tomosu: {
     id: "tomosu",
     audio: "audio/tomosu.wav",
