@@ -570,6 +570,36 @@ const blackHoleDataset = [
 
 
 
+{
+  id: "blackhole24",
+  audio: "audio/blackhole24.wav",
+  choices: [
+    "I thanked them sincerely for taking the trouble to deliver the goods so carefully.",
+    "I ignored the delivery and acted as if it was not important.",
+    "I complained that the goods were not delivered quickly enough."
+  ],
+  answer: "I thanked them sincerely for taking the trouble to deliver the goods so carefully.",
+  japanese: "納品物をご丁寧にお届けいただき、誠にありがとうございます。"
+},
+
+
+
+
+
+{
+  id: "blackhole25",
+  audio: "audio/blackhole25.wav",
+  choices: [
+    "I thanked them politely for taking the trouble to look after my dog and for all their help.",
+    "I acted as if they had not helped with my dog at all.",
+    "I complained that they did not take good enough care of my dog."
+  ],
+  answer: "I thanked them politely for taking the trouble to look after my dog and for all their help.",
+  japanese: "わざわざ犬の世話をしていただき、いろいろとお世話になりましたと申し上げました。"
+},
+
+
+
 
 
 
