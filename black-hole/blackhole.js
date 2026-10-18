@@ -377,6 +377,21 @@ const blackHoleDataset = [
 
 
 
+{
+  id: "blackhole12",
+  audio: "audio/blackhole12.wav",
+  choices: [
+    "I offered my seat to my grandmother when I saw her passing by.",
+    "I refused to give up my seat even when my grandmother walked past.",
+    "I asked someone else to give up their seat for my grandmother."
+  ],
+  answer: "I offered my seat to my grandmother when I saw her passing by.",
+  japanese: "わたしは祖母が通りかかるのをみると、すぐ席をゆずるために「どうぞおかけください」と申しました。"
+},
+
+
+
+
 
 
 
