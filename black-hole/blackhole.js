@@ -486,6 +486,32 @@ const blackHoleDataset = [
 
 
 
+
+
+{
+  id: "blackhole19",
+  audio: "audio/blackhole19.wav",
+  choices: [
+    "I offered birthday congratulations and politely remarked that they looked young.",
+    "I ignored their birthday entirely and changed the subject.",
+    "I bluntly told them they looked older than expected."
+  ],
+  answer: "I offered birthday congratulations and politely remarked that they looked young.",
+  japanese: "お誕生日おめでとうございます。お若く見えますと申し上げました。"
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 BlackHole.dataset = blackHoleDataset;
