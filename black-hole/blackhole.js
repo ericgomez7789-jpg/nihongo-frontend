@@ -471,6 +471,21 @@ const blackHoleDataset = [
 
 
 
+
+{
+  id: "blackhole18",
+  audio: "audio/blackhole18.wav",
+  choices: [
+    "I offered my heartfelt congratulations on their children's successful employment and wished them continued success.",
+    "I ignored their children's achievement and said nothing about their future.",
+    "I criticized their children's career choices and discouraged them."
+  ],
+  answer: "I offered my heartfelt congratulations on their children's successful employment and wished them continued success.",
+  japanese: "お嬢様とご子息様のご就職、誠におめでとうございます。今後ますますのご活躍を心よりお祈り申し上げます。"
+},
+
+
+
 ];
 
 BlackHole.dataset = blackHoleDataset;
