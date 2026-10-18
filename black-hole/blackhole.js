@@ -505,6 +505,67 @@ const blackHoleDataset = [
 
 
 
+{
+  id: "blackhole20",
+  audio: "audio/blackhole20.wav",
+  choices: [
+    "I congratulated them on their birthday and politely remarked that their formal attire suited them beautifully and their smile was truly lovely.",
+    "I made no comment about their appearance and simply ended the conversation.",
+    "I criticized their outfit and said their smile looked awkward."
+  ],
+  answer: "I congratulated them on their birthday and politely remarked that their formal attire suited them beautifully and their smile was truly lovely.",
+  japanese: "お誕生日おめでとうございます。晴れ着がよくお似合いで、笑顔がとても素敵でいらっしゃいました。"
+},
+
+
+
+
+
+{
+  id: "blackhole21",
+  audio: "audio/blackhole21.wav",
+  choices: [
+    "I congratulated them on their child's school entrance and expressed that their child's future growth is something to look forward to.",
+    "I ignored their child's school entrance and changed the topic abruptly.",
+    "I said their child's future did not seem promising."
+  ],
+  answer: "I congratulated them on their child's school entrance and expressed that their child's future growth is something to look forward to.",
+  japanese: "お子様のご入学おめでとうございます。これからのご成長がますます楽しみでございます。"
+},
+
+
+
+
+
+{
+  id: "blackhole22",
+  audio: "audio/blackhole22.wav",
+  choices: [
+    "I congratulated them on the birth of their baby and mentioned that she is a healthy and lively girl.",
+    "I ignored the news of their baby's birth and talked about something unrelated.",
+    "I said their newborn did not seem healthy."
+  ],
+  answer: "I congratulated them on the birth of their baby and mentioned that she is a healthy and lively girl.",
+  japanese: "赤ちゃんのご出産おめでとうございます。元気で健やかな女の子でございます。"
+},
+
+
+
+
+
+
+{
+  id: "blackhole23",
+  audio: "audio/blackhole23.wav",
+  choices: [
+    "I expressed my gratitude to my supervisor for kindly lending me money.",
+    "I refused to acknowledge my supervisor’s help and acted as if nothing happened.",
+    "I complained that my supervisor did not lend me enough money."
+  ],
+  answer: "I expressed my gratitude to my supervisor for kindly lending me money.",
+  japanese: "上司が私にお金を貸してくださり、そのご厚意に対して御礼を申し上げました。"
+},
+
 
 
 
