@@ -540,6 +540,32 @@ What does this sequence of gestures mean?"
 
 
 
+
+
+{
+  id: "hachigatsu",
+  audio: "audio/hachigatsu.wav",
+  choices: ["はちがつ", "しちがつ", "みかづき"],
+  answer: "はちがつ",
+
+  summary_hiragana:
+    "はじめに、まるで みぎがわ を さししめす よう に ひだりて を ぎゅっと にぎり、\
+ひだりて の ひら を みて、\
+ひだりて の ひとさしゆび と なかゆび と くすりゆび を のばして「8」 の かたち を つくった まま、\
+みぎて の おやゆび と ひとさしゆび を つないだ まま かるく ひらき、\
+それから くうちゅう で みかづき の かたち を つくって から、\
+ふたたび おやゆび と ひとさしゆび を くっつける。\
+この いちれん の しぐさ には、どんな いみ が ある の だろう か。",
+
+  summary_english:
+    "First, clench your left hand tightly as if pointing to the right.\
+Look at the palm of your left hand, then extend your left index, middle, and ring fingers to form the number “8.”\
+Keeping your right thumb and index finger connected, gently open them.\
+Then make a crescent moon shape in the air before bringing your thumb and index finger together again.\
+What does this sequence of gestures mean?"
+},
+
+
 ];
 
 
