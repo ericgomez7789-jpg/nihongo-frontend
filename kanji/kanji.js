@@ -281,7 +281,7 @@ manabu: {
 iru: {
   id: "iru",
   audio: "audio/iru.wav",
-  kanji: "いる",
+  kanji: "居る",
   kanjiBase: "い",
   okurigana: "る",
   furigana: "い",
@@ -289,7 +289,7 @@ iru: {
   kun: "いる",
   on: "",
   meaning: "to exist; to be (living things)",
-  answer: "いる"
+  answer: "居る"
 },
 
 hirogaru: {
@@ -466,7 +466,7 @@ naru: {
 
   meaning: "to become; to turn into; to reach a state. Usually written in hiragana (なる), but also appears as 成る in more formal or literary contexts.",
 
-  answer: "なる"
+  answer: "成る"
 },
 
 
@@ -1234,15 +1234,15 @@ utsuru5: {
   motenasu: {
     id: "motenasu",
     audio: "audio/motenasu.wav",
-    kanji: "もてなす",
-    kanjiBase: "もてな",
+    kanji: "持て成す",
+    kanjiBase: "持て成し",
     okurigana: "す",
     furigana: "もてな",
     romaji: "motenasu",
     kun: "もてなす",
     on: "",
     meaning: "to entertain; to treat hospitably; to welcome warmly.",
-    answer: "もてなす"
+    answer: "持て成す"
   },
 
   itawaru: {
