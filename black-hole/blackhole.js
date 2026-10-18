@@ -393,6 +393,37 @@ const blackHoleDataset = [
 
 
 
+{
+  id: "blackhole13",
+  audio: "audio/blackhole13.wav",
+  choices: [
+    "I humbly told a stranger that I did not know the area when asked for directions.",
+    "I gave incorrect directions even though I wasn’t sure.",
+    "I ignored someone who asked me for directions."
+  ],
+  answer: "I humbly told a stranger that I did not know the area when asked for directions.",
+  japanese: "だれかに道を聞かれたら、わたしがわからない場合は「すみません、わたしもこのあたりはよく存じておりません」と申します。"
+},
+
+
+
+
+{
+  id: "blackhole14",
+  audio: "audio/blackhole14.wav",
+  choices: [
+    "I politely explained that the new clothes did not fit me when someone asked me to try them on.",
+    "I agreed to try on the new clothes even though I knew they didn’t fit.",
+    "I ignored the person who asked me to try on the new clothes."
+  ],
+  answer: "I politely explained that the new clothes did not fit me when someone asked me to try them on.",
+  japanese: "だれかに新しい服の試着をお願いされたら、「大きさが合わなかったのでございます」と申します。"
+}
+
+
+
+
+
 
 
 ];
