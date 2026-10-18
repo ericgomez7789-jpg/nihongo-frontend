@@ -456,6 +456,21 @@ const blackHoleDataset = [
 
 
 
+{
+  id: "blackhole17",
+  audio: "audio/blackhole17.wav",
+  choices: [
+    "I politely asked whether takeout was allowed, and the employee confirmed that it was.",
+    "I demanded takeout rudely without asking first.",
+    "I insisted that takeout was forbidden even though I wasn’t sure."
+  ],
+  answer: "I politely asked whether takeout was allowed, and the employee confirmed that it was.",
+  japanese: "レストランで食べ物をお持ち帰りしてもよろしいかと私がうかがうと、従業員が「はい、お持ち帰りでも大丈夫でございます」と申しました。"
+},
+
+
+
+
 ];
 
 BlackHole.dataset = blackHoleDataset;
