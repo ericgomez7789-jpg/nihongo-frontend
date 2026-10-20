@@ -601,6 +601,26 @@ const blackHoleDataset = [
 
 
 
+{
+  id: "blackhole26",
+  audio: "audio/blackhole26.wav",
+  choices: [
+    "I congratulated them on their new home and commented that it is a lovely place rich in nature.",
+    "I criticized their new home for being in an area with too much nature.",
+    "I ignored their new home entirely and talked about something unrelated."
+  ],
+  answer: "I congratulated them on their new home and commented that it is a lovely place rich in nature.",
+  japanese: "ご新築をおめでとうございます。自然が豊かで良いところですね。"
+},
+
+
+
+
+
+
+
+
+
 
 
 ];
