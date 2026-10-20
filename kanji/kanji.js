@@ -8,6 +8,7 @@ const KANJI = {
   mcqLocked: false,
   mode: null,
 
+
   audio: {
     current: null,
     cancelToken: { cancel: false },
@@ -2633,12 +2634,17 @@ KANJI.show = function (id) {
 KANJI.screen1 = function () {
   KANJI.show("kanjiScreen1");
 
-  const item = KANJI.pickRandom();
-  KANJI.playAudio(item.audio);
+  // pick and store globally
+  KANJI.currentItem = KANJI.pickRandom();
 
+  // play audio
+  KANJI.playAudio(KANJI.currentItem.audio);
+
+  // replay button
   document.getElementById("kanjiReplayBtn").onclick = () =>
-    KANJI.playAudio(item.audio);
+    KANJI.playAudio(KANJI.currentItem.audio);
 
+  // next screen
   document.getElementById("kanjiNextBtn").onclick = () =>
     KANJI.screen2();
 };
