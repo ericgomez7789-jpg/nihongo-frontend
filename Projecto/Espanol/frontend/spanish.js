@@ -9106,6 +9106,74 @@ const level3 = [
 
 
 
+{
+  "id": "es3-39",
+  "meaning": "Mientras acampábamos al aire libre, me di cuenta de que nuestras dos hijas se habían olvidado de ponerse protector solar — ¿qué ocurre después?",
+  "level": 3,
+
+  "options": [
+    "Les doy protector solar rápidamente y les explico por qué es importante ponérselo antes de seguir jugando",
+    "El sol se vuelve de color rosa y empieza a cantar una canción sobre el verano",
+    "Una nube baja del cielo y les ofrece protector solar como si fuera una enfermera",
+    "Un grupo de ardillas aparece y les señala el frasco de protector solar como si entendieran la situación"
+  ],
+
+  "optionsRomaji": [
+    "les_doy_protector_solar_rapidamente_y_les_explico_por_que_es_importante_ponerselo_antes_de_seguir_jugando",
+    "el_sol_se_vuelve_de_color_rosa_y_empieza_a_cantar_una_cancion_sobre_el_verano",
+    "una_nube_baja_del_cielo_y_les_ofrece_protector_solar_como_si_fuera_una_enfermera",
+    "un_grupo_de_ardillas_aparece_y_les_senala_el_frasco_de_protector_solar_como_si_entendieran_la_situacion"
+  ],
+
+  "optionsEN": [
+    "I quickly give them sunscreen and explain why it's important before they keep playing",
+    "The sun turns pink and starts singing a song about summer",
+    "A cloud descends from the sky and offers them sunscreen like a nurse",
+    "A group of squirrels appears and points at the sunscreen bottle as if they understand the situation"
+  ],
+
+  "correct": "Les doy protector solar rápidamente y les explico por qué es importante ponérselo antes de seguir jugando",
+
+  "fullAudio": {
+    "daughter": "audio/spanish/inference39.wav",
+    "me": "audio/spanish/inference39.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["spanish/audio/les_doy_protector_solar_rapidamente_y_les_explico_por_que_es_importante_ponerselo_antes_de_seguir_jugando.wav"],
+      ["spanish/audio/el_sol_se_vuelve_de_color_rosa_y_empieza_a_cantar_una_cancion_sobre_el_verano.wav"],
+      ["spanish/audio/una_nube_baja_del_cielo_y_les_ofrece_protector_solar_como_si_fuera_una_enfermera.wav"],
+      ["spanish/audio/un_grupo_de_ardillas_aparece_y_les_senala_el_frasco_de_protector_solar_como_si_entendieran_la_situacion.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["spanish/audio/les_doy_protector_solar_rapidamente_y_les_explico_por_que_es_importante_ponerselo_antes_de_seguir_jugando.wav"],
+    ["spanish/audio/el_sol_se_vuelve_de_color_rosa_y_empieza_a_cantar_una_cancion_sobre_el_verano.wav"],
+    ["spanish/audio/una_nube_baja_del_cielo_y_les_ofrece_protector_solar_como_si_fuera_una_enfermera.wav"],
+    ["spanish/audio/un_grupo_de_ardillas_aparece_y_les_senala_el_frasco_de_protector_solar_como_si_entendieran_la_situacion.wav"]
+  ],
+
+  "chunks": [
+    {
+      "spanish": "Mientras acampábamos al aire libre",
+      "english": "While we were camping outdoors"
+    },
+    {
+      "spanish": "me di cuenta de que nuestras dos hijas se habían olvidado de ponerse protector solar",
+      "english": "I realized that our two daughters had forgotten to put on sunscreen"
+    },
+    {
+      "spanish": "¿qué ocurre después?",
+      "english": "what happens next?"
+    }
+  ]
+},
+
+
+
+
 
 
 
