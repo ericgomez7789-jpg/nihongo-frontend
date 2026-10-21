@@ -651,6 +651,21 @@ const blackHoleDataset = [
 
 
 
+{
+  id: "blackhole29",
+  audio: "audio/blackhole29.wav",
+  choices: [
+    "I expressed gratitude for their daily caregiving and told them to take care of their own health as well.",
+    "I apologized for not being able to visit the patient more often.",
+    "I recommended that they hire a professional caregiver immediately."
+  ],
+  answer: "I expressed gratitude for their daily caregiving and told them to take care of their own health as well.",
+  japanese: "日々のご看病に感謝申し上げます。お疲れが出ませんよう、どうぞご自愛ください。"
+},
+
+
+
+
 
 
 
