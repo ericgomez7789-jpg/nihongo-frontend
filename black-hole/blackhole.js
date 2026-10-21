@@ -635,6 +635,21 @@ const blackHoleDataset = [
 
 
 
+{
+  id: "blackhole28",
+  audio: "audio/blackhole28.wav",
+  choices: [
+    "As I was leaving after visiting the sick person, I respectfully said, 'Please take good care of yourself.'",
+    "Before visiting the sick person, I asked whether they needed anything from me.",
+    "I told them that they should return to work as soon as possible after recovering."
+  ],
+  answer: "As I was leaving after visiting the sick person, I respectfully said, 'Please take good care of yourself.'",
+  japanese: "お見舞いの帰り際に、「どうぞお大事になさってください」と申し上げました。"
+},
+
+
+
+
 
 
 
