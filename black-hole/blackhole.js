@@ -619,6 +619,22 @@ const blackHoleDataset = [
 
 
 
+{
+  id: "blackhole27",
+  audio: "audio/blackhole27.wav",
+  choices: [
+    "I understand you have been through a difficult experience because of this disaster, and I offer my heartfelt sympathies.",
+    "I congratulated them on successfully overcoming the disaster without any problems.",
+    "I advised them to prepare for future disasters and avoid worrying too much."
+  ],
+  answer: "I understand you have been through a difficult experience because of this disaster, and I offer my heartfelt sympathies.",
+  japanese: "このたびの災害により、大変な思いをされたことと存じます。心よりお見舞い申し上げます。"
+},
+
+
+
+
+
 
 
 
