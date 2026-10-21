@@ -9176,6 +9176,71 @@ const level3 = [
 
 
 
+{
+  "id": "es3-40",
+  "meaning": "Si no haces ejercicio regularmente, ¿qué ocurre después?",
+  "level": 3,
+
+  "options": [
+    "Con el tiempo, puedes perder condición física y sentirte con menos energía durante el día",
+    "Tus zapatos empiezan a correr solos por el parque para hacer ejercicio por ti",
+    "Las pesas del gimnasio te envían mensajes para preguntarte dónde estás",
+    "Una bicicleta aparece en tu habitación y empieza a dar consejos de salud"
+  ],
+
+  "optionsRomaji": [
+    "con_el_tiempo_puedes_perder_condicion_fisica_y_sentirte_con_menos_energia_durante_el_dia",
+    "tus_zapatos_empiezan_a_correr_solos_por_el_parque_para_hacer_ejercicio_por_ti",
+    "las_pesas_del_gimnasio_te_envian_mensajes_para_preguntarte_donde_estas",
+    "una_bicicleta_aparece_en_tu_habitacion_y_empieza_a_dar_consejos_de_salud"
+  ],
+
+  "optionsEN": [
+    "Over time, you may lose fitness and feel less energetic during the day",
+    "Your shoes start running through the park by themselves to exercise for you",
+    "The gym weights send you messages asking where you are",
+    "A bicycle appears in your room and starts giving health advice"
+  ],
+
+  "correct": "Con el tiempo, puedes perder condición física y sentirte con menos energía durante el día",
+
+  "fullAudio": {
+    "daughter": "audio/spanish/inference40.wav",
+    "me": "audio/spanish/inference40.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["spanish/audio/con_el_tiempo_puedes_perder_condicion_fisica_y_sentirte_con_menos_energia_durante_el_dia.wav"],
+      ["spanish/audio/tus_zapatos_empiezan_a_correr_solos_por_el_parque_para_hacer_ejercicio_por_ti.wav"],
+      ["spanish/audio/las_pesas_del_gimnasio_te_envian_mensajes_para_preguntarte_donde_estas.wav"],
+      ["spanish/audio/una_bicicleta_aparece_en_tu_habitacion_y_empieza_a_dar_consejos_de_salud.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["spanish/audio/con_el_tiempo_puedes_perder_condicion_fisica_y_sentirte_con_menos_energia_durante_el_dia.wav"],
+    ["spanish/audio/tus_zapatos_empiezan_a_correr_solos_por_el_parque_para_hacer_ejercicio_por_ti.wav"],
+    ["spanish/audio/las_pesas_del_gimnasio_te_envian_mensajes_para_preguntarte_donde_estas.wav"],
+    ["spanish/audio/una_bicicleta_aparece_en_tu_habitacion_y_empieza_a_dar_consejos_de_salud.wav"]
+  ],
+
+  "chunks": [
+    {
+      "spanish": "Si no haces ejercicio regularmente",
+      "english": "If you do not exercise regularly"
+    },
+    {
+      "spanish": "¿qué ocurre después?",
+      "english": "what happens next?"
+    }
+  ]
+},
+
+
+
+
+
 
 
 
