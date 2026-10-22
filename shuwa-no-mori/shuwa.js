@@ -656,6 +656,41 @@ What might this sequence of gestures be expressing?"
 
 
 
+{
+  "id": "juunigatsu",
+  "audio": "audio/juunigatsu.wav",
+  "choices": ["じゅうにがつ", "じゅういちがつ", "みかづき"],
+  "answer": "じゅうにがつ",
+
+  "summary_hiragana":
+    "はじめに、ひだりてを ぎゅっと にぎり、\
+てのひらを あいてに みせたまま、\
+てのこうを みる。\
+つぎに、ひとさしゆびを うえにむけて のばし、\
+すこし まげてから、\
+ふたたび ひとさしゆびと なかゆびを のばして\
+「12」の かたちを つくる。\
+そのまま、みぎての おやゆびと ひとさしゆびを\
+かるく ひらいた じょうたいにし、\
+それから くうちゅうに みかづきの かたちを えがくように うごかす。\
+さいごに、ふたたび おやゆびと ひとさしゆびを くっつける。\
+この いちれんの しぐさは、どんな いみを あらわしているのだろうか。",
+
+  "summary_english":
+    "First, tightly close your left hand into a fist.\
+Keeping your palm facing the other person, look at the back of your hand.\
+Next, extend your index finger upward.\
+After bending it slightly, extend both your index and middle fingers to form the shape of '12.'\
+Keeping your right thumb and index finger in a lightly opened position, move them through the air as if drawing the shape of a crescent moon.\
+Finally, bring your thumb and index finger together again.\
+What might this sequence of gestures be expressing?"
+},
+
+
+
+
+
+
 
 
 ];
