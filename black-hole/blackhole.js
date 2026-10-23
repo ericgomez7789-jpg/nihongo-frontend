@@ -705,6 +705,23 @@ const blackHoleDataset = [
 
 
 
+{
+  id: "blackhole32",
+  audio: "audio/blackhole32.wav",
+  choices: [
+    "During a hospital visit, I politely asked about the patient's condition by saying, 'How have you been feeling?'",
+    "During a hospital visit, I asked whether the patient would like a larger hospital room.",
+    "During a hospital visit, I suggested that the patient take a walk outside the hospital."
+  ],
+  answer: "During a hospital visit, I politely asked about the patient's condition by saying, 'How have you been feeling?'",
+  japanese: "お見舞いに伺い、お具合をお尋ねする時、「お加減はいかがでいらっしゃいますか」と申し上げました。"
+},
+
+
+
+
+
+
 
 
 
