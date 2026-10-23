@@ -668,6 +668,27 @@ const blackHoleDataset = [
 
 
 
+{
+  id: "blackhole30",
+  audio: "audio/blackhole30.wav",
+  choices: [
+    "When entering the hospital room during a visit, I respectfully said, 'Excuse my intrusion.'",
+    "When leaving the hospital room after a visit, I apologized for staying too long.",
+    "I informed the nurse that I would return the next day."
+  ],
+  answer: "When entering the hospital room during a visit, I respectfully said, 'Excuse my intrusion.'",
+  japanese: "お見舞いで病室に入る時、「おじゃまいたします」と申し上げました。"
+},
+
+
+
+
+
+
+
+
+
+
 
 ];
 
