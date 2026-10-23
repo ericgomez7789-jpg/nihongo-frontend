@@ -687,6 +687,32 @@ const blackHoleDataset = [
 
 
 
+{
+  id: "blackhole31",
+  audio: "audio/blackhole31.wav",
+  choices: [
+    "During a hospital visit, I encouraged the patient by saying, 'You seem to be doing well, which puts me at ease.'",
+    "I asked the patient whether they were ready to leave the hospital soon.",
+    "I advised the patient to follow the doctor's instructions more carefully."
+  ],
+  answer: "During a hospital visit, I encouraged the patient by saying, 'You seem to be doing well, which puts me at ease.'",
+  japanese: "お見舞いの際、患者さんを元気づけるために、「お元気そうで安心いたしました」と申し上げました。"
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
