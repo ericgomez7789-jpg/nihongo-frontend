@@ -693,6 +693,42 @@ What might this sequence of gestures be expressing?"
 
 
 
+
+{
+  "id": "kisetsu",
+  "audio": "audio/kisetsu.wav",
+  "choices": ["きせつ", "しぜん", "てんき"],
+  "answer": "きせつ",
+
+  "summary_hiragana":
+    "まるで、みぎがわを さししめすように、はじめに ひだりてを ぎゅっと にぎる。\
+つぎに、ひだりての ひとさしゆびと なかゆびと くすりゆびと こゆびを のばして、\
+「4」の かたちを つくったままにする。\
+そのあと、みぎてを ぎゅっと にぎり、\
+ひとさしゆびと なかゆびを のばす。\
+そして、その 2ほんの ゆびを こうごに ひらひらと うらがえしながら、\
+てくびを かわりがわりに ひねりつつ、したへ うごかしていく。\
+この いちれんの しぐさは、いったい どのような いみを あらわしているのだろうか。",
+
+  "summary_english":
+    "As if pointing toward the right side, first tightly clench your left hand into a fist.\
+Next, extend the index, middle, ring, and little fingers of your left hand and keep them in the shape of '4.'\
+Then, tightly clench your right hand into a fist and extend the index and middle fingers.\
+Alternately flutter and turn over these two fingers while twisting the wrist back and forth, gradually moving the hand downward.\
+What meaning might this sequence of gestures be expressing?"
+},
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 
