@@ -9245,6 +9245,73 @@ const level3 = [
 
 
 
+{
+  "id": "es3-41",
+  "meaning": "Cuando hace viento y dejo la ventana abierta, ¿qué ocurre después?",
+  "level": 3,
+
+  "options": [
+    "El viento puede entrar en la habitación y mover papeles u otros objetos ligeros",
+    "La ventana aprende a cantar canciones y organiza un concierto",
+    "Las cortinas empiezan a estudiar español por su cuenta",
+    "Una nube entra por la ventana y se sienta a leer un libro"
+  ],
+
+  "optionsRomaji": [
+    "el_viento_puede_entrar_en_la_habitacion_y_mover_papeles_u_otros_objetos_ligeros",
+    "la_ventana_aprende_a_cantar_canciones_y_organiza_un_concierto",
+    "las_cortinas_empiezan_a_estudiar_espanol_por_su_cuenta",
+    "una_nube_entra_por_la_ventana_y_se_sienta_a_leer_un_libro"
+  ],
+
+  "optionsEN": [
+    "The wind may enter the room and move papers or other light objects",
+    "The window learns to sing songs and organizes a concert",
+    "The curtains start studying Spanish on their own",
+    "A cloud comes through the window and sits down to read a book"
+  ],
+
+  "correct": "El viento puede entrar en la habitación y mover papeles u otros objetos ligeros",
+
+  "fullAudio": {
+    "daughter": "audio/spanish/inference41.wav",
+    "me": "audio/spanish/inference41.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["spanish/audio/el_viento_puede_entrar_en_la_habitacion_y_mover_papeles_u_otros_objetos_ligeros.wav"],
+      ["spanish/audio/la_ventana_aprende_a_cantar_canciones_y_organiza_un_concierto.wav"],
+      ["spanish/audio/las_cortinas_empiezan_a_estudiar_espanol_por_su_cuenta.wav"],
+      ["spanish/audio/una_nube_entra_por_la_ventana_y_se_sienta_a_leer_un_libro.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["spanish/audio/el_viento_puede_entrar_en_la_habitacion_y_mover_papeles_u_otros_objetos_ligeros.wav"],
+    ["spanish/audio/la_ventana_aprende_a_cantar_canciones_y_organiza_un_concierto.wav"],
+    ["spanish/audio/las_cortinas_empiezan_a_estudiar_espanol_por_su_cuenta.wav"],
+    ["spanish/audio/una_nube_entra_por_la_ventana_y_se_sienta_a_leer_un_libro.wav"]
+  ],
+
+  "chunks": [
+    {
+      "spanish": "Cuando hace viento y dejo la ventana abierta",
+      "english": "When it is windy and I leave the window open"
+    },
+    {
+      "spanish": "¿qué ocurre después?",
+      "english": "what happens next?"
+    }
+  ]
+},
+
+
+
+
+
+
+
 
 
 
