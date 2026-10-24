@@ -733,8 +733,25 @@ What meaning might this sequence of gestures be expressing?"
 Days
 -------------------------------------------------------------------------------------*/
 
-const shuwaIchinichi = []
+const shuwaIchinichi = [
+{
+  id: "ichinichi",
+  audio: "audio/mainichi.wav",
+  choices: ["いちにち", "まいにち", "しゅうかん"],
+  answer: "まいにち",
 
+  summary_hiragana:
+    "むね の ぜんぽう に りょうて を さしだして ぎゅっと にぎる。\
+そのあと、ひとさしゆび と おやゆび を のばし、\
+にど ぐるぐる と まわす。\
+この いちれん の しぐさ は、どのような いみ を あらわして いる のだろうか。",
+
+  summary_english:
+    "Extend both hands in front of your chest and tightly clench them into fists.\
+Then, extend the index finger and thumb, and rotate them in a circular motion twice.\
+What meaning might this sequence of gestures be expressing?"
+}
+];
 
 
 
