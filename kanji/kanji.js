@@ -1671,11 +1671,6 @@ taku2: {
 },
 
 
-
-
-
-
-
   tomosu: {
     id: "tomosu",
     audio: "audio/tomosu.wav",
@@ -1767,6 +1762,434 @@ tamaru3: {
 
 
 
+
+
+
+
+
+
+
+
+
+  osameru: {
+  id: "osameru",
+  audio: "audio/osameru.wav",
+  kanji: "収める",
+  kanjiBase: "収め",
+  okurigana: "る",
+  furigana: "おさめ",
+  romaji: "osameru",
+  kun: "おさめる",
+  on: "シュウ",
+  meaning: "to put away; to store; to place into; to settle into a proper location.",
+  answer: "収める"
+},
+
+osameru2: {
+  id: "osameru2",
+  audio: "audio/osameru.wav",
+  kanji: "納める",
+  kanjiBase: "納め",
+  okurigana: "る",
+  furigana: "おさめ",
+  romaji: "osameru",
+  kun: "おさめる",
+  on: "ノウ",
+  meaning: "to pay; to deliver; to supply; to hand over what is due.",
+  answer: "納める"
+},
+
+osameru3: {
+  id: "osameru3",
+  audio: "audio/osameru.wav",
+  kanji: "治める",
+  kanjiBase: "治め",
+  okurigana: "る",
+  furigana: "おさめ",
+  romaji: "osameru",
+  kun: "おさめる",
+  on: "チ",
+  meaning: "to govern; to rule; to bring under control.",
+  answer: "治める"
+},
+
+osamaru: {
+  id: "osamaru",
+  audio: "audio/osamaru.wav",
+  kanji: "収まる",
+  kanjiBase: "収ま",
+  okurigana: "る",
+  furigana: "おさま",
+  romaji: "osamaru",
+  kun: "おさまる",
+  on: "シュウ",
+  meaning: "to fit; to be contained; to settle into place.",
+  answer: "収まる"
+},
+
+shimaru: {
+  id: "shimaru",
+  audio: "audio/shimaru.wav",
+  kanji: "閉まる",
+  kanjiBase: "閉ま",
+  okurigana: "る",
+  furigana: "しま",
+  romaji: "shimaru",
+  kun: "しまる",
+  on: "ヘイ",
+  meaning: "to close; to be shut.",
+  answer: "閉まる"
+},
+
+tojiru: {
+  id: "tojiru",
+  audio: "audio/tojiru.wav",
+  kanji: "閉じる",
+  kanjiBase: "閉じ",
+  okurigana: "る",
+  furigana: "とじ",
+  romaji: "tojiru",
+  kun: "とじる",
+  on: "ヘイ",
+  meaning: "to close; to shut; to close one's eyes or a book.",
+  answer: "閉じる"
+},
+
+au: {
+  id: "au",
+  audio: "audio/au.wav",
+  kanji: "会う",
+  kanjiBase: "会",
+  okurigana: "う",
+  furigana: "あ",
+  romaji: "au",
+  kun: "あう",
+  on: "カイ",
+  meaning: "to meet; to see someone.",
+  answer: "会う"
+},
+
+hanasu: {
+  id: "hanasu",
+  audio: "audio/hanasu.wav",
+  kanji: "話す",
+  kanjiBase: "話",
+  okurigana: "す",
+  furigana: "はな",
+  romaji: "hanasu",
+  kun: "はなす",
+  on: "ワ",
+  meaning: "to speak; to talk; to converse.",
+  answer: "話す"
+},
+
+hanasu2: {
+  id: "hanasu2",
+  audio: "audio/hanasu.wav",
+  kanji: "放す",
+  kanjiBase: "放",
+  okurigana: "す",
+  furigana: "はな",
+  romaji: "hanasu",
+  kun: "はなす",
+  on: "ホウ",
+  meaning: "to release; to let go; to set free.",
+  answer: "放す"
+},
+
+iu: {
+  id: "iu",
+  audio: "audio/iu.wav",
+  kanji: "言う",
+  kanjiBase: "言",
+  okurigana: "う",
+  furigana: "い",
+  romaji: "iu",
+  kun: "いう",
+  on: "ゲン",
+  meaning: "to say; to tell.",
+  answer: "言う"
+},
+
+yomu: {
+  id: "yomu",
+  audio: "audio/yomu.wav",
+  kanji: "読む",
+  kanjiBase: "読",
+  okurigana: "む",
+  furigana: "よ",
+  romaji: "yomu",
+  kun: "よむ",
+  on: "ドク",
+  meaning: "to read.",
+  answer: "読む"
+},
+
+kaku: {
+  id: "kaku",
+  audio: "audio/kaku.wav",
+  kanji: "書く",
+  kanjiBase: "書",
+  okurigana: "く",
+  furigana: "か",
+  romaji: "kaku",
+  kun: "かく",
+  on: "ショ",
+  meaning: "to write.",
+  answer: "書く"
+},
+
+kaku2: {
+  id: "kaku2",
+  audio: "audio/kaku.wav",
+  kanji: "描く",
+  kanjiBase: "描",
+  okurigana: "く",
+  furigana: "えが",
+  romaji: "egaku",
+  kun: "えがく",
+  on: "ビョウ",
+  meaning: "to draw; to depict; to portray.",
+  answer: "描く"
+},
+
+kau: {
+  id: "kau",
+  audio: "audio/kau.wav",
+  kanji: "買う",
+  kanjiBase: "買",
+  okurigana: "う",
+  furigana: "か",
+  romaji: "kau",
+  kun: "かう",
+  on: "バイ",
+  meaning: "to buy; to purchase.",
+  answer: "買う"
+},
+
+uru: {
+  id: "uru",
+  audio: "audio/uru.wav",
+  kanji: "売る",
+  kanjiBase: "売",
+  okurigana: "る",
+  furigana: "う",
+  romaji: "uru",
+  kun: "うる",
+  on: "バイ",
+  meaning: "to sell.",
+  answer: "売る"
+},
+
+motsu: {
+  id: "motsu",
+  audio: "audio/motsu.wav",
+  kanji: "持つ",
+  kanjiBase: "持",
+  okurigana: "つ",
+  furigana: "も",
+  romaji: "motsu",
+  kun: "もつ",
+  on: "ジ",
+  meaning: "to hold; to carry; to possess.",
+  answer: "持つ"
+},
+
+aku: {
+  id: "aku",
+  audio: "audio/aku.wav",
+  kanji: "開く",
+  kanjiBase: "開",
+  okurigana: "く",
+  furigana: "あ",
+  romaji: "aku",
+  kun: "あく",
+  on: "カイ",
+  meaning: "to open; to become open.",
+  answer: "開く"
+},
+
+aku2: {
+  id: "aku2",
+  audio: "audio/aku.wav",
+  kanji: "空く",
+  kanjiBase: "空",
+  okurigana: "く",
+  furigana: "あ",
+  romaji: "aku",
+  kun: "あく",
+  on: "クウ",
+  meaning: "to become empty; to become vacant; to become available.",
+  answer: "空く"
+},
+
+agaru: {
+  id: "agaru",
+  audio: "audio/agaru.wav",
+  kanji: "上がる",
+  kanjiBase: "上が",
+  okurigana: "る",
+  furigana: "あが",
+  romaji: "agaru",
+  kun: "あがる",
+  on: "ジョウ",
+  meaning: "to rise; to go up; to increase.",
+  answer: "上がる"
+},
+
+otosu: {
+  id: "otosu",
+  audio: "audio/otosu.wav",
+  kanji: "落とす",
+  kanjiBase: "落と",
+  okurigana: "す",
+  furigana: "おと",
+  romaji: "otosu",
+  kun: "おとす",
+  on: "ラク",
+  meaning: "to drop; to let fall; to cause to fall.",
+  answer: "落とす"
+},
+
+narabu: {
+  id: "narabu",
+  audio: "audio/narabu.wav",
+  kanji: "並ぶ",
+  kanjiBase: "並",
+  okurigana: "ぶ",
+  furigana: "なら",
+  romaji: "narabu",
+  kun: "ならぶ",
+  on: "",
+  meaning: "to line up; to be arranged; to stand in a row.",
+  answer: "並ぶ"
+},
+
+sorou: {
+  id: "sorou",
+  audio: "audio/sorou.wav",
+  kanji: "揃う",
+  kanjiBase: "揃",
+  okurigana: "う",
+  furigana: "そろ",
+  romaji: "sorou",
+  kun: "そろう",
+  on: "",
+  meaning: "to be complete; to be assembled; to be uniform.",
+  answer: "揃う"
+},
+
+kiku: {
+  id: "kiku",
+  audio: "audio/kiku.wav",
+  kanji: "聞く",
+  kanjiBase: "聞",
+  okurigana: "く",
+  furigana: "き",
+  romaji: "kiku",
+  kun: "きく",
+  on: "ブン",
+  meaning: "to listen; to hear; to ask.",
+  answer: "聞く"
+},
+
+kotaeru: {
+  id: "kotaeru",
+  audio: "audio/kotaeru.wav",
+  kanji: "答える",
+  kanjiBase: "答え",
+  okurigana: "る",
+  furigana: "こたえ",
+  romaji: "kotaeru",
+  kun: "こたえる",
+  on: "トウ",
+  meaning: "to answer; to reply.",
+  answer: "答える"
+},
+
+tsutaeru: {
+  id: "tsutaeru",
+  audio: "audio/tsutaeru.wav",
+  kanji: "伝える",
+  kanjiBase: "伝え",
+  okurigana: "る",
+  furigana: "つたえ",
+  romaji: "tsutaeru",
+  kun: "つたえる",
+  on: "デン",
+  meaning: "to convey; to communicate; to tell.",
+  answer: "伝える"
+},
+
+oshieru: {
+  id: "oshieru",
+  audio: "audio/oshieru.wav",
+  kanji: "教える",
+  kanjiBase: "教え",
+  okurigana: "る",
+  furigana: "おしえ",
+  romaji: "oshieru",
+  kun: "おしえる",
+  on: "キョウ",
+  meaning: "to teach; to tell; to inform.",
+  answer: "教える"
+},
+
+tanomu: {
+  id: "tanomu",
+  audio: "audio/tanomu.wav",
+  kanji: "頼む",
+  kanjiBase: "頼",
+  okurigana: "む",
+  furigana: "たの",
+  romaji: "tanomu",
+  kun: "たのむ",
+  on: "ライ",
+  meaning: "to request; to ask a favor; to rely on.",
+  answer: "頼む"
+},
+
+omou: {
+  id: "omou",
+  audio: "audio/omou.wav",
+  kanji: "思う",
+  kanjiBase: "思",
+  okurigana: "う",
+  furigana: "おも",
+  romaji: "omou",
+  kun: "おもう",
+  on: "シ",
+  meaning: "to think; to feel; to believe.",
+  answer: "思う"
+},
+
+mukau: {
+  id: "mukau",
+  audio: "audio/mukau.wav",
+  kanji: "向かう",
+  kanjiBase: "向か",
+  okurigana: "う",
+  furigana: "むか",
+  romaji: "mukau",
+  kun: "むかう",
+  on: "コウ",
+  meaning: "to head toward; to face; to proceed toward.",
+  answer: "向かう"
+},
+
+kangaeru: {
+  id: "kangaeru",
+  audio: "audio/kangaeru.wav",
+  kanji: "考える",
+  kanjiBase: "考え",
+  okurigana: "る",
+  furigana: "かんがえ",
+  romaji: "kangaeru",
+  kun: "かんがえる",
+  on: "コウ",
+  meaning: "to think; to consider; to ponder; to reflect.",
+  answer: "考える"
+},
 
 
 
