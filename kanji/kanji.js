@@ -1827,6 +1827,48 @@ osamaru: {
   answer: "収まる"
 },
 
+osamaru2: {
+  id: "osamaru2",
+  audio: "audio/osamaru.wav",
+  kanji: "納まる",
+  kanjiBase: "納ま",
+  okurigana: "る",
+  furigana: "おさま",
+  romaji: "osamaru",
+  kun: "おさまる",
+  on: "ノウ",
+  meaning: "to settle into a position; to be properly placed; to be paid or delivered.",
+  answer: "納まる"
+},
+
+osamaru3: {
+  id: "osamaru3",
+  audio: "audio/osamaru.wav",
+  kanji: "治まる",
+  kanjiBase: "治ま",
+  okurigana: "る",
+  furigana: "おさま",
+  romaji: "osamaru",
+  kun: "おさまる",
+  on: "チ",
+  meaning: "to calm down; to subside; to come under control.",
+  answer: "治まる"
+},
+
+osamaru4: {
+  id: "osamaru4",
+  audio: "audio/osamaru.wav",
+  kanji: "修まる",
+  kanjiBase: "修ま",
+  okurigana: "る",
+  furigana: "おさま",
+  romaji: "osamaru",
+  kun: "おさまる",
+  on: "シュウ",
+  meaning: "to reform oneself; to conduct oneself properly.",
+  answer: "修まる"
+},
+
 shimaru: {
   id: "shimaru",
   audio: "audio/shimaru.wav",
@@ -1967,6 +2009,19 @@ kau: {
   answer: "買う"
 },
 
+kau2: {
+  id: "kau2",
+  audio: "audio/kau.wav",
+  kanji: "飼う",
+  kanjiBase: "飼",
+  okurigana: "う",
+  furigana: "か",
+  romaji: "kau",
+  kun: "かう",
+  on: "シ",
+  meaning: "to keep; to raise; to own a pet or animal.",
+  answer: "飼う"
+},
 uru: {
   id: "uru",
   audio: "audio/uru.wav",
