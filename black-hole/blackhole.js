@@ -725,6 +725,24 @@ const blackHoleDataset = [
 
 
 
+{
+  id: "blackhole33",
+  audio: "audio/blackhole33.wav",
+  choices: [
+    "At a restaurant, since my ordered food had not arrived for quite some time, I politely asked how much longer it would take.",
+    "At a restaurant, I complained that the food tasted bad and asked for a refund.",
+    "At a restaurant, I immediately canceled my order without speaking to the staff."
+  ],
+  answer: "At a restaurant, since my ordered food had not arrived for quite some time, I politely asked how much longer it would take.",
+  japanese: "注文した料理がなかなか来ないので、あとどのぐらいでできますかとお尋ねしました。"
+},
+
+
+
+
+
+
+
 
 
 
