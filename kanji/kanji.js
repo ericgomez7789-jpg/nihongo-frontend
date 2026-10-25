@@ -153,6 +153,20 @@ neru: {
   answer: "寝る"
 },
 
+arau: {
+  id: "arau",
+  audio: "audio/arau.wav",
+  kanji: "洗う",
+  kanjiBase: "洗",
+  okurigana: "う",
+  furigana: "あら",
+  romaji: "arau",
+  kun: "あらう",
+  on: "セン",
+  meaning: "to wash; to clean.",
+  answer: "洗う"
+},
+
 hairu: {
   id: "hairu",
   audio: "audio/hairu.wav",
@@ -1513,6 +1527,20 @@ utsuru5: {
     meaning: "to lower one’s head; to look down (classical/rare reading).",
     answer: "俯く"
   },
+
+utsumuku: {
+  id: "utsumuku",
+  audio: "audio/utsumuku.wav",
+  kanji: "俯く",
+  kanjiBase: "俯",
+  okurigana: "く",
+  furigana: "うつむ",
+  romaji: "utsumuku",
+  kun: "うつむく",
+  on: "",
+  meaning: "to hang one's head; to look down.",
+  answer: "俯く"
+},
 
   kagamu: {
     id: "kagamu",
