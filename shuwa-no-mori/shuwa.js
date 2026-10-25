@@ -750,7 +750,42 @@ const shuwaIchinichi = [
     "Extend both hands in front of your chest and tightly clench them into fists.\
 Then, extend the index finger and thumb, and rotate them in a circular motion twice.\
 What meaning might this sequence of gestures be expressing?"
-}
+},
+
+
+
+
+
+{
+  id: "kyou",
+  audio: "audio/kyou.wav",
+  choices: ["きょう", "きのう", "あした"],
+  answer: "きょう",
+
+  summary_hiragana:
+    "まるで だれか に「おちついて」 と つたえる ように、\
+りょうて の てのひら を したむき にして、\
+ぐっと おさえます。\
+この しぐさ は、どのような いみ を あらわして いる のだろうか。",
+
+  summary_english:
+    "As if telling someone, 'Calm down,' turn both palms downward and press firmly.\
+What meaning might this gesture be expressing?"
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 

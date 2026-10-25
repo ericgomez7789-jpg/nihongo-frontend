@@ -745,6 +745,23 @@ const blackHoleDataset = [
 
 
 
+{
+  id: "blackhole34",
+  audio: "audio/blackhole34.wav",
+  choices: [
+    "My supervisor took me out for a meal and treated me. At the end of the meal, I respectfully thanked them and told them the food was very delicious.",
+    "My supervisor asked me to pay for everyone's meal, so I apologized and left early.",
+    "My supervisor invited me to a restaurant, but I declined because I was not hungry."
+  ],
+  answer: "My supervisor took me out for a meal and treated me. At the end of the meal, I respectfully thanked them and told them the food was very delicious.",
+  japanese: "上司がワタクシを食事に連れて行ってくださり、おごってくださいました。それから食事の終わりに「ごちそうさまでした。とても美味しかったです。ありがとうございました。」と申し上げました。"
+},
+
+
+
+
+
+
 
 
 
