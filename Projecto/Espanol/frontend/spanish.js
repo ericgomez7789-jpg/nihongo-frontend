@@ -9310,6 +9310,70 @@ const level3 = [
 
 
 
+{
+  "id": "es3-42",
+  "meaning": "¿Cuando alguien te hace carrilla y dice que eres chaparro, qué ocurre después?",
+  "level": 3,
+
+  "options": [
+    "Es posible que la persona se esté burlando de tu estatura o haciendo una broma",
+    "Tu altura aumenta inmediatamente veinte centímetros",
+    "Las montañas cercanas empiezan a hacerse más pequeñas",
+    "Los árboles deciden mudarse a otra ciudad"
+  ],
+
+  "optionsRomaji": [
+    "es_posible_que_la_persona_se_este_burlando_de_tu_estatura_o_haciendo_una_broma",
+    "tu_altura_aumenta_inmediatamente_veinte_centimetros",
+    "las_montanas_cercanas_empiezan_a_hacerse_mas_pequenas",
+    "los_arboles_deciden_mudarse_a_otra_ciudad"
+  ],
+
+  "optionsEN": [
+    "The person may be teasing you about your height or making a joke",
+    "Your height immediately increases by twenty centimeters",
+    "The nearby mountains start becoming smaller",
+    "The trees decide to move to another city"
+  ],
+
+  "correct": "Es posible que la persona se esté burlando de tu estatura o haciendo una broma",
+
+  "fullAudio": {
+    "daughter": "audio/spanish/inference42.wav",
+    "me": "audio/spanish/inference42.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["spanish/audio/es_posible_que_la_persona_se_este_burlando_de_tu_estatura_o_haciendo_una_broma.wav"],
+      ["spanish/audio/tu_altura_aumenta_inmediatamente_veinte_centimetros.wav"],
+      ["spanish/audio/las_montanas_cercanas_empiezan_a_hacerse_mas_pequenas.wav"],
+      ["spanish/audio/los_arboles_deciden_mudarse_a_otra_ciudad.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["spanish/audio/es_posible_que_la_persona_se_este_burlando_de_tu_estatura_o_haciendo_una_broma.wav"],
+    ["spanish/audio/tu_altura_aumenta_inmediatamente_veinte_centimetros.wav"],
+    ["spanish/audio/las_montanas_cercanas_empiezan_a_hacerse_mas_pequenas.wav"],
+    ["spanish/audio/los_arboles_deciden_mudarse_a_otra_ciudad.wav"]
+  ],
+
+  "chunks": [
+    {
+      "spanish": "¿Cuando alguien te hace carrilla y dice que eres chaparro",
+      "english": "When someone teases you and says you are short"
+    },
+    {
+      "spanish": "qué ocurre después?",
+      "english": "what happens next?"
+    }
+  ]
+},
+
+
+
+
 
 
 
