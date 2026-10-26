@@ -762,6 +762,29 @@ const blackHoleDataset = [
 
 
 
+{
+  id: "blackhole35",
+  audio: "audio/blackhole35.wav",
+  choices: [
+    "At a restaurant, when I was ready to place an order, I politely called the server and said, 'Excuse me, may I place an order?'",
+    "At a restaurant, I accidentally ordered the wrong meal and asked the server to cancel it.",
+    "At a restaurant, I thanked the server and immediately paid the bill before ordering."
+  ],
+  answer: "At a restaurant, when I was ready to place an order, I politely called the server and said, 'Excuse me, may I place an order?'",
+  japanese: "飲食店で、注文しようと思い、店員さんに「すみません、注文をお願いできますか」と申し上げました。"
+},
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
