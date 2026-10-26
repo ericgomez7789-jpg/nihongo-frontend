@@ -778,6 +778,28 @@ What meaning might this gesture be expressing?"
 
 
 
+{
+  id: "ashita",
+  audio: "audio/ashita.wav",
+  choices: ["あした", "きょう", "きのう"],
+  answer: "あした",
+
+  summary_hiragana:
+    "まるで これから やってくる とき を さししめす ように、\
+みぎて を ぎゅっと にぎり、\
+かた の いち で ひとさしゆび を うえ に たてます。\
+そして、その ゆび を たてたまま ぜんぽう へ すっと のばします。\
+さて、この いちれん の しぐさ は、どのような いみ を あらわして いる のでしょうか。",
+
+  summary_english:
+    "As if pointing toward a time that is yet to come, make a firm fist with your right hand and raise your index finger at shoulder level.\
+Then, keeping the finger extended, smoothly move your hand forward.\
+What meaning might this series of gestures be expressing?"
+},
+
+
+
+
 
 
 
