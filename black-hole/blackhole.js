@@ -779,6 +779,22 @@ const blackHoleDataset = [
 
 
 
+{
+  id: "blackhole36",
+  audio: "audio/blackhole36.wav",
+  choices: [
+    "At a restaurant, when the other person's meal arrived before mine, I politely said, 'Please go ahead and eat before it gets cold.'",
+    "At a restaurant, when my meal arrived first, I immediately started eating without saying anything.",
+    "At a restaurant, I asked the other person to wait until both meals had arrived before eating."
+  ],
+  answer: "At a restaurant, when the other person's meal arrived before mine, I politely said, 'Please go ahead and eat before it gets cold.'",
+  japanese: "飲食店で、相手の料理が先に来たので、「どうぞ、冷めないうちに召し上がってください」と申し上げました。"
+},
+
+
+
+
+
 
 
 
