@@ -804,6 +804,31 @@ What meaning might this series of gestures be expressing?"
 
 
 
+{
+  id: "asatte",
+  audio: "audio/asatte.wav",
+  choices: ["あさって", "あした", "きのう"],
+  answer: "あさって",
+
+  summary_hiragana:
+    "まるで これから さき の とき を さししめす ように、\
+みぎて を ぎゅっと にぎり、\
+かた の いち で ひとさしゆび と なかゆび を うえ に たてます。\
+そして、その ゆび を たてたまま ぜんぽう へ すっと のばします。\
+さて、この いちれん の しぐさ は、どのような いみ を あらわして いる のでしょうか。",
+
+  summary_english:
+    "As if indicating a point further ahead in time, make a firm fist with your right hand and raise your index and middle fingers at shoulder level.\
+Then, keeping those fingers extended, smoothly move your hand forward.\
+What meaning might this series of gestures be expressing?"
+},
+
+
+
+
+
+
+
 
 
 
