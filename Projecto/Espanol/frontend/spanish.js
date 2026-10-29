@@ -9380,6 +9380,75 @@ const level3 = [
 
 
 
+{
+  "id": "es3-43",
+  "meaning": "Si muere mi mascota, ¿qué sentimiento voy a tener después?",
+  "level": 3,
+
+  "options": [
+    "Es probable que me sienta triste por la pérdida de mi mascota",
+    "Es probable que empiece a volar por el cielo como un pájaro",
+    "Es probable que todos los animales de la ciudad me aplaudan",
+    "Es probable que mi casa se convierta en un castillo"
+  ],
+
+  "optionsRomaji": [
+    "es_probable_que_me_sienta_triste_por_la_perdida_de_mi_mascota",
+    "es_probable_que_empiece_a_volar_por_el_cielo_como_un_pajaro",
+    "es_probable_que_todos_los_animales_de_la_ciudad_me_aplaudan",
+    "es_probable_que_mi_casa_se_convierta_en_un_castillo"
+  ],
+
+  "optionsEN": [
+    "I will probably feel sad because of the loss of my pet",
+    "I will probably start flying through the sky like a bird",
+    "All the animals in the city will probably applaud me",
+    "My house will probably turn into a castle"
+  ],
+
+  "correct": "Es probable que me sienta triste por la pérdida de mi mascota",
+
+  "fullAudio": {
+    "daughter": "audio/spanish/inference43.wav",
+    "me": "audio/spanish/inference43.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["spanish/audio/es_probable_que_me_sienta_triste_por_la_perdida_de_mi_mascota.wav"],
+      ["spanish/audio/es_probable_que_empiece_a_volar_por_el_cielo_como_un_pajaro.wav"],
+      ["spanish/audio/es_probable_que_todos_los_animales_de_la_ciudad_me_aplaudan.wav"],
+      ["spanish/audio/es_probable_que_mi_casa_se_convierta_en_un_castillo.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["spanish/audio/es_probable_que_me_sienta_triste_por_la_perdida_de_mi_mascota.wav"],
+    ["spanish/audio/es_probable_que_empiece_a_volar_por_el_cielo_como_un_pajaro.wav"],
+    ["spanish/audio/es_probable_que_todos_los_animales_de_la_ciudad_me_aplaudan.wav"],
+    ["spanish/audio/es_probable_que_mi_casa_se_convierta_en_un_castillo.wav"]
+  ],
+
+  "chunks": [
+    {
+      "spanish": "Si muere mi mascota",
+      "english": "If my pet dies"
+    },
+    {
+      "spanish": "¿qué sentimiento voy a tener después?",
+      "english": "what feeling will I have afterward?"
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
 
 ];
 
