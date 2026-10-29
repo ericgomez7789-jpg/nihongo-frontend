@@ -829,6 +829,31 @@ What meaning might this series of gestures be expressing?"
 
 
 
+{
+  id: "kinou",
+  audio: "audio/kinou.wav",
+  choices: ["きのう", "あした", "あさって"],
+  answer: "きのう",
+
+  summary_hiragana:
+    "まるで すぎさった とき を さししめす ように、\
+みぎて を ぎゅっと にぎり、\
+かた の いち で ひとさしゆび を うえ に たてます。\
+そして、その ゆび を たてたまま、\
+うしろ の ほうへ むけて さししめします。\
+さて、この いちれん の しぐさ は、どのような いみ を あらわして いる のでしょうか。",
+
+  summary_english:
+    "As if indicating a point in time that has already passed, make a firm fist with your right hand and raise your index finger at shoulder level.\
+Then, keeping that finger extended, point it toward the space behind you.\
+What meaning might this series of gestures be expressing?"
+},
+
+
+
+
+
+
 
 
 
