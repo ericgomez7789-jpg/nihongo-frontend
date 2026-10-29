@@ -796,6 +796,22 @@ const blackHoleDataset = [
 
 
 
+{
+  id: "blackhole37",
+  audio: "audio/blackhole37.wav",
+  choices: [
+    "At a restaurant, when my meal arrived before the other person's and they politely encouraged me to begin first, I respectfully said, 'Please excuse me, I'll start first.'",
+    "At a restaurant, when my meal arrived first, I waited silently without responding until the other person's meal arrived.",
+    "At a restaurant, when my meal arrived first, I insisted that neither of us should eat until both meals were served."
+  ],
+  answer: "At a restaurant, when my meal arrived before the other person's and they politely encouraged me to begin first, I respectfully said, 'Please excuse me, I'll start first.'",
+  japanese: "飲食店で、自分の料理が先に運ばれて来て、相手から「先にどうぞ」と勧められた時は、「お先にいただきます」と申し上げます。"
+},
+
+
+
+
+
 
 
 
