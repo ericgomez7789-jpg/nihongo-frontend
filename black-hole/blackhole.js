@@ -812,6 +812,21 @@ const blackHoleDataset = [
 
 
 
+{
+  id: "blackhole38",
+  audio: "audio/blackhole38.wav",
+  choices: [
+    "At a drinking gathering, when I began to feel intoxicated, I politely said, 'I've already had enough, so I'll stop here.'",
+    "At a drinking gathering, even after becoming intoxicated, I encouraged everyone to continue pouring me more drinks.",
+    "At a drinking gathering, I left without saying anything after finishing my drink."
+  ],
+  answer: "At a drinking gathering, when I began to feel intoxicated, I politely said, 'I've already had enough, so I'll stop here.'",
+  japanese: "飲み会で、酔ってきた時は、「もう十分いただきました。このくらいにしておきます」と申し上げます。"
+},
+
+
+
+
 
 
 
