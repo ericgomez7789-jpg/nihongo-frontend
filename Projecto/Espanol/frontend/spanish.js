@@ -9447,6 +9447,72 @@ const level3 = [
 
 
 
+{
+  "id": "es3-44",
+  "meaning": "Si pierdes tu cartera, ¿qué sentimiento ocurre después?",
+  "level": 3,
+
+  "options": [
+    "Es probable que te sientas preocupado o angustiado por haber perdido tu cartera",
+    "Es probable que tu cartera regrese sola volando a tus manos",
+    "Es probable que encuentres un tesoro escondido inmediatamente",
+    "Es probable que todos los bancos te regalen dinero"
+  ],
+
+  "optionsRomaji": [
+    "es_probable_que_te_sientas_preocupado_o_angustiado_por_haber_perdido_tu_cartera",
+    "es_probable_que_tu_cartera_regrese_sola_volando_a_tus_manos",
+    "es_probable_que_encuentres_un_tesoro_escondido_inmediatamente",
+    "es_probable_que_todos_los_bancos_te_regalen_dinero"
+  ],
+
+  "optionsEN": [
+    "You will probably feel worried or distressed because you lost your wallet",
+    "Your wallet will probably fly back into your hands by itself",
+    "You will probably find a hidden treasure immediately",
+    "All banks will probably give you money"
+  ],
+
+  "correct": "Es probable que te sientas preocupado o angustiado por haber perdido tu cartera",
+
+  "fullAudio": {
+    "daughter": "audio/spanish/inference44.wav",
+    "me": "audio/spanish/inference44.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["spanish/audio/es_probable_que_te_sientas_preocupado_o_angustiado_por_haber_perdido_tu_cartera.wav"],
+      ["spanish/audio/es_probable_que_tu_cartera_regrese_sola_volando_a_tus_manos.wav"],
+      ["spanish/audio/es_probable_que_encuentres_un_tesoro_escondido_inmediatamente.wav"],
+      ["spanish/audio/es_probable_que_todos_los_bancos_te_regalen_dinero.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["spanish/audio/es_probable_que_te_sientas_preocupado_o_angustiado_por_haber_perdido_tu_cartera.wav"],
+    ["spanish/audio/es_probable_que_tu_cartera_regrese_sola_volando_a_tus_manos.wav"],
+    ["spanish/audio/es_probable_que_encuentres_un_tesoro_escondido_inmediatamente.wav"],
+    ["spanish/audio/es_probable_que_todos_los_bancos_te_regalen_dinero.wav"]
+  ],
+
+  "chunks": [
+    {
+      "spanish": "Si pierdes tu cartera",
+      "english": "If you lose your wallet"
+    },
+    {
+      "spanish": "¿qué sentimiento ocurre después?",
+      "english": "what feeling occurs afterward?"
+    }
+  ]
+},
+
+
+
+
+
+
 
 
 
