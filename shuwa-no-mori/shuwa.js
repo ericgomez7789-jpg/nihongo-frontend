@@ -878,6 +878,30 @@ What meaning might this series of gestures be expressing?"
 
 
 
+{
+  id: "kyuujitsu",
+  audio: "audio/kyuujitsu.wav",
+  choices: ["きゅうじつ", "へいじつ", "しゅっきん"],
+  answer: "きゅうじつ",
+
+  summary_hiragana:
+    "はじめ に、むね の まえ で ひじ を すこし まげた まま、りょうて を のばします。\
+そして、りょうて の てのひら を した に むけ、すべて の ゆび が まえ を さししめします。\
+それから、りょうて を あわせます。\
+まるで のんびり と すごす とくべつな ひ を あらわす ような、この いちれん の しぐさ。\
+さて、どのような ことば を いみ して いる のでしょうか。",
+
+  summary_english:
+    "First, extend both hands in front of your chest while keeping your elbows slightly bent.\
+Turn both palms downward so that all of your fingers point straight ahead.\
+Then, bring both hands together.\
+This series of gestures seems almost as if it were expressing a special day spent relaxing and taking it easy.\
+What word might this gesture be representing?"
+},
+
+
+
+
 
 
 
