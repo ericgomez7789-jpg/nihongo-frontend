@@ -904,6 +904,28 @@ What word might this gesture be representing?"
 
 
 
+{
+  id: "hi",
+  audio: "audio/hi.wav",
+  choices: ["ひ", "つき", "とし"],
+  answer: "ひ",
+
+  summary_hiragana:
+    "はじめ に、ひだり の ひじ を すこし まげた まま、むね の まえ で ひだりて を ぎゅっと にぎり、ひとさしゆび を うえ に むけて たてます。\
+それから、みぎて を ぎゅっと にぎり、ひとさしゆび と なかゆび と くすりゆび を たてます。\
+そして、まるで ひだりて の ひとさしゆび を おおう ように、ひだりて の ひとさしゆび に、みぎて の さんぼん の ゆびさき を あわせます。\
+さて、この いちれん の しぐさ は、どのような いみ を あらわして いる のでしょうか？",
+
+  summary_english:
+    "First, while keeping your left elbow slightly bent, make a firm fist with your left hand in front of your chest and raise your index finger upward.\
+Then, make a firm fist with your right hand and extend your index, middle, and ring fingers.\
+Next, as if covering the left index finger, bring the three fingertips of your right hand into contact with the left index finger.\
+What meaning might this series of gestures be expressing?"
+},
+
+
+
+
 
 
 
