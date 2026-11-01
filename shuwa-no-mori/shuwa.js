@@ -4,15 +4,22 @@
 
 const shuwaAisatsu = [
   {
-    id: "ohayou",
-    audio: "audio/ohayou.wav",
-    choices: ["おはよう", "こんにちは", "こんばんは"],
-    answer: "おはよう",
-    summary_hiragana:
-      "てをぎゅっとにぎってちいさなまくらをつくり、こめかみのよこからすとんとさげます。あさにめがさめるかんじをあらわしています。これはどういういみになりますか。",
-    summary_english:
-      "Make a small 'pillow' with your fist and lower it from the temple. This gesture represents waking up in the morning. What does this mean?"
-  },
+  id: "ohayou",
+  audio: "audio/ohayou.wav",
+  choices: ["あさ", "ひる", "よる"],
+  answer: "あさ",
+
+  summary_hiragana:
+    "て を ぎゅっと にぎって ちいさな まくら を つくり、\
+こめかみ の よこ から すとん と さげます。\
+あさ に め が さめる かんじ を あらわして います。\
+これは どういう いみ に なります か。",
+
+  summary_english:
+    "Make a small pillow with your fist and lower it from the side of your temple.\
+This gesture represents waking up in the morning.\
+What meaning does this express?"
+},
 
   {
     id: "konnichiwa",
@@ -923,6 +930,51 @@ Next, as if covering the left index finger, bring the three fingertips of your r
 What meaning might this series of gestures be expressing?"
 },
 
+];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const shuwaJikan = [
+
+{
+  id: "asa",
+  audio: "audio/asa.wav",
+  choices: ["あさ", "ひる", "よる"],
+  answer: "あさ",
+
+  summary_hiragana:
+    "て を ぎゅっと にぎって ちいさな まくら を つくり、\
+こめかみ の よこ から すとん と さげます。\
+あさ に め が さめる かんじ を あらわして います。\
+これは どういう いみ に なります か。",
+
+  summary_english:
+    "Make a small pillow with your fist and lower it from the side of your temple.\
+This gesture represents waking up in the morning.\
+What meaning does this express?"
+},
+
+
+
+
+
+
+
+
+
 
 
 
@@ -931,6 +983,10 @@ What meaning might this series of gestures be expressing?"
 
 
 ];
+
+
+
+
 
 
 
