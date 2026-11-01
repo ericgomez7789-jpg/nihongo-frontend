@@ -861,6 +861,21 @@ const blackHoleDataset = [
 
 
 
+{
+  id: "blackhole41",
+  audio: "audio/blackhole41.wav",
+  choices: [
+    "When offered alcohol, I politely said, 'I am not much of a drinker.'",
+    "When offered alcohol, I demanded the strongest drink available.",
+    "When offered alcohol, I ignored the speaker and walked away."
+  ],
+  answer: "When offered alcohol, I politely said, 'I am not much of a drinker.'",
+  japanese: "お酒を勧められた時は、「私は不調法な者ですから」と申し上げます。"
+},
+
+
+
+
 
 
 
