@@ -844,6 +844,21 @@ const blackHoleDataset = [
 
 
 
+{
+  id: "blackhole40",
+  audio: "audio/blackhole40.wav",
+  choices: [
+    "When I noticed the other person's glass was empty, I politely said, 'My apologies for not noticing. Would you like a refill?'",
+    "When I noticed the other person's glass was empty, I immediately took their drink for myself.",
+    "When I noticed the other person's glass was empty, I said nothing and left the table."
+  ],
+  answer: "When I noticed the other person's glass was empty, I politely said, 'My apologies for not noticing. Would you like a refill?'",
+  japanese: "相手のグラスが空になっていたら、「気がつかず、失礼いたしました。おかわりはいかがですか」と申し上げます。"
+},
+
+
+
+
 
 
 
