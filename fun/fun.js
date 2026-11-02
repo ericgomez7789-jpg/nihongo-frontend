@@ -137,6 +137,48 @@ const funDataset = [
 
 
 
+{
+  id: "fun4",
+
+  audio: "audio/fun4.wav",
+
+  choices: [
+    "I was eating a snack while watching TV.",
+    "I watched TV after eating a snack.",
+    "I stopped watching TV to eat a snack.",
+    "I was eating dinner while watching TV."
+  ],
+
+  answer: "I was eating a snack while watching TV.",
+
+  fun: [
+    {
+      jp: "テレビ を",
+      romaji: "terebi wo",
+      en: "TV"
+    },
+    {
+      jp: "みながら",
+      romaji: "minagara",
+      en: "while watching"
+    },
+    {
+      jp: "おやつ を",
+      romaji: "oyatsu wo",
+      en: "a snack"
+    },
+    {
+      jp: "たべていた",
+      romaji: "tabete ita",
+      en: "was eating"
+    }
+  ]
+},
+
+
+
+
+
 
 
 
