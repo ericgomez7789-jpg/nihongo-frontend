@@ -94,6 +94,47 @@ const funDataset = [
 
 
 
+{
+  id: "fun3",
+
+  audio: "audio/fun3.wav",
+
+  choices: [
+    "Even in a dangerous situation, he did not lose his composure.",
+    "He escaped from the dangerous situation immediately.",
+    "He became frightened in the dangerous situation.",
+    "He ignored the dangerous situation."
+  ],
+
+  answer: "Even in a dangerous situation, he did not lose his composure.",
+
+  fun: [
+    {
+      jp: "かれ は",
+      romaji: "kare wa",
+      en: "he"
+    },
+    {
+      jp: "きけん な じょうきょう に あっても",
+      romaji: "kiken na joukyou ni atte mo",
+      en: "even in a dangerous situation"
+    },
+    {
+      jp: "れいせいさ を",
+      romaji: "reiseisa wo",
+      en: "his composure"
+    },
+    {
+      jp: "うしなわなかった",
+      romaji: "ushinawanakatta",
+      en: "did not lose"
+    }
+  ]
+},
+
+
+
+
 
 
 
