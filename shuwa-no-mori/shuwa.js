@@ -971,6 +971,26 @@ What meaning does this express?"
 
 
 
+{
+  id: "hiru",
+  audio: "audio/hiru.wav",
+  choices: ["あさ", "ひる", "よる"],
+  answer: "ひる",
+
+  summary_hiragana:
+    "はじめ に、みぎて を ぎゅっと にぎり、ひとさしゆび と なかゆび を たてます。\
+それから、まるで かお を とけい の ばん に みたてる ように、その にほん の ゆび を め と め の あいだ に おきます。\
+この いちれん の しぐさ は、なに を あらわして いる のでしょう か。",
+
+  summary_english:
+    "First, make a fist with your right hand and raise your index and middle fingers.\
+Then, as if your face were the dial of a clock, place those two fingers between your eyes.\
+What meaning does this gesture express?"
+},
+
+
+
+
 
 
 
