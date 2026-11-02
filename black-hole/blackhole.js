@@ -878,6 +878,36 @@ const blackHoleDataset = [
 
 
 
+{
+  id: "blackhole42",
+  audio: "audio/blackhole42.wav",
+  choices: [
+    "When inviting two people, I warmly said, 'If you'd like, please come.'",
+    "When inviting two people, I ordered them to come immediately.",
+    "When inviting two people, I told them not to attend."
+  ],
+  answer: "When inviting two people, I warmly said, 'If you'd like, please come.'",
+  japanese: "心のこもった誘い方で、「お二人とも、よろしかったらいらっしゃってください」と申し上げました。"
+},
+
+
+
+
+
+
+{
+  id: "blackhole43",
+  audio: "audio/blackhole43.wav",
+  choices: [
+    "When inviting three people, I warmly said, 'I cannot offer much hospitality, but please do come.'",
+    "When inviting three people, I told them that the event had been cancelled.",
+    "When inviting three people, I warned them not to visit my home."
+  ],
+  answer: "When inviting three people, I warmly said, 'I cannot offer much hospitality, but please do come.'",
+  japanese: "心のこもった誘い方で、「お三人とも、大したおもてなしもできませんが、ぜひいらしてください」と申し上げました。"
+},
+
+
 
 
 
