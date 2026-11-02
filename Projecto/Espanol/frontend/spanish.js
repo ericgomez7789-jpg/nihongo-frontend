@@ -9513,6 +9513,71 @@ const level3 = [
 
 
 
+{
+  "id": "es3-45",
+  "meaning": "Si alguien avienta una piedra hacia la ventana y la rompe, ¿qué sentimiento voy a sentir después?",
+  "level": 3,
+
+  "options": [
+    "Es probable que me sienta enojado, molesto o preocupado por el daño",
+    "Es probable que me sienta feliz porque rompieron la ventana",
+    "Es probable que la ventana se repare sola inmediatamente",
+    "Es probable que reciba un regalo por la ventana rota"
+  ],
+
+  "optionsRomaji": [
+    "es_probable_que_me_sienta_enojado_molesto_o_preocupado_por_el_dano",
+    "es_probable_que_me_sienta_feliz_porque_rompieron_la_ventana",
+    "es_probable_que_la_ventana_se_repare_sola_inmediatamente",
+    "es_probable_que_reciba_un_regalo_por_la_ventana_rota"
+  ],
+
+  "optionsEN": [
+    "I will probably feel angry, upset, or worried about the damage",
+    "I will probably feel happy because someone broke the window",
+    "The window will probably repair itself immediately",
+    "I will probably receive a gift because of the broken window"
+  ],
+
+  "correct": "Es probable que me sienta enojado, molesto o preocupado por el daño",
+
+  "fullAudio": {
+    "daughter": "audio/spanish/inference45.wav",
+    "me": "audio/spanish/inference45.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["spanish/audio/es_probable_que_me_sienta_enojado_molesto_o_preocupado_por_el_dano.wav"],
+      ["spanish/audio/es_probable_que_me_sienta_feliz_porque_rompieron_la_ventana.wav"],
+      ["spanish/audio/es_probable_que_la_ventana_se_repare_sola_inmediatamente.wav"],
+      ["spanish/audio/es_probable_que_reciba_un_regalo_por_la_ventana_rota.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["spanish/audio/es_probable_que_me_sienta_enojado_molesto_o_preocupado_por_el_dano.wav"],
+    ["spanish/audio/es_probable_que_me_sienta_feliz_porque_rompieron_la_ventana.wav"],
+    ["spanish/audio/es_probable_que_la_ventana_se_repare_sola_inmediatamente.wav"],
+    ["spanish/audio/es_probable_que_reciba_un_regalo_por_la_ventana_rota.wav"]
+  ],
+
+  "chunks": [
+    {
+      "spanish": "Si alguien avienta una piedra hacia la ventana y la rompe",
+      "english": "If someone throws a rock at the window and breaks it"
+    },
+    {
+      "spanish": "¿qué sentimiento voy a sentir después?",
+      "english": "what feeling will I experience afterward?"
+    }
+  ]
+},
+
+
+
+
+
 
 
 
