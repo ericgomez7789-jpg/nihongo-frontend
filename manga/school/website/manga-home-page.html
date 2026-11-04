@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Manga Home</title>
+  <title>Manga Library</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
@@ -26,6 +26,19 @@
       margin-bottom: 40px;
     }
 
+    .sectionTitle {
+      color: #7fd1ff;
+      margin-top: 50px;
+      margin-bottom: 20px;
+    }
+
+    .chapterCard {
+      background-color: #1a1a1a;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
     .chapterLink {
       color: #4ea3ff;
       font-size: 18px;
@@ -36,15 +49,8 @@
       text-decoration: underline;
     }
 
-    .chapterCard {
-      background-color: #1a1a1a;
-      padding: 20px;
-      border-radius: 10px;
-      margin-bottom: 20px;
-    }
-
     .futureGrid {
-      margin-top: 40px;
+      margin-top: 20px;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 20px;
@@ -64,12 +70,21 @@
 <body>
 
   <h1>Manga Library</h1>
-  <div class="subtitle">Original bilingual manga created for Toris Method</div>
 
-  <!-- Volume 1 -->
+  <div class="subtitle">
+    Original bilingual manga created for Tori's Method
+  </div>
+
+  <!-- SCHOOL SERIES -->
+
+  <h2 class="sectionTitle">School Series</h2>
+
   <div class="chapterCard">
-    <h2 style="color: #7fd1ff; margin-top: 0;">Volume 1 — School Website</h2>
-    <p style="color: #cccccc; margin-bottom: 16px;">
+    <h2 style="color:#7fd1ff; margin-top:0;">
+      Volume 1 — School Website
+    </h2>
+
+    <p style="color:#cccccc; margin-bottom:16px;">
       The beginning of the story. Follow the characters as they explore the school website.
     </p>
 
@@ -78,11 +93,13 @@
     </a>
   </div>
 
-  <!-- Volume 2 -->
   <div class="chapterCard">
-    <h2 style="color: #7fd1ff; margin-top: 0;">Volume 2 — Classroom Chaos</h2>
-    <p style="color: #cccccc; margin-bottom: 16px;">
-      A comedic arc where the teacher asks a simple math question… and the class falls apart.
+    <h2 style="color:#7fd1ff; margin-top:0;">
+      Volume 2 — Classroom Chaos
+    </h2>
+
+    <p style="color:#cccccc; margin-bottom:16px;">
+      A comedic arc where the teacher asks a simple math question and the entire classroom falls apart.
     </p>
 
     <a href="../vol.2/volume2-page1.html" class="chapterLink">
@@ -90,12 +107,13 @@
     </a>
   </div>
 
-  <!-- Volume 3 -->
   <div class="chapterCard">
-    <h2 style="color: #7fd1ff; margin-top: 0;">Volume 3 — Bus Ride Beginnings</h2>
-    <p style="color: #cccccc; margin-bottom: 16px;">
-      A new story begins. Victoria‑chan waves from the school bus window… but nobody waves back.
-      Daniel notices, and the teasing starts.
+    <h2 style="color:#7fd1ff; margin-top:0;">
+      Volume 3 — Bus Ride Beginnings
+    </h2>
+
+    <p style="color:#cccccc; margin-bottom:16px;">
+      Victoria-chan waves from the school bus window, but nobody waves back. Daniel notices, and the teasing begins.
     </p>
 
     <a href="../vol.3/volume3-page1.html" class="chapterLink">
@@ -103,12 +121,13 @@
     </a>
   </div>
 
-  <!-- Volume 4 -->
   <div class="chapterCard">
-    <h2 style="color: #7fd1ff; margin-top: 0;">Volume 4 — Beach Field Trip</h2>
-    <p style="color: #cccccc; margin-bottom: 16px;">
-      The class arrives at the beach for a sunny school field trip. Victoria‑chan looks up and says:
-      “Qué bonito y caluroso el día, ¿verdad?”
+    <h2 style="color:#7fd1ff; margin-top:0;">
+      Volume 4 — Beach Field Trip
+    </h2>
+
+    <p style="color:#cccccc; margin-bottom:16px;">
+      The class arrives at the beach for a sunny field trip filled with fun, friendship, and language learning.
     </p>
 
     <a href="../vol.4/volume4-page1.html" class="chapterLink">
@@ -116,24 +135,48 @@
     </a>
   </div>
 
-  <!-- Volume 5 -->
   <div class="chapterCard">
-    <h2 style="color: #7fd1ff; margin-top: 0;">Volume 5 — Zoo Adventures</h2>
-    <p style="color: #cccccc; margin-bottom: 16px;">
-  Victoria-chan and Daniel-kun enjoyed a class field trip to the zoo, where they spent the day learning about animals from around the world. As they walked through the exhibits, they shared fun facts, observations, and a bit of friendly banter while meeting everything from giraffes and lions to pandas and more.
-</p>
+    <h2 style="color:#7fd1ff; margin-top:0;">
+      Volume 5 — Zoo Adventures
+    </h2>
+
+    <p style="color:#cccccc; margin-bottom:16px;">
+      Victoria-chan and Daniel-kun spend the day exploring the zoo and learning about animals from around the world.
+    </p>
 
     <a href="../vol.5/volume5-page1.html" class="chapterLink">
       Read Volume 5 →
     </a>
   </div>
 
-  <!-- Future Volumes -->
-  <h2 style="color: #7fd1ff; margin-top: 40px;">Upcoming Volumes</h2>
+  <!-- HOME SERIES -->
+
+<h2 class="sectionTitle">Home Series</h2>
+
+<div class="chapterCard">
+  <h2 style="color:#7fd1ff; margin-top:0;">
+    Volume 1 — Bedtime Story
+  </h2>
+
+  <p style="color:#cccccc; margin-bottom:16px;">
+    As bedtime approaches, Victoria-chan snuggles under the blankets and waits for her father to tell one of his favorite stories. A cozy family adventure begins.
+  </p>
+
+  <a href="../../home/vol.1/home-volume1-page1.html" class="chapterLink">
+    Read Volume 1 →
+</a>
+
+</div>
+
+
+  <!-- FUTURE SERIES -->
+
+  <h2 class="sectionTitle">Upcoming Series & Volumes</h2>
 
   <div class="futureGrid">
-    <div class="futureItem">Volume 6 — Coming Soon</div>
-    <div class="futureItem">More Volumes Planned</div>
+    <div class="futureItem">Home Series Volume 2</div>
+    <div class="futureItem">More School Stories</div>
+    <div class="futureItem">Additional Series Planned</div>
   </div>
 
 </body>

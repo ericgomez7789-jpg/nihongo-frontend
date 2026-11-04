@@ -1,0 +1,298 @@
+<html>
+
+<head>
+
+<title>Awaseru</title>
+
+<style>
+
+body{
+    margin:0;
+    padding:20px;
+    background:#111;
+    color:white;
+    font-family:Arial,sans-serif;
+}
+
+.screen{
+    width:100%;
+}
+
+.hidden{
+    display:none;
+}
+
+#awaseruScreen{
+    width:100%;
+}
+
+.awaseruTop{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:20px;
+}
+
+#awaseruTimer{
+    font-size:48px;
+    font-weight:bold;
+    color:#ff4444;
+}
+
+#awaseruReplayBtn{
+    margin-top:10px;
+    padding:10px 20px;
+    font-size:18px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+#awaseruInstruction{
+    text-align:center;
+    font-size:20px;
+    margin-bottom:20px;
+    color:#dddddd;
+}
+
+.awaseruSplit{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.awaseruPlayer{
+    background:#1e1e1e;
+    border:2px solid #444;
+    border-radius:12px;
+    padding:15px;
+}
+
+.awaseruPlayerTitle{
+    text-align:center;
+    font-size:28px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.awaseruScore{
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+/* ==========================================
+   PROGRESS
+========================================== */
+
+.awaseru-progress-wrapper{
+    margin-bottom:20px;
+}
+
+.awaseru-progress-label{
+    text-align:center;
+    margin-bottom:6px;
+}
+
+.awaseru-progress-outer{
+    width:100%;
+    height:10px;
+    background:#333;
+    border-radius:6px;
+    overflow:hidden;
+}
+
+.awaseru-progress-bar{
+    width:0%;
+    height:100%;
+    background:#4caf50;
+}
+
+.awaseruSectionTitle{
+    text-align:center;
+    margin-bottom:8px;
+    margin-top:12px;
+    font-weight:bold;
+}
+
+.awaseruAnswerArea{
+    min-height:180px;
+    border:2px dashed #666;
+    border-radius:10px;
+    padding:10px;
+    margin-bottom:20px;
+
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    align-content:flex-start;
+}
+
+.chunkContainer{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    justify-content:center;
+}
+
+.chunkBtn{
+    padding:10px 14px;
+    font-size:22px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    background:white;
+    color:black;
+}
+
+.chunkBtn:hover{
+    background:#eeeeee;
+}
+
+.builtChunk{
+    background:#4caf50;
+    color:white;
+    padding:10px 14px;
+    border-radius:8px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="awaseruScreen" class="screen">
+
+    <div class="awaseruTop">
+
+        <div id="awaseruTimer">
+            30
+        </div>
+
+        <button id="awaseruReplayBtn">
+            🔁 Replay
+        </button>
+
+    </div>
+
+    <div id="awaseruInstruction">
+        Listen to the sentence and rebuild it before your opponent.
+    </div>
+
+    <div class="awaseruSplit">
+
+        <!-- PLAYER 1 -->
+
+        <div class="awaseruPlayer">
+
+            <div class="awaseruPlayerTitle">
+                👧 Player 1
+            </div>
+
+            <div id="awaseruScore1"
+                 class="awaseruScore">
+                0
+            </div>
+
+            <div id="awaseruProgress1">
+
+                <div class="awaseru-progress-wrapper">
+
+                    <div class="awaseru-progress-label">
+                        Progress: 0 / 0
+                    </div>
+
+                    <div class="awaseru-progress-outer">
+
+                        <div class="awaseru-progress-bar">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="awaseruSectionTitle">
+                Sentence Builder
+            </div>
+
+            <div id="awaseruAnswerArea1"
+                 class="awaseruAnswerArea">
+            </div>
+
+            <div class="awaseruSectionTitle">
+                Scrambled Chunks
+            </div>
+
+            <div id="awaseruChunkContainer1"
+                 class="chunkContainer">
+            </div>
+
+        </div>
+
+        <!-- PLAYER 2 -->
+
+        <div class="awaseruPlayer">
+
+            <div class="awaseruPlayerTitle">
+                👨 Player 2
+            </div>
+
+            <div id="awaseruScore2"
+                 class="awaseruScore">
+                0
+            </div>
+
+            <div id="awaseruProgress2">
+
+                <div class="awaseru-progress-wrapper">
+
+                    <div class="awaseru-progress-label">
+                        Progress: 0 / 0
+                    </div>
+
+                    <div class="awaseru-progress-outer">
+
+                        <div class="awaseru-progress-bar">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="awaseruSectionTitle">
+                Sentence Builder
+            </div>
+
+            <div id="awaseruAnswerArea2"
+                 class="awaseruAnswerArea">
+            </div>
+
+            <div class="awaseruSectionTitle">
+                Scrambled Chunks
+            </div>
+
+            <div id="awaseruChunkContainer2"
+                 class="chunkContainer">
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- LOAD JAVASCRIPT HERE -->
+
+<script src="AwaseruProgress.js"></script>
+<script src="awaseru.js"></script>
+
+</body>
+
+</html>
