@@ -85,7 +85,7 @@ let currentSentenceAudio = null;
 let lastScrambleP1 = "";
 let lastScrambleP2 = "";
 
-
+let awaseruSelectedChunk = null;
 
 
 
@@ -539,7 +539,7 @@ function renderPlayerBoard(
 
     btn.addEventListener(
       "dragstart",
-      e => {
+      () => {
 
         console.log(
           "DRAG START",
@@ -559,6 +559,32 @@ function renderPlayerBoard(
 
         console.log(
           "DRAG END",
+          chunk
+        );
+
+      }
+    );
+
+    btn.addEventListener(
+      "click",
+      () => {
+
+        document
+          .querySelectorAll(
+            ".chunkBtn"
+          )
+          .forEach(b => {
+            b.style.outline = "";
+          });
+
+        btn.style.outline =
+          "4px solid yellow";
+
+        window.awaseruDraggedButton =
+          btn;
+
+        console.log(
+          "SELECTED",
           chunk
         );
 
