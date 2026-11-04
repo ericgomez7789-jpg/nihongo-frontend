@@ -223,6 +223,403 @@ const awaseruSentences = [
 
 
 
+
+
+
+
+
+
+
+{
+  id: "awaseru5",
+
+  audio: "audio/awaseru5.wav",
+
+  choices: [
+    "After exercising, he was completely soaked in sweat.",
+    "After exercising, he took a shower.",
+    "He was soaked by the rain after exercising.",
+    "He stopped exercising because he was tired."
+  ],
+
+  answer:
+    "After exercising, he was completely soaked in sweat.",
+
+  fun: [
+
+    {
+      jp: "うんどうしてから",
+      romaji: "undou shite kara",
+      en: "after exercising"
+    },
+
+    {
+      jp: "かれ は",
+      romaji: "kare wa",
+      en: "he"
+    },
+
+    {
+      jp: "ぐっしょり",
+      romaji: "gusshori",
+      en: "completely soaked"
+    },
+
+    {
+      jp: "あせまみれだった",
+      romaji: "asemamire datta",
+      en: "was covered in sweat"
+    }
+
+  ],
+
+  chunks: [
+    "うんどうしてから",
+    "かれ は",
+    "ぐっしょり",
+    "あせまみれだった"
+  ]
+
+},
+
+
+
+
+
+
+
+
+
+
+{
+  id: "awaseru6",
+
+  audio: "audio/awaseru6.wav",
+
+  choices: [
+    "In the end, only one package ended up arriving.",
+    "In the end, all of the packages arrived.",
+    "Only one package was sent yesterday.",
+    "The package arrived earlier than expected."
+  ],
+
+  answer:
+    "In the end, only one package ended up arriving.",
+
+  fun: [
+
+    {
+      jp: "けっきょく",
+      romaji: "kekkyoku",
+      en: "in the end"
+    },
+
+    {
+      jp: "ひとつ の つつみ だけ",
+      romaji: "hitotsu no tsutsumi dake",
+      en: "only one package"
+    },
+
+    {
+      jp: "とどくことになった",
+      romaji: "todoku koto ni natta",
+      en: "ended up arriving"
+    }
+
+  ],
+
+  chunks: [
+    "けっきょく",
+    "ひとつ の つつみ だけ",
+    "とどくことになった"
+  ]
+
+},
+
+
+
+
+
+
+
+
+
+
+{
+  id: "awaseru7",
+
+  audio: "audio/awaseru7.wav",
+
+  choices: [
+    "Winning a match is out of the question. I don't even practice enough, so I lose every time I compete.",
+    "I practice hard every day, so I usually win my matches.",
+    "I rarely compete, but I still win most of the time.",
+    "I don't like matches, so I never play them."
+  ],
+
+  answer:
+    "Winning a match is out of the question. I don't even practice enough, so I lose every time I compete.",
+
+  fun: [
+
+    {
+      jp: "しあい に かつ",
+      romaji: "shiai ni katsu",
+      en: "to win a match"
+    },
+
+    {
+      jp: "どころじゃない",
+      romaji: "dokoro janai",
+      en: "is out of the question"
+    },
+
+    {
+      jp: "れんしゅう さえ",
+      romaji: "renshuu sae",
+      en: "even practice"
+    },
+
+    {
+      jp: "たりない んだ",
+      romaji: "tarinai nda",
+      en: "is not enough"
+    },
+
+    {
+      jp: "だから",
+      romaji: "dakara",
+      en: "therefore"
+    },
+
+    {
+      jp: "しょうぶ を する たびに",
+      romaji: "shoubu wo suru tabi ni",
+      en: "every time I compete"
+    },
+
+    {
+      jp: "まける",
+      romaji: "makeru",
+      en: "I lose"
+    }
+
+  ],
+
+  chunks: [
+    "しあい に かつ",
+    "どころじゃない",
+    "れんしゅう さえ",
+    "たりない んだ",
+    "だから",
+    "しょうぶ を する たびに",
+    "まける"
+  ]
+
+},
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "awaseru8",
+
+  audio: "audio/awaseru8.wav",
+
+  choices: [
+    "If someone suddenly made up their mind and attacked me, I don't know whether I could protect myself.",
+    "If someone asked me for help unexpectedly, I would help them immediately.",
+    "If someone suddenly arrived, I would invite them inside.",
+    "If someone challenged me to a game, I would probably win."
+  ],
+
+  answer:
+    "If someone suddenly made up their mind and attacked me, I don't know whether I could protect myself.",
+
+  fun: [
+
+    {
+      jp: "とつぜん",
+      romaji: "totsuzen",
+      en: "suddenly"
+    },
+
+    {
+      jp: "だれか が",
+      romaji: "dareka ga",
+      en: "someone"
+    },
+
+    {
+      jp: "けつい を かためて",
+      romaji: "ketsui wo katamete",
+      en: "having made up their mind"
+    },
+
+    {
+      jp: "おそいかかってきたら",
+      romaji: "osoikakatte kitara",
+      en: "if they came attacking"
+    },
+
+    {
+      jp: "じぶん を",
+      romaji: "jibun wo",
+      en: "myself"
+    },
+
+    {
+      jp: "まもれるかどうか",
+      romaji: "mamoreru ka dou ka",
+      en: "whether I can protect"
+    },
+
+    {
+      jp: "わからない",
+      romaji: "wakaranai",
+      en: "I don't know"
+    }
+
+  ],
+
+  chunks: [
+    "とつぜん",
+    "だれか が",
+    "けつい を かためて",
+    "おそいかかってきたら",
+    "じぶん を",
+    "まもれるかどうか",
+    "わからない"
+  ]
+
+},
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "awaseru9",
+
+  audio: "audio/awaseru9.wav",
+
+  choices: [
+    "I dote on my cat, and it's basically family to me.",
+    "My cat often runs away from home.",
+    "My family adopted a cat last week.",
+    "I do not really like cats."
+  ],
+
+  answer:
+    "I dote on my cat, and it's basically family to me.",
+
+  fun: [
+
+    {
+      jp: "ねこ を",
+      romaji: "neko wo",
+      en: "a cat"
+    },
+
+    {
+      jp: "かわいがっているし",
+      romaji: "kawaigatte iru shi",
+      en: "I dote on"
+    },
+
+    {
+      jp: "かぞく みたいな",
+      romaji: "kazoku mitai na",
+      en: "like family"
+    },
+
+    {
+      jp: "もんだしね",
+      romaji: "mon da shi ne",
+      en: "it's basically, you know"
+    }
+
+  ],
+
+  chunks: [
+    "ねこ を",
+    "かわいがっているし",
+    "かぞく みたいな",
+    "もんだしね"
+  ]
+
+},
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: "awaseru10",
+
+  audio: "audio/awaseru10.wav",
+
+  choices: [
+    "Before going to the gathering, I plan to wait until the rain stops.",
+    "I went to the gathering after the rain stopped.",
+    "I plan to leave the gathering before it rains.",
+    "The gathering was canceled because of the rain."
+  ],
+
+  answer:
+    "Before going to the gathering, I plan to wait until the rain stops.",
+
+  fun: [
+
+    {
+      jp: "あつまり に いく まえに",
+      romaji: "atsumari ni iku mae ni",
+      en: "before going to the gathering"
+    },
+
+    {
+      jp: "あめ が やむまで",
+      romaji: "ame ga yamu made",
+      en: "until the rain stops"
+    },
+
+    {
+      jp: "まつ つもりです",
+      romaji: "matsu tsumori desu",
+      en: "I plan to wait"
+    }
+
+  ],
+
+  chunks: [
+    "あつまり に いく まえに",
+    "あめ が やむまで",
+    "まつ つもりです"
+  ]
+
+},
+
+
+
 ];
 
 

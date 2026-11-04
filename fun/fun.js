@@ -181,6 +181,279 @@ const funDataset = [
 
 
 
+{
+  id: "fun5",
+
+  audio: "audio/fun5.wav",
+
+  choices: [
+    "After exercising, he was completely soaked in sweat.",
+    "He exercised after taking a shower.",
+    "He was soaked from the rain after exercising.",
+    "After exercising, he changed his clothes."
+  ],
+
+  answer: "After exercising, he was completely soaked in sweat.",
+
+  fun: [
+    {
+      jp: "うんどうしてから",
+      romaji: "undou shite kara",
+      en: "after exercising"
+    },
+    {
+      jp: "かれ は",
+      romaji: "kare wa",
+      en: "he"
+    },
+    {
+      jp: "ぐっしょり",
+      romaji: "gusshori",
+      en: "completely soaked"
+    },
+    {
+      jp: "あせまみれだった",
+      romaji: "asemamire datta",
+      en: "was covered in sweat"
+    }
+  ]
+},
+
+
+
+
+
+
+{
+  id: "fun6",
+
+  audio: "audio/fun6.wav",
+
+  choices: [
+    "In the end, only one package ended up arriving.",
+    "All of the packages arrived in the end.",
+    "Only one package was sent yesterday.",
+    "The package arrived earlier than expected."
+  ],
+
+  answer: "In the end, only one package ended up arriving.",
+
+  fun: [
+    {
+      jp: "けっきょく",
+      romaji: "kekkyoku",
+      en: "in the end"
+    },
+    {
+      jp: "ひとつ の つつみ だけ",
+      romaji: "hitotsu no tsutsumi dake",
+      en: "only one package"
+    },
+    {
+      jp: "とどくことになった",
+      romaji: "todoku koto ni natta",
+      en: "ended up arriving"
+    }
+  ]
+},
+
+
+
+
+
+{
+  id: "fun7",
+
+  audio: "audio/fun7.wav",
+
+  choices: [
+    "Winning a match is out of the question. I don't even practice enough, so I lose every time I compete.",
+    "I practice every day, so I usually win my matches.",
+    "I rarely compete, but I usually win.",
+    "I don't like matches, but I still practice hard."
+  ],
+
+  answer: "Winning a match is out of the question. I don't even practice enough, so I lose every time I compete.",
+
+  fun: [
+    {
+      jp: "しあい に",
+      romaji: "shiai ni",
+      en: "in a match"
+    },
+    {
+      jp: "かつ どころじゃない",
+      romaji: "katsu dokoro janai",
+      en: "winning is out of the question"
+    },
+    {
+      jp: "れんしゅう さえ",
+      romaji: "renshuu sae",
+      en: "even practice"
+    },
+    {
+      jp: "たりない んだ",
+      romaji: "tarinai nda",
+      en: "is not enough"
+    },
+    {
+      jp: "だから",
+      romaji: "dakara",
+      en: "therefore"
+    },
+    {
+      jp: "しょうぶ を する たびに",
+      romaji: "shoubu wo suru tabi ni",
+      en: "every time I compete"
+    },
+    {
+      jp: "まける",
+      romaji: "makeru",
+      en: "I lose"
+    }
+  ]
+},
+
+
+
+
+
+
+{
+  id: "fun8",
+
+  audio: "audio/fun8.wav",
+
+  choices: [
+    "If someone suddenly made up their mind and attacked me, I don't know whether I could protect myself.",
+    "If someone suddenly asked for help, I would protect them immediately.",
+    "If someone challenged me to a match, I would probably win.",
+    "If someone suddenly arrived, I would invite them inside."
+  ],
+
+  answer: "If someone suddenly made up their mind and attacked me, I don't know whether I could protect myself.",
+
+  fun: [
+    {
+      jp: "とつぜん",
+      romaji: "totsuzen",
+      en: "suddenly"
+    },
+    {
+      jp: "だれか が",
+      romaji: "dareka ga",
+      en: "someone"
+    },
+    {
+      jp: "けつい を かためて",
+      romaji: "ketsui wo katamete",
+      en: "having made up their mind"
+    },
+    {
+      jp: "おそいかかってきたら",
+      romaji: "osoikakatte kitara",
+      en: "if they attacked"
+    },
+    {
+      jp: "じぶん を",
+      romaji: "jibun wo",
+      en: "myself"
+    },
+    {
+      jp: "まもれるかどうか",
+      romaji: "mamoreru ka dou ka",
+      en: "whether I can protect"
+    },
+    {
+      jp: "わからない",
+      romaji: "wakaranai",
+      en: "I don't know"
+    }
+  ]
+},
+
+
+
+
+
+
+{
+  id: "fun9",
+
+  audio: "audio/fun9.wav",
+
+  choices: [
+    "I dote on my cat, and it's basically family to me.",
+    "My cat behaves like a wild animal.",
+    "I adopted a cat yesterday.",
+    "My family does not like cats."
+  ],
+
+  answer: "I dote on my cat, and it's basically family to me.",
+
+  fun: [
+    {
+      jp: "ねこ を",
+      romaji: "neko wo",
+      en: "a cat"
+    },
+    {
+      jp: "かわいがっているし",
+      romaji: "kawaigatte iru shi",
+      en: "I dote on"
+    },
+    {
+      jp: "かぞく みたいな",
+      romaji: "kazoku mitai na",
+      en: "like family"
+    },
+    {
+      jp: "もんだしね",
+      romaji: "mon da shi ne",
+      en: "it's basically, you know"
+    }
+  ]
+},
+
+
+
+
+
+{
+  id: "fun10",
+
+  audio: "audio/fun10.wav",
+
+  choices: [
+    "Before going to the gathering, I plan to wait until the rain stops.",
+    "I went to the gathering after the rain stopped.",
+    "I plan to leave the gathering before it rains.",
+    "The gathering was canceled because of the rain."
+  ],
+
+  answer: "Before going to the gathering, I plan to wait until the rain stops.",
+
+  fun: [
+    {
+      jp: "あつまり に いく まえに",
+      romaji: "atsumari ni iku mae ni",
+      en: "before going to the gathering"
+    },
+    {
+      jp: "あめ が やむまで",
+      romaji: "ame ga yamu made",
+      en: "until the rain stops"
+    },
+    {
+      jp: "まつ つもりです",
+      romaji: "matsu tsumori desu",
+      en: "I plan to wait"
+    }
+  ]
+},
+
+
+
 
 
 ];
