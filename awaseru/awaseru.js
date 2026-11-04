@@ -52,7 +52,65 @@ const awaseruSentences = [
     "うしなわなかった"
   ]
 
-}
+},
+
+
+
+
+
+
+
+
+
+
+{
+  id: "awaseru2",
+
+  audio: "audio/awaseru2.wav",
+
+  choices: [
+    "Only on that day, he did not show up.",
+    "He came early only on that day.",
+    "He was late every day.",
+    "He decided not to leave that day."
+  ],
+
+  answer:
+    "Only on that day, he did not show up.",
+
+  fun: [
+
+    {
+      jp: "その ひ に かぎって",
+      romaji: "sono hi ni kagitte",
+      en: "only on that day"
+    },
+
+    {
+      jp: "かれ は",
+      romaji: "kare wa",
+      en: "he"
+    },
+
+    {
+      jp: "でてこなかった",
+      romaji: "detekonakatta",
+      en: "did not show up"
+    }
+
+  ],
+
+  chunks: [
+    "その ひ に かぎって",
+    "かれ は",
+    "でてこなかった"
+  ]
+},
+
+
+
+
+
 
 ];
 
