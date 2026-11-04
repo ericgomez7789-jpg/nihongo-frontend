@@ -504,6 +504,37 @@ function renderPlayerBoard(
     btn.textContent =
       chunk;
 
+    btn.draggable = true;
+
+    btn.addEventListener(
+      "dragstart",
+      e => {
+
+        console.log(
+          "DRAG START",
+          chunk
+        );
+
+        e.dataTransfer.setData(
+          "text/plain",
+          chunk
+        );
+
+        window.awaseruDraggedButton =
+          btn;
+      }
+    );
+
+    btn.addEventListener(
+      "dragend",
+      () => {
+        console.log(
+          "DRAG END",
+          chunk
+        );
+      }
+    );
+
     chunkContainer.appendChild(
       btn
     );
@@ -549,12 +580,47 @@ function playerWins(player) {
 
   AWASERU.renderProgress();
 
-  setTimeout(
-    awaseruNextRound,
-    1000
-  );
+  const reveal =
+    document.getElementById(
+      "awaseruReveal"
+    );
+
+  if (reveal) {
+
+    reveal.innerHTML = `
+
+      <div class="awaseru-japanese">
+
+        ${awaseruCurrentSentence.chunks.join(" ")}
+
+      </div>
+
+      <div class="awaseru-english">
+
+        ${awaseruCurrentSentence.answer}
+
+      </div>
+
+    `;
+
+    reveal.style.display =
+      "block";
+
+  }
+
+  setTimeout(() => {
+
+    if (reveal) {
+      reveal.style.display =
+        "none";
+    }
+
+    awaseruNextRound();
+
+  }, 5000);
 
 }
+
 
 /* ==========================================================
    AUDIO
@@ -662,52 +728,40 @@ function updateAwaseruScorekeepers() {
    TIMER
 ========================================================== */
 
-function startAwaseruTimer(
-  onExpire
-) {
+function startAwaseruTimer(onExpire) {
 
   let timeLeft = 30;
 
-  const timer =
-    document.getElementById(
-      "awaseruTimer"
-    );
+  const timer = document.getElementById("awaseruTimer");
 
   if (timer) {
-    timer.textContent =
-      timeLeft;
+    timer.textContent = timeLeft;
   }
 
-  clearInterval(
-    awaseruTimerInterval
-  );
+  clearInterval(awaseruTimerInterval);
 
-  awaseruTimerInterval =
-    setInterval(() => {
+  awaseruTimerInterval = setInterval(() => {
 
-      timeLeft--;
+    timeLeft--;
+
+    if (timer) {
+      timer.textContent = timeLeft;
+    }
+
+    if (timeLeft <= 0) {
+
+      clearInterval(awaseruTimerInterval);
 
       if (timer) {
-        timer.textContent =
-          timeLeft;
+        timer.textContent = "0";
       }
 
-      if (timeLeft <= 0) {
-
-        clearInterval(
-          awaseruTimerInterval
-        );
-
-        if (
-          typeof onExpire ===
-          "function"
-        ) {
-          onExpire();
-        }
-
+      if (typeof onExpire === "function") {
+        onExpire();
       }
+    }
 
-    }, 1000);
+  }, 1000);
 
 }
 
