@@ -1156,6 +1156,26 @@ function awaseruNextRound() {
 
   awaseruRound++;
 
+
+  if (awaseruRound > 5) {
+
+    clearInterval(
+      awaseruTimerInterval
+    );
+
+    alert(
+      `Game Over!
+
+Player 1: ${awaseruScore1}
+Player 2: ${awaseruScore2}`
+    );
+
+    awaseru();
+
+    return;
+
+  }
+
   awaseruCurrentSentence =
     awaseruSentences[
       Math.floor(
