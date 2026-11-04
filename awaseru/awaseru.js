@@ -324,6 +324,15 @@ const AwaseruDragModule = {
       slot.style.background =
         "#222";
 
+      slot.style.display =
+        "flex";
+
+      slot.style.alignItems =
+        "center";
+
+      slot.style.justifyContent =
+        "center";
+
       slot.dataset.index =
         i;
 
@@ -331,7 +340,9 @@ const AwaseruDragModule = {
         player;
 
       slot.ondragover =
-        e => e.preventDefault();
+        e => {
+          e.preventDefault();
+        };
 
       slot.ondrop =
         AwaseruDragModule.dropChunk;
@@ -348,21 +359,19 @@ const AwaseruDragModule = {
 
     e.preventDefault();
 
+    const dragged =
+      window.awaseruDraggedButton;
+
+    if (!dragged) return;
+
     const chunkIndex =
       Number(
-        e.dataTransfer.getData(
-          "chunkIndex"
-        )
+        dragged.dataset.chunkIndex
       );
 
     const requiredIndex =
       Number(
         e.target.dataset.index
-      );
-
-    const player =
-      Number(
-        e.target.dataset.player
       );
 
     if (
@@ -375,20 +384,31 @@ const AwaseruDragModule = {
       );
 
       return;
+
+    }
+
+    if (
+      e.target.dataset.filled ===
+      "true"
+    ) {
+      return;
     }
 
     e.target.textContent =
-      "✔";
+      dragged.textContent;
+
+    e.target.dataset.filled =
+      "true";
 
     e.target.style.background =
       "#4caf50";
 
-    if (
-      e.target.dataset.filled
-    ) return;
+    dragged.remove();
 
-    e.target.dataset.filled =
-      "true";
+    const player =
+      Number(
+        e.target.dataset.player
+      );
 
     if (player === 1) {
 
@@ -464,10 +484,13 @@ function renderPlayerBoard(
     !chunkContainer ||
     !answerArea
   ) {
+
     console.error(
       "Missing containers"
     );
+
     return;
+
   }
 
   chunkContainer.innerHTML = "";
@@ -504,6 +527,14 @@ function renderPlayerBoard(
     btn.textContent =
       chunk;
 
+    const chunkIndex =
+      awaseruCurrentSentence.chunks.indexOf(
+        chunk
+      );
+
+    btn.dataset.chunkIndex =
+      chunkIndex;
+
     btn.draggable = true;
 
     btn.addEventListener(
@@ -512,26 +543,25 @@ function renderPlayerBoard(
 
         console.log(
           "DRAG START",
-          chunk
-        );
-
-        e.dataTransfer.setData(
-          "text/plain",
-          chunk
+          chunk,
+          chunkIndex
         );
 
         window.awaseruDraggedButton =
           btn;
+
       }
     );
 
     btn.addEventListener(
       "dragend",
       () => {
+
         console.log(
           "DRAG END",
           chunk
         );
+
       }
     );
 
