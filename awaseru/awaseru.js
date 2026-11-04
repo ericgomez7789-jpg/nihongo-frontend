@@ -516,6 +516,28 @@ const AwaseruDragModule = {
       slot.ondrop =
         AwaseruDragModule.dropChunk;
 
+      slot.addEventListener(
+        "click",
+        () => {
+
+          if (
+            !window.awaseruDraggedButton
+          ) {
+            return;
+          }
+
+          const fakeEvent = {
+            preventDefault() {},
+            target: slot
+          };
+
+          AwaseruDragModule.dropChunk(
+            fakeEvent
+          );
+
+        }
+      );
+
       answerArea.appendChild(
         slot
       );
@@ -573,6 +595,17 @@ const AwaseruDragModule = {
       "#4caf50";
 
     dragged.remove();
+
+    document
+      .querySelectorAll(
+        ".chunkBtn"
+      )
+      .forEach(btn => {
+        btn.style.outline = "";
+      });
+
+    window.awaseruDraggedButton =
+      null;
 
     const player =
       Number(
