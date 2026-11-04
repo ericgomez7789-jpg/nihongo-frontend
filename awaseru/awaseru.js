@@ -112,6 +112,117 @@ const awaseruSentences = [
 
 
 
+
+
+
+{
+  id: "awaseru3",
+
+  audio: "audio/awaseru3.wav",
+
+  choices: [
+    "I visited that town for the first time in ten years.",
+    "I moved to that town ten years ago.",
+    "I lived in that town for ten years.",
+    "I left that town after ten years."
+  ],
+
+  answer:
+    "I visited that town for the first time in ten years.",
+
+  fun: [
+
+    {
+      jp: "その まち を",
+      romaji: "sono machi wo",
+      en: "that town"
+    },
+
+    {
+      jp: "じゅうねんぶり に",
+      romaji: "juunenburi ni",
+      en: "for the first time in ten years"
+    },
+
+    {
+      jp: "おとずれた",
+      romaji: "otozureta",
+      en: "visited"
+    }
+
+  ],
+
+  chunks: [
+    "その まち を",
+    "じゅうねんぶり に",
+    "おとずれた"
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+{
+  id: "awaseru4",
+
+  audio: "audio/awaseru4.wav",
+
+  choices: [
+    "I was eating snacks while watching TV.",
+    "I turned off the TV before eating snacks.",
+    "I was studying while watching TV.",
+    "I bought snacks and a television."
+  ],
+
+  answer:
+    "I was eating snacks while watching TV.",
+
+  fun: [
+
+    {
+      jp: "テレビ を",
+      romaji: "terebi wo",
+      en: "TV"
+    },
+
+    {
+      jp: "みながら",
+      romaji: "minagara",
+      en: "while watching"
+    },
+
+    {
+      jp: "おやつ を",
+      romaji: "oyatsu wo",
+      en: "snacks"
+    },
+
+    {
+      jp: "たべていた",
+      romaji: "tabete ita",
+      en: "was eating"
+    }
+
+  ],
+
+  chunks: [
+    "テレビ を",
+    "みながら",
+    "おやつ を",
+    "たべていた"
+  ]
+},
+
+
+
+
+
 ];
 
 
