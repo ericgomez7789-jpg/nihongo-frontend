@@ -912,6 +912,21 @@ const blackHoleDataset = [
 
 
 
+{
+  id: "blackhole43",
+  audio: "audio/blackhole43.wav",
+  choices: [
+    "When inviting others warmly, I said, 'Please do come. We are looking forward to seeing everyone.'",
+    "When inviting others, I explained that I would not be attending.",
+    "When inviting others, I asked them to postpone the gathering."
+  ],
+  answer: "When inviting others warmly, I said, 'Please do come. We are looking forward to seeing everyone.'",
+  japanese: "こころのこもったさそいかたで、「ぜひいらしてください。みなさまにお会いできるのを楽しみにしております」と申し上げました。"
+},
+
+
+
+
 
 ];
 
