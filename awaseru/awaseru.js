@@ -811,10 +811,16 @@ window.AWASERU = window.AWASERU || {};
 
 AWASERU.renderProgress = function () {
 
-  const progress =
-    AwaseruProgress.getLevelProgress(
-      "awaseru"
+  const completedRounds =
+    Math.min(
+      Math.max(awaseruRound - 1, 0),
+      5
     );
+
+  const totalRounds = 5;
+
+  const percent =
+    (completedRounds / totalRounds) * 100;
 
   const wrappers =
     document.querySelectorAll(
@@ -835,12 +841,12 @@ AWASERU.renderProgress = function () {
 
     if (label) {
       label.textContent =
-        `Progress: ${progress.completed} / ${progress.total}`;
+        `Round: ${completedRounds} / ${totalRounds}`;
     }
 
     if (bar) {
       bar.style.width =
-        `${progress.percent}%`;
+        `${percent}%`;
     }
 
   });
