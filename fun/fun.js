@@ -455,6 +455,41 @@ const funDataset = [
 
 
 
+{
+  id: "fun11",
+
+  audio: "audio/fun11.wav",
+
+  choices: [
+    "Someone your age should have more good judgment.",
+    "Someone your age should spend more time studying.",
+    "Someone your age should be working full-time already.",
+    "Someone your age should travel more often."
+  ],
+
+  answer: "Someone your age should have more good judgment.",
+
+  fun: [
+    {
+      jp: "きみ の ねんごろ では",
+      romaji: "kimi no nengoro de wa",
+      en: "at your age"
+    },
+    {
+      jp: "もっと ふんべつ が あって",
+      romaji: "motto funbetsu ga atte",
+      en: "have more good judgment"
+    },
+    {
+      jp: "しかるべき だ",
+      romaji: "shikaru beki da",
+      en: "should naturally be so"
+    }
+  ]
+},
+
+
+
 
 ];
 
