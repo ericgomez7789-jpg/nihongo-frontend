@@ -992,6 +992,26 @@ What meaning does this gesture express?"
 
 
 
+{
+  id: "yoru",
+  audio: "audio/yoru.wav",
+  choices: ["あさ", "ひる", "よる"],
+  answer: "よる",
+
+  summary_hiragana:
+    "よる の ふんいき を あらわす ように、りょうて を つかって そっと カーテン を しめる ような しぐさ を します。\
+まるで へや の あかり を さえぎって、だんだん くらく なって いく ようす を あらわして います。\
+この いちれん の しぐさ は、どういう いみ に なります か。",
+
+  summary_english:
+    "To represent the atmosphere of night, make a gesture as if gently closing a curtain with both hands.\
+The movement suggests blocking out the light as the surroundings gradually become dark.\
+What meaning does this gesture express?"
+},
+
+
+
+
 
 
 
