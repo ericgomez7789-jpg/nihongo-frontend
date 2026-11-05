@@ -9578,6 +9578,70 @@ const level3 = [
 
 
 
+{
+  "id": "es3-46",
+  "meaning": "Si te cansas, ¿qué ocurre después?",
+  "level": 3,
+
+  "options": [
+    "Es probable que descanses o necesites recuperar energía",
+    "Es probable que tengas más energía que antes",
+    "Es probable que nunca necesites descansar",
+    "Es probable que te vuelvas más rápido automáticamente"
+  ],
+
+  "optionsRomaji": [
+    "es_probable_que_descanses_o_necesites_recuperar_energia",
+    "es_probable_que_tengas_mas_energia_que_antes",
+    "es_probable_que_nunca_necesites_descansar",
+    "es_probable_que_te_vuelvas_mas_rapido_automaticamente"
+  ],
+
+  "optionsEN": [
+    "You will probably rest or need to recover energy",
+    "You will probably have more energy than before",
+    "You will probably never need to rest",
+    "You will probably become faster automatically"
+  ],
+
+  "correct": "Es probable que descanses o necesites recuperar energía",
+
+  "fullAudio": {
+    "daughter": "audio/spanish/inference46.wav",
+    "me": "audio/spanish/inference46.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["spanish/audio/es_probable_que_descanses_o_necesites_recuperar_energia.wav"],
+      ["spanish/audio/es_probable_que_tengas_mas_energia_que_antes.wav"],
+      ["spanish/audio/es_probable_que_nunca_necesites_descansar.wav"],
+      ["spanish/audio/es_probable_que_te_vuelvas_mas_rapido_automaticamente.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["spanish/audio/es_probable_que_descanses_o_necesites_recuperar_energia.wav"],
+    ["spanish/audio/es_probable_que_tengas_mas_energia_que_antes.wav"],
+    ["spanish/audio/es_probable_que_nunca_necesites_descansar.wav"],
+    ["spanish/audio/es_probable_que_te_vuelvas_mas_rapido_automaticamente.wav"]
+  ],
+
+  "chunks": [
+    {
+      "spanish": "Si te cansas",
+      "english": "If you get tired"
+    },
+    {
+      "spanish": "¿qué ocurre después?",
+      "english": "what happens afterward?"
+    }
+  ]
+},
+
+
+
+
 
 
 
