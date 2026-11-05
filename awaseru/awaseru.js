@@ -811,16 +811,21 @@ window.AWASERU = window.AWASERU || {};
 
 AWASERU.renderProgress = function () {
 
-  const completedRounds =
+  console.log(
+    "RENDER PROGRESS",
+    awaseruRound
+  );
+
+  const currentRound =
     Math.min(
-      Math.max(awaseruRound - 1, 0),
+      Math.max(awaseruRound, 1),
       5
     );
 
   const totalRounds = 5;
 
   const percent =
-    (completedRounds / totalRounds) * 100;
+    (currentRound / totalRounds) * 100;
 
   const wrappers =
     document.querySelectorAll(
@@ -841,7 +846,7 @@ AWASERU.renderProgress = function () {
 
     if (label) {
       label.textContent =
-        `Round: ${completedRounds} / ${totalRounds}`;
+        `Round: ${currentRound} / ${totalRounds}`;
     }
 
     if (bar) {
@@ -1559,6 +1564,12 @@ function awaseruNextRound() {
 
   awaseruRound++;
 
+  console.log(
+    "NEXT ROUND",
+    awaseruRound
+  );
+
+  AWASERU.renderProgress();
 
   if (awaseruRound > 5) {
 
