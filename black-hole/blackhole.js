@@ -163,8 +163,18 @@ BlackHole.handleMCQ = function (choice) {
 BlackHole.screen3 = function (isCorrect) {
   BlackHole.show("blackHoleScreen3");
 
+  const item = BlackHole.currentItem;
+
   const live = document.getElementById("blackHoleLive");
   const hole = document.getElementById("blackHoleHole");
+
+  document.getElementById("blackHoleEnglish").textContent =
+    item.answer || "";
+
+  document.getElementById("blackHoleJapanese").textContent =
+    item.japanese || "";
+
+  document.getElementById("blackHoleReveal").style.display = "block";
 
   if (isCorrect) {
     live.style.display = "block";
