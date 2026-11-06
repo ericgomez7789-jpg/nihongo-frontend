@@ -1014,6 +1014,28 @@ What meaning does this gesture express?"
 
 
 
+{
+  id: "gozen",
+  audio: "audio/gozen.wav",
+  choices: ["ごぜん", "ごご", "よる"],
+  answer: "ごぜん",
+
+  summary_hiragana:
+    "はじめ に、みぎて を ぎゅっと にぎり、ひとさしゆび と なかゆび を たてます。\
+それから、まるで かお を とけい の ばん に みたてる ように、その にほん の ゆび を め と め の あいだ に おきます。\
+おわり に、ひとさしゆび と なかゆび を たてた まま、みぎて を みぎ に かたむけます。\
+この いちれん の しぐさ は、なに を あらわして いる のでしょう か。",
+
+  summary_english:
+    "First, make a fist with your right hand and extend your index and middle fingers.\
+Then, imagine your face as the face of a clock and place those two fingers between your eyes.\
+Finally, keep the two fingers extended and tilt your right hand to the right.\
+What does this sequence of gestures represent?"
+},
+
+
+
+
 
 
 
