@@ -491,6 +491,301 @@ const funDataset = [
 
 
 
+
+
+
+
+
+
+
+
+{
+  id: "fun12",
+
+  audio: "audio/fun12.wav",
+
+  choices: [
+    "The rain is falling softly.",
+    "The wind is blowing gently.",
+    "The river is flowing quietly.",
+    "The snow is fluttering down."
+  ],
+
+  answer: "The rain is falling softly.",
+
+  fun: [
+    {
+      jp: "あめ が",
+      romaji: "ame ga",
+      en: "the rain"
+    },
+    {
+      jp: "しとしと",
+      romaji: "shitoshito",
+      en: "softly"
+    },
+    {
+      jp: "ふる",
+      romaji: "furu",
+      en: "falls"
+    }
+  ]
+},
+
+
+
+
+
+
+{
+  id: "fun13",
+
+  audio: "audio/fun13.wav",
+
+  choices: [
+    "The stars are sparkling.",
+    "The rain is falling softly.",
+    "The wind is blowing gently.",
+    "The river is flowing quietly."
+  ],
+
+  answer: "The stars are sparkling.",
+
+  fun: [
+    {
+      jp: "ほし が",
+      romaji: "hoshi ga",
+      en: "the stars"
+    },
+    {
+      jp: "きらきら",
+      romaji: "kirakira",
+      en: "sparkling"
+    },
+    {
+      jp: "ひかる",
+      romaji: "hikaru",
+      en: "shine"
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+{
+  id: "fun14",
+
+  audio: "audio/fun14.wav",
+
+  choices: [
+    "The leaves rustle softly in the wind.",
+    "The stars are sparkling in the sky.",
+    "The rain is falling softly.",
+    "The wind is blowing gently."
+  ],
+
+  answer: "The leaves rustle softly in the wind.",
+
+  fun: [
+    {
+      jp: "かぜ に ふかれた",
+      romaji: "kaze ni fukareta",
+      en: "blown by the wind"
+    },
+    {
+      jp: "このは が",
+      romaji: "konoha ga",
+      en: "the leaves"
+    },
+    {
+      jp: "さらさら",
+      romaji: "sarasara",
+      en: "softly rustling"
+    },
+    {
+      jp: "おと を たてる",
+      romaji: "oto o tateru",
+      en: "make a sound"
+    }
+  ]
+},
+
+
+
+
+
+
+
+{
+  id: "fun15",
+
+  audio: "audio/fun15.wav",
+
+  choices: [
+    "The rain is pouring down.",
+    "The rain is falling softly.",
+    "The stars are sparkling.",
+    "The wind is blowing gently."
+  ],
+
+  answer: "The rain is pouring down.",
+
+  fun: [
+    {
+      jp: "あめ が",
+      romaji: "ame ga",
+      en: "the rain"
+    },
+    {
+      jp: "ざあざあ",
+      romaji: "zaazaa",
+      en: "pouring heavily"
+    },
+    {
+      jp: "ふる",
+      romaji: "furu",
+      en: "falls"
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+{
+  id: "fun16",
+
+  audio: "audio/fun16.wav",
+
+  choices: [
+    "The snow is fluttering down.",
+    "The rain is pouring down.",
+    "The leaves rustle softly in the wind.",
+    "The stars are sparkling."
+  ],
+
+  answer: "The snow is fluttering down.",
+
+  fun: [
+    {
+      jp: "ゆき が",
+      romaji: "yuki ga",
+      en: "the snow"
+    },
+    {
+      jp: "ひらひら",
+      romaji: "hirahira",
+      en: "fluttering"
+    },
+    {
+      jp: "まいおちる",
+      romaji: "maiochiru",
+      en: "drift down"
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+{
+  id: "fun17",
+
+  audio: "audio/fun17.wav",
+
+  choices: [
+    "The grass is swaying gently.",
+    "The snow is fluttering down.",
+    "The rain is pouring down.",
+    "The stars are sparkling."
+  ],
+
+  answer: "The grass is swaying gently.",
+
+  fun: [
+    {
+      jp: "くさ が",
+      romaji: "kusa ga",
+      en: "the grass"
+    },
+    {
+      jp: "ゆらゆら",
+      romaji: "yurayura",
+      en: "gently swaying"
+    },
+    {
+      jp: "ゆれる",
+      romaji: "yureru",
+      en: "sways"
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+{
+  id: "fun18",
+
+  audio: "audio/fun18.wav",
+
+  choices: [
+    "The wind is blowing gently.",
+    "The grass is swaying gently.",
+    "The snow is fluttering down.",
+    "The rain is pouring down."
+  ],
+
+  answer: "The wind is blowing gently.",
+
+  fun: [
+    {
+      jp: "かぜ が",
+      romaji: "kaze ga",
+      en: "the wind"
+    },
+    {
+      jp: "そよそよ",
+      romaji: "soyosoyo",
+      en: "gently"
+    },
+    {
+      jp: "ふく",
+      romaji: "fuku",
+      en: "blows"
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
 ];
 
 /* ==========================================================
