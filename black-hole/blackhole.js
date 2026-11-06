@@ -923,8 +923,8 @@ const blackHoleDataset = [
 
 
 {
-  id: "blackhole43",
-  audio: "audio/blackhole43.wav",
+  id: "blackhole44",
+  audio: "audio/blackhole44.wav",
   choices: [
     "When inviting others warmly, I said, 'Please do come. We are looking forward to seeing everyone.'",
     "When inviting others, I explained that I would not be attending.",
@@ -934,6 +934,22 @@ const blackHoleDataset = [
   japanese: "こころのこもったさそいかたで、「ぜひいらしてください。みなさまにお会いできるのを楽しみにしております」と申し上げました。"
 },
 
+
+
+
+
+
+{
+  id: "blackhole45",
+  audio: "audio/blackhole45.wav",
+  choices: [
+    "At the reception of a formal event, I said, 'Thank you very much for inviting me today.'",
+    "At the reception of a formal event, I apologized for arriving late.",
+    "At the reception of a formal event, I asked where my seat was located."
+  ],
+  answer: "At the reception of a formal event, I said, 'Thank you very much for inviting me today.'",
+  japanese: "改まった席の受付で、「本日はお招きにあずかり、ありがとうございます」とごあいさつ申し上げました。"
+},
 
 
 
