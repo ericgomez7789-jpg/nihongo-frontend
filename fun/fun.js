@@ -786,6 +786,52 @@ const funDataset = [
 
 
 
+{
+  id: "fun19",
+
+  audio: "audio/fun19.wav",
+
+  choices: [
+    "At the water's edge, the waves crash against the shore.",
+    "The wind is blowing gently.",
+    "The rain is falling softly.",
+    "The stars are sparkling."
+  ],
+
+  answer: "At the water's edge, the waves crash against the shore.",
+
+  fun: [
+    {
+      jp: "なみうちぎわ では",
+      romaji: "namiuchigiwa de wa",
+      en: "at the water's edge"
+    },
+    {
+      jp: "なみ が",
+      romaji: "nami ga",
+      en: "the waves"
+    },
+    {
+      jp: "ざぶざぶ",
+      romaji: "zabuzabu",
+      en: "crashing"
+    },
+    {
+      jp: "うちよせる",
+      romaji: "uchiyoseru",
+      en: "roll in"
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
 ];
 
 /* ==========================================================
