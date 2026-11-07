@@ -70,9 +70,34 @@
   <img src="audio/logo/toris_logo.png" alt="App Logo">
 </div>
 
-<h1>Tori's Method — Blog & Podcast</h1>
-<p>Updates, dev logs, thoughts, and short podcast-style audio notes.</p>
+<h1>Tori's Method Community & Podcast</h1>
 
+<p>
+Welcome to the official Tori's Method community. Members can discuss
+language learning, share feedback, participate in podcast discussions,
+and follow development updates.
+</p>
+
+<div style="
+  background:#111;
+  border:1px solid #333;
+  border-radius:8px;
+  padding:16px;
+  margin:20px 0;
+">
+  <strong>Community Guidelines</strong>
+
+  <p style="margin-top:10px;">
+    Members may not post content that is harassing, hateful,
+    sexually explicit, violent, illegal, deceptive, or spam.
+  </p>
+
+  <p>
+    User-generated content may be reviewed and moderated.
+    Content that violates community guidelines may be removed,
+    and accounts may be restricted or suspended.
+  </p>
+</div>
 <div id="unlockPrompt"></div>
 
 <!-- LOGIN UI -->
@@ -96,7 +121,12 @@
 <!-- BLOG APP -->
 <div id="app">
 
-  <h2>Write a Post, Question, or Feedback</h2>
+<h2>Community Discussion</h2>
+
+<p style="color:#aaa;">
+Ask questions, discuss language learning, share feedback,
+or participate in community conversations.
+</p>
   <input id="newTitle" placeholder="Post title (optional)" />
   <textarea id="newBody" rows="4" placeholder="Write your message here..."></textarea>
   <button onclick="publishPost()">Publish Post</button>
@@ -105,7 +135,12 @@
 
   <div id="posts"></div>
 
-  <h2 style="margin-top:60px;">Add Podcast Audio Clip (URL)</h2>
+ <h2 style="margin-top:60px;">Share Podcast Audio</h2>
+
+<p style="color:#aaa;">
+Audio submissions must follow community guidelines and may be reviewed
+by moderators.
+</p>
   <textarea id="audioInput" rows="3" placeholder="Paste audio URL here..."></textarea>
   <button onclick="publishAudio()">Publish Audio Clip</button>
 
@@ -113,6 +148,14 @@
   <button id="recordBtn">🎙 Start Recording</button>
   <button id="stopBtn" disabled>⏹ Stop Recording</button>
   <p id="recordStatus" style="color:#aaa; margin-top:10px;"></p>
+
+  <hr style="margin-top:60px;border-color:#333;">
+
+<p style="color:#888;font-size:14px;">
+Community content is subject to moderation. Content that violates
+community guidelines may be removed. Accounts may be restricted for
+repeated violations.
+</p>
 
   <p style="margin-top: 40px;">
     <a href="index.html">← Back to Tori's Method</a>
