@@ -163,7 +163,10 @@
 
 <script type="module">
   const sb = window.sb;
-  const MY_EMAIL = "ericgomez89@yahoo.com";
+ const OWNER_EMAILS = [
+  "ericgomez89@yahoo.com",
+  "victoriakaygomez2016@gmail.com"
+];
 
   /* FORCE LOGOUT ON PAGE LOAD */
   
@@ -235,39 +238,77 @@
     `).join("");
   }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   /* AUTH STATE LISTENER */
-  sb.auth.onAuthStateChange(async (event, session) => {
-    const loggedIn = !!session;
+  /* AUTH STATE LISTENER */
+sb.auth.onAuthStateChange(async (event, session) => {
 
-    if (session === null) {
-  // Session is still loading — do nothing
-  return;
-}
+  if (!session) {
+    document.getElementById("authBox").style.display = "block";
+    document.getElementById("logoutBox").style.display = "none";
+    document.getElementById("app").style.display = "none";
+    return;
+  }
 
-if (!loggedIn) {
-  document.getElementById("authBox").style.display = "block";
-  document.getElementById("logoutBox").style.display = "none";
-  document.getElementById("app").style.display = "none";
-  return;
-}
+  const userEmail = session.user.email?.toLowerCase();
 
+  console.log("Logged in as:", userEmail);
 
-    const userEmail = session.user.email;
+  if (!OWNER_EMAILS.includes(userEmail)) {
+    alert("Access denied.");
 
-    if (userEmail !== MY_EMAIL) {
-      await sb.auth.signOut();
-      return;
-    }
+    await sb.auth.signOut();
 
-    document.getElementById("authBox").style.display = "none";
-    document.getElementById("logoutBox").style.display = "block";
-    document.getElementById("app").style.display = "block";
+    document.getElementById("authBox").style.display = "block";
+    document.getElementById("logoutBox").style.display = "none";
+    document.getElementById("app").style.display = "none";
 
-    renderPosts();
-    startRandomMusic();
-  });
+    return;
+  }
+
+  console.log("[ADMIN ACCESS GRANTED]");
+
+  document.getElementById("authBox").style.display = "none";
+  document.getElementById("logoutBox").style.display = "block";
+  document.getElementById("app").style.display = "block";
+
+  await renderPosts();
+  startRandomMusic();
+});
 
   /* LOGIN / SIGNUP / LOGOUT */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   async function login() {
     const email = document.getElementById("email").value.trim();
     const password = document.getElementById("password").value.trim();
