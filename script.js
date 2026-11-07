@@ -48080,7 +48080,8 @@ window.currentScreen = "screen0";
   // ADMIN / OWNER OVERRIDE
   // ---------------------------------------------------------
   const ownerEmails = [
-    "ericgomez89@yahoo.com"
+    "ericgomez89@yahoo.com",
+    "victoriakaygomez2016@gmail.com"
   ];
 
   const userEmail = user.email?.toLowerCase();
