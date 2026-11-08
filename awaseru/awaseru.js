@@ -1567,6 +1567,58 @@ const awaseruSentences = [
 
 
 
+{
+  id: "awaseru31",
+
+  audio: "audio/awaseru31.wav",
+
+  choices: [
+    "Who lit the light?",
+    "Who turned off the light?",
+    "Who opened the window?",
+    "Who lit the candle?"
+  ],
+
+  answer: "Who lit the light?",
+
+  fun: [
+    {
+      jp: "ひかり を",
+      romaji: "hikari o",
+      en: "the light"
+    },
+    {
+      jp: "ともした",
+      romaji: "tomoshita",
+      en: "lit"
+    },
+    {
+      jp: "の は",
+      romaji: "no wa",
+      en: "the one who"
+    },
+    {
+      jp: "だれ",
+      romaji: "dare",
+      en: "who"
+    },
+    {
+      jp: "です か",
+      romaji: "desu ka",
+      en: "is it?"
+    }
+  ],
+
+  chunks: [
+    "ひかり を",
+    "ともした",
+    "の は",
+    "だれ",
+    "です か"
+  ]
+},
+
+
 
 
 ];
