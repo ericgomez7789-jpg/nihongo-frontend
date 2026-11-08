@@ -1119,6 +1119,168 @@ const funDataset = [
 
 
 
+{
+  id: "fun27",
+
+  audio: "audio/fun27.wav",
+
+  choices: [
+    "Lightning flashed in an instant.",
+    "The sunlight begins to shine warmly and serenely.",
+    "Droplets keep dripping from soaking-wet clothes.",
+    "Steam from the bath rises in thick billowing clouds."
+  ],
+
+  answer: "Lightning flashed in an instant.",
+
+  fun: [
+    {
+      jp: "いなずま が",
+      romaji: "inazuma ga",
+      en: "lightning"
+    },
+    {
+      jp: "あっというま に",
+      romaji: "attoiu ma ni",
+      en: "in an instant"
+    },
+    {
+      jp: "ぴかっと",
+      romaji: "pikatto",
+      en: "with a flash"
+    },
+    {
+      jp: "ひかってきた",
+      romaji: "hikatte kita",
+      en: "came flashing into view"
+    }
+  ]
+},
+
+
+
+
+
+
+{
+  id: "fun28",
+
+  audio: "audio/fun28.wav",
+
+  choices: [
+    "Thunder rumbled across the sky.",
+    "Lightning flashed in an instant.",
+    "The sunlight begins to shine warmly and serenely.",
+    "Droplets keep dripping from soaking-wet clothes."
+  ],
+
+  answer: "Thunder rumbled across the sky.",
+
+  fun: [
+    {
+      jp: "かみなり が",
+      romaji: "kaminari ga",
+      en: "thunder"
+    },
+    {
+      jp: "ごろごろ と",
+      romaji: "gorogoro to",
+      en: "rumbling"
+    },
+    {
+      jp: "なりました",
+      romaji: "narimashita",
+      en: "began to sound"
+    }
+  ]
+},
+
+
+
+
+{
+  id: "fun29",
+
+  audio: "audio/fun29.wav",
+
+  choices: [
+    "Are you ready to study?",
+    "Thunder rumbled across the sky.",
+    "Lightning flashed in an instant.",
+    "The sunlight begins to shine warmly and serenely."
+  ],
+
+  answer: "Are you ready to study?",
+
+  fun: [
+    {
+      jp: "べんきょう の",
+      romaji: "benkyou no",
+      en: "for studying"
+    },
+    {
+      jp: "じゅんび は",
+      romaji: "junbi wa",
+      en: "preparations"
+    },
+    {
+      jp: "できた",
+      romaji: "dekita",
+      en: "are ready"
+    }
+  ]
+},
+
+
+
+{
+  id: "fun30",
+
+  audio: "audio/fun30.wav",
+
+  choices: [
+    "I want you to prepare for studying.",
+    "Are you ready to study?",
+    "Thunder rumbled across the sky.",
+    "Lightning flashed in an instant."
+  ],
+
+  answer: "I want you to prepare for studying.",
+
+  fun: [
+    {
+      jp: "きみに",
+      romaji: "kimi ni",
+      en: "you"
+    },
+    {
+      jp: "べんきょう の",
+      romaji: "benkyou no",
+      en: "for studying"
+    },
+    {
+      jp: "じゅんび を",
+      romaji: "junbi wo",
+      en: "preparations"
+    },
+    {
+      jp: "して",
+      romaji: "shite",
+      en: "to do"
+    },
+    {
+      jp: "ほしい",
+      romaji: "hoshii",
+      en: "I want you to"
+    }
+  ]
+},
+
+
+
+
+
+
 
 ];
 
