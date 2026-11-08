@@ -869,6 +869,42 @@ const funDataset = [
 
 
 
+{
+  id: "fun21",
+
+  audio: "audio/fun21.wav",
+
+  choices: [
+    "He slammed the door shut with a bang.",
+    "The waterfall came cascading down with a mighty roar.",
+    "The wind is blowing gently.",
+    "The stars are sparkling."
+  ],
+
+  answer: "He slammed the door shut with a bang.",
+
+  fun: [
+    {
+      jp: "どあ を",
+      romaji: "doa wo",
+      en: "the door"
+    },
+    {
+      jp: "ばたん と",
+      romaji: "batan to",
+      en: "with a bang"
+    },
+    {
+      jp: "たたきつける",
+      romaji: "tatakitsukeru",
+      en: "slam shut"
+    }
+  ]
+},
+
+
+
+
 
 
 
