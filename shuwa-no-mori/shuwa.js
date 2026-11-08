@@ -1064,6 +1064,28 @@ What does this sequence of gestures represent?"
 
 
 
+{
+  id: "kotoshi",
+  audio: "audio/kotoshi.wav",
+  choices: ["ことし", "らいねん", "せんげつ"],
+  answer: "ことし",
+
+  summary_hiragana:
+    "はじめ に、まるで だれか に「おちついて」 と いいきかせる ように、りょうて で むね の まえ から した へ おします。\
+それから、ひだりて で ぎゅっと こぶし を つくります。\
+おわり に、みぎて でも ぎゅっと こぶし を つくり、ひとさしゆび を たてて、ひだりて の こぶし の うえ を とん と たたきます。\
+この いちれん の しぐさ は、なに を あらわして いる のでしょう か。",
+
+  summary_english:
+    "First, as if telling someone to calm down, push both hands downward from in front of your chest.\
+Then, make a tight fist with your left hand.\
+Finally, make a tight fist with your right hand as well, extend your index finger, and tap the top of your left fist.\
+What does this sequence of gestures represent?"
+},
+
+
+
+
 
 
 
