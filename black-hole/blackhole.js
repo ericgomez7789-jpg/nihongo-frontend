@@ -954,6 +954,22 @@ const blackHoleDataset = [
 
 
 
+
+
+{
+  id: "blackhole46",
+  audio: "audio/blackhole46.wav",
+  choices: [
+    "When complimenting the flavor of a dish, I said, 'It has a rich depth of flavor and is very mellow.'",
+    "When complimenting the appearance of a dish, I said, 'The presentation is very beautiful.'",
+    "When complimenting a chef's skills, I said, 'Your knife technique is impressive.'"
+  ],
+  answer: "When complimenting the flavor of a dish, I said, 'It has a rich depth of flavor and is very mellow.'",
+  japanese: "料理の味をほめるとき、「コクがあって、まろやかですね」と申し上げました。"
+},
+
+
+
 ];
 
 BlackHole.dataset = blackHoleDataset;
