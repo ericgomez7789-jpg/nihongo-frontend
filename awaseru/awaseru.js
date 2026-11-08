@@ -1969,10 +1969,21 @@ const AwaseruDragModule = {
         e.target.dataset.player
       );
 
+    console.log(
+      "DROP PLAYER",
+      player
+    );
+
     const dragged =
       player === 1
         ? window.awaseruDraggedButton
         : window.awaseruDraggedButton2;
+
+    console.log(
+      "DRAGGED BUTTON",
+      player,
+      dragged?.textContent
+    );
 
     if (!dragged) return;
 
@@ -1986,18 +1997,44 @@ const AwaseruDragModule = {
         e.target.dataset.index
       );
 
+    console.log(
+      "CHECK",
+      {
+        player,
+        chunkIndex,
+        requiredIndex,
+        text: dragged.textContent
+      }
+    );
+
     if (
       chunkIndex !==
       requiredIndex
     ) {
 
-      alert(
-        "Try Again"
+      console.log(
+        "WRONG DROP",
+        player
       );
+
+      e.target.style.background =
+        "#d32f2f";
+
+      setTimeout(() => {
+
+        e.target.style.background =
+          "#222";
+
+      }, 300);
 
       return;
 
     }
+
+    console.log(
+      "CORRECT DROP",
+      player
+    );
 
     if (
       e.target.dataset.filled ===
@@ -2041,6 +2078,11 @@ const AwaseruDragModule = {
 
       correctDropsP1++;
 
+      console.log(
+        "P1 DROPS",
+        correctDropsP1
+      );
+
       if (
         correctDropsP1 ===
         awaseruCurrentSentence
@@ -2056,6 +2098,11 @@ const AwaseruDragModule = {
     if (player === 2) {
 
       correctDropsP2++;
+
+      console.log(
+        "P2 DROPS",
+        correctDropsP2
+      );
 
       if (
         correctDropsP2 ===
@@ -2169,9 +2216,10 @@ function renderPlayerBoard(
       () => {
 
         console.log(
+          "PLAYER",
+          player,
           "DRAG START",
-          chunk,
-          chunkIndex
+          chunk
         );
 
         if (player === 1) {
@@ -2229,6 +2277,8 @@ function renderPlayerBoard(
         }
 
         console.log(
+          "PLAYER",
+          player,
           "SELECTED",
           chunk
         );
