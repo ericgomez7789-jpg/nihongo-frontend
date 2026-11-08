@@ -838,13 +838,13 @@ const funDataset = [
   audio: "audio/fun20.wav",
 
   choices: [
-    "The waterfall came crashing down with a mighty roar.",
+    "The waterfall came cascading down with a mighty roar.",
     "The stars are sparkling.",
     "The wind is blowing gently.",
     "The snow is fluttering down."
   ],
 
-  answer: "The waterfall came crashing down with a mighty roar.",
+  answer: "The waterfall came cascading down with a mighty roar.",
 
   fun: [
     {
@@ -855,12 +855,12 @@ const funDataset = [
     {
       jp: "ごうごう と",
       romaji: "gougou to",
-      en: "with a roaring sound"
+      en: "with a mighty roar"
     },
     {
-      jp: "たたきつけて きました",
-      romaji: "tatakitsukete kimashita",
-      en: "came crashing down"
+      jp: "ながれおちて きました",
+      romaji: "nagareochite kimashita",
+      en: "came cascading down"
     }
   ]
 },

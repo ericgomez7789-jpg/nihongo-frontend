@@ -1072,13 +1072,13 @@ const awaseruSentences = [
   audio: "audio/awaseru20.wav",
 
   choices: [
-    "The waterfall came crashing down with a mighty roar.",
+    "The waterfall came cascading down with a mighty roar.",
     "The stars are sparkling.",
     "The wind is blowing gently.",
     "The snow is fluttering down."
   ],
 
-  answer: "The waterfall came crashing down with a mighty roar.",
+  answer: "The waterfall came cascading down with a mighty roar.",
 
   fun: [
     {
@@ -1089,22 +1089,21 @@ const awaseruSentences = [
     {
       jp: "ごうごう と",
       romaji: "gougou to",
-      en: "with a roaring sound"
+      en: "with a mighty roar"
     },
     {
-      jp: "たたきつけて きました",
-      romaji: "tatakitsukete kimashita",
-      en: "came crashing down"
+      jp: "ながれおちて きました",
+      romaji: "nagareochite kimashita",
+      en: "came cascading down"
     }
   ],
 
   chunks: [
     "たき が",
     "ごうごう と",
-    "たたきつけて きました"
+    "ながれおちて きました"
   ]
 },
-
 
 
 
