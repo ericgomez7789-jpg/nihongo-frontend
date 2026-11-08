@@ -1243,6 +1243,43 @@ const awaseruSentences = [
 
 
 
+{
+  id: "fun24",
+
+  audio: "audio/fun24.wav",
+
+  choices: [
+    "Steam from the bath rises in thick billowing clouds.",
+    "At the water's edge, I was splashing seawater around.",
+    "The candle flame flickers.",
+    "The waterfall came cascading down with a mighty roar."
+  ],
+
+  answer: "Steam from the bath rises in thick billowing clouds.",
+
+  fun: [
+    {
+      jp: "おふろ の ゆげ が",
+      romaji: "ofuro no yuge ga",
+      en: "steam from the bath"
+    },
+    {
+      jp: "もくもく と",
+      romaji: "mokumoku to",
+      en: "in thick billowing clouds"
+    },
+    {
+      jp: "たちのぼって いく",
+      romaji: "tachinobotte iku",
+      en: "rises upward"
+    }
+  ]
+},
+
+
+
+
+
 ];
 
 
