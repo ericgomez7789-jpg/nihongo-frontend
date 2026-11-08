@@ -1079,6 +1079,47 @@ const funDataset = [
 
 
 
+
+{
+  id: "fun26",
+
+  audio: "audio/fun26.wav",
+
+  choices: [
+    "The sunlight begins to shine warmly and serenely.",
+    "Droplets keep dripping from soaking-wet clothes.",
+    "Steam from the bath rises in thick billowing clouds.",
+    "The candle flame flickers."
+  ],
+
+  answer: "The sunlight begins to shine warmly and serenely.",
+
+  fun: [
+    {
+      jp: "ひ が",
+      romaji: "hi ga",
+      en: "the sunlight"
+    },
+    {
+      jp: "うらうら",
+      romaji: "uraura",
+      en: "warmly and serenely"
+    },
+    {
+      jp: "かがやいてくる",
+      romaji: "kagayaite kuru",
+      en: "begins to shine"
+    }
+  ]
+},
+
+
+
+
+
+
+
+
 ];
 
 /* ==========================================================
