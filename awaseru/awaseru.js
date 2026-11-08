@@ -1654,6 +1654,8 @@ let lastScrambleP2 = "";
 
 let awaseruSelectedChunk = null;
 
+window.awaseruDraggedButton = null;
+window.awaseruDraggedButton2 = null;
 
 
 
@@ -1929,9 +1931,12 @@ const AwaseruDragModule = {
         "click",
         () => {
 
-          if (
-            !window.awaseruDraggedButton
-          ) {
+          const dragged =
+            player === 1
+              ? window.awaseruDraggedButton
+              : window.awaseruDraggedButton2;
+
+          if (!dragged) {
             return;
           }
 
@@ -1959,8 +1964,15 @@ const AwaseruDragModule = {
 
     e.preventDefault();
 
+    const player =
+      Number(
+        e.target.dataset.player
+      );
+
     const dragged =
-      window.awaseruDraggedButton;
+      player === 1
+        ? window.awaseruDraggedButton
+        : window.awaseruDraggedButton2;
 
     if (!dragged) return;
 
@@ -2013,13 +2025,17 @@ const AwaseruDragModule = {
         btn.style.outline = "";
       });
 
-    window.awaseruDraggedButton =
-      null;
+    if (player === 1) {
 
-    const player =
-      Number(
-        e.target.dataset.player
-      );
+      window.awaseruDraggedButton =
+        null;
+
+    } else {
+
+      window.awaseruDraggedButton2 =
+        null;
+
+    }
 
     if (player === 1) {
 
@@ -2158,8 +2174,17 @@ function renderPlayerBoard(
           chunkIndex
         );
 
-        window.awaseruDraggedButton =
-          btn;
+        if (player === 1) {
+
+          window.awaseruDraggedButton =
+            btn;
+
+        } else {
+
+          window.awaseruDraggedButton2 =
+            btn;
+
+        }
 
       }
     );
@@ -2191,8 +2216,17 @@ function renderPlayerBoard(
         btn.style.outline =
           "4px solid yellow";
 
-        window.awaseruDraggedButton =
-          btn;
+        if (player === 1) {
+
+          window.awaseruDraggedButton =
+            btn;
+
+        } else {
+
+          window.awaseruDraggedButton2 =
+            btn;
+
+        }
 
         console.log(
           "SELECTED",
