@@ -970,6 +970,28 @@ const blackHoleDataset = [
 
 
 
+
+
+
+{
+  id: "blackhole47",
+  audio: "audio/blackhole47.wav",
+  choices: [
+    "When complimenting someone's cooking, I said, 'This is so delicious. Would you mind telling me how to make it?'",
+    "When complimenting someone's cooking, I said, 'Your knife skills are impressive.'",
+    "When complimenting someone's cooking, I said, 'The presentation is very beautiful.'"
+  ],
+  answer: "When complimenting someone's cooking, I said, 'This is so delicious. Would you mind telling me how to make it?'",
+  japanese: "てりょうりをほめるとき、「とてもおいしいので、作り方を教えていただけますか」と言いました。"
+},
+
+
+
+
+
+
+
+
 ];
 
 BlackHole.dataset = blackHoleDataset;
