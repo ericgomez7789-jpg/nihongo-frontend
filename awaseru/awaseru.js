@@ -2253,7 +2253,7 @@ function renderPlayerBoard(
       "click",
       () => {
 
-        document
+        chunkContainer
           .querySelectorAll(
             ".chunkBtn"
           )
