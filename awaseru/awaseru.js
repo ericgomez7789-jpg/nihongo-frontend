@@ -1194,6 +1194,53 @@ const awaseruSentences = [
 
 
 
+{
+  id: "fun23",
+
+  audio: "audio/fun23.wav",
+
+  choices: [
+    "At the water's edge, I was splashing seawater around.",
+    "The candle flame flickers.",
+    "He slammed the door shut with a bang.",
+    "The waterfall came cascading down with a mighty roar."
+  ],
+
+  answer: "At the water's edge, I was splashing seawater around.",
+
+  fun: [
+    {
+      jp: "なぎさ では",
+      romaji: "nagisa de wa",
+      en: "at the water's edge"
+    },
+    {
+      jp: "ぼく が",
+      romaji: "boku ga",
+      en: "I"
+    },
+    {
+      jp: "うみ の みず を",
+      romaji: "umi no mizu wo",
+      en: "seawater"
+    },
+    {
+      jp: "ばしゃばしゃ と",
+      romaji: "bashabasha to",
+      en: "splashing"
+    },
+    {
+      jp: "はねあげて いました",
+      romaji: "haneagete imashita",
+      en: "was splashing up"
+    }
+  ]
+},
+
+
+
+
+
 
 
 ];
