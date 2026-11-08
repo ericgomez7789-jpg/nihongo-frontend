@@ -1152,6 +1152,50 @@ const awaseruSentences = [
 
 
 
+
+
+
+
+{
+  id: "fun22",
+
+  audio: "audio/fun22.wav",
+
+  choices: [
+    "The candle flame flickers.",
+    "He slammed the door shut with a bang.",
+    "The stars are sparkling.",
+    "The waterfall came cascading down with a mighty roar."
+  ],
+
+  answer: "The candle flame flickers.",
+
+  fun: [
+    {
+      jp: "ろうそく の ひ が",
+      romaji: "rousoku no hi ga",
+      en: "the candle flame"
+    },
+    {
+      jp: "ちらちら と",
+      romaji: "chirachira to",
+      en: "flickering"
+    },
+    {
+      jp: "ゆれる",
+      romaji: "yureru",
+      en: "sways"
+    }
+  ]
+},
+
+
+
+
+
+
+
+
 ];
 
 
