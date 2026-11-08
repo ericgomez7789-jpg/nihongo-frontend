@@ -1032,6 +1032,52 @@ const funDataset = [
 
 
 
+{
+  id: "fun25",
+
+  audio: "audio/fun25.wav",
+
+  choices: [
+    "Droplets keep dripping from my soaking-wet clothes.",
+    "Steam from the bath rises in thick billowing clouds.",
+    "The candle flame flickers.",
+    "He slammed the door shut with a bang."
+  ],
+
+  answer: "Droplets keep dripping from my soaking-wet clothes.",
+
+  fun: [
+    {
+      jp: "びしょびしょ",
+      romaji: "bishobisho",
+      en: "soaking wet"
+    },
+    {
+      jp: "みずまみれ の ふく から",
+      romaji: "mizumamire no fuku kara",
+      en: "from water-soaked clothes"
+    },
+    {
+      jp: "しずく が",
+      romaji: "shizuku ga",
+      en: "droplets"
+    },
+    {
+      jp: "ぽろぽろ",
+      romaji: "poroporo",
+      en: "dripping one after another"
+    },
+    {
+      jp: "たれてくる",
+      romaji: "tarete kuru",
+      en: "keep dripping down"
+    }
+  ]
+},
+
+
+
+
 
 ];
 

@@ -1157,9 +1157,9 @@ const awaseruSentences = [
 
 
 {
-  id: "fun22",
+  id: "awaseru22",
 
-  audio: "audio/fun22.wav",
+  audio: "audio/awaseru22.wav",
 
   choices: [
     "The candle flame flickers.",
@@ -1186,18 +1186,19 @@ const awaseruSentences = [
       romaji: "yureru",
       en: "sways"
     }
+  ],
+
+  chunks: [
+    "ろうそく の ひ が",
+    "ちらちら と",
+    "ゆれる"
   ]
 },
 
-
-
-
-
-
 {
-  id: "fun23",
+  id: "awaseru23",
 
-  audio: "audio/fun23.wav",
+  audio: "audio/awaseru23.wav",
 
   choices: [
     "At the water's edge, I was splashing seawater around.",
@@ -1234,19 +1235,21 @@ const awaseruSentences = [
       romaji: "haneagete imashita",
       en: "was splashing up"
     }
+  ],
+
+  chunks: [
+    "なぎさ では",
+    "ぼく が",
+    "うみ の みず を",
+    "ばしゃばしゃ と",
+    "はねあげて いました"
   ]
 },
 
-
-
-
-
-
-
 {
-  id: "fun24",
+  id: "awaseru24",
 
-  audio: "audio/fun24.wav",
+  audio: "audio/awaseru24.wav",
 
   choices: [
     "Steam from the bath rises in thick billowing clouds.",
@@ -1273,10 +1276,65 @@ const awaseruSentences = [
       romaji: "tachinobotte iku",
       en: "rises upward"
     }
+  ],
+
+  chunks: [
+    "おふろ の ゆげ が",
+    "もくもく と",
+    "たちのぼって いく"
   ]
 },
 
+{
+  id: "awaseru25",
 
+  audio: "audio/awaseru25.wav",
+
+  choices: [
+    "Droplets keep dripping from soaking-wet clothes.",
+    "Steam from the bath rises in thick billowing clouds.",
+    "At the water's edge, I was splashing seawater around.",
+    "The waterfall came cascading down with a mighty roar."
+  ],
+
+  answer: "Droplets keep dripping from soaking-wet clothes.",
+
+  fun: [
+    {
+      jp: "びしょびしょ",
+      romaji: "bishobisho",
+      en: "soaking wet"
+    },
+    {
+      jp: "みずまみれ の ふく から",
+      romaji: "mizumamire no fuku kara",
+      en: "from water-soaked clothes"
+    },
+    {
+      jp: "しずく が",
+      romaji: "shizuku ga",
+      en: "droplets"
+    },
+    {
+      jp: "ぽろぽろ",
+      romaji: "poroporo",
+      en: "dripping one after another"
+    },
+    {
+      jp: "たれてくる",
+      romaji: "tarete kuru",
+      en: "keep dripping down"
+    }
+  ],
+
+  chunks: [
+    "びしょびしょ",
+    "みずまみれ の ふく から",
+    "しずく が",
+    "ぽろぽろ",
+    "たれてくる"
+  ]
+},
 
 
 
