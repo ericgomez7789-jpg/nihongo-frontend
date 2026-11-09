@@ -387,6 +387,19 @@ const honyakuSentences = [
 
 
 
+{
+    id: "honyaku33",
+    audio: "audio/awaseru33.wav",
+    answer: "If you insist, I'll go on a trip with you.",
+    choices: [
+        "If you insist, I'll go on a trip with you.",
+        "If you insist, I'll stay home and rest.",
+        "If you insist, I'll travel by myself.",
+        "If you insist, I'll cancel the trip."
+    ]
+},
+
+
 
 
 

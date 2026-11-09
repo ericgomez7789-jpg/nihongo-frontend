@@ -1706,6 +1706,60 @@ const awaseruSentences = [
 
 
 
+{
+  id: "awaseru33",
+
+  audio: "audio/awaseru33.wav",
+
+  choices: [
+    "If you insist, I'll go on a trip with you.",
+    "If you insist, I'll stay home and rest.",
+    "If you insist, I'll travel by myself.",
+    "If you insist, I'll cancel the trip."
+  ],
+
+  answer: "If you insist, I'll go on a trip with you.",
+
+  fun: [
+    {
+      jp: "どうしても",
+      romaji: "dou shitemo",
+      en: "no matter what / absolutely"
+    },
+    {
+      jp: "と いう の なら",
+      romaji: "to iu no nara",
+      en: "if you say so / if you insist"
+    },
+    {
+      jp: "いっしょ に",
+      romaji: "issho ni",
+      en: "together"
+    },
+    {
+      jp: "りょこう に",
+      romaji: "ryokou ni",
+      en: "on a trip"
+    },
+    {
+      jp: "いきます",
+      romaji: "ikimasu",
+      en: "will go"
+    }
+  ],
+
+  chunks: [
+    "どうしても",
+    "と いう の なら",
+    "いっしょ に",
+    "りょこう に",
+    "いきます"
+  ]
+},
+
+
+
+
 
 
 ];

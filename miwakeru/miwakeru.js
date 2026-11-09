@@ -323,6 +323,17 @@ const miwakeruSentences = [
 
 
 
+{
+    id: "miwakeru33",
+    audio: "audio/awaseru33.wav",
+    answer: "If you insist, I'll go on a trip with you.",
+    choices: [
+        "If you insist, I'll go on a trip with you.",
+        "If you insist, I'll go on a trip by myself."
+    ]
+},
+
+
 
 
 
