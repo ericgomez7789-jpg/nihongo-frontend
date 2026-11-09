@@ -990,6 +990,26 @@ const blackHoleDataset = [
 
 
 
+{
+  id: "blackhole48",
+  audio: "audio/blackhole48.wav",
+  choices: [
+    "After we had already been talking for a while, I said, 'I should introduce myself. My name is Gomez. If you don't mind, may I ask your name?'",
+    "After we had already been talking for a while, I said, 'What kind of work do you do?'",
+    "After we had already been talking for a while, I said, 'How long have you lived here?'"
+  ],
+  answer: "After we had already been talking for a while, I said, 'I should introduce myself. My name is Gomez. If you don't mind, may I ask your name?'",
+  japanese: "かいわをかわしてからじこしょうかいするばあいは、「もうしおくれました。わたしはごめずともうします。しつれいですが、おなまえをうかがってもよろしいでしょうか」といいました。"
+},
+
+
+
+
+
+
+
+
+
 
 
 ];

@@ -1087,6 +1087,28 @@ What does this sequence of gestures represent?"
 
 
 
+{
+  id: "rainen",
+  audio: "audio/rainen.wav",
+  choices: ["らいねん", "ことし", "せんげつ"],
+  answer: "らいねん",
+
+  summary_hiragana:
+    "はじめ に、ひだりて で ぎゅっと こぶし を つくります。\
+それから、みぎて でも ぎゅっと こぶし を つくり、ひとさしゆび を たてて、ひだりて の こぶし の うえ を とん と たたきます。\
+おわり に、みぎて の ひとさしゆび で まえ を さししめします。\
+この いちれん の しぐさ は、なに を あらわして いる のでしょう か。",
+
+  summary_english:
+    "First, make a tight fist with your left hand.\
+Then, make a tight fist with your right hand as well, extend your index finger, and tap the top of your left fist.\
+Finally, point forward with your right index finger.\
+What does this sequence of gestures represent?"
+},
+
+
+
+
 
 
 
