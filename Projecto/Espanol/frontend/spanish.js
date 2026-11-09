@@ -9644,6 +9644,74 @@ const level3 = [
 
 
 
+{
+  "id": "es3-47",
+  "meaning": "En el desierto, una nube de polvo se levantó de repente y pasó barriéndolo todo. ¿Qué es probable que ocurriera?",
+  "level": 3,
+
+  "options": [
+    "Es probable que el viento fuera muy fuerte y que la arena y el polvo se movieran por todas partes",
+    "Es probable que el desierto se volviera completamente silencioso e inmóvil",
+    "Es probable que toda la arena desapareciera de repente",
+    "Es probable que comenzara a nevar intensamente"
+  ],
+
+  "optionsRomaji": [
+    "es_probable_que_el_viento_fuera_muy_fuerte_y_que_la_arena_y_el_polvo_se_movieran_por_todas_partes",
+    "es_probable_que_el_desierto_se_volviera_completamente_silencioso_e_inmovil",
+    "es_probable_que_toda_la_arena_desapareciera_de_repente",
+    "es_probable_que_comenzara_a_nevar_intensamente"
+  ],
+
+  "optionsEN": [
+    "The wind was probably very strong and the sand and dust moved everywhere",
+    "The desert probably became completely silent and motionless",
+    "All of the sand probably disappeared suddenly",
+    "It probably started snowing heavily"
+  ],
+
+  "correct": "Es probable que el viento fuera muy fuerte y que la arena y el polvo se movieran por todas partes",
+
+  "fullAudio": {
+    "daughter": "audio/spanish/inference47.wav",
+    "me": "audio/spanish/inference47.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["spanish/audio/es_probable_que_el_viento_fuera_muy_fuerte_y_que_la_arena_y_el_polvo_se_movieran_por_todas_partes.wav"],
+      ["spanish/audio/es_probable_que_el_desierto_se_volviera_completamente_silencioso_e_inmovil.wav"],
+      ["spanish/audio/es_probable_que_toda_la_arena_desapareciera_de_repente.wav"],
+      ["spanish/audio/es_probable_que_comenzara_a_nevar_intensamente.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["spanish/audio/es_probable_que_el_viento_fuera_muy_fuerte_y_que_la_arena_y_el_polvo_se_movieran_por_todas_partes.wav"],
+    ["spanish/audio/es_probable_que_el_desierto_se_volviera_completamente_silencioso_e_inmovil.wav"],
+    ["spanish/audio/es_probable_que_toda_la_arena_desapareciera_de_repente.wav"],
+    ["spanish/audio/es_probable_que_comenzara_a_nevar_intensamente.wav"]
+  ],
+
+  "chunks": [
+    {
+      "spanish": "En el desierto",
+      "english": "In the desert"
+    },
+    {
+      "spanish": "una nube de polvo se levantó de repente",
+      "english": "a cloud of dust suddenly rose"
+    },
+    {
+      "spanish": "y pasó barriéndolo todo",
+      "english": "and swept past everything"
+    }
+  ]
+},
+
+
+
+
 
 ];
 

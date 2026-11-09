@@ -45,7 +45,62 @@ const aparejarSentences = [
     "no perdió",
     "la calma"
   ]
-}
+},
+
+
+{
+  id: "aparejar2",
+
+  audio: "audio/spanish/aparejar2.wav",
+
+  choices: [
+    "Ese día en particular, él no apareció.",
+    "Ese día en particular, él llegó temprano.",
+    "Ese día en particular, él apareció de repente.",
+    "Ese día en particular, él llamó por teléfono."
+  ],
+
+  answer:
+    "Ese día en particular, él no apareció.",
+
+  fun: [
+
+    {
+      es: "ese día en particular",
+      en: "that particular day"
+    },
+
+    {
+      es: "él",
+      en: "he"
+    },
+
+    {
+      es: "no apareció",
+      en: "did not appear / did not show up"
+    }
+
+  ],
+
+  chunks: [
+    "ese día en particular",
+    "él",
+    "no apareció"
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ];
 
