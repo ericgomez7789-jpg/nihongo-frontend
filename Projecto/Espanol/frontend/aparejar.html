@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Aparejar</title>
+
+<style>
+
+body{
+    margin:0;
+    padding:20px;
+    background:#111;
+    color:white;
+    font-family:Arial,sans-serif;
+}
+
+.screen{
+    width:100%;
+}
+
+.hidden{
+    display:none;
+}
+
+#aparejarScreen{
+    width:100%;
+}
+
+.aparejarTop{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:20px;
+}
+
+#aparejarTimer{
+    font-size:48px;
+    font-weight:bold;
+    color:#ff4444;
+}
+
+#aparejarReplayBtn{
+    margin-top:10px;
+    padding:10px 20px;
+    font-size:18px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+#aparejarInstruction{
+    text-align:center;
+    font-size:20px;
+    margin-bottom:20px;
+    color:#dddddd;
+}
+
+.aparejarSplit{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.aparejarPlayer{
+    background:#1e1e1e;
+    border:2px solid #444;
+    border-radius:12px;
+    padding:15px;
+}
+
+.aparejarPlayerTitle{
+    text-align:center;
+    font-size:28px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.aparejarScore{
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+/* ==========================================
+   PROGRESS
+========================================== */
+
+.aparejar-progress-wrapper{
+    margin-bottom:20px;
+}
+
+.aparejar-progress-label{
+    text-align:center;
+    margin-bottom:6px;
+}
+
+.aparejar-progress-outer{
+    width:100%;
+    height:10px;
+    background:#333;
+    border-radius:6px;
+    overflow:hidden;
+}
+
+.aparejar-progress-bar{
+    width:0%;
+    height:100%;
+    background:#4caf50;
+}
+
+.aparejarSectionTitle{
+    text-align:center;
+    margin-bottom:8px;
+    margin-top:12px;
+    font-weight:bold;
+}
+
+.aparejarAnswerArea{
+    min-height:180px;
+    border:2px dashed #666;
+    border-radius:10px;
+    padding:10px;
+    margin-bottom:20px;
+
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    align-content:flex-start;
+}
+
+.chunkContainer{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    justify-content:center;
+}
+
+.chunkBtn{
+    padding:10px 14px;
+    font-size:22px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    background:white;
+    color:black;
+}
+
+.chunkBtn:hover{
+    background:#eeeeee;
+}
+
+.builtChunk{
+    background:#4caf50;
+    color:white;
+    padding:10px 14px;
+    border-radius:8px;
+}
+
+/* ==========================================
+   REVEAL
+========================================== */
+
+.aparejarReveal{
+    width:100%;
+    box-sizing:border-box;
+
+    background:#222;
+    border:3px solid #4caf50;
+    border-radius:12px;
+
+    padding:20px;
+    margin-bottom:20px;
+
+    text-align:center;
+}
+
+.aparejarJapanese{
+    font-size:34px;
+    font-weight:bold;
+    color:white;
+
+    line-height:1.6;
+    margin-bottom:12px;
+}
+
+.aparejarEnglish{
+    font-size:28px;
+    color:#7fd1ff;
+
+    line-height:1.5;
+}
+
+.aparejarRevealWinner{
+    font-size:22px;
+    color:#4caf50;
+    font-weight:bold;
+
+    margin-bottom:15px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="aparejarScreen" class="screen">
+
+    <div class="aparejarTop">
+
+        <div id="aparejarTimer">
+            30
+        </div>
+
+        <button id="aparejarReplayBtn">
+            🔁 Replay
+        </button>
+
+    </div>
+
+    <div id="aparejarInstruction">
+        Listen carefully and match the correct pairs before your opponent.
+    </div>
+
+    <div id="aparejarReveal"
+         class="aparejarReveal"
+         style="display:none;">
+    </div>
+
+    <div class="aparejarSplit">
+
+        <!-- PLAYER 1 -->
+
+        <div class="aparejarPlayer">
+
+            <div class="aparejarPlayerTitle">
+                👧 Player 1
+            </div>
+
+            <div id="aparejarScore1"
+                 class="aparejarScore">
+                0
+            </div>
+
+            <div id="aparejarProgress1">
+
+                <div class="aparejar-progress-wrapper">
+
+                    <div class="aparejar-progress-label">
+                        Progress: 0 / 0
+                    </div>
+
+                    <div class="aparejar-progress-outer">
+
+                        <div class="aparejar-progress-bar">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="aparejarSectionTitle">
+                Matches
+            </div>
+
+            <div id="aparejarAnswerArea1"
+                 class="aparejarAnswerArea">
+            </div>
+
+            <div class="aparejarSectionTitle">
+                Available Cards
+            </div>
+
+            <div id="aparejarChunkContainer1"
+                 class="chunkContainer">
+            </div>
+
+        </div>
+
+        <!-- PLAYER 2 -->
+
+        <div class="aparejarPlayer">
+
+            <div class="aparejarPlayerTitle">
+                👨 Player 2
+            </div>
+
+            <div id="aparejarScore2"
+                 class="aparejarScore">
+                0
+            </div>
+
+            <div id="aparejarProgress2">
+
+                <div class="aparejar-progress-wrapper">
+
+                    <div class="aparejar-progress-label">
+                        Progress: 0 / 0
+                    </div>
+
+                    <div class="aparejar-progress-outer">
+
+                        <div class="aparejar-progress-bar">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="aparejarSectionTitle">
+                Matches
+            </div>
+
+            <div id="aparejarAnswerArea2"
+                 class="aparejarAnswerArea">
+            </div>
+
+            <div class="aparejarSectionTitle">
+                Available Cards
+            </div>
+
+            <div id="aparejarChunkContainer2"
+                 class="chunkContainer">
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- LOAD JAVASCRIPT HERE -->
+
+<script src="AparejarProgress.js"></script>
+<script src="aparejar.js"></script>
+
+</body>
+
+</html>
