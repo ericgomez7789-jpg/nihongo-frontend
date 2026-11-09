@@ -307,8 +307,42 @@ const miwakeruSentences = [
         "Who lit the light?",
         "Who turned off the light?"
     ]
-}
+},
+
+
+
+{
+    id: "miwakeru32",
+    audio: "audio/awaseru32.wav",
+    answer: "Water came gushing out of the faucet, gradually flowed smoothly, and eventually became a trickle.",
+    choices: [
+        "Water came gushing out of the faucet, gradually flowed smoothly, and eventually became a trickle.",
+        "Water came gushing out of the faucet and kept getting stronger."
+    ]
+},
+
+
+
+
+
+
+
+
+
+
+
 ];
+
+
+
+
+
+
+
+
+
+
+
 
 
 

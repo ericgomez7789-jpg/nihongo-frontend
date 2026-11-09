@@ -369,7 +369,34 @@ const honyakuSentences = [
         "Who opened the window?",
         "Who lit the candle?"
     ]
-}
+},
+
+
+
+{
+    id: "honyaku32",
+    audio: "audio/awaseru32.wav",
+    answer: "Water came gushing out of the faucet, gradually flowed smoothly, and eventually became a trickle.",
+    choices: [
+        "Water came gushing out of the faucet, gradually flowed smoothly, and eventually became a trickle.",
+        "Water stopped coming out of the faucet completely.",
+        "The faucet began leaking droplets onto the floor.",
+        "Water overflowed from the sink and flooded the room."
+    ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 

@@ -1620,6 +1620,93 @@ const awaseruSentences = [
 
 
 
+{
+  id: "awaseru32",
+
+  audio: "audio/awaseru32.wav",
+
+  choices: [
+    "Water came gushing out of the faucet, gradually flowed smoothly, and eventually became a trickle.",
+    "Water stopped coming out of the faucet completely.",
+    "The faucet began leaking droplets onto the floor.",
+    "Water overflowed from the sink and flooded the room."
+  ],
+
+  answer: "Water came gushing out of the faucet, gradually flowed smoothly, and eventually became a trickle.",
+
+  fun: [
+    {
+      jp: "じゃぐち から",
+      romaji: "jaguchi kara",
+      en: "from the faucet"
+    },
+    {
+      jp: "みず が",
+      romaji: "mizu ga",
+      en: "water"
+    },
+    {
+      jp: "どばどば と",
+      romaji: "dobadoba to",
+      en: "gushing out"
+    },
+    {
+      jp: "ふきだしてきて",
+      romaji: "fukidashite kite",
+      en: "came bursting out"
+    },
+    {
+      jp: "だんだん",
+      romaji: "dandan",
+      en: "gradually"
+    },
+    {
+      jp: "さらさら と",
+      romaji: "sarasara to",
+      en: "smoothly"
+    },
+    {
+      jp: "ながれる よう に なり",
+      romaji: "nagareru you ni nari",
+      en: "began to flow"
+    },
+    {
+      jp: "やがて",
+      romaji: "yagate",
+      en: "eventually"
+    },
+    {
+      jp: "ちょろちょろ に",
+      romaji: "chorochoro ni",
+      en: "into a trickle"
+    },
+    {
+      jp: "なってきた",
+      romaji: "natte kita",
+      en: "became"
+    }
+  ],
+
+  chunks: [
+    "じゃぐち から",
+    "みず が",
+    "どばどば と",
+    "ふきだしてきて",
+    "だんだん",
+    "さらさら と",
+    "ながれる よう に なり",
+    "やがて",
+    "ちょろちょろ に",
+    "なってきた"
+  ]
+},
+
+
+
+
+
+
+
 
 ];
 
