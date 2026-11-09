@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Miwakeru</title>
+
+<style>
+
+body{
+    margin:0;
+    padding:20px;
+    background:#111;
+    color:white;
+    font-family:Arial,sans-serif;
+}
+
+.screen{
+    width:100%;
+}
+
+.hidden{
+    display:none;
+}
+
+#miwakeruScreen{
+    width:100%;
+}
+
+.miwakeruTop{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:20px;
+}
+
+#miwakeruTimer{
+    font-size:48px;
+    font-weight:bold;
+    color:#ff4444;
+}
+
+#miwakeruReplayBtn{
+    margin-top:10px;
+    padding:10px 20px;
+    font-size:18px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+#miwakeruInstruction{
+    text-align:center;
+    font-size:20px;
+    margin-bottom:20px;
+    color:#dddddd;
+}
+
+.miwakeruSplit{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.miwakeruPlayer{
+    background:#1e1e1e;
+    border:2px solid #444;
+    border-radius:12px;
+    padding:15px;
+}
+
+/* ==========================
+   PLAYER HEADER
+========================== */
+
+.miwakeruPlayerTitle{
+    text-align:center;
+    font-size:28px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.miwakeruScore{
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+/* ==========================
+   PROGRESS
+========================== */
+
+.miwakeru-progress-wrapper{
+    margin-bottom:20px;
+}
+
+.miwakeru-progress-label{
+    text-align:center;
+    margin-bottom:6px;
+}
+
+.miwakeru-progress-outer{
+    width:100%;
+    height:10px;
+    background:#333;
+    border-radius:6px;
+    overflow:hidden;
+}
+
+.miwakeru-progress-bar{
+    width:0%;
+    height:100%;
+    background:#4caf50;
+}
+
+/* ==========================
+   SECTION TITLE
+========================== */
+
+.miwakeruSectionTitle{
+    text-align:center;
+    margin-bottom:8px;
+    margin-top:12px;
+    font-weight:bold;
+}
+
+/* ==========================
+   CHOICES
+========================== */
+
+.miwakeruChoices{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    margin-top:15px;
+}
+
+.miwakeruBtn{
+    width:100%;
+    padding:16px;
+    font-size:20px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    background:white;
+    color:black;
+    text-align:left;
+}
+
+.miwakeruBtn:hover{
+    background:#eeeeee;
+}
+
+.miwakeruBtn.correct{
+    background:#4caf50;
+    color:white;
+}
+
+.miwakeruBtn.wrong{
+    background:#f44336;
+    color:white;
+}
+
+/* ==========================
+   REVEAL
+========================== */
+
+.miwakeruReveal{
+    display:none;
+    margin-bottom:20px;
+    text-align:center;
+    font-size:28px;
+    font-weight:bold;
+    color:#4caf50;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="miwakeruScreen" class="screen">
+
+    <div class="miwakeruTop">
+
+        <div id="miwakeruTimer">
+            30
+        </div>
+
+        <button id="miwakeruReplayBtn">
+            🔁 Replay
+        </button>
+
+    </div>
+
+    <div id="miwakeruInstruction">
+        Listen carefully and identify the correct sentence.
+    </div>
+
+    <div id="miwakeruReveal"
+         class="miwakeruReveal">
+    </div>
+
+    <div class="miwakeruSplit">
+
+        <!-- PLAYER 1 -->
+
+        <div class="miwakeruPlayer">
+
+            <div class="miwakeruPlayerTitle">
+                👧 Player 1
+            </div>
+
+            <div id="miwakeruScore1"
+                 class="miwakeruScore">
+                0
+            </div>
+
+            <div id="miwakeruProgress1">
+
+                <div class="miwakeru-progress-wrapper">
+
+                    <div class="miwakeru-progress-label">
+                        Progress: 0 / 0
+                    </div>
+
+                    <div class="miwakeru-progress-outer">
+
+                        <div class="miwakeru-progress-bar">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="miwakeruSectionTitle">
+                Which sentence matches?
+            </div>
+
+            <div id="miwakeruChoices1"
+                 class="miwakeruChoices">
+            </div>
+
+        </div>
+
+        <!-- PLAYER 2 -->
+
+        <div class="miwakeruPlayer">
+
+            <div class="miwakeruPlayerTitle">
+                👨 Player 2
+            </div>
+
+            <div id="miwakeruScore2"
+                 class="miwakeruScore">
+                0
+            </div>
+
+            <div id="miwakeruProgress2">
+
+                <div class="miwakeru-progress-wrapper">
+
+                    <div class="miwakeru-progress-label">
+                        Progress: 0 / 0
+                    </div>
+
+                    <div class="miwakeru-progress-outer">
+
+                        <div class="miwakeru-progress-bar">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="miwakeruSectionTitle">
+                Which sentence matches?
+            </div>
+
+            <div id="miwakeruChoices2"
+                 class="miwakeruChoices">
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="MiwakeruProgress.js"></script>
+<script src="miwakeru.js"></script>
+
+</body>
+
+</html>
