@@ -1005,6 +1005,20 @@ const blackHoleDataset = [
 
 
 
+{
+  id: "blackhole49",
+  audio: "audio/blackhole49.wav",
+  choices: [
+    "When greeting someone I haven't seen in a long time, it is good to say, 'It's been a while. Have you been well?'",
+    "When greeting someone I haven't seen in a long time, it is good to say, 'What kind of work do you do?'",
+    "When greeting someone I haven't seen in a long time, it is good to say, 'How long have you lived here?'"
+  ],
+  answer: "When greeting someone I haven't seen in a long time, it is good to say, 'It's been a while. Have you been well?'",
+  japanese: "ひさしぶりにあったひとにあいさつするときは、「おひさしぶりです。おげんきでしたか」というといいです。"
+},
+
+
+
 
 
 
