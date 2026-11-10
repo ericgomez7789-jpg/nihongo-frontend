@@ -335,6 +335,26 @@ const miwakeruSentences = [
 
 
 
+{
+    id: "miwakeru34",
+    audio: "audio/awaseru34.wav",
+    answer: "The clothes are scattered all over the room.",
+    choices: [
+        "The clothes are scattered all over the room.",
+        "The clothes are neatly folded all over the room."
+    ]
+},
+
+
+{
+    id: "miwakeru35",
+    audio: "audio/awaseru35.wav",
+    answer: "Since we're already together, shall we play tag?",
+    choices: [
+        "Since we're already together, shall we play tag?",
+        "Since we're already together, shall we study quietly?"
+    ]
+},
 
 
 

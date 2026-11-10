@@ -1761,6 +1761,120 @@ const awaseruSentences = [
 
 
 
+{
+  id: "awaseru34",
+
+  audio: "audio/awaseru34.wav",
+
+  choices: [
+    "The clothes are scattered all over the room.",
+    "The clothes are neatly folded and organized in the room.",
+    "The clothes are hanging outside to dry.",
+    "The clothes are packed away in a suitcase."
+  ],
+
+  answer: "The clothes are scattered all over the room.",
+
+  fun: [
+    {
+      jp: "へや では",
+      romaji: "heya de wa",
+      en: "in the room"
+    },
+    {
+      jp: "ふく が",
+      romaji: "fuku ga",
+      en: "clothes"
+    },
+    {
+      jp: "いたる ところ に",
+      romaji: "itaru tokoro ni",
+      en: "everywhere"
+    },
+    {
+      jp: "ばらばら に",
+      romaji: "barabara ni",
+      en: "in a scattered way"
+    },
+    {
+      jp: "ちらかっています",
+      romaji: "chirakatte imasu",
+      en: "are scattered around"
+    }
+  ],
+
+  chunks: [
+    "へや では",
+    "ふく が",
+    "いたる ところ に",
+    "ばらばら に",
+    "ちらかっています"
+  ]
+},
+
+
+
+
+{
+  id: "awaseru35",
+
+  audio: "audio/awaseru35.wav",
+
+  choices: [
+    "Since we're already together, shall we play tag?",
+    "Since we're already together, shall we study quietly?",
+    "Since we're already together, shall we go shopping?",
+    "Since we're already together, shall we watch a movie?"
+  ],
+
+  answer: "Since we're already together, shall we play tag?",
+
+  fun: [
+    {
+      jp: "せっかく",
+      romaji: "sekkaku",
+      en: "since we have the chance"
+    },
+    {
+      jp: "いっしょ に",
+      romaji: "issho ni",
+      en: "together"
+    },
+    {
+      jp: "いるん だから",
+      romaji: "irun dakara",
+      en: "since we're together"
+    },
+    {
+      jp: "おにごっこ",
+      romaji: "onigokko",
+      en: "tag"
+    },
+    {
+      jp: "しましょう か",
+      romaji: "shimashou ka",
+      en: "shall we do?"
+    }
+  ],
+
+  chunks: [
+    "せっかく",
+    "いっしょ に",
+    "いるん だから",
+    "おにごっこ",
+    "しましょう か"
+  ]
+},
+
+
+
+
+
+
+
+
+
+
 
 ];
 

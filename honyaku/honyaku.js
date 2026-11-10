@@ -402,6 +402,32 @@ const honyakuSentences = [
 
 
 
+{
+    id: "honyaku34",
+    audio: "audio/awaseru34.wav",
+    answer: "The clothes are scattered all over the room.",
+    choices: [
+        "The clothes are scattered all over the room.",
+        "The clothes are neatly folded and organized in the room.",
+        "The clothes are hanging outside to dry.",
+        "The clothes are packed away in a suitcase."
+    ]
+},
+
+
+
+
+{
+    id: "honyaku35",
+    audio: "audio/awaseru35.wav",
+    answer: "Since we're already together, shall we play tag?",
+    choices: [
+        "Since we're already together, shall we play tag?",
+        "Since we're already together, shall we study quietly?",
+        "Since we're already together, shall we go shopping?",
+        "Since we're already together, shall we watch a movie?"
+    ]
+},
 
 
 
