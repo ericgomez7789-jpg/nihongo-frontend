@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Wakimaeru</title>
+
+<style>
+
+body{
+    margin:0;
+    padding:20px;
+    background:#111;
+    color:white;
+    font-family:Arial,sans-serif;
+}
+
+.screen{
+    width:100%;
+}
+
+.hidden{
+    display:none;
+}
+
+#wakimaeruScreen{
+    width:100%;
+}
+
+.wakimaeruTop{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:20px;
+}
+
+#wakimaeruTimer{
+    font-size:48px;
+    font-weight:bold;
+    color:#ff4444;
+}
+
+#wakimaeruReplayBtn{
+    margin-top:10px;
+    padding:10px 20px;
+    font-size:18px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+#wakimaeruInstruction{
+    text-align:center;
+    font-size:20px;
+    margin-bottom:20px;
+    color:#dddddd;
+}
+
+.wakimaeruSplit{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.wakimaeruPlayer{
+    background:#1e1e1e;
+    border:2px solid #444;
+    border-radius:12px;
+    padding:15px;
+}
+
+/* ==========================
+   PLAYER HEADER
+========================== */
+
+.wakimaeruPlayerTitle{
+    text-align:center;
+    font-size:28px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.wakimaeruScore{
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+/* ==========================
+   PROGRESS
+========================== */
+
+.wakimaeru-progress-wrapper{
+    margin-bottom:20px;
+}
+
+.wakimaeru-progress-label{
+    text-align:center;
+    margin-bottom:6px;
+}
+
+.wakimaeru-progress-outer{
+    width:100%;
+    height:10px;
+    background:#333;
+    border-radius:6px;
+    overflow:hidden;
+}
+
+.wakimaeru-progress-bar{
+    width:0%;
+    height:100%;
+    background:#4caf50;
+}
+
+/* ==========================
+   SECTION TITLE
+========================== */
+
+.wakimaeruSectionTitle{
+    text-align:center;
+    margin-bottom:8px;
+    margin-top:12px;
+    font-weight:bold;
+}
+
+/* ==========================
+   CHOICES
+========================== */
+
+.wakimaeruChoices{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    margin-top:15px;
+}
+
+.wakimaeruBtn{
+    width:100%;
+    padding:16px;
+    font-size:20px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    background:white;
+    color:black;
+    text-align:left;
+}
+
+.wakimaeruBtn:hover{
+    background:#eeeeee;
+}
+
+.wakimaeruBtn.correct{
+    background:#4caf50;
+    color:white;
+}
+
+.wakimaeruBtn.wrong{
+    background:#f44336;
+    color:white;
+}
+
+/* ==========================
+   REVEAL
+========================== */
+
+.wakimaeruReveal{
+    display:none;
+    margin-bottom:20px;
+    text-align:center;
+    font-size:28px;
+    font-weight:bold;
+    color:#4caf50;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="wakimaeruScreen" class="screen">
+
+    <div class="wakimaeruTop">
+
+        <div id="wakimaeruTimer">
+            30
+        </div>
+
+        <button id="wakimaeruReplayBtn">
+            🔁 Replay
+        </button>
+
+    </div>
+
+    <div id="wakimaeruInstruction">
+        Listen carefully and distinguish the correct number, counter, time, or quantity.
+    </div>
+
+    <div id="wakimaeruReveal"
+         class="wakimaeruReveal">
+    </div>
+
+    <div class="wakimaeruSplit">
+
+        <!-- PLAYER 1 -->
+
+        <div class="wakimaeruPlayer">
+
+            <div class="wakimaeruPlayerTitle">
+                👧 Player 1
+            </div>
+
+            <div id="wakimaeruScore1"
+                 class="wakimaeruScore">
+                0
+            </div>
+
+            <div id="wakimaeruProgress1">
+
+                <div class="wakimaeru-progress-wrapper">
+
+                    <div class="wakimaeru-progress-label">
+                        Progress: 0 / 0
+                    </div>
+
+                    <div class="wakimaeru-progress-outer">
+
+                        <div class="wakimaeru-progress-bar">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="wakimaeruSectionTitle">
+                Which quantity did you hear?
+            </div>
+
+            <div id="wakimaeruChoices1"
+                 class="wakimaeruChoices">
+            </div>
+
+        </div>
+
+        <!-- PLAYER 2 -->
+
+        <div class="wakimaeruPlayer">
+
+            <div class="wakimaeruPlayerTitle">
+                👨 Player 2
+            </div>
+
+            <div id="wakimaeruScore2"
+                 class="wakimaeruScore">
+                0
+            </div>
+
+            <div id="wakimaeruProgress2">
+
+                <div class="wakimaeru-progress-wrapper">
+
+                    <div class="wakimaeru-progress-label">
+                        Progress: 0 / 0
+                    </div>
+
+                    <div class="wakimaeru-progress-outer">
+
+                        <div class="wakimaeru-progress-bar">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="wakimaeruSectionTitle">
+                Which quantity did you hear?
+            </div>
+
+            <div id="wakimaeruChoices2"
+                 class="wakimaeruChoices">
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="WakimaeruProgress.js"></script>
+<script src="Wakimaeru.js"></script>
+
+</body>
+
+</html>
