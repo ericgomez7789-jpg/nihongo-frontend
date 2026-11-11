@@ -25,8 +25,105 @@ const wakimaeruSentences = [
 
 
 
+{
+    id: "wakimaeru3",
+    audio: "audio/wakimaeru3.wav",
+    answer: "It's 7:30 in the morning.",
+    choices: [
+        "It's 7:00 in the morning.",
+        "It's 7:30 in the morning."
+    ]
+},
 
 
+
+
+{
+    id: "wakimaeru4",
+    audio: "audio/wakimaeru4.wav",
+    answer: "There are two tree branches.",
+    choices: [
+        "There is one tree branch.",
+        "There are two tree branches."
+    ]
+},
+
+
+
+
+{
+    id: "wakimaeru5",
+    audio: "audio/wakimaeru5.wav",
+    answer: "It's 2:38 in the afternoon.",
+    choices: [
+        "It's 2:38 in the afternoon.",
+        "It's 3:38 in the afternoon."
+    ]
+},
+
+
+
+
+{
+    id: "wakimaeru6",
+    audio: "audio/wakimaeru6.wav",
+    answer: "There is one banana.",
+    choices: [
+        "There are two bananas.",
+        "There is one banana."
+    ]
+},
+
+
+
+
+{
+    id: "wakimaeru7",
+    audio: "audio/wakimaeru7.wav",
+    answer: "There are three articles of clothing.",
+    choices: [
+        "There are two articles of clothing.",
+        "There are three articles of clothing."
+    ]
+},
+
+
+
+{
+    id: "wakimaeru8",
+    audio: "audio/wakimaeru8.wav",
+    answer: "It's 8:45 at night.",
+    choices: [
+        "It's 8:45 at night.",
+        "It's 8:15 at night."
+    ]
+},
+
+
+
+
+{
+    id: "wakimaeru9",
+    audio: "audio/wakimaeru9.wav",
+    answer: "The house has four rooms.",
+    choices: [
+        "The house has three rooms.",
+        "The house has four rooms."
+    ]
+},
+
+
+
+
+{
+    id: "wakimaeru10",
+    audio: "audio/wakimaeru10.wav",
+    answer: "It's 10:13 in the morning.",
+    choices: [
+        "It's 10:30 in the morning.",
+        "It's 10:13 in the morning."
+    ]
+},
 
 
 
