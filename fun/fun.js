@@ -1538,6 +1538,96 @@ const funDataset = [
 
 
 
+{
+  id: "fun36",
+
+  audio: "audio/fun36.wav",
+
+  choices: [
+    "When you look in a mirror, you can always see your reflection clearly through it.",
+    "When you look in a mirror, you can always hear your own voice through it.",
+    "When you look in a mirror, you can always open a door through it.",
+    "When you look in a mirror, you can always see another person through it."
+  ],
+
+  answer: "When you look in a mirror, you can always see your reflection clearly through it.",
+
+  fun: [
+    {
+      jp: "かがみ",
+      romaji: "kagami",
+      en: "mirror"
+    },
+    {
+      jp: "とおして",
+      romaji: "tooshite",
+      en: "through; by means of"
+    },
+    {
+      jp: "じぶん の すがた",
+      romaji: "jibun no sugata",
+      en: "one's own appearance; reflection"
+    },
+    {
+      jp: "はっきり",
+      romaji: "hakkiri",
+      en: "clearly"
+    },
+    {
+      jp: "うつります",
+      romaji: "utsurimasu",
+      en: "is reflected; appears"
+    }
+  ]
+},
+
+
+
+
+{
+  id: "fun37",
+
+  audio: "audio/fun37.wav",
+
+  choices: [
+    "The bottle looked obviously fragile, so it shattered into pieces as soon as it fell.",
+    "The bottle looked very strong, so it bounced when it fell.",
+    "The bottle looked expensive, so everyone bought one.",
+    "The bottle looked large, so it could not be moved."
+  ],
+
+  answer: "The bottle looked obviously fragile, so it shattered into pieces as soon as it fell.",
+
+  fun: [
+    {
+      jp: "みるからに",
+      romaji: "miru kara ni",
+      en: "at first glance; obviously"
+    },
+    {
+      jp: "われやすそう",
+      romaji: "wareyasusou",
+      en: "looks fragile"
+    },
+    {
+      jp: "びん",
+      romaji: "bin",
+      en: "bottle"
+    },
+    {
+      jp: "こなごな",
+      romaji: "konagona",
+      en: "into tiny pieces"
+    },
+    {
+      jp: "くだけた",
+      romaji: "kudaketa",
+      en: "shattered; broke apart"
+    }
+  ]
+},
+
+
 
 
 

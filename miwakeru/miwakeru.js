@@ -358,6 +358,27 @@ const miwakeruSentences = [
 
 
 
+{
+    id: "miwakeru36",
+    audio: "audio/awaseru36.wav",
+    answer: "When you look in a mirror, your reflection always appears clearly through it.",
+    choices: [
+        "When you look in a mirror, your reflection always appears clearly through it.",
+        "When you look in a mirror, your voice always comes through it clearly."
+    ]
+},
+
+
+
+{
+    id: "miwakeru37",
+    audio: "audio/awaseru37.wav",
+    answer: "The bottle looked obviously fragile, so it shattered into pieces as soon as it fell.",
+    choices: [
+        "The bottle looked obviously fragile, so it shattered into pieces as soon as it fell.",
+        "The bottle looked very strong, so it bounced when it fell."
+    ]
+},
 
 
 

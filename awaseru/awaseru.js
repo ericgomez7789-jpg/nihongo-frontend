@@ -1868,6 +1868,120 @@ const awaseruSentences = [
 
 
 
+{
+  id: "awaseru36",
+
+  audio: "audio/awaseru36.wav",
+
+  choices: [
+    "When you look in a mirror, your reflection always appears clearly through it.",
+    "When you look in a mirror, your voice always comes through it clearly.",
+    "When you look in a mirror, a different person always appears through it.",
+    "When you look in a mirror, you can always walk through it."
+  ],
+
+  answer: "When you look in a mirror, your reflection always appears clearly through it.",
+
+  fun: [
+    {
+      jp: "かがみ",
+      romaji: "kagami",
+      en: "mirror"
+    },
+    {
+      jp: "みる とき は",
+      romaji: "miru toki wa",
+      en: "when looking"
+    },
+    {
+      jp: "とおして",
+      romaji: "tooshite",
+      en: "through"
+    },
+    {
+      jp: "じぶん の すがた",
+      romaji: "jibun no sugata",
+      en: "one's own appearance"
+    },
+    {
+      jp: "はっきり",
+      romaji: "hakkiri",
+      en: "clearly"
+    },
+    {
+      jp: "うつります",
+      romaji: "utsurimasu",
+      en: "is reflected; appears"
+    }
+  ],
+
+  chunks: [
+    "かがみ を",
+    "みる とき は",
+    "いつでも",
+    "かがみ を",
+    "とおして",
+    "じぶん の すがた が",
+    "はっきり",
+    "うつります"
+  ]
+},
+
+
+
+
+{
+  id: "awaseru37",
+
+  audio: "audio/awaseru37.wav",
+
+  choices: [
+    "The bottle looked obviously fragile, so it shattered into pieces as soon as it fell.",
+    "The bottle looked very strong, so it bounced when it fell.",
+    "The bottle looked expensive, so everyone bought one.",
+    "The bottle looked large, so it could not be moved."
+  ],
+
+  answer: "The bottle looked obviously fragile, so it shattered into pieces as soon as it fell.",
+
+  fun: [
+    {
+      jp: "みるからに",
+      romaji: "miru kara ni",
+      en: "at first glance; obviously"
+    },
+    {
+      jp: "われやすそうな",
+      romaji: "wareyasou na",
+      en: "looking fragile"
+    },
+    {
+      jp: "びん",
+      romaji: "bin",
+      en: "bottle"
+    },
+    {
+      jp: "こなごな に",
+      romaji: "konagona ni",
+      en: "into tiny pieces"
+    },
+    {
+      jp: "くだけた",
+      romaji: "kudaketa",
+      en: "shattered"
+    }
+  ],
+
+  chunks: [
+    "みるからに",
+    "われやすそうな",
+    "びん だったので",
+    "おちる と",
+    "すぐ に",
+    "こなごな に",
+    "くだけた"
+  ]
+},
 
 
 

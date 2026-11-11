@@ -432,7 +432,32 @@ const honyakuSentences = [
 
 
 
+{
+    id: "honyaku36",
+    audio: "audio/awaseru36.wav",
+    answer: "When you look in a mirror, your reflection always appears clearly through it.",
+    choices: [
+        "When you look in a mirror, your reflection always appears clearly through it.",
+        "When you look in a mirror, your voice always comes through it clearly.",
+        "When you look in a mirror, a different person always appears through it.",
+        "When you look in a mirror, you can always walk through it."
+    ]
+},
 
+
+
+
+{
+    id: "honyaku37",
+    audio: "audio/awaseru37.wav",
+    answer: "The bottle looked obviously fragile, so it shattered into pieces as soon as it fell.",
+    choices: [
+        "The bottle looked obviously fragile, so it shattered into pieces as soon as it fell.",
+        "The bottle looked very strong, so it bounced when it fell.",
+        "The bottle looked expensive, so everyone bought one.",
+        "The bottle looked large, so it could not be moved."
+    ]
+},
 
 
 
