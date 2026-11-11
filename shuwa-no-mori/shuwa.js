@@ -1129,6 +1129,23 @@ What does this sequence of gestures represent?"
 
 
 
+{
+  id: "konshuu",
+  audio: "audio/konshuu.wav",
+  choices: ["こんしゅう", "らいしゅう", "せんしゅう"],
+  answer: "こんしゅう",
+
+  summary_hiragana:
+    "はじめ に、まるで だれか に「おちついて」と いいきかせる ように、りょうて で むね の まえ から した へ おします。\
+それから、みぎて を ぎゅっと にぎり、ひとさしゆび と おやゆび と なかゆび を たてて、まえ で 一回転 させます。\
+この いちれん の しぐさ は、なに を あらわして いる の でしょう か。",
+
+  summary_english:
+    "First, push both hands downward from in front of your chest, as if calmly telling someone to relax.\
+Then, make a tight fist with your right hand, extend your index finger, thumb, and middle finger, and rotate them once in front of you.\
+What does this sequence of gestures represent?"
+},
+
 
 
 

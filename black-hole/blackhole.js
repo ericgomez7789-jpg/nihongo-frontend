@@ -1019,6 +1019,23 @@ const blackHoleDataset = [
 
 
 
+{
+  id: "blackhole50",
+  audio: "audio/blackhole50.wav",
+  choices: [
+    "When introducing yourself, it is good to say, 'Nice to meet you. My name is Gomez.'",
+    "When introducing yourself, it is good to say, 'How long have you lived here?'",
+    "When introducing yourself, it is good to say, 'What kind of work do you do?'"
+  ],
+  answer: "When introducing yourself, it is good to say, 'Nice to meet you. My name is Gomez.'",
+  japanese: "じこしょうかいするときは、「はじめまして。ゴメズともうします。」といいます。"
+},
+
+
+
+
+
+
 
 
 
