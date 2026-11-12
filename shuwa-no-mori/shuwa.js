@@ -1148,6 +1148,24 @@ What does this sequence of gestures represent?"
 
 
 
+{
+  id: "raishuu",
+  audio: "audio/raishuu.wav",
+  choices: ["こんしゅう", "らいしゅう", "せんしゅう"],
+  answer: "らいしゅう",
+
+  summary_hiragana:
+    "みぎて を ぎゅっと にぎり、ひとさしゆび と なかゆび と おやゆび を たてます。\
+それから、て を まえ に やまなり に 一回 うごかします。\
+この しぐさ は、なに を あらわして いる の でしょう か。",
+
+  summary_english:
+    "Make a tight fist with your right hand and extend your index finger, middle finger, and thumb.\
+Then, move your hand forward once in an arching motion.\
+What does this gesture represent?"
+},
+
+
 
 
 
