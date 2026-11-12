@@ -1032,7 +1032,17 @@ const blackHoleDataset = [
 },
 
 
-
+{
+  id: "blackhole51",
+  audio: "audio/blackhole51.wav",
+  choices: [
+    "When guiding a guest at a company, it is appropriate to say, 'I will show you to the reception room. This way, please.'",
+    "When guiding a guest at a company, it is appropriate to say, 'Please wait outside until the meeting begins.'",
+    "When guiding a guest at a company, it is appropriate to say, 'Please find the room by yourself.'"
+  ],
+  answer: "When guiding a guest at a company, it is appropriate to say, 'I will show you to the reception room. This way, please.'",
+  japanese: "かいしゃで おきゃくさま を ごあんない する ばあい は、おうせつしつ に ごあんない いたします。どうぞ こちらへ。"
+},
 
 
 
