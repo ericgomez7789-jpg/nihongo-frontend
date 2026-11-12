@@ -1629,6 +1629,55 @@ const funDataset = [
 
 
 
+{
+  id: "fun38",
+
+  audio: "audio/fun38.wav",
+
+  choices: [
+    "No matter how much I try to groom myself, my appearance ends up extremely disheveled.",
+    "No matter how much I study, I always get perfect scores on my tests.",
+    "No matter how much I sleep, I wake up earlier every day.",
+    "No matter how much I exercise, I become stronger immediately."
+  ],
+
+  answer: "No matter how much I try to groom myself, my appearance ends up extremely disheveled.",
+
+  fun: [
+    {
+      jp: "どんなに～ても",
+      romaji: "donnani~temo",
+      en: "no matter how much; even if"
+    },
+    {
+      jp: "みだしなみ",
+      romaji: "midashinami",
+      en: "grooming; personal appearance"
+    },
+    {
+      jp: "ととのえる",
+      romaji: "totonoeru",
+      en: "to tidy; to put in order"
+    },
+    {
+      jp: "みなり",
+      romaji: "minari",
+      en: "appearance; attire"
+    },
+    {
+      jp: "めちゃくちゃ",
+      romaji: "mechakucha",
+      en: "extremely; completely; a total mess"
+    },
+    {
+      jp: "みだれる",
+      romaji: "midareru",
+      en: "to become disheveled; to be in disorder"
+    }
+  ]
+},
+
+
 
 
 

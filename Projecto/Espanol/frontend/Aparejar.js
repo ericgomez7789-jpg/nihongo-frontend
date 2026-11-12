@@ -91,7 +91,52 @@ const aparejarSentences = [
 
 
 
+{
+  id: "aparejar3",
 
+  audio: "audio/spanish/aparejar3.wav",
+
+  choices: [
+    "Visité esta ciudad por primera vez en diez años.",
+    "He vivido en esta ciudad durante diez años.",
+    "Visité esta ciudad diez veces este año.",
+    "Me mudé a esta ciudad hace diez años."
+  ],
+
+  answer:
+    "Visité esta ciudad por primera vez en diez años.",
+
+  fun: [
+
+    {
+      es: "visité",
+      en: "I visited"
+    },
+
+    {
+      es: "esta ciudad",
+      en: "this city"
+    },
+
+    {
+      es: "por primera vez",
+      en: "for the first time"
+    },
+
+    {
+      es: "en diez años",
+      en: "in ten years"
+    }
+
+  ],
+
+  chunks: [
+    "visité",
+    "esta ciudad",
+    "por primera vez",
+    "en diez años"
+  ]
+},
 
 
 

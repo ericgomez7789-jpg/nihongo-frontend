@@ -9712,6 +9712,81 @@ const level3 = [
 
 
 
+{
+  "id": "es3-48",
+  "meaning": "Quería quedarme dos noches en la posada, pero solo pude quedarme una. Me sentí decepcionado y solté un suspiro. ¿Qué sentimiento ocurrió después?",
+  "level": 3,
+
+  "options": [
+    "Es probable que me sintiera triste y desilusionado",
+    "Es probable que me sintiera muy emocionado y feliz",
+    "Es probable que quisiera quedarme todavía más tiempo",
+    "Es probable que empezara a celebrar con entusiasmo"
+  ],
+
+  "optionsRomaji": [
+    "es_probable_que_me_sintiera_triste_y_desilusionado",
+    "es_probable_que_me_sintiera_muy_emocionado_y_feliz",
+    "es_probable_que_quisiera_quedarme_todavia_mas_tiempo",
+    "es_probable_que_empezara_a_celebrar_con_entusiasmo"
+  ],
+
+  "optionsEN": [
+    "I probably felt sad and disappointed",
+    "I probably felt very excited and happy",
+    "I probably wanted to stay even longer",
+    "I probably started celebrating enthusiastically"
+  ],
+
+  "correct": "Es probable que me sintiera triste y desilusionado",
+
+  "fullAudio": {
+    "daughter": "audio/spanish/inference48.wav",
+    "me": "audio/spanish/inference48.wav"
+  },
+
+  "choiceAudio": {
+    "options": [
+      ["spanish/audio/es_probable_que_me_sintiera_triste_y_desilusionado.wav"],
+      ["spanish/audio/es_probable_que_me_sintiera_muy_emocionado_y_feliz.wav"],
+      ["spanish/audio/es_probable_que_quisiera_quedarme_todavia_mas_tiempo.wav"],
+      ["spanish/audio/es_probable_que_empezara_a_celebrar_con_entusiasmo.wav"]
+    ]
+  },
+
+  "meaningAudio": [
+    ["spanish/audio/es_probable_que_me_sintiera_triste_y_desilusionado.wav"],
+    ["spanish/audio/es_probable_que_me_sintiera_muy_emocionado_y_feliz.wav"],
+    ["spanish/audio/es_probable_que_quisiera_quedarme_todavia_mas_tiempo.wav"],
+    ["spanish/audio/es_probable_que_empezara_a_celebrar_con_entusiasmo.wav"]
+  ],
+
+  "chunks": [
+    {
+      "spanish": "Quería quedarme dos noches en la posada",
+      "english": "I wanted to stay two nights at the inn"
+    },
+    {
+      "spanish": "pero solo pude quedarme una",
+      "english": "but I could only stay one"
+    },
+    {
+      "spanish": "Me sentí decepcionado",
+      "english": "I felt disappointed"
+    },
+    {
+      "spanish": "y solté un suspiro",
+      "english": "and let out a sigh"
+    }
+  ]
+},
+
+
+
+
+
+
+
 
 ];
 

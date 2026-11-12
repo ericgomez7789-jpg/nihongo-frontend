@@ -460,6 +460,25 @@ const honyakuSentences = [
 },
 
 
+{
+    id: "honyaku38",
+    audio: "audio/awaseru38.wav",
+    answer: "No matter how much I groom myself, my appearance ends up extremely disheveled.",
+    choices: [
+        "No matter how much I groom myself, my appearance ends up extremely disheveled.",
+        "No matter how much I exercise, I always become stronger immediately.",
+        "No matter how much I study, I never need to take a test.",
+        "No matter how much I sleep, I never feel tired."
+    ]
+},
+
+
+
+
+
+
+
+
 
 ];
 

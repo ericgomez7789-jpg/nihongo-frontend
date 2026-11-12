@@ -381,6 +381,24 @@ const miwakeruSentences = [
 },
 
 
+{
+    id: "miwakeru38",
+    audio: "audio/awaseru38.wav",
+    answer: "No matter how much I groom myself, my appearance ends up extremely disheveled.",
+    choices: [
+        "No matter how much I groom myself, my appearance ends up extremely disheveled.",
+        "No matter how much I exercise, I always become stronger immediately."
+    ]
+},
+
+
+
+
+
+
+
+
+
 
 
 ];

@@ -127,6 +127,26 @@ const wakimaeruSentences = [
 
 
 
+{
+    id: "wakimaeru11",
+    audio: "audio/wakimaeru11.wav",
+    answer: "It's 6:47 PM.",
+    choices: [
+        "It's 6:47 AM.",
+        "It's 6:47 PM."
+    ]
+},
+
+
+{
+    id: "wakimaeru12",
+    audio: "audio/wakimaeru12.wav",
+    answer: "There are five balls.",
+    choices: [
+        "There are four balls.",
+        "There are five balls."
+    ]
+},
 
 
 

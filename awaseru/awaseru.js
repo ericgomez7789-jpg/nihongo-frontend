@@ -1984,6 +1984,63 @@ const awaseruSentences = [
 },
 
 
+{
+  id: "awaseru38",
+
+  audio: "audio/awaseru38.wav",
+
+  choices: [
+    "No matter how much I groom myself, my appearance ends up extremely disheveled.",
+    "No matter how much I exercise, I always become stronger immediately.",
+    "No matter how much I study, I never need to take a test.",
+    "No matter how much I sleep, I never feel tired."
+  ],
+
+  answer: "No matter how much I groom myself, my appearance ends up extremely disheveled.",
+
+  fun: [
+    {
+      jp: "どんなに～ても",
+      romaji: "donnani~temo",
+      en: "no matter how much; even if"
+    },
+    {
+      jp: "みだしなみ",
+      romaji: "midashinami",
+      en: "grooming; personal appearance"
+    },
+    {
+      jp: "ととのえても",
+      romaji: "totonoetemo",
+      en: "even if I tidy up"
+    },
+    {
+      jp: "みなり",
+      romaji: "minari",
+      en: "appearance; attire"
+    },
+    {
+      jp: "めちゃくちゃ",
+      romaji: "mechakucha",
+      en: "extremely; completely; a total mess"
+    },
+    {
+      jp: "みだれてしまいます",
+      romaji: "midarete shimaimasu",
+      en: "ends up becoming disheveled"
+    }
+  ],
+
+  chunks: [
+    "どんなに",
+    "みだしなみ を",
+    "ととのえても",
+    "みなり が",
+    "めちゃくちゃ",
+    "みだれて",
+    "しまいます"
+  ]
+},
 
 
 
