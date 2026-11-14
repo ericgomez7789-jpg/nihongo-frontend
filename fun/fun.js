@@ -1680,6 +1680,55 @@ const funDataset = [
 
 
 
+{
+  id: "fun39",
+
+  audio: "audio/fun39.wav",
+
+  choices: [
+    "The wind was howling fiercely with a whistling sound and raging wildly.",
+    "The wind became completely calm and the sky turned clear.",
+    "The gentle breeze carried the scent of flowers through the field.",
+    "The wind stopped suddenly, and everything became silent."
+  ],
+
+  answer: "The wind was howling fiercely with a whistling sound and raging wildly.",
+
+  fun: [
+    {
+      jp: "ひゅうひゅう",
+      romaji: "hyuu hyuu",
+      en: "whoosh; whistling sound of wind"
+    },
+    {
+      jp: "ふきすさぶ",
+      romaji: "fukisusabu",
+      en: "to blow fiercely; to howl (wind)"
+    },
+    {
+      jp: "あれくるう",
+      romaji: "arekuruu",
+      en: "to rage violently; to storm wildly"
+    },
+    {
+      jp: "かぜ",
+      romaji: "kaze",
+      en: "wind"
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ];

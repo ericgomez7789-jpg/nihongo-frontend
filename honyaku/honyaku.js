@@ -474,6 +474,19 @@ const honyakuSentences = [
 
 
 
+{
+    id: "honyaku39",
+    audio: "audio/awaseru39.wav",
+    answer: "The wind was howling fiercely with a whistling sound and raging wildly.",
+    choices: [
+        "The wind was howling fiercely with a whistling sound and raging wildly.",
+        "The wind became calm, and the weather turned pleasant.",
+        "A gentle breeze carried flower petals across the field.",
+        "The wind suddenly stopped, and everything became quiet."
+    ]
+},
+
+
 
 
 

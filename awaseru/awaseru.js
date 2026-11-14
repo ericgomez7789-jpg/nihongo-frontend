@@ -2045,6 +2045,53 @@ const awaseruSentences = [
 
 
 
+{
+  id: "awaseru39",
+
+  audio: "audio/awaseru39.wav",
+
+  choices: [
+    "The wind was howling fiercely with a whistling sound and raging wildly.",
+    "The wind became calm, and the weather turned pleasant.",
+    "A gentle breeze carried flower petals across the field.",
+    "The wind suddenly stopped, and everything became quiet."
+  ],
+
+  answer: "The wind was howling fiercely with a whistling sound and raging wildly.",
+
+  fun: [
+    {
+      jp: "ひゅうひゅう",
+      romaji: "hyuu hyuu",
+      en: "whoosh; whistle of the wind"
+    },
+    {
+      jp: "ふきすさび",
+      romaji: "fukisusabi",
+      en: "blowing fiercely; howling"
+    },
+    {
+      jp: "あれくるう",
+      romaji: "arekuruu",
+      en: "to rage violently; to storm wildly"
+    },
+    {
+      jp: "かぜ",
+      romaji: "kaze",
+      en: "wind"
+    }
+  ],
+
+  chunks: [
+    "かぜ が",
+    "ひゅうひゅう と",
+    "ふきすさび、",
+    "あれくるって",
+    "いた"
+  ]
+},
+
+
 
 
 ];

@@ -394,6 +394,17 @@ const miwakeruSentences = [
 
 
 
+{
+    id: "miwakeru39",
+    audio: "audio/awaseru39.wav",
+    answer: "The wind was howling fiercely with a whistling sound and raging wildly.",
+    choices: [
+        "The wind was howling fiercely with a whistling sound and raging wildly.",
+        "The wind became calm, and the weather turned pleasant."
+    ]
+},
+
+
 
 
 
