@@ -1045,6 +1045,22 @@ const blackHoleDataset = [
 },
 
 
+{
+  id: "blackhole52",
+  audio: "audio/blackhole52.wav",
+  choices: [
+    "When informing the person in charge that a visitor has arrived, it is appropriate to say, 'Mr. Gomez has arrived.'",
+    "When informing the person in charge that a visitor has arrived, it is appropriate to say, 'Mr. Gomez came.'",
+    "When informing the person in charge that a visitor has arrived, it is appropriate to say, 'I could see Mr. Gomez.'"
+  ],
+  answer: "When informing the person in charge that a visitor has arrived, it is appropriate to say, 'Mr. Gomez has arrived.'",
+  japanese: "たんとうしゃ に らいきゃく を つたえる とき は、ゴメスさま が いらっしゃいました と もうしあげます。"
+},
+
+
+
+
+
 
 
 
