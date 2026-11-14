@@ -1167,6 +1167,24 @@ What does this gesture represent?"
 
 
 
+{
+  id: "senshuu",
+  audio: "audio/senshuu.wav",
+  choices: ["こんしゅう", "らいしゅう", "せんしゅう"],
+  answer: "せんしゅう",
+
+  summary_hiragana:
+    "はじめに、てまえで みぎてを ぎゅっと にぎり、ひとさしゆびと なかゆびと おやゆびを たてます。\
+それから、まるで かたごしに なにかを おくるように、みぎてを かたへ むかって うごかします。\
+この いちれんの しぐさは、どのような いみを あらわしているのでしょうか。",
+
+  summary_english:
+    "First, make a tight fist with your right hand and extend your index finger, middle finger, and thumb in front of you.\
+Then, as if sending something over your shoulder, move your right hand toward your shoulder.\
+What meaning does this sequence of gestures represent?"
+}
+
+
 
 
 ];
