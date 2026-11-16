@@ -502,6 +502,19 @@ const honyakuSentences = [
 
 
 
+{
+    id: "honyaku41",
+    audio: "audio/awaseru41.wav",
+    answer: "After pulling an all-nighter, I was utterly exhausted and fed up with studying, but I finally managed to finish it through sheer effort.",
+    choices: [
+        "After pulling an all-nighter, I was utterly exhausted and fed up with studying, but I finally managed to finish it through sheer effort.",
+        "After sleeping all night, I happily finished my studies without difficulty.",
+        "I enjoyed studying so much that I wished it would never end.",
+        "I finished my studies immediately without feeling tired at all."
+    ]
+},
+
+
 
 
 

@@ -1059,6 +1059,19 @@ const blackHoleDataset = [
 
 
 
+{
+  id: "blackhole53",
+  audio: "audio/blackhole53.wav",
+  choices: [
+    "I understand you must be very busy with your wedding preparations, but please take good care of yourself.",
+    "I understand you must be very busy with your wedding preparations, but please work harder.",
+    "I understand you must be very busy with your wedding preparations, but please finish everything quickly."
+  ],
+  answer: "I understand you must be very busy with your wedding preparations, but please take good care of yourself.",
+  japanese: "ごけっこん の ごじゅんび で なにかと ごたよう の ことと ぞんじます が、どうぞ おからだ を たいせつ に なさって ください。"
+}
+
+
 
 
 

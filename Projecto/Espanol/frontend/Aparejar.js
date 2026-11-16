@@ -141,6 +141,60 @@ const aparejarSentences = [
 
 
 
+{
+  id: "aparejar4",
+
+  audio: "audio/spanish/aparejar4.wav",
+
+  choices: [
+    "While I was watching television, I was eating snacks.",
+    "While I was watching television, I was doing homework.",
+    "While I was reading a book, I was eating snacks.",
+    "After watching television, I went to buy snacks."
+  ],
+
+  answer:
+    "While I was watching television, I was eating snacks.",
+
+  fun: [
+
+    {
+      es: "mientras",
+      en: "while"
+    },
+
+    {
+      es: "estaba viendo",
+      en: "was watching"
+    },
+
+    {
+      es: "la televisión",
+      en: "television"
+    },
+
+    {
+      es: "comía",
+      en: "was eating"
+    },
+
+    {
+      es: "botanas",
+      en: "snacks"
+    }
+
+  ],
+
+  chunks: [
+    "mientras",
+    "estaba viendo",
+    "la televisión",
+    "comía",
+    "botanas"
+  ]
+},
+
+
 
 
 

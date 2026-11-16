@@ -419,6 +419,17 @@ const miwakeruSentences = [
 
 
 
+{
+    id: "miwakeru41",
+    audio: "audio/awaseru41.wav",
+    answer: "After pulling an all-nighter, I was utterly exhausted and fed up with studying, but I finally managed to finish it through sheer effort.",
+    choices: [
+        "After pulling an all-nighter, I was utterly exhausted and fed up with studying, but I finally managed to finish it through sheer effort.",
+        "After pulling an all-nighter, I was utterly exhausted and fed up with studying, but I quit before finishing it."
+    ]
+}
+
+
 
 
 

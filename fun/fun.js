@@ -1762,6 +1762,50 @@ const funDataset = [
 
 
 
+{
+  id: "fun41",
+
+  audio: "audio/fun41.wav",
+
+  choices: [
+    "After pulling an all-nighter, I was utterly exhausted and fed up with studying, but I finally managed to finish it through sheer effort.",
+    "I took a long nap and easily finished my studies without any trouble.",
+    "I enjoyed studying all night and wished it would continue longer.",
+    "I quickly completed the assignment after only a few minutes of work."
+  ],
+
+  answer: "After pulling an all-nighter, I was utterly exhausted and fed up with studying, but I finally managed to finish it through sheer effort.",
+
+  fun: [
+    {
+      jp: "よ を あかして",
+      romaji: "yo o akashite",
+      en: "staying up all night; pulling an all-nighter"
+    },
+    {
+      jp: "へとへと",
+      romaji: "hetoheto",
+      en: "utterly exhausted"
+    },
+    {
+      jp: "うんざり",
+      romaji: "unzari",
+      en: "fed up; sick and tired"
+    },
+    {
+      jp: "やっと の おもい で",
+      romaji: "yatto no omoi de",
+      en: "with great effort; through sheer perseverance"
+    },
+    {
+      jp: "おえました",
+      romaji: "oemashita",
+      en: "finished; completed"
+    }
+  ]
+},
+
+
 
 
 

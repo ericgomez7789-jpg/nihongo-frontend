@@ -1,0 +1,301 @@
+<html>
+
+<head>
+
+<title>Kaiwa</title>
+
+<style>
+
+body{
+    margin:0;
+    padding:20px;
+    background:#111;
+    color:white;
+    font-family:Arial,sans-serif;
+}
+
+.screen{
+    width:100%;
+}
+
+.hidden{
+    display:none;
+}
+
+#kaiwaScreen{
+    width:100%;
+}
+
+.kaiwaTop{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:20px;
+}
+
+#kaiwaTimer{
+    font-size:48px;
+    font-weight:bold;
+    color:#ff4444;
+}
+
+#kaiwaReplayBtn{
+    margin-top:10px;
+    padding:10px 20px;
+    font-size:18px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+#kaiwaInstruction{
+    text-align:center;
+    font-size:20px;
+    margin-bottom:20px;
+    color:#dddddd;
+}
+
+.kaiwaSplit{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.kaiwaPlayer{
+    background:#1e1e1e;
+    border:2px solid #444;
+    border-radius:12px;
+    padding:15px;
+}
+
+.kaiwaPlayerTitle{
+    text-align:center;
+    font-size:28px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.kaiwaScore{
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+/* ==========================================
+   PROGRESS
+========================================== */
+
+.kaiwa-progress-wrapper{
+    margin-bottom:20px;
+}
+
+.kaiwa-progress-label{
+    text-align:center;
+    margin-bottom:6px;
+}
+
+.kaiwa-progress-outer{
+    width:100%;
+    height:10px;
+    background:#333;
+    border-radius:6px;
+    overflow:hidden;
+}
+
+.kaiwa-progress-bar{
+    width:0%;
+    height:100%;
+    background:#4caf50;
+}
+
+.kaiwaQuestionBox{
+    background:#262626;
+    border:1px solid #444;
+    border-radius:10px;
+    padding:12px;
+    margin-bottom:15px;
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+    color:#ffd54f;
+}
+
+.kaiwaSectionTitle{
+    text-align:center;
+    margin-bottom:8px;
+    margin-top:12px;
+    font-weight:bold;
+}
+
+.kaiwaContainer{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    margin-top:15px;
+}
+
+.kaiwaBtn{
+    width:100%;
+    padding:16px;
+    font-size:20px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    background:white;
+    color:black;
+    text-align:left;
+}
+
+.kaiwaBtn:hover{
+    background:#eeeeee;
+}
+
+.kaiwaBtn.correct{
+    background:#4caf50;
+    color:white;
+}
+
+.kaiwaBtn.wrong{
+    background:#f44336;
+    color:white;
+}
+
+.kaiwaReveal{
+    display:none;
+    margin-bottom:20px;
+    text-align:center;
+    font-size:28px;
+    font-weight:bold;
+    color:#4caf50;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="kaiwaScreen" class="screen">
+
+    <div class="kaiwaTop">
+
+        <div id="kaiwaTimer">
+            30
+        </div>
+
+        <button id="kaiwaReplayBtn">
+            🔁 Replay
+        </button>
+
+    </div>
+
+    <div id="kaiwaInstruction">
+        Listen to the conversation and answer the question.
+    </div>
+
+    <div id="kaiwaQuestion"
+         class="kaiwaQuestionBox">
+    </div>
+
+    <div id="kaiwaReveal"
+         class="kaiwaReveal">
+    </div>
+
+    <div class="kaiwaSplit">
+
+        <!-- PLAYER 1 -->
+
+        <div class="kaiwaPlayer">
+
+            <div class="kaiwaPlayerTitle">
+                👧 Player 1
+            </div>
+
+            <div id="kaiwaScore1"
+                 class="kaiwaScore">
+                0
+            </div>
+
+            <div id="kaiwaProgress1">
+
+                <div class="kaiwa-progress-wrapper">
+
+                    <div class="kaiwa-progress-label">
+                        Progress: 0 / 0
+                    </div>
+
+                    <div class="kaiwa-progress-outer">
+
+                        <div class="kaiwa-progress-bar">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="kaiwaSectionTitle">
+                Choose Answer
+            </div>
+
+            <div id="kaiwaContainer1"
+                 class="kaiwaContainer">
+            </div>
+
+        </div>
+
+        <!-- PLAYER 2 -->
+
+        <div class="kaiwaPlayer">
+
+            <div class="kaiwaPlayerTitle">
+                👨 Player 2
+            </div>
+
+            <div id="kaiwaScore2"
+                 class="kaiwaScore">
+                0
+            </div>
+
+            <div id="kaiwaProgress2">
+
+                <div class="kaiwa-progress-wrapper">
+
+                    <div class="kaiwa-progress-label">
+                        Progress: 0 / 0
+                    </div>
+
+                    <div class="kaiwa-progress-outer">
+
+                        <div class="kaiwa-progress-bar">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="kaiwaSectionTitle">
+                Choose Answer
+            </div>
+
+            <div id="kaiwaContainer2"
+                 class="kaiwaContainer">
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="KaiwaProgress.js"></script>
+<script src="kaiwa.js"></script>
+
+</body>
+
+</html>

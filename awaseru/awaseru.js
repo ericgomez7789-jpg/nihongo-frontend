@@ -2140,6 +2140,62 @@ const awaseruSentences = [
 
 
 
+{
+  id: "awaseru41",
+
+  audio: "audio/awaseru41.wav",
+
+  choices: [
+    "After pulling an all-nighter, I was utterly exhausted and fed up with studying, but I finally managed to finish it through sheer effort.",
+    "After sleeping all night, I happily finished my studies without difficulty.",
+    "I enjoyed studying so much that I wished it would never end.",
+    "I finished my studies immediately without feeling tired at all."
+  ],
+
+  answer: "After pulling an all-nighter, I was utterly exhausted and fed up with studying, but I finally managed to finish it through sheer effort.",
+
+  fun: [
+    {
+      jp: "よ を あかして",
+      romaji: "yo o akashite",
+      en: "staying up all night; pulling an all-nighter"
+    },
+    {
+      jp: "へとへと",
+      romaji: "hetoheto",
+      en: "utterly exhausted"
+    },
+    {
+      jp: "うんざり",
+      romaji: "unzari",
+      en: "fed up; sick and tired"
+    },
+    {
+      jp: "やっと の おもい で",
+      romaji: "yatto no omoi de",
+      en: "with great effort; through sheer perseverance"
+    },
+    {
+      jp: "おえました",
+      romaji: "oemashita",
+      en: "finished; completed"
+    }
+  ],
+
+  chunks: [
+    "よ を あかして、",
+    "へとへと に",
+    "つかれ、",
+    "べんきょう に",
+    "うんざりして",
+    "いました が、",
+    "やっと の おもい で",
+    "おえました"
+  ]
+},
+
+
+
 
 
 

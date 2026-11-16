@@ -1182,7 +1182,36 @@ What does this gesture represent?"
     "First, make a tight fist with your right hand and extend your index finger, middle finger, and thumb in front of you.\
 Then, as if sending something over your shoulder, move your right hand toward your shoulder.\
 What meaning does this sequence of gestures represent?"
-}
+},
+
+{
+  id: "kongetsu",
+  audio: "audio/kongetsu.wav",
+  choices: ["こんげつ", "せんげつ", "らいげつ"],
+  answer: "こんげつ",
+
+  summary_hiragana:
+    "はじめ に、まるで だれか に「おちついて」と いいきかせる ように、りょうて で むね の まえ から した へ おします。\
+みぎて の おやゆび と ひとさしゆび を つないだ まま かるく ひらき、\
+それから くうちゅう に みかづき の かたち を えがく よう に うごかし、\
+さいご に ふたたび おやゆび と ひとさしゆび を くっつけます。\
+この いちれん の しぐさ は、どんな いみ を あらわして いる の だろう か。",
+
+  summary_english:
+    "First, as if gently telling someone to 'calm down,' push both hands downward from in front of your chest.\
+Then, keeping your thumb and index finger connected, slightly open them.\
+Next, move your hand as though drawing the shape of a crescent moon in the air.\
+Finally, bring your thumb and index finger back together.\
+What meaning does this sequence of gestures represent?"
+},
+
+
+
+
+
+
+
+
 
 
 
