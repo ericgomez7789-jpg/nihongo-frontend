@@ -406,6 +406,16 @@ const miwakeruSentences = [
 
 
 
+{
+    id: "miwakeru40",
+    audio: "audio/awaseru40.wav",
+    answer: "I was whispering at a gathering.",
+    choices: [
+        "I was whispering at a gathering.",
+        "I was giving a speech at a gathering."
+    ]
+},
+
 
 
 

@@ -1721,6 +1721,46 @@ const funDataset = [
 
 
 
+{
+  id: "fun40",
+
+  audio: "audio/fun40.wav",
+
+  choices: [
+    "I was whispering at a gathering.",
+    "I gave a speech loudly at a gathering.",
+    "I was singing by myself at home.",
+    "I was talking on the phone at the station."
+  ],
+
+  answer: "I was whispering at a gathering.",
+
+  fun: [
+    {
+      jp: "あつまり",
+      romaji: "atsumari",
+      en: "gathering; get-together"
+    },
+    {
+      jp: "ひそひそ",
+      romaji: "hisohiso",
+      en: "in a whisper; quietly"
+    },
+    {
+      jp: "はなしていました",
+      romaji: "hanashite imashita",
+      en: "was talking; was speaking"
+    },
+    {
+      jp: "わたし",
+      romaji: "watashi",
+      en: "I"
+    }
+  ]
+},
+
+
+
 
 
 

@@ -2091,6 +2091,59 @@ const awaseruSentences = [
   ]
 },
 
+{
+  id: "awaseru40",
+
+  audio: "audio/awaseru40.wav",
+
+  choices: [
+    "I was whispering at a gathering.",
+    "I was giving a speech at a gathering.",
+    "I was singing loudly at home.",
+    "I was talking on the phone at the station."
+  ],
+
+  answer: "I was whispering at a gathering.",
+
+  fun: [
+    {
+      jp: "あつまり",
+      romaji: "atsumari",
+      en: "gathering; get-together"
+    },
+    {
+      jp: "わたし",
+      romaji: "watashi",
+      en: "I"
+    },
+    {
+      jp: "ひそひそ",
+      romaji: "hisohiso",
+      en: "whispering; quietly"
+    },
+    {
+      jp: "はなしていました",
+      romaji: "hanashite imashita",
+      en: "was talking; was speaking"
+    }
+  ],
+
+  chunks: [
+    "あつまりで、",
+    "わたしは",
+    "ひそひそと",
+    "はなして",
+    "いました"
+  ]
+},
+
+
+
+
+
+
+
+
 
 
 
