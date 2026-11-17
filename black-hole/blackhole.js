@@ -1069,6 +1069,21 @@ const blackHoleDataset = [
   ],
   answer: "I understand you must be very busy with your wedding preparations, but please take good care of yourself.",
   japanese: "ごけっこん の ごじゅんび で なにかと ごたよう の ことと ぞんじます が、どうぞ おからだ を たいせつ に なさって ください。"
+},
+
+
+
+
+{
+  id: "blackhole54",
+  audio: "audio/blackhole54.wav",
+  choices: [
+    "These are words to include in a reply message for a wedding invitation. I sincerely pray for the lifelong happiness of the couple who are getting married.",
+    "These are words to include in a reply message for a wedding invitation. I hope the couple finishes their wedding preparations soon.",
+    "These are words to include in a reply message for a wedding invitation. I look forward to attending the wedding ceremony."
+  ],
+  answer: "These are words to include in a reply message for a wedding invitation. I sincerely pray for the lifelong happiness of the couple who are getting married.",
+  japanese: "けっこんしき の しょうたいじょう の へんしん メッセージ に そえる ことば です。ごけっこん なさる おふたり の すえながい おしあわせ を こころより おいのり もうしあげます。"
 }
 
 
