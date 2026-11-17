@@ -732,19 +732,19 @@ function wireKaiwaReplayButton() {
    AUDIO
 ========================================================== */
 
-function playKaiwaSentence(
-    sentence
-) {
+function playKaiwaSentence(sentence)
+{
+    console.log(
+        "Loading:",
+        sentence.audio
+    );
 
     stopAllKaiwaAudio();
 
     currentKaiwaAudio =
-        new Audio(
-            sentence.audio
-        );
+        new Audio(sentence.audio);
 
     currentKaiwaAudio.play();
-
 }
 
 
