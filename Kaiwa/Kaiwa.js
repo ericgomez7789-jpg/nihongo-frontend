@@ -7,7 +7,7 @@ const kaiwaSentences = [
 {
     id: "kaiwa1",
 
-    audio: "Audio/kaiwa1.wav",
+    audio: "Audio/Kaiwa1.wav",
 
     speaker1:
         "おかあさん",
@@ -47,7 +47,7 @@ const kaiwaSentences = [
 {
     id: "kaiwa2",
 
-    audio: "Audio/kaiwa2.wav",
+    audio: "Audio/Kaiwa2.wav",
 
     speaker1:
         "むすめ",
@@ -89,7 +89,7 @@ const kaiwaSentences = [
 {
     id: "kaiwa3",
 
-    audio: "Audio/kaiwa3.wav",
+    audio: "Audio/Kaiwa3.wav",
 
     speaker1:
         "おんなのこ",
@@ -130,7 +130,7 @@ const kaiwaSentences = [
 {
     id: "kaiwa4",
 
-    audio: "Audio/kaiwa4.wav",
+    audio: "Audio/Kaiwa4.wav",
 
     speaker1:
         "おとうさん",
@@ -172,7 +172,7 @@ const kaiwaSentences = [
 {
     id: "kaiwa5",
 
-    audio: "Audio/kaiwa5.wav",
+    audio: "Audio/Kaiwa5.wav",
 
     speaker1:
         "おとうさん",
@@ -212,7 +212,7 @@ const kaiwaSentences = [
 {
     id: "kaiwa6",
 
-    audio: "Audio/kaiwa6.wav",
+    audio: "Audio/Kaiwa6.wav",
 
     speaker1:
         "おっと",
@@ -253,7 +253,7 @@ const kaiwaSentences = [
 {
     id: "kaiwa7",
 
-    audio: "Audio/kaiwa7.wav",
+    audio: "Audio/Kaiwa7.wav",
 
     speaker1:
         "むすめ",
