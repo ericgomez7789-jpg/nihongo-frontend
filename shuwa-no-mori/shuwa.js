@@ -1205,7 +1205,26 @@ Finally, bring your thumb and index finger back together.\
 What meaning does this sequence of gestures represent?"
 },
 
+{
+  id: "raigetsu",
+  audio: "audio/raigetsu.wav",
+  choices: ["こんげつ", "せんげつ", "らいげつ"],
+  answer: "らいげつ",
 
+  summary_hiragana:
+    "はじめに、まるで みぎてで だれかを おしている ように、みぎの うでを まえに のばします。\
+そして、みぎての おやゆびと ひとさしゆびを つないだまま かるく ひらきます。\
+それから、くうちゅうに みかづきの かたちを えがくように うごかし、\
+さいごに、ふたたび おやゆびと ひとさしゆびを くっつけます。\
+この いちれんの しぐさは、どんな いみを あらわしているのでしょうか。",
+
+  summary_english:
+    "First, extend your right arm forward as if pushing someone away with your right hand.\
+Then, keeping your thumb and index finger connected, slightly open them.\
+Next, move your hand as though drawing the shape of a crescent moon in the air.\
+Finally, bring your thumb and index finger back together.\
+What meaning does this sequence of gestures represent?"
+},
 
 
 
