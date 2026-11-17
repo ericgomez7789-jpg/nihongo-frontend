@@ -530,6 +530,17 @@ const honyakuSentences = [
 
 
 
+{
+    id: "honyaku43",
+    audio: "audio/awaseru43.wav",
+    answer: "Solving the problem put me through a hard time, but I somehow barely managed to overcome it.",
+    choices: [
+        "Solving the problem put me through a hard time, but I somehow barely managed to overcome it.",
+        "Solving the problem was easy, and I finished it immediately without any effort.",
+        "I gave up on solving the problem because it was too difficult.",
+        "I avoided the problem and asked someone else to solve it."
+    ]
+},
 
 
 

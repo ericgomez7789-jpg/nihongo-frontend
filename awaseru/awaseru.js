@@ -2251,6 +2251,61 @@ const awaseruSentences = [
 
 
 
+{
+  id: "awaseru43",
+
+  audio: "audio/awaseru43.wav",
+
+  choices: [
+    "Solving the problem put me through a hard time, but I somehow barely managed to overcome it.",
+    "Solving the problem was easy, and I finished it immediately without any effort.",
+    "I gave up on solving the problem because it was too difficult.",
+    "I avoided the problem and asked someone else to solve it."
+  ],
+
+  answer: "Solving the problem put me through a hard time, but I somehow barely managed to overcome it.",
+
+  fun: [
+    {
+      jp: "もんだいを とく",
+      romaji: "mondai o toku",
+      en: "to solve a problem"
+    },
+    {
+      jp: "つらい めに あう",
+      romaji: "tsurai me ni au",
+      en: "to go through a hard experience"
+    },
+    {
+      jp: "ぎりぎり",
+      romaji: "girigiri",
+      en: "barely; by the skin of one's teeth"
+    },
+    {
+      jp: "どうにか",
+      romaji: "dounika",
+      en: "somehow; somehow or other"
+    },
+    {
+      jp: "のりこえる",
+      romaji: "norikoeru",
+      en: "to overcome; to get over"
+    }
+  ],
+
+  chunks: [
+    "もんだいを",
+    "とくのは",
+    "つらい めに",
+    "あったが、",
+    "ぎりぎり",
+    "どうにか",
+    "のりこえた"
+  ]
+},
+
+
+
 
 
 

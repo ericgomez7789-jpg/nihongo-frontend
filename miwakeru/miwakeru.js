@@ -443,6 +443,26 @@ const miwakeruSentences = [
 
 
 
+{
+    id: "miwakeru43",
+    audio: "audio/awaseru43.wav",
+    answer: "Solving the problem put me through a hard time, but I somehow barely managed to overcome it.",
+    choices: [
+        "Solving the problem put me through a hard time, but I somehow barely managed to overcome it.",
+        "Solving the problem put me through a hard time, but I gave up before overcoming it."
+    ]
+},
+
+
+
+
+
+
+
+
+
+
+
 
 ];
 
