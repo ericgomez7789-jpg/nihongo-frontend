@@ -196,6 +196,59 @@ const aparejarSentences = [
 
 
 
+{
+  id: "aparejar5",
+
+  audio: "audio/spanish/aparejar5.wav",
+
+  choices: [
+    "After exercising, I was soaked in sweat.",
+    "After exercising, I was soaked in rain.",
+    "Before exercising, I was soaked in sweat.",
+    "After exercising, I changed into dry clothes."
+  ],
+
+  answer:
+    "After exercising, I was soaked in sweat.",
+
+  fun: [
+
+    {
+      es: "después de",
+      en: "after"
+    },
+
+    {
+      es: "hacer ejercicio",
+      en: "exercising"
+    },
+
+    {
+      es: "estaba",
+      en: "was"
+    },
+
+    {
+      es: "empapada",
+      en: "soaked"
+    },
+
+    {
+      es: "en sudor",
+      en: "in sweat"
+    }
+
+  ],
+
+  chunks: [
+    "después de",
+    "hacer ejercicio",
+    "estaba",
+    "empapada",
+    "en sudor"
+  ]
+},
+
 
 
 
