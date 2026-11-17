@@ -516,6 +516,19 @@ const honyakuSentences = [
 
 
 
+{
+    id: "honyaku42",
+    audio: "audio/awaseru42.wav",
+    answer: "You do nothing but watch television, laze around, and avoid exerting yourself.",
+    choices: [
+        "You do nothing but watch television, laze around, and avoid exerting yourself.",
+        "You watch television while exercising hard every day.",
+        "You rarely watch television because you are busy working.",
+        "You spend all your free time helping others and staying active."
+    ]
+},
+
+
 
 
 

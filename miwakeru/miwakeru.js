@@ -427,7 +427,18 @@ const miwakeruSentences = [
         "After pulling an all-nighter, I was utterly exhausted and fed up with studying, but I finally managed to finish it through sheer effort.",
         "After pulling an all-nighter, I was utterly exhausted and fed up with studying, but I quit before finishing it."
     ]
-}
+},
+
+
+{
+    id: "miwakeru42",
+    audio: "audio/awaseru42.wav",
+    answer: "You do nothing but watch television, laze around, and avoid exerting yourself.",
+    choices: [
+        "You do nothing but watch television, laze around, and avoid exerting yourself.",
+        "You do nothing but watch television, but you work hard and stay physically active."
+    ]
+},
 
 
 

@@ -2195,7 +2195,58 @@ const awaseruSentences = [
 },
 
 
+{
+  id: "awaseru42",
 
+  audio: "audio/awaseru42.wav",
+
+  choices: [
+    "You do nothing but watch television, laze around, and avoid exerting yourself.",
+    "You watch television while exercising hard every day.",
+    "You rarely watch television because you are busy working.",
+    "You spend all your free time helping others and staying active."
+  ],
+
+  answer: "You do nothing but watch television, laze around, and avoid exerting yourself.",
+
+  fun: [
+    {
+      jp: "テレビを みてばかりいて",
+      romaji: "terebi o mite bakari ite",
+      en: "doing nothing but watching television"
+    },
+    {
+      jp: "だらだら",
+      romaji: "daradara",
+      en: "lazily; idly; slacking around"
+    },
+    {
+      jp: "しながら",
+      romaji: "shinagara",
+      en: "while doing"
+    },
+    {
+      jp: "からだを おしむ",
+      romaji: "karada o oshimu",
+      en: "to spare oneself; to avoid exertion"
+    },
+    {
+      jp: "おしんでいる",
+      romaji: "oshinde iru",
+      en: "is avoiding effort; is taking it easy"
+    }
+  ],
+
+  chunks: [
+    "あなたは",
+    "テレビを",
+    "みてばかりいて、",
+    "だらだら",
+    "しながら",
+    "からだを",
+    "おしんでいる"
+  ]
+},
 
 
 

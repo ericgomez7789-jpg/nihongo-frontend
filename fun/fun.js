@@ -1807,6 +1807,49 @@ const funDataset = [
 
 
 
+{
+  id: "fun42",
+
+  audio: "audio/fun42.wav",
+
+  choices: [
+    "You do nothing but watch television, laze around, and avoid exerting yourself.",
+    "You exercise every day and take very good care of your health.",
+    "You work hard from morning to night without taking any breaks.",
+    "You rarely watch television because you are always busy studying."
+  ],
+
+  answer: "You do nothing but watch television, laze around, and avoid exerting yourself.",
+
+  fun: [
+    {
+      jp: "テレビを みてばかりいて",
+      romaji: "terebi o mite bakari ite",
+      en: "doing nothing but watching television"
+    },
+    {
+      jp: "だらだら",
+      romaji: "daradara",
+      en: "lazily; idly; slacking around"
+    },
+    {
+      jp: "しながら",
+      romaji: "shinagara",
+      en: "while doing; at the same time"
+    },
+    {
+      jp: "からだを おしむ",
+      romaji: "karada o oshimu",
+      en: "to spare oneself; to avoid exertion"
+    },
+    {
+      jp: "おしんでいる",
+      romaji: "oshinde iru",
+      en: "is avoiding effort; is taking it easy"
+    }
+  ]
+},
+
 
 
 
