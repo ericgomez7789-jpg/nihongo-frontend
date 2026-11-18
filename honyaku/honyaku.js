@@ -559,6 +559,19 @@ const honyakuSentences = [
 
 
 
+{
+    id: "honyaku45",
+    audio: "audio/awaseru45.wav",
+    answer: "An airplane passing through the sky was making a roaring sound.",
+    choices: [
+        "An airplane passing through the sky was making a roaring sound.",
+        "An airplane was flying silently through the sky without making any noise.",
+        "A bird was singing softly as it flew through the sky.",
+        "A helicopter landed quietly in a field."
+    ]
+},
+
+
 
 
 

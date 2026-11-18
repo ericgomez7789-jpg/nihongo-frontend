@@ -470,6 +470,19 @@ const miwakeruSentences = [
 
 
 
+{
+    id: "miwakeru45",
+    audio: "audio/awaseru45.wav",
+    answer: "An airplane passing through the sky was making a roaring sound.",
+    choices: [
+        "An airplane passing through the sky was making a roaring sound.",
+        "An airplane passed through the sky silently without making any noise."
+    ]
+},
+
+
+
+
 
 
 

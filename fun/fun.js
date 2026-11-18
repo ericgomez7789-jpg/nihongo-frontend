@@ -1960,6 +1960,50 @@ const funDataset = [
 },
 
 
+{
+  id: "fun45",
+
+  audio: "audio/fun45.wav",
+
+  choices: [
+    "An airplane passing through the sky was making a roaring sound.",
+    "An airplane was quietly gliding through the sky without making any noise.",
+    "A bird was singing softly as it flew through the sky.",
+    "A helicopter landed silently in a field."
+  ],
+
+  answer: "An airplane passing through the sky was making a roaring sound.",
+
+  fun: [
+    {
+      jp: "そらを とおりぬける",
+      romaji: "sora o toorinukeru",
+      en: "to pass through the sky"
+    },
+    {
+      jp: "ひこうき",
+      romaji: "hikouki",
+      en: "airplane"
+    },
+    {
+      jp: "ごうごう",
+      romaji: "gougou",
+      en: "roaring sound"
+    },
+    {
+      jp: "おとを たてる",
+      romaji: "oto o tateru",
+      en: "to make a sound"
+    }
+  ]
+},
+
+
+
+
+
+
+
 
 
 
