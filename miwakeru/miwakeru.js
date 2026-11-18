@@ -499,7 +499,8 @@ let miwakeruTimerInterval = null;
 
 let currentSentenceAudio = null;
 
-
+let miwakeruPlayer1Out = false;
+let miwakeruPlayer2Out = false;
 
 
 /* ==========================================================
@@ -696,13 +697,51 @@ function checkMiwakeruAnswer(
             "correct"
         );
 
-        miwakeruPlayerWins(player);
+        miwakeruPlayerWins(
+            player
+        );
 
     } else {
 
         button.classList.add(
             "wrong"
         );
+
+        button.disabled = true;
+
+        if (player === 1) {
+            miwakeruPlayer1Out = true;
+        } else {
+            miwakeruPlayer2Out = true;
+        }
+
+        const container =
+            document.getElementById(
+                player === 1
+                    ? "miwakeruChoices1"
+                    : "miwakeruChoices2"
+            );
+
+        container
+            .querySelectorAll("button")
+            .forEach(btn => {
+                btn.disabled = true;
+            });
+
+        if (
+            miwakeruPlayer1Out &&
+            miwakeruPlayer2Out
+        ) {
+
+            clearInterval(
+                miwakeruTimerInterval
+            );
+
+            setTimeout(() => {
+                miwakeruNextRound();
+            }, 2000);
+
+        }
 
     }
 
@@ -929,6 +968,10 @@ Player 2: ${miwakeruScore2}`);
                 miwakeruSentences.length
             )
         ];
+
+        // Reset player status
+    miwakeruPlayer1Out = false;
+    miwakeruPlayer2Out = false;
 
     renderMiwakeruBoard(1);
     renderMiwakeruBoard(2);
