@@ -251,6 +251,118 @@ const aparejarSentences = [
 
 
 
+{
+  id: "aparejar6",
+
+  audio: "audio/spanish/aparejar6.wav",
+
+  choices: [
+    "In the end, only one package ended up arriving.",
+    "In the end, only one letter ended up arriving.",
+    "At the beginning, only one package ended up arriving.",
+    "In the end, two packages ended up arriving."
+  ],
+
+  answer:
+    "In the end, only one package ended up arriving.",
+
+  fun: [
+
+    {
+      es: "al final",
+      en: "in the end"
+    },
+
+    {
+      es: "solo",
+      en: "only"
+    },
+
+    {
+      es: "llegó",
+      en: "ended up arriving"
+    },
+
+    {
+      es: "un paquete",
+      en: "one package"
+    }
+
+  ],
+
+  chunks: [
+    "al final",
+    "solo",
+    "llegó",
+    "un paquete"
+  ]
+},
+
+
+{
+  id: "aparejar7",
+
+  audio: "audio/spanish/aparejar7.wav",
+
+  choices: [
+    "Winning a match is out of the question. I don't even practice enough, so I lose every time I compete.",
+    "Winning a match is easy for me because I practice every day.",
+    "I rarely lose when I compete because I practice a lot.",
+    "Winning a match is possible if I compete more often."
+  ],
+
+  answer:
+    "Winning a match is out of the question. I don't even practice enough, so I lose every time I compete.",
+
+  fun: [
+
+    {
+      es: "ganar un partido",
+      en: "winning a match"
+    },
+
+    {
+      es: "está fuera de discusión",
+      en: "is out of the question"
+    },
+
+    {
+      es: "ni siquiera",
+      en: "not even"
+    },
+
+    {
+      es: "practico lo suficiente",
+      en: "I practice enough"
+    },
+
+    {
+      es: "así que",
+      en: "so"
+    },
+
+    {
+      es: "pierdo",
+      en: "I lose"
+    },
+
+    {
+      es: "cada vez que participo",
+      en: "every time I compete"
+    }
+
+  ],
+
+  chunks: [
+    "ganar un partido",
+    "está fuera de discusión",
+    "ni siquiera",
+    "practico lo suficiente",
+    "así que",
+    "pierdo",
+    "cada vez que participo"
+  ]
+},
 
 
 
