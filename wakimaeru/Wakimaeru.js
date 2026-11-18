@@ -182,6 +182,9 @@ let wakimaeruTimerInterval = null;
 
 let currentSentenceAudio = null;
 
+let wakimaeruPlayer1Out = false;
+let wakimaeruPlayer2Out = false;
+
 /* ==========================================================
    AUDIO
 ========================================================== */
@@ -374,13 +377,51 @@ function checkWakimaeruAnswer(
             "correct"
         );
 
-        wakimaeruPlayerWins(player);
+        wakimaeruPlayerWins(
+            player
+        );
 
     } else {
 
         button.classList.add(
             "wrong"
         );
+
+        button.disabled = true;
+
+        if (player === 1) {
+            wakimaeruPlayer1Out = true;
+        } else {
+            wakimaeruPlayer2Out = true;
+        }
+
+        const container =
+            document.getElementById(
+                player === 1
+                    ? "wakimaeruChoices1"
+                    : "wakimaeruChoices2"
+            );
+
+        container
+            .querySelectorAll("button")
+            .forEach(btn => {
+                btn.disabled = true;
+            });
+
+        if (
+            wakimaeruPlayer1Out &&
+            wakimaeruPlayer2Out
+        ) {
+
+            clearInterval(
+                wakimaeruTimerInterval
+            );
+
+            setTimeout(() => {
+                wakimaeruNextRound();
+            }, 2000);
+
+        }
 
     }
 
@@ -607,6 +648,10 @@ Player 2: ${wakimaeruScore2}`);
                 wakimaeruSentences.length
             )
         ];
+
+        // Reset player status
+    wakimaeruPlayer1Out = false;
+    wakimaeruPlayer2Out = false;
 
     renderWakimaeruBoard(1);
     renderWakimaeruBoard(2);
