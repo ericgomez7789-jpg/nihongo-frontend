@@ -2251,6 +2251,11 @@ const awaseruSentences = [
 
 
 
+
+
+
+
+
 {
   id: "awaseru43",
 
@@ -2303,6 +2308,89 @@ const awaseruSentences = [
     "のりこえた"
   ]
 },
+
+
+
+
+{
+  id: "awaseru44",
+
+  audio: "audio/awaseru44.wav",
+
+  choices: [
+    "After getting lost in the forest, I finally reached an empty log cabin, and the windows began rattling from the roaring wind blowing against it.",
+    "I found my way through the forest easily and arrived at a busy cabin on a calm day.",
+    "The forest was quiet, and the windows of the cabin stayed completely still.",
+    "I avoided the cabin and continued wandering through the forest until morning."
+  ],
+
+  answer: "After getting lost in the forest, I finally reached an empty log cabin, and the windows began rattling from the roaring wind blowing against it.",
+
+  fun: [
+    {
+      jp: "もりで みちに まよう",
+      romaji: "mori de michi ni mayou",
+      en: "to get lost in the forest"
+    },
+    {
+      jp: "がらんとした",
+      romaji: "garan to shita",
+      en: "empty; deserted"
+    },
+    {
+      jp: "まるたごや",
+      romaji: "maruta goya",
+      en: "log cabin"
+    },
+    {
+      jp: "いきつく",
+      romaji: "ikitsuku",
+      en: "to finally reach; to end up arriving at"
+    },
+    {
+      jp: "ごうごう",
+      romaji: "gougou",
+      en: "roaring sound"
+    },
+    {
+      jp: "ふきつける",
+      romaji: "fukitsukeru",
+      en: "to blow against; to blast against"
+    },
+    {
+      jp: "がたがた",
+      romaji: "gatagata",
+      en: "rattle; clatter"
+    },
+    {
+      jp: "がたつく",
+      romaji: "gatatsuku",
+      en: "to rattle; to wobble"
+    }
+  ],
+
+  chunks: [
+    "もりで",
+    "みちに まよったあと、",
+    "やっと",
+    "がらんとした",
+    "まるたごやに",
+    "いきつくと、",
+    "ごうごうと",
+    "ふきつける",
+    "かぜで、",
+    "まどが",
+    "がたがたと",
+    "がたついてきました"
+  ]
+},
+
+
+
+
+
+
+
 
 
 

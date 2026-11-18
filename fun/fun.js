@@ -1901,6 +1901,65 @@ const funDataset = [
 
 
 
+{
+  id: "fun44",
+
+  audio: "audio/fun44.wav",
+
+  choices: [
+    "After getting lost in the forest, we finally reached an empty log cabin, and the windows started rattling from the roaring wind blowing against it.",
+    "We found a crowded cabin in the forest, and the calm weather outside made everything quiet.",
+    "After reaching the log cabin, the storm completely stopped and the windows remained still.",
+    "We avoided entering the cabin and continued walking through the forest all night."
+  ],
+
+  answer: "After getting lost in the forest, we finally reached an empty log cabin, and the windows started rattling from the roaring wind blowing against it.",
+
+  fun: [
+    {
+      jp: "もりで みちに まよう",
+      romaji: "mori de michi ni mayou",
+      en: "to get lost in the forest"
+    },
+    {
+      jp: "がらんとした",
+      romaji: "garan to shita",
+      en: "empty; deserted"
+    },
+    {
+      jp: "まるたごや",
+      romaji: "maruta goya",
+      en: "log cabin"
+    },
+    {
+      jp: "いきつく",
+      romaji: "ikitsuku",
+      en: "to finally reach; to end up arriving at"
+    },
+    {
+      jp: "ごうごう",
+      romaji: "gougou",
+      en: "roaring sound (of wind, storm, fire, etc.)"
+    },
+    {
+      jp: "ふきつける",
+      romaji: "fukitsukeru",
+      en: "to blow against; to blast against"
+    },
+    {
+      jp: "がたがた",
+      romaji: "gatagata",
+      en: "rattle; clatter"
+    },
+    {
+      jp: "がたつく",
+      romaji: "gatatsuku",
+      en: "to rattle; to wobble"
+    }
+  ]
+},
+
+
 
 
 

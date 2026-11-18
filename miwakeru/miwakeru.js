@@ -456,6 +456,16 @@ const miwakeruSentences = [
 
 
 
+{
+    id: "miwakeru44",
+    audio: "audio/awaseru44.wav",
+    answer: "After getting lost in the forest, I finally reached an empty log cabin, and the windows began rattling from the roaring wind blowing against it.",
+    choices: [
+        "After getting lost in the forest, I finally reached an empty log cabin, and the windows began rattling from the roaring wind blowing against it.",
+        "After getting lost in the forest, I finally reached an empty log cabin, but the storm died down and the windows remained perfectly still."
+    ]
+},
+
 
 
 

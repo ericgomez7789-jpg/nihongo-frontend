@@ -544,6 +544,25 @@ const honyakuSentences = [
 
 
 
+{
+    id: "honyaku44",
+    audio: "audio/awaseru44.wav",
+    answer: "After getting lost in the forest, I finally reached an empty log cabin, and the windows began rattling from the roaring wind blowing against it.",
+    choices: [
+        "After getting lost in the forest, I finally reached an empty log cabin, and the windows began rattling from the roaring wind blowing against it.",
+        "I found my way through the forest easily and arrived at a busy cabin on a calm day.",
+        "The forest was quiet, and the windows of the cabin stayed completely still.",
+        "I avoided the cabin and continued wandering through the forest until morning."
+    ]
+},
+
+
+
+
+
+
+
+
 ];
 
 
