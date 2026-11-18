@@ -1184,6 +1184,10 @@ Then, as if sending something over your shoulder, move your right hand toward yo
 What meaning does this sequence of gestures represent?"
 },
 
+
+
+
+
 {
   id: "kongetsu",
   audio: "audio/kongetsu.wav",
@@ -1226,7 +1230,26 @@ Finally, bring your thumb and index finger back together.\
 What meaning does this sequence of gestures represent?"
 },
 
+{
+  id: "sengetsu",
+  audio: "audio/sengetsu.wav",
+  choices: ["こんげつ", "せんげつ", "らいげつ"],
+  answer: "せんげつ",
 
+  summary_hiragana:
+    "はじめに、かこの ことを あらわすために、みぎてを かたの あたりから うしろへ うごかします。\
+それから、みぎての おやゆびと ひとさしゆびを つないだまま、かるく ひらいて つきの かたちを つくります。\
+そして、くうちゅうに みかづきを えがくように ゆっくりと うごかします。\
+さいごに、その かたちを しっかりと みせます。\
+この いちれんの しぐさは、どのような いみを あらわしているのでしょうか。",
+
+  summary_english:
+    "First, move your right hand backward from around your shoulder to express something in the past.\
+Then, keeping your thumb and index finger connected, slightly open them to form the shape of a moon.\
+Next, slowly move your hand as though drawing a crescent moon in the air.\
+Finally, clearly show that shape.\
+What meaning does this sequence of gestures represent?"
+},
 
 
 
