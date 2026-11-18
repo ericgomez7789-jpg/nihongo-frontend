@@ -426,7 +426,8 @@ let kaiwaCurrentSentence = null;
 let kaiwaTimerInterval = null;
 
 let currentKaiwaAudio = null;
-
+let kaiwaPlayer1Out = false;
+let kaiwaPlayer2Out = false;
 
 /* ==========================================================
    AUDIO
@@ -659,10 +660,8 @@ function checkKaiwaAnswer(
 ) {
 
     if (
-
         selectedChoice ===
         kaiwaCurrentSentence.answer
-
     ) {
 
         button.classList.add(
@@ -679,6 +678,44 @@ function checkKaiwaAnswer(
         button.classList.add(
             "wrong"
         );
+
+        button.disabled = true;
+
+        if (player === 1) {
+            kaiwaPlayer1Out = true;
+        } else {
+            kaiwaPlayer2Out = true;
+        }
+
+        // Disable all buttons for that player
+        const container =
+            document.getElementById(
+                player === 1
+                    ? "kaiwaContainer1"
+                    : "kaiwaContainer2"
+            );
+
+        container
+            .querySelectorAll("button")
+            .forEach(btn => {
+                btn.disabled = true;
+            });
+
+        // If both players are out, nobody wins
+        if (
+            kaiwaPlayer1Out &&
+            kaiwaPlayer2Out
+        ) {
+
+            clearInterval(
+                kaiwaTimerInterval
+            );
+
+            setTimeout(() => {
+                kaiwaNextRound();
+            }, 2000);
+
+        }
 
     }
 
@@ -770,7 +807,7 @@ function startKaiwaTimer(
     onExpire
 ) {
 
-    let timeLeft = 30;
+    let timeLeft = 60;
 
     const timer =
         document.getElementById(
@@ -922,6 +959,10 @@ Player 2: ${kaiwaScore2}`);
                 kaiwaSentences.length
             )
         ];
+
+    // RESET PLAYER STATUS
+    kaiwaPlayer1Out = false;
+    kaiwaPlayer2Out = false;
 
     renderQuestion();
 
