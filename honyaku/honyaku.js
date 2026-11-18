@@ -566,7 +566,8 @@ let honyakuTimerInterval = null;
 
 let currentSentenceAudio = null;
 
-
+let honyakuPlayer1Out = false;
+let honyakuPlayer2Out = false;
 
 
 
@@ -771,6 +772,42 @@ function checkAnswer(
         button.classList.add(
             "wrong"
         );
+
+        button.disabled = true;
+
+        if (player === 1) {
+            honyakuPlayer1Out = true;
+        } else {
+            honyakuPlayer2Out = true;
+        }
+
+        const container =
+            document.getElementById(
+                player === 1
+                    ? "translationContainer1"
+                    : "translationContainer2"
+            );
+
+        container
+            .querySelectorAll("button")
+            .forEach(btn => {
+                btn.disabled = true;
+            });
+
+        if (
+            honyakuPlayer1Out &&
+            honyakuPlayer2Out
+        ) {
+
+            clearInterval(
+                honyakuTimerInterval
+            );
+
+            setTimeout(() => {
+                honyakuNextRound();
+            }, 2000);
+
+        }
 
     }
 
@@ -1005,6 +1042,10 @@ Player 2: ${honyakuScore2}`);
                 honyakuSentences.length
             )
         ];
+
+    // Reset player status
+    honyakuPlayer1Out = false;
+    honyakuPlayer2Out = false;
 
     renderPlayerBoard(1);
     renderPlayerBoard(2);
