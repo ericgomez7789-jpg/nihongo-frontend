@@ -3169,7 +3169,7 @@ function updateAwaseruScorekeepers() {
 
 function startAwaseruTimer(onExpire) {
 
-  let timeLeft = 30;
+  let timeLeft = 60;
 
   const timer = document.getElementById("awaseruTimer");
 
