@@ -1084,7 +1084,25 @@ const blackHoleDataset = [
   ],
   answer: "These are words to include in a reply message for a wedding invitation. I sincerely pray for the lifelong happiness of the couple who are getting married.",
   japanese: "けっこんしき の しょうたいじょう の へんしん メッセージ に そえる ことば です。ごけっこん なさる おふたり の すえながい おしあわせ を こころより おいのり もうしあげます。"
-}
+},
+
+
+
+
+{
+  id: "blackhole55",
+  audio: "audio/blackhole55.wav",
+  choices: [
+    "These are words to include in a reply message for a wedding invitation. Allow me to express my gratitude once again.",
+    "These are words to include in a reply message for a wedding invitation. I look forward to meeting everyone at the reception.",
+    "These are words to include in a reply message for a wedding invitation. I apologize for my late reply."
+  ],
+  answer: "These are words to include in a reply message for a wedding invitation. Allow me to express my gratitude once again.",
+  japanese: "けっこんしき の しょうたいじょう の へんしん メッセージ に そえる ことば です。あらためて おれい もうしあげます。"
+},
+
+
+
 
 
 

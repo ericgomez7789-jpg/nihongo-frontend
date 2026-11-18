@@ -1230,6 +1230,13 @@ Finally, bring your thumb and index finger back together.\
 What meaning does this sequence of gestures represent?"
 },
 
+
+
+
+
+
+
+
 {
   id: "sengetsu",
   audio: "audio/sengetsu.wav",
