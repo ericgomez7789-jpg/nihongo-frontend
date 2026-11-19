@@ -366,6 +366,83 @@ const aparejarSentences = [
 
 
 
+{
+  id: "aparejar8",
+
+  audio: "audio/spanish/aparejar8.wav",
+
+  choices: [
+    "If someone suddenly decided to attack me, I don't know if I could defend myself.",
+    "If someone suddenly asked me for help, I know I could help them.",
+    "If someone attacked me, I am sure I would defend myself easily.",
+    "If someone decided to challenge me, I would definitely win."
+  ],
+
+  answer:
+    "If someone suddenly decided to attack me, I don't know if I could defend myself.",
+
+  fun: [
+
+    {
+      es: "si alguien",
+      en: "if someone"
+    },
+
+    {
+      es: "de repente",
+      en: "suddenly"
+    },
+
+    {
+      es: "tomara la decisión",
+      en: "decided"
+    },
+
+    {
+      es: "atacarme",
+      en: "to attack me"
+    },
+
+    {
+      es: "no sé",
+      en: "I don't know"
+    },
+
+    {
+      es: "si podría",
+      en: "if I could"
+    },
+
+    {
+      es: "defenderme",
+      en: "defend myself"
+    }
+
+  ],
+
+  chunks: [
+    "si alguien",
+    "de repente",
+    "tomara la decisión",
+    "atacarme",
+    "no sé",
+    "si podría",
+    "defenderme"
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 
