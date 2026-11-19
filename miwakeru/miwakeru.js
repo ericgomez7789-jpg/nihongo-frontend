@@ -483,6 +483,17 @@ const miwakeruSentences = [
 
 
 
+{
+    id: "miwakeru46",
+    audio: "audio/awaseru46.wav",
+    answer: "When the wooden door closed, it made a clunking sound.",
+    choices: [
+        "When the wooden door closed, it made a clunking sound.",
+        "When the wooden door closed, it did not make any sound."
+    ]
+},
+
+
 
 
 

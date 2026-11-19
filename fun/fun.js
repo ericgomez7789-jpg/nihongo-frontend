@@ -2001,6 +2001,45 @@ const funDataset = [
 
 
 
+{
+  id: "fun46",
+
+  audio: "audio/fun46.wav",
+
+  choices: [
+    "When the wooden door closed, it made a clunking sound.",
+    "When the wooden door opened, it made no sound at all.",
+    "A wooden table fell over with a loud crash.",
+    "The wooden door rattled continuously in the wind."
+  ],
+
+  answer: "When the wooden door closed, it made a clunking sound.",
+
+  fun: [
+    {
+      jp: "きの ドア",
+      romaji: "ki no doa",
+      en: "wooden door"
+    },
+    {
+      jp: "しまった とき",
+      romaji: "shimatta toki",
+      en: "when it closed"
+    },
+    {
+      jp: "がたん",
+      romaji: "gatan",
+      en: "clunk / thud"
+    },
+    {
+      jp: "おとを たてる",
+      romaji: "oto o tateru",
+      en: "to make a sound"
+    }
+  ]
+},
+
+
 
 
 

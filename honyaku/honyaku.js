@@ -572,7 +572,17 @@ const honyakuSentences = [
 },
 
 
-
+{
+    id: "honyaku46",
+    audio: "audio/awaseru46.wav",
+    answer: "When the wooden door closed, it made a clunking sound.",
+    choices: [
+        "When the wooden door closed, it made a clunking sound.",
+        "When the wooden door opened, it made no sound at all.",
+        "A wooden table fell over with a loud crash.",
+        "The wooden door rattled continuously in the wind."
+    ]
+},
 
 
 
