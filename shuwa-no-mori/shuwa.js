@@ -1263,6 +1263,46 @@ What meaning does this sequence of gestures represent?"
 
 
 
+{
+  id: "ima",
+  audio: "audio/ima.wav",
+  choices: ["いま", "きのう", "あした"],
+  answer: "いま",
+
+  summary_hiragana:
+    "はじめに、だれかに「おちついて」と つたえるように、りょうての てのひらを したむきにします。\
+それから、そのまま ぐっと したへ おしさげるように うごかします。\
+この しぐさは、いま このしゅんかんを あらわしているようにも みえます。\
+さいごに、りょうてを しっかりと そのままにして しぐさを おえます。\
+この いちれんの しぐさは、どのような いみを あらわしているのでしょうか。",
+
+  summary_english:
+    "First, turn both palms downward as if telling someone to 'calm down.'\
+Then, keeping that shape, press them firmly downward.\
+This gesture may look like it is expressing the present moment, right here and now.\
+Finally, keep both hands steady in that position and finish the gesture.\
+What meaning does this sequence of gestures represent?"
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ];
