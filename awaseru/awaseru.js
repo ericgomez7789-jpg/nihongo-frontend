@@ -2541,6 +2541,51 @@ const awaseruSentences = [
   ]
 },
 
+{
+  id: "awaseru48",
+  audio: "audio/awaseru48.wav",
+  choices: [
+    "When I was standing at the edge of the cliff, my heart was pounding with nervousness.",
+    "When I was walking through a peaceful meadow, I felt completely relaxed.",
+    "When I was sitting beside the lake, I listened to the gentle waves.",
+    "When I was reading a book indoors, I forgot about the passing time."
+  ],
+  answer: "When I was standing at the edge of the cliff, my heart was pounding with nervousness.",
+  fun: [
+    {
+      jp: "どきどき",
+      romaji: "doki doki",
+      en: "thump thump / heart pounding"
+    },
+    {
+      jp: "がけ",
+      romaji: "gake",
+      en: "cliff"
+    },
+    {
+      jp: "きわ",
+      romaji: "kiwa",
+      en: "edge"
+    },
+    {
+      jp: "にたっていると",
+      romaji: "ni tatte iru to",
+      en: "when standing at"
+    },
+    {
+      jp: "しました",
+      romaji: "shimashita",
+      en: "felt / did"
+    }
+  ],
+  chunks: [
+    "がけの",
+    "きわに",
+    "たっていると",
+    "どきどき",
+    "しました"
+  ]
+},
 
 
 

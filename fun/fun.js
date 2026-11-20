@@ -2086,6 +2086,51 @@ const funDataset = [
 },
 
 
+{
+  id: "fun48",
+  audio: "audio/fun48.wav",
+  choices: [
+    "When I was standing at the edge of the cliff, my heart was pounding with nervousness.",
+    "When I was walking through the flower field, I felt completely relaxed.",
+    "When I was sitting by the river, I listened to the sound of flowing water.",
+    "When I was resting under a tree, I drifted off to sleep."
+  ],
+  answer: "When I was standing at the edge of the cliff, my heart was pounding with nervousness.",
+  fun: [
+    {
+      jp: "どきどき",
+      romaji: "doki doki",
+      en: "thump thump / heart pounding"
+    },
+    {
+      jp: "がけ",
+      romaji: "gake",
+      en: "cliff"
+    },
+    {
+      jp: "きわ",
+      romaji: "kiwa",
+      en: "edge"
+    },
+    {
+      jp: "にたつ",
+      romaji: "ni tatsu",
+      en: "to stand at"
+    },
+    {
+      jp: "しました",
+      romaji: "shimashita",
+      en: "did / felt"
+    }
+  ]
+},
+
+
+
+
+
+
+
 
 
 

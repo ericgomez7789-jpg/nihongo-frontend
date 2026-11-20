@@ -508,8 +508,15 @@ const miwakeruSentences = [
     ]
 },
 
-
-
+{
+    id: "miwakeru48",
+    audio: "audio/awaseru48.wav",
+    answer: "When I was standing at the edge of the cliff, my heart was pounding with nervousness.",
+    choices: [
+        "When I was standing at the edge of the cliff, my heart was pounding with nervousness.",
+        "When I was standing at the edge of the cliff, my heart was completely calm."
+    ]
+},
 
 
 

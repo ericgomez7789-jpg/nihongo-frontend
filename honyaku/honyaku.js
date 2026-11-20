@@ -605,6 +605,27 @@ const honyakuSentences = [
     ]
 },
 
+{
+    id: "honyaku48",
+    audio: "audio/awaseru48.wav",
+    answer: "When I was standing at the edge of the cliff, my heart was pounding with nervousness.",
+    choices: [
+        "When I was standing at the edge of the cliff, my heart was pounding with nervousness.",
+        "When I was walking through a peaceful meadow, I felt completely relaxed.",
+        "When I was sitting beside the lake, I listened to the gentle waves.",
+        "When I was reading a book indoors, I forgot about the passing time."
+    ]
+},
+
+
+
+
+
+
+
+
+
+
 
 
 ];
