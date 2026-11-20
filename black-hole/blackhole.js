@@ -1104,6 +1104,18 @@ const blackHoleDataset = [
 
 
 
+{
+  id: "blackhole56",
+  audio: "audio/blackhole56.wav",
+  choices: [
+    "These are words to explain why you chose a thank-you gift. I wasn't sure what would be best, but after giving it a lot of thought, I decided on this.",
+    "These are words to explain why you chose a thank-you gift. I didn't know what to buy, so I picked this without much thought.",
+    "These are words to explain why you chose a thank-you gift. This was the cheapest option available."
+  ],
+  answer: "These are words to explain why you chose a thank-you gift. I wasn't sure what would be best, but after giving it a lot of thought, I decided on this.",
+  japanese: "おれい の ひん を えらんだ りゆう を つたえる とき。なに が よいか まよった のですが、いろいろ かんがえて これ に きめました。"
+},
+
 
 
 
