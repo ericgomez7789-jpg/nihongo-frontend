@@ -586,6 +586,27 @@ const honyakuSentences = [
 
 
 
+
+
+
+
+
+
+
+{
+    id: "honyaku47",
+    audio: "audio/awaseru47.wav",
+    answer: "I can hear the sound of someone breathing heavily, going 'huff, huff.'",
+    choices: [
+        "I can hear the sound of someone breathing heavily, going 'huff, huff.'",
+        "I can hear birds chirping cheerfully in the distance.",
+        "I can hear a clock ticking quietly on the wall.",
+        "I can hear leaves rustling softly in the wind."
+    ]
+},
+
+
+
 ];
 
 

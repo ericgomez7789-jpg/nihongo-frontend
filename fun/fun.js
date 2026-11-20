@@ -2042,6 +2042,50 @@ const funDataset = [
 
 
 
+{
+  id: "fun47",
+
+  audio: "audio/fun47.wav",
+
+  choices: [
+    "I can hear the sound of someone breathing heavily, going 'huff, huff.'",
+    "I can hear birds chirping cheerfully in the distance.",
+    "I can hear a clock ticking quietly on the wall.",
+    "I can hear leaves rustling softly in the wind."
+  ],
+
+  answer: "I can hear the sound of someone breathing heavily, going 'huff, huff.'",
+
+  fun: [
+    {
+      jp: "はあはあ",
+      romaji: "haa haa",
+      en: "huff huff / heavy breathing"
+    },
+    {
+      jp: "という",
+      romaji: "to iu",
+      en: "called / saying"
+    },
+    {
+      jp: "いきづかい",
+      romaji: "ikizukai",
+      en: "breathing"
+    },
+    {
+      jp: "おと",
+      romaji: "oto",
+      en: "sound"
+    },
+    {
+      jp: "がする",
+      romaji: "ga suru",
+      en: "can be heard"
+    }
+  ]
+},
+
+
 
 
 

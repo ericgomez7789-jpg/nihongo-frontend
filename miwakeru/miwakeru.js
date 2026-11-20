@@ -498,6 +498,29 @@ const miwakeruSentences = [
 
 
 
+{
+    id: "miwakeru47",
+    audio: "audio/awaseru47.wav",
+    answer: "I can hear the sound of someone breathing heavily, going 'huff, huff.'",
+    choices: [
+        "I can hear the sound of someone breathing heavily, going 'huff, huff.'",
+        "I cannot hear the sound of someone breathing heavily."
+    ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 
