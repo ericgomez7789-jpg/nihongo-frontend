@@ -434,6 +434,131 @@ const aparejarSentences = [
 
 
 
+{
+  id: "aparejar9",
+
+  audio: "audio/spanish/aparejar9.wav",
+
+  choices: [
+    "I adore my cat; to me, he's practically part of the family.",
+    "I like my cat, but I don't spend much time with him.",
+    "My cat usually stays outside and rarely comes home.",
+    "I have a cat, although I would rather have a dog."
+  ],
+
+  answer:
+    "I adore my cat; to me, he's practically part of the family.",
+
+  fun: [
+
+    {
+      es: "adoro",
+      en: "I adore"
+    },
+
+    {
+      es: "a mi gato",
+      en: "my cat"
+    },
+
+    {
+      es: "para mí",
+      en: "to me"
+    },
+
+    {
+      es: "es",
+      en: "he is"
+    },
+
+    {
+      es: "prácticamente",
+      en: "practically"
+    },
+
+    {
+      es: "parte de la familia",
+      en: "part of the family"
+    }
+
+  ],
+
+  chunks: [
+    "adoro",
+    "a mi gato",
+    "para mí",
+    "es",
+    "prácticamente",
+    "parte de la familia"
+  ]
+},
+
+
+
+{
+  id: "aparejar10",
+
+  audio: "audio/spanish/aparejar10.wav",
+
+  choices: [
+    "Before going to the meeting, I plan to wait for the rain to stop.",
+    "Before going to the meeting, I plan to leave even if it is raining.",
+    "Before the meeting, I want to finish reading a book.",
+    "After the meeting, I plan to wait until the rain starts."
+  ],
+
+  answer:
+    "Before going to the meeting, I plan to wait for the rain to stop.",
+
+  fun: [
+
+    {
+      es: "antes de ir",
+      en: "before going"
+    },
+
+    {
+      es: "a la reunión",
+      en: "to the meeting"
+    },
+
+    {
+      es: "planeo",
+      en: "I plan"
+    },
+
+    {
+      es: "esperar",
+      en: "to wait"
+    },
+
+    {
+      es: "a que",
+      en: "for"
+    },
+
+    {
+      es: "pare",
+      en: "stops"
+    },
+
+    {
+      es: "la lluvia",
+      en: "the rain"
+    }
+
+  ],
+
+  chunks: [
+    "antes de ir",
+    "a la reunión",
+    "planeo",
+    "esperar",
+    "a que",
+    "pare",
+    "la lluvia"
+  ]
+},
 
 
 
