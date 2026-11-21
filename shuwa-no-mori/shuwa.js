@@ -1289,6 +1289,35 @@ What meaning does this sequence of gestures represent?"
 
 
 
+{
+  id: "toki",
+  audio: "audio/toki.wav",
+  choices: ["とき", "きのう", "あした"],
+  answer: "とき",
+
+  summary_hiragana:
+    "はじめに、ひだりてを てまえで ひらき、てのひらを みぎに むけます。\
+それから、みぎてを かるく にぎり、おやゆびと ひとさしゆびを のばします。\
+つぎに、ひだりての てのひらに みぎての おやゆびの さきを あてます。\
+そして、とけいの はりが うごくように、ひとさしゆびを したへ うごかします。\
+この しぐさは、とけいが すすみ、じかんが ながれていく ようすを あらわしているようにも みえます。\
+さいごに、その かたちのまま しぐさを おえます。\
+この いちれんの しぐさは、どのような いみを あらわしているのでしょうか。",
+
+  summary_english:
+    "First, open your left hand in front of you with the palm facing to the right.\
+Then, lightly close your right hand and extend the thumb and index finger.\
+Next, place the tip of your right thumb against the palm of your left hand.\
+Then, move the index finger downward as if a clock hand were moving.\
+This gesture may look like time passing as a clock continues to move forward.\
+Finally, keep the position and finish the gesture.\
+What meaning does this sequence of gestures represent?"
+},
+
+
+
+
+
 
 
 
