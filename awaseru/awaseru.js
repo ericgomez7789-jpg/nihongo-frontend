@@ -2595,6 +2595,10 @@ const awaseruSentences = [
 
 
 
+
+
+
+
 {
   id: "awaseru49",
   audio: "audio/awaseru49.wav",
@@ -2642,6 +2646,63 @@ const awaseruSentences = [
     "うれしいな"
   ]
 },
+
+
+{
+  id: "awaseru50",
+  audio: "audio/awaseru50.wav",
+  choices: [
+    "While playing hide-and-seek, I listened carefully and stayed hidden, but nobody came to look for me.",
+    "While playing hide-and-seek, I shouted loudly and immediately revealed my hiding place.",
+    "While playing hide-and-seek, I fell asleep, and everyone quickly found me.",
+    "While playing hide-and-seek, I stopped hiding and went searching for the others."
+  ],
+  answer: "While playing hide-and-seek, I listened carefully and stayed hidden, but nobody came to look for me.",
+  fun: [
+    {
+      jp: "みみをそばだてる",
+      romaji: "mimi o sobadateru",
+      en: "to prick up one's ears / to listen carefully"
+    },
+    {
+      jp: "みをひそめる",
+      romaji: "mi o hisomeru",
+      en: "to hide oneself / to stay concealed"
+    },
+    {
+      jp: "なにものも",
+      romaji: "nanimono mo",
+      en: "not a single person / nobody at all"
+    },
+    {
+      jp: "さがしにくる",
+      romaji: "sagashi ni kuru",
+      en: "to come looking for"
+    },
+    {
+      jp: "かくれんぼ",
+      romaji: "kakurenbo",
+      en: "hide-and-seek"
+    }
+  ],
+  chunks: [
+    "かくれんぼを",
+    "していて",
+    "みみを",
+    "そばだて",
+    "みを",
+    "ひそめて",
+    "いたのですが",
+    "なにものも",
+    "さがしに",
+    "きませんでした"
+  ]
+},
+
+
+
+
+
 
 
 

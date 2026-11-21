@@ -2168,6 +2168,58 @@ const funDataset = [
 },
 
 
+{
+  id: "fun50",
+  audio: "audio/fun50.wav",
+  choices: [
+    "While playing hide-and-seek, I listened carefully and stayed hidden, but nobody came to look for me.",
+    "While playing hide-and-seek, I shouted loudly and immediately ran out of my hiding place.",
+    "While playing hide-and-seek, I fell asleep and everyone quickly found me.",
+    "While playing hide-and-seek, I gave up hiding and started searching for others."
+  ],
+  answer: "While playing hide-and-seek, I listened carefully and stayed hidden, but nobody came to look for me.",
+  fun: [
+    {
+      jp: "みみをそばだてる",
+      romaji: "mimi o sobadateru",
+      en: "to prick up one's ears / to listen carefully"
+    },
+    {
+      jp: "みをひそめる",
+      romaji: "mi o hisomeru",
+      en: "to hide oneself / to stay concealed"
+    },
+    {
+      jp: "なにものも",
+      romaji: "nanimono mo",
+      en: "not a single person / nobody at all"
+    },
+    {
+      jp: "さがしにくる",
+      romaji: "sagashi ni kuru",
+      en: "to come looking for"
+    },
+    {
+      jp: "かくれんぼ",
+      romaji: "kakurenbo",
+      en: "hide-and-seek"
+    }
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

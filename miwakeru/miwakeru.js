@@ -538,6 +538,22 @@ const miwakeruSentences = [
 
 
 
+{
+  id: "miwakeru50",
+  audio: "audio/awaseru50.wav",
+  answer: "While playing hide-and-seek, I listened carefully and stayed hidden, but nobody came to look for me.",
+  choices: [
+    "While playing hide-and-seek, I listened carefully and stayed hidden, but nobody came to look for me.",
+    "While playing hide-and-seek, I listened carefully and stayed hidden, but someone eventually came to find me."
+  ]
+},
+
+
+
+
+
+
+
 
 
 
