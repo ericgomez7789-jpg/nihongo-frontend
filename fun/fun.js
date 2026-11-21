@@ -2128,6 +2128,46 @@ const funDataset = [
 
 
 
+{
+  id: "fun49",
+  audio: "audio/fun49.wav",
+  choices: [
+    "Instead of loafing around, I wish you would lend a hand and help out.",
+    "Instead of helping everyone, I wish you would take a long break.",
+    "Instead of studying, I wish you would spend more time playing games.",
+    "Instead of cleaning the room, I wish you would go outside and relax."
+  ],
+  answer: "Instead of loafing around, I wish you would lend a hand and help out.",
+  fun: [
+    {
+      jp: "あぶらをうる",
+      romaji: "abura o uru",
+      en: "to loaf around / to idle away time"
+    },
+    {
+      jp: "くらいなら",
+      romaji: "kurai nara",
+      en: "if you're going to / rather than"
+    },
+    {
+      jp: "ひとはだぬぐ",
+      romaji: "hitohada nugu",
+      en: "to lend a hand / to step in and help"
+    },
+    {
+      jp: "くれる",
+      romaji: "kureru",
+      en: "to do for someone"
+    },
+    {
+      jp: "うれしいな",
+      romaji: "ureshii na",
+      en: "I'd be happy if... / I hope..."
+    }
+  ]
+},
+
+
 
 
 

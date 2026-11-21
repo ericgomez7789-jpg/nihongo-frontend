@@ -2541,6 +2541,11 @@ const awaseruSentences = [
   ]
 },
 
+
+
+
+
+
 {
   id: "awaseru48",
   audio: "audio/awaseru48.wav",
@@ -2586,6 +2591,60 @@ const awaseruSentences = [
     "しました"
   ]
 },
+
+
+
+
+{
+  id: "awaseru49",
+  audio: "audio/awaseru49.wav",
+  choices: [
+    "Instead of loafing around, I wish you would lend a hand and help out.",
+    "Instead of helping everyone, I wish you would take a day off and relax.",
+    "Instead of studying hard, I wish you would spend more time playing games.",
+    "Instead of cleaning the house, I wish you would go for a walk outside."
+  ],
+  answer: "Instead of loafing around, I wish you would lend a hand and help out.",
+  fun: [
+    {
+      jp: "あぶらをうる",
+      romaji: "abura o uru",
+      en: "to loaf around / to idle away time"
+    },
+    {
+      jp: "くらいなら",
+      romaji: "kurai nara",
+      en: "if you're going to / rather than"
+    },
+    {
+      jp: "ひとはだぬぐ",
+      romaji: "hitohada nugu",
+      en: "to lend a hand / to step in and help"
+    },
+    {
+      jp: "くれる",
+      romaji: "kureru",
+      en: "to do for someone"
+    },
+    {
+      jp: "うれしいな",
+      romaji: "ureshii na",
+      en: "I'd be happy if... / I hope..."
+    }
+  ],
+  chunks: [
+    "あぶらを",
+    "うる",
+    "くらいなら",
+    "ひとはだ",
+    "ぬいで",
+    "くれると",
+    "うれしいな"
+  ]
+},
+
+
+
 
 
 

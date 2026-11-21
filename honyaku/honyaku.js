@@ -605,6 +605,11 @@ const honyakuSentences = [
     ]
 },
 
+
+
+
+
+
 {
     id: "honyaku48",
     audio: "audio/awaseru48.wav",
@@ -619,6 +624,18 @@ const honyakuSentences = [
 
 
 
+
+{
+    id: "honyaku49",
+    audio: "audio/awaseru49.wav",
+    answer: "Instead of loafing around, I wish you would lend a hand and help out.",
+    choices: [
+        "Instead of loafing around, I wish you would lend a hand and help out.",
+        "Instead of helping everyone, I wish you would take a day off and relax.",
+        "Instead of studying hard, I wish you would spend more time playing games.",
+        "Instead of cleaning the house, I wish you would go for a walk outside."
+    ]
+},
 
 
 

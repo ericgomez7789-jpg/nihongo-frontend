@@ -508,6 +508,11 @@ const miwakeruSentences = [
     ]
 },
 
+
+
+
+
+
 {
     id: "miwakeru48",
     audio: "audio/awaseru48.wav",
@@ -519,6 +524,17 @@ const miwakeruSentences = [
 },
 
 
+
+
+{
+    id: "miwakeru49",
+    audio: "audio/awaseru49.wav",
+    answer: "Instead of loafing around, I wish you would lend a hand and help out.",
+    choices: [
+        "Instead of loafing around, I wish you would lend a hand and help out.",
+        "Instead of loafing around, I wish you would continue doing nothing and avoid helping."
+    ]
+},
 
 
 
