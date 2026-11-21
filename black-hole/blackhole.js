@@ -1121,6 +1121,21 @@ const blackHoleDataset = [
 
 
 
+{
+  id: "blackhole57",
+  audio: "audio/blackhole57.wav",
+  choices: [
+    "These are words used when giving a practical gift as a thank-you present. I thought this was something you could use no matter how many you have.",
+    "These are words used when giving a practical gift as a thank-you present. I chose this because it was inexpensive.",
+    "These are words used when giving a practical gift as a thank-you present. I chose this because I happened to have extra ones at home."
+  ],
+  answer: "These are words used when giving a practical gift as a thank-you present. I thought this was something you could use no matter how many you have.",
+  japanese: "おれい の ひん として じつようひん を おくる とき の ことば です。これなら、いくつ あっても つかって いただける と おもいまして。"
+}
+
+
+
+
 
 
 
