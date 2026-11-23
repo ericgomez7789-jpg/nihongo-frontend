@@ -1131,7 +1131,23 @@ const blackHoleDataset = [
   ],
   answer: "These are words used when giving a practical gift as a thank-you present. I thought this was something you could use no matter how many you have.",
   japanese: "おれい の ひん として じつようひん を おくる とき の ことば です。これなら、いくつ あっても つかって いただける と おもいまして。"
-}
+},
+
+
+
+
+{
+  id: "blackhole58",
+  audio: "audio/blackhole58.wav",
+  choices: [
+    "These are words used when handing someone a congratulatory gift. The speaker is giving a small celebratory present.",
+    "These are words used when handing someone a thank-you gift. The speaker is apologizing because the gift is not very expensive.",
+    "These are words used when returning a borrowed item. The speaker is explaining that the item belongs to someone else."
+  ],
+  answer: "These are words used when handing someone a congratulatory gift. The speaker is giving a small celebratory present.",
+  japanese: "おいわい の しな を てわたしする とき の ことば です。おめでとうございます。ささやかですが、おいわい の しな です。"
+},
+
 
 
 

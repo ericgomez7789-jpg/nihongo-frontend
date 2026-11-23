@@ -564,6 +564,68 @@ const aparejarSentences = [
 
 
 
+{
+  id: "aparejar11",
+
+  audio: "audio/spanish/aparejar11.wav",
+
+  choices: [
+    "Someone your age should have better judgment.",
+    "Someone your age should spend more money.",
+    "Someone your age should be more patient with children.",
+    "Someone your age should work fewer hours."
+  ],
+
+  answer:
+    "Someone your age should have better judgment.",
+
+  fun: [
+
+    {
+      es: "alguien",
+      en: "someone"
+    },
+
+    {
+      es: "de tu edad",
+      en: "your age"
+    },
+
+    {
+      es: "debería",
+      en: "should"
+    },
+
+    {
+      es: "tener",
+      en: "have"
+    },
+
+    {
+      es: "más",
+      en: "more"
+    },
+
+    {
+      es: "buen juicio",
+      en: "good judgment"
+    }
+
+  ],
+
+  chunks: [
+    "alguien",
+    "de tu edad",
+    "debería",
+    "tener",
+    "más",
+    "buen juicio"
+  ]
+},
+
+
+
+
 
 
 

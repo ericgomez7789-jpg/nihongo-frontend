@@ -1314,30 +1314,40 @@ Finally, keep the position and finish the gesture.\
 What meaning does this sequence of gestures represent?"
 },
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ];
 
 
+const shuwaTenki = [
 
+{
+  id: "hare",
+  audio: "audio/hare.wav",
+  choices: ["はれ", "あめ", "くもり"],
+  answer: "はれ",
+
+  summary_hiragana:
+    "はじめに、むねの まえで うでを くみます。\
+それから、ゆっくり うでを はなして ひろげます。\
+その うごきは、くもが ひらいて そらが あかるくなる ようすのようにも みえます。\
+さいごに、その かたちのまま しぐさを おえます。\
+この いちれんの しぐさは、どのような いみを あらわしているのでしょうか。",
+
+  summary_english:
+    "First, cross your arms in front of your chest.\
+Then, slowly release your arms and spread them outward.\
+This movement may look like clouds parting and the sky becoming bright.\
+Finally, finish the gesture while keeping the position.\
+What meaning does this sequence of gestures represent?"
+},
+
+
+
+
+
+
+
+  
+];
 
 
 
