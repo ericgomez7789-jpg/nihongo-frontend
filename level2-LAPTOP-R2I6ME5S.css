@@ -1,0 +1,297 @@
+/* ==========================================================
+   LEVEL 2 — GLOBAL DARK THEME
+========================================================== */
+
+#level2Wrapper {
+  background: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+/* ==========================================================
+   LEVEL 2 SCREENS
+========================================================== */
+
+.level2-screen {
+  display: none;
+  background: #000;
+  color: #fff;
+  min-height: 100vh;
+  padding: 40px;
+}
+
+.level2-screen:not(.hidden) {
+  display: block;
+}
+
+.level2-screen.hidden {
+  display: none !important;
+}
+
+/* Titles */
+.level2-screen .title {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+/* ==========================================================
+   LEVEL 2 — LEVEL SELECT BUTTONS
+========================================================== */
+
+.level2-screen .levelBtn {
+  background: #222;
+  color: #fff;
+  border: 1px solid #444;
+  padding: 4px 8px;
+  margin: 4px;
+  font-size: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 70px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.level2-screen .levelBtn:hover {
+  background: #333;
+}
+
+/* ==========================================================
+   LEVEL 2 — MUSIC CONTROLS
+========================================================== */
+
+.level2-screen .iconBtn {
+  background: #222;
+  color: #fff;
+  border: 1px solid #555;
+  padding: 8px 12px;
+  margin-left: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.level2-screen .iconBtn:hover {
+  background: #333;
+}
+
+/* ==========================================================
+   LEVEL 2 — SCREEN 1 (AUDIO ONLY)
+========================================================== */
+
+.level2-screen .instruction-line {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #ccc;
+}
+
+/* ==========================================================
+   LEVEL 2 — PROGRESS BAR (SCREEN 1 ONLY)
+========================================================== */
+
+#level2-progress-container {
+  margin: 20px 0;
+}
+
+#level2-progress-bar {
+  width: 100%;
+  height: 20px;
+  background: #222;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #444;
+}
+
+#level2-progress-fill {
+  height: 100%;
+  width: 0%;
+  background: #4caf50;
+  transition: width 0.3s ease;
+}
+
+#level2-progress-text {
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+}
+
+#level2-reset-btn {
+  margin-top: 12px;
+  padding: 8px 14px;
+  background: #c62828;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#level2-reset-btn:hover {
+  background: #b71c1c;
+}
+
+/* ==========================================================
+   LEVEL 2 — SCREEN 2 (MCQ MODE)
+========================================================== */
+
+#level2SentenceLine {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+#level2McqContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+#level2McqContainer .mcqBtn {
+  padding: 14px 18px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  border: 2px solid #444;
+  background: #222;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+#level2McqContainer .mcqBtn:hover {
+  background: #333;
+}
+
+.mcqBtn.correct {
+  background-color: #4CAF50 !important;
+  color: white;
+}
+
+.mcqBtn.wrong {
+  background-color: #E53935 !important;
+  color: white;
+}
+
+/* ==========================================================
+   LEVEL 2 — SCREEN 3 (PER‑SENTENCE SUMMARY)
+========================================================== */
+
+#level2MeaningBox {
+  font-size: 26px;
+  margin: 20px auto 20px auto;
+  padding: 16px 20px;
+  max-width: 480px;
+  text-align: center;
+  background: #111;
+  border-radius: 12px;
+  border: 1px solid #444;
+}
+
+#level2CorrectDrops {
+  font-size: 20px;
+  text-align: center;
+  color: #4caf50;
+  margin-bottom: 20px;
+}
+
+#level2SummaryContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 20px auto;
+  max-width: 480px;
+}
+
+#level2SummaryContainer .summary-row {
+  background: #111;
+  border: 1px solid #444;
+  border-radius: 10px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.summary-hiragana {
+  font-size: 26px;
+  color: #fff;
+}
+
+.summary-romaji {
+  font-size: 18px;
+  color: #bbb;
+}
+
+.summary-english {
+  font-size: 18px;
+  color: #4caf50;
+}
+
+.level2-screen .summary-controls {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* ==========================================================
+   LEVEL 2 — SCREEN 4 (FINAL SESSION SUMMARY)
+========================================================== */
+
+#level2Screen4 .summary-container {
+  margin-top: 20px;
+  padding: 20px;
+  background: #111;
+  border: 1px solid #444;
+  border-radius: 12px;
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+#level2Screen4 .summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+#level2Screen4 .summary-label {
+  font-weight: bold;
+  color: #eee;
+}
+
+#level2Screen4 .summary-value {
+  color: #fff;
+}
+
+#level2Screen4 .summary-controls {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+#level2Screen4 .iconBtn {
+  background: #222;
+  border: 1px solid #555;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#level2Screen4 .iconBtn:hover {
+  background: #333;
+  border-color: #777;
+}

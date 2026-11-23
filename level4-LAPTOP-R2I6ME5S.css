@@ -1,0 +1,177 @@
+/* ==========================================================
+   LEVEL 4 — GLOBAL WRAPPER & THEME (FINAL FIXED VERSION)
+========================================================== */
+
+.level4-wrapper {
+  background: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* Main Level 4 container */
+#screen2L4 {
+  background: #000;
+  color: #fff;
+  min-height: 100vh;
+  padding: 20px 0 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Internal Level 4 screens */
+.level4-screen {
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  margin: 0 auto;
+  background: #000;
+  color: #fff;
+}
+
+/* ==========================================================
+   TITLES
+========================================================== */
+
+.level4-wrapper .title {
+  font-size: 28px;
+  margin: 10px 0 15px;
+  text-align: center;
+}
+
+/* ==========================================================
+   TOP REPLAY BUTTON
+========================================================== */
+
+#l4ReplaySentenceBtn.replay-top {
+  margin: 10px 0 15px;
+  font-size: 20px;
+  padding: 8px 16px;
+  background: #222;
+  border: 1px solid #555;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+}
+
+#l4ReplaySentenceBtn.replay-top:hover {
+  background: #333;
+}
+
+/* ==========================================================
+   SENTENCE & MCQ AREA
+========================================================== */
+
+.level4-wrapper .sentence-line {
+  font-size: 24px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.level4-wrapper .mcq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.level4-wrapper .mcqBtn {
+  padding: 12px 16px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  border: 2px solid #444;
+  background: #222;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.level4-wrapper .mcqBtn:hover {
+  background: #333;
+}
+
+.level4-wrapper .mcqBtn.correct {
+  background-color: #4CAF50 !important;
+  border-color: #4CAF50 !important;
+}
+
+.level4-wrapper .mcqBtn.wrong {
+  background-color: #E53935 !important;
+  border-color: #E53935 !important;
+}
+
+/* ==========================================================
+   SUMMARY SCREEN (THE FIX)
+========================================================== */
+
+#screen3 {
+  padding: 20px 0;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 600px;
+
+  /* ⭐ THIS IS THE FIX ⭐ */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* pulls content UP */
+}
+
+.summary-container {
+  width: 100%;
+  max-width: 480px;
+  margin: 10px 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.summary-row {
+  background: #111;
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 10px 12px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+}
+
+/* ==========================================================
+   EXPLANATION BOX
+========================================================== */
+
+.explanation-box {
+  margin-top: 15px;
+  padding: 14px 16px;
+  background: #111;
+  border-left: 4px solid #4a90e2;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 480px;
+}
+
+.explanation-title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.explanation-text {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* ==========================================================
+   SUMMARY CONTROLS
+========================================================== */
+
+.summary-controls {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
