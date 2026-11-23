@@ -2210,6 +2210,46 @@ const funDataset = [
 
 
 
+{
+  id: "fun51",
+  audio: "audio/fun51.wav",
+  choices: [
+    "Instead of ringing the bell, the man lightly knocked on the door.",
+    "Instead of opening the door, the man rang the bell over and over.",
+    "Instead of knocking on the door, the man shouted loudly from outside.",
+    "Instead of using the bell, the man quietly walked away from the house."
+  ],
+  answer: "Instead of ringing the bell, the man lightly knocked on the door.",
+  fun: [
+    {
+      jp: "かわりに",
+      romaji: "kawari ni",
+      en: "instead of"
+    },
+    {
+      jp: "りんりんとならす",
+      romaji: "rinrin to narasu",
+      en: "to ring (a bell) with a ding-ding sound"
+    },
+    {
+      jp: "コツンと",
+      romaji: "kotsun to",
+      en: "with a light tap / knock"
+    },
+    {
+      jp: "ドアをたたく",
+      romaji: "doa o tataku",
+      en: "to knock on a door"
+    },
+    {
+      jp: "おとこのひと",
+      romaji: "otoko no hito",
+      en: "man"
+    }
+  ]
+},
+
+
 
 
 

@@ -2704,6 +2704,58 @@ const awaseruSentences = [
 
 
 
+{
+  id: "awaseru51",
+  audio: "audio/awaseru51.wav",
+  choices: [
+    "Instead of ringing the bell, the man lightly knocked on the door.",
+    "Instead of knocking on the door, the man repeatedly rang the bell.",
+    "Instead of entering through the door, the man opened a window.",
+    "Instead of waiting outside, the man immediately walked into the house."
+  ],
+  answer: "Instead of ringing the bell, the man lightly knocked on the door.",
+  fun: [
+    {
+      jp: "かわりに",
+      romaji: "kawari ni",
+      en: "instead of"
+    },
+    {
+      jp: "りんりんとならす",
+      romaji: "rinrin to narasu",
+      en: "to ring a bell with a ding-ding sound"
+    },
+    {
+      jp: "コツンと",
+      romaji: "kotsun to",
+      en: "with a light knock / tap"
+    },
+    {
+      jp: "ドアをたたく",
+      romaji: "doa o tataku",
+      en: "to knock on a door"
+    },
+    {
+      jp: "おとこのひと",
+      romaji: "otoko no hito",
+      en: "man"
+    }
+  ],
+  chunks: [
+    "かねを",
+    "りんりんと",
+    "ならす",
+    "かわりに",
+    "おとこのひとが",
+    "コツンと",
+    "ドアを",
+    "たたきました"
+  ]
+},
+
+
+
+
 
 
 

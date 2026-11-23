@@ -552,6 +552,19 @@ const miwakeruSentences = [
 
 
 
+{
+  id: "miwakeru51",
+  audio: "audio/awaseru51.wav",
+  answer: "Instead of ringing the bell, the man lightly knocked on the door.",
+  choices: [
+    "Instead of ringing the bell, the man lightly knocked on the door.",
+    "Instead of ringing the bell, the man loudly banged on the door."
+  ]
+},
+
+
+
+
 
 
 

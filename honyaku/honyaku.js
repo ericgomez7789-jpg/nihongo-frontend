@@ -652,6 +652,20 @@ const honyakuSentences = [
 
 
 
+{
+  id: "honyaku51",
+  audio: "audio/awaseru51.wav",
+  answer: "Instead of ringing the bell, the man lightly knocked on the door.",
+  choices: [
+    "Instead of ringing the bell, the man lightly knocked on the door.",
+    "Instead of knocking on the door, the man repeatedly rang the bell.",
+    "Instead of entering through the door, the man opened a window.",
+    "Instead of waiting outside, the man immediately walked into the house."
+  ]
+},
+
+
+
 
 
 
