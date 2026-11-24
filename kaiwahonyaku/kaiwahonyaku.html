@@ -1,0 +1,334 @@
+<html>
+
+<head>
+
+<title>Kaiwa Honyaku</title>
+
+<style>
+
+body{
+    margin:0;
+    padding:20px;
+    background:#111;
+    color:white;
+    font-family:Arial,sans-serif;
+}
+
+.screen{
+    width:100%;
+}
+
+.hidden{
+    display:none;
+}
+
+#kaiwaHonyakuScreen{
+    width:100%;
+}
+
+.kaiwaHonyakuTop{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:20px;
+}
+
+#kaiwaHonyakuTimer{
+    font-size:48px;
+    font-weight:bold;
+    color:#ff4444;
+}
+
+#kaiwaHonyakuReplayBtn{
+    margin-top:10px;
+    padding:10px 20px;
+    font-size:18px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+#kaiwaHonyakuInstruction{
+    text-align:center;
+    font-size:20px;
+    margin-bottom:20px;
+    color:#dddddd;
+}
+
+.kaiwaHonyakuSplit{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.kaiwaHonyakuPlayer{
+    background:#1e1e1e;
+    border:2px solid #444;
+    border-radius:12px;
+    padding:15px;
+}
+
+.kaiwaHonyakuPlayerTitle{
+    text-align:center;
+    font-size:28px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.kaiwaHonyakuScore{
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+
+/* ==========================================
+   PROGRESS
+========================================== */
+
+.kaiwaHonyaku-progress-wrapper{
+    margin-bottom:20px;
+}
+
+.kaiwaHonyaku-progress-label{
+    text-align:center;
+    margin-bottom:6px;
+}
+
+.kaiwaHonyaku-progress-outer{
+    width:100%;
+    height:10px;
+    background:#333;
+    border-radius:6px;
+    overflow:hidden;
+}
+
+.kaiwaHonyaku-progress-bar{
+    width:0%;
+    height:100%;
+    background:#4caf50;
+}
+
+.kaiwaHonyakuQuestionBox{
+    background:#262626;
+    border:1px solid #444;
+    border-radius:10px;
+    padding:12px;
+    margin-bottom:15px;
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+    color:#81d4fa;
+}
+
+#kaiwaHonyakuDialogue{
+    background:#1f1f1f;
+    border:1px solid #555;
+    border-radius:10px;
+
+    padding:10px;
+
+    margin:0 auto 15px auto;
+
+    width:70%;
+    max-width:700px;
+
+    text-align:left;
+
+    font-size:16px;
+
+    line-height:1.4;
+
+    color:white;
+
+    font-weight:normal;
+
+    white-space:normal;
+}
+
+.kaiwaHonyakuSectionTitle{
+    text-align:center;
+    margin-bottom:8px;
+    margin-top:12px;
+    font-weight:bold;
+}
+
+.kaiwaHonyakuContainer{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    margin-top:15px;
+}
+
+.kaiwaHonyakuBtn{
+
+    width:100%;
+    padding:16px;
+    font-size:20px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    background:white;
+    color:black;
+    text-align:left;
+
+    white-space:pre-line;
+    line-height:1.5;
+}
+
+.kaiwaHonyakuBtn:hover{
+    background:#eeeeee;
+}
+
+.kaiwaHonyakuBtn.correct{
+    background:#4caf50;
+    color:white;
+}
+
+.kaiwaHonyakuBtn.wrong{
+    background:#f44336;
+    color:white;
+}
+
+.kaiwaHonyakuReveal{
+    display:none;
+    margin-bottom:20px;
+    text-align:center;
+    font-size:28px;
+    font-weight:bold;
+    color:#4caf50;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="kaiwaHonyakuScreen" class="screen">
+
+    <div class="kaiwaHonyakuTop">
+
+        <div id="kaiwaHonyakuTimer">
+            30
+        </div>
+
+        <button id="kaiwaHonyakuReplayBtn">
+            🔁 Replay
+        </button>
+
+    </div>
+
+    <div id="kaiwaHonyakuInstruction">
+    Listen to the conversation and choose the correct English translation.
+</div>
+
+<div id="kaiwaHonyakuDialogue">
+</div>
+
+<div id="kaiwaHonyakuQuestion"
+     class="kaiwaHonyakuQuestionBox">
+</div>
+
+<div id="kaiwaHonyakuReveal"
+     class="kaiwaHonyakuReveal">
+</div>
+
+    <div class="kaiwaHonyakuSplit">
+
+        <!-- PLAYER 1 -->
+
+        <div class="kaiwaHonyakuPlayer">
+
+            <div class="kaiwaHonyakuPlayerTitle">
+                👧 Player 1
+            </div>
+
+            <div id="kaiwaHonyakuScore1"
+                 class="kaiwaHonyakuScore">
+                0
+            </div>
+
+            <div id="kaiwaHonyakuProgress1">
+
+                <div class="kaiwaHonyaku-progress-wrapper">
+
+                    <div class="kaiwaHonyaku-progress-label">
+                        Progress: 0 / 0
+                    </div>
+
+                    <div class="kaiwaHonyaku-progress-outer">
+
+                        <div class="kaiwaHonyaku-progress-bar">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="kaiwaHonyakuSectionTitle">
+                Choose Translation
+            </div>
+
+            <div id="kaiwaHonyakuContainer1"
+                 class="kaiwaHonyakuContainer">
+            </div>
+
+        </div>
+
+        <!-- PLAYER 2 -->
+
+        <div class="kaiwaHonyakuPlayer">
+
+            <div class="kaiwaHonyakuPlayerTitle">
+                👨 Player 2
+            </div>
+
+            <div id="kaiwaHonyakuScore2"
+                 class="kaiwaHonyakuScore">
+                0
+            </div>
+
+            <div id="kaiwaHonyakuProgress2">
+
+                <div class="kaiwaHonyaku-progress-wrapper">
+
+                    <div class="kaiwaHonyaku-progress-label">
+                        Progress: 0 / 0
+                    </div>
+
+                    <div class="kaiwaHonyaku-progress-outer">
+
+                        <div class="kaiwaHonyaku-progress-bar">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="kaiwaHonyakuSectionTitle">
+                Choose Translation
+            </div>
+
+            <div id="kaiwaHonyakuContainer2"
+                 class="kaiwaHonyakuContainer">
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="KaiwaHonyakuProgress.js"></script>
+<script src="KaiwaHonyaku.js"></script>
+
+</body>
+
+</html>
