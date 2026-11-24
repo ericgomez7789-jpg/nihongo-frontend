@@ -61,7 +61,58 @@ const kaiwaSentences = [
 },
 
 // kaiwa2 starts here
+{
+    id: "kaiwa2",
 
+    audio: "Audio/kaiwa2.wav",
+
+    speaker1:
+        "むすめ",
+
+    line1:
+        "おかあさん、あのね。きょうは べんきょうしなくても いいですか？ べんきょうする きに なれないから。",
+
+    speaker2:
+        "おかあさん",
+
+    line2:
+        "ううん。にちようび いがいは、まいにち べんきょうしなければ なりませんよ。",
+
+    translation:
+        "Daughter: Mom, um... is it okay if I don't study today? I just can't get myself in the mood to study.\n\nMother: No. Except for Sundays, you must study every day.",
+
+    translationChoices: [
+
+        "Daughter: Mom, um... is it okay if I don't study today? I just can't get myself in the mood to study.\n\nMother: No. Except for Sundays, you must study every day.",
+
+        "Daughter: Mom, can I go shopping today?\n\nMother: Yes, but don't come home late.",
+
+        "Daughter: Mom, where is my school bag?\n\nMother: It's next to the front door.",
+
+        "Daughter: Mom, can I sleep a little longer?\n\nMother: Okay, but don't miss breakfast.",
+
+        "Daughter: Mom, I finished all my homework.\n\nMother: Great. You worked very hard."
+    ],
+
+    question:
+        "むすめは なぜ べんきょうしたくないですか？",
+
+    answer:
+        "べんきょうする きに なれないから",
+
+    choices: [
+
+        "べんきょうする きに なれないから",
+
+        "ともだちと あそびたいから",
+
+        "おなかが すいているから",
+
+        "もう しゅくだいを おえたから",
+
+        "がっこうが やすみだから"
+    ]
+},
 
 ];
 
