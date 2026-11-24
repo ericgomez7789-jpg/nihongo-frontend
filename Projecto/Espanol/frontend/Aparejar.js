@@ -628,6 +628,44 @@ const aparejarSentences = [
 
 
 
+{
+  id: "aparejar12",
+
+  audio: "audio/spanish/aparejar12.wav",
+
+  choices: [
+    "It's drizzling.",
+    "It's snowing heavily.",
+    "The rain has stopped.",
+    "A storm is coming."
+  ],
+
+  answer:
+    "It's drizzling.",
+
+  fun: [
+
+    {
+      es: "está",
+      en: "is"
+    },
+
+    {
+      es: "lloviznando",
+      en: "drizzling"
+    }
+
+  ],
+
+  chunks: [
+    "está",
+    "lloviznando"
+  ]
+},
+
+
+
+
 
 
 ];
