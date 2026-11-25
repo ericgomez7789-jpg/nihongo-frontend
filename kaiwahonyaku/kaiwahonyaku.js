@@ -1461,55 +1461,46 @@ const kaiwaSentences = [
 
     audio: "Audio/kaiwa27.wav",
 
-    speaker1:
-        "つま",
+    speaker1: "つま",
 
     line1:
-        "ねえ、きみは、よふかししていたら、あさに なって しまって、あさから うおうさおうすることに なっちゃったの。しかも、それで ひに あぶらを そそぐような ことまで してしまったわ。",
+        "ねえ、きのう よふかししていたせいで、だいじな かいぎに まにあわないかもって、あさから うおうさおうしていたじゃない。おまけに、あわてていて ひに あぶらを そそぐような ことまで していたわよ。",
 
-    speaker2:
-        "おっと",
+    speaker2: "おっと",
 
     line2:
-        "うーん、そこには くびを つっこまないで、みてみぬふりを しておいたほうが いいんじゃない？ つまり、しらぬぞんぜぬで いるってことだよ。",
+        "うーん、その はなしには くびを つっこまないで、みてみぬふりを しておいてよ。つまり、しらぬぞんぜぬで いるってこと。",
 
     translation:
-        "Wife: You know, I stayed up so late that it became morning, and I ended up running around in confusion from the start of the day. On top of that, I even made the situation worse.\n\nHusband: Hmm, wouldn't it be better not to get involved in that? Just pretend you didn't see it. In other words, act like you know nothing about it.",
+        "Wife: Hey, because you stayed up late last night, you were panicking all morning thinking you might not make it to your important meeting. On top of that, you were so flustered that you even made the situation worse.\n\nHusband: Hmm, don't stick your nose into that story. Just pretend you didn't see it. In other words, act like you know nothing about it.",
 
     translationChoices: [
 
-        "Wife: You know, I stayed up so late that it became morning, and I ended up running around in confusion from the start of the day. On top of that, I even made the situation worse.\n\nHusband: Hmm, wouldn't it be better not to get involved in that? Just pretend you didn't see it. In other words, act like you know nothing about it.",
+        "Wife: Hey, because you stayed up late last night, you were panicking all morning thinking you might not make it to your important meeting. On top of that, you were so flustered that you even made the situation worse.\n\nHusband: Hmm, don't stick your nose into that story. Just pretend you didn't see it. In other words, act like you know nothing about it.",
 
-        "Wife: I woke up early and finished everything calmly.\n\nHusband: That's great. Keep working hard.",
+        "Wife: You got up early and arrived at your meeting with plenty of time to spare.\n\nHusband: That's right. Everything went exactly as planned.",
 
-        "Wife: I spent the whole day reading books at the library.\n\nHusband: You should borrow more next time.",
+        "Wife: You spent all morning reading a book before your meeting.\n\nHusband: Yes, it was very relaxing and productive.",
 
-        "Wife: I cleaned the house and everything went perfectly.\n\nHusband: I'm proud of you.",
+        "Wife: You stayed home all day and didn't have any responsibilities.\n\nHusband: It was a peaceful day without any problems.",
 
-        "Wife: I got plenty of sleep and felt energetic.\n\nHusband: Then let's go on a trip."
+        "Wife: You were excited to go shopping and bought many things.\n\nHusband: Yes, it was a wonderful experience."
     ],
 
     question:
-        "なぜ おっとは 「みてみぬふりを しておいたほうが いい」と いいましたか？",
+        "なぜ おっとは 「みてみぬふりを しておいてよ」と いいましたか？",
 
     answer:
-        "その もんだいに くびを つっこまず、しらぬぞんぜぬで いたほうが いいと おもったから",
+        "その はなしに くびを つっこまず、しらぬぞんぜぬで いてほしいと おもったから",
 
     choices: [
-
-        "その もんだいに くびを つっこまず、しらぬぞんぜぬで いたほうが いいと おもったから",
-
+        "その はなしに くびを つっこまず、しらぬぞんぜぬで いてほしいと おもったから",
         "もっと ひに あぶらを そそいでほしいと おもったから",
-
         "つまに もっと うおうさおうしてほしいと おもったから",
-
         "よふかしを つづけることを すすめたかったから",
-
         "つまが あさまで ねないことを ほめたかったから"
-
     ]
 },
-
 
 
 
