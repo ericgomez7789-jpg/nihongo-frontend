@@ -1399,6 +1399,67 @@ const kaiwaSentences = [
 },
 
 
+{
+    id: "kaiwa26",
+
+    audio: "Audio/kaiwa26.wav",
+
+    speaker1:
+        "むすめ",
+
+    line1:
+        "おとうさん、なんで どうぶつみたいに じめんを コツンと たたいて、いつも わたしを こわがらせるのが すきなの？",
+
+    speaker2:
+        "ちち",
+
+    line2:
+        "うーん、その はんのうを みるのが おもしろおかしいと おもっちゃうんだよね。",
+
+    translation:
+        "Daughter: Dad, why do you like tapping the ground with a little knock like an animal and always scaring me?\n\nFather: Hmm, I guess it's because I end up finding your reaction funny and amusing to watch.",
+
+    translationChoices: [
+
+        "Daughter: Dad, why do you like tapping the ground with a little knock like an animal and always scaring me?\n\nFather: Hmm, I guess it's because I end up finding your reaction funny and amusing to watch.",
+
+        "Daughter: Dad, why do you always feed animals in the park?\n\nFather: Because I want them to become my friends.",
+
+        "Daughter: Dad, why do you sleep outside every night?\n\nFather: Because the fresh air helps me relax.",
+
+        "Daughter: Dad, why are you teaching animals new tricks?\n\nFather: Because I want to enter a competition.",
+
+        "Daughter: Dad, why do you make loud noises when you work?\n\nFather: Because it helps me concentrate."
+    ],
+
+    question:
+        "なぜ ちちは むすめを こわがらせることが あるのですか？",
+
+    answer:
+        "むすめの はんのうを みるのが おもしろおかしいと おもっているから",
+
+    choices: [
+
+        "むすめの はんのうを みるのが おもしろおかしいと おもっているから",
+
+        "どうぶつの まねを じょうずに なりたいから",
+
+        "むすめを ほんとうに おこらせたいから",
+
+        "じめんを たたかないと あるけないから",
+
+        "どうぶつと はなせるように なりたいから"
+    ]
+},
+
+
+
+
+
+
+
+
+
 
 
 

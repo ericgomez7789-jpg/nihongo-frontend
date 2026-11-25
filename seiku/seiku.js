@@ -765,54 +765,30 @@ const seikuData = [
 
     audio: "Audio/kaiwa24.wav",
 
-    speaker1:
-        "おとこのこ",
+    idiom:
+        "むねを なでおろす",
 
-    line1:
-        "くさい おならの においが きえて、ほっと むねを なでおろした。",
-
-    speaker2:
-        "おんなのこ",
-
-    line2:
-        "ねえ、むねが いっぱいに なるほどの ことじゃ ないよ。きを とりなおして。いつも きみは おおげさだよ。",
-
-    translation:
-        "Boy: The smell of the stinky fart finally disappeared, and I felt a huge sense of relief.\n\nGirl: Hey, it's not something to get that emotional about. Pull yourself together. You're always exaggerating.",
-
-    translationChoices: [
-
-        "Boy: The smell of the stinky fart finally disappeared, and I felt a huge sense of relief.\n\nGirl: Hey, it's not something to get that emotional about. Pull yourself together. You're always exaggerating.",
-
-        "Boy: The smell keeps getting stronger.\n\nGirl: You're right. Let's open a window.",
-
-        "Boy: I can't smell anything.\n\nGirl: That's strange. The smell is very strong.",
-
-        "Boy: I found a new toy.\n\nGirl: That's wonderful. Let's play with it.",
-
-        "Boy: I'm excited about tomorrow's trip.\n\nGirl: Me too. I can't wait."
-    ],
-
-    question:
-        "なぜ おんなのこは 「むねが いっぱいに なるほどの ことじゃ ない」と いいましたか？",
-
-    answer:
-        "おとこのこが おならの においが きえたことに おおげさに はんのうしていたと おもったから",
+    meaning:
+        "to feel relieved",
 
     choices: [
 
-        "おとこのこが おならの においが きえたことに おおげさに はんのうしていたと おもったから",
+        "to feel relieved",
 
-        "おんなのこも おならの においに かんどうしたから",
+        "to become very emotional",
 
-        "おとこのこが おならの においを もっと たのしんでほしかったから",
+        "to get on someone's nerves",
 
-        "おとこのこが おならの においに きづかなかったから",
+        "to lose confidence",
 
-        "おんなのこが おならの においを ほめたかったから"
-    ]
+        "to become nervous"
+
+    ],
+
+    example:
+        "くさい おならの においが きえて、ほっと むねを なでおろした。"
+
 },
-
 
 
 
@@ -847,6 +823,39 @@ const seikuData = [
 
 },
 
+
+
+
+
+{
+    id: "kaiwa26",
+
+    audio: "Audio/kaiwa26.wav",
+
+    idiom:
+        "おもしろおかしい",
+
+    meaning:
+        "funny / amusing / entertaining",
+
+    choices: [
+
+        "funny / amusing / entertaining",
+
+        "to become frightened suddenly",
+
+        "to make a loud knocking sound",
+
+        "to act like an animal",
+
+        "to apologize for doing something"
+
+    ],
+
+    example:
+        "その はんのうを みるのが おもしろおかしいと おもっちゃうんだよね。"
+
+},
 
 
 
