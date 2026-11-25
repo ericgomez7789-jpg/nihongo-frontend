@@ -2758,6 +2758,53 @@ const awaseruSentences = [
 
 
 
+{
+  id: "awaseru52",
+  audio: "audio/awaseru52.wav",
+  choices: [
+    "The cat meowed.",
+    "The cat barked loudly.",
+    "The cat flew through the sky.",
+    "The cat quietly fell asleep."
+  ],
+  answer: "The cat meowed.",
+  fun: [
+    {
+      jp: "ねこ",
+      romaji: "neko",
+      en: "cat"
+    },
+    {
+      jp: "にゃあと",
+      romaji: "nyaa to",
+      en: "with a meow sound"
+    },
+    {
+      jp: "なく",
+      romaji: "naku",
+      en: "to make an animal sound"
+    },
+    {
+      jp: "ないた",
+      romaji: "naita",
+      en: "meowed"
+    },
+    {
+      jp: "ねこが",
+      romaji: "neko ga",
+      en: "the cat"
+    }
+  ],
+  chunks: [
+    "ねこが",
+    "にゃあと",
+    "ないた"
+  ]
+},
+
+
+
+
 
 
 

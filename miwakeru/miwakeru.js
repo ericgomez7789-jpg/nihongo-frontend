@@ -566,6 +566,19 @@ const miwakeruSentences = [
 
 
 
+{
+  id: "miwakeru52",
+  audio: "audio/awaseru52.wav",
+  answer: "The cat meowed.",
+  choices: [
+    "The cat meowed.",
+    "The cat barked."
+  ]
+},
+
+
+
+
 
 
 

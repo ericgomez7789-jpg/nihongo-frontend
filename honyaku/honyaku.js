@@ -669,6 +669,21 @@ const honyakuSentences = [
 
 
 
+{
+  id: "honyaku52",
+  audio: "audio/awaseru52.wav",
+  answer: "The cat meowed.",
+  choices: [
+    "The cat meowed.",
+    "The cat barked loudly.",
+    "The cat flew through the sky.",
+    "The cat quietly fell asleep."
+  ]
+},
+
+
+
+
 
 
 

@@ -2254,6 +2254,48 @@ const funDataset = [
 
 
 
+{
+  id: "fun52",
+  audio: "audio/fun52.wav",
+  choices: [
+    "The cat meowed.",
+    "The cat barked loudly.",
+    "The cat flew through the sky.",
+    "The cat quietly fell asleep."
+  ],
+  answer: "The cat meowed.",
+  fun: [
+    {
+      jp: "ねこ",
+      romaji: "neko",
+      en: "cat"
+    },
+    {
+      jp: "にゃあと",
+      romaji: "nyaa to",
+      en: "meow / with a meow sound"
+    },
+    {
+      jp: "なく",
+      romaji: "naku",
+      en: "to make an animal sound"
+    },
+    {
+      jp: "ないた",
+      romaji: "naita",
+      en: "made a sound / meowed"
+    },
+    {
+      jp: "ねこが にゃあと ないた",
+      romaji: "neko ga nyaa to naita",
+      en: "the cat meowed"
+    }
+  ]
+},
+
+
+
+
 
 
 
