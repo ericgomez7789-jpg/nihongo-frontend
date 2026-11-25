@@ -862,6 +862,40 @@ const seikuData = [
 
 
 
+{
+    id: "kaiwa27",
+
+    audio: "Audio/kaiwa27.wav",
+
+    idiom:
+        "うおうさおう",
+
+    meaning:
+        "to run around in confusion / to be in a panic",
+
+    choices: [
+
+        "to run around in confusion / to be in a panic",
+
+        "to sleep very deeply",
+
+        "to pretend not to notice something",
+
+        "to make a situation worse",
+
+        "to get involved in someone else's problem"
+
+    ],
+
+    example:
+        "あさから うおうさおうすることに なっちゃったの。"
+
+},
+
+
+
+
+
 
 
 

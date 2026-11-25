@@ -1456,6 +1456,63 @@ const kaiwaSentences = [
 
 
 
+{
+    id: "kaiwa27",
+
+    audio: "Audio/kaiwa27.wav",
+
+    speaker1:
+        "つま",
+
+    line1:
+        "ねえ、きみは、よふかししていたら、あさに なって しまって、あさから うおうさおうすることに なっちゃったの。しかも、それで ひに あぶらを そそぐような ことまで してしまったわ。",
+
+    speaker2:
+        "おっと",
+
+    line2:
+        "うーん、そこには くびを つっこまないで、みてみぬふりを しておいたほうが いいんじゃない？ つまり、しらぬぞんぜぬで いるってことだよ。",
+
+    translation:
+        "Wife: You know, I stayed up so late that it became morning, and I ended up running around in confusion from the start of the day. On top of that, I even made the situation worse.\n\nHusband: Hmm, wouldn't it be better not to get involved in that? Just pretend you didn't see it. In other words, act like you know nothing about it.",
+
+    translationChoices: [
+
+        "Wife: You know, I stayed up so late that it became morning, and I ended up running around in confusion from the start of the day. On top of that, I even made the situation worse.\n\nHusband: Hmm, wouldn't it be better not to get involved in that? Just pretend you didn't see it. In other words, act like you know nothing about it.",
+
+        "Wife: I woke up early and finished everything calmly.\n\nHusband: That's great. Keep working hard.",
+
+        "Wife: I spent the whole day reading books at the library.\n\nHusband: You should borrow more next time.",
+
+        "Wife: I cleaned the house and everything went perfectly.\n\nHusband: I'm proud of you.",
+
+        "Wife: I got plenty of sleep and felt energetic.\n\nHusband: Then let's go on a trip."
+    ],
+
+    question:
+        "なぜ おっとは 「みてみぬふりを しておいたほうが いい」と いいましたか？",
+
+    answer:
+        "その もんだいに くびを つっこまず、しらぬぞんぜぬで いたほうが いいと おもったから",
+
+    choices: [
+
+        "その もんだいに くびを つっこまず、しらぬぞんぜぬで いたほうが いいと おもったから",
+
+        "もっと ひに あぶらを そそいでほしいと おもったから",
+
+        "つまに もっと うおうさおうしてほしいと おもったから",
+
+        "よふかしを つづけることを すすめたかったから",
+
+        "つまが あさまで ねないことを ほめたかったから"
+
+    ]
+},
+
+
+
+
 
 
 
