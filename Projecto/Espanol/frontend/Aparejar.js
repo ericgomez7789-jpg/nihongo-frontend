@@ -668,6 +668,58 @@ const aparejarSentences = [
 
 
 
+{
+  id: "aparejar13",
+
+  audio: "audio/spanish/aparejar13.wav",
+
+  choices: [
+    "The stars are shining.",
+    "The stars are falling.",
+    "The stars are disappearing.",
+    "The stars are moving quickly."
+  ],
+
+  answer:
+    "The stars are shining.",
+
+  fun: [
+
+    {
+      es: "las estrellas",
+      en: "the stars"
+    },
+
+    {
+      es: "están",
+      en: "are"
+    },
+
+    {
+      es: "brillando",
+      en: "shining"
+    }
+
+  ],
+
+  chunks: [
+    "las estrellas",
+    "están",
+    "brillando"
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 

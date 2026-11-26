@@ -594,6 +594,19 @@ const miwakeruSentences = [
 
 
 
+{
+  id: "miwakeru54",
+  audio: "audio/awaseru54.wav",
+  answer: "Wow, to think you'd spend your free time studying until late at night.",
+  choices: [
+    "Wow, to think you'd spend your free time studying until late at night.",
+    "Wow, to think you'd spend your free time playing games until late at night."
+  ]
+},
+
+
+
+
 
 
 

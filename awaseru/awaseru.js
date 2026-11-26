@@ -2855,6 +2855,55 @@ const awaseruSentences = [
 
 
 
+{
+  id: "awaseru54",
+  audio: "audio/awaseru54.wav",
+  choices: [
+    "Wow, to think you'd spend your free time studying until late at night.",
+    "Wow, to think you'd sleep all day because you were tired.",
+    "Wow, to think you'd spend your free time playing games all night.",
+    "Wow, to think you'd quit studying before sunset."
+  ],
+  answer: "Wow, to think you'd spend your free time studying until late at night.",
+  fun: [
+    {
+      jp: "あや",
+      romaji: "aya",
+      en: "well, well! / my, my!"
+    },
+    {
+      jp: "よふけまで",
+      romaji: "yofuke made",
+      en: "until late at night"
+    },
+    {
+      jp: "ひまに あかせて",
+      romaji: "hima ni akasete",
+      en: "with free time on one's hands"
+    },
+    {
+      jp: "べんきょうする",
+      romaji: "benkyou suru",
+      en: "to study"
+    },
+    {
+      jp: "とはね",
+      romaji: "to wa ne",
+      en: "to think that... / I didn't expect that"
+    }
+  ],
+  chunks: [
+    "あや",
+    "よふけまで",
+    "ひまに あかせて",
+    "べんきょうする",
+    "とはね"
+  ]
+},
+
+
+
+
 
 
 

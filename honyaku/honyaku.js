@@ -700,6 +700,20 @@ const honyakuSentences = [
 
 
 
+{
+  id: "honyaku54",
+  audio: "audio/awaseru54.wav",
+  answer: "Wow, to think you'd spend your free time studying until late at night.",
+  choices: [
+    "Wow, to think you'd spend your free time studying until late at night.",
+    "Wow, to think you'd sleep all day because you were tired.",
+    "Wow, to think you'd spend your free time playing games all night.",
+    "Wow, to think you'd quit studying before sunset."
+  ]
+},
+
+
+
 
 
 
