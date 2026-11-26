@@ -1556,6 +1556,53 @@ const kaiwaSentences = [
 
 
 
+{
+    id: "kaiwa29",
+
+    audio: "Audio/kaiwa29.wav",
+
+    speaker1: "おとこのこ",
+
+    line1:
+        "あや、もんだいを とけないとはね。",
+
+    speaker2: "おんなのこ",
+
+    line2:
+        "ううん、それが どうしたの？",
+
+    translation:
+        "Boy: Well, well. To think you can't solve the problem.\n\nGirl: Hmm? So what?",
+
+    translationChoices: [
+
+        "Boy: Well, well. To think you can't solve the problem.\n\nGirl: Hmm? So what?",
+
+        "Boy: Amazing! You solved the problem perfectly.\n\nGirl: Yes, it was very easy.",
+
+        "Boy: I think this problem is impossible for anyone.\n\nGirl: Then let's stop studying forever.",
+
+        "Boy: To think you finished every problem already.\n\nGirl: That's because I practiced all month.",
+
+        "Boy: You should be worried about the problem.\n\nGirl: You're right. I'm very scared."
+    ],
+
+    question:
+        "なぜ おんなのこは 「それが どうしたの？」と いいましたか？",
+
+    answer:
+        "もんだいを とけないことを それほど きにしていないから",
+
+    choices: [
+        "もんだいを とけないことを それほど きにしていないから",
+        "もんだいを もう とけたと おもっているから",
+        "おとこのこに ほめられたと おもったから",
+        "もんだいが なくなったと おもったから",
+        "べんきょうを やめることに きめたから"
+    ]
+},
+
+
 
 
 

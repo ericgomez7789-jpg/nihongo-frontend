@@ -928,6 +928,35 @@ const seikuData = [
 
 
 
+{
+    id: "kaiwa29",
+
+    audio: "Audio/kaiwa29.wav",
+
+    idiom:
+        "あや ～ とはね",
+
+    meaning:
+        "Well, well... To think that...",
+
+    choices: [
+
+        "Well, well... To think that...",
+
+        "with great effort",
+
+        "to get around to doing something",
+
+        "to disappoint expectations",
+
+        "so what? / what's the big deal?"
+    ],
+
+    example:
+        "あや、もんだいを とけないとはね。"
+},
+
+
 
 
 
