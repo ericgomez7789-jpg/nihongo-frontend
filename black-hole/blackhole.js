@@ -1152,6 +1152,21 @@ const blackHoleDataset = [
 
 
 
+{
+  id: "blackhole59",
+  audio: "audio/blackhole59.wav",
+  choices: [
+    "These are words used when introducing yourself to someone for the first time at a wedding. The speaker says they attended university with the bride.",
+    "These are words used when meeting a business client. The speaker says they currently work with the groom.",
+    "These are words used when visiting a neighbor. The speaker apologizes for arriving without notice."
+  ],
+  answer: "These are words used when introducing yourself to someone for the first time at a wedding. The speaker says they attended university with the bride.",
+  japanese: "けっこんしきで はじめて おあいする かたへの あいさつです。はじめまして。しんぷと だいがくで ごいっしょ しておりました、ゴメスと もうします。"
+},
+
+
+
+
 
 
 
