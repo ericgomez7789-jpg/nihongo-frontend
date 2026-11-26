@@ -2806,6 +2806,53 @@ const awaseruSentences = [
 
 
 
+{
+  id: "awaseru53",
+  audio: "audio/awaseru53.wav",
+  choices: [
+    "The tiger roared.",
+    "The tiger meowed softly.",
+    "The tiger swam across the ocean.",
+    "The tiger climbed a tall building."
+  ],
+  answer: "The tiger roared.",
+  fun: [
+    {
+      jp: "とら",
+      romaji: "tora",
+      en: "tiger"
+    },
+    {
+      jp: "ガオーと",
+      romaji: "gaoo to",
+      en: "with a roar"
+    },
+    {
+      jp: "なく",
+      romaji: "naku",
+      en: "to make an animal sound"
+    },
+    {
+      jp: "ないた",
+      romaji: "naita",
+      en: "roared"
+    },
+    {
+      jp: "とらが",
+      romaji: "tora ga",
+      en: "the tiger"
+    }
+  ],
+  chunks: [
+    "とらが",
+    "ガオーと",
+    "ないた"
+  ]
+},
+
+
+
+
 
 
 

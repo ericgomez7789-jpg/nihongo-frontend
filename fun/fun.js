@@ -2298,6 +2298,48 @@ const funDataset = [
 
 
 
+{
+  id: "fun53",
+  audio: "audio/fun53.wav",
+  choices: [
+    "The tiger roared.",
+    "The tiger meowed softly.",
+    "The tiger swam across the ocean.",
+    "The tiger climbed a tall building."
+  ],
+  answer: "The tiger roared.",
+  fun: [
+    {
+      jp: "とら",
+      romaji: "tora",
+      en: "tiger"
+    },
+    {
+      jp: "ガオーと",
+      romaji: "gaoo to",
+      en: "roar! / with a roar"
+    },
+    {
+      jp: "なく",
+      romaji: "naku",
+      en: "to make an animal sound"
+    },
+    {
+      jp: "ないた",
+      romaji: "naita",
+      en: "made a sound / roared"
+    },
+    {
+      jp: "とらが ガオーと ないた",
+      romaji: "tora ga gaoo to naita",
+      en: "the tiger roared"
+    }
+  ]
+},
+
+
+
+
 
 
 

@@ -684,6 +684,19 @@ const honyakuSentences = [
 
 
 
+{
+  id: "honyaku53",
+  audio: "audio/awaseru53.wav",
+  answer: "The tiger roared.",
+  choices: [
+    "The tiger roared.",
+    "The tiger meowed softly.",
+    "The tiger swam across the ocean.",
+    "The tiger climbed a tall building."
+  ]
+},
+
+
 
 
 
