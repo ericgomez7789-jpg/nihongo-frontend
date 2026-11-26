@@ -764,6 +764,21 @@ const awaseruHonyaku = [
 
 
 
+{
+  id: "honyaku55",
+  audio: "audio/awaseru55.wav",
+  japanese: "荒れ狂う嵐の中で足をくじき、もう散々だった。",
+  hiragana: "あれくるう あらしのなかで あしを くじき、もう さんざんだった。",
+  answer: "I sprained my ankle in the raging storm and had a terrible time.",
+  choices: [
+    "I sprained my ankle in the raging storm and had a terrible time.",
+    "I enjoyed walking through the calm weather all day.",
+    "I rested safely indoors while the storm passed.",
+    "I found shelter immediately and felt relieved."
+  ]
+},
+
+
 
 
 

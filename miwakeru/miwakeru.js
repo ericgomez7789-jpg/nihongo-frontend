@@ -607,6 +607,17 @@ const miwakeruSentences = [
 
 
 
+{
+  id: "miwakeru55",
+  audio: "audio/awaseru55.wav",
+  answer: "I sprained my ankle in the raging storm and had a terrible time.",
+  choices: [
+    "I sprained my ankle in the raging storm and had a terrible time.",
+    "I sprained my ankle in the raging storm and was completely fine."
+  ]
+},
+
+
 
 
 

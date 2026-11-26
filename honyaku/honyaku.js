@@ -715,6 +715,19 @@ const honyakuSentences = [
 
 
 
+{
+  id: "honyaku55",
+  audio: "audio/awaseru55.wav",
+  answer: "I sprained my ankle in the raging storm and had a terrible time.",
+  choices: [
+    "I sprained my ankle in the raging storm and had a terrible time.",
+    "I enjoyed walking through the calm weather all day.",
+    "I rested safely indoors while the storm passed.",
+    "I found shelter immediately and felt relieved."
+  ]
+},
+
+
 
 
 

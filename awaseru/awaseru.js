@@ -2904,6 +2904,53 @@ const awaseruSentences = [
 
 
 
+{
+  id: "awaseru55",
+  audio: "audio/awaseru55.wav",
+  choices: [
+    "I sprained my ankle in the raging storm and had a terrible time.",
+    "I enjoyed walking through the calm weather all day.",
+    "I rested safely indoors while the storm passed.",
+    "I found shelter immediately and felt relieved."
+  ],
+  answer: "I sprained my ankle in the raging storm and had a terrible time.",
+  fun: [
+    {
+      jp: "あれくるう",
+      romaji: "arekuruu",
+      en: "to rage violently"
+    },
+    {
+      jp: "あらし",
+      romaji: "arashi",
+      en: "storm"
+    },
+    {
+      jp: "あしを くじく",
+      romaji: "ashi o kujiku",
+      en: "to sprain one's ankle"
+    },
+    {
+      jp: "もう さんざん",
+      romaji: "mou sanzan",
+      en: "having a terrible time"
+    },
+    {
+      jp: "だった",
+      romaji: "datta",
+      en: "was"
+    }
+  ],
+  chunks: [
+    "あれくるう",
+    "あらしのなかで",
+    "あしを くじき",
+    "もう さんざん",
+    "だった"
+  ]
+},
+
+
 
 
 
