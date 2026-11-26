@@ -2394,7 +2394,7 @@ function checkKnockout() {
 
         boxingNextRound();
 
-    }, 30000);
+    }, 20000);
 
 }
 
