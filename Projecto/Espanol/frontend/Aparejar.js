@@ -714,6 +714,56 @@ const aparejarSentences = [
 
 
 
+{
+  id: "aparejar14",
+
+  audio: "audio/spanish/aparejar14.wav",
+
+  choices: [
+    "The leaves whisper softly in the wind.",
+    "The leaves fall quickly in the wind.",
+    "The leaves dance violently in the storm.",
+    "The leaves disappear in the forest."
+  ],
+
+  answer:
+    "The leaves whisper softly in the wind.",
+
+  fun: [
+
+    {
+      es: "las hojas",
+      en: "the leaves"
+    },
+
+    {
+      es: "susurran",
+      en: "whisper"
+    },
+
+    {
+      es: "suavemente",
+      en: "softly"
+    },
+
+    {
+      es: "con el viento",
+      en: "in the wind"
+    }
+
+  ],
+
+  chunks: [
+    "las hojas",
+    "susurran",
+    "suavemente",
+    "con el viento"
+  ]
+},
+
+
+
+
 
 
 
