@@ -775,7 +775,7 @@ const awaseruHonyaku = [
 
 
 const blackHoleDataset = [
-  {
+ {
   id: "blackhole1",
   audio: "audio/blackhole1.wav",
   choices: [
@@ -784,10 +784,9 @@ const blackHoleDataset = [
     "I greeted my boss at night with good evening."
   ],
   answer: "I greeted my boss politely in the morning.",
-  japanese: "朝上司に会った時「おはようございます」と申しました。"
+  japanese: "朝上司に会った時「おはようございます」と申しました。",
+  hiragana: "あさ じょうしに あった とき「おはようございます」と もうしました。"
 },
-
-
 
 {
   id: "blackhole2",
@@ -798,9 +797,9 @@ const blackHoleDataset = [
     "I apologized to my boss for being late."
   ],
   answer: "I introduced myself politely to the department chief for the first time.",
-  japanese: "はじめて部長に会ったとき、「はじめまして、ゴメズ・エリックと申します。よろしくお願いいたします」と言いました。"
+  japanese: "はじめて部長に会ったとき、「はじめまして、ゴメズ・エリックと申します。よろしくお願いいたします」と言いました。",
+  hiragana: "はじめて ぶちょうに あった とき、「はじめまして、ごめず・えりっくと もうします。よろしく おねがいいたします」と いいました。"
 },
-
 
 {
   id: "blackhole3",
@@ -811,12 +810,9 @@ const blackHoleDataset = [
     "I asked everyone to stay longer for an additional discussion."
   ],
   answer: "At the end of the formal event, I politely took my leave.",
-  japanese: "大会の別れ際では、私が「失礼いたしました」と申し上げました。"
+  japanese: "大会の別れ際では、私が「失礼いたしました」と申し上げました。",
+  hiragana: "たいかいの わかれぎわでは、わたしが「しつれい いたしました」と もうしあげました。"
 },
-
-
-
-
 
 {
   id: "blackhole4",
@@ -827,12 +823,9 @@ const blackHoleDataset = [
     "I asked my team to work overtime without warning."
   ],
   answer: "I expressed appreciation to a coworker for their hard work.",
-  japanese: "同僚をねぎらうために、「お疲れさまでございました」と申し上げました。"
+  japanese: "同僚をねぎらうために、「お疲れさまでございました」と申し上げました。",
+  hiragana: "どうりょうを ねぎらう ために、「おつかれさまで ございました」と もうしあげました。"
 },
-
-
-
-
 
 {
   id: "blackhole5",
@@ -843,12 +836,9 @@ const blackHoleDataset = [
     "I complained to my boss about recent workload issues."
   ],
   answer: "I greeted my department chief politely after not seeing him for a long time.",
-  japanese: "久しぶりに部長にお会いした時、「ご無沙汰しております」と申し上げました。"
+  japanese: "久しぶりに部長にお会いした時、「ご無沙汰しております」と申し上げました。",
+  hiragana: "ひさしぶりに ぶちょうに おあいした とき、「ごぶさたして おります」と もうしあげました。"
 },
-
-
-
-
 
 {
   id: "blackhole6",
@@ -859,11 +849,9 @@ const blackHoleDataset = [
     "I asked a stranger for directions in an informal way."
   ],
   answer: "I introduced myself politely to someone connected to my husband.",
-  japanese: "夫の関係者に名乗る場合は、ワタクシは夫の妻でございますと申しました。"
+  japanese: "夫の関係者に名乗る場合は、ワタクシは夫の妻でございますと申しました。",
+  hiragana: "おっとの かんけいしゃに なのる ばあいは、わたくしは おっとの つまで ございますと もうしました。"
 },
-
-
-
 
 {
   id: "blackhole7",
@@ -874,13 +862,9 @@ const blackHoleDataset = [
     "I asked a visitor to wait outside in an informal tone."
   ],
   answer: "I politely thanked a stranger at my company for opening the door for me.",
-  japanese: "会社で面識のない方に戸を開けていただいたので、私が「恐れ入ります」と申し上げました。"
+  japanese: "会社で面識のない方に戸を開けていただいたので、私が「恐れ入ります」と申し上げました。",
+  hiragana: "かいしゃで めんしきの ない かたに とを あけて いただいたので、わたしが「おそれいります」と もうしあげました。"
 },
-
-
-
-
-
 
 {
   id: "blackhole8",
@@ -891,12 +875,9 @@ const blackHoleDataset = [
     "I ignored someone after accidentally stepping on their foot."
   ],
   answer: "I apologized formally after accidentally stepping on someone's foot at the company.",
-  japanese: "会社で誰かの足を踏んでしまった時、ワタクシが「申し訳ございません」と申し上げました。"
+  japanese: "会社で誰かの足を踏んでしまった時、ワタクシが「申し訳ございません」と申し上げました。",
+  hiragana: "かいしゃで だれかの あしを ふんでしまった とき、わたくしが「もうしわけ ございません」と もうしあげました。"
 },
-
-
-
-
 
 {
   id: "blackhole9",
@@ -907,14 +888,9 @@ const blackHoleDataset = [
     "I scolded a coworker harshly for cutting in line."
   ],
   answer: "I politely directed someone to the end of the line after they cut in.",
-  japanese: "会社で誰かが列を割り込んだ時、ワタシが「あちらが列の最後尾でございます」と申し上げました。"
+  japanese: "会社で誰かが列を割り込んだ時、ワタシが「あちらが列の最後尾でございます」と申し上げました。",
+  hiragana: "かいしゃで だれかが れつを わりこんだ とき、わたしが「あちらが れつの さいこうびで ございます」と もうしあげました。"
 },
-
-
-
-
-
-
 
 {
   id: "blackhole10",
@@ -925,10 +901,9 @@ const blackHoleDataset = [
     "I demanded financial help from a colleague in a rude manner."
   ],
   answer: "I expressed formal gratitude after someone kindly lent me money when I was in need.",
-  japanese: "小遣いがなく困っていたところ、ある方が私にご親切でお金を貸してくださり、そのご厚意に対して御礼を申し上げました。"
+  japanese: "小遣いがなく困っていたところ、ある方が私にご親切でお金を貸してくださり、そのご厚意に対して御礼を申し上げました。",
+  hiragana: "こづかいが なく こまっていた ところ、ある かたが わたしに ごしんせつで おかねを かしてくださり、その ごこういに たいして おれいを もうしあげました。"
 },
-
-
 
 
 
@@ -941,13 +916,9 @@ const blackHoleDataset = [
     "I complained to the nurse about my mother's treatment."
   ],
   answer: "I expressed gratitude to a nurse for kindly taking care of my mother.",
-  japanese: "病院で看護師の方が母にいろいろとお世話くださり、「いろいろとお世話になりました」と申し上げました。"
+  japanese: "病院で看護師の方が母にいろいろとお世話くださり、「いろいろとお世話になりました」と申し上げました。",
+  hiragana: "びょういんで かんごしの かたが ははに いろいろと おせわくださり、「いろいろと おせわに なりました」と もうしあげました。"
 },
-
-
-
-
-
 
 {
   id: "blackhole12",
@@ -958,12 +929,9 @@ const blackHoleDataset = [
     "I asked someone else to give up their seat for my grandmother."
   ],
   answer: "I offered my seat to my grandmother when I saw her passing by.",
-  japanese: "わたしは祖母が通りかかるのをみると、すぐ席をゆずるために「どうぞおかけください」と申しました。"
+  japanese: "わたしは祖母が通りかかるのをみると、すぐ席をゆずるために「どうぞおかけください」と申しました。",
+  hiragana: "わたしは そぼが とおりかかるのを みると、すぐ せきを ゆずるために「どうぞ おかけください」と もうしました。"
 },
-
-
-
-
 
 {
   id: "blackhole13",
@@ -974,11 +942,9 @@ const blackHoleDataset = [
     "I ignored someone who asked me for directions."
   ],
   answer: "I humbly told a stranger that I did not know the area when asked for directions.",
-  japanese: "だれかに道を聞かれたら、わたしがわからない場合は「すみません、わたしもこのあたりはよく存じておりません」と申します。"
+  japanese: "だれかに道を聞かれたら、わたしがわからない場合は「すみません、わたしもこのあたりはよく存じておりません」と申します。",
+  hiragana: "だれかに みちを きかれたら、わたしが わからない ばあいは「すみません、わたしも この あたりは よく ぞんじて おりません」と もうします。"
 },
-
-
-
 
 {
   id: "blackhole14",
@@ -989,12 +955,9 @@ const blackHoleDataset = [
     "I ignored the person who asked me to try on the new clothes."
   ],
   answer: "I politely explained that the new clothes did not fit me when someone asked me to try them on.",
-  japanese: "だれかに新しい服の試着をお願いされたら、「大きさが合わなかったのでございます」と申します。"
+  japanese: "だれかに新しい服の試着をお願いされたら、「大きさが合わなかったのでございます」と申します。",
+  hiragana: "だれかに あたらしい ふくの しちゃくを おねがいされたら、「おおきさが あわなかったので ございます」と もうします。"
 },
-
-
-
-
 
 {
   id: "blackhole15",
@@ -1005,12 +968,9 @@ const blackHoleDataset = [
     "I scolded a person who looked unwell for sitting on the ground."
   ],
   answer: "I politely asked a person who looked unwell if something was wrong.",
-  japanese: "具合の悪そうな人に声をかけると「どうかなさいましたか」とお声がけします。"
+  japanese: "具合の悪そうな人に声をかけると「どうかなさいましたか」とお声がけします。",
+  hiragana: "ぐあいの わるそうな ひとに こえを かけると「どうかなさいましたか」と おこえがけします。"
 },
-
-
-
-
 
 {
   id: "blackhole16",
@@ -1021,12 +981,9 @@ const blackHoleDataset = [
     "I told the person that I had no idea how long it would take."
   ],
   answer: "I politely explained the directions while mentioning that it takes about fifteen minutes from here.",
-  japanese: "あるところに行く道をお教えしながら、「こちらから約十五分ほどでございます」と申しました。"
+  japanese: "あるところに行く道をお教えしながら、「こちらから約十五分ほどでございます」と申しました。",
+  hiragana: "ある ところに いく みちを おおしえしながら、「こちらから やく じゅうごふんほどで ございます」と もうしました。"
 },
-
-
-
-
 
 {
   id: "blackhole17",
@@ -1037,12 +994,9 @@ const blackHoleDataset = [
     "I insisted that takeout was forbidden even though I wasn’t sure."
   ],
   answer: "I politely asked whether takeout was allowed, and the employee confirmed that it was.",
-  japanese: "レストランで食べ物をお持ち帰りしてもよろしいかと私がうかがうと、従業員が「はい、お持ち帰りでも大丈夫でございます」と申しました。"
+  japanese: "レストランで食べ物をお持ち帰りしてもよろしいかと私がうかがうと、従業員が「はい、お持ち帰りでも大丈夫でございます」と申しました。",
+  hiragana: "れすとらんで たべものを おもちかえりしても よろしいかと わたしが うかがうと、じゅうぎょういんが「はい、おもちかえりでも だいじょうぶで ございます」と もうしました。"
 },
-
-
-
-
 
 {
   id: "blackhole18",
@@ -1053,12 +1007,9 @@ const blackHoleDataset = [
     "I criticized their children's career choices and discouraged them."
   ],
   answer: "I offered my heartfelt congratulations on their children's successful employment and wished them continued success.",
-  japanese: "お嬢様とご子息様のご就職、誠におめでとうございます。今後ますますのご活躍を心よりお祈り申し上げます。"
+  japanese: "お嬢様とご子息様のご就職、誠におめでとうございます。今後ますますのご活躍を心よりお祈り申し上げます。",
+  hiragana: "おじょうさまと ごしそくさまの ごしゅうしょく、まことに おめでとうございます。こんご ますますの ごかつやくを こころより おいのり もうしあげます。"
 },
-
-
-
-
 
 {
   id: "blackhole19",
@@ -1069,13 +1020,9 @@ const blackHoleDataset = [
     "I bluntly told them they looked older than expected."
   ],
   answer: "I offered birthday congratulations and politely remarked that they looked young.",
-  japanese: "お誕生日おめでとうございます。お若く見えますと申し上げました。"
+  japanese: "お誕生日おめでとうございます。お若く見えますと申し上げました。",
+  hiragana: "おたんじょうび おめでとうございます。おわかく みえますと もうしあげました。"
 },
-
-
-
-
-
 
 {
   id: "blackhole20",
@@ -1086,9 +1033,9 @@ const blackHoleDataset = [
     "I criticized their outfit and said their smile looked awkward."
   ],
   answer: "I congratulated them on their birthday and politely remarked that their formal attire suited them beautifully and their smile was truly lovely.",
-  japanese: "お誕生日おめでとうございます。晴れ着がよくお似合いで、笑顔がとても素敵でいらっしゃいました。"
+  japanese: "お誕生日おめでとうございます。晴れ着がよくお似合いで、笑顔がとても素敵でいらっしゃいました。",
+  hiragana: "おたんじょうび おめでとうございます。はれぎが よく おにあいで、えがおが とても すてきで いらっしゃいました。"
 },
-
 
 
 
@@ -1102,12 +1049,9 @@ const blackHoleDataset = [
     "I said their child's future did not seem promising."
   ],
   answer: "I congratulated them on their child's school entrance and expressed that their child's future growth is something to look forward to.",
-  japanese: "お子様のご入学おめでとうございます。これからのご成長がますます楽しみでございます。"
+  japanese: "お子様のご入学おめでとうございます。これからのご成長がますます楽しみでございます。",
+  hiragana: "おこさまの ごにゅうがく おめでとうございます。これからの ごせいちょうが ますます たのしみで ございます。"
 },
-
-
-
-
 
 {
   id: "blackhole22",
@@ -1118,13 +1062,9 @@ const blackHoleDataset = [
     "I said their newborn did not seem healthy."
   ],
   answer: "I congratulated them on the birth of their baby and mentioned that she is a healthy and lively girl.",
-  japanese: "赤ちゃんのご出産おめでとうございます。元気で健やかな女の子でございます。"
+  japanese: "赤ちゃんのご出産おめでとうございます。元気で健やかな女の子でございます。",
+  hiragana: "あかちゃんの ごしゅっさん おめでとうございます。げんきで すこやかな おんなのこで ございます。"
 },
-
-
-
-
-
 
 {
   id: "blackhole23",
@@ -1135,12 +1075,9 @@ const blackHoleDataset = [
     "I complained that my supervisor did not lend me enough money."
   ],
   answer: "I expressed my gratitude to my supervisor for kindly lending me money.",
-  japanese: "上司が私にお金を貸してくださり、そのご厚意に対して御礼を申し上げました。"
+  japanese: "上司が私にお金を貸してくださり、そのご厚意に対して御礼を申し上げました。",
+  hiragana: "じょうしが わたしに おかねを かしてくださり、その ごこういに たいして おれいを もうしあげました。"
 },
-
-
-
-
 
 {
   id: "blackhole24",
@@ -1151,12 +1088,9 @@ const blackHoleDataset = [
     "I complained that the goods were not delivered quickly enough."
   ],
   answer: "I thanked them sincerely for taking the trouble to deliver the goods so carefully.",
-  japanese: "納品物をご丁寧にお届けいただき、誠にありがとうございます。"
+  japanese: "納品物をご丁寧にお届けいただき、誠にありがとうございます。",
+  hiragana: "のうひんぶつを ごていねいに おとどけいただき、まことに ありがとうございます。"
 },
-
-
-
-
 
 {
   id: "blackhole25",
@@ -1167,11 +1101,9 @@ const blackHoleDataset = [
     "I complained that they did not take good enough care of my dog."
   ],
   answer: "I thanked them politely for taking the trouble to look after my dog and for all their help.",
-  japanese: "わざわざ犬の世話をしていただき、いろいろとお世話になりましたと申し上げました。"
+  japanese: "わざわざ犬の世話をしていただき、いろいろとお世話になりましたと申し上げました。",
+  hiragana: "わざわざ いぬの せわを していただき、いろいろと おせわに なりましたと もうしあげました。"
 },
-
-
-
 
 {
   id: "blackhole26",
@@ -1182,14 +1114,9 @@ const blackHoleDataset = [
     "I ignored their new home entirely and talked about something unrelated."
   ],
   answer: "I congratulated them on their new home and commented that it is a lovely place rich in nature.",
-  japanese: "ご新築をおめでとうございます。自然が豊かで良いところですね。"
+  japanese: "ご新築をおめでとうございます。自然が豊かで良いところですね。",
+  hiragana: "ごしんちくを おめでとうございます。しぜんが ゆたかで よい ところですね。"
 },
-
-
-
-
-
-
 
 {
   id: "blackhole27",
@@ -1200,12 +1127,9 @@ const blackHoleDataset = [
     "I advised them to prepare for future disasters and avoid worrying too much."
   ],
   answer: "I understand you have been through a difficult experience because of this disaster, and I offer my heartfelt sympathies.",
-  japanese: "このたびの災害により、大変な思いをされたことと存じます。心よりお見舞い申し上げます。"
+  japanese: "このたびの災害により、大変な思いをされたことと存じます。心よりお見舞い申し上げます。",
+  hiragana: "このたびの さいがいにより、たいへんな おもいを されたことと ぞんじます。こころより おみまい もうしあげます。"
 },
-
-
-
-
 
 {
   id: "blackhole28",
@@ -1216,12 +1140,9 @@ const blackHoleDataset = [
     "I told them that they should return to work as soon as possible after recovering."
   ],
   answer: "As I was leaving after visiting the sick person, I respectfully said, 'Please take good care of yourself.'",
-  japanese: "お見舞いの帰り際に、「どうぞお大事になさってください」と申し上げました。"
+  japanese: "お見舞いの帰り際に、「どうぞお大事になさってください」と申し上げました。",
+  hiragana: "おみまいの かえりぎわに、「どうぞ おだいじに なさってください」と もうしあげました。"
 },
-
-
-
-
 
 {
   id: "blackhole29",
@@ -1232,13 +1153,9 @@ const blackHoleDataset = [
     "I recommended that they hire a professional caregiver immediately."
   ],
   answer: "I expressed gratitude for their daily caregiving and told them to take care of their own health as well.",
-  japanese: "日々のご看病に感謝申し上げます。お疲れが出ませんよう、どうぞご自愛ください。"
+  japanese: "日々のご看病に感謝申し上げます。お疲れが出ませんよう、どうぞご自愛ください。",
+  hiragana: "ひびの ごかんびょうに かんしゃ もうしあげます。おつかれが でませんよう、どうぞ ごじあいください。"
 },
-
-
-
-
-
 
 {
   id: "blackhole30",
@@ -1249,15 +1166,9 @@ const blackHoleDataset = [
     "I informed the nurse that I would return the next day."
   ],
   answer: "When entering the hospital room during a visit, I respectfully said, 'Excuse my intrusion.'",
-  japanese: "お見舞いで病室に入る時、「おじゃまいたします」と申し上げました。"
+  japanese: "お見舞いで病室に入る時、「おじゃまいたします」と申し上げました。",
+  hiragana: "おみまいで びょうしつに はいる とき、「おじゃま いたします」と もうしあげました。"
 },
-
-
-
-
-
-
-
 
 {
   id: "blackhole31",
@@ -1268,14 +1179,9 @@ const blackHoleDataset = [
     "I advised the patient to follow the doctor's instructions more carefully."
   ],
   answer: "During a hospital visit, I encouraged the patient by saying, 'You seem to be doing well, which puts me at ease.'",
-  japanese: "お見舞いの際、患者さんを元気づけるために、「お元気そうで安心いたしました」と申し上げました。"
+  japanese: "お見舞いの際、患者さんを元気づけるために、「お元気そうで安心いたしました」と申し上げました。",
+  hiragana: "おみまいの さい、かんじゃさんを げんきづける ために、「おげんきそうで あんしん いたしました」と もうしあげました。"
 },
-
-
-
-
-
-
 
 {
   id: "blackhole32",
@@ -1286,16 +1192,9 @@ const blackHoleDataset = [
     "During a hospital visit, I suggested that the patient take a walk outside the hospital."
   ],
   answer: "During a hospital visit, I politely asked about the patient's condition by saying, 'How have you been feeling?'",
-  japanese: "お見舞いに伺い、お具合をお尋ねする時、「お加減はいかがでいらっしゃいますか」と申し上げました。"
+  japanese: "お見舞いに伺い、お具合をお尋ねする時、「お加減はいかがでいらっしゃいますか」と申し上げました。",
+  hiragana: "おみまいに うかがい、おぐあいを おたずねする とき、「おかげんは いかがで いらっしゃいますか」と もうしあげました。"
 },
-
-
-
-
-
-
-
-
 
 {
   id: "blackhole33",
@@ -1306,16 +1205,9 @@ const blackHoleDataset = [
     "At a restaurant, I immediately canceled my order without speaking to the staff."
   ],
   answer: "At a restaurant, since my ordered food had not arrived for quite some time, I politely asked how much longer it would take.",
-  japanese: "注文した料理がなかなか来ないので、あとどのぐらいでできますかとお尋ねしました。"
+  japanese: "注文した料理がなかなか来ないので、あとどのぐらいでできますかとお尋ねしました。",
+  hiragana: "ちゅうもんした りょうりが なかなか こないので、あと どのぐらいで できますかと おたずねしました。"
 },
-
-
-
-
-
-
-
-
 
 {
   id: "blackhole34",
@@ -1326,13 +1218,9 @@ const blackHoleDataset = [
     "My supervisor invited me to a restaurant, but I declined because I was not hungry."
   ],
   answer: "My supervisor took me out for a meal and treated me. At the end of the meal, I respectfully thanked them and told them the food was very delicious.",
-  japanese: "上司がワタクシを食事に連れて行ってくださり、おごってくださいました。それから食事の終わりに「ごちそうさまでした。とても美味しかったです。ありがとうございました。」と申し上げました。"
+  japanese: "上司がワタクシを食事に連れて行ってくださり、おごってくださいました。それから食事の終わりに「ごちそうさまでした。とても美味しかったです。ありがとうございました。」と申し上げました。",
+  hiragana: "じょうしが わたくしを しょくじに つれていって くださり、おごって くださいました。それから しょくじの おわりに「ごちそうさまでした。とても おいしかったです。ありがとうございました。」と もうしあげました。"
 },
-
-
-
-
-
 
 {
   id: "blackhole35",
@@ -1343,7 +1231,8 @@ const blackHoleDataset = [
     "At a restaurant, I thanked the server and immediately paid the bill before ordering."
   ],
   answer: "At a restaurant, when I was ready to place an order, I politely called the server and said, 'Excuse me, may I place an order?'",
-  japanese: "飲食店で、注文しようと思い、店員さんに「すみません、注文をお願いできますか」と申し上げました。"
+  japanese: "飲食店で、注文しようと思い、店員さんに「すみません、注文をお願いできますか」と申し上げました。",
+  hiragana: "いんしょくてんで、ちゅうもんしようと おもい、てんいんさんに「すみません、ちゅうもんを おねがいできますか」と もうしあげました。"
 },
 
 
@@ -1360,13 +1249,9 @@ const blackHoleDataset = [
     "At a restaurant, I asked the other person to wait until both meals had arrived before eating."
   ],
   answer: "At a restaurant, when the other person's meal arrived before mine, I politely said, 'Please go ahead and eat before it gets cold.'",
-  japanese: "飲食店で、相手の料理が先に来たので、「どうぞ、冷めないうちに召し上がってください」と申し上げました。"
+  japanese: "飲食店で、相手の料理が先に来たので、「どうぞ、冷めないうちに召し上がってください」と申し上げました。",
+  hiragana: "いんしょくてんで、あいての りょうりが さきに きたので、「どうぞ、さめない うちに めしあがってください」と もうしあげました。"
 },
-
-
-
-
-
 
 {
   id: "blackhole37",
@@ -1377,12 +1262,9 @@ const blackHoleDataset = [
     "At a restaurant, when my meal arrived first, I insisted that neither of us should eat until both meals were served."
   ],
   answer: "At a restaurant, when my meal arrived before the other person's and they politely encouraged me to begin first, I respectfully said, 'Please excuse me, I'll start first.'",
-  japanese: "飲食店で、自分の料理が先に運ばれて来て、相手から「先にどうぞ」と勧められた時は、「お先にいただきます」と申し上げます。"
+  japanese: "飲食店で、自分の料理が先に運ばれて来て、相手から「先にどうぞ」と勧められた時は、「お先にいただきます」と申し上げます。",
+  hiragana: "いんしょくてんで、じぶんの りょうりが さきに はこばれて きて、あいてから「さきに どうぞ」と すすめられた ときは、「おさきに いただきます」と もうしあげます。"
 },
-
-
-
-
 
 {
   id: "blackhole38",
@@ -1393,12 +1275,9 @@ const blackHoleDataset = [
     "At a drinking gathering, I left without saying anything after finishing my drink."
   ],
   answer: "At a drinking gathering, when I began to feel intoxicated, I politely said, 'I've already had enough, so I'll stop here.'",
-  japanese: "飲み会で、酔ってきた時は、「もう十分いただきました。このくらいにしておきます」と申し上げます。"
+  japanese: "飲み会で、酔ってきた時は、「もう十分いただきました。このくらいにしておきます」と申し上げます。",
+  hiragana: "のみかいで、よってきた ときは、「もう じゅうぶん いただきました。このくらいに しておきます」と もうしあげます。"
 },
-
-
-
-
 
 {
   id: "blackhole39",
@@ -1409,12 +1288,9 @@ const blackHoleDataset = [
     "When offering someone a drink, I politely said, 'I will drink yours as well.'"
   ],
   answer: "When offering someone a drink, I politely said, 'Would you like one?'",
-  japanese: "お酒を勧めるときは、「おひとついかがですか」と申し上げます。"
+  japanese: "お酒を勧めるときは、「おひとついかがですか」と申し上げます。",
+  hiragana: "おさけを すすめる ときは、「おひとつ いかがですか」と もうしあげます。"
 },
-
-
-
-
 
 {
   id: "blackhole40",
@@ -1425,13 +1301,9 @@ const blackHoleDataset = [
     "When I noticed the other person's glass was empty, I said nothing and left the table."
   ],
   answer: "When I noticed the other person's glass was empty, I politely said, 'My apologies for not noticing. Would you like a refill?'",
-  japanese: "相手のグラスが空になっていたら、「気がつかず、失礼いたしました。おかわりはいかがですか」と申し上げます。"
+  japanese: "相手のグラスが空になっていたら、「気がつかず、失礼いたしました。おかわりはいかがですか」と申し上げます。",
+  hiragana: "あいての ぐらすが からに なっていたら、「きがつかず、しつれい いたしました。おかわりは いかがですか」と もうしあげます。"
 },
-
-
-
-
-
 
 {
   id: "blackhole41",
@@ -1442,13 +1314,9 @@ const blackHoleDataset = [
     "When offered alcohol, I ignored the speaker and walked away."
   ],
   answer: "When offered alcohol, I politely said, 'I am not much of a drinker.'",
-  japanese: "お酒を勧められた時は、「私は不調法な者ですから」と申し上げます。"
+  japanese: "お酒を勧められた時は、「私は不調法な者ですから」と申し上げます。",
+  hiragana: "おさけを すすめられた ときは、「わたしは ぶちょうほうな ものですから」と もうしあげます。"
 },
-
-
-
-
-
 
 {
   id: "blackhole42",
@@ -1459,13 +1327,9 @@ const blackHoleDataset = [
     "When inviting two people, I told them not to attend."
   ],
   answer: "When inviting two people, I warmly said, 'If you'd like, please come.'",
-  japanese: "心のこもった誘い方で、「お二人とも、よろしかったらいらっしゃってください」と申し上げました。"
+  japanese: "心のこもった誘い方で、「お二人とも、よろしかったらいらっしゃってください」と申し上げました。",
+  hiragana: "こころの こもった さそいかたで、「おふたりとも、よろしかったら いらっしゃってください」と もうしあげました。"
 },
-
-
-
-
-
 
 {
   id: "blackhole43",
@@ -1476,13 +1340,9 @@ const blackHoleDataset = [
     "When inviting three people, I warned them not to visit my home."
   ],
   answer: "When inviting three people, I warmly said, 'I cannot offer much hospitality, but please do come.'",
-  japanese: "心のこもった誘い方で、「お三人とも、大したおもてなしもできませんが、ぜひいらしてください」と申し上げました。"
+  japanese: "心のこもった誘い方で、「お三人とも、大したおもてなしもできませんが、ぜひいらしてください」と申し上げました。",
+  hiragana: "こころの こもった さそいかたで、「おさんにんとも、たいした おもてなしも できませんが、ぜひ いらしてください」と もうしあげました。"
 },
-
-
-
-
-
 
 {
   id: "blackhole44",
@@ -1493,13 +1353,9 @@ const blackHoleDataset = [
     "When inviting others, I asked them to postpone the gathering."
   ],
   answer: "When inviting others warmly, I said, 'Please do come. We are looking forward to seeing everyone.'",
-  japanese: "こころのこもったさそいかたで、「ぜひいらしてください。みなさまにお会いできるのを楽しみにしております」と申し上げました。"
+  japanese: "こころのこもったさそいかたで、「ぜひいらしてください。みなさまにお会いできるのを楽しみにしております」と申し上げました。",
+  hiragana: "こころの こもった さそいかたで、「ぜひ いらしてください。みなさまに おあいできるのを たのしみにして おります」と もうしあげました。"
 },
-
-
-
-
-
 
 {
   id: "blackhole45",
@@ -1510,13 +1366,9 @@ const blackHoleDataset = [
     "At the reception of a formal event, I asked where my seat was located."
   ],
   answer: "At the reception of a formal event, I said, 'Thank you very much for inviting me today.'",
-  japanese: "改まった席の受付で、「本日はお招きにあずかり、ありがとうございます」とごあいさつ申し上げました。"
+  japanese: "改まった席の受付で、「本日はお招きにあずかり、ありがとうございます」とごあいさつ申し上げました。",
+  hiragana: "あらたまった せきの うけつけで、「ほんじつは おまねきに あずかり、ありがとうございます」と ごあいさつ もうしあげました。"
 },
-
-
-
-
-
 
 {
   id: "blackhole46",
@@ -1527,13 +1379,9 @@ const blackHoleDataset = [
     "When complimenting a chef's skills, I said, 'Your knife technique is impressive.'"
   ],
   answer: "When complimenting the flavor of a dish, I said, 'It has a rich depth of flavor and is very mellow.'",
-  japanese: "料理の味をほめるとき、「コクがあって、まろやかですね」と申し上げました。"
+  japanese: "料理の味をほめるとき、「コクがあって、まろやかですね」と申し上げました。",
+  hiragana: "りょうりの あじを ほめる とき、「こくが あって、まろやかですね」と もうしあげました。"
 },
-
-
-
-
-
 
 {
   id: "blackhole47",
@@ -1544,9 +1392,9 @@ const blackHoleDataset = [
     "When complimenting someone's cooking, I said, 'The presentation is very beautiful.'"
   ],
   answer: "When complimenting someone's cooking, I said, 'This is so delicious. Would you mind telling me how to make it?'",
-  japanese: "てりょうりをほめるとき、「とてもおいしいので、作り方を教えていただけますか」と言いました。"
+  japanese: "てりょうりをほめるとき、「とてもおいしいので、作り方を教えていただけますか」と言いました。",
+  hiragana: "てりょうりを ほめる とき、「とても おいしいので、つくりかたを おしえて いただけますか」と いいました。"
 },
-
 
 
 
@@ -1561,11 +1409,9 @@ const blackHoleDataset = [
     "After we had already been talking for a while, I said, 'How long have you lived here?'"
   ],
   answer: "After we had already been talking for a while, I said, 'I should introduce myself. My name is Gomez. If you don't mind, may I ask your name?'",
-  japanese: "かいわをかわしてからじこしょうかいするばあいは、「もうしおくれました。わたしはごめずともうします。しつれいですが、おなまえをうかがってもよろしいでしょうか」といいました。"
+  japanese: "かいわをかわしてからじこしょうかいするばあいは、「もうしおくれました。わたしはごめずともうします。しつれいですが、おなまえをうかがってもよろしいでしょうか」といいました。",
+  hiragana: "かいわを かわしてから じこしょうかいする ばあいは、「もうしおくれました。わたしは ごめずと もうします。しつれいですが、おなまえを うかがっても よろしいでしょうか」と いいました。"
 },
-
-
-
 
 {
   id: "blackhole49",
@@ -1576,10 +1422,9 @@ const blackHoleDataset = [
     "When greeting someone I haven't seen in a long time, it is good to say, 'How long have you lived here?'"
   ],
   answer: "When greeting someone I haven't seen in a long time, it is good to say, 'It's been a while. Have you been well?'",
-  japanese: "ひさしぶりにあったひとにあいさつするときは、「おひさしぶりです。おげんきでしたか」というといいです。"
+  japanese: "ひさしぶりにあったひとにあいさつするときは、「おひさしぶりです。おげんきでしたか」というといいです。",
+  hiragana: "ひさしぶりに あった ひとに あいさつする ときは、「おひさしぶりです。おげんきでしたか」と いうと いいです。"
 },
-
-
 
 {
   id: "blackhole50",
@@ -1590,9 +1435,9 @@ const blackHoleDataset = [
     "When introducing yourself, it is good to say, 'What kind of work do you do?'"
   ],
   answer: "When introducing yourself, it is good to say, 'Nice to meet you. My name is Gomez.'",
-  japanese: "じこしょうかいするときは、「はじめまして。ゴメズともうします。」といいます。"
+  japanese: "じこしょうかいするときは、「はじめまして。ゴメズともうします。」といいます。",
+  hiragana: "じこしょうかいする ときは、「はじめまして。ごめずと もうします。」と いいます。"
 },
-
 
 {
   id: "blackhole51",
@@ -1603,9 +1448,9 @@ const blackHoleDataset = [
     "When guiding a guest at a company, it is appropriate to say, 'Please find the room by yourself.'"
   ],
   answer: "When guiding a guest at a company, it is appropriate to say, 'I will show you to the reception room. This way, please.'",
-  japanese: "かいしゃで おきゃくさま を ごあんない する ばあい は、おうせつしつ に ごあんない いたします。どうぞ こちらへ。"
+  japanese: "かいしゃで おきゃくさま を ごあんない する ばあい は、おうせつしつ に ごあんない いたします。どうぞ こちらへ。",
+  hiragana: "かいしゃで おきゃくさまを ごあんないする ばあいは、おうせつしつに ごあんない いたします。どうぞ こちらへ。"
 },
-
 
 {
   id: "blackhole52",
@@ -1616,10 +1461,9 @@ const blackHoleDataset = [
     "When informing the person in charge that a visitor has arrived, it is appropriate to say, 'I could see Mr. Gomez.'"
   ],
   answer: "When informing the person in charge that a visitor has arrived, it is appropriate to say, 'Mr. Gomez has arrived.'",
-  japanese: "たんとうしゃ に らいきゃく を つたえる とき は、ゴメスさま が いらっしゃいました と もうしあげます。"
+  japanese: "たんとうしゃ に らいきゃく を つたえる とき は、ゴメスさま が いらっしゃいました と もうしあげます。",
+  hiragana: "たんとうしゃに らいきゃくを つたえる ときは、ごめすさまが いらっしゃいましたと もうしあげます。"
 },
-
-
 
 {
   id: "blackhole53",
@@ -1630,11 +1474,9 @@ const blackHoleDataset = [
     "I understand you must be very busy with your wedding preparations, but please finish everything quickly."
   ],
   answer: "I understand you must be very busy with your wedding preparations, but please take good care of yourself.",
-  japanese: "ごけっこん の ごじゅんび で なにかと ごたよう の ことと ぞんじます が、どうぞ おからだ を たいせつ に なさって ください。"
+  japanese: "ごけっこん の ごじゅんび で なにかと ごたよう の ことと ぞんじます が、どうぞ おからだ を たいせつ に なさって ください。",
+  hiragana: "ごけっこんの ごじゅんびで なにかと ごたようの ことと ぞんじますが、どうぞ おからだを たいせつに なさってください。"
 },
-
-
-
 
 {
   id: "blackhole54",
@@ -1645,11 +1487,9 @@ const blackHoleDataset = [
     "These are words to include in a reply message for a wedding invitation. I look forward to attending the wedding ceremony."
   ],
   answer: "These are words to include in a reply message for a wedding invitation. I sincerely pray for the lifelong happiness of the couple who are getting married.",
-  japanese: "けっこんしき の しょうたいじょう の へんしん メッセージ に そえる ことば です。ごけっこん なさる おふたり の すえながい おしあわせ を こころより おいのり もうしあげます。"
+  japanese: "けっこんしき の しょうたいじょう の へんしん メッセージ に そえる ことば です。ごけっこん なさる おふたり の すえながい おしあわせ を こころより おいのり もうしあげます。",
+  hiragana: "けっこんしきの しょうたいじょうの へんしん めっせーじに そえる ことばです。ごけっこん なさる おふたりの すえながい おしあわせを こころより おいのり もうしあげます。"
 },
-
-
-
 
 {
   id: "blackhole55",
@@ -1660,11 +1500,9 @@ const blackHoleDataset = [
     "These are words to include in a reply message for a wedding invitation. I apologize for my late reply."
   ],
   answer: "These are words to include in a reply message for a wedding invitation. Allow me to express my gratitude once again.",
-  japanese: "けっこんしき の しょうたいじょう の へんしん メッセージ に そえる ことば です。あらためて おれい もうしあげます。"
+  japanese: "けっこんしき の しょうたいじょう の へんしん メッセージ に そえる ことば です。あらためて おれい もうしあげます。",
+  hiragana: "けっこんしきの しょうたいじょうの へんしん めっせーじに そえる ことばです。あらためて おれい もうしあげます。"
 },
-
-
-
 
 {
   id: "blackhole56",
@@ -1675,13 +1513,9 @@ const blackHoleDataset = [
     "These are words to explain why you chose a thank-you gift. This was the cheapest option available."
   ],
   answer: "These are words to explain why you chose a thank-you gift. I wasn't sure what would be best, but after giving it a lot of thought, I decided on this.",
-  japanese: "おれい の ひん を えらんだ りゆう を つたえる とき。なに が よいか まよった のですが、いろいろ かんがえて これ に きめました。"
+  japanese: "おれい の ひん を えらんだ りゆう を つたえる とき。なに が よいか まよった のですが、いろいろ かんがえて これ に きめました。",
+  hiragana: "おれいの ひんを えらんだ りゆうを つたえる とき。なにが よいか まよったのですが、いろいろ かんがえて これに きめました。"
 },
-
-
-
-
-
 
 {
   id: "blackhole57",
@@ -1692,11 +1526,9 @@ const blackHoleDataset = [
     "These are words used when giving a practical gift as a thank-you present. I chose this because I happened to have extra ones at home."
   ],
   answer: "These are words used when giving a practical gift as a thank-you present. I thought this was something you could use no matter how many you have.",
-  japanese: "おれい の ひん として じつようひん を おくる とき の ことば です。これなら、いくつ あっても つかって いただける と おもいまして。"
+  japanese: "おれい の ひん として じつようひん を おくる とき の ことば です。これなら、いくつ あっても つかって いただける と おもいまして。",
+  hiragana: "おれいの ひんとして じつようひんを おくる ときの ことばです。これなら、いくつ あっても つかって いただけると おもいまして。"
 },
-
-
-
 
 {
   id: "blackhole58",
@@ -1707,12 +1539,9 @@ const blackHoleDataset = [
     "These are words used when returning a borrowed item. The speaker is explaining that the item belongs to someone else."
   ],
   answer: "These are words used when handing someone a congratulatory gift. The speaker is giving a small celebratory present.",
-  japanese: "おいわい の しな を てわたしする とき の ことば です。おめでとうございます。ささやかですが、おいわい の しな です。"
+  japanese: "おいわい の しな を てわたしする とき の ことば です。おめでとうございます。ささやかですが、おいわい の しな です。",
+  hiragana: "おいわいの しなを てわたしする ときの ことばです。おめでとうございます。ささやかですが、おいわいの しなです。"
 },
-
-
-
-
 
 {
   id: "blackhole59",
@@ -1723,9 +1552,9 @@ const blackHoleDataset = [
     "These are words used when visiting a neighbor. The speaker apologizes for arriving without notice."
   ],
   answer: "These are words used when introducing yourself to someone for the first time at a wedding. The speaker says they attended university with the bride.",
-  japanese: "けっこんしきで はじめて おあいする かたへの あいさつです。はじめまして。しんぷと だいがくで ごいっしょ しておりました、ゴメスと もうします。"
+  japanese: "けっこんしきで はじめて おあいする かたへの あいさつです。はじめまして。しんぷと だいがくで ごいっしょ しておりました、ゴメスと もうします。",
+  hiragana: "けっこんしきで はじめて おあいする かたへの あいさつです。はじめまして。しんぷと だいがくで ごいっしょして おりました、ごめすと もうします。"
 },
-
 
 
 
