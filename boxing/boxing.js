@@ -2295,6 +2295,8 @@ function playPunchAnimation(player){
 
 function landPunch(player) {
 
+    clearInterval(Boxing.timer);
+
     const status =
         document.getElementById(
             "boxingStatus"
