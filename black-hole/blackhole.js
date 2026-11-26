@@ -1164,6 +1164,17 @@ const blackHoleDataset = [
   japanese: "けっこんしきで はじめて おあいする かたへの あいさつです。はじめまして。しんぷと だいがくで ごいっしょ しておりました、ゴメスと もうします。"
 },
 
+{
+  id: "blackhole60",
+  audio: "audio/blackhole60.wav",
+  choices: [
+    "These are words written in a thank-you letter. The sender explains that they chose to send cash because they felt it was the best way to express their gratitude.",
+    "These are words used when declining a gift. The speaker says accepting money would be inappropriate.",
+    "These are words spoken at a business meeting. The speaker explains why a bank transfer was delayed."
+  ],
+  answer: "These are words written in a thank-you letter. The sender explains that they chose to send cash because they felt it was the best way to express their gratitude.",
+  japanese: "お礼にお金をお送りするのは失礼かとも思ったのですが、感謝の気持ちを表すにはそれが一番よいかと思い、現金をお送りいたしました。"
+},
 
 
 

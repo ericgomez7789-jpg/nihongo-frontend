@@ -1557,6 +1557,27 @@ const blackHoleDataset = [
 },
 
 
+{
+  id: "blackhole60",
+  audio: "audio/blackhole60.wav",
+  choices: [
+    "These are words written in a thank-you letter. The sender explains that they chose to send cash because they felt it was the best way to express their gratitude.",
+    "These are words used when returning borrowed money. The sender apologizes for being unable to repay the full amount.",
+    "These are words used when declining a gift. The sender says accepting money would be inappropriate."
+  ],
+  answer: "These are words written in a thank-you letter. The sender explains that they chose to send cash because they felt it was the best way to express their gratitude.",
+  japanese: "お礼にお金をお送りするのは失礼かとも思ったのですが、感謝の気持ちを表すにはそれが一番よいかと思い、現金をお送りいたしました。",
+  hiragana: "おれいに おかねを おおくりするのは しつれいかとも おもったのですが、かんしゃの きもちを あらわすには それが いちばん よいかと おもい、げんきんを おおくりいたしました。"
+},
+
+
+
+
+
+
+
+
+
 
 
 ];
