@@ -1344,6 +1344,30 @@ What meaning does this sequence of gestures represent?"
 
 
 
+{
+  id: "ame",
+  audio: "audio/ame.wav",
+  choices: ["はれ", "あめ", "くもり"],
+  answer: "あめ",
+
+  summary_hiragana:
+    "むねの まえで てのひらを したに むけます。\
+それから、かたから おなかまで、りょうてを うえしたに うごかします。\
+その うごきは、そらから あめが ふってくる ようすのようにも みえます。\
+さいごまで、りょうてを くりかえし うごかします。\
+この いちれんの しぐさは、どのような いみを あらわしているのでしょうか。",
+
+  summary_english:
+    "Face both palms downward in front of your chest.\
+Then, move both hands up and down from shoulder level to your stomach.\
+This movement may look like rain falling from the sky.\
+Continue moving both hands repeatedly until the gesture is complete.\
+What meaning does this sequence of gestures represent?"
+},
+
+
+
+
 
 
   
