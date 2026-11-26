@@ -1369,6 +1369,30 @@ What meaning does this sequence of gestures represent?"
 
 
 
+{
+  id: "yuki",
+  audio: "audio/yuki.wav",
+  choices: ["ゆき", "あめ", "くもり"],
+  answer: "ゆき",
+
+  summary_hiragana:
+    "はじめに、かおの まえで ひじを まげ、りょうてを のばします。\
+それから、すべての ゆびを たてたまま、りょうての おやゆびと ひとさしゆびで まるを つくります。\
+そうしたら、まるで このはが ひらひらと おちるように、てを したへ むけながら、りょうてを かわりがわり こうごに くるくると まげます。\
+さいごまで、りょうてを くりかえし うごかします。\
+この いちれんの しぐさは、どのような いみを あらわしているのでしょうか。",
+
+  summary_english:
+    "First, bend your elbows and extend both hands in front of your face.\
+Then, keeping all fingers raised, form circles with the thumb and index finger on each hand.\
+Next, turn your hands downward and alternately curl them in a rotating motion, as if leaves were fluttering down from above.\
+Continue repeating the movement until the gesture is complete.\
+What meaning does this sequence of gestures represent?"
+},
+
+
+
+
 
   
 ];
