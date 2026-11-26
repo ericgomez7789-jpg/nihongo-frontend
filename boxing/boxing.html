@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Boxing</title>
+
+<style>
+
+body{
+    margin:0;
+    padding:20px;
+    background:#111;
+    color:white;
+    font-family:Arial,sans-serif;
+}
+
+.screen{
+    width:100%;
+}
+
+.hidden{
+    display:none;
+}
+
+#boxingScreen{
+    width:100%;
+}
+
+.boxingTop{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:20px;
+}
+
+#boxingTimer{
+    font-size:48px;
+    font-weight:bold;
+    color:#ff4444;
+}
+
+#boxingReplayBtn{
+    margin-top:10px;
+    padding:10px 20px;
+    font-size:18px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+#boxingInstruction{
+    text-align:center;
+    font-size:20px;
+    margin-bottom:20px;
+    color:#dddddd;
+}
+
+/* ==========================================
+   BOXING RING
+========================================== */
+
+.boxingRing{
+    position:relative;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    height:280px;
+    margin-bottom:25px;
+    padding:20px;
+    border:4px solid #555;
+    border-radius:12px;
+    background:#1e1e1e;
+    overflow:hidden;
+}
+
+.boxer{
+    text-align:center;
+    width:250px;
+}
+
+.boxerSprite{
+    font-size:120px;
+    transition:.3s;
+}
+
+.boxerHP{
+    font-size:36px;
+    margin-top:10px;
+}
+
+.ringMiddle{
+    width:300px;
+    text-align:center;
+}
+
+#boxingStatus{
+    font-size:36px;
+    font-weight:bold;
+    color:gold;
+}
+
+#boxingSpit{
+    position:absolute;
+    left:50%;
+    top:70px;
+    transform:translateX(-50%);
+    font-size:60px;
+    opacity:0;
+    pointer-events:none;
+    z-index:50;
+}
+
+/* ==========================================
+   ANIMATIONS
+========================================== */
+
+.punchLeft{
+    animation:punchLeft .4s;
+}
+
+.punchRight{
+    animation:punchRight .4s;
+}
+
+.hit{
+    animation:hitShake .4s;
+}
+
+.spitFlyRight{
+    animation:spitFlyRight .7s;
+}
+
+.spitFlyLeft{
+    animation:spitFlyLeft .7s;
+}
+
+.knockout{
+    animation:knockout 1.5s forwards;
+}
+
+@keyframes punchLeft{
+
+    0%{
+        transform:translateX(0);
+    }
+
+    50%{
+        transform:translateX(100px);
+    }
+
+    100%{
+        transform:translateX(0);
+    }
+
+}
+
+@keyframes punchRight{
+
+    0%{
+        transform:translateX(0);
+    }
+
+    50%{
+        transform:translateX(-100px);
+    }
+
+    100%{
+        transform:translateX(0);
+    }
+
+}
+
+@keyframes hitShake{
+
+    0%{
+        transform:translateX(0);
+    }
+
+    25%{
+        transform:translateX(-15px);
+    }
+
+    50%{
+        transform:translateX(15px);
+    }
+
+    75%{
+        transform:translateX(-10px);
+    }
+
+    100%{
+        transform:translateX(0);
+    }
+
+}
+
+@keyframes spitFlyRight{
+
+    0%{
+        opacity:1;
+        transform:translateX(-50%);
+    }
+
+    100%{
+        opacity:0;
+        transform:
+            translateX(220px)
+            translateY(-30px);
+    }
+
+}
+
+@keyframes spitFlyLeft{
+
+    0%{
+        opacity:1;
+        transform:translateX(-50%);
+    }
+
+    100%{
+        opacity:0;
+        transform:
+            translateX(-220px)
+            translateY(-30px);
+    }
+
+}
+
+@keyframes knockout{
+
+    100%{
+        transform:
+            rotate(90deg)
+            translateY(120px);
+
+        opacity:.2;
+    }
+
+}
+
+/* ==========================================
+   PLAYERS
+========================================== */
+
+.boxingSplit{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.boxingPlayer{
+    background:#1e1e1e;
+    border:2px solid #444;
+    border-radius:12px;
+    padding:15px;
+}
+
+.boxingPlayerTitle{
+    text-align:center;
+    font-size:28px;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.boxingContainer{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.boxingBtn{
+    width:100%;
+    padding:16px;
+    font-size:20px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    background:white;
+    color:black;
+    text-align:left;
+}
+
+.boxingBtn:hover{
+    background:#eeeeee;
+}
+
+.boxingBtn.correct{
+    background:#4caf50;
+    color:white;
+}
+
+.boxingBtn.wrong{
+    background:#f44336;
+    color:white;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="boxingScreen" class="screen">
+
+    <div class="boxingTop">
+
+        <div id="boxingTimer">
+            15
+        </div>
+
+        <button id="boxingReplayBtn">
+            🔁 Replay Audio
+        </button>
+
+    </div>
+
+    <div id="boxingInstruction">
+        Listen to the audio. First correct answer lands a punch.
+    </div>
+
+    <!-- BOXING RING -->
+
+    <div class="boxingRing">
+
+        <div id="boxingSpit">
+            💦
+        </div>
+
+        <div class="boxer">
+
+            <div id="boxer1Sprite"
+                 class="boxerSprite">
+                😀
+            </div>
+
+            <div id="boxer1HP"
+                 class="boxerHP">
+                ❤️❤️❤️❤️❤️
+            </div>
+
+        </div>
+
+        <div class="ringMiddle">
+
+            <div id="boxingStatus">
+                🥊 FIGHT! 🥊
+            </div>
+
+        </div>
+
+        <div class="boxer">
+
+            <div id="boxer2Sprite"
+                 class="boxerSprite">
+                😀
+            </div>
+
+            <div id="boxer2HP"
+                 class="boxerHP">
+                ❤️❤️❤️❤️❤️
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- PLAYER PANELS -->
+
+    <div class="boxingSplit">
+
+        <div class="boxingPlayer">
+
+            <div class="boxingPlayerTitle">
+                👧 Player 1
+            </div>
+
+            <div id="boxingContainer1"
+                 class="boxingContainer">
+            </div>
+
+        </div>
+
+        <div class="boxingPlayer">
+
+            <div class="boxingPlayerTitle">
+                👨 Player 2
+            </div>
+
+            <div id="boxingContainer2"
+                 class="boxingContainer">
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="boxing.js"></script>
+
+</body>
+
+</html>
