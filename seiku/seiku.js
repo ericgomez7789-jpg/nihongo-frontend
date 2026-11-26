@@ -895,6 +895,39 @@ const seikuData = [
 
 
 
+{
+    id: "kaiwa28",
+
+    audio: "Audio/kaiwa28.wav",
+
+    idiom:
+        "まさか ～ とはね",
+
+    meaning:
+        "I can't believe that... / To think that...",
+
+    choices: [
+
+        "I can't believe that... / To think that...",
+
+        "with great effort",
+
+        "to get around to doing something",
+
+        "to disappoint expectations",
+
+        "to act without thinking"
+
+    ],
+
+    example:
+        "まさか きみが いちばんに ゴールするとはね。"
+
+},
+
+
+
+
 
 
 

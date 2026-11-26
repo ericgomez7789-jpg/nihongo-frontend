@@ -1507,6 +1507,56 @@ const kaiwaSentences = [
 
 
 
+{
+    id: "kaiwa28",
+
+    audio: "Audio/kaiwa28.wav",
+
+    speaker1: "おとうさん",
+
+    line1:
+        "まさか、よふけまで おもいがけず べんきょうしているとはね！",
+
+    speaker2: "むすめ",
+
+    line2:
+        "まあ、やっとの おもいで べんきょうするために おもいこしを あげたんだから、きたいを うらぎりたくないよ。",
+
+    translation:
+        "Father: Well, this is unexpected. I can't believe you're studying late into the night!\n\nDaughter: Well, I finally managed to get myself motivated to study after a lot of effort, so I don't want to let anyone's expectations down.",
+
+    translationChoices: [
+
+        "Father: Well, this is unexpected. I can't believe you're studying late into the night!\n\nDaughter: Well, I finally managed to get myself motivated to study after a lot of effort, so I don't want to let anyone's expectations down.",
+
+        "Father: You seem tired because you slept all day.\n\nDaughter: That's right. I have no interest in studying anymore.",
+
+        "Father: I see you're getting ready to play games all night.\n\nDaughter: Yes, I don't care about anyone's expectations.",
+
+        "Father: I can't believe you finished all your homework weeks ago.\n\nDaughter: That's because I never need to make any effort.",
+
+        "Father: You should stop studying immediately.\n\nDaughter: You're right. I'll give up before I even begin."
+    ],
+
+    question:
+        "なぜ むすめは 「きたいを うらぎりたくない」と いいましたか？",
+
+    answer:
+        "やっとの おもいで べんきょうする きになったので、その どりょくを むだに したくないと おもったから",
+
+    choices: [
+        "やっとの おもいで べんきょうする きになったので、その どりょくを むだに したくないと おもったから",
+        "よふけを つづけることが もくてきだったから",
+        "べんきょうを すぐに やめたかったから",
+        "おとうさんに おこられたかったから",
+        "きたいを うらぎることが たいせつだと おもったから"
+    ]
+},
+
+
+
+
+
 
 
 
