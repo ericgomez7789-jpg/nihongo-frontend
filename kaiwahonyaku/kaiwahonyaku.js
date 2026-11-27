@@ -1605,6 +1605,55 @@ const kaiwaSentences = [
 
 
 
+{
+    id: "kaiwa30",
+
+    audio: "Audio/kaiwa30.wav",
+
+    speaker1: "おとこのこ",
+
+    line1:
+        "ねえ、きみ、なんで しゅくだいが おわってないの？ どういうこと？ なんで そんなに やるきが ないの？",
+
+    speaker2: "おんなのこ",
+
+    line2:
+        "ていうか、なんで いつも きみが くびを つっこむの？ できるなら、ひとはだ ぬいでよ。 じゃなきゃ、だまってて。",
+
+    translation:
+        "Boy: Hey, why isn't your homework finished? What's going on? Why are you so unmotivated?\n\nGirl: More importantly, why do you always stick your nose into my business? If you can help, then lend a hand. Otherwise, be quiet.",
+
+    translationChoices: [
+
+        "Boy: Hey, why isn't your homework finished? What's going on? Why are you so unmotivated?\n\nGirl: More importantly, why do you always stick your nose into my business? If you can help, then lend a hand. Otherwise, be quiet.",
+
+        "Boy: Great job finishing your homework so quickly.\n\nGirl: Thanks. It was very easy for me.",
+
+        "Boy: Do you want me to help you with your homework?\n\nGirl: No thanks. I've already finished everything.",
+
+        "Boy: Why don't we go play outside together?\n\nGirl: That's a good idea. Let's go right away.",
+
+        "Boy: Your homework looks perfect.\n\nGirl: I spent all night working on it."
+    ],
+
+    question:
+        "なぜ おんなのこは 「ひとはだ ぬいでよ。じゃなきゃ、だまってて。」と いいましたか？",
+
+    answer:
+        "てつだえないなら よけいな くちだしを してほしくないから",
+
+    choices: [
+        "てつだえないなら よけいな くちだしを してほしくないから",
+        "おとこのこに しゅくだいを ぜんぶ やってもらいたいから",
+        "しゅくだいが もう おわっているから",
+        "おとこのこに おこっていないから",
+        "これから いっしょに あそびに いくから"
+    ]
+},
+
+
+
+
 
 
 

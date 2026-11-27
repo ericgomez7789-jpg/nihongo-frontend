@@ -959,6 +959,36 @@ const seikuData = [
 
 
 
+{
+    id: "kaiwa30",
+
+    audio: "Audio/kaiwa30.wav",
+
+    idiom:
+        "ひとはだぬぐ",
+
+    meaning:
+        "to lend a hand / to pitch in and help",
+
+    choices: [
+
+        "to lend a hand / to pitch in and help",
+
+        "to stay out of someone's business",
+
+        "to finish homework quickly",
+
+        "to become angry at someone",
+
+        "to keep complaining about a problem"
+    ],
+
+    example:
+        "できるなら、ひとはだぬいでよ。"
+},
+
+
+
 
 
 
