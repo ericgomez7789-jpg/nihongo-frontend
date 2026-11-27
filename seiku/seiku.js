@@ -991,6 +991,36 @@ const seikuData = [
 
 
 
+{
+    id: "kaiwa31",
+
+    audio: "Audio/kaiwa31.wav",
+
+    idiom:
+        "たずさわる",
+
+    meaning:
+        "to take part in / to be involved in",
+
+    choices: [
+
+        "to take part in / to be involved in",
+
+        "to be ashamed to face people",
+
+        "to avoid participating",
+
+        "to win a competition easily",
+
+        "to criticize someone from the sidelines"
+    ],
+
+    example:
+        "すくなくとも、しあいには たずさわったよ。"
+},
+
+
+
 
 
 

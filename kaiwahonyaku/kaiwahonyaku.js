@@ -1655,6 +1655,53 @@ const kaiwaSentences = [
 
 
 
+{
+    id: "kaiwa31",
+
+    audio: "Audio/kaiwa31.wav",
+
+    speaker1: "おとこのこ",
+
+    line1:
+        "ねえ、このままじゃ しあいに まけて ひとまえで かおむけできないよ。",
+
+    speaker2: "おんなのこ",
+
+    line2:
+        "ていうか、すくなくとも、しあいには たずさわったよ。",
+
+    translation:
+        "Boy: At this rate, you'll lose the match and won't be able to show your face in front of others.\n\nGirl: More importantly, at least I took part in the match.",
+
+    translationChoices: [
+
+        "Boy: At this rate, you'll lose the match and won't be able to show your face in front of others.\n\nGirl: More importantly, at least I took part in the match.",
+
+        "Boy: You're definitely going to win the match.\n\nGirl: Yes, I'm completely confident.",
+
+        "Boy: Why didn't you join the match?\n\nGirl: Because I wasn't interested in participating.",
+
+        "Boy: Everyone was impressed by your performance.\n\nGirl: I know. It was an easy victory.",
+
+        "Boy: Let's watch the match together.\n\nGirl: No thanks. I'd rather stay home."
+    ],
+
+    question:
+        "なぜ おんなのこは 「すくなくとも、しあいには たずさわったよ。」と いいましたか？",
+
+    answer:
+        "かてなくても さんかしたことには いみが あると おもっているから",
+
+    choices: [
+        "かてなくても さんかしたことには いみが あると おもっているから",
+        "しあいに さんかしていないから",
+        "しあいに かならず かてると おもっているから",
+        "しあいが ちゅうしに なったから",
+        "おとこのこに かわりに でてもらうから"
+    ]
+},
+
+
 
 
 
