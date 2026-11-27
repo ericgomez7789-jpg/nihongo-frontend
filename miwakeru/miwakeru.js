@@ -620,6 +620,17 @@ const miwakeruSentences = [
 
 
 
+{
+  id: "miwakeru56",
+  audio: "audio/awaseru56.wav",
+  answer: "After nocking the arrow, drawing the bowstring tight, and releasing it, the arrow struck the target with a thud.",
+  choices: [
+    "After nocking the arrow, drawing the bowstring tight, and releasing it, the arrow struck the target with a thud.",
+    "After nocking the arrow, drawing the bowstring tight, and releasing it, the arrow completely missed the target."
+  ]
+},
+
+
 
 
 ];

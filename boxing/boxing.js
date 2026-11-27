@@ -3,8 +3,8 @@ const awaseruHonyaku = [
 {
     id: "honyaku1",
     audio: "audio/awaseru1.wav",
-    japanese: "危険な状況でも、彼は冷静さを失わなかった。",
-    hiragana: "きけんな じょうきょうでも、かれは れいせいさを うしなわなかった。",
+    japanese: "彼は危険な状況にあっても、冷静さを失わなかった。",
+    hiragana: "かれは きけんな じょうきょうに あっても、れいせいさを うしなわなかった。",
     answer: "Even in a dangerous situation, he did not lose his composure.",
     choices: [
         "Even in a dangerous situation, he did not lose his composure.",
@@ -17,8 +17,8 @@ const awaseruHonyaku = [
 {
     id: "honyaku2",
     audio: "audio/awaseru2.wav",
-    japanese: "その日だけ、彼は姿を見せなかった。",
-    hiragana: "そのひだけ、かれは すがたを みせなかった。",
+    japanese: "その日に限って、彼は出てこなかった。",
+    hiragana: "その ひ に かぎって、かれは でてこなかった。",
     answer: "Only on that day, he did not show up.",
     choices: [
         "Only on that day, he did not show up.",
@@ -59,8 +59,8 @@ const awaseruHonyaku = [
 {
     id: "honyaku5",
     audio: "audio/awaseru5.wav",
-    japanese: "運動のあと、彼は汗でびっしょりだった。",
-    hiragana: "うんどうのあと、かれは あせで びっしょりだった。",
+    japanese: "運動してから、彼はぐっしょり汗まみれだった。",
+    hiragana: "うんどうしてから、かれは ぐっしょり あせまみれだった。",
     answer: "After exercising, he was completely soaked in sweat.",
     choices: [
         "After exercising, he was completely soaked in sweat.",
@@ -73,8 +73,8 @@ const awaseruHonyaku = [
 {
     id: "honyaku6",
     audio: "audio/awaseru6.wav",
-    japanese: "結局、届いた荷物は一つだけだった。",
-    hiragana: "けっきょく、とどいた にもつは ひとつだけだった。",
+    japanese: "結局、一つの包みだけ届くことになった。",
+    hiragana: "けっきょく、ひとつ の つつみ だけ とどくことに なった。",
     answer: "In the end, only one package ended up arriving.",
     choices: [
         "In the end, only one package ended up arriving.",
@@ -84,11 +84,12 @@ const awaseruHonyaku = [
     ]
 },
 
+
 {
     id: "honyaku7",
     audio: "audio/awaseru7.wav",
-    japanese: "試合に勝つなんてわけがない。練習不足で、出るたびに負けてしまう。",
-    hiragana: "しあいに かつなんて わけがない。れんしゅうぶそくで、でるたびに まけてしまう。",
+    japanese: "試合に勝つどころじゃない。練習さえ足りないんだ。だから勝負をするたびに負ける。",
+    hiragana: "しあい に かつ どころじゃない。れんしゅう さえ たりない んだ。だから しょうぶ を する たびに まける。",
     answer: "Winning a match is out of the question. I don't even practice enough, so I lose every time I compete.",
     choices: [
         "Winning a match is out of the question. I don't even practice enough, so I lose every time I compete.",
@@ -101,8 +102,8 @@ const awaseruHonyaku = [
 {
     id: "honyaku8",
     audio: "audio/awaseru8.wav",
-    japanese: "誰かが決心して襲ってきたら、身を守れるかどうかわからない。",
-    hiragana: "だれかが けっしんして おそってきたら、みを まもれるか どうか わからない。",
+    japanese: "突然誰かが決意を固めて襲いかかってきたら、自分を守れるかどうかわからない。",
+    hiragana: "とつぜん だれかが けついを かためて おそいかかってきたら、じぶんを まもれるかどうか わからない。",
     answer: "If someone suddenly made up their mind and attacked me, I don't know whether I could protect myself.",
     choices: [
         "If someone suddenly made up their mind and attacked me, I don't know whether I could protect myself.",
@@ -115,8 +116,8 @@ const awaseruHonyaku = [
 {
     id: "honyaku9",
     audio: "audio/awaseru9.wav",
-    japanese: "猫を猫かわいがりしていて、もう家族みたいなものだ。",
-    hiragana: "ねこを ねこかわいがりしていて、もう かぞくみたいな ものだ。",
+    japanese: "猫をかわいがっているし、家族みたいなもんだしね。",
+    hiragana: "ねこを かわいがっているし、かぞくみたいな もんだしね。",
     answer: "I dote on my cat, and it's basically family to me.",
     choices: [
         "I dote on my cat, and it's basically family to me.",
@@ -145,8 +146,8 @@ const awaseruHonyaku = [
 {
     id: "honyaku11",
     audio: "audio/awaseru11.wav",
-    japanese: "その年なら、もっと分別があるべきだ。",
-    hiragana: "そのとしなら、もっと ふんべつが あるべきだ。",
+    japanese: "君の年頃では、もっと分別があって然るべきだ。",
+    hiragana: "きみ の としごろ では、もっと ふんべつ が あって しかるべき だ。",
     answer: "Someone your age should have more good judgment.",
     choices: [
         "Someone your age should have more good judgment.",
@@ -187,8 +188,8 @@ const awaseruHonyaku = [
 {
     id: "honyaku14",
     audio: "audio/awaseru14.wav",
-    japanese: "葉っぱが風にさわさわ揺れている。",
-    hiragana: "はっぱが かぜに さわさわ ゆれている。",
+    japanese: "風に吹かれた木の葉がさらさら音を立てる。",
+    hiragana: "かぜに ふかれた このはが さらさら おとを たてる。",
     answer: "The leaves rustle softly in the wind.",
     choices: [
         "The leaves rustle softly in the wind.",
@@ -257,8 +258,8 @@ const awaseruHonyaku = [
 {
     id: "honyaku19",
     audio: "audio/awaseru19.wav",
-    japanese: "水際で波がざぶんと岸に打ちつけている。",
-    hiragana: "みずぎわで なみが ざぶんと きしに うちつけている。",
+    japanese: "波打ち際では波がざぶざぶ打ち寄せる。",
+    hiragana: "なみうちぎわでは なみが ざぶざぶ うちよせる。",
     answer: "At the water's edge, the waves crash against the shore.",
     choices: [
         "At the water's edge, the waves crash against the shore.",
@@ -271,8 +272,8 @@ const awaseruHonyaku = [
 {
     id: "honyaku20",
     audio: "audio/awaseru20.wav",
-    japanese: "滝がごうごうと流れ落ちていた。",
-    hiragana: "たきが ごうごうと ながれおちていた。",
+    japanese: "滝がごうごうと流れ落ちてきました。",
+    hiragana: "たきが ごうごうと ながれおちて きました。",
     answer: "The waterfall came cascading down with a mighty roar.",
     choices: [
         "The waterfall came cascading down with a mighty roar.",
@@ -285,8 +286,8 @@ const awaseruHonyaku = [
 {
     id: "honyaku21",
     audio: "audio/awaseru21.wav",
-    japanese: "彼はドアをばんと閉めた。",
-    hiragana: "かれは ドアを ばんと しめた。",
+    japanese: "ドアをばたんと叩きつける。",
+    hiragana: "どあを ばたんと たたきつける。",
     answer: "He slammed the door shut with a bang.",
     choices: [
         "He slammed the door shut with a bang.",
@@ -295,12 +296,13 @@ const awaseruHonyaku = [
         "The stars are sparkling."
     ]
 },
+  
 
 {
     id: "honyaku22",
     audio: "audio/awaseru22.wav",
-    japanese: "ろうそくの炎がゆらゆら揺れている。",
-    hiragana: "ろうそくの ほのおが ゆらゆら ゆれている。",
+    japanese: "ろうそくの火がちらちらと揺れる。",
+    hiragana: "ろうそく の ひが ちらちらと ゆれる。",
     answer: "The candle flame flickers.",
     choices: [
         "The candle flame flickers.",
@@ -313,8 +315,8 @@ const awaseruHonyaku = [
 {
     id: "honyaku23",
     audio: "audio/awaseru23.wav",
-    japanese: "水際で海水をばしゃばしゃかけていた。",
-    hiragana: "みずぎわで かいすいを ばしゃばしゃ かけていた。",
+    japanese: "渚では僕が海の水をばしゃばしゃとはね上げていました。",
+    hiragana: "なぎさでは ぼくが うみの みずを ばしゃばしゃと はねあげていました。",
     answer: "At the water's edge, I was splashing seawater around.",
     choices: [
         "At the water's edge, I was splashing seawater around.",
@@ -327,8 +329,8 @@ const awaseruHonyaku = [
 {
     id: "honyaku24",
     audio: "audio/awaseru24.wav",
-    japanese: "お風呂の湯気がもくもく立ちのぼる。",
-    hiragana: "おふろの ゆげが もくもく たちのぼる。",
+    japanese: "お風呂の湯気がもくもくと立ちのぼっていく。",
+    hiragana: "おふろ の ゆげが もくもく と たちのぼって いく。",
     answer: "Steam from the bath rises in thick billowing clouds.",
     choices: [
         "Steam from the bath rises in thick billowing clouds.",
@@ -341,8 +343,8 @@ const awaseruHonyaku = [
 {
     id: "honyaku25",
     audio: "audio/awaseru25.wav",
-    japanese: "びしょぬれの服からぽたぽた水が落ちている。",
-    hiragana: "びしょぬれの ふくから ぽたぽた みずが おちている。",
+    japanese: "びしょびしょ水まみれの服から、しずくがぽろぽろ垂れてくる。",
+    hiragana: "びしょびしょ みずまみれ の ふくから、しずくが ぽろぽろ たれてくる。",
     answer: "Droplets keep dripping from soaking-wet clothes.",
     choices: [
         "Droplets keep dripping from soaking-wet clothes.",
@@ -355,8 +357,8 @@ const awaseruHonyaku = [
 {
     id: "honyaku26",
     audio: "audio/awaseru26.wav",
-    japanese: "日差しがぽかぽかと差しこんできた。",
-    hiragana: "ひざしが ぽかぽかと さしこんできた。",
+    japanese: "日がうらうら輝いてくる。",
+    hiragana: "ひ が うらうら かがやいてくる。",
     answer: "The sunlight begins to shine warmly and serenely.",
     choices: [
         "The sunlight begins to shine warmly and serenely.",
@@ -369,8 +371,8 @@ const awaseruHonyaku = [
 {
     id: "honyaku27",
     audio: "audio/awaseru27.wav",
-    japanese: "稲妻がぴかっと光った。",
-    hiragana: "いなずまが ぴかっと ひかった。",
+    japanese: "稲妻があっという間にぴかっと光ってきた。",
+    hiragana: "いなずまが あっというまに ぴかっと ひかってきた。",
     answer: "Lightning flashed in an instant.",
     choices: [
         "Lightning flashed in an instant.",
@@ -383,8 +385,8 @@ const awaseruHonyaku = [
 {
     id: "honyaku28",
     audio: "audio/awaseru28.wav",
-    japanese: "雷がごろごろ鳴っていた。",
-    hiragana: "かみなりが ごろごろ なっていた。",
+    japanese: "雷がごろごろと鳴りました。",
+    hiragana: "かみなりが ごろごろと なりました。",
     answer: "Thunder rumbled across the sky.",
     choices: [
         "Thunder rumbled across the sky.",
@@ -397,8 +399,8 @@ const awaseruHonyaku = [
 {
     id: "honyaku29",
     audio: "audio/awaseru29.wav",
-    japanese: "勉強する準備はできていますか。",
-    hiragana: "べんきょうする じゅんびは できていますか。",
+    japanese: "勉強の準備はできた？",
+    hiragana: "べんきょう の じゅんび は できた？",
     answer: "Are you ready to study?",
     choices: [
         "Are you ready to study?",
@@ -411,8 +413,8 @@ const awaseruHonyaku = [
 {
     id: "honyaku30",
     audio: "audio/awaseru30.wav",
-    japanese: "勉強の準備をしてほしい。",
-    hiragana: "べんきょうの じゅんびを してほしい。",
+    japanese: "君に勉強の準備をしてほしい。",
+    hiragana: "きみに べんきょうの じゅんびを して ほしい。",
     answer: "I want you to prepare for studying.",
     choices: [
         "I want you to prepare for studying.",
@@ -427,8 +429,8 @@ const awaseruHonyaku = [
 {
     id: "honyaku31",
     audio: "audio/awaseru31.wav",
-    japanese: "誰が電気をつけたの？",
-    hiragana: "だれが でんきを つけたの？",
+    japanese: "光を灯したのは誰ですか。",
+    hiragana: "ひかりを ともした のは だれ ですか。",
     answer: "Who lit the light?",
     choices: [
         "Who lit the light?",
@@ -441,8 +443,8 @@ const awaseruHonyaku = [
 {
     id: "honyaku32",
     audio: "audio/awaseru32.wav",
-    japanese: "蛇口から水がどばっと出て、さらさら流れ、最後にはちょろちょろになった。",
-    hiragana: "じゃぐちから みずが どばっと でて、さらさら ながれ、さいごには ちょろちょろに なった。",
+    japanese: "蛇口から水がどばどばと吹き出してきて、だんだんさらさらと流れるようになり、やがてちょろちょろになってきた。",
+    hiragana: "じゃぐち から みず が どばどばと ふきだしてきて、だんだん さらさらと ながれる ように なり、やがて ちょろちょろに なってきた。",
     answer: "Water came gushing out of the faucet, gradually flowed smoothly, and eventually became a trickle.",
     choices: [
         "Water came gushing out of the faucet, gradually flowed smoothly, and eventually became a trickle.",
@@ -451,12 +453,11 @@ const awaseruHonyaku = [
         "Water overflowed from the sink and flooded the room."
     ]
 },
-
 {
     id: "honyaku33",
     audio: "audio/awaseru33.wav",
-    japanese: "そこまで言うなら、一緒に旅行へ行くよ。",
-    hiragana: "そこまで いうなら、いっしょに りょこうへ いくよ。",
+    japanese: "どうしてもと言うのなら、一緒に旅行に行きます。",
+    hiragana: "どうしても と いう の なら、いっしょ に りょこう に いきます。",
     answer: "If you insist, I'll go on a trip with you.",
     choices: [
         "If you insist, I'll go on a trip with you.",
@@ -469,8 +470,8 @@ const awaseruHonyaku = [
 {
     id: "honyaku34",
     audio: "audio/awaseru34.wav",
-    japanese: "服が部屋中にちらかっている。",
-    hiragana: "ふくが へやじゅうに ちらかっている。",
+    japanese: "部屋では服が至る所にばらばらに散らかっています。",
+    hiragana: "へやでは ふくが いたる ところに ばらばらに ちらかっています。",
     answer: "The clothes are scattered all over the room.",
     choices: [
         "The clothes are scattered all over the room.",
@@ -483,8 +484,8 @@ const awaseruHonyaku = [
 {
     id: "honyaku35",
     audio: "audio/awaseru35.wav",
-    japanese: "せっかくだから、鬼ごっこでもしようか。",
-    hiragana: "せっかくだから、おにごっこでも しようか。",
+    japanese: "せっかく一緒にいるんだから、鬼ごっこしましょうか。",
+    hiragana: "せっかく いっしょに いるんだから、おにごっこ しましょうか。",
     answer: "Since we're already together, shall we play tag?",
     choices: [
         "Since we're already together, shall we play tag?",
@@ -497,8 +498,8 @@ const awaseruHonyaku = [
 {
     id: "honyaku36",
     audio: "audio/awaseru36.wav",
-    japanese: "鏡を見ると、いつも自分の姿がはっきり映る。",
-    hiragana: "かがみを みると、いつも じぶんの すがたが はっきり うつる。",
+    japanese: "鏡を見る時は、いつでも鏡を通して自分の姿がはっきり映ります。",
+    hiragana: "かがみを みる ときは、いつでも かがみを とおして じぶんの すがたが はっきり うつります。",
     answer: "When you look in a mirror, your reflection always appears clearly through it.",
     choices: [
         "When you look in a mirror, your reflection always appears clearly through it.",
@@ -511,8 +512,8 @@ const awaseruHonyaku = [
 {
     id: "honyaku37",
     audio: "audio/awaseru37.wav",
-    japanese: "そのびんは今にも割れそうだったので、落ちたとたんに粉々になった。",
-    hiragana: "そのびんは いまにも われそうだったので、おちたとたんに こなごなに なった。",
+    japanese: "見るからに割れやすそうな瓶だったので、落ちるとすぐに粉々に砕けた。",
+    hiragana: "みるからに われやすそうな びん だったので、おちると すぐに こなごなに くだけた。",
     answer: "The bottle looked obviously fragile, so it shattered into pieces as soon as it fell.",
     choices: [
         "The bottle looked obviously fragile, so it shattered into pieces as soon as it fell.",
@@ -525,8 +526,8 @@ const awaseruHonyaku = [
 {
     id: "honyaku38",
     audio: "audio/awaseru38.wav",
-    japanese: "どれだけ身だしなみを整えても、ぼさぼさになってしまう。",
-    hiragana: "どれだけ みだしなみを ととのえても、ぼさぼさに なってしまう。",
+    japanese: "どんなに身だしなみを整えても、身なりがめちゃくちゃ乱れてしまいます。",
+    hiragana: "どんなに みだしなみを ととのえても、みなりが めちゃくちゃ みだれて しまいます。",
     answer: "No matter how much I groom myself, my appearance ends up extremely disheveled.",
     choices: [
         "No matter how much I groom myself, my appearance ends up extremely disheveled.",
@@ -539,8 +540,8 @@ const awaseruHonyaku = [
 {
     id: "honyaku39",
     audio: "audio/awaseru39.wav",
-    japanese: "風がひゅうひゅう鳴りながら、ごうごうと荒れ狂っていた。",
-    hiragana: "かぜが ひゅうひゅう なりながら、ごうごうと あれくるっていた。",
+    japanese: "風がひゅうひゅうと吹きすさび、荒れ狂っていた。",
+    hiragana: "かぜが ひゅうひゅうと ふきすさび、あれくるっていた。",
     answer: "The wind was howling fiercely with a whistling sound and raging wildly.",
     choices: [
         "The wind was howling fiercely with a whistling sound and raging wildly.",
@@ -553,8 +554,8 @@ const awaseruHonyaku = [
 {
     id: "honyaku40",
     audio: "audio/awaseru40.wav",
-    japanese: "集まりでひそひそ話していた。",
-    hiragana: "あつまりで ひそひそ はなしていた。",
+    japanese: "集まりで、私はひそひそと話していました。",
+    hiragana: "あつまりで、わたしは ひそひそと はなしていました。",
     answer: "I was whispering at a gathering.",
     choices: [
         "I was whispering at a gathering.",
@@ -569,8 +570,8 @@ const awaseruHonyaku = [
 {
     id: "honyaku41",
     audio: "audio/awaseru41.wav",
-    japanese: "徹夜したせいでへとへとになり、勉強にうんざりしていたが、最後は根性でやり遂げた。",
-    hiragana: "てつやした せいで へとへとに なり、べんきょうに うんざりしていたが、さいごは こんじょうで やりとげた。",
+    japanese: "夜を明かして、へとへとに疲れ、勉強にうんざりしていましたが、やっとの思いで終えました。",
+    hiragana: "よ を あかして、へとへと に つかれ、べんきょう に うんざりして いました が、やっと の おもい で おえました。",
     answer: "After pulling an all-nighter, I was utterly exhausted and fed up with studying, but I finally managed to finish it through sheer effort.",
     choices: [
         "After pulling an all-nighter, I was utterly exhausted and fed up with studying, but I finally managed to finish it through sheer effort.",
@@ -583,8 +584,8 @@ const awaseruHonyaku = [
 {
     id: "honyaku42",
     audio: "audio/awaseru42.wav",
-    japanese: "テレビばかり見て、ごろごろしていて、体を惜しんでいる。",
-    hiragana: "テレビばかり みて、ごろごろしていて、からだを おしんでいる。",
+    japanese: "あなたはテレビを見てばかりいて、だらだらしながら体を惜しんでいる。",
+    hiragana: "あなたは テレビを みてばかりいて、だらだら しながら からだを おしんでいる。",
     answer: "You do nothing but watch television, laze around, and avoid exerting yourself.",
     choices: [
         "You do nothing but watch television, laze around, and avoid exerting yourself.",
@@ -597,8 +598,8 @@ const awaseruHonyaku = [
 {
     id: "honyaku43",
     audio: "audio/awaseru43.wav",
-    japanese: "その問題には手を焼いたが、なんとかぎりぎり乗り越えた。",
-    hiragana: "そのもんだいには てを やいたが、なんとか ぎりぎり のりこえた。",
+    japanese: "問題を解くのは辛い目に遭ったが、ぎりぎりどうにか乗り越えた。",
+    hiragana: "もんだいを とくのは つらい めに あったが、ぎりぎり どうにか のりこえた。",
     answer: "Solving the problem put me through a hard time, but I somehow barely managed to overcome it.",
     choices: [
         "Solving the problem put me through a hard time, but I somehow barely managed to overcome it.",
@@ -611,8 +612,8 @@ const awaseruHonyaku = [
 {
     id: "honyaku44",
     audio: "audio/awaseru44.wav",
-    japanese: "森で道に迷ったあと、ようやく空き家の丸太小屋にたどり着き、窓がガタガタ鳴り始めた。",
-    hiragana: "もりで みちに まよったあと、ようやく あきやの まるたごやに たどりつき、まどが がたがた なりはじめた。",
+    japanese: "森で道に迷ったあと、やっとがらんとした丸太小屋に行き着くと、ごうごうと吹き付ける風で、窓ががたがたとがたついてきました。",
+    hiragana: "もりで みちに まよったあと、やっと がらんとした まるたごやに いきつくと、ごうごうと ふきつける かぜで、まどが がたがたと がたついてきました。",
     answer: "After getting lost in the forest, I finally reached an empty log cabin, and the windows began rattling from the roaring wind blowing against it.",
     choices: [
         "After getting lost in the forest, I finally reached an empty log cabin, and the windows began rattling from the roaring wind blowing against it.",
@@ -625,8 +626,8 @@ const awaseruHonyaku = [
 {
     id: "honyaku45",
     audio: "audio/awaseru45.wav",
-    japanese: "空を飛ぶ飛行機がごうごうと音を立てていた。",
-    hiragana: "そらを とぶ ひこうきが ごうごうと おとを たてていた。",
+    japanese: "空を通り抜ける飛行機が、ごうごうと音を立てていた。",
+    hiragana: "そらを とおりぬける ひこうきが、ごうごうと おとを たてていた。",
     answer: "An airplane passing through the sky was making a roaring sound.",
     choices: [
         "An airplane passing through the sky was making a roaring sound.",
@@ -639,8 +640,8 @@ const awaseruHonyaku = [
 {
     id: "honyaku46",
     audio: "audio/awaseru46.wav",
-    japanese: "木の扉が閉まると、ごとんという音がした。",
-    hiragana: "きの とびらが しまると、ごとんと いう おとが した。",
+    japanese: "木のドアが閉まった時、がたんと音を立てました。",
+    hiragana: "きの ドアが しまった とき、がたんと おとを たてました。",
     answer: "When the wooden door closed, it made a clunking sound.",
     choices: [
         "When the wooden door closed, it made a clunking sound.",
@@ -653,8 +654,8 @@ const awaseruHonyaku = [
 {
     id: "honyaku47",
     audio: "audio/awaseru47.wav",
-    japanese: "誰かがはあはあと息をしているのが聞こえる。",
-    hiragana: "だれかが はあはあと いきを しているのが きこえる。",
+    japanese: "はあはあという息遣いの音がする。",
+    hiragana: "はあはあと いう いきづかいの おとが する。",
     answer: "I can hear the sound of someone breathing heavily, going 'huff, huff.'",
     choices: [
         "I can hear the sound of someone breathing heavily, going 'huff, huff.'",
@@ -667,8 +668,8 @@ const awaseruHonyaku = [
 {
     id: "honyaku48",
     audio: "audio/awaseru48.wav",
-    japanese: "崖のふちに立ったとき、心臓がどきどきしていた。",
-    hiragana: "がけの ふちに たったとき、しんぞうが どきどきしていた。",
+    japanese: "崖の際に立っていると、どきどきした。",
+    hiragana: "がけの きわに たっていると、どきどきした。",
     answer: "When I was standing at the edge of the cliff, my heart was pounding with nervousness.",
     choices: [
         "When I was standing at the edge of the cliff, my heart was pounding with nervousness.",
@@ -678,11 +679,12 @@ const awaseruHonyaku = [
     ]
 },
 
+
 {
     id: "honyaku49",
     audio: "audio/awaseru49.wav",
-    japanese: "ぶらぶらしていないで、手伝ってくれないかな。",
-    hiragana: "ぶらぶらしていないで、てつだって くれないかな。",
+    japanese: "油を売るくらいなら、一肌脱いでくれるとうれしいな。",
+    hiragana: "あぶらを うる くらいなら、ひとはだ ぬいで くれると うれしいな。",
     answer: "Instead of loafing around, I wish you would lend a hand and help out.",
     choices: [
         "Instead of loafing around, I wish you would lend a hand and help out.",
@@ -709,8 +711,8 @@ const awaseruHonyaku = [
 {
     id: "honyaku51",
     audio: "audio/awaseru51.wav",
-    japanese: "男はベルを鳴らさず、ドアをコツンとたたいた。",
-    hiragana: "おとこは ベルを ならさず、ドアを コツンと たたいた。",
+    japanese: "鐘をりんりんと鳴らす代わりに、男の人がコツンとドアをたたきました。",
+    hiragana: "かねを りんりんと ならす かわりに、おとこのひとが コツンと ドアを たたきました。",
     answer: "Instead of ringing the bell, the man lightly knocked on the door.",
     choices: [
         "Instead of ringing the bell, the man lightly knocked on the door.",
@@ -751,8 +753,8 @@ const awaseruHonyaku = [
 {
     id: "honyaku54",
     audio: "audio/awaseru54.wav",
-    japanese: "へえ、夜遅くまで勉強していたなんて。",
-    hiragana: "へえ、よるおそくまで べんきょうしていた なんて。",
+    japanese: "あや、夜更けまで暇にあかせて勉強するとはね。",
+    hiragana: "あや、よふけまで ひまに あかせて べんきょうする とはね。",
     answer: "Wow, to think you'd spend your free time studying until late at night.",
     choices: [
         "Wow, to think you'd spend your free time studying until late at night.",
@@ -778,6 +780,21 @@ const awaseruHonyaku = [
   ]
 },
 
+
+
+{
+  id: "honyaku56",
+  audio: "audio/awaseru56.wav",
+  japanese: "矢をかちりと番え、弓をぎりぎりと引き絞り、矢をぴゅっと放つと、的にどすっと刺さった。",
+  hiragana: "やを かちりと つがえ、ゆみを ぎりぎりと ひきしぼり、やを ぴゅっと はなつと、まとに どすっと ささった。",
+  answer: "After nocking the arrow, drawing the bowstring tight, and releasing it, the arrow struck the target with a thud.",
+  choices: [
+    "After nocking the arrow, drawing the bowstring tight, and releasing it, the arrow struck the target with a thud.",
+    "After dropping the bow, he picked up the arrow and walked toward the target.",
+    "He missed the target completely because the arrow fell to the ground.",
+    "He put away the bow before firing the arrow."
+  ]
+},
 
 
 

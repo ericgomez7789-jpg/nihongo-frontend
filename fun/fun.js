@@ -2438,6 +2438,71 @@ const funDataset = [
 
 
 
+{
+  id: "fun56",
+  audio: "audio/fun56.wav",
+  choices: [
+    "After nocking the arrow, drawing the bowstring tight, and releasing it, the arrow struck the target with a thud.",
+    "After dropping the bow, he picked up the arrow and walked toward the target.",
+    "He missed the target completely because the arrow fell to the ground.",
+    "He put away the bow before firing the arrow."
+  ],
+  answer: "After nocking the arrow, drawing the bowstring tight, and releasing it, the arrow struck the target with a thud.",
+  fun: [
+    {
+      jp: "やを つがえる",
+      romaji: "ya o tsugaeru",
+      en: "to nock an arrow"
+    },
+    {
+      jp: "かちり",
+      romaji: "kachiri",
+      en: "click"
+    },
+    {
+      jp: "ゆみを ひきしぼる",
+      romaji: "yumi o hikishiboru",
+      en: "to draw the bow taut"
+    },
+    {
+      jp: "ぎりぎり",
+      romaji: "girigiri",
+      en: "under tight tension"
+    },
+    {
+      jp: "やを はなつ",
+      romaji: "ya o hanatsu",
+      en: "to release an arrow"
+    },
+    {
+      jp: "ぴゅっ",
+      romaji: "pyu",
+      en: "whoosh"
+    },
+    {
+      jp: "まと",
+      romaji: "mato",
+      en: "target"
+    },
+    {
+      jp: "どすっ",
+      romaji: "dosu",
+      en: "thud"
+    },
+    {
+      jp: "ささる",
+      romaji: "sasaru",
+      en: "to stick into"
+    },
+    {
+      jp: "やを かちりと つがえ、ゆみを ぎりぎりと ひきしぼり、やを ぴゅっと はなつと、まとに どすっと ささった",
+      romaji: "ya o kachiri to tsugae, yumi o girigiri to hikishibori, ya o pyutto hanatsu to, mato ni dosutto sasatta",
+      en: "After nocking the arrow, drawing the bowstring tight, and releasing it, the arrow struck the target with a thud."
+    }
+  ]
+},
+
+
 
 
 

@@ -730,6 +730,19 @@ const honyakuSentences = [
 
 
 
+{
+  id: "honyaku56",
+  audio: "audio/awaseru56.wav",
+  answer: "After nocking the arrow, drawing the bowstring tight, and releasing it, the arrow struck the target with a thud.",
+  choices: [
+    "After nocking the arrow, drawing the bowstring tight, and releasing it, the arrow struck the target with a thud.",
+    "After dropping the bow, he picked up the arrow and walked toward the target.",
+    "He missed the target completely because the arrow fell to the ground.",
+    "He put away the bow before firing the arrow."
+  ]
+},
+
+
 
 
 
