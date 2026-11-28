@@ -671,6 +671,7 @@ let currentSentenceAudio = null;
 let miwakeruPlayer1Out = false;
 let miwakeruPlayer2Out = false;
 
+let miwakeruRoundWinner = false;
 
 /* ==========================================================
    AUDIO
@@ -857,10 +858,16 @@ function checkMiwakeruAnswer(
     button
 ) {
 
+    if (miwakeruRoundWinner) {
+        return;
+    }
+
     if (
         selectedChoice ===
         miwakeruCurrentSentence.answer
     ) {
+
+        miwakeruRoundWinner = true;
 
         button.classList.add(
             "correct"
@@ -925,6 +932,16 @@ function miwakeruPlayerWins(player) {
     clearInterval(
         miwakeruTimerInterval
     );
+
+    miwakeruRoundWinner = true;
+
+    document
+        .querySelectorAll(
+            ".miwakeruBtn"
+        )
+        .forEach(btn => {
+            btn.disabled = true;
+        });
 
     if (player === 1) {
 
@@ -1108,6 +1125,8 @@ function shuffleArray(arr) {
 ========================================================== */
 
 function miwakeruNextRound() {
+
+    miwakeruRoundWinner = false;
 
     miwakeruRound++;
 
