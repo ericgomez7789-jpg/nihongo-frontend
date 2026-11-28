@@ -1099,6 +1099,8 @@ let currentKaiwaAudio = null;
 let kaiwaPlayer1Out = false;
 let kaiwaPlayer2Out = false;
 
+let kaiwaRoundWinner = false;
+
 /* ==========================================================
    AUDIO
 ========================================================== */
@@ -1329,10 +1331,16 @@ function checkKaiwaAnswer(
     button
 ) {
 
+    if (kaiwaRoundWinner) {
+        return;
+    }
+
     if (
         selectedChoice ===
         kaiwaCurrentSentence.answer
     ) {
+
+        kaiwaRoundWinner = true;
 
         button.classList.add(
             "correct"
@@ -1403,6 +1411,14 @@ function kaiwaPlayerWins(
     clearInterval(
         kaiwaTimerInterval
     );
+
+    document
+        .querySelectorAll(
+            ".kaiwaBtn"
+        )
+        .forEach(btn => {
+            btn.disabled = true;
+        });
 
     if (player === 1) {
 
@@ -1599,6 +1615,8 @@ function shuffleArray(arr) {
 ========================================================== */
 
 function kaiwaNextRound() {
+
+    kaiwaRoundWinner = false;
 
     kaiwaRound++;
 
