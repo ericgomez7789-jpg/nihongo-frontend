@@ -2104,12 +2104,19 @@ function kaiwaHonyakuPlayerWins(
         kaiwaHonyakuTimerInterval
     );
 
+    document
+        .querySelectorAll(
+            ".kaiwaHonyakuBtn"
+        )
+        .forEach(btn => {
+            btn.disabled = true;
+        });
+
     if (player === 1) {
 
         kaiwaHonyakuScore1++;
 
     }
-
     else {
 
         kaiwaHonyakuScore2++;
