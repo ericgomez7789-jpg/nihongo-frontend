@@ -1733,6 +1733,8 @@ let currentKaiwaHonyakuAudio = null;
 let kaiwaHonyakuPlayer1Out = false;
 let kaiwaHonyakuPlayer2Out = false;
 
+let kaiwaHonyakuRoundWinner = false;
+
 /* ==========================================================
    AUDIO
 ========================================================== */
@@ -2005,12 +2007,18 @@ function checkKaiwaHonyakuAnswer(
     button
 ) {
 
+    if (kaiwaHonyakuRoundWinner) {
+        return;
+    }
+
     if (
 
         selectedChoice ===
         kaiwaHonyakuCurrentSentence.translation
 
     ) {
+
+        kaiwaHonyakuRoundWinner = true;
 
         button.classList.add(
             "correct"
@@ -2289,6 +2297,8 @@ function shuffleArray(arr) {
 ========================================================== */
 
 function kaiwaHonyakuNextRound() {
+
+      kaiwaHonyakuRoundWinner = false;
 
     kaiwaHonyakuRound++;
 
