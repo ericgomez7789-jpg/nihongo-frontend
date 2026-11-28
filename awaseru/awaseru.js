@@ -3075,6 +3075,7 @@ let awaseruSelectedChunk = null;
 window.awaseruDraggedButton = null;
 window.awaseruDraggedButton2 = null;
 
+let awaseruRoundWinner = false;
 
 
 function stopAllAudio() {
@@ -3282,10 +3283,7 @@ AWASERU.renderProgress = function () {
 
 const AwaseruDragModule = {
 
-  setupDropLines(
-    player,
-    count
-  ) {
+  setupDropLines(player, count) {
 
     const answerArea =
       document.getElementById(
@@ -3296,51 +3294,27 @@ const AwaseruDragModule = {
 
     answerArea.innerHTML = "";
 
-    for (
-      let i = 0;
-      i < count;
-      i++
-    ) {
+    for (let i = 0; i < count; i++) {
 
       const slot =
-        document.createElement(
-          "div"
-        );
+        document.createElement("div");
 
-      slot.className =
-        "builtChunk";
+      slot.className = "builtChunk";
 
-      slot.style.minWidth =
-        "120px";
+      slot.style.minWidth = "120px";
+      slot.style.minHeight = "40px";
+      slot.style.border = "2px dashed #666";
+      slot.style.background = "#222";
+      slot.style.display = "flex";
+      slot.style.alignItems = "center";
+      slot.style.justifyContent = "center";
 
-      slot.style.minHeight =
-        "40px";
+      slot.dataset.index = i;
+      slot.dataset.player = player;
 
-      slot.style.border =
-        "2px dashed #666";
-
-      slot.style.background =
-        "#222";
-
-      slot.style.display =
-        "flex";
-
-      slot.style.alignItems =
-        "center";
-
-      slot.style.justifyContent =
-        "center";
-
-      slot.dataset.index =
-        i;
-
-      slot.dataset.player =
-        player;
-
-      slot.ondragover =
-        e => {
-          e.preventDefault();
-        };
+      slot.ondragover = e => {
+        e.preventDefault();
+      };
 
       slot.ondrop =
         AwaseruDragModule.dropChunk;
@@ -3348,6 +3322,10 @@ const AwaseruDragModule = {
       slot.addEventListener(
         "click",
         () => {
+
+          if (awaseruRoundWinner) {
+            return;
+          }
 
           const dragged =
             player === 1
@@ -3370,15 +3348,17 @@ const AwaseruDragModule = {
         }
       );
 
-      answerArea.appendChild(
-        slot
-      );
+      answerArea.appendChild(slot);
 
     }
 
   },
 
   dropChunk(e) {
+
+    if (awaseruRoundWinner) {
+      return;
+    }
 
     e.preventDefault();
 
@@ -3446,7 +3426,6 @@ const AwaseruDragModule = {
       }, 300);
 
       return;
-
     }
 
     console.log(
@@ -3507,6 +3486,8 @@ const AwaseruDragModule = {
           .chunks.length
       ) {
 
+        awaseruRoundWinner = true;
+
         playerWins(1);
 
       }
@@ -3527,6 +3508,8 @@ const AwaseruDragModule = {
         awaseruCurrentSentence
           .chunks.length
       ) {
+
+        awaseruRoundWinner = true;
 
         playerWins(2);
 
@@ -4061,6 +4044,10 @@ function getScrambledChunks(
 ========================================================== */
 
 function awaseruNextRound() {
+
+  awaseruRoundWinner = false;
+
+  
 
   correctDropsP1 = 0;
   correctDropsP2 = 0;
