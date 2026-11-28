@@ -772,6 +772,8 @@ let currentSentenceAudio = null;
 let honyakuPlayer1Out = false;
 let honyakuPlayer2Out = false;
 
+let honyakuRoundWinner = false;
+
 
 
 function showScreen(id) {
@@ -952,17 +954,22 @@ function renderPlayerBoard(player) {
 /* ==========================================================
    CHECK ANSWER
 ========================================================== */
-
 function checkAnswer(
     player,
     selectedChoice,
     button
 ) {
 
+    if (honyakuRoundWinner) {
+        return;
+    }
+
     if (
         selectedChoice ===
         honyakuCurrentSentence.answer
     ) {
+
+        honyakuRoundWinner = true;
 
         button.classList.add(
             "correct"
@@ -1016,7 +1023,6 @@ function checkAnswer(
 
 }
 
-
 /* ==========================================================
    PLAYER WIN
 ========================================================== */
@@ -1026,6 +1032,16 @@ function playerWins(player) {
     clearInterval(
         honyakuTimerInterval
     );
+
+    honyakuRoundWinner = true;
+
+    document
+        .querySelectorAll(
+            ".translationBtn"
+        )
+        .forEach(btn => {
+            btn.disabled = true;
+        });
 
     if (player === 1) {
 
@@ -1217,6 +1233,8 @@ function shuffleArray(arr) {
 ========================================================== */
 
 function honyakuNextRound() {
+
+    honyakuRoundWinner = false;
 
     honyakuRound++;
 
