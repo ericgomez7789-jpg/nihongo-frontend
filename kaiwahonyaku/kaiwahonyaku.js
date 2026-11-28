@@ -1705,6 +1705,54 @@ const kaiwaSentences = [
 
 
 
+{
+    id: "kaiwa32",
+
+    audio: "Audio/kaiwa32.wav",
+
+    speaker1: "おとうさん",
+
+    line1:
+        "ねえ、けさから なにも たべても のんでも いないから、だっすいしょうじょうに なりそうだよ。",
+
+    speaker2: "むすめ",
+
+    line2:
+        "それじゃ、けんこうに ひがいを こうむるまえに、なにか のみものを のんだほうが いいよ。",
+
+    translation:
+        "Father: Hey, I haven't eaten or drunk anything since this morning, so I feel like I might become dehydrated.\n\nDaughter: Well then, before your health suffers any harm, you'd better drink something.",
+
+    translationChoices: [
+
+        "Father: Hey, I haven't eaten or drunk anything since this morning, so I feel like I might become dehydrated.\n\nDaughter: Well then, before your health suffers any harm, you'd better drink something.",
+
+        "Father: I've been drinking water all morning and feel great.\n\nDaughter: Then keep drinking even more.",
+
+        "Father: I just finished a big meal.\n\nDaughter: You should eat another one right away.",
+
+        "Father: I went to the doctor because I was sick.\n\nDaughter: The doctor told you not to drink anything.",
+
+        "Father: I'm going to take a nap after lunch.\n\nDaughter: Good idea, you look well rested already."
+    ],
+
+    question:
+        "なぜ むすめは 「けんこうに ひがいを こうむるまえに、なにか のみものを のんだほうが いいよ。」と いいましたか？",
+
+    answer:
+        "おとうさんが だっすいしょうじょうに なるかもしれないと おもったから",
+
+    choices: [
+        "おとうさんが だっすいしょうじょうに なるかもしれないと おもったから",
+        "おとうさんが たくさん のみものを のんでいたから",
+        "おとうさんが とても けんこうだったから",
+        "おとうさんが もう びょういんに いったから",
+        "おとうさんが たべすぎていたから"
+    ]
+},
+
+
+
 
 
 

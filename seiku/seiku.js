@@ -1023,6 +1023,36 @@ const seikuData = [
 
 
 
+{
+    id: "kaiwa32",
+
+    audio: "Audio/kaiwa32.wav",
+
+    idiom:
+        "こうむる",
+
+    meaning:
+        "to suffer / to incur (damage, harm, loss, etc.)",
+
+    choices: [
+
+        "to suffer / to incur (damage, harm, loss, etc.)",
+
+        "to drink something immediately",
+
+        "to become dehydrated",
+
+        "to stay healthy without eating",
+
+        "to recover from an illness quickly"
+    ],
+
+    example:
+        "けんこうに ひがいを こうむるまえに、なにか のみものを のんだほうが いいよ。"
+},
+
+
+
 
 
 
