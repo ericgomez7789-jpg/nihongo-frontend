@@ -1084,6 +1084,41 @@ const seikuData = [
 
 
 
+{
+    id: "kaiwa34",
+
+    audio: "Audio/kaiwa34.wav",
+
+    idiom:
+        "ううん",
+
+    meaning:
+        "well... / yeah... / let me think...",
+
+    choices: [
+
+        "well... / yeah... / let me think...",
+
+        "absolutely not",
+
+        "to spend time with relatives",
+
+        "of course / that's obvious",
+
+        "to enjoy a play at a theater"
+    ],
+
+    example:
+        "ううん、そりゃ とても たのしかったよ。"
+},
+
+
+
+
+
+
+
+
 
 
 

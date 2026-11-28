@@ -1801,6 +1801,61 @@ const kaiwaSentences = [
 },
 
 
+{
+    id: "kaiwa34",
+
+    audio: "Audio/kaiwa34.wav",
+
+    speaker1: "おとうさん",
+
+    line1:
+        "ねえ、げきじょうで しんせきと たのしい じかんを すごせた？",
+
+    speaker2: "むすめ",
+
+    line2:
+        "ううん、そりゃ とても たのしかったよ。",
+
+    translation:
+        "Father: Hey, were you able to spend a good time with your relatives at the theater?\n\nDaughter: Yeah, of course, it was really fun.",
+
+    translationChoices: [
+
+        "Father: Hey, were you able to spend a good time with your relatives at the theater?\n\nDaughter: Yeah, of course, it was really fun.",
+
+        "Father: Did your relatives cancel the theater trip?\n\nDaughter: Yes, so I stayed home all day.",
+
+        "Father: Did you get bored at the theater?\n\nDaughter: Absolutely. It was a terrible experience.",
+
+        "Father: Did you go to the theater alone?\n\nDaughter: Yes, I didn't meet any relatives there.",
+
+        "Father: Are you planning to visit your relatives tomorrow?\n\nDaughter: No, I'm going to the library instead."
+    ],
+
+    question:
+        "なぜ むすめは 「そりゃ とても たのしかったよ。」と いいましたか？",
+
+    answer:
+        "しんせきと げきじょうで たのしい じかんを すごしたから",
+
+    choices: [
+        "しんせきと げきじょうで たのしい じかんを すごしたから",
+        "げきじょうに いかなかったから",
+        "しんせきと けんかを したから",
+        "げきじょうが しまっていたから",
+        "えんげきを みるまえに かえったから"
+    ]
+},
+
+
+
+
+
+
+
+
+
+
 
 
 ];
