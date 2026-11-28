@@ -1054,6 +1054,36 @@ const seikuData = [
 
 
 
+{
+    id: "kaiwa33",
+
+    audio: "Audio/kaiwa33.wav",
+
+    idiom:
+        "そりゃ",
+
+    meaning:
+        "well, of course / how should I know? / that's obvious",
+
+    choices: [
+
+        "well, of course / how should I know? / that's obvious",
+
+        "to look for something carefully",
+
+        "to know exactly where someone is",
+
+        "to take responsibility for a mistake",
+
+        "to ask for help politely"
+    ],
+
+    example:
+        "そりゃ わかりませんよ。"
+},
+
+
+
 
 
 

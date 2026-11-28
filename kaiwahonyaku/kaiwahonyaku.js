@@ -1754,6 +1754,53 @@ const kaiwaSentences = [
 
 
 
+{
+    id: "kaiwa33",
+
+    audio: "Audio/kaiwa33.wav",
+
+    speaker1: "おとうさん",
+
+    line1:
+        "ねえ、ねこが どこにいるか しっている？",
+
+    speaker2: "むすめ",
+
+    line2:
+        "そりゃ わかりませんよ。",
+
+    translation:
+        "Father: Hey, do you know where the cat is?\n\nDaughter: How should I know?",
+
+    translationChoices: [
+
+        "Father: Hey, do you know where the cat is?\n\nDaughter: How should I know?",
+
+        "Father: The cat is sleeping over there.\n\nDaughter: Yes, I can see it too.",
+
+        "Father: Did you feed the cat already?\n\nDaughter: Yes, I fed it this morning.",
+
+        "Father: Let's go buy a cat.\n\nDaughter: That's a wonderful idea.",
+
+        "Father: The cat is outside in the garden.\n\nDaughter: I'll go bring it inside."
+    ],
+
+    question:
+        "なぜ むすめは 「そりゃ わかりませんよ。」と いいましたか？",
+
+    answer:
+        "ねこが どこにいるか しらないから",
+
+    choices: [
+        "ねこが どこにいるか しらないから",
+        "ねこが いえに いることを しっているから",
+        "ねこを さがしたくないから",
+        "ねこが そとに いると きめつけているから",
+        "おとうさんが もう ねこを みつけたから"
+    ]
+},
+
+
 
 
 ];
